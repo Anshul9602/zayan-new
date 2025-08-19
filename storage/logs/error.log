@@ -1,0 +1,396 @@
+2025-08-19 06:15:26 - PHP Warning:  mysqli::real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\xampp\htdocs\zyannew\system\library\db\mysqli.php on line 75
+2025-08-19 06:15:26 - Error: mysqli object is not fully initialized
+File: C:\xampp\htdocs\zyannew\system\library\db\mysqli.php
+Line: 78
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\db\mysqli.php
+Line: 78
+Class: mysqli
+Function: set_charset
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\library\db.php
+Line: 40
+Class: Opencart\System\Library\DB\MySQLi
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 148
+Class: Opencart\System\Library\DB
+Function: __construct
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:16:38 - Error: Class "Twig\Loader\FilesystemLoader" not found
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 36
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 30
+Class: Opencart\System\Library\Template\Twig
+Function: __construct
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:16:48 - Error: Class "Twig\Loader\FilesystemLoader" not found
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 36
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 30
+Class: Opencart\System\Library\Template\Twig
+Function: __construct
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:19:37 - Error: Class "Twig\Loader\FilesystemLoader" not found
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 36
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 30
+Class: Opencart\System\Library\Template\Twig
+Function: __construct
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:19:39 - Error: Class "Twig\Loader\FilesystemLoader" not found
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 36
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 30
+Class: Opencart\System\Library\Template\Twig
+Function: __construct
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:20:19 - Error: Class "Twig\Loader\FilesystemLoader" not found
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 36
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 30
+Class: Opencart\System\Library\Template\Twig
+Function: __construct
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:20:21 - Error: Class "Twig\Loader\FilesystemLoader" not found
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 36
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 30
+Class: Opencart\System\Library\Template\Twig
+Function: __construct
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:20:57 - Error: Class "Twig\Loader\FilesystemLoader" not found
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 36
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 30
+Class: Opencart\System\Library\Template\Twig
+Function: __construct
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:20:58 - Error: Class "Twig\Loader\FilesystemLoader" not found
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 36
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 30
+Class: Opencart\System\Library\Template\Twig
+Function: __construct
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:24:55 - Error: Class "Twig\Loader\FilesystemLoader" not found
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 36
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 30
+Class: Opencart\System\Library\Template\Twig
+Function: __construct
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:27:38 - PHP Warning:  Undefined array key "file" in C:\xampp\htdocs\zyannew\system\framework.php on line 77
+2025-08-19 06:27:38 - PHP Warning:  Undefined array key "line" in C:\xampp\htdocs\zyannew\system\framework.php on line 78
+2025-08-19 06:27:38 - Error: syntax error, unexpected token "require_once", expecting "function" or "const"
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 11
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 26
+Class: Opencart\System\Engine\Autoloader
+Function: load
+
+Backtrace: 1
+File: 
+Line: 
+Class: Opencart\System\Engine\Autoloader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 29
+Function: class_exists
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:28:18 - PHP Warning:  require_once(C:/xampp/htdocs/zyannew/system/vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\zyannew\system\library\template\twig.php on line 4
+2025-08-19 06:28:18 - PHP Warning:  Undefined array key "file" in C:\xampp\htdocs\zyannew\system\framework.php on line 77
+2025-08-19 06:28:18 - PHP Warning:  Undefined array key "line" in C:\xampp\htdocs\zyannew\system\framework.php on line 78
+2025-08-19 06:28:18 - Error: Failed opening required 'C:/xampp/htdocs/zyannew/system/vendor/autoload.php' (include_path='C:\xampp\php\PEAR')
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 4
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 79
+Function: include_once
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 26
+Class: Opencart\System\Engine\Autoloader
+Function: load
+
+Backtrace: 2
+File: 
+Line: 
+Class: Opencart\System\Engine\Autoloader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 29
+Function: class_exists
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:28:19 - PHP Warning:  require_once(C:/xampp/htdocs/zyannew/system/vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\zyannew\system\library\template\twig.php on line 4
+2025-08-19 06:28:19 - PHP Warning:  Undefined array key "file" in C:\xampp\htdocs\zyannew\system\framework.php on line 77
+2025-08-19 06:28:19 - PHP Warning:  Undefined array key "line" in C:\xampp\htdocs\zyannew\system\framework.php on line 78
+2025-08-19 06:28:19 - Error: Failed opening required 'C:/xampp/htdocs/zyannew/system/vendor/autoload.php' (include_path='C:\xampp\php\PEAR')
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 4
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 79
+Function: include_once
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 26
+Class: Opencart\System\Engine\Autoloader
+Function: load
+
+Backtrace: 2
+File: 
+Line: 
+Class: Opencart\System\Engine\Autoloader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 29
+Function: class_exists
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:36:29 - PHP Warning:  require_once(C:/xampp/htdocs/zyannew/system/vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\zyannew\system\library\template\twig.php on line 4
+2025-08-19 06:36:29 - PHP Warning:  Undefined array key "file" in C:\xampp\htdocs\zyannew\system\framework.php on line 77
+2025-08-19 06:36:29 - PHP Warning:  Undefined array key "line" in C:\xampp\htdocs\zyannew\system\framework.php on line 78
+2025-08-19 06:36:29 - Error: Failed opening required 'C:/xampp/htdocs/zyannew/system/vendor/autoload.php' (include_path='C:\xampp\php\PEAR')
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 4
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 79
+Function: include_once
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 26
+Class: Opencart\System\Engine\Autoloader
+Function: load
+
+Backtrace: 2
+File: 
+Line: 
+Class: Opencart\System\Engine\Autoloader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 29
+Function: class_exists
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-19 06:36:39 - PHP Warning:  require_once(C:/xampp/htdocs/zyannew/system/vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\zyannew\system\library\template\twig.php on line 4
+2025-08-19 06:36:39 - PHP Warning:  Undefined array key "file" in C:\xampp\htdocs\zyannew\system\framework.php on line 77
+2025-08-19 06:36:39 - PHP Warning:  Undefined array key "line" in C:\xampp\htdocs\zyannew\system\framework.php on line 78
+2025-08-19 06:36:39 - Error: Failed opening required 'C:/xampp/htdocs/zyannew/system/vendor/autoload.php' (include_path='C:\xampp\php\PEAR')
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 4
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 79
+Function: include_once
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 26
+Class: Opencart\System\Engine\Autoloader
+Function: load
+
+Backtrace: 2
+File: 
+Line: 
+Class: Opencart\System\Engine\Autoloader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 29
+Function: class_exists
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 182
+Class: Opencart\System\Library\Template
+Function: __construct
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once

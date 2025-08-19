@@ -1,11 +1,15 @@
 <?php
 namespace Opencart\System\Library\Template;
+
+	require_once(DIR_SYSTEM . 'vendor/autoload.php');
 /**
  * Class Twig
  *
  * @package Opencart\System\Library\Template
  */
 class Twig {
+
+
 	/**
 	 * @var string
 	 */
