@@ -32,6 +32,11 @@
     * Section
  ------------------------------------------------------------------------------ */
 /*--------- Abstracts variable ---------- */
+
+.section-padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 @import url(./bootstrap-select.min.css);
 :root {
   --white: #ffffff;

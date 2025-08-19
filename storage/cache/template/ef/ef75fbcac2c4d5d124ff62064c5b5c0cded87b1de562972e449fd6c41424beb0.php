@@ -203,7 +203,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
                      <div class=\"sub-menu\">
                         <ul class=\"sub-menu_list\">
                            <li><a href=\"index.php?route=common/catalogue\" class=\"sub-menu_link\">Brochures and Catalog</a></li>
-                           <li><a href=\"store-list.html\" class=\"sub-menu_link\">Zayn Blog</a></li>
+                           <li><a href=\"index.php?route=common/blog\" class=\"sub-menu_link\">Zayn Blog</a></li>
                         </ul>
                      </div>
                   </li>
@@ -402,7 +402,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
                      <div class=\"sub-menu\">
                         <ul class=\"sub-menu_list\">
                            <li><a href=\"index.php?route=common/catalogue\" class=\"sub-menu_link\">Brochures and Catalog</a></li>
-                           <li><a href=\"store-list.html\" class=\"sub-menu_link\">Zayn Blog</a></li>
+                           <li><a href=\"index.php?route=common/blog\" class=\"sub-menu_link\">Zayn Blog</a></li>
                         </ul>
                      </div>
                   </li>
