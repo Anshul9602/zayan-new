@@ -1,0 +1,78 @@
+{{ header }}
+<!-- Page Title -->
+<section class="s-page-title">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title-page" style="text-transform: capitalize;">{{ heading_title }}</h1>
+                  
+                </div>
+            </div>
+</section>
+        <!-- /Page Title -->
+ 
+
+<div id="product-search" class="container">
+  <div class="row">
+    <div id="content" class="col">
+      {% if products %}
+        <div id="product-list" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
+          {% for product in products %}
+            <div class="col mb-3">{{ product }}</div>
+          {% endfor %}
+        </div>
+        <div class="row">
+          <div class="col-sm-6 text-start">{{ pagination }}</div>
+          <div class="col-sm-6 text-end">{{ results }}</div>
+        </div>
+      {% else %}
+        <p>{{ text_no_results }}</p>
+      {% endif %}
+      {{ content_bottom }}
+    </div>
+    {{ column_right }}
+  </div>
+</div>
+<script type="text/javascript"><!--
+$('#button-search').bind('click', function() {
+    url = 'index.php?route=product/search&language={{ language }}';
+
+    var search = $('#input-search').val();
+
+    if (search) {
+        url += '&search=' + encodeURIComponent(search);
+    }
+
+    var category_id = $('#input-category').prop('value');
+
+    if (category_id > 0) {
+        url += '&category_id=' + encodeURIComponent(category_id);
+    }
+
+    var sub_category = $('#input-sub-category:checked').prop('value');
+
+    if (sub_category) {
+        url += '&sub_category=1';
+    }
+
+    var description = $('#input-description:checked').prop('value');
+
+    if (description) {
+        url += '&description=1';
+    }
+
+    location = url;
+});
+
+$('#input-search').bind('keydown', function(e) {
+    if (e.keyCode == 13) {
+        $('#button-search').trigger('click');
+    }
+});
+
+$('#input-category').on('change', function() {
+    $('#input-sub-category').prop('disabled', (this.value == '0' ? true : false));
+});
+
+$('#input-category').trigger('change');
+//--></script>
+{{ footer }}
