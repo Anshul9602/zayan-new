@@ -125,44 +125,42 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
   
 </div>
 
-
-<!-- Collection -->
    <div class=\"s-collection\">
             <div dir=\"ltr\" class=\"swiper tf-swiper\" data-preview=\"3\" data-tablet=\"2\" data-mobile-sm=\"2\" data-mobile=\"1\" data-pagination=\"1\"
                 data-space-lg=\"24\" data-space-md=\"15\" data-space=\"10\" data-pagination-sm=\"1\" data-pagination-md=\"2\" data-pagination-lg=\"3\">
                 <div class=\"swiper-wrapper\">
                     <!-- item 1 -->
                     ";
-        // line 68
+        // line 66
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["banners2"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-            // line 69
+            // line 67
             yield "                    <div class=\"swiper-slide\">
                         <div class=\"wg-cls-2 d-flex hover-img\">
                             <a href=\"";
-            // line 71
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 71);
+            // line 69
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 69);
             yield "\" class=\"image img-style\">
                                 <img class=\"lazyload\" src=\"";
-            // line 72
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 72);
+            // line 70
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 70);
             yield "\" data-src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 72);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 70);
             yield "\" alt=\"Slider\">
                             </a>
                             <div class=\"cls-content_wrap b-16\">
                                 <div class=\"cls-content\">
                                     <a href=\"";
-            // line 76
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 76);
+            // line 74
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 74);
             yield "\" class=\"tag_cls h3 link\">";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "title", [], "any", false, false, false, 76);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "title", [], "any", false, false, false, 74);
             yield "</a>
                                     <span class=\"br-line type-vertical\"></span>
                                     <a href=\"";
-            // line 78
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 78);
+            // line 76
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 76);
             yield "\" class=\"tf-btn-line text-nowrap\"> Shop now </a>
                                 </div>
                             </div>
@@ -173,7 +171,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['banner'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 84
+        // line 82
         yield "                </div>
                 <div class=\"sw-dot-default tf-sw-pagination\"></div>
             </div>
@@ -189,7 +187,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
                     <div class=\"h1 title text-center mb-24\">New Arrivals</div>
                     <ul class=\"tab-product_list\" role=\"tablist\">
                     ";
-        // line 98
+        // line 96
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["new_arrivals"] ?? null));
         $context['loop'] = [
@@ -206,32 +204,32 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 99
+            // line 97
             yield "                    ";
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 99) == 1)) {
-                // line 100
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 97) == 1)) {
+                // line 98
                 yield "                    <li class=\"nav-tab-item\" role=\"presentation\">
                             <a href=\"#";
-                // line 101
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "category_id", [], "any", false, false, false, 101);
+                // line 99
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "category_id", [], "any", false, false, false, 99);
                 yield "\" data-bs-toggle=\"tab\" class=\"tf-btn-line tf-btn-tab active\"> ";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 101);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 99);
                 yield " </a>
                     </li>
                     ";
             } else {
-                // line 104
+                // line 102
                 yield "                    <li class=\"nav-tab-item\" role=\"presentation\">
                             <a href=\"#";
-                // line 105
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "category_id", [], "any", false, false, false, 105);
+                // line 103
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "category_id", [], "any", false, false, false, 103);
                 yield "\" data-bs-toggle=\"tab\" class=\"tf-btn-line tf-btn-tab\"> ";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 105);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 103);
                 yield " </a>
                         </li>
                     ";
             }
-            // line 108
+            // line 106
             yield "                    ";
             ++$context['loop']['index0'];
             ++$context['loop']['index'];
@@ -245,13 +243,13 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 109
+        // line 107
         yield "                        
                     </ul>
                 </div>
                 <div class=\"tab-content\">
                 ";
-        // line 113
+        // line 111
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["new_arrivals"] ?? null));
         $context['loop'] = [
@@ -268,22 +266,22 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 114
+            // line 112
             yield "                    ";
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 114) == 1)) {
-                // line 115
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 112) == 1)) {
+                // line 113
                 yield "                    <div class=\"tab-pane active show\" id=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "category_id", [], "any", false, false, false, 115);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "category_id", [], "any", false, false, false, 113);
                 yield "\" role=\"tabpanel\">
                      ";
             } else {
-                // line 117
+                // line 115
                 yield "                    <div class=\"tab-pane\" id=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "category_id", [], "any", false, false, false, 117);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["category"], "category_id", [], "any", false, false, false, 115);
                 yield "\" role=\"tabpanel\">
                     ";
             }
-            // line 119
+            // line 117
             yield "     
                         <div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over wow fadeInUp\" data-preview=\"4\" data-tablet=\"3\" data-mobile-sm=\"2\"
                             data-mobile=\"2\" data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\"
@@ -543,7 +541,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 366
+        // line 364
         yield "                </div>
             
             </div>
@@ -888,89 +886,49 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
  <div class=\"flat-spacing\">
             <div class=\"container\">
                 <div class=\"h1 sect-title text-black fw-medium text-center wow fadeInUp\">Read Our Blog</div>
-                <div dir=\"ltr\" class=\"swiper tf-swiper\" data-preview=\"4\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"1\" data-space-lg=\"48\"
+                <div dir=\"ltr\" class=\"swiper tf-swiper\" data-preview=\"2\" data-tablet=\"2\" data-mobile-sm=\"2\" data-mobile=\"1\" data-space-lg=\"48\"
                     data-space-md=\"24\" data-space=\"12\" data-pagination=\"1\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"4\">
                     <div class=\"swiper-wrapper\">
                         <!-- item 1 -->
                         <div class=\"swiper-slide\">
                             <div class=\"article-blog type-space-2 hover-img4 wow fadeInLeft\">
-                                <a href=\"blog-detail.html\" class=\"entry_image img-style4\">
-                                    <img src=\"assets/images/blog/blog-1.jpg\" data-src=\"assets/images/blog/blog-1.jpg\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
+                                <a href=\"index.php?route=common/g21\" class=\"entry_image img-style4\">
+                                    <img src=\"assets/images/blog22.jpg\" data-src=\"assets/images/blog22.jpg\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
                                 </a>
                                 <div class=\"entry_tag\">
-                                    <a href=\"blog-grid.html\" class=\"name-tag h6 link\">March 2, 2025</a>
+                                    <a href=\"index.php?route=common/g21\" class=\"name-tag h6 link\">March 2, 2025</a>
                                 </div>
 
                                 <div class=\"blog-content\">
-                                    <a href=\"blog-detail.html\" class=\"entry_name link h4\"> Bring Confidence With Simple T-shirt Style </a>
+                                    <a href=\"index.php?route=common/g21\" class=\"entry_name link h4\"> History of Cross Jewelry
+</a>
                                     <p class=\"text h6\">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit in malesuada magna faucibus. Pellentesque eget
-                                        finibus nunc.
+                                        Cross necklaces have a long and varied history, deeply intertwined with religious, cultural, and fashion traditions.
                                     </p>
-                                    <a href=\"blog-detail.html\" class=\"tf-btn-line\"> Read more </a>
+                                    <a href=\"index.php?route=common/g21\" class=\"tf-btn-line\"> Read more </a>
                                 </div>
                             </div>
                         </div>
                         <!-- item 2 -->
                         <div class=\"swiper-slide\">
                             <div class=\"article-blog type-space-2 hover-img4 wow fadeInLeft\" data-wow-delay=\"0.1s\">
-                                <a href=\"blog-detail.html\" class=\"entry_image img-style4\">
-                                    <img src=\"assets/images/blog/blog-2.jpg\" data-src=\"assets/images/blog/blog-2.jpg\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
+                                <a href=\"index.php?route=common/g21\" class=\"entry_image img-style4\">
+                                                <img src=\"assets/images/blog33.png\" data-src=\"assets/images/blog33.png\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
                                 </a>
                                 <div class=\"entry_tag\">
-                                    <a href=\"blog-grid.html\" class=\"name-tag h6 link\">March 2, 2025</a>
+                                        <a href=\"index.php?route=common/g21\" class=\"name-tag h6 link\">March 2, 2025</a>
                                 </div>
 
                                 <div class=\"blog-content\">
-                                    <a href=\"blog-detail.html\" class=\"entry_name link h4\"> Experience the 90s style of mixing and matching </a>
+                                            <a href=\"index.php?route=common/g21\" class=\"entry_name link h4\"> Spot Jewelry According to your Birthstone</a>
                                     <p class=\"text h6\">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit in malesuada magna faucibus. Pellentesque eget
-                                        finibus nunc.
+                                        We are very connected with our birth month, and jewels with your birthstone are the new way to flaunt who you really are.
                                     </p>
-                                    <a href=\"blog-detail.html\" class=\"tf-btn-line\"> Read more </a>
+                                    <a href=\"index.php?route=common/g1\" class=\"tf-btn-line\"> Read more </a>
                                 </div>
                             </div>
                         </div>
-                        <!-- item 3 -->
-                        <div class=\"swiper-slide\">
-                            <div class=\"article-blog type-space-2 hover-img4 wow fadeInLeft\" data-wow-delay=\"0.2s\">
-                                <a href=\"blog-detail.html\" class=\"entry_image img-style4\">
-                                    <img src=\"assets/images/blog/blog-3.jpg\" data-src=\"assets/images/blog/blog-3.jpg\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
-                                </a>
-                                <div class=\"entry_tag\">
-                                    <a href=\"blog-grid.html\" class=\"name-tag h6 link\">March 2, 2025</a>
-                                </div>
-
-                                <div class=\"blog-content\">
-                                    <a href=\"blog-detail.html\" class=\"entry_name link h4\"> April 4th the biggest sale of the year </a>
-                                    <p class=\"text h6\">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit in malesuada magna faucibus. Pellentesque eget
-                                        finibus nunc.
-                                    </p>
-                                    <a href=\"blog-detail.html\" class=\"tf-btn-line\"> Read more </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item 4 -->
-                        <div class=\"swiper-slide\">
-                            <div class=\"article-blog type-space-2 hover-img4 wow fadeInLeft\" data-wow-delay=\"0.3s\">
-                                <a href=\"blog-detail.html\" class=\"entry_image img-style4\">
-                                    <img src=\"assets/images/blog/blog-4.jpg\" data-src=\"assets/images/blog/blog-4.jpg\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
-                                </a>
-                                <div class=\"entry_tag\">
-                                    <a href=\"blog-grid.html\" class=\"name-tag h6 link\">March 2, 2025</a>
-                                </div>
-
-                                <div class=\"blog-content\">
-                                    <a href=\"blog-detail.html\" class=\"entry_name link h4\"> Top 5 simple accessories you need in your wardrobe </a>
-                                    <p class=\"text h6\">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit in malesuada magna faucibus. Pellentesque eget
-                                        finibus nunc.
-                                    </p>
-                                    <a href=\"blog-detail.html\" class=\"tf-btn-line\"> Read more </a>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class=\"sw-dot-default tf-sw-pagination\"></div>
                 </div>
@@ -1050,7 +1008,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 </script>
 
 ";
-        // line 871
+        // line 829
         yield ($context["footer"] ?? null);
         yield from [];
     }
@@ -1076,7 +1034,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
      */
     public function getDebugInfo(): array
     {
-        return array (  1054 => 871,  547 => 366,  287 => 119,  281 => 117,  275 => 115,  272 => 114,  255 => 113,  249 => 109,  235 => 108,  227 => 105,  224 => 104,  216 => 101,  213 => 100,  210 => 99,  193 => 98,  177 => 84,  165 => 78,  158 => 76,  149 => 72,  145 => 71,  141 => 69,  137 => 68,  121 => 54,  104 => 44,  98 => 41,  93 => 39,  83 => 34,  77 => 30,  73 => 29,  42 => 1,);
+        return array (  1012 => 829,  545 => 364,  285 => 117,  279 => 115,  273 => 113,  270 => 112,  253 => 111,  247 => 107,  233 => 106,  225 => 103,  222 => 102,  214 => 99,  211 => 98,  208 => 97,  191 => 96,  175 => 82,  163 => 76,  156 => 74,  147 => 70,  143 => 69,  139 => 67,  135 => 66,  121 => 54,  104 => 44,  98 => 41,  93 => 39,  83 => 34,  77 => 30,  73 => 29,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -1141,8 +1099,6 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
   
 </div>
 
-
-<!-- Collection -->
    <div class=\"s-collection\">
             <div dir=\"ltr\" class=\"swiper tf-swiper\" data-preview=\"3\" data-tablet=\"2\" data-mobile-sm=\"2\" data-mobile=\"1\" data-pagination=\"1\"
                 data-space-lg=\"24\" data-space-md=\"15\" data-space=\"10\" data-pagination-sm=\"1\" data-pagination-md=\"2\" data-pagination-lg=\"3\">
@@ -1790,89 +1746,49 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
  <div class=\"flat-spacing\">
             <div class=\"container\">
                 <div class=\"h1 sect-title text-black fw-medium text-center wow fadeInUp\">Read Our Blog</div>
-                <div dir=\"ltr\" class=\"swiper tf-swiper\" data-preview=\"4\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"1\" data-space-lg=\"48\"
+                <div dir=\"ltr\" class=\"swiper tf-swiper\" data-preview=\"2\" data-tablet=\"2\" data-mobile-sm=\"2\" data-mobile=\"1\" data-space-lg=\"48\"
                     data-space-md=\"24\" data-space=\"12\" data-pagination=\"1\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"4\">
                     <div class=\"swiper-wrapper\">
                         <!-- item 1 -->
                         <div class=\"swiper-slide\">
                             <div class=\"article-blog type-space-2 hover-img4 wow fadeInLeft\">
-                                <a href=\"blog-detail.html\" class=\"entry_image img-style4\">
-                                    <img src=\"assets/images/blog/blog-1.jpg\" data-src=\"assets/images/blog/blog-1.jpg\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
+                                <a href=\"index.php?route=common/g21\" class=\"entry_image img-style4\">
+                                    <img src=\"assets/images/blog22.jpg\" data-src=\"assets/images/blog22.jpg\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
                                 </a>
                                 <div class=\"entry_tag\">
-                                    <a href=\"blog-grid.html\" class=\"name-tag h6 link\">March 2, 2025</a>
+                                    <a href=\"index.php?route=common/g21\" class=\"name-tag h6 link\">March 2, 2025</a>
                                 </div>
 
                                 <div class=\"blog-content\">
-                                    <a href=\"blog-detail.html\" class=\"entry_name link h4\"> Bring Confidence With Simple T-shirt Style </a>
+                                    <a href=\"index.php?route=common/g21\" class=\"entry_name link h4\"> History of Cross Jewelry
+</a>
                                     <p class=\"text h6\">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit in malesuada magna faucibus. Pellentesque eget
-                                        finibus nunc.
+                                        Cross necklaces have a long and varied history, deeply intertwined with religious, cultural, and fashion traditions.
                                     </p>
-                                    <a href=\"blog-detail.html\" class=\"tf-btn-line\"> Read more </a>
+                                    <a href=\"index.php?route=common/g21\" class=\"tf-btn-line\"> Read more </a>
                                 </div>
                             </div>
                         </div>
                         <!-- item 2 -->
                         <div class=\"swiper-slide\">
                             <div class=\"article-blog type-space-2 hover-img4 wow fadeInLeft\" data-wow-delay=\"0.1s\">
-                                <a href=\"blog-detail.html\" class=\"entry_image img-style4\">
-                                    <img src=\"assets/images/blog/blog-2.jpg\" data-src=\"assets/images/blog/blog-2.jpg\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
+                                <a href=\"index.php?route=common/g21\" class=\"entry_image img-style4\">
+                                                <img src=\"assets/images/blog33.png\" data-src=\"assets/images/blog33.png\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
                                 </a>
                                 <div class=\"entry_tag\">
-                                    <a href=\"blog-grid.html\" class=\"name-tag h6 link\">March 2, 2025</a>
+                                        <a href=\"index.php?route=common/g21\" class=\"name-tag h6 link\">March 2, 2025</a>
                                 </div>
 
                                 <div class=\"blog-content\">
-                                    <a href=\"blog-detail.html\" class=\"entry_name link h4\"> Experience the 90s style of mixing and matching </a>
+                                            <a href=\"index.php?route=common/g21\" class=\"entry_name link h4\"> Spot Jewelry According to your Birthstone</a>
                                     <p class=\"text h6\">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit in malesuada magna faucibus. Pellentesque eget
-                                        finibus nunc.
+                                        We are very connected with our birth month, and jewels with your birthstone are the new way to flaunt who you really are.
                                     </p>
-                                    <a href=\"blog-detail.html\" class=\"tf-btn-line\"> Read more </a>
+                                    <a href=\"index.php?route=common/g1\" class=\"tf-btn-line\"> Read more </a>
                                 </div>
                             </div>
                         </div>
-                        <!-- item 3 -->
-                        <div class=\"swiper-slide\">
-                            <div class=\"article-blog type-space-2 hover-img4 wow fadeInLeft\" data-wow-delay=\"0.2s\">
-                                <a href=\"blog-detail.html\" class=\"entry_image img-style4\">
-                                    <img src=\"assets/images/blog/blog-3.jpg\" data-src=\"assets/images/blog/blog-3.jpg\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
-                                </a>
-                                <div class=\"entry_tag\">
-                                    <a href=\"blog-grid.html\" class=\"name-tag h6 link\">March 2, 2025</a>
-                                </div>
-
-                                <div class=\"blog-content\">
-                                    <a href=\"blog-detail.html\" class=\"entry_name link h4\"> April 4th the biggest sale of the year </a>
-                                    <p class=\"text h6\">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit in malesuada magna faucibus. Pellentesque eget
-                                        finibus nunc.
-                                    </p>
-                                    <a href=\"blog-detail.html\" class=\"tf-btn-line\"> Read more </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item 4 -->
-                        <div class=\"swiper-slide\">
-                            <div class=\"article-blog type-space-2 hover-img4 wow fadeInLeft\" data-wow-delay=\"0.3s\">
-                                <a href=\"blog-detail.html\" class=\"entry_image img-style4\">
-                                    <img src=\"assets/images/blog/blog-4.jpg\" data-src=\"assets/images/blog/blog-4.jpg\" alt=\"Image\" class=\"lazyload aspect-ratio-0\">
-                                </a>
-                                <div class=\"entry_tag\">
-                                    <a href=\"blog-grid.html\" class=\"name-tag h6 link\">March 2, 2025</a>
-                                </div>
-
-                                <div class=\"blog-content\">
-                                    <a href=\"blog-detail.html\" class=\"entry_name link h4\"> Top 5 simple accessories you need in your wardrobe </a>
-                                    <p class=\"text h6\">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit in malesuada magna faucibus. Pellentesque eget
-                                        finibus nunc.
-                                    </p>
-                                    <a href=\"blog-detail.html\" class=\"tf-btn-line\"> Read more </a>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class=\"sw-dot-default tf-sw-pagination\"></div>
                 </div>
