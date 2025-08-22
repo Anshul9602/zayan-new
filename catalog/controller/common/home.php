@@ -33,8 +33,11 @@ class Home extends \Opencart\System\Engine\Controller {
 			$data['banners'] = [];
 	
 			$results = $this->model_design_banner->getBanner(9);
-	
+
+
 			foreach ($results as $result) {
+				$test = is_file(DIR_IMAGE . html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'));
+				
 				if (is_file(DIR_IMAGE . html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'))) {
 					$data['banners'][] = [
 						'title' => explode('\n', $result['title'])[0],

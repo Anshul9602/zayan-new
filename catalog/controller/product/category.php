@@ -274,8 +274,6 @@ class Category extends \Opencart\System\Engine\Controller {
 				$data['products'][] = $this->load->controller('product/thumb', $product_data);
 			}
 
-			
-
 			$url = '';
 
 			if (isset($this->request->get['path'])) {
@@ -427,7 +425,7 @@ class Category extends \Opencart\System\Engine\Controller {
 			if ($limit && ceil($product_total / $limit) > $page) {
 				$this->document->addLink($this->url->link('product/category', 'language=' . $this->config->get('config_language') . '&path=' . $this->request->get['path'] . '&page=' . ($page + 1)), 'next');
 			}
-
+  
 			$data['sort'] = $sort;
 			$data['order'] = $order;
 			$data['limit'] = $limit;
