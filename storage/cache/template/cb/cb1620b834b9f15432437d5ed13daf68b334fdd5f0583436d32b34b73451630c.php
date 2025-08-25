@@ -293,13 +293,16 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-xl-4\">
 \t\t\t\t<div class=\"box-image_V01 hover-img mb-xl-0 wow fadeInUp\">
-\t\t\t\t\t<a href=\"shop-default.html\" class=\"box-image_image img-style\">
-\t\t\t\t\t\t<img src=\"assets/images/section/box-image-1.jpg\" data-src=\"assets/images/section/box-image-1.jpg\" alt=\"Image\" class=\"lazyload\">
+\t\t\t\t\t<a href=\"#\" class=\"box-image_image img-style\" style=\"background: #000;\">
+\t\t\t\t\t\t<img src=\"assets/col2.jpg\" data-src=\"assets/col2.jpg\" alt=\"Image\" class=\"lazyload\" style=\"opacity: 0.6;\">
 \t\t\t\t\t</a>
 \t\t\t\t\t<div class=\"box-image_content\">
-\t\t\t\t\t\t<a href=\"shop-default.html\" class=\"title text-display fw-semibold text-white link\">Lookbook</a>
-\t\t\t\t\t\t<span class=\"sub-title h5 text-white\">347 product</span>
-\t\t\t\t\t\t<a href=\"shop-default.html\" class=\"tf-btn-line style-white\">
+\t\t\t\t\t\t<a href=\"#\" class=\"title text-display fw-semibold text-white link\">Tennis Connection</a>
+\t\t\t\t\t\t<span class=\"sub-title h5 text-white\">";
+        // line 125
+        yield ($context["shop_total"] ?? null);
+        yield " products</span>
+\t\t\t\t\t\t<a href=\"index.php?route=product/category&language=en-gb&path=60_67\" class=\"tf-btn-line style-white\">
 \t\t\t\t\t\t\tEXPLORE NOW
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</div>
@@ -307,177 +310,23 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t</div>
 \t\t\t<div class=\"col-xl-8\">
 \t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over wow fadeInUp\" data-preview=\"3\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"3\">
-\t\t\t\t\t<div
-\t\t\t\t\t\tclass=\"swiper-wrapper\">
-\t\t\t\t\t\t<!-- Product 1 -->
-\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t<div class=\"card-product\">
-\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"product-img\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"assets/images/products/product-23.jpg\" data-src=\"assets/images/products/product-23.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"assets/images/products/product-24.jpg\" data-src=\"assets/images/products/product-24.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#;\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"name-product h4 link\">Diamond Ring</a>
-\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">\$99,99</span>
-\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">\$69,99</span>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list\">
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Beige</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-23.jpg\" data-src=\"assets/images/products/product-23.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Dark</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-dark-charcoal\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-25.jpg\" data-src=\"assets/images/products/product-25.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Sage Green</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-sage-green\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-26.jpg\" data-src=\"assets/images/products/product-26.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- Product 2 -->
-\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t<div class=\"card-product\">
-\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"product-img\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"assets/images/products/product-27.jpg\" data-src=\"assets/images/products/product-27.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"assets/images/products/product-28.jpg\" data-src=\"assets/images/products/product-28.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#;\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"name-product h4 link\">Diamond Cocktail Ring</a>
-\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">\$5,499</span>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list\">
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">White Gold</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-27.jpg\" data-src=\"assets/images/products/product-27.jpg\" alt=\"White Gold\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Rose Gold</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-muted-violet\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-29.jpg\" data-src=\"assets/images/products/product-29.jpg\" alt=\"Rose Gold\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- Product 3 -->
-\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t<div class=\"card-product\">
-\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"product-img\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"assets/images/products/product-30.jpg\" data-src=\"assets/images/products/product-30.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"assets/images/products/product-31.jpg\" data-src=\"assets/images/products/product-31.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<div class=\"variant-box\">
-\t\t\t\t\t\t\t\t\t\t<ul class=\"product-size_list\">
-\t\t\t\t\t\t\t\t\t\t\t<li class=\"size-item h6\">XS</li>
-\t\t\t\t\t\t\t\t\t\t\t<li class=\"size-item h6\">S</li>
-\t\t\t\t\t\t\t\t\t\t\t<li class=\"size-item h6\">M</li>
-\t\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#;\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"name-product h4 link\">Diamond Statement Ring</a>
-\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">\$79,99</span>
-\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">\$49,99</span>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list\">
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Beige</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-30.jpg\" data-src=\"assets/images/products/product-30.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Dark</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-dark-charcoal\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-32.jpg\" data-src=\"assets/images/products/product-32.jpg\" alt=\"Product\">
-
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"swiper-wrapper\">
+\t\t\t\t\t\t";
+        // line 135
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(($context["shop_look_products"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["product_html"]) {
+            // line 136
+            yield "\t\t\t\t\t\t<div class=\"swiper-slide\">";
+            yield $context["product_html"];
+            yield "</div>
+\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_key'], $context['product_html'], $context['_parent']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 138
+        yield "\t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t\t\t\t</div>
 \t\t\t</div>
@@ -678,7 +527,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t<div class=\"modal-content p-0\">
 \t\t\t<div class=\"modal-heading\">
 \t\t\t\t<div class=\"image\">
-\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/section/newletter.jpg\" data-src=\"assets/images/section/newletter.jpg\" alt=\"Image\">
+\t\t\t\t\t<img class=\"lazyload\" src=\"assets/col-61.jpg\" data-src=\"assets/col-61.jpg\" alt=\"Image\">
 \t\t\t\t</div>
 \t\t\t\t<span class=\"icon-close-popup\" data-bs-dismiss=\"modal\">
 \t\t\t\t\t<i class=\"icon-close\"></i>
@@ -743,7 +592,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 </script>
 
 ";
-        // line 569
+        // line 403
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -771,7 +620,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
      */
     public function getDebugInfo(): array
     {
-        return array (  747 => 569,  283 => 107,  263 => 100,  254 => 98,  250 => 97,  238 => 93,  221 => 92,  216 => 89,  198 => 85,  190 => 84,  187 => 83,  170 => 82,  154 => 68,  140 => 60,  133 => 58,  124 => 54,  120 => 53,  116 => 51,  112 => 50,  99 => 39,  85 => 33,  81 => 32,  75 => 28,  71 => 27,  42 => 1,);
+        return array (  596 => 403,  329 => 138,  320 => 136,  316 => 135,  303 => 125,  283 => 107,  263 => 100,  254 => 98,  250 => 97,  238 => 93,  221 => 92,  216 => 89,  198 => 85,  190 => 84,  187 => 83,  170 => 82,  154 => 68,  140 => 60,  133 => 58,  124 => 54,  120 => 53,  116 => 51,  112 => 50,  99 => 39,  85 => 33,  81 => 32,  75 => 28,  71 => 27,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -895,13 +744,13 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-xl-4\">
 \t\t\t\t<div class=\"box-image_V01 hover-img mb-xl-0 wow fadeInUp\">
-\t\t\t\t\t<a href=\"shop-default.html\" class=\"box-image_image img-style\">
-\t\t\t\t\t\t<img src=\"assets/images/section/box-image-1.jpg\" data-src=\"assets/images/section/box-image-1.jpg\" alt=\"Image\" class=\"lazyload\">
+\t\t\t\t\t<a href=\"#\" class=\"box-image_image img-style\" style=\"background: #000;\">
+\t\t\t\t\t\t<img src=\"assets/col2.jpg\" data-src=\"assets/col2.jpg\" alt=\"Image\" class=\"lazyload\" style=\"opacity: 0.6;\">
 \t\t\t\t\t</a>
 \t\t\t\t\t<div class=\"box-image_content\">
-\t\t\t\t\t\t<a href=\"shop-default.html\" class=\"title text-display fw-semibold text-white link\">Lookbook</a>
-\t\t\t\t\t\t<span class=\"sub-title h5 text-white\">347 product</span>
-\t\t\t\t\t\t<a href=\"shop-default.html\" class=\"tf-btn-line style-white\">
+\t\t\t\t\t\t<a href=\"#\" class=\"title text-display fw-semibold text-white link\">Tennis Connection</a>
+\t\t\t\t\t\t<span class=\"sub-title h5 text-white\">{{ shop_total }} products</span>
+\t\t\t\t\t\t<a href=\"index.php?route=product/category&language=en-gb&path=60_67\" class=\"tf-btn-line style-white\">
 \t\t\t\t\t\t\tEXPLORE NOW
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</div>
@@ -909,176 +758,10 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t</div>
 \t\t\t<div class=\"col-xl-8\">
 \t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over wow fadeInUp\" data-preview=\"3\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"3\">
-\t\t\t\t\t<div
-\t\t\t\t\t\tclass=\"swiper-wrapper\">
-\t\t\t\t\t\t<!-- Product 1 -->
-\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t<div class=\"card-product\">
-\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"product-img\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"assets/images/products/product-23.jpg\" data-src=\"assets/images/products/product-23.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"assets/images/products/product-24.jpg\" data-src=\"assets/images/products/product-24.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#;\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"name-product h4 link\">Diamond Ring</a>
-\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">\$99,99</span>
-\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">\$69,99</span>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list\">
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Beige</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-23.jpg\" data-src=\"assets/images/products/product-23.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Dark</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-dark-charcoal\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-25.jpg\" data-src=\"assets/images/products/product-25.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Sage Green</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-sage-green\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-26.jpg\" data-src=\"assets/images/products/product-26.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- Product 2 -->
-\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t<div class=\"card-product\">
-\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"product-img\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"assets/images/products/product-27.jpg\" data-src=\"assets/images/products/product-27.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"assets/images/products/product-28.jpg\" data-src=\"assets/images/products/product-28.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#;\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"name-product h4 link\">Diamond Cocktail Ring</a>
-\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">\$5,499</span>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list\">
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">White Gold</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-27.jpg\" data-src=\"assets/images/products/product-27.jpg\" alt=\"White Gold\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Rose Gold</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-muted-violet\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-29.jpg\" data-src=\"assets/images/products/product-29.jpg\" alt=\"Rose Gold\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- Product 3 -->
-\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t<div class=\"card-product\">
-\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"product-img\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"assets/images/products/product-30.jpg\" data-src=\"assets/images/products/product-30.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"assets/images/products/product-31.jpg\" data-src=\"assets/images/products/product-31.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<div class=\"variant-box\">
-\t\t\t\t\t\t\t\t\t\t<ul class=\"product-size_list\">
-\t\t\t\t\t\t\t\t\t\t\t<li class=\"size-item h6\">XS</li>
-\t\t\t\t\t\t\t\t\t\t\t<li class=\"size-item h6\">S</li>
-\t\t\t\t\t\t\t\t\t\t\t<li class=\"size-item h6\">M</li>
-\t\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#;\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-
-\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
-\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\" class=\"name-product h4 link\">Diamond Statement Ring</a>
-\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">\$79,99</span>
-\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">\$49,99</span>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list\">
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Beige</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-30.jpg\" data-src=\"assets/images/products/product-30.jpg\" alt=\"Product\">
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Dark</span>
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-dark-charcoal\"></span>
-\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/products/product-32.jpg\" data-src=\"assets/images/products/product-32.jpg\" alt=\"Product\">
-
-\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"swiper-wrapper\">
+\t\t\t\t\t\t{% for product_html in shop_look_products %}
+\t\t\t\t\t\t<div class=\"swiper-slide\">{{ product_html }}</div>
+\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t\t\t\t</div>
@@ -1280,7 +963,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t<div class=\"modal-content p-0\">
 \t\t\t<div class=\"modal-heading\">
 \t\t\t\t<div class=\"image\">
-\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/section/newletter.jpg\" data-src=\"assets/images/section/newletter.jpg\" alt=\"Image\">
+\t\t\t\t\t<img class=\"lazyload\" src=\"assets/col-61.jpg\" data-src=\"assets/col-61.jpg\" alt=\"Image\">
 \t\t\t\t</div>
 \t\t\t\t<span class=\"icon-close-popup\" data-bs-dismiss=\"modal\">
 \t\t\t\t\t<i class=\"icon-close\"></i>

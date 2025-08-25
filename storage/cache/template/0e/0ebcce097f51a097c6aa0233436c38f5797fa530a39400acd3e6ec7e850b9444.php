@@ -195,10 +195,58 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
         // line 81
         yield ($context["product_id"] ?? null);
         yield "\">
-                  <div class=\"tf-zoom-main sticky-top\"></div>
+                     ";
+        // line 82
+        if ((($context["options"] ?? null) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["options"] ?? null)) > 0))) {
+            // line 83
+            yield "                     ";
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
+            foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
+                // line 84
+                yield "                     ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 84) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 84)) > 0))) {
+                    // line 85
+                    yield "                     ";
+                    if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 85) == "select")) {
+                        // line 86
+                        yield "                     <input type=\"hidden\" name=\"option[";
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 86);
+                        yield "]\" value=\"";
+                        yield CoreExtension::getAttribute($this->env, $this->source, (($_v0 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 86)) && is_array($_v0) || $_v0 instanceof ArrayAccess ? ($_v0[0] ?? null) : null), "product_option_value_id", [], "any", false, false, false, 86);
+                        yield "\" id=\"input-option-";
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 86);
+                        yield "\">
+                     ";
+                    } elseif ((CoreExtension::getAttribute($this->env, $this->source,                     // line 87
+$context["option"], "type", [], "any", false, false, false, 87) == "radio")) {
+                        // line 88
+                        yield "                     <input type=\"hidden\" name=\"option[";
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 88);
+                        yield "]\" value=\"";
+                        yield CoreExtension::getAttribute($this->env, $this->source, (($_v1 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 88)) && is_array($_v1) || $_v1 instanceof ArrayAccess ? ($_v1[0] ?? null) : null), "product_option_value_id", [], "any", false, false, false, 88);
+                        yield "\" id=\"input-option-";
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 88);
+                        yield "\">
+                     ";
+                    }
+                    // line 90
+                    yield "                     ";
+                }
+                // line 91
+                yield "                     ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 92
+            yield "                     ";
+        }
+        // line 93
+        yield "                     <div class=\"tf-zoom-main sticky-top\"></div>
                   <div class=\"tf-product-info-list other-image-zoom\">
                      <h2 class=\"product-info-name\">";
-        // line 84
+        // line 95
         yield ($context["heading_title"] ?? null);
         yield "</h2>
                      <div class=\"product-info-meta\">
@@ -236,7 +284,7 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
                      <div class=\"tf-product-heading\">
                         <div class=\"product-info-price price-wrap\">
                            <span class=\"price-new price-on-sale h2 fw-4\">";
-        // line 119
+        // line 130
         yield ($context["price"] ?? null);
         yield "</span>
                           </div>
@@ -245,63 +293,133 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
                      
 
 
-                     <div class=\"tf-product-variant\">
-                        <div class=\"variant-picker-item variant-size\">
+                     ";
+        // line 137
+        if ((($context["options"] ?? null) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["options"] ?? null)) > 0))) {
+            // line 138
+            yield "                     <div class=\"tf-product-variant\">
+                        ";
+            // line 139
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
+            foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
+                // line 140
+                yield "                        ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 140) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 140)) > 0))) {
+                    // line 141
+                    yield "                        <div class=\"variant-picker-item variant-";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 141);
+                    yield "\">
                            <div class=\"variant-picker-label\">
                               <div class=\"h4 fw-semibold\">
-                                 Size
-                                 <span class=\"variant-picker-label-value value-currentSize\">medium</span>
+                                 ";
+                    // line 144
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 144);
+                    yield "
+                                 <span class=\"variant-picker-label-value value-current-option\">";
+                    // line 145
+                    yield CoreExtension::getAttribute($this->env, $this->source, (($_v2 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 145)) && is_array($_v2) || $_v2 instanceof ArrayAccess ? ($_v2[0] ?? null) : null), "name", [], "any", false, false, false, 145);
+                    yield "</span>
                               </div>
-                              <a href=\"#size-guide\" data-bs-toggle=\"modal\" class=\"size-guide link h6 fw-medium\">
+                              ";
+                    // line 147
+                    if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 147) == "select")) {
+                        // line 148
+                        yield "                              <a href=\"#size-guide\" data-bs-toggle=\"modal\" class=\"size-guide link h6 fw-medium\">
                               <i class=\"icon icon-ruler\"></i>
                               Size Guide
                               </a>
-                           </div>
+                              ";
+                    }
+                    // line 153
+                    yield "                           </div>
                            <div class=\"variant-picker-values\">
-                              <span class=\"size-btn\" data-size=\"XS\">XS</span>
-                              <span class=\"size-btn\" data-size=\"S\">S</span>
-                              <span class=\"size-btn\" data-size=\"M\">M</span>
-                              <span class=\"size-btn\" data-size=\"L\">L</span>
-                           </div>
+                              ";
+                    // line 155
+                    $context['_parent'] = $context;
+                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 155));
+                    $context['loop'] = [
+                      'parent' => $context['_parent'],
+                      'index0' => 0,
+                      'index'  => 1,
+                      'first'  => true,
+                    ];
+                    if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+                        $length = count($context['_seq']);
+                        $context['loop']['revindex0'] = $length - 1;
+                        $context['loop']['revindex'] = $length;
+                        $context['loop']['length'] = $length;
+                        $context['loop']['last'] = 1 === $length;
+                    }
+                    foreach ($context['_seq'] as $context["_key"] => $context["option_value"]) {
+                        // line 156
+                        yield "                              ";
+                        if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 156) == "select")) {
+                            // line 157
+                            yield "                              <span class=\"size-btn\" data-size=\"";
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 157);
+                            yield "\">";
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 157);
+                            yield "</span>
+                              ";
+                        } elseif ((CoreExtension::getAttribute($this->env, $this->source,                         // line 158
+$context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
+                            // line 159
+                            yield "                              <div class=\"hover-tooltip tooltip-bot color-btn";
+                            if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 159)) {
+                                yield " active";
+                            }
+                            yield "\" data-color=\"";
+                            yield Twig\Extension\CoreExtension::lower($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 159));
+                            yield "\">
+                                 <span class=\"check-color bg-color-option\"></span>
+                                 <span class=\"tooltip\">";
+                            // line 161
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 161);
+                            yield "</span>
+                              </div>
+                              ";
+                        }
+                        // line 164
+                        yield "                              ";
+                        ++$context['loop']['index0'];
+                        ++$context['loop']['index'];
+                        $context['loop']['first'] = false;
+                        if (isset($context['loop']['revindex0'], $context['loop']['revindex'])) {
+                            --$context['loop']['revindex0'];
+                            --$context['loop']['revindex'];
+                            $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+                        }
+                    }
+                    $_parent = $context['_parent'];
+                    unset($context['_seq'], $context['_key'], $context['option_value'], $context['_parent'], $context['loop']);
+                    $context = array_intersect_key($context, $_parent) + $_parent;
+                    // line 165
+                    yield "                           </div>
                         </div>
-                        <div class=\"variant-picker-item variant-color\">
-                           <div class=\"variant-picker-label\">
-                              <div class=\"h4 fw-semibold\">
-                                 Colors
-                                 <span class=\"variant-picker-label-value value-currentColor\">orange</span>
-                              </div>
-                           </div>
-                           <div class=\"variant-picker-values\">
-                              <div class=\"hover-tooltip tooltip-bot color-btn active\" data-color=\"blue\">
-                                 <span class=\"check-color bg-blue-1\"></span>
-                                 <span class=\"tooltip\">Blue</span>
-                              </div>
-                              <div class=\"hover-tooltip tooltip-bot color-btn\" data-color=\"gray\">
-                                 <span class=\"check-color bg-caramel\"></span>
-                                 <span class=\"tooltip\">Gray</span>
-                              </div>
-                              <div class=\"hover-tooltip tooltip-bot color-btn\" data-color=\"pink\">
-                                 <span class=\"check-color bg-hot-pink\"></span>
-                                 <span class=\"tooltip\">Pink</span>
-                              </div>
-                              <div class=\"hover-tooltip tooltip-bot color-btn\" data-color=\"green\">
-                                 <span class=\"check-color bg-dark-jade\"></span>
-                                 <span class=\"tooltip\">Green</span>
-                              </div>
-                              <div class=\"hover-tooltip tooltip-bot color-btn\" data-color=\"white\">
-                                 <span class=\"check-color bg-white\"></span>
-                                 <span class=\"tooltip\">White</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class=\"tf-product-total-quantity\">
+                        ";
+                }
+                // line 168
+                yield "                        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 169
+            yield "                     </div>
+                     ";
+        }
+        // line 171
+        yield "                     <div class=\"tf-product-total-quantity\">
                         <div class=\"group-btn\">
                            <div class=\"wg-quantity\">
                               <button class=\"btn-quantity btn-decrease\">
                               <i class=\"icon icon-minus\"></i>
                               </button>
-                              <input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"1\">
+                              <input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"";
+        // line 177
+        yield ($context["minimum"] ?? null);
+        yield "\">
                               <button class=\"btn-quantity btn-increase\">
                               <i class=\"icon icon-plus\"></i>
                               </button>
@@ -311,7 +429,7 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
                            <i class=\"icon icon-shopping-cart-simple\"></i>
                            </button>
                            <button type=\"button\" class=\"hover-tooltip box-icon btn-add-wishlist\" data-url=\"index.php?route=account/wishlist.add&language=";
-        // line 191
+        // line 186
         yield ($context["language"] ?? null);
         yield "\" data-product-id=\"";
         yield ($context["product_id"] ?? null);
@@ -403,7 +521,7 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
                   <div class=\"tf-mini-cart-info\">
                      <h6 class=\"title\">
                         <a href=\"product-detail.html\" class=\"link text-line-clamp-1\">";
-        // line 278
+        // line 273
         yield ($context["heading_title"] ?? null);
         yield "</a>
                      </h6>
@@ -414,7 +532,7 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
                      </div>
                      <div class=\"h6 fw-semibold\">
                         ";
-        // line 286
+        // line 281
         yield ($context["price"] ?? null);
         yield "
                      </div>
@@ -423,31 +541,107 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
             </div>
             <div class=\"tf-sticky-atc-infos\">
                <form class=\"\">
-                  <div class=\"tf-sticky-atc-variant-price\">
-                     <h6 class=\"title\">Size:</h6>
+                  ";
+        // line 288
+        if ((($context["options"] ?? null) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["options"] ?? null)) > 0))) {
+            // line 289
+            yield "                  ";
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
+            foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
+                // line 290
+                yield "                  ";
+                if ((((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 290) == "select") && CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 290)) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 290)) > 0))) {
+                    // line 291
+                    yield "                  <div class=\"tf-sticky-atc-variant-price\">
+                     <h6 class=\"title\">";
+                    // line 292
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 292);
+                    yield ":</h6>
                      <div class=\"tf-select style-1\">
-                        <select class=\"font-sora\">
-                           <option selected=\"selected\">M</option>
-                           <option>S</option>
-                           <option>L</option>
-                           <option>XL</option>
-                        </select>
+                        <select class=\"font-sora\" name=\"option[";
+                    // line 294
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 294);
+                    yield "]\">
+                           ";
+                    // line 295
+                    $context['_parent'] = $context;
+                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 295));
+                    $context['loop'] = [
+                      'parent' => $context['_parent'],
+                      'index0' => 0,
+                      'index'  => 1,
+                      'first'  => true,
+                    ];
+                    if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+                        $length = count($context['_seq']);
+                        $context['loop']['revindex0'] = $length - 1;
+                        $context['loop']['revindex'] = $length;
+                        $context['loop']['length'] = $length;
+                        $context['loop']['last'] = 1 === $length;
+                    }
+                    foreach ($context['_seq'] as $context["_key"] => $context["option_value"]) {
+                        // line 296
+                        yield "                           <option value=\"";
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 296);
+                        yield "\"";
+                        if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 296)) {
+                            yield " selected=\"selected\"";
+                        }
+                        yield ">";
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 296);
+                        yield "</option>
+                           ";
+                        ++$context['loop']['index0'];
+                        ++$context['loop']['index'];
+                        $context['loop']['first'] = false;
+                        if (isset($context['loop']['revindex0'], $context['loop']['revindex'])) {
+                            --$context['loop']['revindex0'];
+                            --$context['loop']['revindex'];
+                            $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+                        }
+                    }
+                    $_parent = $context['_parent'];
+                    unset($context['_seq'], $context['_key'], $context['option_value'], $context['_parent'], $context['loop']);
+                    $context = array_intersect_key($context, $_parent) + $_parent;
+                    // line 298
+                    yield "                        </select>
                      </div>
                   </div>
-                  <div class=\"tf-product-info-quantity\">
+                  ";
+                }
+                // line 302
+                yield "                  ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 303
+            yield "                  ";
+        }
+        // line 304
+        yield "                  <div class=\"tf-product-info-quantity\">
                      <h6 class=\"title\">Quantity:</h6>
                      <div class=\"wg-quantity\">
                         <button class=\"btn-quantity minus-btn\">
                         <i class=\"icon icon-minus\"></i>
                         </button>
-                        <input class=\"quantity-product\" type=\"text\" name=\"number\" value=\"1\">
+                        <input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"";
+        // line 310
+        yield ($context["minimum"] ?? null);
+        yield "\">
                         <button class=\"btn-quantity plus-btn\">
                         <i class=\"icon icon-plus\"></i>
                         </button>
                      </div>
                   </div>
                   <div class=\"tf-sticky-atc-btns\">
-                     <a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"tf-btn animate-btn btn-add-to-cart\">
+                     <a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"tf-btn animate-btn btn-add-to-cart\" data-url=\"index.php?route=checkout/cart.add&language=";
+        // line 317
+        yield ($context["language"] ?? null);
+        yield "\" data-product-id=\"";
+        yield ($context["product_id"] ?? null);
+        yield "\">
                      Add to cart
                      <i class=\"icon icon-shopping-cart-simple\"></i>
                      </a>
@@ -2547,6 +2741,29 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
 </section>
 <!-- /Related -->
 <script type=\"text/javascript\"><!--
+   // Handle option selection
+   \$(document).on('click', '.size-btn', function() {
+       var size = \$(this).data('size');
+       
+       // Update the label
+       \$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(size);
+       
+       // Update active state
+       \$(this).siblings().removeClass('active');
+       \$(this).addClass('active');
+   });
+   
+   \$(document).on('click', '.color-btn', function() {
+       var color = \$(this).data('color');
+       
+       // Update the label
+       \$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(color);
+       
+       // Update active state
+       \$(this).siblings().removeClass('active');
+       \$(this).addClass('active');
+   });
+   
    \$('#input-subscription').on('change', function(e) {
        var element = this;
    
@@ -2560,7 +2777,7 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
    
        \$.ajax({
            url: 'index.php?route=checkout/cart.add&language=";
-        // line 1724
+        // line 1747
         yield ($context["language"] ?? null);
         yield "',
            type: 'post',
@@ -2594,7 +2811,7 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
    
                    // ✅ Load updated cart HTML into your offcanvas cart wrapper
                    \$('.tf-mini-cart-wrap').load('index.php?route=common/cart.info&language=";
-        // line 1755
+        // line 1778
         yield ($context["language"] ?? null);
         yield "', function() {
                        // ✅ Once loaded, open the cart drawer
@@ -2636,7 +2853,7 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
    //-->
 </script>
 ";
-        // line 1794
+        // line 1817
         yield ($context["footer"] ?? null);
         yield from [];
     }
@@ -2662,7 +2879,7 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
      */
     public function getDebugInfo(): array
     {
-        return array (  2640 => 1794,  2598 => 1755,  2564 => 1724,  1707 => 870,  1702 => 868,  1698 => 867,  1695 => 866,  1689 => 864,  1686 => 863,  1680 => 859,  1673 => 857,  1664 => 854,  1660 => 853,  1657 => 852,  1653 => 851,  1646 => 847,  1642 => 845,  1638 => 844,  1633 => 841,  1631 => 840,  1628 => 839,  1624 => 837,  1610 => 836,  1601 => 835,  1584 => 834,  1579 => 833,  1577 => 832,  1573 => 831,  1568 => 828,  1562 => 826,  1559 => 825,  1553 => 823,  1551 => 822,  1547 => 821,  1540 => 816,  1534 => 814,  1532 => 813,  1526 => 810,  1521 => 808,  1517 => 807,  1513 => 806,  1509 => 804,  1504 => 801,  1493 => 799,  1489 => 798,  1486 => 797,  1475 => 795,  1471 => 794,  1467 => 793,  1461 => 790,  1458 => 789,  1455 => 788,  1451 => 786,  1445 => 785,  1439 => 782,  1431 => 781,  1425 => 780,  1418 => 779,  1415 => 778,  1409 => 775,  1401 => 774,  1395 => 773,  1388 => 772,  1385 => 771,  1379 => 768,  1371 => 767,  1365 => 766,  1358 => 765,  1355 => 764,  1349 => 761,  1342 => 759,  1328 => 758,  1321 => 756,  1314 => 755,  1311 => 754,  1305 => 751,  1295 => 750,  1289 => 749,  1282 => 748,  1279 => 747,  1273 => 744,  1259 => 743,  1252 => 742,  1249 => 741,  1243 => 738,  1240 => 737,  1232 => 734,  1225 => 733,  1223 => 732,  1218 => 731,  1205 => 730,  1203 => 729,  1199 => 728,  1191 => 727,  1188 => 726,  1184 => 725,  1180 => 724,  1176 => 723,  1169 => 722,  1166 => 721,  1160 => 718,  1157 => 717,  1149 => 714,  1142 => 713,  1140 => 712,  1135 => 711,  1122 => 710,  1120 => 709,  1116 => 708,  1108 => 707,  1105 => 706,  1101 => 705,  1097 => 704,  1093 => 703,  1086 => 702,  1083 => 701,  1077 => 698,  1074 => 697,  1067 => 695,  1060 => 693,  1058 => 692,  1051 => 691,  1047 => 690,  1043 => 689,  1037 => 688,  1031 => 687,  1024 => 686,  1021 => 685,  1017 => 684,  1012 => 682,  1009 => 681,  1007 => 680,  999 => 675,  991 => 673,  983 => 671,  977 => 669,  975 => 668,  971 => 666,  967 => 664,  964 => 663,  953 => 661,  949 => 660,  944 => 657,  941 => 656,  933 => 654,  930 => 653,  922 => 651,  919 => 650,  913 => 647,  907 => 645,  901 => 642,  898 => 641,  896 => 640,  893 => 639,  890 => 638,  880 => 634,  874 => 633,  870 => 631,  866 => 629,  863 => 628,  859 => 627,  855 => 625,  853 => 624,  845 => 622,  837 => 620,  834 => 619,  823 => 617,  819 => 616,  812 => 615,  802 => 613,  800 => 612,  795 => 610,  792 => 609,  787 => 606,  783 => 604,  766 => 602,  762 => 601,  759 => 600,  756 => 599,  742 => 597,  740 => 596,  736 => 594,  734 => 593,  729 => 591,  724 => 589,  418 => 286,  407 => 278,  315 => 191,  240 => 119,  202 => 84,  196 => 81,  184 => 71,  182 => 68,  179 => 64,  169 => 60,  165 => 59,  161 => 58,  157 => 57,  151 => 54,  148 => 53,  144 => 52,  137 => 47,  127 => 43,  123 => 42,  119 => 41,  114 => 38,  110 => 37,  105 => 34,  102 => 33,  99 => 32,  96 => 31,  93 => 30,  90 => 29,  87 => 28,  84 => 27,  66 => 10,  55 => 8,  51 => 7,  42 => 1,);
+        return array (  2857 => 1817,  2815 => 1778,  2781 => 1747,  1901 => 870,  1896 => 868,  1892 => 867,  1889 => 866,  1883 => 864,  1880 => 863,  1874 => 859,  1867 => 857,  1858 => 854,  1854 => 853,  1851 => 852,  1847 => 851,  1840 => 847,  1836 => 845,  1832 => 844,  1827 => 841,  1825 => 840,  1822 => 839,  1818 => 837,  1804 => 836,  1795 => 835,  1778 => 834,  1773 => 833,  1771 => 832,  1767 => 831,  1762 => 828,  1756 => 826,  1753 => 825,  1747 => 823,  1745 => 822,  1741 => 821,  1734 => 816,  1728 => 814,  1726 => 813,  1720 => 810,  1715 => 808,  1711 => 807,  1707 => 806,  1703 => 804,  1698 => 801,  1687 => 799,  1683 => 798,  1680 => 797,  1669 => 795,  1665 => 794,  1661 => 793,  1655 => 790,  1652 => 789,  1649 => 788,  1645 => 786,  1639 => 785,  1633 => 782,  1625 => 781,  1619 => 780,  1612 => 779,  1609 => 778,  1603 => 775,  1595 => 774,  1589 => 773,  1582 => 772,  1579 => 771,  1573 => 768,  1565 => 767,  1559 => 766,  1552 => 765,  1549 => 764,  1543 => 761,  1536 => 759,  1522 => 758,  1515 => 756,  1508 => 755,  1505 => 754,  1499 => 751,  1489 => 750,  1483 => 749,  1476 => 748,  1473 => 747,  1467 => 744,  1453 => 743,  1446 => 742,  1443 => 741,  1437 => 738,  1434 => 737,  1426 => 734,  1419 => 733,  1417 => 732,  1412 => 731,  1399 => 730,  1397 => 729,  1393 => 728,  1385 => 727,  1382 => 726,  1378 => 725,  1374 => 724,  1370 => 723,  1363 => 722,  1360 => 721,  1354 => 718,  1351 => 717,  1343 => 714,  1336 => 713,  1334 => 712,  1329 => 711,  1316 => 710,  1314 => 709,  1310 => 708,  1302 => 707,  1299 => 706,  1295 => 705,  1291 => 704,  1287 => 703,  1280 => 702,  1277 => 701,  1271 => 698,  1268 => 697,  1261 => 695,  1254 => 693,  1252 => 692,  1245 => 691,  1241 => 690,  1237 => 689,  1231 => 688,  1225 => 687,  1218 => 686,  1215 => 685,  1211 => 684,  1206 => 682,  1203 => 681,  1201 => 680,  1193 => 675,  1185 => 673,  1177 => 671,  1171 => 669,  1169 => 668,  1165 => 666,  1161 => 664,  1158 => 663,  1147 => 661,  1143 => 660,  1138 => 657,  1135 => 656,  1127 => 654,  1124 => 653,  1116 => 651,  1113 => 650,  1107 => 647,  1101 => 645,  1095 => 642,  1092 => 641,  1090 => 640,  1087 => 639,  1084 => 638,  1074 => 634,  1068 => 633,  1064 => 631,  1060 => 629,  1057 => 628,  1053 => 627,  1049 => 625,  1047 => 624,  1039 => 622,  1031 => 620,  1028 => 619,  1017 => 617,  1013 => 616,  1006 => 615,  996 => 613,  994 => 612,  989 => 610,  986 => 609,  981 => 606,  977 => 604,  960 => 602,  956 => 601,  953 => 600,  950 => 599,  936 => 597,  934 => 596,  930 => 594,  928 => 593,  923 => 591,  918 => 589,  641 => 317,  631 => 310,  623 => 304,  620 => 303,  614 => 302,  608 => 298,  585 => 296,  568 => 295,  564 => 294,  559 => 292,  556 => 291,  553 => 290,  548 => 289,  546 => 288,  536 => 281,  525 => 273,  433 => 186,  421 => 177,  413 => 171,  409 => 169,  403 => 168,  398 => 165,  384 => 164,  378 => 161,  368 => 159,  366 => 158,  359 => 157,  356 => 156,  339 => 155,  335 => 153,  328 => 148,  326 => 147,  321 => 145,  317 => 144,  310 => 141,  307 => 140,  303 => 139,  300 => 138,  298 => 137,  288 => 130,  250 => 95,  246 => 93,  243 => 92,  237 => 91,  234 => 90,  224 => 88,  222 => 87,  213 => 86,  210 => 85,  207 => 84,  202 => 83,  200 => 82,  196 => 81,  184 => 71,  182 => 68,  179 => 64,  169 => 60,  165 => 59,  161 => 58,  157 => 57,  151 => 54,  148 => 53,  144 => 52,  137 => 47,  127 => 43,  123 => 42,  119 => 41,  114 => 38,  110 => 37,  105 => 34,  102 => 33,  99 => 32,  96 => 31,  93 => 30,  90 => 29,  87 => 28,  84 => 27,  66 => 10,  55 => 8,  51 => 7,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -2748,7 +2965,18 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
                <div class=\"tf-product-info-wrap position-relative\">
                   <form id=\"form-product\">
                      <input type=\"hidden\" id=\"input-product-id\" name=\"product_id\" value=\"{{ product_id }}\">
-                  <div class=\"tf-zoom-main sticky-top\"></div>
+                     {% if options and options|length > 0 %}
+                     {% for option in options %}
+                     {% if option.product_option_value and option.product_option_value|length > 0 %}
+                     {% if option.type == 'select' %}
+                     <input type=\"hidden\" name=\"option[{{ option.product_option_id }}]\" value=\"{{ option.product_option_value[0].product_option_value_id }}\" id=\"input-option-{{ option.product_option_id }}\">
+                     {% elseif option.type == 'radio' %}
+                     <input type=\"hidden\" name=\"option[{{ option.product_option_id }}]\" value=\"{{ option.product_option_value[0].product_option_value_id }}\" id=\"input-option-{{ option.product_option_id }}\">
+                     {% endif %}
+                     {% endif %}
+                     {% endfor %}
+                     {% endif %}
+                     <div class=\"tf-zoom-main sticky-top\"></div>
                   <div class=\"tf-product-info-list other-image-zoom\">
                      <h2 class=\"product-info-name\">{{ heading_title }}</h2>
                      <div class=\"product-info-meta\">
@@ -2792,63 +3020,47 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
                      
 
 
+                     {% if options and options|length > 0 %}
                      <div class=\"tf-product-variant\">
-                        <div class=\"variant-picker-item variant-size\">
+                        {% for option in options %}
+                        {% if option.product_option_value and option.product_option_value|length > 0 %}
+                        <div class=\"variant-picker-item variant-{{ option.type }}\">
                            <div class=\"variant-picker-label\">
                               <div class=\"h4 fw-semibold\">
-                                 Size
-                                 <span class=\"variant-picker-label-value value-currentSize\">medium</span>
+                                 {{ option.name }}
+                                 <span class=\"variant-picker-label-value value-current-option\">{{ option.product_option_value[0].name }}</span>
                               </div>
+                              {% if option.type == 'select' %}
                               <a href=\"#size-guide\" data-bs-toggle=\"modal\" class=\"size-guide link h6 fw-medium\">
                               <i class=\"icon icon-ruler\"></i>
                               Size Guide
                               </a>
+                              {% endif %}
                            </div>
                            <div class=\"variant-picker-values\">
-                              <span class=\"size-btn\" data-size=\"XS\">XS</span>
-                              <span class=\"size-btn\" data-size=\"S\">S</span>
-                              <span class=\"size-btn\" data-size=\"M\">M</span>
-                              <span class=\"size-btn\" data-size=\"L\">L</span>
+                              {% for option_value in option.product_option_value %}
+                              {% if option.type == 'select' %}
+                              <span class=\"size-btn\" data-size=\"{{ option_value.name }}\">{{ option_value.name }}</span>
+                              {% elseif option.type == 'radio' %}
+                              <div class=\"hover-tooltip tooltip-bot color-btn{% if loop.first %} active{% endif %}\" data-color=\"{{ option_value.name|lower }}\">
+                                 <span class=\"check-color bg-color-option\"></span>
+                                 <span class=\"tooltip\">{{ option_value.name }}</span>
+                              </div>
+                              {% endif %}
+                              {% endfor %}
                            </div>
                         </div>
-                        <div class=\"variant-picker-item variant-color\">
-                           <div class=\"variant-picker-label\">
-                              <div class=\"h4 fw-semibold\">
-                                 Colors
-                                 <span class=\"variant-picker-label-value value-currentColor\">orange</span>
-                              </div>
-                           </div>
-                           <div class=\"variant-picker-values\">
-                              <div class=\"hover-tooltip tooltip-bot color-btn active\" data-color=\"blue\">
-                                 <span class=\"check-color bg-blue-1\"></span>
-                                 <span class=\"tooltip\">Blue</span>
-                              </div>
-                              <div class=\"hover-tooltip tooltip-bot color-btn\" data-color=\"gray\">
-                                 <span class=\"check-color bg-caramel\"></span>
-                                 <span class=\"tooltip\">Gray</span>
-                              </div>
-                              <div class=\"hover-tooltip tooltip-bot color-btn\" data-color=\"pink\">
-                                 <span class=\"check-color bg-hot-pink\"></span>
-                                 <span class=\"tooltip\">Pink</span>
-                              </div>
-                              <div class=\"hover-tooltip tooltip-bot color-btn\" data-color=\"green\">
-                                 <span class=\"check-color bg-dark-jade\"></span>
-                                 <span class=\"tooltip\">Green</span>
-                              </div>
-                              <div class=\"hover-tooltip tooltip-bot color-btn\" data-color=\"white\">
-                                 <span class=\"check-color bg-white\"></span>
-                                 <span class=\"tooltip\">White</span>
-                              </div>
-                           </div>
-                        </div>
+                        {% endif %}
+                        {% endfor %}
                      </div>
+                     {% endif %}
                      <div class=\"tf-product-total-quantity\">
                         <div class=\"group-btn\">
                            <div class=\"wg-quantity\">
                               <button class=\"btn-quantity btn-decrease\">
                               <i class=\"icon icon-minus\"></i>
                               </button>
-                              <input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"1\">
+                              <input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"{{ minimum }}\">
                               <button class=\"btn-quantity btn-increase\">
                               <i class=\"icon icon-plus\"></i>
                               </button>
@@ -2959,31 +3171,36 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
             </div>
             <div class=\"tf-sticky-atc-infos\">
                <form class=\"\">
+                  {% if options and options|length > 0 %}
+                  {% for option in options %}
+                  {% if option.type == 'select' and option.product_option_value and option.product_option_value|length > 0 %}
                   <div class=\"tf-sticky-atc-variant-price\">
-                     <h6 class=\"title\">Size:</h6>
+                     <h6 class=\"title\">{{ option.name }}:</h6>
                      <div class=\"tf-select style-1\">
-                        <select class=\"font-sora\">
-                           <option selected=\"selected\">M</option>
-                           <option>S</option>
-                           <option>L</option>
-                           <option>XL</option>
+                        <select class=\"font-sora\" name=\"option[{{ option.product_option_id }}]\">
+                           {% for option_value in option.product_option_value %}
+                           <option value=\"{{ option_value.product_option_value_id }}\"{% if loop.first %} selected=\"selected\"{% endif %}>{{ option_value.name }}</option>
+                           {% endfor %}
                         </select>
                      </div>
                   </div>
+                  {% endif %}
+                  {% endfor %}
+                  {% endif %}
                   <div class=\"tf-product-info-quantity\">
                      <h6 class=\"title\">Quantity:</h6>
                      <div class=\"wg-quantity\">
                         <button class=\"btn-quantity minus-btn\">
                         <i class=\"icon icon-minus\"></i>
                         </button>
-                        <input class=\"quantity-product\" type=\"text\" name=\"number\" value=\"1\">
+                        <input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"{{ minimum }}\">
                         <button class=\"btn-quantity plus-btn\">
                         <i class=\"icon icon-plus\"></i>
                         </button>
                      </div>
                   </div>
                   <div class=\"tf-sticky-atc-btns\">
-                     <a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"tf-btn animate-btn btn-add-to-cart\">
+                     <a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"tf-btn animate-btn btn-add-to-cart\" data-url=\"index.php?route=checkout/cart.add&language={{ language }}\" data-product-id=\"{{ product_id }}\">
                      Add to cart
                      <i class=\"icon icon-shopping-cart-simple\"></i>
                      </a>
@@ -4378,6 +4595,29 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
 </section>
 <!-- /Related -->
 <script type=\"text/javascript\"><!--
+   // Handle option selection
+   \$(document).on('click', '.size-btn', function() {
+       var size = \$(this).data('size');
+       
+       // Update the label
+       \$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(size);
+       
+       // Update active state
+       \$(this).siblings().removeClass('active');
+       \$(this).addClass('active');
+   });
+   
+   \$(document).on('click', '.color-btn', function() {
+       var color = \$(this).data('color');
+       
+       // Update the label
+       \$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(color);
+       
+       // Update active state
+       \$(this).siblings().removeClass('active');
+       \$(this).addClass('active');
+   });
+   
    \$('#input-subscription').on('change', function(e) {
        var element = this;
    

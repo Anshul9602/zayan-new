@@ -79,7 +79,18 @@
                <div class="tf-product-info-wrap position-relative">
                   <form id="form-product">
                      <input type="hidden" id="input-product-id" name="product_id" value="{{ product_id }}">
-                  <div class="tf-zoom-main sticky-top"></div>
+                     {% if options and options|length > 0 %}
+                     {% for option in options %}
+                     {% if option.product_option_value and option.product_option_value|length > 0 %}
+                     {% if option.type == 'select' %}
+                     <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.product_option_value[0].product_option_value_id }}" id="input-option-{{ option.product_option_id }}">
+                     {% elseif option.type == 'radio' %}
+                     <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.product_option_value[0].product_option_value_id }}" id="input-option-{{ option.product_option_id }}">
+                     {% endif %}
+                     {% endif %}
+                     {% endfor %}
+                     {% endif %}
+                     <div class="tf-zoom-main sticky-top"></div>
                   <div class="tf-product-info-list other-image-zoom">
                      <h2 class="product-info-name">{{ heading_title }}</h2>
                      <div class="product-info-meta">
@@ -123,63 +134,47 @@
                      
 
 
+                     {% if options and options|length > 0 %}
                      <div class="tf-product-variant">
-                        <div class="variant-picker-item variant-size">
+                        {% for option in options %}
+                        {% if option.product_option_value and option.product_option_value|length > 0 %}
+                        <div class="variant-picker-item variant-{{ option.type }}">
                            <div class="variant-picker-label">
                               <div class="h4 fw-semibold">
-                                 Size
-                                 <span class="variant-picker-label-value value-currentSize">medium</span>
+                                 {{ option.name }}
+                                 <span class="variant-picker-label-value value-current-option">{{ option.product_option_value[0].name }}</span>
                               </div>
+                              {% if option.type == 'select' %}
                               <a href="#size-guide" data-bs-toggle="modal" class="size-guide link h6 fw-medium">
                               <i class="icon icon-ruler"></i>
                               Size Guide
                               </a>
+                              {% endif %}
                            </div>
                            <div class="variant-picker-values">
-                              <span class="size-btn" data-size="XS">XS</span>
-                              <span class="size-btn" data-size="S">S</span>
-                              <span class="size-btn" data-size="M">M</span>
-                              <span class="size-btn" data-size="L">L</span>
+                              {% for option_value in option.product_option_value %}
+                              {% if option.type == 'select' %}
+                              <span class="size-btn" data-size="{{ option_value.name }}">{{ option_value.name }}</span>
+                              {% elseif option.type == 'radio' %}
+                              <div class="hover-tooltip tooltip-bot color-btn{% if loop.first %} active{% endif %}" data-color="{{ option_value.name|lower }}">
+                                 <span class="check-color bg-color-option"></span>
+                                 <span class="tooltip">{{ option_value.name }}</span>
+                              </div>
+                              {% endif %}
+                              {% endfor %}
                            </div>
                         </div>
-                        <div class="variant-picker-item variant-color">
-                           <div class="variant-picker-label">
-                              <div class="h4 fw-semibold">
-                                 Colors
-                                 <span class="variant-picker-label-value value-currentColor">orange</span>
-                              </div>
-                           </div>
-                           <div class="variant-picker-values">
-                              <div class="hover-tooltip tooltip-bot color-btn active" data-color="blue">
-                                 <span class="check-color bg-blue-1"></span>
-                                 <span class="tooltip">Blue</span>
-                              </div>
-                              <div class="hover-tooltip tooltip-bot color-btn" data-color="gray">
-                                 <span class="check-color bg-caramel"></span>
-                                 <span class="tooltip">Gray</span>
-                              </div>
-                              <div class="hover-tooltip tooltip-bot color-btn" data-color="pink">
-                                 <span class="check-color bg-hot-pink"></span>
-                                 <span class="tooltip">Pink</span>
-                              </div>
-                              <div class="hover-tooltip tooltip-bot color-btn" data-color="green">
-                                 <span class="check-color bg-dark-jade"></span>
-                                 <span class="tooltip">Green</span>
-                              </div>
-                              <div class="hover-tooltip tooltip-bot color-btn" data-color="white">
-                                 <span class="check-color bg-white"></span>
-                                 <span class="tooltip">White</span>
-                              </div>
-                           </div>
-                        </div>
+                        {% endif %}
+                        {% endfor %}
                      </div>
+                     {% endif %}
                      <div class="tf-product-total-quantity">
                         <div class="group-btn">
                            <div class="wg-quantity">
                               <button class="btn-quantity btn-decrease">
                               <i class="icon icon-minus"></i>
                               </button>
-                              <input class="quantity-product" type="text" name="quantity" value="1">
+                              <input class="quantity-product" type="text" name="quantity" value="{{ minimum }}">
                               <button class="btn-quantity btn-increase">
                               <i class="icon icon-plus"></i>
                               </button>
@@ -290,24 +285,29 @@
             </div>
             <div class="tf-sticky-atc-infos">
                <form class="">
+                  {% if options and options|length > 0 %}
+                  {% for option in options %}
+                  {% if option.type == 'select' and option.product_option_value and option.product_option_value|length > 0 %}
                   <div class="tf-sticky-atc-variant-price">
-                     <h6 class="title">Size:</h6>
+                     <h6 class="title">{{ option.name }}:</h6>
                      <div class="tf-select style-1">
-                        <select class="font-sora">
-                           <option selected="selected">M</option>
-                           <option>S</option>
-                           <option>L</option>
-                           <option>XL</option>
+                        <select class="font-sora" name="option[{{ option.product_option_id }}]">
+                           {% for option_value in option.product_option_value %}
+                           <option value="{{ option_value.product_option_value_id }}"{% if loop.first %} selected="selected"{% endif %}>{{ option_value.name }}</option>
+                           {% endfor %}
                         </select>
                      </div>
                   </div>
+                  {% endif %}
+                  {% endfor %}
+                  {% endif %}
                   <div class="tf-product-info-quantity">
                      <h6 class="title">Quantity:</h6>
                      <div class="wg-quantity">
                         <button class="btn-quantity minus-btn">
                         <i class="icon icon-minus"></i>
                         </button>
-                        <input class="quantity-product" type="text" name="quantity" value="1">
+                        <input class="quantity-product" type="text" name="quantity" value="{{ minimum }}">
                         <button class="btn-quantity plus-btn">
                         <i class="icon icon-plus"></i>
                         </button>
@@ -1709,6 +1709,29 @@
 </section>
 <!-- /Related -->
 <script type="text/javascript"><!--
+   // Handle option selection
+   $(document).on('click', '.size-btn', function() {
+       var size = $(this).data('size');
+       
+       // Update the label
+       $(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(size);
+       
+       // Update active state
+       $(this).siblings().removeClass('active');
+       $(this).addClass('active');
+   });
+   
+   $(document).on('click', '.color-btn', function() {
+       var color = $(this).data('color');
+       
+       // Update the label
+       $(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(color);
+       
+       // Update active state
+       $(this).siblings().removeClass('active');
+       $(this).addClass('active');
+   });
+   
    $('#input-subscription').on('change', function(e) {
        var element = this;
    

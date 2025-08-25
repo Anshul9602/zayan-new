@@ -141,7 +141,7 @@ class __TwigTemplate_978ffbeb658d1e51a2152564b3a9dd4e96255fdd9ba80dd6acc7fd16c5b
                               <div class=\"col-6\">
                                  <ul class=\"list-hor\">
                                     <li class=\"wg-cls hover-img\">
-                                       <a href=\"shop-default.html\" class=\"image img-style\">
+                                       <a href=\"#\" class=\"image img-style\">
                                        <img src=\"assets/images/collections/cls-header-1.jpg\"
                                           data-src=\"assets/images/collections/cls-header-1.jpg\" alt=\"Collection\" class=\"lazyload\">
                                        </a>
@@ -152,7 +152,7 @@ class __TwigTemplate_978ffbeb658d1e51a2152564b3a9dd4e96255fdd9ba80dd6acc7fd16c5b
                                        </div>
                                     </li>
                                     <li class=\"wg-cls hover-img\">
-                                       <a href=\"shop-default.html\" class=\"image img-style\">
+                                       <a href=\"#\" class=\"image img-style\">
                                        <img src=\"assets/images/collections/cls-header-2.jpg\"
                                           data-src=\"assets/images/collections/cls-header-2.jpg\" alt=\"Collection\" class=\"lazyload\">
                                        </a>
@@ -248,7 +248,7 @@ class __TwigTemplate_978ffbeb658d1e51a2152564b3a9dd4e96255fdd9ba80dd6acc7fd16c5b
                               <div class=\"col-6\">
                                  <ul class=\"list-hor\">
                                     <li class=\"wg-cls hover-img\">
-                                       <a href=\"shop-default.html\" class=\"image img-style\">
+                                       <a href=\"#\" class=\"image img-style\">
                                        <img src=\"assets/images/collections/cls-header-1.jpg\"
                                           data-src=\"assets/images/collections/cls-header-1.jpg\" alt=\"Collection\" class=\"lazyload\">
                                        </a>
@@ -259,7 +259,7 @@ class __TwigTemplate_978ffbeb658d1e51a2152564b3a9dd4e96255fdd9ba80dd6acc7fd16c5b
                                        </div>
                                     </li>
                                     <li class=\"wg-cls hover-img\">
-                                       <a href=\"shop-default.html\" class=\"image img-style\">
+                                       <a href=\"#\" class=\"image img-style\">
                                        <img src=\"assets/images/collections/cls-header-2.jpg\"
                                           data-src=\"assets/images/collections/cls-header-2.jpg\" alt=\"Collection\" class=\"lazyload\">
                                        </a>
