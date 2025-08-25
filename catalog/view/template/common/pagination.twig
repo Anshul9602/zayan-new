@@ -1,21 +1,25 @@
-<ul class="pagination">
-  {% if first %}
-    <li class="page-item"><a href="{{ first }}" class="page-link">|&lt;</a></li>
-  {% endif %}
-  {% if prev %}
-    <li class="page-item"><a href="{{ prev }}" class="page-link">&lt;</a></li>
-  {% endif %}
-  {% for link in links %}
-    {% if link.page == page %}
-      <li class="page-item active"><span class="page-link">{{ link.page }}</span></li>
-    {% else %}
-      <li class="page-item"><a href="{{ link.href }}" class="page-link">{{ link.page }}</a></li>
+{% if links|length > 0 %}
+<div class="wd-full wg-pagination m-0 justify-content-center">
+    {% if first %}
+        <a href="{{ first }}" class="pagination-item h6 direct"><i class="icon icon-caret-left"></i></a>
     {% endif %}
-  {% endfor %}
-  {% if next %}
-    <li class="page-item"><a href="{{ next }}" class="page-link">&gt;</a></li>
-  {% endif %}
-  {% if last %}
-    <li class="page-item"><a href="{{ last }}" class="page-link">&gt;|</a></li>
-  {% endif %}
-</ul>
+    {% if prev %}
+        <a href="{{ prev }}" class="pagination-item h6 direct"><i class="icon icon-caret-left"></i></a>
+    {% endif %}
+    
+    {% for link in links %}
+        {% if link.page == page %}
+            <span class="pagination-item h6 active">{{ link.page }}</span>
+        {% else %}
+            <a href="{{ link.href }}" class="pagination-item h6">{{ link.page }}</a>
+        {% endif %}
+    {% endfor %}
+    
+    {% if next %}
+        <a href="{{ next }}" class="pagination-item h6 direct"><i class="icon icon-caret-right"></i></a>
+    {% endif %}
+    {% if last %}
+        <a href="{{ last }}" class="pagination-item h6 direct"><i class="icon icon-caret-right"></i></a>
+    {% endif %}
+</div>
+{% endif %}

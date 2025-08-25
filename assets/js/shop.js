@@ -113,10 +113,11 @@
         });
 
         function updatePagination() {
-            if ($(".meta-filter-shop").hasClass("active") == true) {
-                $("#listLayout .wg-pagination").css("display", "none");
-                $("#gridLayout .wg-pagination").css("display", "none");
-            }
+            // Don't hide OpenCart pagination - let it handle server-side pagination
+            // if ($(".meta-filter-shop").hasClass("active") == true) {
+            //     $("#listLayout .wg-pagination").css("display", "none");
+            //     $("#gridLayout .wg-pagination").css("display", "none");
+            // }
         }
         function updateMetaFilter() {
             const appliedFilters = $("#applied-filters");
@@ -314,13 +315,14 @@
 
             applyFilter(sortValue, isListActive);
 
-            if ($(".meta-filter-shop").hasClass("active")) {
-                $("#listLayout").append(paginationList.clone().css("display", "none"));
-                $("#gridLayout").append(paginationGrid.clone().css("display", "none"));
-            } else {
-                $("#listLayout").append(paginationList.clone().css("display", "flex"));
-                $("#gridLayout").append(paginationGrid.clone().css("display", "flex"));
-            }
+            // Don't manipulate OpenCart pagination - let it handle server-side pagination
+            // if ($(".meta-filter-shop").hasClass("active")) {
+            //     $("#listLayout").append(paginationList.clone().css("display", "none"));
+            //     $("#gridLayout").append(paginationGrid.clone().css("display", "none"));
+            // } else {
+            //     $("#listLayout").append(paginationList.clone().css("display", "flex"));
+            //     $("#gridLayout").append(paginationGrid.clone().css("display", "flex"));
+            // }
         });
 
         $(".tf-view-layout-switch").on("click", function () {
@@ -696,11 +698,12 @@
             }
         });
 
-        if (gridItems.length <= maxItems - 1) {
-            $(".wg-pagination").hide();
-        } else {
-            $(".wg-pagination").css("display", "flex");
-        }
+        // Don't hide OpenCart pagination - let it handle server-side pagination
+        // if (gridItems.length <= maxItems - 1) {
+        //     $(".wg-pagination").hide();
+        // } else {
+        //     $(".wg-pagination").css("display", "flex");
+        // }
     };
     $(function () {
         rangeTwoPrice();

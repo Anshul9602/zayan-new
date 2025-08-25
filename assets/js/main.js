@@ -315,24 +315,69 @@
     /* Modal Second
     -------------------------------------------------------------------------*/
     var clickModalSecond = function () {
-        $(".show-size-guide").on("click", function () {
+        $(document).on("click", ".show-size-guide", function () {
             $("#size-guide").modal("show");
         });
-        $(".show-shopping-cart").on("click", function () {
+        $(document).on("click", ".show-shopping-cart", function () {
             $("#shoppingCart").modal("show");
         });
-        $(".btn-icon-action.wishlist").on("click", function () {
+        $(document).on("click", ".btn-icon-action.wishlist", function () {
             $("#wishlist").modal("show");
         });
 
-        $(".btn-add-to-cart").on("click", function () {
-            $(".tf-add-cart-success").addClass("active");
+        $(document).on("click", ".btn-add-to-cart", function (e) {
+            e.preventDefault();
+            let $this = $(this);
+            let url = ($this.data("url") || '').toString().replaceAll('&amp;', '&');
+            let productId = $this.data("product-id");
+            let quantity = $this.data("quantity") || $this.closest('.tf-sticky-atc-infos, .tf-product-info-list, body').find('.quantity-product').first().val() || 1;
+            if (!productId || !url) return;
+
+            $.ajax({
+                url: url,
+                type: 'post',
+                dataType: 'json',
+                data: { product_id: productId, quantity: quantity },
+                success: function(json) {
+                    if (json.success) {
+                        $(".tf-add-cart-success").addClass("active");
+                        // Optionally refresh mini-cart
+                        if (json.total) {
+                            $(".cart-count").text(json.total);
+                        }
+                    }
+                }
+            });
+        });
+        $(document).on("click", ".btn-quick-view", function (e) {
+            e.preventDefault();
+            const pid = $(this).data('product-id');
+            if (!pid) return;
+            fetch(`index.php?route=common/wishlist.getProduct&product_id=${pid}`)
+                .then(r => r.json())
+                .then(json => {
+                    if (json && json.success) {
+                        const product = json.data;
+                        const quickViewModal = document.getElementById('quickView');
+                        if (!quickViewModal) return;
+                        const nameEl = quickViewModal.querySelector('.tf-product-title');
+                        if (nameEl) nameEl.textContent = product.name || '';
+                        const descEl = quickViewModal.querySelector('.product-infor-sub');
+                        if (descEl) descEl.innerHTML = product.description || '';
+                        const imgs = quickViewModal.querySelectorAll('.tf-product-media img');
+                        imgs.forEach(img => { if (product.thumb) { img.src = product.thumb; img.dataset.src = product.thumb; }});
+                        const priceOld = quickViewModal.querySelector('.price-old');
+                        const priceNew = quickViewModal.querySelector('.price-new');
+                        if (priceOld && product.price) priceOld.textContent = product.price;
+                        if (priceNew && (product.special || product.price)) priceNew.textContent = product.special || product.price;
+                    }
+                })
         });
         $(".tf-add-cart-success .tf-add-cart-close").on("click", function () {
             $(".tf-add-cart-success").removeClass("active");
         });
 
-        $(".btn-add-note, .btn-estimate-shipping, .btn-add-gift").on("click", function () {
+        $(document).on("click", ".btn-add-note, .btn-estimate-shipping, .btn-add-gift", function () {
             var classList = {
                 "btn-add-note": ".add-note",
                 "btn-estimate-shipping": ".estimate-shipping",
@@ -346,7 +391,7 @@
             });
         });
 
-        $(".tf-mini-cart-tool-close").on("click", function () {
+        $(document).on("click", ".tf-mini-cart-tool-close", function () {
             $(".tf-mini-cart-tool-openable").removeClass("open");
         });
     };
@@ -618,20 +663,42 @@
     /* Add Wishlist
     -------------------------------------------------------------------------*/
     var addWishList = function () {
-        $(".btn-add-wishlist, .card-product .wishlist").on("click", function () {
+        $(document).on("click", ".btn-add-wishlist", function (e) {
+            e.preventDefault();
             let $this = $(this);
             let icon = $this.find(".icon");
             let tooltip = $this.find(".tooltip");
+            let productId = $this.data("product-id");
+            let url = ($this.data("url") || '').toString().replaceAll('&amp;', '&');
 
-            $this.toggleClass("addwishlist");
+            if (!productId || !url) return;
 
-            if ($this.hasClass("addwishlist")) {
-                icon.removeClass("icon-heart").addClass("icon-trash");
-                tooltip.text("Remove Wishlist");
-            } else {
-                icon.removeClass("icon-trash").addClass("icon-heart");
-                tooltip.text("Add to Wishlist");
-            }
+            $.ajax({
+                url: url,
+                type: 'post',
+                dataType: 'json',
+                data: { product_id: productId },
+                success: function(json) {
+                    if (json.redirect) {
+                        window.location = json.redirect;
+                        return;
+                    }
+                    if (json.success) {
+                        $this.toggleClass("addwishlist");
+                        if ($this.hasClass("addwishlist")) {
+                            icon.removeClass("icon-heart").addClass("icon-trash");
+                            tooltip.text("Remove Wishlist");
+                        } else {
+                            icon.removeClass("icon-trash").addClass("icon-heart");
+                            tooltip.text("Add to Wishlist");
+                        }
+                        $('.wishlist-count').text(json.total ?? ($('.wishlist-count').text()||0));
+                    }
+                    if (json.error) {
+                        $('#alert').prepend('<div class="alert alert-danger alert-dismissible"><i class="fa-solid fa-circle-exclamation"></i> ' + json.error + ' <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>');
+                    }
+                }
+            });
         });
         $(".btn-add-wishlist2").on("click", function () {
             let $this = $(this);

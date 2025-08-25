@@ -65,8 +65,94 @@ class Home extends \Opencart\System\Engine\Controller {
 			
 		// Product
 		$this->load->model('catalog/category');
+		$this->load->model('catalog/product');
 
-		$data['new_arrivals'] = $this->model_catalog_category->getCategories(76);
+		// Build featured tabs with specific category products
+		$data['featured_tabs'] = [];
+
+		$tabs = [
+			[
+				'name' => 'Diamond Rings',
+				'path_id' => '61_74', // for DOM id use
+				'category_id' => 74
+			],
+			[
+				'name' => 'Necklaces',
+				'path_id' => '61_72',
+				'category_id' => 72
+			],
+			[
+				'name' => 'Trending',
+				'path_id' => '60_68',
+				'category_id' => 68
+			]
+		];
+
+		foreach ($tabs as $tab) {
+			$filter_data = [
+				'filter_category_id' => $tab['category_id'],
+				'filter_sub_category' => true,
+				'sort' => 'p.sort_order',
+				'order' => 'ASC',
+				'start' => 0,
+				'limit' => 12
+			];
+
+			$results = $this->model_catalog_product->getProducts($filter_data);
+
+			$products = [];
+
+			// Image
+            $this->load->model('tool/image');
+
+			foreach ($results as $result) {
+				if ($result['image']) {
+					$image = $this->model_tool_image->resize(html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'), (int)$this->config->get('config_image_thumb_width'), (int)$this->config->get('config_image_thumb_height'));
+				} else {
+					$image = $this->model_tool_image->resize('placeholder.png', (int)$this->config->get('config_image_thumb_width'), (int)$this->config->get('config_image_thumb_height'));
+				}
+
+				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
+					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
+				} else {
+					$price = false;
+				}
+
+				if ((float)$result['special']) {
+					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
+				} else {
+					$special = false;
+				}
+
+				if ($this->config->get('config_tax')) {
+					$tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price'], $this->session->data['currency']);
+				} else {
+					$tax = false;
+				}
+
+				$product_data = [
+					'product_id'  => $result['product_id'],
+					'thumb'       => $image,
+					'name'        => $result['name'],
+					'description' => oc_substr(trim(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'))), 0, $this->config->get('config_product_description_length')) . '..',
+					'price'       => $price,
+					'special'     => $special,
+					'tax'         => $tax,
+					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
+					'rating'      => isset($result['rating']) ? (int)$result['rating'] : 0,
+					'href'        => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $result['product_id'])
+				];
+
+				$products[] = $this->load->controller('product/thumb', $product_data);
+			}
+
+			$data['featured_tabs'][] = [
+				'name' => $tab['name'],
+				'path_id' => $tab['path_id'],
+				'category_id' => $tab['category_id'],
+				'products' => $products
+			];
+		}
 
 	
 

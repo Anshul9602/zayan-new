@@ -1,62 +1,58 @@
- <!-- Product 4 -->
- <div class="card-product grid" data-availability="In stock" data-brand="automet">
-                                    <div class="card-product_wrapper">
-                                        <a href="{{ href }}" class="product-img">
-                                            <img class="lazyload img-product" src="image/{{ image }}" alt="Product">
-                                            <img class="lazyload img-hover" src="image/{{ image }}" alt="Product">
-                                        </a>
-                                        <ul class="product-action_list">
-                                            <li>
-                                                <a href="#shoppingCart" data-bs-toggle="offcanvas" class="hover-tooltip tooltip-left box-icon">
-                                                    <span class="icon icon-shopping-cart-simple"></span>
-                                                    <span class="tooltip">Add to cart</span>
-                                                </a>
-                                            </li>
-                                            <li class="wishlist">
-                                                <a href="javascript:void(0);" class="hover-tooltip tooltip-left box-icon">
-                                                    <span class="icon icon-heart"></span>
-                                                    <span class="tooltip">Add to Wishlist</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#quickView" data-bs-toggle="modal" class="hover-tooltip tooltip-left box-icon">
-                                                    <span class="icon icon-view"></span>
-                                                    <span class="tooltip">Quick view</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-product_info">
-                                        <a href="{{ href }}" class="name-product h4 link">{{ name }}</a>
-                                        <div class="price-wrap">
-                                            <span class="price-new h6">{{ price }}</span>
-                                        </div>
-                                        <ul class="product-color_list">
-                                            <li class="product-color-item color-swatch hover-tooltip tooltip-bot active">
-                                                <span class="tooltip color-filter">Pink</span>
-                                                <span class="swatch-value bg-hot-pink"></span>
-                                                <img class="lazyload" src="assets/images//products/product-7.jpg" data-src="assets/images//products/product-7.jpg"
-                                                    alt="Product">
-                                            </li>
-                                            <li class="product-color-item color-swatch hover-tooltip tooltip-bot">
-                                                <span class="tooltip color-filter">Beige</span>
-                                                <span class="swatch-value bg-light-beige"></span>
-                                                <img class="lazyload" src="assets/images//products/product-9.jpg" data-src="assets/images//products/product-9.jpg"
-                                                    alt="Product">
+<!-- Product Card -->
+<div class="card-product grid" data-availability="In stock" data-brand="automet" data-product-id="{{ product_id }}">
+	<div class="card-product_wrapper">
+		<a href="{{ href }}" class="product-img">
+			<img class="lazyload img-product" src="{{ thumb }}" data-src="{{ thumb }}" alt="{{ name }}">
+			<img class="lazyload img-hover" src="{{ thumb }}" data-src="{{ thumb }}" alt="{{ name }}">
+		</a>
+		<ul class="product-action_list">
+			<li>
+				<a href="#shoppingCart" data-bs-toggle="offcanvas" class="hover-tooltip tooltip-left box-icon btn-add-to-cart" data-url="{{ cart_add }}" data-product-id="{{ product_id }}" data-quantity="1">
+					<span class="icon icon-shopping-cart-simple"></span>
+					<span class="tooltip">Add to cart</span>
+				</a>
+			</li>
+			<li class="wishlist">
+				<a href="javascript:void(0);" class="hover-tooltip tooltip-left box-icon btn-add-wishlist" data-url="{{ wishlist_add }}" data-product-id="{{ product_id }}">
+					<span class="icon icon-heart"></span>
+					<span class="tooltip">Add to Wishlist</span>
+				</a>
+			</li>
+			<li>
+				<a href="#quickView" data-bs-toggle="modal" class="hover-tooltip tooltip-left box-icon btn-quick-view" data-product-id="{{ product_id }}">
+					<span class="icon icon-view"></span>
+					<span class="tooltip">Quick view</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="card-product_info">
+		<a href="{{ href }}" class="name-product h4 link">{{ name }}</a>
+		<div class="price-wrap">
+			{% if special %}
+				<span class="price-old h6 fw-normal">{{ price }}</span>
+				<span class="price-new h6">{{ special }}</span>
+			{% else %}
+				<span class="price-new h6">{{ price }}</span>
+			{% endif %}
+		</div>
+		<ul class="product-color_list">
+			<li class="product-color-item color-swatch hover-tooltip tooltip-bot active">
+				<span class="tooltip color-filter">Pink</span>
+				<span class="swatch-value bg-hot-pink"></span>
+				<img class="lazyload" src="assets/images//products/product-7.jpg" data-src="assets/images//products/product-7.jpg" alt="Product">
+			</li>
+			<li class="product-color-item color-swatch hover-tooltip tooltip-bot">
+				<span class="tooltip color-filter">Beige</span>
+				<span class="swatch-value bg-light-beige"></span>
+				<img class="lazyload" src="assets/images//products/product-9.jpg" data-src="assets/images//products/product-9.jpg" alt="Product">
 
-                                            </li>
-                                            <li class="product-color-item color-swatch hover-tooltip tooltip-bot">
-                                                <span class="tooltip color-filter">Dusty Olive</span>
-                                                <span class="swatch-value bg-dusty-olive"></span>
-                                                <img class="lazyload" src="assets/images//products/product-11.jpg" data-src="assets/images//products/product-11.jpg"
-                                                    alt="Product">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            
-
-
-
-
-                          
+			</li>
+			<li class="product-color-item color-swatch hover-tooltip tooltip-bot">
+				<span class="tooltip color-filter">Dusty Olive</span>
+				<span class="swatch-value bg-dusty-olive"></span>
+				<img class="lazyload" src="assets/images//products/product-11.jpg" data-src="assets/images//products/product-11.jpg" alt="Product">
+			</li>
+		</ul>
+	</div>
+</div>

@@ -77,6 +77,8 @@
             <!-- Product Info -->
             <div class="col-md-6">
                <div class="tf-product-info-wrap position-relative">
+                  <form id="form-product">
+                     <input type="hidden" id="input-product-id" name="product_id" value="{{ product_id }}">
                   <div class="tf-zoom-main sticky-top"></div>
                   <div class="tf-product-info-list other-image-zoom">
                      <h2 class="product-info-name">{{ heading_title }}</h2>
@@ -177,7 +179,7 @@
                               <button class="btn-quantity btn-decrease">
                               <i class="icon icon-minus"></i>
                               </button>
-                              <input class="quantity-product" type="text" name="number" value="1">
+                              <input class="quantity-product" type="text" name="quantity" value="1">
                               <button class="btn-quantity btn-increase">
                               <i class="icon icon-plus"></i>
                               </button>
@@ -186,7 +188,7 @@
                            ADD TO CART
                            <i class="icon icon-shopping-cart-simple"></i>
                            </button>
-                           <button type="button" class="hover-tooltip box-icon btn-add-wishlist">
+                           <button type="button" class="hover-tooltip box-icon btn-add-wishlist" data-url="index.php?route=account/wishlist.add&language={{ language }}" data-product-id="{{ product_id }}">
                            <span class="icon icon-heart"></span>
                            <span class="tooltip">Add to Wishlist</span>
                            </button>
@@ -255,6 +257,7 @@
                         </li>
                      </ul>
                   </div>
+                  </form>
                </div>
             </div>
             <!-- /Product Info -->
@@ -304,14 +307,14 @@
                         <button class="btn-quantity minus-btn">
                         <i class="icon icon-minus"></i>
                         </button>
-                        <input class="quantity-product" type="text" name="number" value="1">
+                        <input class="quantity-product" type="text" name="quantity" value="1">
                         <button class="btn-quantity plus-btn">
                         <i class="icon icon-plus"></i>
                         </button>
                      </div>
                   </div>
                   <div class="tf-sticky-atc-btns">
-                     <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn btn-add-to-cart">
+                     <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn btn-add-to-cart" data-url="index.php?route=checkout/cart.add&language={{ language }}" data-product-id="{{ product_id }}">
                      Add to cart
                      <i class="icon icon-shopping-cart-simple"></i>
                      </a>

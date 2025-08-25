@@ -64,6 +64,9 @@
                         <div id="product-count-list" class="count-text"></div>
                         <div id="applied-filters"></div>
                         <button id="remove-all" class="remove-all-filters" style="display: none;"><i class="icon icon-close"></i> Clear all</button>
+                        {% if results %}
+                            <div class="results-text">{{ results }}</div>
+                        {% endif %}
                     </div>
                   
                     <div class="wrapper-shop tf-grid-layout tf-col-4" id="gridLayout">
@@ -81,16 +84,12 @@
                    
                     <br />
                     <!-- Pagination -->
+                    {% if pagination %}
                         <div class="wd-full wg-pagination m-0 justify-content-center">
-                            <a href="#" class="pagination-item h6 direct"><i class="icon icon-caret-left"></i></a>
-                            <a href="#" class="pagination-item h6">1</a>
-                            <span class="pagination-item h6 active">2</span>
-                            <a href="#" class="pagination-item h6">3</a>
-                            <a href="#" class="pagination-item h6">4</a>
-                            <a href="#" class="pagination-item h6">5</a>
-                            <a href="#" class="pagination-item h6 direct"><i class="icon icon-caret-right"></i></a>
+                            {{ pagination }}
                         </div>
-                        <br />
+                    {% endif %}
+                    <br />
                     </div>
                 </div>
             </div>

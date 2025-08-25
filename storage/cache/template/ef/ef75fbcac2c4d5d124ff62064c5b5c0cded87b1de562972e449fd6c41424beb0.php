@@ -165,7 +165,12 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
         unset($context['_seq'], $context['_key'], $context['analytic'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 45
-        yield "</head>
+        yield "  <style>
+   header {
+    border-bottom: thin solid #f1f1f1;
+}
+  </style>
+</head>
 
 
 <body>
@@ -194,7 +199,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
                   <li class=\"menu-item\">
                      <a href=\"#\" class=\"item-link\">SHOP</a>
                      ";
-        // line 73
+        // line 78
         yield ($context["menu"] ?? null);
         yield "
                   </li>
@@ -216,14 +221,14 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
          <div class=\"col-lg-4\">
             <div id=\"logo\" class=\"text-center\">
                ";
-        // line 92
+        // line 97
         if (($context["logo"] ?? null)) {
-            // line 93
+            // line 98
             yield "               <a href=\"";
             yield ($context["home"] ?? null);
             yield "\">
                <img src=\"";
-            // line 94
+            // line 99
             yield ($context["logo"] ?? null);
             yield "\" title=\"";
             yield ($context["name"] ?? null);
@@ -233,56 +238,56 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
                </a>
                ";
         } else {
-            // line 97
+            // line 102
             yield "               <h1><a href=\"";
             yield ($context["home"] ?? null);
             yield "\">Zayn</a></h1>
                ";
         }
-        // line 99
+        // line 104
         yield "            </div>
          </div>
          <div class=\"col-md-4\">
             <ul class=\"nav-icon-list\">
                <li class=\"d-none d-lg-flex\">
                ";
-        // line 104
+        // line 109
         if ( !($context["logged"] ?? null)) {
-            // line 105
+            // line 110
             yield "                  <a class=\"nav-icon-item link\" href=\"index.php?route=account/login\"><i class=\"icon icon-user\"></i></a>
                   ";
         } else {
-            // line 107
+            // line 112
             yield "                  <a class=\"nav-icon-item link\" href=\"index.php?route=account/account\"><i class=\"icon icon-user\"></i></a>
                   ";
         }
-        // line 109
+        // line 114
         yield "               </li>
                <li class=\"d-none d-md-flex\">
                  ";
-        // line 111
+        // line 116
         yield ($context["search"] ?? null);
         yield "
                </li>
                <li class=\"d-none d-sm-flex\">
                  ";
-        // line 114
+        // line 119
         if ( !($context["logged"] ?? null)) {
-            // line 115
+            // line 120
             yield "                  <a class=\"nav-icon-item link\" href=\"index.php?route=common/wishlist\"><i class=\"icon icon-heart\"></i></a>
                   <span class=\"wishlist-count\">0</span>
                   ";
         } else {
-            // line 118
+            // line 123
             yield "                  <a class=\"nav-icon-item link\" href=\"index.php?route=account/wishlist\"><i class=\"icon icon-heart\"></i></a>
                   <span class=\"wishlist-count\">0</span>
                   ";
         }
-        // line 121
+        // line 126
         yield "                </li>
                <li class=\"shop-cart\"  data-bs-target=\"#shoppingCart\">
                  ";
-        // line 123
+        // line 128
         yield ($context["cart"] ?? null);
         yield "
                </li>
@@ -318,7 +323,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
      */
     public function getDebugInfo(): array
     {
-        return array (  286 => 123,  282 => 121,  277 => 118,  272 => 115,  270 => 114,  264 => 111,  260 => 109,  256 => 107,  252 => 105,  250 => 104,  243 => 99,  237 => 97,  227 => 94,  222 => 93,  220 => 92,  198 => 73,  168 => 45,  159 => 43,  154 => 42,  143 => 40,  138 => 39,  129 => 37,  124 => 36,  111 => 34,  107 => 33,  103 => 31,  97 => 29,  95 => 28,  80 => 15,  74 => 13,  71 => 12,  65 => 10,  63 => 9,  59 => 8,  55 => 7,  45 => 2,  42 => 1,);
+        return array (  291 => 128,  287 => 126,  282 => 123,  277 => 120,  275 => 119,  269 => 116,  265 => 114,  261 => 112,  257 => 110,  255 => 109,  248 => 104,  242 => 102,  232 => 99,  227 => 98,  225 => 97,  203 => 78,  168 => 45,  159 => 43,  154 => 42,  143 => 40,  138 => 39,  129 => 37,  124 => 36,  111 => 34,  107 => 33,  103 => 31,  97 => 29,  95 => 28,  80 => 15,  74 => 13,  71 => 12,  65 => 10,  63 => 9,  59 => 8,  55 => 7,  45 => 2,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -367,6 +372,11 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
   {% for analytic in analytics %}
     {{ analytic }}
   {% endfor %}
+  <style>
+   header {
+    border-bottom: thin solid #f1f1f1;
+}
+  </style>
 </head>
 
 

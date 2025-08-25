@@ -39,73 +39,81 @@ class __TwigTemplate_579d6bf1d554441e796f7dcadac7bbf6fe3e98dee985e6bde66a4bcfbf2
     {
         $macros = $this->macros;
         // line 1
-        yield "<ul class=\"pagination\">
-  ";
-        // line 2
-        if (($context["first"] ?? null)) {
-            // line 3
-            yield "    <li class=\"page-item\"><a href=\"";
-            yield ($context["first"] ?? null);
-            yield "\" class=\"page-link\">|&lt;</a></li>
-  ";
-        }
-        // line 5
-        yield "  ";
-        if (($context["prev"] ?? null)) {
-            // line 6
-            yield "    <li class=\"page-item\"><a href=\"";
-            yield ($context["prev"] ?? null);
-            yield "\" class=\"page-link\">&lt;</a></li>
-  ";
-        }
-        // line 8
-        yield "  ";
-        $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable(($context["links"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["link"]) {
-            // line 9
-            yield "    ";
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["link"], "page", [], "any", false, false, false, 9) == ($context["page"] ?? null))) {
-                // line 10
-                yield "      <li class=\"page-item active\"><span class=\"page-link\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["link"], "page", [], "any", false, false, false, 10);
-                yield "</span></li>
+        if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["links"] ?? null)) > 0)) {
+            // line 2
+            yield "<div class=\"wd-full wg-pagination m-0 justify-content-center\">
     ";
-            } else {
-                // line 12
-                yield "      <li class=\"page-item\"><a href=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["link"], "href", [], "any", false, false, false, 12);
-                yield "\" class=\"page-link\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["link"], "page", [], "any", false, false, false, 12);
-                yield "</a></li>
+            // line 3
+            if (($context["first"] ?? null)) {
+                // line 4
+                yield "        <a href=\"";
+                yield ($context["first"] ?? null);
+                yield "\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-left\"></i></a>
     ";
             }
-            // line 14
-            yield "  ";
+            // line 6
+            yield "    ";
+            if (($context["prev"] ?? null)) {
+                // line 7
+                yield "        <a href=\"";
+                yield ($context["prev"] ?? null);
+                yield "\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-left\"></i></a>
+    ";
+            }
+            // line 9
+            yield "    
+    ";
+            // line 10
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable(($context["links"] ?? null));
+            foreach ($context['_seq'] as $context["_key"] => $context["link"]) {
+                // line 11
+                yield "        ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["link"], "page", [], "any", false, false, false, 11) == ($context["page"] ?? null))) {
+                    // line 12
+                    yield "            <span class=\"pagination-item h6 active\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["link"], "page", [], "any", false, false, false, 12);
+                    yield "</span>
+        ";
+                } else {
+                    // line 14
+                    yield "            <a href=\"";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["link"], "href", [], "any", false, false, false, 14);
+                    yield "\" class=\"pagination-item h6\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["link"], "page", [], "any", false, false, false, 14);
+                    yield "</a>
+        ";
+                }
+                // line 16
+                yield "    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_key'], $context['link'], $context['_parent']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 17
+            yield "    
+    ";
+            // line 18
+            if (($context["next"] ?? null)) {
+                // line 19
+                yield "        <a href=\"";
+                yield ($context["next"] ?? null);
+                yield "\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-right\"></i></a>
+    ";
+            }
+            // line 21
+            yield "    ";
+            if (($context["last"] ?? null)) {
+                // line 22
+                yield "        <a href=\"";
+                yield ($context["last"] ?? null);
+                yield "\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-right\"></i></a>
+    ";
+            }
+            // line 24
+            yield "</div>
+";
         }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_key'], $context['link'], $context['_parent']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 15
-        yield "  ";
-        if (($context["next"] ?? null)) {
-            // line 16
-            yield "    <li class=\"page-item\"><a href=\"";
-            yield ($context["next"] ?? null);
-            yield "\" class=\"page-link\">&gt;</a></li>
-  ";
-        }
-        // line 18
-        yield "  ";
-        if (($context["last"] ?? null)) {
-            // line 19
-            yield "    <li class=\"page-item\"><a href=\"";
-            yield ($context["last"] ?? null);
-            yield "\" class=\"page-link\">&gt;|</a></li>
-  ";
-        }
-        // line 21
-        yield "</ul>";
         yield from [];
     }
 
@@ -130,31 +138,35 @@ class __TwigTemplate_579d6bf1d554441e796f7dcadac7bbf6fe3e98dee985e6bde66a4bcfbf2
      */
     public function getDebugInfo(): array
     {
-        return array (  108 => 21,  102 => 19,  99 => 18,  93 => 16,  90 => 15,  84 => 14,  76 => 12,  70 => 10,  67 => 9,  62 => 8,  56 => 6,  53 => 5,  47 => 3,  45 => 2,  42 => 1,);
+        return array (  114 => 24,  108 => 22,  105 => 21,  99 => 19,  97 => 18,  94 => 17,  88 => 16,  80 => 14,  74 => 12,  71 => 11,  67 => 10,  64 => 9,  58 => 7,  55 => 6,  49 => 4,  47 => 3,  44 => 2,  42 => 1,);
     }
 
     public function getSourceContext(): Source
     {
-        return new Source("<ul class=\"pagination\">
-  {% if first %}
-    <li class=\"page-item\"><a href=\"{{ first }}\" class=\"page-link\">|&lt;</a></li>
-  {% endif %}
-  {% if prev %}
-    <li class=\"page-item\"><a href=\"{{ prev }}\" class=\"page-link\">&lt;</a></li>
-  {% endif %}
-  {% for link in links %}
-    {% if link.page == page %}
-      <li class=\"page-item active\"><span class=\"page-link\">{{ link.page }}</span></li>
-    {% else %}
-      <li class=\"page-item\"><a href=\"{{ link.href }}\" class=\"page-link\">{{ link.page }}</a></li>
+        return new Source("{% if links|length > 0 %}
+<div class=\"wd-full wg-pagination m-0 justify-content-center\">
+    {% if first %}
+        <a href=\"{{ first }}\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-left\"></i></a>
     {% endif %}
-  {% endfor %}
-  {% if next %}
-    <li class=\"page-item\"><a href=\"{{ next }}\" class=\"page-link\">&gt;</a></li>
-  {% endif %}
-  {% if last %}
-    <li class=\"page-item\"><a href=\"{{ last }}\" class=\"page-link\">&gt;|</a></li>
-  {% endif %}
-</ul>", "catalog/view/template/common/pagination.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\pagination.twig");
+    {% if prev %}
+        <a href=\"{{ prev }}\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-left\"></i></a>
+    {% endif %}
+    
+    {% for link in links %}
+        {% if link.page == page %}
+            <span class=\"pagination-item h6 active\">{{ link.page }}</span>
+        {% else %}
+            <a href=\"{{ link.href }}\" class=\"pagination-item h6\">{{ link.page }}</a>
+        {% endif %}
+    {% endfor %}
+    
+    {% if next %}
+        <a href=\"{{ next }}\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-right\"></i></a>
+    {% endif %}
+    {% if last %}
+        <a href=\"{{ last }}\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-right\"></i></a>
+    {% endif %}
+</div>
+{% endif %}", "catalog/view/template/common/pagination.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\pagination.twig");
     }
 }

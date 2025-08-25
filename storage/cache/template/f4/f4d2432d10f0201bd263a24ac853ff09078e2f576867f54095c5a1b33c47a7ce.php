@@ -112,20 +112,30 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
                         <div id=\"product-count-list\" class=\"count-text\"></div>
                         <div id=\"applied-filters\"></div>
                         <button id=\"remove-all\" class=\"remove-all-filters\" style=\"display: none;\"><i class=\"icon icon-close\"></i> Clear all</button>
-                    </div>
+                        ";
+        // line 67
+        if (($context["results"] ?? null)) {
+            // line 68
+            yield "                            <div class=\"results-text\">";
+            yield ($context["results"] ?? null);
+            yield "</div>
+                        ";
+        }
+        // line 70
+        yield "                    </div>
                   
                     <div class=\"wrapper-shop tf-grid-layout tf-col-4\" id=\"gridLayout\">
                     ";
-        // line 70
+        // line 73
         if (($context["products"] ?? null)) {
-            // line 71
+            // line 74
             yield "
                     ";
-            // line 72
+            // line 75
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["products"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-                // line 73
+                // line 76
                 yield "                    ";
                 yield $context["product"];
                 yield "
@@ -134,36 +144,40 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['product'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 74
+            // line 77
             yield "                              
                     
                     ";
         }
-        // line 77
+        // line 80
         yield "                    ";
         if (( !($context["categories"] ?? null) &&  !($context["products"] ?? null))) {
-            // line 78
+            // line 81
             yield "                    <p>No products found</p>
                     <div class=\"text-end\"><a href=\"";
-            // line 79
+            // line 82
             yield ($context["continue"] ?? null);
             yield "\" class=\"btn btn-primary\">Continue</a></div>
                     ";
         }
-        // line 81
+        // line 84
         yield "                   
                     <br />
                     <!-- Pagination -->
-                        <div class=\"wd-full wg-pagination m-0 justify-content-center\">
-                            <a href=\"#\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-left\"></i></a>
-                            <a href=\"#\" class=\"pagination-item h6\">1</a>
-                            <span class=\"pagination-item h6 active\">2</span>
-                            <a href=\"#\" class=\"pagination-item h6\">3</a>
-                            <a href=\"#\" class=\"pagination-item h6\">4</a>
-                            <a href=\"#\" class=\"pagination-item h6\">5</a>
-                            <a href=\"#\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-right\"></i></a>
+                    ";
+        // line 87
+        if (($context["pagination"] ?? null)) {
+            // line 88
+            yield "                        <div class=\"wd-full wg-pagination m-0 justify-content-center\">
+                            ";
+            // line 89
+            yield ($context["pagination"] ?? null);
+            yield "
                         </div>
-                        <br />
+                    ";
+        }
+        // line 92
+        yield "                    <br />
                     </div>
                 </div>
             </div>
@@ -337,7 +351,7 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
    
 
 ";
-        // line 266
+        // line 265
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -365,7 +379,7 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
      */
     public function getDebugInfo(): array
     {
-        return array (  341 => 266,  154 => 81,  149 => 79,  146 => 78,  143 => 77,  138 => 74,  129 => 73,  125 => 72,  122 => 71,  120 => 70,  64 => 17,  56 => 12,  42 => 1,);
+        return array (  355 => 265,  180 => 92,  174 => 89,  171 => 88,  169 => 87,  164 => 84,  159 => 82,  156 => 81,  153 => 80,  148 => 77,  139 => 76,  135 => 75,  132 => 74,  130 => 73,  125 => 70,  119 => 68,  117 => 67,  64 => 17,  56 => 12,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -436,6 +450,9 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
                         <div id=\"product-count-list\" class=\"count-text\"></div>
                         <div id=\"applied-filters\"></div>
                         <button id=\"remove-all\" class=\"remove-all-filters\" style=\"display: none;\"><i class=\"icon icon-close\"></i> Clear all</button>
+                        {% if results %}
+                            <div class=\"results-text\">{{ results }}</div>
+                        {% endif %}
                     </div>
                   
                     <div class=\"wrapper-shop tf-grid-layout tf-col-4\" id=\"gridLayout\">
@@ -453,16 +470,12 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
                    
                     <br />
                     <!-- Pagination -->
+                    {% if pagination %}
                         <div class=\"wd-full wg-pagination m-0 justify-content-center\">
-                            <a href=\"#\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-left\"></i></a>
-                            <a href=\"#\" class=\"pagination-item h6\">1</a>
-                            <span class=\"pagination-item h6 active\">2</span>
-                            <a href=\"#\" class=\"pagination-item h6\">3</a>
-                            <a href=\"#\" class=\"pagination-item h6\">4</a>
-                            <a href=\"#\" class=\"pagination-item h6\">5</a>
-                            <a href=\"#\" class=\"pagination-item h6 direct\"><i class=\"icon icon-caret-right\"></i></a>
+                            {{ pagination }}
                         </div>
-                        <br />
+                    {% endif %}
+                    <br />
                     </div>
                 </div>
             </div>
