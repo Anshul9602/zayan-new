@@ -33,6 +33,77 @@
  ------------------------------------------------------------------------------ */
 /*--------- Abstracts variable ---------- */
 
+.about-title {
+  font-size: 48px;
+  color: #423c9e;
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 38px;
+}
+.about-content p:last-child {
+  padding-bottom: 0;
+}
+.about-us h5, .about-us b {
+  color: #423c9e;
+}
+.sidebar-single .sidebar-title {
+  position: relative;
+  line-height: 1;
+  margin-top: -3px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.sidebar-single h5 {
+  font-size: 17px;
+}
+.about-us button h5 {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.about-us button {
+  text-decoration: none;
+  color: #423c9e;
+  font-weight: 700;
+}
+strong, b {
+  font-weight: 700;
+}
+ .about-us h5, .about-us h6 {
+  font-family: "Lato", sans-serif;
+  color: #222222;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+.btn-hero:hover {
+  color: #fff;
+  background-color: #222222;
+}
+.about-us h5, .about-us b {
+  color: #423c9e;
+}
+.sidebar-single .sidebar-title:before {
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  content: " ";
+  position: absolute;
+  background-color: #efefef;
+}
+.sidebar-single {
+  margin-bottom: 35px;
+}
+.about-us h5, .about-us b {
+  color: #423c9e;
+}
+.about-us p, .about-us span {
+  font-size: 15px;
+  line-height: 1.8;
+  padding-bottom: 12px;
+  text-align: justify;
+}
 .section-padding {
   padding-top: 40px;
   padding-bottom: 40px;

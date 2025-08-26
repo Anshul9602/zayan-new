@@ -1,0 +1,125 @@
+{{ header }}
+
+<style>
+	.location-card {
+		background-color: white;
+		width: 400px;
+		text-align: left;
+		border: thin solid #ccc;
+		padding: 10px;
+		margin: 30px 10px 10px;
+		border-radius: 8px;
+	}
+	.location-card {
+		display: none;
+
+	}
+	.btn-hero {
+ 
+    font-size: 15px;
+    line-height: 1;
+    padding: 14px 30px;
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #423c9e;
+    margin-top: 38px;
+	color: #fff !important;
+}
+</style>
+
+<section style="min-height:50vh" class="about-us section-padding pb-0">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2>Store Directory</h2>
+				<br/>
+			</div>
+			<div class="row" style="width:100%">
+				<div class="col-10 offset-1 col-sm-4 offset-sm-4 text-center">
+					<select name="country_id" id="input-country" class="form-control">
+						<option value="">
+							--- Please Select ---
+						</option>
+						{% for bs in bannerstop %}
+							<option value="{{ bs.title }}">
+								{{ bs.title }}
+							</option>
+						{% endfor %}
+					</select>
+					<button id="search" class="tf-btn animate-btn type-small-2 text-white mt-3">Search</button>
+				</div>
+
+			</div>
+		</div>
+		<div class="row">
+			{% for bs in bannerstop %}
+				<div class="{{ bs.title }} location-card">
+					{% set bs_link = bs.link|split('/') %}
+
+					<h4>{{ bs_link[0] }}</h4>
+
+					<p style="margin-top:10px">
+						<b>Location:
+							{{ bs_link[3] }}</b>
+						<br/>
+						<b>Address:
+						</b>
+						{{ bs_link[1] }}
+
+						<br/>
+						<b>Phone Number:
+						</b>
+						{{ bs_link[2] }}
+
+						<br/>
+						<b>Time:
+						</b>
+							{{ bs_link[4] }}
+					</p>
+				</div>
+			{% endfor %}
+		</div>
+
+
+	</div>
+</section>
+<script>
+	$(document).ready(function () {
+$("#search").click(function () {
+$(".location-card").css('display', 'none');
+$(".location-card").each(function () {
+var className = $('#input-country').find(":selected").val();
+
+if ($(this).hasClass(className)) {
+$(this).css('display', 'inline');
+}
+})
+})
+
+})
+$(document).ready(function () { // Remove duplicates
+var seen = {};
+$('select option').each(function () {
+var txt = $(this).text();
+if (seen[txt]) {
+$(this).remove();
+} else {
+seen[txt] = true;
+}
+});
+
+// Sort remaining options
+var options = $('select option');
+options.sort(function (a, b) {
+var textA = $(a).text().toUpperCase(); // case-insensitive comparison
+var textB = $(b).text().toUpperCase(); // case-insensitive comparison
+return(textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+});
+
+$('select').empty().append(options);
+});
+</script>
+
+{{ footer }}

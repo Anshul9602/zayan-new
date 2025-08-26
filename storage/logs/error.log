@@ -1,0 +1,38 @@
+2025-08-26 06:52:24 - Error: Error: Could not load template common/education!
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 125
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 58
+Class: Opencart\System\Library\Template\Twig
+Function: render
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 187
+Class: Opencart\System\Library\Template
+Function: render
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\catalog\controller\common\education.php
+Line: 23
+Class: Opencart\System\Engine\Loader
+Function: view
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Common\Education
+Function: index
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once

@@ -63,7 +63,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 
 <!-- Banner -->
 
-<div class=\"tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav\" style=\"margin-top: 100px;\">
+<div class=\"tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav\" >
 \t<div dir=\"ltr\" class=\"swiper tf-swiper home sw-slide-show slider_effect_fade\" data-auto=\"true\" data-loop=\"true\" data-effect=\"fade\" data-delay=\"3000\">
 \t\t<div class=\"swiper-wrapper\">
 \t\t\t";
@@ -648,7 +648,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 
 <!-- Banner -->
 
-<div class=\"tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav\" style=\"margin-top: 100px;\">
+<div class=\"tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav\" >
 \t<div dir=\"ltr\" class=\"swiper tf-swiper home sw-slide-show slider_effect_fade\" data-auto=\"true\" data-loop=\"true\" data-effect=\"fade\" data-delay=\"3000\">
 \t\t<div class=\"swiper-wrapper\">
 \t\t\t{% for banner in banners %}
