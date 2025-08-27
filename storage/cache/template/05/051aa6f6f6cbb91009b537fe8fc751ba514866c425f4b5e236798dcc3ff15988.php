@@ -41,6 +41,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
         // line 1
         yield "</main>
 
+<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css\">
 
  <!-- Footer -->
  <footer  class=\"tf-footer style-4\">
@@ -80,7 +81,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
                                             </li>
                                             <li>
                                                 <a href=\"https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA\" target=\"_blank\" class=\"social-youtube\">
-                                                    <span class=\"icon\"><i class=\"icon-youtube-logo\"></i></span>
+                                                    <span class=\"icon\"><i class=\"fa fa-youtube\"></i></span>
                                                 </a>
                                             </li>
                                            
@@ -176,7 +177,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
 
 </main>
 ";
-        // line 137
+        // line 138
         yield ($context["cookie"] ?? null);
         yield "
 
@@ -196,20 +197,20 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
 
 
 ";
-        // line 154
+        // line 155
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["scripts"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["script"]) {
-            // line 155
+            // line 156
             yield "  <script src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["script"], "href", [], "any", false, false, false, 155);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["script"], "href", [], "any", false, false, false, 156);
             yield "\" type=\"text/javascript\"></script>
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['script'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 157
+        // line 158
         yield "
  <!-- Search -->
  <div class=\"modal modalCentered fade modal-search\" id=\"search\">
@@ -220,7 +221,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
                     <form action=\"index.php?route=product/search\" method=\"post\" class=\"form-search style-2\">
                         <fieldset>
                             <input type=\"text\" id=\"search-input\" placeholder=\"Search item\" class=\"style-stroke\"  value=\"";
-        // line 166
+        // line 167
         yield ($context["search"] ?? null);
         yield "\" aria-required=\"true\"
                                 required=\"\">
@@ -375,13 +376,14 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
      */
     public function getDebugInfo(): array
     {
-        return array (  224 => 166,  213 => 157,  204 => 155,  200 => 154,  180 => 137,  42 => 1,);
+        return array (  225 => 167,  214 => 158,  205 => 156,  201 => 155,  181 => 138,  42 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("</main>
 
+<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css\">
 
  <!-- Footer -->
  <footer  class=\"tf-footer style-4\">
@@ -421,7 +423,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
                                             </li>
                                             <li>
                                                 <a href=\"https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA\" target=\"_blank\" class=\"social-youtube\">
-                                                    <span class=\"icon\"><i class=\"icon-youtube-logo\"></i></span>
+                                                    <span class=\"icon\"><i class=\"fa fa-youtube\"></i></span>
                                                 </a>
                                             </li>
                                            

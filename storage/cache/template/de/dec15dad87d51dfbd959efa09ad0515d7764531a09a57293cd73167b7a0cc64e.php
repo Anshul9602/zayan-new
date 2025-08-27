@@ -142,7 +142,7 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t<h4 class=\"slogan fw-normal\">WE PRIORITIZE SUSTAINABLE AND ENVIRONMENTALLY FRIENDLY DEVELOPMENT.</h4>
 \t\t\t<p class=\"intro-text\">
 \t\t\t\tMorbi finibus erat ullamcorper malesuada placerat. Integer malesuada orci sed nulla scelerisque fermentum. Suspendisse lacinia
-\t\t\t\t                        elit
+\t\t\t\t\t\t\t\t                        elit
 \t\t\t\t<br class=\"d-none d-xxl-block\">
 \t\t\t\tat bibendum tincidunt.
 \t\t\t</p>
@@ -280,7 +280,7 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t\t\t<br>
 \t\t\t\t\t<p>
 \t\t\t\t\t\tThe word “Zayn” carries a lot of significance. It simultaneously conveys beauty, grace, and
-\t\t\t\t\t\t                        radiance. That’s exactly what our jewelry does - it radiates effervescent beauty and grace.
+\t\t\t\t\t\t\t\t\t\t\t\t                        radiance. That’s exactly what our jewelry does - it radiates effervescent beauty and grace.
 \t\t\t\t\t</p>
 
 \t\t\t\t</div>
@@ -324,10 +324,10 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
 \t\t\t\t\t\t\t\t\t\t“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada nulla a diam tempus mattis
-\t\t\t\t\t\t\t\t\t\t                                                ut at
-\t\t\t\t\t\t\t\t\t\t                                                odio. Nam pharetra et sapien posuere placerat. Sed vitae rhoncus nibh. Phasellus suscipit vitae lorem
-\t\t\t\t\t\t\t\t\t\t                                                vel
-\t\t\t\t\t\t\t\t\t\t                                                pretium “
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                ut at
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                odio. Nam pharetra et sapien posuere placerat. Sed vitae rhoncus nibh. Phasellus suscipit vitae lorem
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                vel
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                pretium “
 \t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -350,8 +350,8 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
 \t\t\t\t\t\t\t\t\t\t“Our experience with ACIS has been excellent. Their support team is always quick to respond and very
-\t\t\t\t\t\t\t\t\t\t                                                professional. They handle all questions and issues with great care and efficiency, making them a
-\t\t\t\t\t\t\t\t\t\t                                                reliable partner we truly appreciate.“
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                professional. They handle all questions and issues with great care and efficiency, making them a
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                reliable partner we truly appreciate.“
 \t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -374,9 +374,9 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
 \t\t\t\t\t\t\t\t\t\t“ACIS consistently provides fast, professional support whenever we need it. Their team is
-\t\t\t\t\t\t\t\t\t\t                                                knowledgeable
-\t\t\t\t\t\t\t\t\t\t                                                and always ready to help with any issue, big or small. We really appreciate their reliable
-\t\t\t\t\t\t\t\t\t\t                                                partnership.“
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                knowledgeable
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                and always ready to help with any issue, big or small. We really appreciate their reliable
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                partnership.“
 \t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -470,9 +470,8 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 <!-- /Gallery -->
 
 
-
 ";
-        // line 432
+        // line 431
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -500,7 +499,7 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
      */
     public function getDebugInfo(): array
     {
-        return array (  476 => 432,  42 => 1,);
+        return array (  475 => 431,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -607,7 +606,7 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t<h4 class=\"slogan fw-normal\">WE PRIORITIZE SUSTAINABLE AND ENVIRONMENTALLY FRIENDLY DEVELOPMENT.</h4>
 \t\t\t<p class=\"intro-text\">
 \t\t\t\tMorbi finibus erat ullamcorper malesuada placerat. Integer malesuada orci sed nulla scelerisque fermentum. Suspendisse lacinia
-\t\t\t\t                        elit
+\t\t\t\t\t\t\t\t                        elit
 \t\t\t\t<br class=\"d-none d-xxl-block\">
 \t\t\t\tat bibendum tincidunt.
 \t\t\t</p>
@@ -745,7 +744,7 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t\t\t<br>
 \t\t\t\t\t<p>
 \t\t\t\t\t\tThe word “Zayn” carries a lot of significance. It simultaneously conveys beauty, grace, and
-\t\t\t\t\t\t                        radiance. That’s exactly what our jewelry does - it radiates effervescent beauty and grace.
+\t\t\t\t\t\t\t\t\t\t\t\t                        radiance. That’s exactly what our jewelry does - it radiates effervescent beauty and grace.
 \t\t\t\t\t</p>
 
 \t\t\t\t</div>
@@ -789,10 +788,10 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
 \t\t\t\t\t\t\t\t\t\t“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada nulla a diam tempus mattis
-\t\t\t\t\t\t\t\t\t\t                                                ut at
-\t\t\t\t\t\t\t\t\t\t                                                odio. Nam pharetra et sapien posuere placerat. Sed vitae rhoncus nibh. Phasellus suscipit vitae lorem
-\t\t\t\t\t\t\t\t\t\t                                                vel
-\t\t\t\t\t\t\t\t\t\t                                                pretium “
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                ut at
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                odio. Nam pharetra et sapien posuere placerat. Sed vitae rhoncus nibh. Phasellus suscipit vitae lorem
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                vel
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                pretium “
 \t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -815,8 +814,8 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
 \t\t\t\t\t\t\t\t\t\t“Our experience with ACIS has been excellent. Their support team is always quick to respond and very
-\t\t\t\t\t\t\t\t\t\t                                                professional. They handle all questions and issues with great care and efficiency, making them a
-\t\t\t\t\t\t\t\t\t\t                                                reliable partner we truly appreciate.“
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                professional. They handle all questions and issues with great care and efficiency, making them a
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                reliable partner we truly appreciate.“
 \t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -839,9 +838,9 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
 \t\t\t\t\t\t\t\t\t\t“ACIS consistently provides fast, professional support whenever we need it. Their team is
-\t\t\t\t\t\t\t\t\t\t                                                knowledgeable
-\t\t\t\t\t\t\t\t\t\t                                                and always ready to help with any issue, big or small. We really appreciate their reliable
-\t\t\t\t\t\t\t\t\t\t                                                partnership.“
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                knowledgeable
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                and always ready to help with any issue, big or small. We really appreciate their reliable
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                partnership.“
 \t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -933,7 +932,6 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t</div>
 </section>
 <!-- /Gallery -->
-
 
 
 {{ footer }}
