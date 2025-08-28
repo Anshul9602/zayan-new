@@ -41,26 +41,31 @@ class __TwigTemplate_e9fc8e0318ac09f9e3206fd8b80b9224f507079497a1e12983b3fe94c58
         // line 1
         if (($context["products"] ?? null)) {
             // line 2
-            yield "  <h3>";
-            yield ($context["text_related"] ?? null);
-            yield "</h3>
-  <div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4\">
-    ";
-            // line 4
+            yield "  <div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over\" data-preview=\"4\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\"
+     data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\"
+     data-pagination-lg=\"4\">
+     <div class=\"swiper-wrapper\">
+        ";
+            // line 6
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["products"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-                // line 5
-                yield "      <div class=\"col mb-3\">";
+                // line 7
+                yield "        <div class=\"swiper-slide\">
+           ";
+                // line 8
                 yield $context["product"];
-                yield "</div>
-    ";
+                yield "
+        </div>
+        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['product'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 7
-            yield "  </div>
+            // line 11
+            yield "     </div>
+     <div class=\"sw-dot-default tf-sw-pagination\"></div>
+  </div>
 ";
         }
         yield from [];
@@ -87,17 +92,23 @@ class __TwigTemplate_e9fc8e0318ac09f9e3206fd8b80b9224f507079497a1e12983b3fe94c58
      */
     public function getDebugInfo(): array
     {
-        return array (  63 => 7,  54 => 5,  50 => 4,  44 => 2,  42 => 1,);
+        return array (  66 => 11,  57 => 8,  54 => 7,  50 => 6,  44 => 2,  42 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{% if products %}
-  <h3>{{ text_related }}</h3>
-  <div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4\">
-    {% for product in products %}
-      <div class=\"col mb-3\">{{ product }}</div>
-    {% endfor %}
+  <div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over\" data-preview=\"4\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\"
+     data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\"
+     data-pagination-lg=\"4\">
+     <div class=\"swiper-wrapper\">
+        {% for product in products %}
+        <div class=\"swiper-slide\">
+           {{ product }}
+        </div>
+        {% endfor %}
+     </div>
+     <div class=\"sw-dot-default tf-sw-pagination\"></div>
   </div>
 {% endif %}", "catalog/view/template/product/related.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\product\\related.twig");
     }

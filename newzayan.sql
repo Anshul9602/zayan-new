@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2025 at 02:29 PM
+-- Generation Time: Aug 28, 2025 at 02:37 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -42,6 +42,13 @@ CREATE TABLE `oc_address` (
   `custom_field` text DEFAULT NULL,
   `default` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `oc_address`
+--
+
+INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, `company`, `address_1`, `address_2`, `city`, `postcode`, `country_id`, `zone_id`, `custom_field`, `default`) VALUES
+(1, 1, 'anshul', 'kumar', '', 'jaipur', '222', 'jaipur', '332701', 99, 1477, '[]', 1);
 
 -- --------------------------------------------------------
 
@@ -369,7 +376,8 @@ CREATE TABLE `oc_banner` (
 
 INSERT INTO `oc_banner` (`banner_id`, `name`, `status`) VALUES
 (9, 'home banners', 1),
-(10, 'home featured collection', 1);
+(10, 'home featured collection', 1),
+(11, 'retailer list', 1);
 
 -- --------------------------------------------------------
 
@@ -396,7 +404,35 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `language_id`, `t
 (112, 9, 1, 'Timeless Beauty \\n we make every sparkle count', '/index.php?route=product/category&amp;language=en-gb&amp;path=60_67', 'catalog/banners/tennis-connection.jpg', 1),
 (116, 10, 1, 'Diamond Rings', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_74', 'catalog/products/0919RG White Side.jpg', 0),
 (117, 10, 1, 'Necklaces', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_72', 'catalog/products/109810NL18100B01ZZZ a.jpg', 0),
-(118, 10, 1, 'Earrings', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_71', 'catalog/products/0773ER RG a.jpg', 0);
+(118, 10, 1, 'Earrings', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_71', 'catalog/products/0773ER RG a.jpg', 0),
+(119, 11, 1, 'FL', 'Robinson’s Jewelers/820 E Las Olas Blvd, Fort Lauderdale, FL 33301/+1 954-258-2246/Fort Lauderdale/11:00am-07:00pm', '', 1),
+(120, 11, 1, 'AZ', 'Oliver Smith Jeweler/8787 N Scottsdale Rd Suite 116, Scottsdale, AZ 85253/+1 480-607-4444/The Shops Gainey Village/10:00am-5:30pm', '', 2),
+(121, 11, 1, 'TX', 'Eaton Custom Jewelers/5200 McDermott Rd Ste 205, Plano, TX 75024/+1 972-335-6500/McDermott Rd/10:00am-05:00pm', '', 3),
+(122, 11, 1, 'CA', 'Famulare Jewelers/3001 Carlsbad Blvd, Carlsbad, CA 92008/+1 760-434-7740/Carlsbad Inn Beach Resort/12:00pm-05:00pm', '', 4),
+(123, 11, 1, 'CA', 'Fernandez Jewelers/2689 Saviers Rd, Oxnard, CA 93033/+1 805-240-1717/Centerpoint Mall/10:00am-08:00pm', '', 5),
+(124, 11, 1, 'CA', 'Frizzante Fine Jewelers/73151 El Paseo suite f, Palm Desert, CA 92260/+1 760-423-6045/El Paseo Shopping District/11:00am-05:00pm', '', 6),
+(125, 11, 1, 'CA', 'Leon\'s of Beverly Hills/9626 Brighton Way, Beverly Hills, CA 90210/+1 310-246-0277/Beverly Hills/09:00am-06:00pm', '', 7),
+(126, 11, 1, 'AZ', 'Galicia Fine Jewelers/15147 N Scottsdale Rd H-145, Scottsdale, AZ 85254/+1 480-421-9688/Scottsdale Quarter/11:00am-06:30pm', '', 8),
+(127, 11, 1, 'CA', 'Jewels on Lake/415 S Lake Ave Suite #101, Pasadena, CA 91101/+1 626-356-4242/The Shops On Lake Avenue/11:00am-05:30pm', '', 9),
+(128, 11, 1, 'CA', 'Kazanjian/320 N. Camden Drive  Beverly Hills, CA 90210/+1 310-246-2410/Beverly Hills/11:00am-06:00pm', '', 10),
+(129, 11, 1, 'TX', 'Kelly Mitchel Fine Jewelry /4256 Oak Lawn Ave, Dallas, TX 75219/+1 214-736-5155/The Shops of Highland Park/11:00am-05:00pm', '', 11),
+(130, 11, 1, 'CA', 'KFK Jewelers Inc/8319 W 3rd St, Los Angeles, CA 90048/+1 323-655-7583/Los Angeles/10:30am-04:00pm', '', 12),
+(131, 11, 1, 'CA', 'Kristof\'s Classic Jewelers/14006 Riverside Dr #117, Sherman Oaks, CA 91423/+1 818-907-0020/Westfield Fashion Square/11:00am-06:00pm', '', 13),
+(132, 11, 1, 'NY', 'Oscar Stone/2384 Grand Concourse, The Bronx, NY 10458/+1 914-218-1446/Grand Concourse/11:00am-05:00pm', '', 14),
+(133, 11, 1, 'CA', 'Ozel Fine Jewelry (Palm Desert)/73-375 El Paseo STE M, Palm Desert, CA 92260/+1 760-773-552/The Gardens on El Paseo/10:00am-06:00pm', '', 15),
+(134, 11, 1, 'CA', 'Ozel Jewelers (Rancho Cucamonga)/11400 Fourth St #103, Rancho Cucamonga, CA 91730/+1 909-481-7050/Rancho Cucamonga/11:00am-06:00pm', '', 16),
+(135, 11, 1, 'CA', 'Place Vendome/48, Hugus Alley, Pasadena, CA 91103/+1 626-577-7001/One Colorado/10:00am-06:00pm', '', 17),
+(136, 11, 1, 'RI', 'T.Stencel Jewelers Inc/Suite #E 40 Main St, East Greenwich, RI 02818/+1 401-884-2900/East Greenwich/10:00AM-05:30PM', '', 18),
+(137, 11, 1, 'GA', 'Tassels/3802 Roswell Rd NE B, Atlanta, GA 30342/+1 404-364-9434/Powers Ferry Square/10:00AM-05:00PM', '', 19),
+(138, 11, 1, 'NY', 'The Jewelry Clinic/633 Old Country Rd, Riverhead, NY 11901/+1 631-727-1200/Riverhead Plaza/10:00AM-05:30PM', '', 20),
+(139, 11, 1, 'CA', 'The Jewelry Shop/4375 Admiralty Way, Marina Del Rey, CA 90292/+1 310-823-0899/The Ritz-Carlton, Marina del Rey/11:00am-05:00pm', '', 21),
+(140, 11, 1, 'FL', 'Yamron Jewelers/5555 Tamiami Trail N Ste 11, Naples, FL 34108/+1 239-592-7707/Waterside Shops/11:00am-05:00pm', '', 22),
+(141, 11, 1, 'CA', 'Yale Jewellers/2839 Wilshire Blvd, Santa Monica, CA 90403/+1 310-829-0605/Santa Monica/10:00am-05:00pm', '', 23),
+(142, 11, 1, 'CA', 'The Diamond Guys/16255 Ventura Blvd # 515, Encino, CA 91436/+1 213-510-3555/MB Plaza/11:00am-05:00pm', '', 24),
+(143, 11, 1, 'FL', 'Tilden Ross Jewelers/410 St Armands Cir, Sarasota, FL 34236/+1 941-388-3338/St. Armands Circle/10:00am-05:00pm', '', 25),
+(144, 11, 1, 'GA', 'Treasures Old &amp; New Jewelers/4330 Wrightsboro Rd, Grovetown, GA 30813/+1 706-391-6877/Grovetown/10:00am-06:00pm', '', 26),
+(145, 11, 1, 'NJ', 'Rainbow Gems/269 Livingston St Suite S, Northvale, NJ 07647/+1 201-767-7571/Northvale Square/11:00am-05:00pm', '', 27),
+(146, 11, 1, 'TX', 'William Noble Rare Jewels/8201 Preston Rd # 270, Dallas, TX 75225/+1 214-526-3890/Preston Sherry Plaza/10:00am-05:00pm', '', 28);
 
 -- --------------------------------------------------------
 
@@ -417,13 +453,6 @@ CREATE TABLE `oc_cart` (
   `price` decimal(15,4) DEFAULT NULL,
   `date_added` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
-
---
--- Dumping data for table `oc_cart`
---
-
-INSERT INTO `oc_cart` (`cart_id`, `store_id`, `customer_id`, `session_id`, `product_id`, `subscription_plan_id`, `option`, `quantity`, `override`, `price`, `date_added`) VALUES
-(7, 0, 1, '0d6e9ce1dc4b2eac7e12b199eb', 1402, 0, '[]', 1, '[]', NULL, '2025-08-25 12:19:51');
 
 -- --------------------------------------------------------
 
@@ -1348,7 +1377,8 @@ CREATE TABLE `oc_customer_activity` (
 --
 
 INSERT INTO `oc_customer_activity` (`customer_activity_id`, `customer_id`, `key`, `data`, `ip`, `date_added`) VALUES
-(1, 1, 'register', '{\"customer_id\":1,\"name\":\"anshul kumar\"}', '::1', '2025-08-25 09:28:06');
+(1, 1, 'register', '{\"customer_id\":1,\"name\":\"anshul kumar\"}', '::1', '2025-08-25 09:28:06'),
+(2, 1, 'address_add', '{\"customer_id\":1,\"name\":\"anshul kumar\"}', '::1', '2025-08-26 12:21:36');
 
 -- --------------------------------------------------------
 
@@ -1547,7 +1577,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 1, 'http://localhost/zyannew/index.php?route=common/home&amp;language=en-gb', 'http://localhost/zyannew/index.php?route=product/product&amp;language=en-gb&amp;product_id=345', '2025-08-25 12:19:52');
+('::1', 0, 'http://localhost/zyannew/', '', '2025-08-28 12:12:39');
 
 -- --------------------------------------------------------
 
@@ -1583,6 +1613,15 @@ CREATE TABLE `oc_customer_search` (
   `ip` varchar(40) DEFAULT NULL,
   `date_added` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `oc_customer_search`
+--
+
+INSERT INTO `oc_customer_search` (`customer_search_id`, `store_id`, `language_id`, `customer_id`, `keyword`, `category_id`, `sub_category`, `description`, `products`, `ip`, `date_added`) VALUES
+(1, 0, 1, 1, 'Timeless Plain Gold Hoop Earrings', 0, 0, 0, 421, '::1', '2025-08-27 10:09:08'),
+(2, 0, 1, 1, 'Timeless Plain Gold Hoop Earrings', 0, 0, 0, 421, '::1', '2025-08-27 10:18:46'),
+(3, 0, 1, 1, '18K White Gold Butterfly Pendant', 0, 0, 0, 405, '::1', '2025-08-27 10:18:57');
 
 -- --------------------------------------------------------
 
@@ -1625,6 +1664,13 @@ CREATE TABLE `oc_customer_wishlist` (
   `product_id` int(11) NOT NULL,
   `date_added` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `oc_customer_wishlist`
+--
+
+INSERT INTO `oc_customer_wishlist` (`customer_id`, `store_id`, `product_id`, `date_added`) VALUES
+(1, 0, 1050, '2025-08-27 10:29:37');
 
 -- --------------------------------------------------------
 
@@ -5690,7 +5736,7 @@ INSERT INTO `oc_product` (`product_id`, `master_id`, `model`, `sku`, `upc`, `ean
 (1725, 0, '133607BL18100B15ZZZ(TC1)', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', 1, 6, 'catalog/26-10-23/1336BL Ruby Alter WGa.jpg', 0, 1, 1230.0000, 0, 0, '2010-10-18', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 1, '2024-08-21 22:54:06', '2024-12-13 10:05:35'),
 (1729, 0, '113310ER18100A01ZZZ', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', 30, 6, 'catalog/26-10-23/1133aWG.jpg', 0, 1, 200.0000, 0, 0, '2010-10-18', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 1, '2024-08-27 04:01:55', '2024-08-27 04:41:06'),
 (1733, 0, '113410ER18100A01ZZZ', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', 30, 6, 'catalog/26-10-23/1134aWG.jpg', 0, 1, 210.0000, 0, 0, '2010-10-18', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 1, '2024-08-27 05:08:48', '2024-08-27 23:14:04'),
-(1737, 0, '113510ER18100ZZZZZZ', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', 30, 6, 'catalog/26-10-23/1135aWG.jpg', 0, 1, 130.0000, 0, 0, '2010-10-18', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 1, '2024-08-27 21:08:57', '2024-08-27 23:15:39'),
+(1737, 0, '113510ER18100ZZZZZZ', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', 30, 6, 'catalog/26-10-23/1135aWG.jpg', 0, 1, 130.0000, 0, 0, '2010-10-18', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 1, '2024-08-27 21:08:57', '2025-08-27 10:13:29'),
 (1740, 0, '120510ER18100B01ZZZ', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', 30, 6, 'catalog/26-10-23/1205aWG.jpg', 0, 1, 400.0000, 0, 0, '2010-10-18', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 1, '2024-08-27 22:00:21', '2024-08-28 01:51:01'),
 (1743, 0, '120610ER18100B01ZZZ', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', 30, 6, 'catalog/26-10-23/1206aWG.JPG', 0, 1, 440.0000, 0, 0, '2010-10-18', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 1, '2024-08-27 22:29:06', '2024-08-28 01:47:32'),
 (1746, 0, '120710ER18100ZZZZZZ', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', 30, 6, 'catalog/26-10-23/1207aWG.JPG', 0, 1, 270.0000, 0, 0, '2010-10-18', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 1, '2024-08-27 23:00:28', '2024-08-28 01:45:32'),
@@ -6620,7 +6666,7 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (1725, 1, 'Single Line Ultra Light Tennis Bracelet in Diamond and Ruby  (1.70mm)', '&lt;p&gt;“Zayn Lite” is an ultra-light weight tennis bracelet collection, celebrating a modern variation to a classic piece of jewelry.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Zayn Lite offers a perfect combination of modern innovation, comfort, and timeless elegance.&lt;/p&gt;&lt;p&gt;&amp;nbsp;Each piece in the collection is specifically engineered to provide a lightweight and&amp;nbsp; &lt;/p&gt;&lt;p&gt;comfortable wearing experience without compromising on elegance and durability. It has been crafted in 18K Gold, Diamond and Ruby.&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify; &quot;&gt;&lt;br&gt;&lt;/p&gt;', '', 'Single Line Ultra Light Tennis Bracelet in Diamond and Ruby  (1.70mm)', '', ''),
 (1729, 1, 'White Gold Single Prong Diamond Hoop Earrings', '&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;The White Gold Small Round Diamond Hoop Earrings are exquisitely crafted from 18k white gold, featuring a sleek hoop design adorned with shimmering round diamonds. These elegant earrings offer a touch of luxury in a petite, versatile style, making them perfect for any occasion. With a 10mm hoop size, they provide just the right amount of sparkle and sophistication to complement any outfit.&lt;/span&gt;&lt;/div&gt;', '', 'White Gold Single Prong Diamond Hoop Earrings', '', ''),
 (1733, 1, 'White Gold Micro Pave Set Diamond Hoop Earrings', '&lt;br&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;692&quot; style=&quot;width: 519pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;145&quot; style=&quot;mso-height-source:userset;height:108.75pt&quot;&gt;\n  &lt;td height=&quot;145&quot; class=&quot;xl66&quot; width=&quot;692&quot; style=&quot;height:108.75pt;width:519pt&quot;&gt;The\n  White Gold Small Micro Pave Diamond Hoop Earrings are expertly crafted from\n  18k white gold, featuring a delicate 10mm hoop design. Each hoop is\n  meticulously set with micro pave diamonds, adding a continuous sparkle that\n  enhances the earrings\' luxurious appeal. These versatile and elegant earrings\n  are perfect for any occasion, offering a refined touch of sophistication to\n  elevate any outfit.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;table style=&quot;text-align: justify; width: 254pt;&quot; width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;mso-height-source:userset;height:75.0pt&quot; height=&quot;100&quot;&gt;&lt;td class=&quot;xl65&quot; style=&quot;height:75.0pt;width:254pt&quot; width=&quot;338&quot; height=&quot;100&quot;&gt;&lt;table width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;100&quot;&gt;&lt;td class=&quot;xl65&quot; style=&quot;height:75.0pt;width:254pt&quot; width=&quot;338&quot; height=&quot;100&quot; align=&quot;justify&quot;&gt;&lt;table width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;\n&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', '', 'White Gold Micro Pave Set Diamond Hoop Earrings', '', ''),
-(1737, 1, ' Timeless Plain Gold Hoop Earrings', '&lt;br&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;692&quot; style=&quot;width: 519pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;145&quot; style=&quot;mso-height-source:userset;height:108.75pt&quot;&gt;\n  &lt;td height=&quot;145&quot; class=&quot;xl66&quot; width=&quot;692&quot; style=&quot;height:108.75pt;width:519pt&quot;&gt;The\n  White Gold Small Hoop Earrings are crafted from 18k white gold, featuring a\n  sleek and minimalist 10mm hoop design. These elegant earrings offer a touch\n  of understated luxury, perfect for any occasion. Their versatile and timeless\n  style makes them an essential accessory, easily complementing any outfit with\n  subtle sophistication.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;table style=&quot;text-align: justify; width: 254pt;&quot; width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;mso-height-source:userset;height:75.0pt&quot; height=&quot;100&quot;&gt;&lt;td class=&quot;xl65&quot; style=&quot;height:75.0pt;width:254pt&quot; width=&quot;338&quot; height=&quot;100&quot;&gt;&lt;table width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;100&quot;&gt;&lt;td class=&quot;xl65&quot; style=&quot;height:75.0pt;width:254pt&quot; width=&quot;338&quot; height=&quot;100&quot; align=&quot;justify&quot;&gt;&lt;table width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;\n&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', '', 'Timeless Plain Gold Hoop Earrings', '', ''),
+(1737, 1, 'Timeless Plain Gold Hoop Earrings', '&lt;p&gt;The White Gold Small Hoop Earrings are crafted from 18k white gold, featuring a sleek and minimalist 10mm hoop design. These elegant earrings offer a touch of understated luxury, perfect for any occasion. Their versatile and timeless style makes them an essential accessory, easily complementing any outfit with subtle sophistication.&lt;/p&gt;', '', 'Timeless Plain Gold Hoop Earrings', '', ''),
 (1740, 1, 'White Gold Single Prong Diamond Hoop Earrings', '&lt;br&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;692&quot; style=&quot;width: 519pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;145&quot; style=&quot;mso-height-source:userset;height:108.75pt&quot;&gt;\n  &lt;td height=&quot;145&quot; class=&quot;xl66&quot; width=&quot;692&quot; style=&quot;height:108.75pt;width:519pt&quot;&gt;The\n  White Gold Small Round Diamond Hoop Earrings are exquisitely crafted from 18k\n  white gold, featuring a sleek hoop design adorned with shimmering round\n  diamonds. These elegant earrings offer a touch of luxury in a petite,\n  versatile style, making them perfect for any occasion. With a 18mm hoop size,\n  they provide just the right amount of sparkle and sophistication to\n  complement any outfit.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;table style=&quot;text-align: justify; width: 254pt;&quot; width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;mso-height-source:userset;height:75.0pt&quot; height=&quot;100&quot;&gt;&lt;td class=&quot;xl65&quot; style=&quot;height:75.0pt;width:254pt&quot; width=&quot;338&quot; height=&quot;100&quot;&gt;&lt;table width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;100&quot;&gt;&lt;td class=&quot;xl65&quot; style=&quot;height:75.0pt;width:254pt&quot; width=&quot;338&quot; height=&quot;100&quot; align=&quot;justify&quot;&gt;&lt;table width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;\n&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', '', 'White Gold Single Prong Diamond Hoop Earrings', '', ''),
 (1743, 1, 'White Gold Micro Pave Set Diamond Hoop Earrings', '&lt;br&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;692&quot; style=&quot;width: 519pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;145&quot; style=&quot;mso-height-source:userset;height:108.75pt&quot;&gt;\n  &lt;td height=&quot;145&quot; class=&quot;xl66&quot; width=&quot;692&quot; style=&quot;height:108.75pt;width:519pt&quot;&gt;The\n  White Gold Small Micro Pave Diamond Hoop Earrings are expertly crafted from\n  18k white gold, featuring a delicate 18mm hoop design. Each hoop is\n  meticulously set with micro pave diamonds, adding a continuous sparkle that\n  enhances the earrings\' luxurious appeal. These versatile and elegant earrings\n  are perfect for any occasion, offering a refined touch of sophistication to\n  elevate any outfit.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;table style=&quot;text-align: justify; width: 254pt;&quot; width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;mso-height-source:userset;height:75.0pt&quot; height=&quot;100&quot;&gt;&lt;td class=&quot;xl65&quot; style=&quot;height:75.0pt;width:254pt&quot; width=&quot;338&quot; height=&quot;100&quot;&gt;&lt;table width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;100&quot;&gt;&lt;td class=&quot;xl65&quot; style=&quot;height:75.0pt;width:254pt&quot; width=&quot;338&quot; height=&quot;100&quot; align=&quot;justify&quot;&gt;&lt;table width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;\n&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', '', 'White Gold Micro Pave Set Diamond Hoop Earrings', '', ''),
 (1746, 1, 'Timeless Plain Gold Hoop Earrings', '&lt;br&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;692&quot; style=&quot;width: 519pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;145&quot; style=&quot;mso-height-source:userset;height:108.75pt&quot;&gt;\n  &lt;td height=&quot;145&quot; class=&quot;xl66&quot; width=&quot;692&quot; style=&quot;height:108.75pt;width:519pt&quot;&gt;The\n  White Gold Small Hoop Earrings are crafted from 18k white gold, featuring a\n  sleek and minimalist 18mm hoop design. These elegant earrings offer a touch\n  of understated luxury, perfect for any occasion. Their versatile and timeless\n  style makes them an essential accessory, easily complementing any outfit with\n  subtle sophistication.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;table style=&quot;text-align: justify; width: 254pt;&quot; width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;mso-height-source:userset;height:75.0pt&quot; height=&quot;100&quot;&gt;&lt;td class=&quot;xl65&quot; style=&quot;height:75.0pt;width:254pt&quot; width=&quot;338&quot; height=&quot;100&quot;&gt;&lt;table width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;100&quot;&gt;&lt;td class=&quot;xl65&quot; style=&quot;height:75.0pt;width:254pt&quot; width=&quot;338&quot; height=&quot;100&quot; align=&quot;justify&quot;&gt;&lt;table width=&quot;338&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;\n&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', '', 'Timeless Plain Gold Hoop Earrings', '', ''),
@@ -9053,8 +9099,6 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 (1732, 1729, 16, '', 0),
 (1733, 1733, 16, '', 0),
 (1734, 1733, 16, '', 0),
-(1735, 1737, 16, '', 0),
-(1736, 1737, 16, '', 0),
 (1737, 1740, 16, '', 0),
 (1738, 1743, 16, '', 0),
 (1739, 1746, 16, '', 0),
@@ -11980,12 +12024,6 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (2878, 1734, 1733, 16, 60, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
 (2879, 1734, 1733, 16, 61, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
 (2880, 1734, 1733, 16, 61, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(2881, 1736, 1737, 16, 59, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(2882, 1736, 1737, 16, 59, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(2883, 1736, 1737, 16, 60, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(2884, 1736, 1737, 16, 60, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(2885, 1736, 1737, 16, 61, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(2886, 1736, 1737, 16, 61, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
 (2887, 1737, 1740, 16, 59, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
 (2888, 1737, 1740, 16, 60, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
 (2889, 1737, 1740, 16, 61, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
@@ -12336,6 +12374,7 @@ INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
 (511, 1418),
 (525, 987),
 (527, 987),
+(527, 1737),
 (622, 628),
 (622, 801),
 (622, 803),
@@ -16344,9 +16383,9 @@ INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
 (1715, 1697),
 (1715, 1698),
 (1715, 1701),
-(1715, 1702),
-(1715, 1703);
+(1715, 1702);
 INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
+(1715, 1703),
 (1715, 1704),
 (1715, 1705),
 (1715, 1707),
@@ -16581,9 +16620,7 @@ INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
 (1733, 461),
 (1733, 943),
 (1733, 1423),
-(1737, 441),
-(1737, 458),
-(1737, 461),
+(1737, 527),
 (1737, 943),
 (1737, 1423),
 (1740, 441),
@@ -16677,7 +16714,39 @@ INSERT INTO `oc_product_report` (`product_report_id`, `product_id`, `store_id`, 
 (47, 345, 0, '::1', '', '2025-08-25 12:16:18'),
 (48, 345, 0, '::1', '', '2025-08-25 12:17:16'),
 (49, 345, 0, '::1', '', '2025-08-25 12:18:17'),
-(50, 345, 0, '::1', '', '2025-08-25 12:18:23');
+(50, 345, 0, '::1', '', '2025-08-25 12:18:23'),
+(51, 1165, 0, '::1', '', '2025-08-26 12:21:02'),
+(52, 431, 0, '::1', '', '2025-08-27 08:47:15'),
+(53, 431, 0, '::1', '', '2025-08-27 08:48:54'),
+(54, 431, 0, '::1', '', '2025-08-27 08:51:45'),
+(55, 431, 0, '::1', '', '2025-08-27 08:52:37'),
+(56, 431, 0, '::1', '', '2025-08-27 08:58:29'),
+(57, 431, 0, '::1', '', '2025-08-27 08:58:54'),
+(58, 431, 0, '::1', '', '2025-08-27 08:59:24'),
+(59, 345, 0, '::1', '', '2025-08-27 09:07:19'),
+(60, 345, 0, '::1', '', '2025-08-27 09:07:50'),
+(61, 345, 0, '::1', '', '2025-08-27 09:07:59'),
+(62, 345, 0, '::1', '', '2025-08-27 09:09:48'),
+(63, 345, 0, '::1', '', '2025-08-27 09:16:21'),
+(64, 345, 0, '::1', '', '2025-08-27 09:18:06'),
+(65, 345, 0, '::1', '', '2025-08-27 09:18:37'),
+(66, 345, 0, '::1', '', '2025-08-27 09:18:54'),
+(67, 345, 0, '::1', '', '2025-08-27 09:19:20'),
+(68, 345, 0, '::1', '', '2025-08-27 09:20:15'),
+(69, 345, 0, '::1', '', '2025-08-27 09:21:02'),
+(70, 345, 0, '::1', '', '2025-08-27 10:05:33'),
+(71, 345, 0, '::1', '', '2025-08-27 10:06:00'),
+(72, 345, 0, '::1', '', '2025-08-27 10:06:39'),
+(73, 1737, 0, '::1', '', '2025-08-27 10:09:25'),
+(74, 1737, 0, '::1', '', '2025-08-27 10:10:06'),
+(75, 1737, 0, '::1', '', '2025-08-27 10:13:33'),
+(76, 1050, 0, '::1', '', '2025-08-27 10:19:11'),
+(77, 1050, 0, '::1', '', '2025-08-27 10:20:06'),
+(78, 1050, 0, '::1', '', '2025-08-27 10:26:14'),
+(79, 1050, 0, '::1', '', '2025-08-27 10:28:39'),
+(80, 1050, 0, '::1', '', '2025-08-27 10:29:32'),
+(81, 1050, 0, '::1', '', '2025-08-27 10:30:07'),
+(82, 1050, 0, '::1', '', '2025-08-27 10:30:17');
 
 -- --------------------------------------------------------
 
@@ -19642,6 +19711,13 @@ CREATE TABLE `oc_review` (
   `date_modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
+--
+-- Dumping data for table `oc_review`
+--
+
+INSERT INTO `oc_review` (`review_id`, `product_id`, `customer_id`, `author`, `text`, `rating`, `status`, `date_added`, `date_modified`) VALUES
+(1, 345, 1, 'anshul kumar', 'vxcb cvbvcxbbhbcxvbsfdhb dbhc  ntghdnbvdngdsbhc', 5, 0, '2025-08-27 09:18:02', '2025-08-27 09:18:02');
+
 -- --------------------------------------------------------
 
 --
@@ -19731,7 +19807,9 @@ CREATE TABLE `oc_session` (
 --
 
 INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
-('0d6e9ce1dc4b2eac7e12b199eb', '{\"currency\":\"USD\",\"user_id\":\"1\",\"user_token\":\"2597eb3a511adb42272a25aa77b6f3f0\",\"upload_token\":\"3a8e14285a666190668e85f92f6bea6f\",\"review_token\":\"f357bd7544520cd52e9947fea1cdd00f\",\"customer_id\":\"1\",\"customer\":{\"customer_id\":\"1\",\"customer_group_id\":\"1\",\"firstname\":\"anshul\",\"lastname\":\"kumar\",\"email\":\"anshulkumar969602@gmail.com\",\"telephone\":\"\",\"custom_field\":[]},\"customer_token\":\"47b2aebca84cb6aef61f5cbbc5\"}', '2025-08-26 12:19:52');
+('41a4bc8200f0c9b80275f97b08', '{\"currency\":\"USD\"}', '2025-08-29 11:19:33'),
+('8d4556dbcdd8202199b47a318c', '{\"currency\":\"USD\"}', '2025-08-29 12:15:42'),
+('8df29bcf5f12cf496148a16988', '{\"currency\":\"USD\"}', '2025-08-29 12:11:18');
 
 -- --------------------------------------------------------
 
@@ -20026,7 +20104,7 @@ INSERT INTO `oc_statistics` (`statistics_id`, `code`, `value`) VALUES
 (4, 'order_other', 0.0000),
 (5, 'returns', 0.0000),
 (6, 'product', 0.0000),
-(7, 'review', 0.0000);
+(7, 'review', 1.0000);
 
 -- --------------------------------------------------------
 
@@ -20528,7 +20606,9 @@ INSERT INTO `oc_user_login` (`user_login_id`, `user_id`, `ip`, `user_agent`, `da
 (11, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-21 10:09:17'),
 (12, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-22 09:42:35'),
 (13, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-25 05:22:18'),
-(14, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-25 09:29:10');
+(14, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-25 09:29:10'),
+(15, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-26 09:41:54'),
+(16, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-27 10:08:41');
 
 -- --------------------------------------------------------
 
@@ -29892,7 +29972,7 @@ ALTER TABLE `oc_zone_to_geo_zone`
 -- AUTO_INCREMENT for table `oc_address`
 --
 ALTER TABLE `oc_address`
-  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `oc_address_format`
@@ -29958,19 +30038,19 @@ ALTER TABLE `oc_attribute_group`
 -- AUTO_INCREMENT for table `oc_banner`
 --
 ALTER TABLE `oc_banner`
-  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `oc_category`
@@ -30024,7 +30104,7 @@ ALTER TABLE `oc_customer`
 -- AUTO_INCREMENT for table `oc_customer_activity`
 --
 ALTER TABLE `oc_customer_activity`
-  MODIFY `customer_activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `customer_activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `oc_customer_affiliate_report`
@@ -30078,7 +30158,7 @@ ALTER TABLE `oc_customer_reward`
 -- AUTO_INCREMENT for table `oc_customer_search`
 --
 ALTER TABLE `oc_customer_search`
-  MODIFY `customer_search_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `customer_search_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `oc_customer_token`
@@ -30342,7 +30422,7 @@ ALTER TABLE `oc_product_option_value`
 -- AUTO_INCREMENT for table `oc_product_report`
 --
 ALTER TABLE `oc_product_report`
-  MODIFY `product_report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `product_report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT for table `oc_product_reward`
@@ -30384,7 +30464,7 @@ ALTER TABLE `oc_return_status`
 -- AUTO_INCREMENT for table `oc_review`
 --
 ALTER TABLE `oc_review`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `oc_seo_url`
@@ -30528,7 +30608,7 @@ ALTER TABLE `oc_user_group`
 -- AUTO_INCREMENT for table `oc_user_login`
 --
 ALTER TABLE `oc_user_login`
-  MODIFY `user_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `user_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `oc_user_token`

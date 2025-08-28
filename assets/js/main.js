@@ -329,23 +329,89 @@
             e.preventDefault();
             let $this = $(this);
             let url = ($this.data("url") || '').toString().replaceAll('&amp;', '&');
+            
+            // Ensure the URL is properly formatted for OpenCart
+            if (url && !url.startsWith('http')) {
+                // If it's a relative URL, make sure it's properly formatted
+                if (url.includes('index.php?route=')) {
+                    // URL is already in correct format
+                } else {
+                    // Add the proper prefix
+                    url = 'index.php?route=' + url;
+                }
+            }
+            
             let productId = $this.data("product-id");
-            let quantity = $this.data("quantity") || $this.closest('.tf-sticky-atc-infos, .tf-product-info-list, body').find('.quantity-product').first().val() || 1;
+            
+            // Get quantity from the closest quantity input
+            let quantity = $this.data("quantity") || 1;
+            let $quantityInput = $this.closest('.tf-sticky-atc-infos').find('.quantity-product');
+            if ($quantityInput.length > 0) {
+                quantity = parseInt($quantityInput.val()) || 1;
+            }
+            
+            // Get selected options from the sticky form
+            let formData = {
+                product_id: productId,
+                quantity: quantity
+            };
+            
+            // Add selected options to form data
+            $this.closest('.tf-sticky-atc-infos').find('select[name^="option["]').each(function() {
+                let optionName = $(this).attr('name');
+                let optionValue = $(this).val();
+                if (optionValue) {
+                    formData[optionName] = optionValue;
+                }
+            });
+            
             if (!productId || !url) return;
+
+            // Debug: Log the data being sent
+            console.log('Sending cart add request:', {
+                url: url,
+                productId: productId,
+                quantity: quantity,
+                formData: formData
+            });
 
             $.ajax({
                 url: url,
                 type: 'post',
                 dataType: 'json',
-                data: { product_id: productId, quantity: quantity },
+                data: formData,
+                beforeSend: function() {
+                    // Show loading state
+                    $this.addClass('loading').prop('disabled', true);
+                },
                 success: function(json) {
+                    console.log('Cart add response:', json);
                     if (json.success) {
                         $(".tf-add-cart-success").addClass("active");
-                        // Optionally refresh mini-cart
-                        if (json.total) {
-                            $(".cart-count").text(json.total);
+                        // Update cart count
+                        if (json.count) {
+                            $(".cart-count").text(json.count);
                         }
+                        // Show success message
+                        alert('Product added to cart successfully!');
+                    } else if (json.error) {
+                        // Show error messages
+                        let errorMsg = '';
+                        for (let key in json.error) {
+                            errorMsg += json.error[key] + '\n';
+                        }
+                        alert('Error: ' + errorMsg);
+                    } else {
+                        alert('Unknown error occurred');
                     }
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX Error:', xhr.responseText);
+                    alert('Failed to add product to cart. Please try again.');
+                },
+                complete: function() {
+                    // Remove loading state
+                    $this.removeClass('loading').prop('disabled', false);
                 }
             });
         });
@@ -353,6 +419,11 @@
             e.preventDefault();
             const pid = $(this).data('product-id');
             if (!pid) return;
+            
+            // Show loading state
+            const $this = $(this);
+            $this.addClass('loading').prop('disabled', true);
+            
             fetch(`index.php?route=common/wishlist.getProduct&product_id=${pid}`)
                 .then(r => r.json())
                 .then(json => {
@@ -360,18 +431,63 @@
                         const product = json.data;
                         const quickViewModal = document.getElementById('quickView');
                         if (!quickViewModal) return;
+                        
+                        // Update product title
                         const nameEl = quickViewModal.querySelector('.tf-product-title');
-                        if (nameEl) nameEl.textContent = product.name || '';
+                        if (nameEl) nameEl.textContent = product.name || 'Product';
+                        
+                        // Update product description
                         const descEl = quickViewModal.querySelector('.product-infor-sub');
-                        if (descEl) descEl.innerHTML = product.description || '';
+                        if (descEl) descEl.innerHTML = product.description || '<p>Product description not available.</p>';
+                        
+                        // Update product images
                         const imgs = quickViewModal.querySelectorAll('.tf-product-media img');
-                        imgs.forEach(img => { if (product.thumb) { img.src = product.thumb; img.dataset.src = product.thumb; }});
+                        imgs.forEach(img => { 
+                            if (product.thumb) { 
+                                img.src = product.thumb; 
+                                img.dataset.src = product.thumb; 
+                            }
+                        });
+                        
+                        // Update prices
                         const priceOld = quickViewModal.querySelector('.price-old');
                         const priceNew = quickViewModal.querySelector('.price-new');
                         if (priceOld && product.price) priceOld.textContent = product.price;
                         if (priceNew && (product.special || product.price)) priceNew.textContent = product.special || product.price;
+                        
+                        // Update quantity
+                        const quantityInput = quickViewModal.querySelector('.quantity-product');
+                        if (quantityInput && product.minimum) {
+                            quantityInput.value = product.minimum;
+                        }
+                        
+                        // Update stock information
+                        const stockInfo = quickViewModal.querySelector('.h6.d-none.d-sm-block');
+                        if (stockInfo && product.quantity !== undefined) {
+                            stockInfo.textContent = `${product.quantity} products available`;
+                        }
+                        
+                        // Update add to cart button with product ID
+                        const addToCartBtn = quickViewModal.querySelector('.btn-add-to-cart');
+                        if (addToCartBtn) {
+                            addToCartBtn.setAttribute('data-product-id', pid);
+                        }
+                        
+                        // Show the modal
+                        const modal = new bootstrap.Modal(quickViewModal);
+                        modal.show();
+                    } else {
+                        alert('Failed to load product information');
                     }
                 })
+                .catch(error => {
+                    console.error('Error loading product:', error);
+                    alert('Failed to load product information');
+                })
+                .finally(() => {
+                    // Remove loading state
+                    $this.removeClass('loading').prop('disabled', false);
+                });
         });
         $(".tf-add-cart-success .tf-add-cart-close").on("click", function () {
             $(".tf-add-cart-success").removeClass("active");

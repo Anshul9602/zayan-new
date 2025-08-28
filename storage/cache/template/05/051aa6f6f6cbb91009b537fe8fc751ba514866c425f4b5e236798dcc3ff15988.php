@@ -350,6 +350,62 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
             });
         });
     </script>
+
+    <!-- Quick View Modal -->
+    <div class=\"modal fade\" id=\"quickView\" tabindex=\"-1\" aria-labelledby=\"quickViewLabel\" aria-hidden=\"true\">
+        <div class=\"modal-dialog modal-lg modal-dialog-centered\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <h5 class=\"modal-title tf-product-title\" id=\"quickViewLabel\">Product Quick View</h5>
+                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                </div>
+                <div class=\"modal-body\">
+                    <div class=\"row\">
+                        <div class=\"col-md-6\">
+                            <div class=\"tf-product-media\">
+                                <img src=\"assets/images/placeholder-250x250.png\" alt=\"Product Image\" class=\"img-fluid\">
+                            </div>
+                        </div>
+                        <div class=\"col-md-6\">
+                            <div class=\"product-infor-sub\">
+                                <p>Product description will be loaded here...</p>
+                            </div>
+                            <div class=\"price-wrap mb-3\">
+                                <span class=\"price-old h6 fw-normal\">\$0.00</span>
+                                <span class=\"price-new h5 fw-bold text-main\">\$0.00</span>
+                            </div>
+                            <div class=\"tf-product-variant mb-3\">
+                                <!-- Product options will be loaded here -->
+                            </div>
+                            <div class=\"tf-product-total-quantity mb-3\">
+                                <div class=\"wg-quantity\">
+                                    <button class=\"btn-quantity minus-btn\">
+                                        <i class=\"icon icon-minus\"></i>
+                                    </button>
+                                    <input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"1\">
+                                    <button class=\"btn-quantity plus-btn\">
+                                        <i class=\"icon icon-plus\"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=\"h6 d-none d-sm-block mb-3\">
+                                Stock information will be shown here
+                            </div>
+                            <div class=\"tf-product-info-list\">
+                                <button type=\"button\" class=\"tf-btn animate-btn btn-add-to-cart\" data-url=\"index.php?route=checkout/cart.add&language=";
+        // line 336
+        yield ($context["language"] ?? null);
+        yield "\" data-product-id=\"\">
+                                    ADD TO CART
+                                    <i class=\"icon icon-shopping-cart-simple\"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body></html>
 ";
         yield from [];
@@ -376,7 +432,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
      */
     public function getDebugInfo(): array
     {
-        return array (  225 => 167,  214 => 158,  205 => 156,  201 => 155,  181 => 138,  42 => 1,);
+        return array (  397 => 336,  225 => 167,  214 => 158,  205 => 156,  201 => 155,  181 => 138,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -674,6 +730,59 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
             });
         });
     </script>
+
+    <!-- Quick View Modal -->
+    <div class=\"modal fade\" id=\"quickView\" tabindex=\"-1\" aria-labelledby=\"quickViewLabel\" aria-hidden=\"true\">
+        <div class=\"modal-dialog modal-lg modal-dialog-centered\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <h5 class=\"modal-title tf-product-title\" id=\"quickViewLabel\">Product Quick View</h5>
+                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                </div>
+                <div class=\"modal-body\">
+                    <div class=\"row\">
+                        <div class=\"col-md-6\">
+                            <div class=\"tf-product-media\">
+                                <img src=\"assets/images/placeholder-250x250.png\" alt=\"Product Image\" class=\"img-fluid\">
+                            </div>
+                        </div>
+                        <div class=\"col-md-6\">
+                            <div class=\"product-infor-sub\">
+                                <p>Product description will be loaded here...</p>
+                            </div>
+                            <div class=\"price-wrap mb-3\">
+                                <span class=\"price-old h6 fw-normal\">\$0.00</span>
+                                <span class=\"price-new h5 fw-bold text-main\">\$0.00</span>
+                            </div>
+                            <div class=\"tf-product-variant mb-3\">
+                                <!-- Product options will be loaded here -->
+                            </div>
+                            <div class=\"tf-product-total-quantity mb-3\">
+                                <div class=\"wg-quantity\">
+                                    <button class=\"btn-quantity minus-btn\">
+                                        <i class=\"icon icon-minus\"></i>
+                                    </button>
+                                    <input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"1\">
+                                    <button class=\"btn-quantity plus-btn\">
+                                        <i class=\"icon icon-plus\"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=\"h6 d-none d-sm-block mb-3\">
+                                Stock information will be shown here
+                            </div>
+                            <div class=\"tf-product-info-list\">
+                                <button type=\"button\" class=\"tf-btn animate-btn btn-add-to-cart\" data-url=\"index.php?route=checkout/cart.add&language={{ language }}\" data-product-id=\"\">
+                                    ADD TO CART
+                                    <i class=\"icon icon-shopping-cart-simple\"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body></html>
 ", "catalog/view/template/common/footer.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\footer.twig");
     }

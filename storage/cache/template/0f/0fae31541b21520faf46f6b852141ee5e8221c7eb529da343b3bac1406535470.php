@@ -49,27 +49,20 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
         // line 4
         yield ($context["href"] ?? null);
         yield "\" class=\"product-img\">
-\t\t\t<img class=\"lazyload img-product\" src=\"";
-        // line 5
-        yield ($context["thumb"] ?? null);
-        yield "\" data-src=\"";
-        yield ($context["thumb"] ?? null);
-        yield "\" alt=\"";
+\t\t\t";
+        // line 7
+        yield "\t\t\t<img class=\"lazyload img-product\" src=\"assets/images//products/product-7.jpg\" data-src=\"assets/images//products/product-7.jpg\" alt=\"";
         yield ($context["name"] ?? null);
         yield "\">
-\t\t\t<img class=\"lazyload img-hover\" src=\"";
-        // line 6
-        yield ($context["thumb"] ?? null);
-        yield "\" data-src=\"";
-        yield ($context["thumb"] ?? null);
-        yield "\" alt=\"";
+\t\t\t<img class=\"lazyload img-hover\" src=\"assets/images//products/product-7.jpg\" data-src=\"assets/images//products/product-7.jpg\" alt=\"";
+        // line 8
         yield ($context["name"] ?? null);
         yield "\">
 \t\t</a>
 \t\t<ul class=\"product-action_list\">
 \t\t\t<li>
 \t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon btn-add-to-cart\" data-url=\"";
-        // line 10
+        // line 12
         yield ($context["cart_add"] ?? null);
         yield "\" data-product-id=\"";
         yield ($context["product_id"] ?? null);
@@ -80,7 +73,7 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 \t\t\t</li>
 \t\t\t<li class=\"wishlist\">
 \t\t\t\t<a href=\"javascript:void(0);\" class=\"hover-tooltip tooltip-left box-icon btn-add-wishlist\" data-url=\"";
-        // line 16
+        // line 18
         yield ($context["wishlist_add"] ?? null);
         yield "\" data-product-id=\"";
         yield ($context["product_id"] ?? null);
@@ -91,7 +84,7 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 \t\t\t</li>
 \t\t\t<li>
 \t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon btn-quick-view\" data-product-id=\"";
-        // line 22
+        // line 24
         yield ($context["product_id"] ?? null);
         yield "\">
 \t\t\t\t\t<span class=\"icon icon-view\"></span>
@@ -102,32 +95,32 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 \t</div>
 \t<div class=\"card-product_info\">
 \t\t<a href=\"";
-        // line 30
+        // line 32
         yield ($context["href"] ?? null);
         yield "\" class=\"name-product h4 link\">";
         yield ($context["name"] ?? null);
         yield "</a>
 \t\t<div class=\"price-wrap\">
 \t\t\t";
-        // line 32
+        // line 34
         if (($context["special"] ?? null)) {
-            // line 33
+            // line 35
             yield "\t\t\t\t<span class=\"price-old h6 fw-normal\">";
             yield ($context["price"] ?? null);
             yield "</span>
 \t\t\t\t<span class=\"price-new h6\">";
-            // line 34
+            // line 36
             yield ($context["special"] ?? null);
             yield "</span>
 \t\t\t";
         } else {
-            // line 36
+            // line 38
             yield "\t\t\t\t<span class=\"price-new h6\">";
             yield ($context["price"] ?? null);
             yield "</span>
 \t\t\t";
         }
-        // line 38
+        // line 40
         yield "\t\t</div>
 \t\t<ul class=\"product-color_list\">
 \t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
@@ -174,7 +167,7 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
      */
     public function getDebugInfo(): array
     {
-        return array (  131 => 38,  125 => 36,  120 => 34,  115 => 33,  113 => 32,  106 => 30,  95 => 22,  84 => 16,  73 => 10,  62 => 6,  54 => 5,  50 => 4,  45 => 2,  42 => 1,);
+        return array (  124 => 40,  118 => 38,  113 => 36,  108 => 35,  106 => 34,  99 => 32,  88 => 24,  77 => 18,  66 => 12,  59 => 8,  54 => 7,  50 => 4,  45 => 2,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -183,8 +176,10 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 <div class=\"card-product grid\" data-availability=\"In stock\" data-brand=\"automet\" data-product-id=\"{{ product_id }}\">
 \t<div class=\"card-product_wrapper\">
 \t\t<a href=\"{{ href }}\" class=\"product-img\">
-\t\t\t<img class=\"lazyload img-product\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\">
-\t\t\t<img class=\"lazyload img-hover\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\">
+\t\t\t{# <img class=\"lazyload img-product\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\">
+\t\t\t<img class=\"lazyload img-hover\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\"> #}
+\t\t\t<img class=\"lazyload img-product\" src=\"assets/images//products/product-7.jpg\" data-src=\"assets/images//products/product-7.jpg\" alt=\"{{ name }}\">
+\t\t\t<img class=\"lazyload img-hover\" src=\"assets/images//products/product-7.jpg\" data-src=\"assets/images//products/product-7.jpg\" alt=\"{{ name }}\">
 \t\t</a>
 \t\t<ul class=\"product-action_list\">
 \t\t\t<li>

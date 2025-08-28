@@ -15,7 +15,7 @@ class Related extends \Opencart\System\Engine\Controller {
 	 */
 	public function index(): string {
 		$this->load->language('product/related');
-
+		
 		if (isset($this->request->get['product_id'])) {
 			$product_id = (int)$this->request->get['product_id'];
 		} else {
@@ -25,7 +25,7 @@ class Related extends \Opencart\System\Engine\Controller {
 		$data['products'] = [];
 
 		$results = $this->model_catalog_product->getRelated($product_id);
-
+		
 		foreach ($results as $result) {
 			$description = trim(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')));
 
@@ -69,7 +69,10 @@ class Related extends \Opencart\System\Engine\Controller {
 
 			$data['products'][] = $this->load->controller('product/thumb', $product_data);
 		}
-
+		// echo '<pre>';
+		// print_r($data);
+		// echo '</pre>';
+		// exit;
 		return $this->load->view('product/related', $data);
 
 	}

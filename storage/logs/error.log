@@ -1,29 +1,231 @@
-2025-08-26 06:52:24 - Error: Error: Could not load template common/education!
-File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
-Line: 125
+2025-08-27 10:13:05 - PHP Warning:  Undefined array key "value" in C:\xampp\htdocs\zyannew\webuser\model\catalog\product.php on line 1842
+2025-08-27 10:13:05 - Error: Opencart\System\Library\DB::escape(): Argument #1 ($value) must be of type string, null given, called in C:\xampp\htdocs\zyannew\webuser\model\catalog\product.php on line 1842
+File: C:\xampp\htdocs\zyannew\system\library\db.php
+Line: 64
 
 Backtrace: 0
-File: C:\xampp\htdocs\zyannew\system\library\template.php
-Line: 58
-Class: Opencart\System\Library\Template\Twig
-Function: render
+File: C:\xampp\htdocs\zyannew\webuser\model\catalog\product.php
+Line: 1842
+Class: Opencart\System\Library\DB
+Function: escape
 
 Backtrace: 1
 File: C:\xampp\htdocs\zyannew\system\engine\loader.php
-Line: 187
-Class: Opencart\System\Library\Template
-Function: render
+Line: 343
+Class: Opencart\Admin\Model\Catalog\Product
+Function: addOption
 
 Backtrace: 2
-File: C:\xampp\htdocs\zyannew\catalog\controller\common\education.php
-Line: 23
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 87
 Class: Opencart\System\Engine\Loader
-Function: view
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\webuser\model\catalog\product.php
+Line: 327
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 343
+Class: Opencart\Admin\Model\Catalog\Product
+Function: editProduct
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 6
+File: C:\xampp\htdocs\zyannew\webuser\controller\catalog\product.php
+Line: 1282
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 7
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Admin\Controller\Catalog\Product
+Function: save
+
+Backtrace: 8
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 9
+File: C:\xampp\htdocs\zyannew\webuser\index.php
+Line: 20
+Function: require_once
+2025-08-27 10:13:29 - PHP Warning:  Undefined array key "value" in C:\xampp\htdocs\zyannew\webuser\model\catalog\product.php on line 1842
+2025-08-27 10:13:29 - Error: Opencart\System\Library\DB::escape(): Argument #1 ($value) must be of type string, null given, called in C:\xampp\htdocs\zyannew\webuser\model\catalog\product.php on line 1842
+File: C:\xampp\htdocs\zyannew\system\library\db.php
+Line: 64
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\webuser\model\catalog\product.php
+Line: 1842
+Class: Opencart\System\Library\DB
+Function: escape
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 343
+Class: Opencart\Admin\Model\Catalog\Product
+Function: addOption
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\webuser\model\catalog\product.php
+Line: 327
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 343
+Class: Opencart\Admin\Model\Catalog\Product
+Function: editProduct
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 6
+File: C:\xampp\htdocs\zyannew\webuser\controller\catalog\product.php
+Line: 1282
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 7
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Admin\Controller\Catalog\Product
+Function: save
+
+Backtrace: 8
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 9
+File: C:\xampp\htdocs\zyannew\webuser\index.php
+Line: 20
+Function: require_once
+2025-08-27 10:15:21 - Error: <b>Notice</b>:  Undefined property: Proxy::getRelatedAll in <b>C:\xampp\htdocs\zyannew\catalog\controller\product\related.php</b> on line <b>27</b>
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 91
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\product\related.php
+Line: 27
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 112
+Class: Opencart\Catalog\Controller\Product\Related
+Function: index
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\catalog\controller\product\product.php
+Line: 443
+Class: Opencart\System\Engine\Loader
+Function: controller
 
 Backtrace: 3
 File: C:\xampp\htdocs\zyannew\system\engine\action.php
 Line: 96
-Class: Opencart\Catalog\Controller\Common\Education
+Class: Opencart\Catalog\Controller\Product\Product
+Function: index
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-27 10:16:21 - Error: <b>Notice</b>:  Undefined property: Proxy::getProductRelated in <b>C:\xampp\htdocs\zyannew\catalog\controller\product\related.php</b> on line <b>27</b>
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 91
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\product\related.php
+Line: 27
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 112
+Class: Opencart\Catalog\Controller\Product\Related
+Function: index
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\catalog\controller\product\product.php
+Line: 443
+Class: Opencart\System\Engine\Loader
+Function: controller
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Product\Product
+Function: index
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-27 10:16:25 - Error: <b>Notice</b>:  Undefined property: Proxy::getProductRelated in <b>C:\xampp\htdocs\zyannew\catalog\controller\product\related.php</b> on line <b>27</b>
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 91
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\product\related.php
+Line: 27
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 112
+Class: Opencart\Catalog\Controller\Product\Related
+Function: index
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\catalog\controller\product\product.php
+Line: 443
+Class: Opencart\System\Engine\Loader
+Function: controller
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Product\Product
 Function: index
 
 Backtrace: 4
