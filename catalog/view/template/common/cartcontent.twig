@@ -29,10 +29,7 @@
                           <span class="number">{{ product.quantity }}x</span>
                           <span class="price text-primary tf-mini-card-price">{{ product.total }}</span>
                         </div>
-                        <form action="{{ remove }}" method="post" data-oc-toggle="ajax" data-oc-load="{{ list }}" data-oc-target=".tf-mini-cart-items">
-                          <input type="hidden" name="key" value="{{ product.cart_id }}">
-                          <button type="submit" class="icon link icon-close remove" title="{{ button_remove }}"></button>
-                        </form>
+                        <button type="button" class="icon link icon-close remove" title="{{ button_remove }}" data-cart-key="{{ product.cart_id }}"></button>
                       </div>
                     </div>
                   </div>
@@ -45,7 +42,7 @@
                     <p class="h6 text-main">Let us assist you in finding the right product</p>
                   </div>
                   <div class="shop-empty_bot">
-                    <a href="{{ shop }}" class="tf-btn animate-btn">Shopping</a>
+                    <a href="{{ home }}" class="tf-btn animate-btn">Shopping</a>
                     <a href="{{ home }}" class="tf-btn style-line">Back to home</a>
                   </div>
                 </div>

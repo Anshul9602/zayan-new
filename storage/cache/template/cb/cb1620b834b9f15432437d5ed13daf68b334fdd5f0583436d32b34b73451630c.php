@@ -59,32 +59,38 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t.wg-cls-2 .tag_cls {
 \t\tfont-size: 22px;
 \t}
+\t.modal-newletter .modal-dialog {
+    max-width: 60%;
+}
+.modal-newletter .modal-content {
+    padding: 0;
+}
 </style>
 
 <!-- Banner -->
 
-<div class=\"tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav\" >
+<div class=\"tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav\">
 \t<div dir=\"ltr\" class=\"swiper tf-swiper home sw-slide-show slider_effect_fade\" data-auto=\"true\" data-loop=\"true\" data-effect=\"fade\" data-delay=\"3000\">
 \t\t<div class=\"swiper-wrapper\">
 \t\t\t";
-        // line 27
+        // line 33
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["banners"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-            // line 28
+            // line 34
             yield "\t\t\t\t<!-- item 1 -->
 \t\t\t\t<div class=\"swiper-slide\">
 \t\t\t\t\t<div class=\"slider-wrap\">
 \t\t\t\t\t\t<div class=\"sld_image\">
 \t\t\t\t\t\t\t<a href=\"";
-            // line 32
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 32);
+            // line 38
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 38);
             yield "\" class=\"\">
 \t\t\t\t\t\t\t\t<img src=\"";
-            // line 33
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 33);
+            // line 39
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 39);
             yield "\" data-src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 33);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 39);
             yield "\" alt=\"Image\" class=\"lazyload\" style=\"width: 100%; \"></a>
 \t\t\t\t\t\t</div>
 
@@ -95,7 +101,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['banner'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
+        // line 45
         yield "\t\t</div>
 \t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t</div>
@@ -108,36 +114,36 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\tclass=\"swiper-wrapper\">
 \t\t\t<!-- item 1 -->
 \t\t\t";
-        // line 50
+        // line 56
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["banners2"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-            // line 51
+            // line 57
             yield "\t\t\t\t<div class=\"swiper-slide\">
 \t\t\t\t\t<div class=\"wg-cls-2 d-flex hover-img\">
 \t\t\t\t\t\t<a href=\"";
-            // line 53
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 53);
+            // line 59
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 59);
             yield "\" class=\"image img-style\">
 \t\t\t\t\t\t\t<img class=\"lazyload\" src=\"";
-            // line 54
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 54);
+            // line 60
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 60);
             yield "\" data-src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 54);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 60);
             yield "\" alt=\"Slider\">
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<div class=\"cls-content_wrap b-16\">
 \t\t\t\t\t\t\t<div class=\"cls-content\">
 \t\t\t\t\t\t\t\t<a href=\"";
-            // line 58
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 58);
+            // line 64
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 64);
             yield "\" class=\"tag_cls h3 link\">";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "title", [], "any", false, false, false, 58);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "title", [], "any", false, false, false, 64);
             yield "</a>
 \t\t\t\t\t\t\t\t<span class=\"br-line type-vertical\"></span>
 \t\t\t\t\t\t\t\t<a href=\"";
-            // line 60
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 60);
+            // line 66
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 66);
             yield "\" class=\"tf-btn-line text-nowrap\">
 \t\t\t\t\t\t\t\t\tShop now
 \t\t\t\t\t\t\t\t</a>
@@ -150,7 +156,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['banner'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 68
+        // line 74
         yield "\t\t</div>
 \t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t</div>
@@ -163,10 +169,10 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 <div class=\" flat-animate-tab pt-5 pb-5\">
 \t<div class=\"container\">
 \t\t<div class=\"sect-title wow fadeInUp\">
-\t\t\t<div class=\"h1 title text-center mb-24\">New Arrivals</div>
+\t\t\t<div class=\"h1 title text-center mb-24\">Featured Products</div>
 \t\t\t<ul class=\"tab-product_list\" role=\"tablist\">
 \t\t\t\t";
-        // line 82
+        // line 88
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["featured_tabs"] ?? null));
         $context['loop'] = [
@@ -183,19 +189,19 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["tab"]) {
-            // line 83
+            // line 89
             yield "\t\t\t\t\t<li class=\"nav-tab-item\" role=\"presentation\">
 \t\t\t\t\t\t<a href=\"#tab-";
-            // line 84
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "path_id", [], "any", false, false, false, 84);
+            // line 90
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "path_id", [], "any", false, false, false, 90);
             yield "\" data-bs-toggle=\"tab\" class=\"tf-btn-line tf-btn-tab ";
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 84) == 1)) {
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 90) == 1)) {
                 yield "active";
             }
             yield "\">
 \t\t\t\t\t\t\t";
-            // line 85
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "name", [], "any", false, false, false, 85);
+            // line 91
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "name", [], "any", false, false, false, 91);
             yield "
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
@@ -212,12 +218,12 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['tab'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 89
+        // line 95
         yield "\t\t\t</ul>
 \t\t</div>
 \t\t<div class=\"tab-content\">
 \t\t\t";
-        // line 92
+        // line 98
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["featured_tabs"] ?? null));
         $context['loop'] = [
@@ -234,32 +240,134 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["tab"]) {
-            // line 93
+            // line 99
             yield "\t\t\t\t<div class=\"tab-pane ";
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 93) == 1)) {
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 99) == 1)) {
                 yield "active show";
             }
             yield "\" id=\"tab-";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "path_id", [], "any", false, false, false, 93);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "path_id", [], "any", false, false, false, 99);
             yield "\" role=\"tabpanel\">
 
 \t\t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over wow fadeInUp\" data-preview=\"4\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"4\" data-grid=\"2\">
 \t\t\t\t\t\t<div class=\"swiper-wrapper\">
 \t\t\t\t\t\t\t";
-            // line 97
+            // line 103
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "products", [], "any", false, false, false, 97));
-            foreach ($context['_seq'] as $context["_key"] => $context["product_html"]) {
-                // line 98
-                yield "\t\t\t\t\t\t\t\t<div class=\"swiper-slide\">";
-                yield $context["product_html"];
-                yield "</div>
+            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "products", [], "any", false, false, false, 103));
+            foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
+                // line 104
+                yield "\t\t\t\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t\t\t\t<div class=\"card-product grid\" data-availability=\"In stock\" data-brand=\"automet\" data-product-id=\"";
+                // line 105
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 105);
+                yield "\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
+\t\t\t\t\t\t\t\t\t\t\t<a
+\t\t\t\t\t\t\t\t\t\t\t\thref=\"";
+                // line 108
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 108);
+                yield "\" class=\"product-img\">
+\t\t\t\t\t\t\t\t\t\t\t\t";
+                // line 111
+                yield "\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"";
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 111);
+                yield "\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"";
+                // line 112
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 112);
+                yield "\">
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon btn-add-to-cart\" data-url=\"";
+                // line 116
+                yield ($context["cart_add"] ?? null);
+                yield "\" data-product-id=\"";
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 116);
+                yield "\" data-quantity=\"1\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0);\" class=\"hover-tooltip tooltip-left box-icon btn-add-wishlist\" data-url=\"";
+                // line 122
+                yield ($context["wishlist_add"] ?? null);
+                yield "\" data-product-id=\"";
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 122);
+                yield "\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon btn-quick-view\" data-product-id=\"";
+                // line 128
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 128);
+                yield "\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+                // line 136
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 136);
+                yield "\" class=\"name-product h4 link\">";
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 136);
+                yield "</a>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
+\t\t\t\t\t\t\t\t\t\t\t\t";
+                // line 138
+                if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 138)) {
+                    // line 139
+                    yield "\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 139);
+                    yield "</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
+                    // line 140
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 140);
+                    yield "</span>
+\t\t\t\t\t\t\t\t\t\t\t\t";
+                } else {
+                    // line 142
+                    yield "\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 142);
+                    yield "</span>
+\t\t\t\t\t\t\t\t\t\t\t\t";
+                }
+                // line 144
+                yield "\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Pink</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-hot-pink\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"Product\">
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Beige</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/WG.jpg\" data-src=\"assets/WG.jpg\" alt=\"Product\">
+
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Dusty Olive</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-dusty-olive\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/YG.JPG\" data-src=\"assets/YG.JPG\" alt=\"Product\">
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_key'], $context['product_html'], $context['_parent']);
+            unset($context['_seq'], $context['_key'], $context['product'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 100
+            // line 167
             yield "\t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t\t\t\t\t</div>
@@ -279,7 +387,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['tab'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 107
+        // line 174
         yield "\t\t</div>
 
 \t</div>
@@ -294,14 +402,15 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t<div class=\"col-xl-4\">
 \t\t\t\t<div class=\"box-image_V01 hover-img mb-xl-0 wow fadeInUp\">
 \t\t\t\t\t<a href=\"#\" class=\"box-image_image img-style\" style=\"background: #000;\">
-\t\t\t\t\t\t<img src=\"assets/col2.jpg\" data-src=\"assets/col2.jpg\" alt=\"Image\" class=\"lazyload\" style=\"opacity: 0.6;\">
+\t\t\t\t\t\t<img src=\"assets/col21.jpg\" data-src=\"assets/col21.jpg\" alt=\"Image\" class=\"lazyload\" style=\"opacity: 0.6;\">
 \t\t\t\t\t</a>
 \t\t\t\t\t<div class=\"box-image_content\">
 \t\t\t\t\t\t<a href=\"#\" class=\"title text-display fw-semibold text-white link\">Tennis Connection</a>
 \t\t\t\t\t\t<span class=\"sub-title h5 text-white\">";
-        // line 125
+        // line 192
         yield ($context["shop_total"] ?? null);
-        yield " products</span>
+        yield "
+\t\t\t\t\t\t\tproducts</span>
 \t\t\t\t\t\t<a href=\"index.php?route=product/category&language=en-gb&path=60_67\" class=\"tf-btn-line style-white\">
 \t\t\t\t\t\t\tEXPLORE NOW
 \t\t\t\t\t\t</a>
@@ -312,20 +421,121 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over wow fadeInUp\" data-preview=\"3\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"3\">
 \t\t\t\t\t<div class=\"swiper-wrapper\">
 \t\t\t\t\t\t";
-        // line 135
+        // line 203
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["shop_look_products"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["product_html"]) {
-            // line 136
-            yield "\t\t\t\t\t\t<div class=\"swiper-slide\">";
-            yield $context["product_html"];
-            yield "</div>
+        foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
+            // line 204
+            yield "\t\t\t\t\t\t\t<div class=\"swiper-slide\"><div class=\"card-product grid\" data-availability=\"In stock\" data-brand=\"automet\" data-product-id=\"";
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 204);
+            yield "\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
+\t\t\t\t\t\t\t\t\t\t\t<a
+\t\t\t\t\t\t\t\t\t\t\t\thref=\"";
+            // line 207
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 207);
+            yield "\" class=\"product-img\">
+\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 210
+            yield "\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"";
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 210);
+            yield "\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"";
+            // line 211
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 211);
+            yield "\">
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon btn-add-to-cart\" data-url=\"";
+            // line 215
+            yield ($context["cart_add"] ?? null);
+            yield "\" data-product-id=\"";
+            yield ($context["product_id"] ?? null);
+            yield "\" data-quantity=\"1\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0);\" class=\"hover-tooltip tooltip-left box-icon btn-add-wishlist\" data-url=\"";
+            // line 221
+            yield ($context["wishlist_add"] ?? null);
+            yield "\" data-product-id=\"";
+            yield ($context["product_id"] ?? null);
+            yield "\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon btn-quick-view\" data-product-id=\"";
+            // line 227
+            yield ($context["product_id"] ?? null);
+            yield "\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 235
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 235);
+            yield "\" class=\"name-product h4 link\">";
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 235);
+            yield "</a>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
+\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 237
+            if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 237)) {
+                // line 238
+                yield "\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">";
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 238);
+                yield "</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
+                // line 239
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 239);
+                yield "</span>
+\t\t\t\t\t\t\t\t\t\t\t\t";
+            } else {
+                // line 241
+                yield "\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 241);
+                yield "</span>
+\t\t\t\t\t\t\t\t\t\t\t\t";
+            }
+            // line 243
+            yield "\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Pink</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-hot-pink\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"Product\">
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Beige</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/WG.jpg\" data-src=\"assets/WG.jpg\" alt=\"Product\">
+
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Dusty Olive</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-dusty-olive\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/YG.JPG\" data-src=\"assets/YG.JPG\" alt=\"Product\">
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div></div>
 \t\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_key'], $context['product_html'], $context['_parent']);
+        unset($context['_seq'], $context['_key'], $context['product'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 138
+        // line 267
         yield "\t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t\t\t\t</div>
@@ -349,7 +559,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t<h4 class=\"tes_title\">Best Product Quality</h4>
 \t\t\t\t\t\t\t<p class=\"tes_text h4\">
 \t\t\t\t\t\t\t\t“The build quality is excellent and everything works smoothly. I can feel the difference compared to other
-\t\t\t\t\t\t\t\t                                        brands“
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        brands“
 \t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t<div class=\"tes_author\">
 \t\t\t\t\t\t\t\t<p class=\"author-name h5\">Brooklyn Simmons</p>
@@ -386,7 +596,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t<h4 class=\"tes_title\">Dedicated Service</h4>
 \t\t\t\t\t\t\t<p class=\"tes_text h4\">
 \t\t\t\t\t\t\t\t“The support from ACIS has been outstanding. Anytime we had a question or needed help, their team
-\t\t\t\t\t\t\t\t                                        responded quickly and professionally.“
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        responded quickly and professionally.“
 \t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t<div class=\"tes_author\">
 \t\t\t\t\t\t\t\t<p class=\"author-name h5\">Mas Shin</p>
@@ -525,15 +735,18 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 <div class=\"modal modalCentered fade modal-newletter auto-popup\" id=\"newLetter\">
 \t<div class=\"modal-dialog modal-dialog-centered\">
 \t\t<div class=\"modal-content p-0\">
-\t\t\t<div class=\"modal-heading\">
-\t\t\t\t<div class=\"image\">
-\t\t\t\t\t<img class=\"lazyload\" src=\"assets/col-61.jpg\" data-src=\"assets/col-61.jpg\" alt=\"Image\">
-\t\t\t\t</div>
-\t\t\t\t<span class=\"icon-close-popup\" data-bs-dismiss=\"modal\">
+\t\t<span class=\"icon-close-popup\" data-bs-dismiss=\"modal\">
 \t\t\t\t\t<i class=\"icon-close\"></i>
 \t\t\t\t</span>
+\t\t<div class=\"row\">
+\t\t<div class=\"col-md-6\" style=\"display: flex; align-items: center; justify-content: center;\"><div class=\"modal-heading\">
+\t\t\t\t<div class=\"image\">
+\t\t\t\t\t<img class=\"lazyload\" src=\"assets/news.jpg\" data-src=\"assets/news.jpg\" alt=\"Image\" style=\"width: 80%;  object-fit: cover;\">
+\t\t\t\t</div>
+\t\t\t\t
 \t\t\t</div>
-\t\t\t<div class=\"modal-body\">
+\t\t</div>
+\t\t<div class=\"col-md-6\"><div class=\"modal-body\">
 \t\t\t\t<p class=\"h6 sub-title\">Subscribe to our newletter!</p>
 \t\t\t\t<h3 class=\"fw-normal title\">Receive 20% off your next order, along with exclusive offers and more!</h3>
 \t\t\t\t<form class=\"form-newletter\">
@@ -572,6 +785,9 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t</ul>
+\t\t\t</div></div>
+\t\t\t
+\t\t\t
 \t\t\t</div>
 \t\t</div>
 \t</div>
@@ -592,7 +808,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 </script>
 
 ";
-        // line 403
+        // line 538
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -620,7 +836,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
      */
     public function getDebugInfo(): array
     {
-        return array (  596 => 403,  329 => 138,  320 => 136,  316 => 135,  303 => 125,  283 => 107,  263 => 100,  254 => 98,  250 => 97,  238 => 93,  221 => 92,  216 => 89,  198 => 85,  190 => 84,  187 => 83,  170 => 82,  154 => 68,  140 => 60,  133 => 58,  124 => 54,  120 => 53,  116 => 51,  112 => 50,  99 => 39,  85 => 33,  81 => 32,  75 => 28,  71 => 27,  42 => 1,);
+        return array (  812 => 538,  539 => 267,  510 => 243,  504 => 241,  499 => 239,  494 => 238,  492 => 237,  485 => 235,  474 => 227,  463 => 221,  452 => 215,  445 => 211,  440 => 210,  436 => 207,  429 => 204,  425 => 203,  411 => 192,  391 => 174,  371 => 167,  343 => 144,  337 => 142,  332 => 140,  327 => 139,  325 => 138,  318 => 136,  307 => 128,  296 => 122,  285 => 116,  278 => 112,  273 => 111,  269 => 108,  263 => 105,  260 => 104,  256 => 103,  244 => 99,  227 => 98,  222 => 95,  204 => 91,  196 => 90,  193 => 89,  176 => 88,  160 => 74,  146 => 66,  139 => 64,  130 => 60,  126 => 59,  122 => 57,  118 => 56,  105 => 45,  91 => 39,  87 => 38,  81 => 34,  77 => 33,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -644,11 +860,17 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t.wg-cls-2 .tag_cls {
 \t\tfont-size: 22px;
 \t}
+\t.modal-newletter .modal-dialog {
+    max-width: 60%;
+}
+.modal-newletter .modal-content {
+    padding: 0;
+}
 </style>
 
 <!-- Banner -->
 
-<div class=\"tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav\" >
+<div class=\"tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav\">
 \t<div dir=\"ltr\" class=\"swiper tf-swiper home sw-slide-show slider_effect_fade\" data-auto=\"true\" data-loop=\"true\" data-effect=\"fade\" data-delay=\"3000\">
 \t\t<div class=\"swiper-wrapper\">
 \t\t\t{% for banner in banners %}
@@ -704,7 +926,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 <div class=\" flat-animate-tab pt-5 pb-5\">
 \t<div class=\"container\">
 \t\t<div class=\"sect-title wow fadeInUp\">
-\t\t\t<div class=\"h1 title text-center mb-24\">New Arrivals</div>
+\t\t\t<div class=\"h1 title text-center mb-24\">Featured Products</div>
 \t\t\t<ul class=\"tab-product_list\" role=\"tablist\">
 \t\t\t\t{% for tab in featured_tabs %}
 \t\t\t\t\t<li class=\"nav-tab-item\" role=\"presentation\">
@@ -721,8 +943,69 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 
 \t\t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over wow fadeInUp\" data-preview=\"4\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"4\" data-grid=\"2\">
 \t\t\t\t\t\t<div class=\"swiper-wrapper\">
-\t\t\t\t\t\t\t{% for product_html in tab.products %}
-\t\t\t\t\t\t\t\t<div class=\"swiper-slide\">{{ product_html }}</div>
+\t\t\t\t\t\t\t{% for product in tab.products %}
+\t\t\t\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t\t\t\t<div class=\"card-product grid\" data-availability=\"In stock\" data-brand=\"automet\" data-product-id=\"{{ product.product_id }}\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
+\t\t\t\t\t\t\t\t\t\t\t<a
+\t\t\t\t\t\t\t\t\t\t\t\thref=\"{{ product.href }}\" class=\"product-img\">
+\t\t\t\t\t\t\t\t\t\t\t\t{# <img class=\"lazyload img-product\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\"> #}
+\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"{{ product.name }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"{{ product.name }}\">
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon btn-add-to-cart\" data-url=\"{{ cart_add }}\" data-product-id=\"{{ product.product_id }}\" data-quantity=\"1\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0);\" class=\"hover-tooltip tooltip-left box-icon btn-add-wishlist\" data-url=\"{{ wishlist_add }}\" data-product-id=\"{{ product.product_id }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon btn-quick-view\" data-product-id=\"{{ product.product_id }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ product.href }}\" class=\"name-product h4 link\">{{ product.name }}</a>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
+\t\t\t\t\t\t\t\t\t\t\t\t{% if product.special %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">{{ product.price }}</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">{{ product.special }}</span>
+\t\t\t\t\t\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">{{ product.price }}</span>
+\t\t\t\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Pink</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-hot-pink\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"Product\">
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Beige</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/WG.jpg\" data-src=\"assets/WG.jpg\" alt=\"Product\">
+
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Dusty Olive</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-dusty-olive\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/YG.JPG\" data-src=\"assets/YG.JPG\" alt=\"Product\">
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
@@ -745,11 +1028,12 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t<div class=\"col-xl-4\">
 \t\t\t\t<div class=\"box-image_V01 hover-img mb-xl-0 wow fadeInUp\">
 \t\t\t\t\t<a href=\"#\" class=\"box-image_image img-style\" style=\"background: #000;\">
-\t\t\t\t\t\t<img src=\"assets/col2.jpg\" data-src=\"assets/col2.jpg\" alt=\"Image\" class=\"lazyload\" style=\"opacity: 0.6;\">
+\t\t\t\t\t\t<img src=\"assets/col21.jpg\" data-src=\"assets/col21.jpg\" alt=\"Image\" class=\"lazyload\" style=\"opacity: 0.6;\">
 \t\t\t\t\t</a>
 \t\t\t\t\t<div class=\"box-image_content\">
 \t\t\t\t\t\t<a href=\"#\" class=\"title text-display fw-semibold text-white link\">Tennis Connection</a>
-\t\t\t\t\t\t<span class=\"sub-title h5 text-white\">{{ shop_total }} products</span>
+\t\t\t\t\t\t<span class=\"sub-title h5 text-white\">{{ shop_total }}
+\t\t\t\t\t\t\tproducts</span>
 \t\t\t\t\t\t<a href=\"index.php?route=product/category&language=en-gb&path=60_67\" class=\"tf-btn-line style-white\">
 \t\t\t\t\t\t\tEXPLORE NOW
 \t\t\t\t\t\t</a>
@@ -759,8 +1043,69 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t<div class=\"col-xl-8\">
 \t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over wow fadeInUp\" data-preview=\"3\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"3\">
 \t\t\t\t\t<div class=\"swiper-wrapper\">
-\t\t\t\t\t\t{% for product_html in shop_look_products %}
-\t\t\t\t\t\t<div class=\"swiper-slide\">{{ product_html }}</div>
+\t\t\t\t\t\t{% for product in shop_look_products %}
+\t\t\t\t\t\t\t<div class=\"swiper-slide\"><div class=\"card-product grid\" data-availability=\"In stock\" data-brand=\"automet\" data-product-id=\"{{ product.product_id }}\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
+\t\t\t\t\t\t\t\t\t\t\t<a
+\t\t\t\t\t\t\t\t\t\t\t\thref=\"{{ product.href }}\" class=\"product-img\">
+\t\t\t\t\t\t\t\t\t\t\t\t{# <img class=\"lazyload img-product\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\"> #}
+\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"{{ product.name }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"{{ product.name }}\">
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon btn-add-to-cart\" data-url=\"{{ cart_add }}\" data-product-id=\"{{ product_id }}\" data-quantity=\"1\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0);\" class=\"hover-tooltip tooltip-left box-icon btn-add-wishlist\" data-url=\"{{ wishlist_add }}\" data-product-id=\"{{ product_id }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon btn-quick-view\" data-product-id=\"{{ product_id }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ product.href }}\" class=\"name-product h4 link\">{{ product.name }}</a>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
+\t\t\t\t\t\t\t\t\t\t\t\t{% if product.special %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">{{ product.price }}</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">{{ product.special }}</span>
+\t\t\t\t\t\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">{{ product.price }}</span>
+\t\t\t\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Pink</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-hot-pink\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"Product\">
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Beige</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/WG.jpg\" data-src=\"assets/WG.jpg\" alt=\"Product\">
+
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Dusty Olive</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"swatch-value bg-dusty-olive\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/YG.JPG\" data-src=\"assets/YG.JPG\" alt=\"Product\">
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div></div>
 \t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
@@ -785,7 +1130,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t\t\t\t\t<h4 class=\"tes_title\">Best Product Quality</h4>
 \t\t\t\t\t\t\t<p class=\"tes_text h4\">
 \t\t\t\t\t\t\t\t“The build quality is excellent and everything works smoothly. I can feel the difference compared to other
-\t\t\t\t\t\t\t\t                                        brands“
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        brands“
 \t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t<div class=\"tes_author\">
 \t\t\t\t\t\t\t\t<p class=\"author-name h5\">Brooklyn Simmons</p>
@@ -822,7 +1167,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t\t\t\t\t<h4 class=\"tes_title\">Dedicated Service</h4>
 \t\t\t\t\t\t\t<p class=\"tes_text h4\">
 \t\t\t\t\t\t\t\t“The support from ACIS has been outstanding. Anytime we had a question or needed help, their team
-\t\t\t\t\t\t\t\t                                        responded quickly and professionally.“
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                        responded quickly and professionally.“
 \t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t<div class=\"tes_author\">
 \t\t\t\t\t\t\t\t<p class=\"author-name h5\">Mas Shin</p>
@@ -961,15 +1306,18 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 <div class=\"modal modalCentered fade modal-newletter auto-popup\" id=\"newLetter\">
 \t<div class=\"modal-dialog modal-dialog-centered\">
 \t\t<div class=\"modal-content p-0\">
-\t\t\t<div class=\"modal-heading\">
-\t\t\t\t<div class=\"image\">
-\t\t\t\t\t<img class=\"lazyload\" src=\"assets/col-61.jpg\" data-src=\"assets/col-61.jpg\" alt=\"Image\">
-\t\t\t\t</div>
-\t\t\t\t<span class=\"icon-close-popup\" data-bs-dismiss=\"modal\">
+\t\t<span class=\"icon-close-popup\" data-bs-dismiss=\"modal\">
 \t\t\t\t\t<i class=\"icon-close\"></i>
 \t\t\t\t</span>
+\t\t<div class=\"row\">
+\t\t<div class=\"col-md-6\" style=\"display: flex; align-items: center; justify-content: center;\"><div class=\"modal-heading\">
+\t\t\t\t<div class=\"image\">
+\t\t\t\t\t<img class=\"lazyload\" src=\"assets/news.jpg\" data-src=\"assets/news.jpg\" alt=\"Image\" style=\"width: 80%;  object-fit: cover;\">
+\t\t\t\t</div>
+\t\t\t\t
 \t\t\t</div>
-\t\t\t<div class=\"modal-body\">
+\t\t</div>
+\t\t<div class=\"col-md-6\"><div class=\"modal-body\">
 \t\t\t\t<p class=\"h6 sub-title\">Subscribe to our newletter!</p>
 \t\t\t\t<h3 class=\"fw-normal title\">Receive 20% off your next order, along with exclusive offers and more!</h3>
 \t\t\t\t<form class=\"form-newletter\">
@@ -1008,6 +1356,9 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t</ul>
+\t\t\t</div></div>
+\t\t\t
+\t\t\t
 \t\t\t</div>
 \t\t</div>
 \t</div>

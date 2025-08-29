@@ -169,7 +169,15 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
    header {
     border-bottom: thin solid #f1f1f1;
 }
-
+.tf-btn-line {
+   font-weight: 500;
+}
+.sect-title .title {
+   font-weight: 400;
+}
+.fw-medium {
+   font-weight: 400 !important;
+}
   </style>
 </head>
 
@@ -200,7 +208,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
                   <li class=\"menu-item\">
                      <a href=\"#\" class=\"item-link\">SHOP</a>
                      ";
-        // line 79
+        // line 87
         yield ($context["menu"] ?? null);
         yield "
                   </li>
@@ -222,14 +230,14 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
          <div class=\"col-lg-4\">
             <div id=\"logo\" class=\"text-center\">
                ";
-        // line 98
+        // line 106
         if (($context["logo"] ?? null)) {
-            // line 99
+            // line 107
             yield "               <a href=\"";
             yield ($context["home"] ?? null);
             yield "\">
                <img src=\"";
-            // line 100
+            // line 108
             yield ($context["logo"] ?? null);
             yield "\" title=\"";
             yield ($context["name"] ?? null);
@@ -239,56 +247,56 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
                </a>
                ";
         } else {
-            // line 103
+            // line 111
             yield "               <h1><a href=\"";
             yield ($context["home"] ?? null);
             yield "\">Zayn</a></h1>
                ";
         }
-        // line 105
+        // line 113
         yield "            </div>
          </div>
          <div class=\"col-md-4\">
             <ul class=\"nav-icon-list\">
                <li class=\"d-none d-lg-flex\">
                ";
-        // line 110
+        // line 118
         if ( !($context["logged"] ?? null)) {
-            // line 111
+            // line 119
             yield "                  <a class=\"nav-icon-item link\" href=\"index.php?route=account/login\"><i class=\"icon icon-user\"></i></a>
                   ";
         } else {
-            // line 113
+            // line 121
             yield "                  <a class=\"nav-icon-item link\" href=\"index.php?route=account/account\"><i class=\"icon icon-user\"></i></a>
                   ";
         }
-        // line 115
+        // line 123
         yield "               </li>
                <li class=\"d-none d-md-flex\">
                  ";
-        // line 117
+        // line 125
         yield ($context["search"] ?? null);
         yield "
                </li>
                <li class=\"d-none d-sm-flex\">
                  ";
-        // line 120
+        // line 128
         if ( !($context["logged"] ?? null)) {
-            // line 121
+            // line 129
             yield "                  <a class=\"nav-icon-item link\" href=\"index.php?route=common/wishlist\"><i class=\"icon icon-heart\"></i></a>
                   <span class=\"wishlist-count\">0</span>
                   ";
         } else {
-            // line 124
+            // line 132
             yield "                  <a class=\"nav-icon-item link\" href=\"index.php?route=account/wishlist\"><i class=\"icon icon-heart\"></i></a>
                   <span class=\"wishlist-count\">0</span>
                   ";
         }
-        // line 127
+        // line 135
         yield "                </li>
                <li class=\"shop-cart\"  data-bs-target=\"#shoppingCart\">
                  ";
-        // line 129
+        // line 137
         yield ($context["cart"] ?? null);
         yield "
                </li>
@@ -324,7 +332,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
      */
     public function getDebugInfo(): array
     {
-        return array (  292 => 129,  288 => 127,  283 => 124,  278 => 121,  276 => 120,  270 => 117,  266 => 115,  262 => 113,  258 => 111,  256 => 110,  249 => 105,  243 => 103,  233 => 100,  228 => 99,  226 => 98,  204 => 79,  168 => 45,  159 => 43,  154 => 42,  143 => 40,  138 => 39,  129 => 37,  124 => 36,  111 => 34,  107 => 33,  103 => 31,  97 => 29,  95 => 28,  80 => 15,  74 => 13,  71 => 12,  65 => 10,  63 => 9,  59 => 8,  55 => 7,  45 => 2,  42 => 1,);
+        return array (  300 => 137,  296 => 135,  291 => 132,  286 => 129,  284 => 128,  278 => 125,  274 => 123,  270 => 121,  266 => 119,  264 => 118,  257 => 113,  251 => 111,  241 => 108,  236 => 107,  234 => 106,  212 => 87,  168 => 45,  159 => 43,  154 => 42,  143 => 40,  138 => 39,  129 => 37,  124 => 36,  111 => 34,  107 => 33,  103 => 31,  97 => 29,  95 => 28,  80 => 15,  74 => 13,  71 => 12,  65 => 10,  63 => 9,  59 => 8,  55 => 7,  45 => 2,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -377,7 +385,15 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
    header {
     border-bottom: thin solid #f1f1f1;
 }
-
+.tf-btn-line {
+   font-weight: 500;
+}
+.sect-title .title {
+   font-weight: 400;
+}
+.fw-medium {
+   font-weight: 400 !important;
+}
   </style>
 </head>
 

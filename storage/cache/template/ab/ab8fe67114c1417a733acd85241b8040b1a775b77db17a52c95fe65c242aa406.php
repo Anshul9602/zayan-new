@@ -140,21 +140,12 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
                 yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "total", [], "any", false, false, false, 47);
                 yield "</span>
                         </div>
-                        <form action=\"";
+                        <button type=\"button\" class=\"icon link icon-close remove\" title=\"";
                 // line 49
-                yield ($context["remove"] ?? null);
-                yield "\" method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"";
-                yield ($context["list"] ?? null);
-                yield "\" data-oc-target=\".tf-mini-cart-items\">
-                          <input type=\"hidden\" name=\"key\" value=\"";
-                // line 50
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "cart_id", [], "any", false, false, false, 50);
-                yield "\">
-                          <button type=\"submit\" class=\"icon link icon-close remove\" title=\"";
-                // line 51
                 yield ($context["button_remove"] ?? null);
+                yield "\" data-cart-key=\"";
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "cart_id", [], "any", false, false, false, 49);
                 yield "\"></button>
-                        </form>
                       </div>
                     </div>
                   </div>
@@ -163,50 +154,50 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['product'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 57
+            // line 54
             yield "              ";
         } else {
-            // line 58
+            // line 55
             yield "                <div class=\"box-text_empty type-shop_cart\">
                   <div class=\"shop-empty_top\">
                     <span class=\"icon\"><i class=\"icon-shopping-cart-simple\"></i></span>
                     <h3 class=\"text-emp fw-normal\">";
-            // line 61
+            // line 58
             yield ($context["text_no_results"] ?? null);
             yield "</h3>
                     <p class=\"h6 text-main\">Let us assist you in finding the right product</p>
                   </div>
                   <div class=\"shop-empty_bot\">
                     <a href=\"";
-            // line 65
+            // line 62
             yield ($context["shop"] ?? null);
             yield "\" class=\"tf-btn animate-btn\">Shopping</a>
                     <a href=\"";
-            // line 66
+            // line 63
             yield ($context["home"] ?? null);
             yield "\" class=\"tf-btn style-line\">Back to home</a>
                   </div>
                 </div>
               ";
         }
-        // line 70
+        // line 67
         yield "            </div>
           </div>
         </div>
 
         ";
-        // line 74
+        // line 71
         if (($context["products"] ?? null)) {
-            // line 75
+            // line 72
             yield "          <div class=\"tf-mini-cart-bottom box-empty_clear\">
             <div class=\"tf-mini-cart-threshold\">
               <div class=\"text\">
                 <h6 class=\"subtotal\">Subtotal (";
-            // line 78
+            // line 75
             yield Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["products"] ?? null));
             yield " item)</h6>
                 ";
-            // line 79
+            // line 76
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["totals"] ?? null));
             $context['loop'] = [
@@ -223,16 +214,16 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["total"]) {
-                // line 80
+                // line 77
                 yield "                  ";
-                if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "last", [], "any", false, false, false, 80)) {
-                    // line 81
+                if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "last", [], "any", false, false, false, 77)) {
+                    // line 78
                     yield "                    <h4 class=\"text-primary total-price tf-totals-total-value\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["total"], "text", [], "any", false, false, false, 81);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["total"], "text", [], "any", false, false, false, 78);
                     yield "</h4>
                   ";
                 }
-                // line 83
+                // line 80
                 yield "                ";
                 ++$context['loop']['index0'];
                 ++$context['loop']['index'];
@@ -246,30 +237,26 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['total'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 84
+            // line 81
             yield "              </div>
               <!-- Optional: Add progress bar logic based on subtotal -->
             </div>
             <div class=\"tf-mini-cart-bottom-wrap\">
               <div class=\"tf-mini-cart-view-checkout\">
                 <a href=\"";
-            // line 89
+            // line 86
             yield ($context["cart"] ?? null);
-            yield "\" class=\"tf-btn btn-white animate-btn animate-dark line\">";
-            yield ($context["text_cart"] ?? null);
-            yield "</a>
+            yield "\" class=\"tf-btn btn-white animate-btn animate-dark line\"> View Cart</a>
                 <a href=\"";
-            // line 90
+            // line 87
             yield ($context["checkout"] ?? null);
-            yield "\" class=\"tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center\">";
-            yield ($context["text_checkout"] ?? null);
-            yield "</a>
+            yield "\" class=\"tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center\">Checkout</a>
               </div>
             </div>
           </div>
         ";
         }
-        // line 95
+        // line 92
         yield "
         <!-- Optional addons like shipping estimator, note, gift UI remain static or can be wired up later -->
       </div>
@@ -302,7 +289,7 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
      */
     public function getDebugInfo(): array
     {
-        return array (  273 => 95,  263 => 90,  257 => 89,  250 => 84,  236 => 83,  230 => 81,  227 => 80,  210 => 79,  206 => 78,  201 => 75,  199 => 74,  193 => 70,  186 => 66,  182 => 65,  175 => 61,  170 => 58,  167 => 57,  155 => 51,  151 => 50,  145 => 49,  140 => 47,  136 => 46,  131 => 43,  120 => 41,  116 => 40,  108 => 37,  103 => 35,  99 => 33,  91 => 30,  86 => 29,  84 => 28,  80 => 26,  75 => 25,  73 => 24,  62 => 16,  52 => 9,  42 => 1,);
+        return array (  260 => 92,  252 => 87,  248 => 86,  241 => 81,  227 => 80,  221 => 78,  218 => 77,  201 => 76,  197 => 75,  192 => 72,  190 => 71,  184 => 67,  177 => 63,  173 => 62,  166 => 58,  161 => 55,  158 => 54,  145 => 49,  140 => 47,  136 => 46,  131 => 43,  120 => 41,  116 => 40,  108 => 37,  103 => 35,  99 => 33,  91 => 30,  86 => 29,  84 => 28,  80 => 26,  75 => 25,  73 => 24,  62 => 16,  52 => 9,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -355,10 +342,7 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
                           <span class=\"number\">{{ product.quantity }}x</span>
                           <span class=\"price text-primary tf-mini-card-price\">{{ product.total }}</span>
                         </div>
-                        <form action=\"{{ remove }}\" method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"{{ list }}\" data-oc-target=\".tf-mini-cart-items\">
-                          <input type=\"hidden\" name=\"key\" value=\"{{ product.cart_id }}\">
-                          <button type=\"submit\" class=\"icon link icon-close remove\" title=\"{{ button_remove }}\"></button>
-                        </form>
+                        <button type=\"button\" class=\"icon link icon-close remove\" title=\"{{ button_remove }}\" data-cart-key=\"{{ product.cart_id }}\"></button>
                       </div>
                     </div>
                   </div>
@@ -395,8 +379,8 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
             </div>
             <div class=\"tf-mini-cart-bottom-wrap\">
               <div class=\"tf-mini-cart-view-checkout\">
-                <a href=\"{{ cart }}\" class=\"tf-btn btn-white animate-btn animate-dark line\">{{ text_cart }}</a>
-                <a href=\"{{ checkout }}\" class=\"tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center\">{{ text_checkout }}</a>
+                <a href=\"{{ cart }}\" class=\"tf-btn btn-white animate-btn animate-dark line\"> View Cart</a>
+                <a href=\"{{ checkout }}\" class=\"tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center\">Checkout</a>
               </div>
             </div>
           </div>

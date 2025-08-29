@@ -72,15 +72,11 @@ class Home extends \Opencart\System\Engine\Controller {
 
 		$tabs = [
 			[
-				'name' => 'Diamond Rings',
+				'name' => 'New Arrivals',
 				'path_id' => '61_74', // for DOM id use
 				'category_id' => 74
 			],
-			[
-				'name' => 'Necklaces',
-				'path_id' => '61_72',
-				'category_id' => 72
-			],
+			
 			[
 				'name' => 'Trending',
 				'path_id' => '60_68',
@@ -143,7 +139,7 @@ class Home extends \Opencart\System\Engine\Controller {
 					'href'        => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $result['product_id'])
 				];
 
-				$products[] = $this->load->controller('product/thumb', $product_data);
+				$products[] =$product_data;
 			}
 
 			$data['featured_tabs'][] = [
@@ -192,7 +188,7 @@ class Home extends \Opencart\System\Engine\Controller {
 			} else {
 				$tax = false;
 			}
-
+			
 			$product_data = [
 				'product_id'  => $result['product_id'],
 				'thumb'       => $image,
@@ -206,11 +202,15 @@ class Home extends \Opencart\System\Engine\Controller {
 				'href'        => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $result['product_id'])
 			];
 
-			$data['shop_look_products'][] = $this->load->controller('product/thumb', $product_data);
+			$data['shop_look_products'][] = $product_data;
 		}
 
-	
-
+		// echo '<pre>';
+		// print_r($products);
+		// echo '</pre>';
+		// exit;
+		$data['cart_add'] = $this->url->link('checkout/cart.add', 'language=' . $this->config->get('config_language'));
+		$data['wishlist_add'] = $this->url->link('account/wishlist.add', 'language=' . $this->config->get('config_language'));
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');

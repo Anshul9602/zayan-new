@@ -4514,10 +4514,14 @@ var option_value_row = ";
             yield "\" id=\"input-modal-weight\" class=\"form-control\"/>';
     html += '          </div>';
     html += '        </div>';
+    html += '        <div class=\"mb-3\">';
+    html += '           <label for=\"input-modal-link2\" class=\"form-label\">Link 2</label>';
+    html += '           <input type=\"text\" name=\"link2\" value=\"' + (\$(element).attr('data-option-value-row') ? (\$('input[name=\\'product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][link2]\\']').val() || '') : '') + '\" placeholder=\"Link 2\" id=\"input-modal-link2\" class=\"form-control\"/>';
+    html += '        </div>';
     html += '      </div>';
     html += '      <div class=\"modal-footer\">';
     html += '\t       <button type=\"button\" id=\"button-save\" data-option-row=\"' + \$(element).attr('data-option-row') + '\" data-option-value-row=\"' + element.option_value_row + '\" class=\"btn btn-primary\">";
-            // line 1791
+            // line 1795
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["button_save"] ?? null), "js");
             yield "</button> <button type=\"button\" class=\"btn btn-light\" data-bs-dismiss=\"modal\">";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["button_cancel"] ?? null), "js");
@@ -4536,7 +4540,7 @@ var option_value_row = ";
         html += '  <td>' + \$('#modal-option select[name=\\'option_value_id\\'] option:selected').text() + '<input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][option_value_id]\" value=\"' + \$('#modal-option select[name=\\'option_value_id\\']').val() + '\"/><input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][product_option_value_id]\" value=\"' + \$('#modal-option input[name=\\'product_option_value_id\\']').val() + '\"/></td>';
         html += '  <td class=\"text-end\">' + \$('#modal-option input[name=\\'quantity\\']').val() + '<input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][quantity]\" value=\"' + \$('#modal-option input[name=\\'quantity\\']').val() + '\"/></td>';
         html += '  <td>' + (\$('#modal-option select[name=\\'subtract\\'] option:selected').val() == '1' ? '";
-            // line 1805
+            // line 1809
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["text_yes"] ?? null), "js");
             yield "' : '";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["text_no"] ?? null), "js");
@@ -4544,8 +4548,8 @@ var option_value_row = ";
         html += '  <td class=\"text-end\">' + \$('#modal-option select[name=\\'price_prefix\\'] option:selected').val() + \$('#modal-option input[name=\\'price\\']').val() + '<input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][price_prefix]\" value=\"' + \$('#modal-option select[name=\\'price_prefix\\'] option:selected').val() + '\"/><input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][price]\" value=\"' + \$('#modal-option input[name=\\'price\\']').val() + '\"/></td>';
         html += '  <td class=\"text-end\"> ' + \$('#modal-option select[name=\\'points_prefix\\'] option:selected').val() + \$('#modal-option input[name=\\'points\\']').val() + '<input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][points_prefix]\" value=\"' + \$('#modal-option select[name=\\'points_prefix\\'] option:selected').val() + '\"/><input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][points]\" value=\"' + \$('#modal-option input[name=\\'points\\']').val() + '\"/></td>';
         html += '  <td class=\"text-end\">' + \$('#modal-option select[name=\\'weight_prefix\\'] option:selected').val() + \$('#modal-option input[name=\\'weight\\']').val() + '<input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][weight_prefix]\" value=\"' + \$('#modal-option select[name=\\'weight_prefix\\'] option:selected').val() + '\"/><input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][weight]\" value=\"' + \$('#modal-option input[name=\\'weight\\']').val() + '\"/></td>';
-        html += '  <td class=\"text-end\"><button type=\"button\" data-bs-toggle=\"tooltip\" title=\"";
-            // line 1809
+        html += '  <td class=\"text-end\"><input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][link2]\" value=\"' + (\$('#modal-option input[name=\\'link2\\']').val() || '') + '\"/><button type=\"button\" data-bs-toggle=\"tooltip\" title=\"";
+            // line 1813
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["button_edit"] ?? null), "js");
             yield "\" data-option-row=\"' + \$(element).attr('data-option-row') + '\" data-option-value-row=\"' + element.option_value_row + '\"class=\"btn btn-primary\"><i class=\"fa-solid fa-pencil\"></i></button> <button type=\"button\" onclick=\"\$(\\'#option-value-row-' + element.option_value_row + '\\').remove();\" data-bs-toggle=\"tooltip\" rel=\"tooltip\" title=\"";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["button_remove"] ?? null), "js");
@@ -4565,10 +4569,10 @@ var option_value_row = ";
 });
 ";
         }
-        // line 1824
+        // line 1828
         yield "
 var discount_row = ";
-        // line 1825
+        // line 1829
         yield ($context["discount_row"] ?? null);
         yield ";
 
@@ -4576,46 +4580,46 @@ var discount_row = ";
     html = '<tr id=\"discount-row-' + discount_row + '\">';
     html += '  <td><select name=\"product_discount[' + discount_row + '][customer_group_id]\" class=\"form-select\">';
   ";
-        // line 1830
+        // line 1834
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["customer_groups"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["customer_group"]) {
-            // line 1831
+            // line 1835
             yield "    html += '    <option value=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 1831);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 1835);
             yield "\">";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "name", [], "any", false, false, false, 1831), "js");
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "name", [], "any", false, false, false, 1835), "js");
             yield "</option>';
   ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['customer_group'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1833
+        // line 1837
         yield "    html += '  </select><input type=\"hidden\" name=\"product_discount[' + discount_row + '][product_discount_id]\" value=\"\"/></td>';
     html += '  <td class=\"text-end\"><input type=\"text\" name=\"product_discount[' + discount_row + '][quantity]\" value=\"1\" placeholder=\"";
-        // line 1834
+        // line 1838
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["entry_quantity"] ?? null), "js");
         yield "\" class=\"form-control\"/></td>';
     html += '  <td class=\"text-end\"><input type=\"text\" name=\"product_discount[' + discount_row + '][priority]\" value=\"\" placeholder=\"";
-        // line 1835
+        // line 1839
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["entry_priority"] ?? null), "js");
         yield "\" class=\"form-control\"/></td>';
     html += '  <td class=\"text-end\"><input type=\"text\" name=\"product_discount[' + discount_row + '][price]\" value=\"\" placeholder=\"";
-        // line 1836
+        // line 1840
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["entry_price"] ?? null), "js");
         yield "\" class=\"form-control\"/></td>';
     html += '  <td><select name=\"product_discount[' + discount_row + '][type]\" class=\"form-select\">';
     html += '    <option value=\"F\">";
-        // line 1838
+        // line 1842
         yield ($context["text_fixed"] ?? null);
         yield "</option>';
     html += '    <option value=\"S\">";
-        // line 1839
+        // line 1843
         yield ($context["text_subtract"] ?? null);
         yield "</option>';
     html += '    <option value=\"P\">";
-        // line 1840
+        // line 1844
         yield ($context["text_percentage"] ?? null);
         yield "</option>';
     html += '  </select></td>';
@@ -4624,15 +4628,15 @@ var discount_row = ";
     html += '    <input type=\"checkbox\" name=\"product_discount[' + discount_row + '][special]\" value=\"1\" class=\"form-check-input\"/>';
     html += '  </div></td>';
     html += '  <td><input type=\"date\" name=\"product_discount[' + discount_row + '][date_start]\" value=\"\" placeholder=\"";
-        // line 1846
+        // line 1850
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["entry_date_start"] ?? null), "js");
         yield "\" class=\"form-control\"/></td>';
     html += '  <td><input type=\"date\" name=\"product_discount[' + discount_row + '][date_end]\" value=\"\" placeholder=\"";
-        // line 1847
+        // line 1851
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["entry_date_end"] ?? null), "js");
         yield "\" class=\"form-control\"/></td>';
     html += '  <td class=\"text-end\"><button type=\"button\" onclick=\"\$(\\'#discount-row-' + discount_row + '\\').remove();\" data-bs-toggle=\"tooltip\" title=\"";
-        // line 1848
+        // line 1852
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["button_remove"] ?? null), "js");
         yield "\" class=\"btn btn-danger\"><i class=\"fa-solid fa-minus-circle\"></i></button></td>';
     html += '</tr>';
@@ -4643,7 +4647,7 @@ var discount_row = ";
 });
 
 var image_row = ";
-        // line 1856
+        // line 1860
         yield ($context["image_row"] ?? null);
         yield ";
 
@@ -4651,28 +4655,28 @@ var image_row = ";
     html = '<tr id=\"product-image-row-' + image_row + '\">';
     html += '  <td><div class=\"border rounded d-block\" style=\"max-width: 300px;\">';
     html += '    <img src=\"";
-        // line 1861
+        // line 1865
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["placeholder"] ?? null), "js");
         yield "\" alt=\"\" title=\"\" id=\"thumb-image-' + image_row + '\" data-oc-placeholder=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["placeholder"] ?? null), "js");
         yield "\" class=\"img-fluid\"/> <input type=\"hidden\" name=\"product_image[' + image_row + '][image]\" value=\"\" id=\"input-product-image-' + image_row + '\"/>';
     html += '    <div class=\"d-grid\">';
     html += '      <button type=\"button\" data-oc-toggle=\"image\" data-oc-target=\"#input-product-image-' + image_row + '\" data-oc-thumb=\"#thumb-image-' + image_row + '\" class=\"btn btn-primary rounded-0\"><i class=\"fa-solid fa-pencil\"></i> ";
-        // line 1863
+        // line 1867
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["button_edit"] ?? null), "js");
         yield "</button>';
     html += '      <button type=\"button\" data-oc-toggle=\"clear\" data-oc-target=\"#input-product-image-' + image_row + '\" data-oc-thumb=\"#thumb-image-' + image_row + '\" class=\"btn btn-warning rounded-0\"><i class=\"fa-regular fa-trash-can\"></i> ";
-        // line 1864
+        // line 1868
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["button_clear"] ?? null), "js");
         yield "</button>';
     html += '    </div>';
     html += '  </div></td>';
     html += '  <td><input type=\"text\" name=\"product_image[' + image_row + '][sort_order]\" value=\"0\" placeholder=\"";
-        // line 1867
+        // line 1871
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["entry_sort_order"] ?? null), "js");
         yield "\" class=\"form-control\"/></td>';
     html += '  <td class=\"text-end\"><button type=\"button\" onclick=\"\$(\\'#product-image-row-' + image_row + '\\').remove();\" data-bs-toggle=\"tooltip\" title=\"";
-        // line 1868
+        // line 1872
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["button_remove"] ?? null), "js");
         yield "\" class=\"btn btn-danger\"><i class=\"fa-solid fa-minus-circle\"></i></button></td>';
     html += '</tr>';
@@ -4683,7 +4687,7 @@ var image_row = ";
 });
 
 var subscription_row = ";
-        // line 1876
+        // line 1880
         yield ($context["subscription_row"] ?? null);
         yield ";
 
@@ -4691,52 +4695,52 @@ var subscription_row = ";
     html = '<tr id=\"subscription-row-' + subscription_row + '\">';
     html += '  <td><select name=\"product_subscription[' + subscription_row + '][subscription_plan_id]\" class=\"form-select\">';
   ";
-        // line 1881
+        // line 1885
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["subscription_plans"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["subscription_plan"]) {
-            // line 1882
+            // line 1886
             yield "    html += '      <option value=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "subscription_plan_id", [], "any", false, false, false, 1882);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "subscription_plan_id", [], "any", false, false, false, 1886);
             yield "\">";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "name", [], "any", false, false, false, 1882), "js");
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "name", [], "any", false, false, false, 1886), "js");
             yield "</option>';
   ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['subscription_plan'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1884
+        // line 1888
         yield "    html += '  </select></td>';
     html += '  <td><select name=\"product_subscription[' + subscription_row + '][customer_group_id]\" class=\"form-select\">';
   ";
-        // line 1886
+        // line 1890
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["customer_groups"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["customer_group"]) {
-            // line 1887
+            // line 1891
             yield "    html += '      <option value=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 1887);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 1891);
             yield "\">";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "name", [], "any", false, false, false, 1887), "js");
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "name", [], "any", false, false, false, 1891), "js");
             yield "</option>';
   ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['customer_group'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1889
+        // line 1893
         yield "    html += '  <select></td>';
     html += '  <td class=\"text-end\"><input type=\"text\" name=\"product_subscription[' + subscription_row + '][trial_price]\" value=\"\" placeholder=\"";
-        // line 1890
+        // line 1894
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["entry_trial_price"] ?? null), "js");
         yield "\" class=\"form-control\"/></td>';
     html += '  <td class=\"text-end\"><input type=\"text\" name=\"product_subscription[' + subscription_row + '][price]\" value=\"\" placeholder=\"";
-        // line 1891
+        // line 1895
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["entry_price"] ?? null), "js");
         yield "\" class=\"form-control\"/></td>';
     html += '  <td class=\"text-end\"><button type=\"button\" onclick=\"\$(\\'#subscription-row-' + subscription_row + '\\').remove()\" data-bs-toggle=\"tooltip\" title=\"";
-        // line 1892
+        // line 1896
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["button_remove"] ?? null), "js");
         yield "\" class=\"btn btn-danger\"><i class=\"fa-solid fa-minus-circle\"></i></button></td>';
     html += '</tr>';
@@ -4747,9 +4751,9 @@ var subscription_row = ";
 });
 
 ";
-        // line 1900
+        // line 1904
         if (($context["master_id"] ?? null)) {
-            // line 1901
+            // line 1905
             yield "// Variable products
 \$('input[data-oc-toggle=\\'switch\\']').on('change', function(e) {
     var element = this;
@@ -4817,7 +4821,7 @@ var subscription_row = ";
 \$('input[data-oc-toggle=\\'switch\\']').trigger('change');
 ";
         }
-        // line 1967
+        // line 1971
         yield "
 \$('#report').on('click', '.pagination a', function(e) {
     e.preventDefault();
@@ -4826,7 +4830,7 @@ var subscription_row = ";
 });
 //--></script>
 ";
-        // line 1974
+        // line 1978
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -4854,7 +4858,7 @@ var subscription_row = ";
      */
     public function getDebugInfo(): array
     {
-        return array (  4830 => 1974,  4821 => 1967,  4753 => 1901,  4751 => 1900,  4740 => 1892,  4736 => 1891,  4732 => 1890,  4729 => 1889,  4718 => 1887,  4714 => 1886,  4710 => 1884,  4699 => 1882,  4695 => 1881,  4687 => 1876,  4676 => 1868,  4672 => 1867,  4666 => 1864,  4662 => 1863,  4655 => 1861,  4647 => 1856,  4636 => 1848,  4632 => 1847,  4628 => 1846,  4619 => 1840,  4615 => 1839,  4611 => 1838,  4606 => 1836,  4602 => 1835,  4598 => 1834,  4595 => 1833,  4584 => 1831,  4580 => 1830,  4572 => 1825,  4569 => 1824,  4549 => 1809,  4540 => 1805,  4521 => 1791,  4513 => 1786,  4493 => 1769,  4486 => 1765,  4466 => 1748,  4459 => 1744,  4439 => 1727,  4430 => 1721,  4426 => 1720,  4421 => 1718,  4417 => 1717,  4410 => 1713,  4404 => 1710,  4400 => 1709,  4380 => 1692,  4373 => 1688,  4353 => 1671,  4323 => 1644,  4312 => 1636,  4308 => 1635,  4304 => 1634,  4300 => 1633,  4296 => 1632,  4292 => 1631,  4280 => 1622,  4276 => 1621,  4267 => 1615,  4263 => 1614,  4254 => 1608,  4250 => 1607,  4241 => 1601,  4237 => 1600,  4228 => 1594,  4224 => 1593,  4215 => 1587,  4211 => 1586,  4202 => 1580,  4198 => 1579,  4193 => 1577,  4163 => 1550,  4154 => 1545,  4152 => 1544,  4139 => 1534,  4136 => 1533,  4123 => 1530,  4117 => 1529,  4114 => 1528,  4110 => 1527,  4102 => 1522,  4090 => 1513,  4067 => 1493,  4030 => 1459,  3993 => 1425,  3956 => 1391,  3919 => 1357,  3894 => 1335,  3886 => 1330,  3856 => 1303,  3850 => 1300,  3839 => 1292,  3831 => 1287,  3827 => 1286,  3818 => 1279,  3810 => 1276,  3795 => 1274,  3791 => 1273,  3786 => 1271,  3782 => 1270,  3779 => 1269,  3775 => 1268,  3769 => 1264,  3761 => 1262,  3758 => 1261,  3755 => 1260,  3751 => 1259,  3739 => 1249,  3731 => 1246,  3721 => 1245,  3704 => 1243,  3698 => 1242,  3695 => 1241,  3691 => 1240,  3686 => 1238,  3683 => 1237,  3679 => 1236,  3672 => 1232,  3668 => 1231,  3660 => 1226,  3651 => 1219,  3640 => 1216,  3636 => 1215,  3633 => 1214,  3629 => 1213,  3623 => 1209,  3615 => 1207,  3612 => 1206,  3608 => 1205,  3604 => 1204,  3596 => 1199,  3588 => 1194,  3585 => 1193,  3576 => 1189,  3572 => 1187,  3570 => 1186,  3564 => 1185,  3558 => 1182,  3553 => 1180,  3540 => 1170,  3534 => 1166,  3528 => 1165,  3526 => 1164,  3519 => 1162,  3511 => 1161,  3500 => 1157,  3492 => 1156,  3477 => 1154,  3470 => 1151,  3465 => 1150,  3463 => 1149,  3457 => 1145,  3449 => 1143,  3446 => 1142,  3444 => 1141,  3439 => 1139,  3435 => 1138,  3427 => 1133,  3421 => 1129,  3412 => 1125,  3408 => 1123,  3406 => 1122,  3402 => 1121,  3398 => 1120,  3389 => 1118,  3384 => 1116,  3373 => 1108,  3367 => 1104,  3361 => 1103,  3359 => 1102,  3352 => 1100,  3344 => 1099,  3336 => 1098,  3327 => 1096,  3323 => 1095,  3313 => 1092,  3305 => 1091,  3297 => 1090,  3293 => 1089,  3285 => 1088,  3277 => 1087,  3269 => 1086,  3266 => 1085,  3251 => 1083,  3247 => 1082,  3243 => 1081,  3238 => 1080,  3233 => 1079,  3231 => 1078,  3225 => 1074,  3217 => 1072,  3214 => 1071,  3212 => 1070,  3208 => 1069,  3204 => 1068,  3200 => 1067,  3196 => 1066,  3192 => 1065,  3188 => 1064,  3184 => 1063,  3180 => 1062,  3166 => 1051,  3160 => 1047,  3154 => 1046,  3152 => 1045,  3145 => 1043,  3137 => 1042,  3129 => 1041,  3126 => 1040,  3111 => 1038,  3107 => 1037,  3103 => 1036,  3100 => 1035,  3085 => 1033,  3081 => 1032,  3077 => 1031,  3072 => 1030,  3067 => 1029,  3065 => 1028,  3059 => 1024,  3051 => 1022,  3048 => 1021,  3046 => 1020,  3041 => 1018,  3037 => 1017,  3033 => 1016,  3029 => 1015,  3022 => 1010,  3018 => 1008,  3011 => 1006,  3004 => 1002,  2987 => 998,  2977 => 995,  2969 => 992,  2962 => 991,  2960 => 990,  2957 => 989,  2950 => 985,  2933 => 981,  2925 => 978,  2921 => 977,  2914 => 975,  2907 => 974,  2905 => 973,  2902 => 972,  2895 => 968,  2878 => 964,  2868 => 961,  2860 => 958,  2853 => 957,  2851 => 956,  2848 => 955,  2841 => 951,  2824 => 947,  2812 => 944,  2802 => 943,  2794 => 942,  2780 => 941,  2774 => 938,  2767 => 937,  2765 => 936,  2762 => 935,  2755 => 931,  2738 => 927,  2726 => 924,  2718 => 921,  2711 => 920,  2709 => 919,  2706 => 918,  2699 => 914,  2682 => 910,  2670 => 907,  2662 => 904,  2655 => 903,  2653 => 902,  2650 => 901,  2643 => 897,  2626 => 893,  2621 => 890,  2613 => 887,  2606 => 886,  2604 => 885,  2599 => 884,  2585 => 883,  2581 => 882,  2577 => 881,  2565 => 880,  2562 => 879,  2558 => 878,  2554 => 877,  2548 => 874,  2541 => 873,  2539 => 872,  2536 => 871,  2529 => 867,  2512 => 863,  2507 => 860,  2499 => 857,  2492 => 856,  2490 => 855,  2485 => 854,  2470 => 853,  2468 => 852,  2464 => 851,  2452 => 850,  2449 => 849,  2445 => 848,  2441 => 847,  2435 => 844,  2428 => 843,  2426 => 842,  2423 => 841,  2416 => 837,  2399 => 833,  2394 => 830,  2387 => 828,  2380 => 827,  2378 => 826,  2367 => 825,  2363 => 824,  2359 => 823,  2353 => 822,  2347 => 819,  2340 => 818,  2338 => 817,  2333 => 815,  2330 => 814,  2326 => 813,  2323 => 812,  2314 => 806,  2309 => 804,  2304 => 802,  2299 => 800,  2295 => 798,  2289 => 797,  2287 => 796,  2278 => 792,  2273 => 789,  2268 => 786,  2265 => 785,  2254 => 783,  2249 => 782,  2247 => 781,  2243 => 780,  2234 => 776,  2228 => 772,  2222 => 771,  2220 => 770,  2207 => 768,  2193 => 767,  2188 => 766,  2174 => 765,  2169 => 764,  2155 => 763,  2150 => 762,  2141 => 761,  2135 => 759,  2129 => 757,  2127 => 756,  2117 => 755,  2103 => 754,  2099 => 753,  2094 => 752,  2090 => 751,  2086 => 750,  2079 => 746,  2075 => 745,  2071 => 744,  2067 => 743,  2063 => 742,  2059 => 741,  2053 => 737,  2051 => 736,  2048 => 735,  2032 => 732,  2029 => 731,  2027 => 730,  2024 => 729,  2008 => 726,  2005 => 725,  2003 => 724,  2000 => 723,  1984 => 720,  1981 => 719,  1979 => 718,  1976 => 717,  1960 => 714,  1957 => 713,  1955 => 712,  1952 => 711,  1936 => 708,  1933 => 707,  1931 => 706,  1928 => 705,  1912 => 702,  1909 => 701,  1907 => 700,  1896 => 696,  1888 => 695,  1878 => 694,  1855 => 688,  1851 => 687,  1847 => 686,  1844 => 685,  1839 => 684,  1836 => 683,  1834 => 682,  1828 => 678,  1826 => 677,  1817 => 671,  1811 => 667,  1805 => 666,  1803 => 665,  1796 => 663,  1793 => 662,  1774 => 660,  1768 => 659,  1765 => 658,  1761 => 657,  1755 => 654,  1737 => 653,  1731 => 651,  1726 => 650,  1724 => 649,  1718 => 645,  1710 => 643,  1707 => 642,  1705 => 641,  1701 => 640,  1697 => 639,  1685 => 630,  1682 => 629,  1673 => 625,  1669 => 623,  1667 => 622,  1662 => 619,  1650 => 615,  1645 => 614,  1641 => 613,  1632 => 607,  1627 => 605,  1620 => 601,  1617 => 600,  1608 => 596,  1604 => 594,  1602 => 593,  1597 => 590,  1585 => 586,  1580 => 585,  1576 => 584,  1567 => 578,  1562 => 576,  1556 => 572,  1547 => 568,  1543 => 566,  1541 => 565,  1538 => 564,  1519 => 561,  1516 => 560,  1512 => 559,  1505 => 555,  1498 => 551,  1495 => 550,  1486 => 546,  1482 => 544,  1480 => 543,  1475 => 540,  1463 => 536,  1458 => 535,  1454 => 534,  1445 => 528,  1440 => 526,  1433 => 522,  1430 => 521,  1421 => 517,  1417 => 515,  1415 => 514,  1410 => 511,  1398 => 507,  1393 => 506,  1389 => 505,  1380 => 499,  1375 => 497,  1368 => 493,  1363 => 491,  1360 => 490,  1351 => 486,  1347 => 484,  1345 => 483,  1339 => 482,  1333 => 479,  1324 => 472,  1315 => 468,  1311 => 466,  1309 => 465,  1303 => 464,  1297 => 461,  1291 => 457,  1282 => 453,  1278 => 451,  1276 => 450,  1269 => 448,  1262 => 444,  1256 => 440,  1247 => 436,  1243 => 434,  1241 => 433,  1238 => 432,  1223 => 430,  1219 => 429,  1212 => 425,  1206 => 421,  1197 => 417,  1193 => 415,  1191 => 414,  1185 => 413,  1179 => 410,  1173 => 406,  1164 => 402,  1160 => 400,  1158 => 399,  1155 => 398,  1140 => 396,  1136 => 395,  1129 => 391,  1123 => 387,  1114 => 383,  1110 => 381,  1108 => 380,  1101 => 379,  1092 => 375,  1088 => 373,  1086 => 372,  1079 => 371,  1070 => 367,  1066 => 365,  1064 => 364,  1058 => 363,  1052 => 360,  1046 => 356,  1037 => 352,  1033 => 350,  1031 => 349,  1024 => 347,  1017 => 343,  1012 => 341,  1005 => 336,  996 => 332,  992 => 330,  990 => 329,  984 => 328,  978 => 325,  972 => 321,  963 => 317,  959 => 315,  957 => 314,  951 => 313,  945 => 310,  938 => 306,  935 => 305,  926 => 301,  922 => 299,  920 => 298,  917 => 297,  902 => 295,  898 => 294,  891 => 290,  885 => 286,  876 => 282,  872 => 280,  870 => 279,  863 => 277,  856 => 273,  849 => 269,  846 => 268,  837 => 264,  833 => 262,  831 => 261,  825 => 260,  819 => 257,  810 => 253,  805 => 251,  800 => 249,  793 => 244,  784 => 240,  780 => 238,  778 => 237,  775 => 236,  760 => 234,  756 => 233,  752 => 232,  745 => 228,  739 => 224,  730 => 220,  726 => 218,  724 => 217,  718 => 216,  712 => 213,  707 => 211,  699 => 206,  696 => 205,  686 => 200,  682 => 198,  680 => 197,  675 => 194,  669 => 193,  667 => 192,  659 => 189,  655 => 188,  649 => 187,  641 => 186,  636 => 185,  631 => 184,  629 => 183,  619 => 176,  616 => 175,  605 => 173,  601 => 172,  594 => 168,  587 => 163,  578 => 159,  574 => 157,  572 => 156,  566 => 155,  560 => 152,  555 => 150,  550 => 148,  545 => 145,  526 => 140,  523 => 139,  506 => 135,  502 => 133,  500 => 132,  490 => 131,  482 => 128,  476 => 124,  459 => 120,  455 => 118,  453 => 117,  443 => 116,  435 => 113,  429 => 109,  412 => 105,  408 => 103,  406 => 102,  396 => 101,  388 => 98,  381 => 94,  378 => 93,  361 => 89,  357 => 87,  355 => 86,  345 => 85,  337 => 82,  331 => 78,  314 => 74,  310 => 72,  308 => 71,  295 => 69,  286 => 65,  279 => 61,  276 => 60,  259 => 56,  255 => 54,  253 => 53,  243 => 52,  235 => 49,  225 => 47,  208 => 46,  204 => 44,  177 => 42,  160 => 41,  152 => 36,  148 => 35,  144 => 34,  140 => 33,  136 => 32,  132 => 31,  128 => 30,  124 => 29,  120 => 28,  116 => 27,  112 => 26,  108 => 25,  103 => 23,  98 => 21,  95 => 20,  89 => 18,  87 => 17,  81 => 13,  70 => 11,  66 => 10,  61 => 8,  55 => 7,  51 => 6,  42 => 1,);
+        return array (  4834 => 1978,  4825 => 1971,  4757 => 1905,  4755 => 1904,  4744 => 1896,  4740 => 1895,  4736 => 1894,  4733 => 1893,  4722 => 1891,  4718 => 1890,  4714 => 1888,  4703 => 1886,  4699 => 1885,  4691 => 1880,  4680 => 1872,  4676 => 1871,  4670 => 1868,  4666 => 1867,  4659 => 1865,  4651 => 1860,  4640 => 1852,  4636 => 1851,  4632 => 1850,  4623 => 1844,  4619 => 1843,  4615 => 1842,  4610 => 1840,  4606 => 1839,  4602 => 1838,  4599 => 1837,  4588 => 1835,  4584 => 1834,  4576 => 1829,  4573 => 1828,  4553 => 1813,  4544 => 1809,  4525 => 1795,  4513 => 1786,  4493 => 1769,  4486 => 1765,  4466 => 1748,  4459 => 1744,  4439 => 1727,  4430 => 1721,  4426 => 1720,  4421 => 1718,  4417 => 1717,  4410 => 1713,  4404 => 1710,  4400 => 1709,  4380 => 1692,  4373 => 1688,  4353 => 1671,  4323 => 1644,  4312 => 1636,  4308 => 1635,  4304 => 1634,  4300 => 1633,  4296 => 1632,  4292 => 1631,  4280 => 1622,  4276 => 1621,  4267 => 1615,  4263 => 1614,  4254 => 1608,  4250 => 1607,  4241 => 1601,  4237 => 1600,  4228 => 1594,  4224 => 1593,  4215 => 1587,  4211 => 1586,  4202 => 1580,  4198 => 1579,  4193 => 1577,  4163 => 1550,  4154 => 1545,  4152 => 1544,  4139 => 1534,  4136 => 1533,  4123 => 1530,  4117 => 1529,  4114 => 1528,  4110 => 1527,  4102 => 1522,  4090 => 1513,  4067 => 1493,  4030 => 1459,  3993 => 1425,  3956 => 1391,  3919 => 1357,  3894 => 1335,  3886 => 1330,  3856 => 1303,  3850 => 1300,  3839 => 1292,  3831 => 1287,  3827 => 1286,  3818 => 1279,  3810 => 1276,  3795 => 1274,  3791 => 1273,  3786 => 1271,  3782 => 1270,  3779 => 1269,  3775 => 1268,  3769 => 1264,  3761 => 1262,  3758 => 1261,  3755 => 1260,  3751 => 1259,  3739 => 1249,  3731 => 1246,  3721 => 1245,  3704 => 1243,  3698 => 1242,  3695 => 1241,  3691 => 1240,  3686 => 1238,  3683 => 1237,  3679 => 1236,  3672 => 1232,  3668 => 1231,  3660 => 1226,  3651 => 1219,  3640 => 1216,  3636 => 1215,  3633 => 1214,  3629 => 1213,  3623 => 1209,  3615 => 1207,  3612 => 1206,  3608 => 1205,  3604 => 1204,  3596 => 1199,  3588 => 1194,  3585 => 1193,  3576 => 1189,  3572 => 1187,  3570 => 1186,  3564 => 1185,  3558 => 1182,  3553 => 1180,  3540 => 1170,  3534 => 1166,  3528 => 1165,  3526 => 1164,  3519 => 1162,  3511 => 1161,  3500 => 1157,  3492 => 1156,  3477 => 1154,  3470 => 1151,  3465 => 1150,  3463 => 1149,  3457 => 1145,  3449 => 1143,  3446 => 1142,  3444 => 1141,  3439 => 1139,  3435 => 1138,  3427 => 1133,  3421 => 1129,  3412 => 1125,  3408 => 1123,  3406 => 1122,  3402 => 1121,  3398 => 1120,  3389 => 1118,  3384 => 1116,  3373 => 1108,  3367 => 1104,  3361 => 1103,  3359 => 1102,  3352 => 1100,  3344 => 1099,  3336 => 1098,  3327 => 1096,  3323 => 1095,  3313 => 1092,  3305 => 1091,  3297 => 1090,  3293 => 1089,  3285 => 1088,  3277 => 1087,  3269 => 1086,  3266 => 1085,  3251 => 1083,  3247 => 1082,  3243 => 1081,  3238 => 1080,  3233 => 1079,  3231 => 1078,  3225 => 1074,  3217 => 1072,  3214 => 1071,  3212 => 1070,  3208 => 1069,  3204 => 1068,  3200 => 1067,  3196 => 1066,  3192 => 1065,  3188 => 1064,  3184 => 1063,  3180 => 1062,  3166 => 1051,  3160 => 1047,  3154 => 1046,  3152 => 1045,  3145 => 1043,  3137 => 1042,  3129 => 1041,  3126 => 1040,  3111 => 1038,  3107 => 1037,  3103 => 1036,  3100 => 1035,  3085 => 1033,  3081 => 1032,  3077 => 1031,  3072 => 1030,  3067 => 1029,  3065 => 1028,  3059 => 1024,  3051 => 1022,  3048 => 1021,  3046 => 1020,  3041 => 1018,  3037 => 1017,  3033 => 1016,  3029 => 1015,  3022 => 1010,  3018 => 1008,  3011 => 1006,  3004 => 1002,  2987 => 998,  2977 => 995,  2969 => 992,  2962 => 991,  2960 => 990,  2957 => 989,  2950 => 985,  2933 => 981,  2925 => 978,  2921 => 977,  2914 => 975,  2907 => 974,  2905 => 973,  2902 => 972,  2895 => 968,  2878 => 964,  2868 => 961,  2860 => 958,  2853 => 957,  2851 => 956,  2848 => 955,  2841 => 951,  2824 => 947,  2812 => 944,  2802 => 943,  2794 => 942,  2780 => 941,  2774 => 938,  2767 => 937,  2765 => 936,  2762 => 935,  2755 => 931,  2738 => 927,  2726 => 924,  2718 => 921,  2711 => 920,  2709 => 919,  2706 => 918,  2699 => 914,  2682 => 910,  2670 => 907,  2662 => 904,  2655 => 903,  2653 => 902,  2650 => 901,  2643 => 897,  2626 => 893,  2621 => 890,  2613 => 887,  2606 => 886,  2604 => 885,  2599 => 884,  2585 => 883,  2581 => 882,  2577 => 881,  2565 => 880,  2562 => 879,  2558 => 878,  2554 => 877,  2548 => 874,  2541 => 873,  2539 => 872,  2536 => 871,  2529 => 867,  2512 => 863,  2507 => 860,  2499 => 857,  2492 => 856,  2490 => 855,  2485 => 854,  2470 => 853,  2468 => 852,  2464 => 851,  2452 => 850,  2449 => 849,  2445 => 848,  2441 => 847,  2435 => 844,  2428 => 843,  2426 => 842,  2423 => 841,  2416 => 837,  2399 => 833,  2394 => 830,  2387 => 828,  2380 => 827,  2378 => 826,  2367 => 825,  2363 => 824,  2359 => 823,  2353 => 822,  2347 => 819,  2340 => 818,  2338 => 817,  2333 => 815,  2330 => 814,  2326 => 813,  2323 => 812,  2314 => 806,  2309 => 804,  2304 => 802,  2299 => 800,  2295 => 798,  2289 => 797,  2287 => 796,  2278 => 792,  2273 => 789,  2268 => 786,  2265 => 785,  2254 => 783,  2249 => 782,  2247 => 781,  2243 => 780,  2234 => 776,  2228 => 772,  2222 => 771,  2220 => 770,  2207 => 768,  2193 => 767,  2188 => 766,  2174 => 765,  2169 => 764,  2155 => 763,  2150 => 762,  2141 => 761,  2135 => 759,  2129 => 757,  2127 => 756,  2117 => 755,  2103 => 754,  2099 => 753,  2094 => 752,  2090 => 751,  2086 => 750,  2079 => 746,  2075 => 745,  2071 => 744,  2067 => 743,  2063 => 742,  2059 => 741,  2053 => 737,  2051 => 736,  2048 => 735,  2032 => 732,  2029 => 731,  2027 => 730,  2024 => 729,  2008 => 726,  2005 => 725,  2003 => 724,  2000 => 723,  1984 => 720,  1981 => 719,  1979 => 718,  1976 => 717,  1960 => 714,  1957 => 713,  1955 => 712,  1952 => 711,  1936 => 708,  1933 => 707,  1931 => 706,  1928 => 705,  1912 => 702,  1909 => 701,  1907 => 700,  1896 => 696,  1888 => 695,  1878 => 694,  1855 => 688,  1851 => 687,  1847 => 686,  1844 => 685,  1839 => 684,  1836 => 683,  1834 => 682,  1828 => 678,  1826 => 677,  1817 => 671,  1811 => 667,  1805 => 666,  1803 => 665,  1796 => 663,  1793 => 662,  1774 => 660,  1768 => 659,  1765 => 658,  1761 => 657,  1755 => 654,  1737 => 653,  1731 => 651,  1726 => 650,  1724 => 649,  1718 => 645,  1710 => 643,  1707 => 642,  1705 => 641,  1701 => 640,  1697 => 639,  1685 => 630,  1682 => 629,  1673 => 625,  1669 => 623,  1667 => 622,  1662 => 619,  1650 => 615,  1645 => 614,  1641 => 613,  1632 => 607,  1627 => 605,  1620 => 601,  1617 => 600,  1608 => 596,  1604 => 594,  1602 => 593,  1597 => 590,  1585 => 586,  1580 => 585,  1576 => 584,  1567 => 578,  1562 => 576,  1556 => 572,  1547 => 568,  1543 => 566,  1541 => 565,  1538 => 564,  1519 => 561,  1516 => 560,  1512 => 559,  1505 => 555,  1498 => 551,  1495 => 550,  1486 => 546,  1482 => 544,  1480 => 543,  1475 => 540,  1463 => 536,  1458 => 535,  1454 => 534,  1445 => 528,  1440 => 526,  1433 => 522,  1430 => 521,  1421 => 517,  1417 => 515,  1415 => 514,  1410 => 511,  1398 => 507,  1393 => 506,  1389 => 505,  1380 => 499,  1375 => 497,  1368 => 493,  1363 => 491,  1360 => 490,  1351 => 486,  1347 => 484,  1345 => 483,  1339 => 482,  1333 => 479,  1324 => 472,  1315 => 468,  1311 => 466,  1309 => 465,  1303 => 464,  1297 => 461,  1291 => 457,  1282 => 453,  1278 => 451,  1276 => 450,  1269 => 448,  1262 => 444,  1256 => 440,  1247 => 436,  1243 => 434,  1241 => 433,  1238 => 432,  1223 => 430,  1219 => 429,  1212 => 425,  1206 => 421,  1197 => 417,  1193 => 415,  1191 => 414,  1185 => 413,  1179 => 410,  1173 => 406,  1164 => 402,  1160 => 400,  1158 => 399,  1155 => 398,  1140 => 396,  1136 => 395,  1129 => 391,  1123 => 387,  1114 => 383,  1110 => 381,  1108 => 380,  1101 => 379,  1092 => 375,  1088 => 373,  1086 => 372,  1079 => 371,  1070 => 367,  1066 => 365,  1064 => 364,  1058 => 363,  1052 => 360,  1046 => 356,  1037 => 352,  1033 => 350,  1031 => 349,  1024 => 347,  1017 => 343,  1012 => 341,  1005 => 336,  996 => 332,  992 => 330,  990 => 329,  984 => 328,  978 => 325,  972 => 321,  963 => 317,  959 => 315,  957 => 314,  951 => 313,  945 => 310,  938 => 306,  935 => 305,  926 => 301,  922 => 299,  920 => 298,  917 => 297,  902 => 295,  898 => 294,  891 => 290,  885 => 286,  876 => 282,  872 => 280,  870 => 279,  863 => 277,  856 => 273,  849 => 269,  846 => 268,  837 => 264,  833 => 262,  831 => 261,  825 => 260,  819 => 257,  810 => 253,  805 => 251,  800 => 249,  793 => 244,  784 => 240,  780 => 238,  778 => 237,  775 => 236,  760 => 234,  756 => 233,  752 => 232,  745 => 228,  739 => 224,  730 => 220,  726 => 218,  724 => 217,  718 => 216,  712 => 213,  707 => 211,  699 => 206,  696 => 205,  686 => 200,  682 => 198,  680 => 197,  675 => 194,  669 => 193,  667 => 192,  659 => 189,  655 => 188,  649 => 187,  641 => 186,  636 => 185,  631 => 184,  629 => 183,  619 => 176,  616 => 175,  605 => 173,  601 => 172,  594 => 168,  587 => 163,  578 => 159,  574 => 157,  572 => 156,  566 => 155,  560 => 152,  555 => 150,  550 => 148,  545 => 145,  526 => 140,  523 => 139,  506 => 135,  502 => 133,  500 => 132,  490 => 131,  482 => 128,  476 => 124,  459 => 120,  455 => 118,  453 => 117,  443 => 116,  435 => 113,  429 => 109,  412 => 105,  408 => 103,  406 => 102,  396 => 101,  388 => 98,  381 => 94,  378 => 93,  361 => 89,  357 => 87,  355 => 86,  345 => 85,  337 => 82,  331 => 78,  314 => 74,  310 => 72,  308 => 71,  295 => 69,  286 => 65,  279 => 61,  276 => 60,  259 => 56,  255 => 54,  253 => 53,  243 => 52,  235 => 49,  225 => 47,  208 => 46,  204 => 44,  177 => 42,  160 => 41,  152 => 36,  148 => 35,  144 => 34,  140 => 33,  136 => 32,  132 => 31,  128 => 30,  124 => 29,  120 => 28,  116 => 27,  112 => 26,  108 => 25,  103 => 23,  98 => 21,  95 => 20,  89 => 18,  87 => 17,  81 => 13,  70 => 11,  66 => 10,  61 => 8,  55 => 7,  51 => 6,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -6647,6 +6651,10 @@ var option_value_row = {{ option_value_row }};
     html += '      \t     <input type=\"text\" name=\"weight\" value=\"' + (\$(element).attr('data-option-value-row') ? \$('input[name=\\'product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][weight]\\']').val() : '0') + '\" placeholder=\"{{ entry_weight|escape('js') }}\" id=\"input-modal-weight\" class=\"form-control\"/>';
     html += '          </div>';
     html += '        </div>';
+    html += '        <div class=\"mb-3\">';
+    html += '           <label for=\"input-modal-link2\" class=\"form-label\">Link 2</label>';
+    html += '           <input type=\"text\" name=\"link2\" value=\"' + (\$(element).attr('data-option-value-row') ? (\$('input[name=\\'product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][link2]\\']').val() || '') : '') + '\" placeholder=\"Link 2\" id=\"input-modal-link2\" class=\"form-control\"/>';
+    html += '        </div>';
     html += '      </div>';
     html += '      <div class=\"modal-footer\">';
     html += '\t       <button type=\"button\" id=\"button-save\" data-option-row=\"' + \$(element).attr('data-option-row') + '\" data-option-value-row=\"' + element.option_value_row + '\" class=\"btn btn-primary\">{{ button_save|escape('js') }}</button> <button type=\"button\" class=\"btn btn-light\" data-bs-dismiss=\"modal\">{{ button_cancel|escape('js') }}</button>';
@@ -6667,7 +6675,7 @@ var option_value_row = {{ option_value_row }};
         html += '  <td class=\"text-end\">' + \$('#modal-option select[name=\\'price_prefix\\'] option:selected').val() + \$('#modal-option input[name=\\'price\\']').val() + '<input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][price_prefix]\" value=\"' + \$('#modal-option select[name=\\'price_prefix\\'] option:selected').val() + '\"/><input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][price]\" value=\"' + \$('#modal-option input[name=\\'price\\']').val() + '\"/></td>';
         html += '  <td class=\"text-end\"> ' + \$('#modal-option select[name=\\'points_prefix\\'] option:selected').val() + \$('#modal-option input[name=\\'points\\']').val() + '<input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][points_prefix]\" value=\"' + \$('#modal-option select[name=\\'points_prefix\\'] option:selected').val() + '\"/><input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][points]\" value=\"' + \$('#modal-option input[name=\\'points\\']').val() + '\"/></td>';
         html += '  <td class=\"text-end\">' + \$('#modal-option select[name=\\'weight_prefix\\'] option:selected').val() + \$('#modal-option input[name=\\'weight\\']').val() + '<input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][weight_prefix]\" value=\"' + \$('#modal-option select[name=\\'weight_prefix\\'] option:selected').val() + '\"/><input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][weight]\" value=\"' + \$('#modal-option input[name=\\'weight\\']').val() + '\"/></td>';
-        html += '  <td class=\"text-end\"><button type=\"button\" data-bs-toggle=\"tooltip\" title=\"{{ button_edit|escape('js') }}\" data-option-row=\"' + \$(element).attr('data-option-row') + '\" data-option-value-row=\"' + element.option_value_row + '\"class=\"btn btn-primary\"><i class=\"fa-solid fa-pencil\"></i></button> <button type=\"button\" onclick=\"\$(\\'#option-value-row-' + element.option_value_row + '\\').remove();\" data-bs-toggle=\"tooltip\" rel=\"tooltip\" title=\"{{ button_remove|escape('js') }}\" class=\"btn btn-danger\"><i class=\"fa-solid fa-minus-circle\"></i></button></td>';
+        html += '  <td class=\"text-end\"><input type=\"hidden\" name=\"product_option[' + \$(element).attr('data-option-row') + '][product_option_value][' + element.option_value_row + '][link2]\" value=\"' + (\$('#modal-option input[name=\\'link2\\']').val() || '') + '\"/><button type=\"button\" data-bs-toggle=\"tooltip\" title=\"{{ button_edit|escape('js') }}\" data-option-row=\"' + \$(element).attr('data-option-row') + '\" data-option-value-row=\"' + element.option_value_row + '\"class=\"btn btn-primary\"><i class=\"fa-solid fa-pencil\"></i></button> <button type=\"button\" onclick=\"\$(\\'#option-value-row-' + element.option_value_row + '\\').remove();\" data-bs-toggle=\"tooltip\" rel=\"tooltip\" title=\"{{ button_remove|escape('js') }}\" class=\"btn btn-danger\"><i class=\"fa-solid fa-minus-circle\"></i></button></td>';
         html += '</tr>';
 
         if (\$(element).attr('data-option-value-row')) {

@@ -1,4 +1,20 @@
 {{ header }}
+
+<style>
+   .size-btn {
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px !important;
+      border: 1px solid #000;
+   }
+   .size-btn.active {
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #000 !important;
+   }
+</style>
+
 <!-- Page Title -->
 <section class="s-page-title style-2">
    <div class="container">
@@ -144,17 +160,12 @@
                                  {{ option.name }}
                                  <span class="variant-picker-label-value value-current-option">{{ option.product_option_value[0].name }}</span>
                               </div>
-                              {% if option.type == 'select' %}
-                              <a href="#size-guide" data-bs-toggle="modal" class="size-guide link h6 fw-medium">
-                              <i class="icon icon-ruler"></i>
-                              Size Guide
-                              </a>
-                              {% endif %}
+                             
                            </div>
-                           <div class="variant-picker-values">
+                           <div class="variant-picker-values mt-3">
                               {% for option_value in option.product_option_value %}
                               {% if option.type == 'select' %}
-                              <span class="size-btn" data-size="{{ option_value.name }}">{{ option_value.name }}</span>
+                              <span class="size-btn {% if loop.first %}active{% endif %}" data-size="{{ option_value.name }}">{{ option_value.name }}</span>
                               {% elseif option.type == 'radio' %}
                               <div class="hover-tooltip tooltip-bot color-btn{% if loop.first %} active{% endif %}" data-color="{{ option_value.name|lower }}">
                                  <span class="check-color bg-color-option"></span>
@@ -168,6 +179,32 @@
                         {% endfor %}
                      </div>
                      {% endif %}
+
+                     <div class="tf-product-variant">
+                        <div class="variant-picker-item variant-{{ option.type }}">
+                           <div class="variant-picker-label">
+                              <div class="h4 fw-semibold">
+                                 {{ option.name }}
+                                 <span class="variant-picker-label-value value-current-option">{{ option.product_option_value[0].name }}</span>
+                              </div>
+
+                           </div>
+                           <div class="variant-picker-values mt-3">
+                              {% for option_value in option.product_option_value %}
+                              {% if option.type == 'select' %}
+                              <span class="size-btn {% if loop.first %}active{% endif %}" data-size="{{ option_value.name }}">{{ option_value.name }}</span>
+                              {% elseif option.type == 'radio' %}
+                              <div class="hover-tooltip tooltip-bot color-btn{% if loop.first %} active{% endif %}" data-color="{{ option_value.name|lower }}">
+                                 <span class="check-color bg-color-option"></span>
+                                 <span class="tooltip">{{ option_value.name }}</span>
+                              </div>
+                              {% endif %}
+                              {% endfor %}
+                           </div>
+                        </div>
+                     </div>
+
+
                      <div class="tf-product-total-quantity">
                         <div class="group-btn">
                            <div class="wg-quantity">
@@ -263,10 +300,10 @@
       <div class="container">
          <div class="tf-height-observer w-100 d-flex align-items-center">
             <div class="tf-sticky-atc-product d-flex align-items-center">
-               <div class="tf-mini-cart-item align-items-start">
+               <div class="tf-mini-cart-item ">
                   <div class="tf-mini-cart-image">
-                     <img class="lazyload" data-src="assets/images/products/fashion/thumbs/thumbs-1.jpg"
-                        src="assets/images/products/fashion/thumbs/thumbs-1.jpg" alt="img-product">
+                     <img class="lazyload" data-src="{{ thumb }}"
+                        src="{{ thumb }}" alt="img-product">
                   </div>
                   <div class="tf-mini-cart-info">
                      <h6 class="title">

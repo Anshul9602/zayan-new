@@ -130,7 +130,7 @@ class __TwigTemplate_77a4a048915e17ae573882129ac9c30dd4c802e5739d07662676d437b02
                     yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 29);
                     yield "\" title=\"";
                     yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 29);
-                    yield "\" class=\"img-thumbnail\"/></a>";
+                    yield "\" class=\"img-thumbnail\"/ width=\"200px\"></a>";
                 }
                 yield "</td>
             <td class=\"text-start text-wrap\"><a href=\"";
@@ -407,7 +407,7 @@ class __TwigTemplate_77a4a048915e17ae573882129ac9c30dd4c802e5739d07662676d437b02
       <tbody>
         {% for product in products %}
           <tr>
-            <td class=\"text-center\">{% if product.thumb %}<a href=\"{{ product.href }}\"><img src=\"{{ product.thumb }}\" alt=\"{{ product.name }}\" title=\"{{ product.name }}\" class=\"img-thumbnail\"/></a>{% endif %}</td>
+            <td class=\"text-center\">{% if product.thumb %}<a href=\"{{ product.href }}\"><img src=\"{{ product.thumb }}\" alt=\"{{ product.name }}\" title=\"{{ product.name }}\" class=\"img-thumbnail\"/ width=\"200px\"></a>{% endif %}</td>
             <td class=\"text-start text-wrap\"><a href=\"{{ product.href }}\">{{ product.name }}</a>{% if not product.stock %} <span class=\"text-danger\">***</span>{% endif %}
               <ul class=\"list-unstyled mb-0\">
                 <li>

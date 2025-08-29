@@ -264,6 +264,22 @@ class Cart extends \Opencart\System\Engine\Controller {
 			// Validate options
 			$product_options = $this->model_catalog_product->getOptions($product_id);
 
+			// Auto-select first value for required selectable options if not provided
+			foreach ($product_options as $product_option) {
+				$pid = $product_option['product_option_id'];
+				$type = $product_option['type'];
+				if ($product_option['required'] && ($type == 'select' || $type == 'radio' || $type == 'checkbox') && empty($option[$pid])) {
+					if (!empty($product_option['product_option_value'])) {
+						$first = (int)$product_option['product_option_value'][0]['product_option_value_id'];
+						if ($type == 'checkbox') {
+							$option[$pid] = [$first];
+						} else {
+							$option[$pid] = $first;
+						}
+					}
+				}
+			}
+
 			foreach ($product_options as $product_option) {
 				if ($product_option['required'] && empty($option[$product_option['product_option_id']])) {
 					$json['error']['option_' . $product_option['product_option_id']] = sprintf($this->language->get('error_required'), $product_option['name']);
@@ -362,8 +378,10 @@ class Cart extends \Opencart\System\Engine\Controller {
 
 		if ($this->cart->hasProducts()) {
 			$json['success'] = $this->language->get('text_remove');
+			$json['count'] = $this->cart->countProducts();
 		} else {
 			$json['redirect'] = $this->url->link('checkout/cart', 'language=' . $this->config->get('config_language'), true);
+			$json['count'] = 0;
 		}
 
 		unset($this->session->data['shipping_method']);
@@ -374,5 +392,82 @@ class Cart extends \Opencart\System\Engine\Controller {
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
+	}
+
+	/**
+	 * Get Cart Info
+	 *
+	 * @return void
+	 */
+	public function info(): void {
+		$this->load->language('checkout/cart');
+
+		$this->load->model('tool/image');
+		$this->load->model('checkout/cart');
+
+		$data['text_items'] = sprintf($this->language->get('text_items'), $this->cart->countProducts());
+		$data['heading_title'] = $this->language->get('heading_title');
+		$data['text_cart'] = $this->language->get('text_cart');
+		$data['text_checkout'] = $this->language->get('text_checkout');
+		$data['text_no_results'] = $this->language->get('text_no_results');
+		$data['text_remove'] = $this->language->get('text_remove');
+		$data['button_remove'] = $this->language->get('button_remove');
+
+		$data['home'] = $this->url->link('common/home', 'language=' . $this->config->get('config_language'));
+		$data['cart'] = $this->url->link('checkout/cart', 'language=' . $this->config->get('config_language'));
+		$data['checkout'] = $this->url->link('checkout/checkout', 'language=' . $this->config->get('config_language'));
+
+		$data['products'] = [];
+
+		$products = $this->cart->getProducts();
+
+		foreach ($products as $product) {
+			if ($product['image']) {
+				$image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+			} else {
+				$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+			}
+
+			$option_data = [];
+
+			foreach ($product['option'] as $option) {
+				$option_data[] = [
+					'name'  => $option['name'],
+					'value' => $option['value']
+				];
+			}
+
+			$data['products'][] = [
+				'cart_id'    => $product['cart_id'],
+				'thumb'      => $image,
+				'name'       => $product['name'],
+				'model'      => $product['model'],
+				'option'     => $option_data,
+				'quantity'   => $product['quantity'],
+				'price'      => $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']),
+				'total'      => $this->currency->format($this->tax->calculate($product['total'], $product['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']),
+				'href'       => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $product['product_id'])
+			];
+		}
+
+		$data['totals'] = [];
+
+		// Get cart totals using the correct method
+		$totals = [];
+		$taxes = [];
+		$total = 0;
+		
+		($this->model_checkout_cart->getTotals)($totals, $taxes, $total);
+
+		foreach ($totals as $total_item) {
+			$data['totals'][] = [
+				'title' => $total_item['title'],
+				'text'  => $this->currency->format($total_item['value'], $this->session->data['currency'])
+			];
+		}
+
+		$data['remove'] = $this->url->link('checkout/cart.remove', 'language=' . $this->config->get('config_language'));
+
+		$this->response->setOutput($this->load->view('common/cartcontent', $data));
 	}
 }

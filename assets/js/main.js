@@ -388,10 +388,17 @@
                     console.log('Cart add response:', json);
                     if (json.success) {
                         $(".tf-add-cart-success").addClass("active");
-                        // Update cart count
-                        if (json.count) {
-                            $(".cart-count").text(json.count);
+                        
+                        // Update cart count in header
+                        if (json.count !== undefined) {
+                            $(".count").text(json.count);
                         }
+                        
+                        // Update cart content without reload
+                        $.get('index.php?route=checkout/cart.info', function(cartHtml) {
+                            $('.tf-mini-cart-wrap').html(cartHtml);
+                        });
+                        
                         // Show success message
                         alert('Product added to cart successfully!');
                     } else if (json.error) {
@@ -491,6 +498,41 @@
         });
         $(".tf-add-cart-success .tf-add-cart-close").on("click", function () {
             $(".tf-add-cart-success").removeClass("active");
+        });
+        
+        // Handle cart item removal
+        $(document).on('click', '.remove', function(e) {
+            e.preventDefault();
+            let $this = $(this);
+            let key = $this.data('cart-key');
+            
+            $.ajax({
+                url: 'index.php?route=checkout/cart.remove',
+                type: 'get',
+                dataType: 'json',
+                data: { key: key },
+                success: function(json) {
+                    if (json.success) {
+                        // Update cart count
+                        if (json.count !== undefined) {
+                            $(".count").text(json.count);
+                        }
+                        
+                        // Update cart content
+                        $.get('index.php?route=checkout/cart.info', function(cartHtml) {
+                            $('.tf-mini-cart-wrap').html(cartHtml);
+                        });
+                        
+                        // Show success message
+                        alert('Item removed from cart successfully!');
+                    } else {
+                        alert('Error removing item from cart');
+                    }
+                },
+                error: function() {
+                    alert('Failed to remove item from cart. Please try again.');
+                }
+            });
         });
 
         $(document).on("click", ".btn-add-note, .btn-estimate-shipping, .btn-add-gift", function () {

@@ -49,16 +49,25 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
         // line 4
         yield ($context["href"] ?? null);
         yield "\" class=\"product-img\">
+\t\t\t<img class=\"lazyload img-product\" src=\"";
+        // line 5
+        yield ($context["thumb"] ?? null);
+        yield "\" data-src=\"";
+        yield ($context["thumb"] ?? null);
+        yield "\" alt=\"";
+        yield ($context["name"] ?? null);
+        yield "\">
+\t\t\t<img class=\"lazyload img-hover\" src=\"";
+        // line 6
+        yield ($context["thumb"] ?? null);
+        yield "\" data-src=\"";
+        yield ($context["thumb"] ?? null);
+        yield "\" alt=\"";
+        yield ($context["name"] ?? null);
+        yield "\">
 \t\t\t";
-        // line 7
-        yield "\t\t\t<img class=\"lazyload img-product\" src=\"assets/images//products/product-7.jpg\" data-src=\"assets/images//products/product-7.jpg\" alt=\"";
-        yield ($context["name"] ?? null);
-        yield "\">
-\t\t\t<img class=\"lazyload img-hover\" src=\"assets/images//products/product-7.jpg\" data-src=\"assets/images//products/product-7.jpg\" alt=\"";
-        // line 8
-        yield ($context["name"] ?? null);
-        yield "\">
-\t\t</a>
+        // line 9
+        yield "\t\t</a>
 \t\t<ul class=\"product-action_list\">
 \t\t\t<li>
 \t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon btn-add-to-cart\" data-url=\"";
@@ -131,13 +140,13 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 \t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
 \t\t\t\t<span class=\"tooltip color-filter\">Beige</span>
 \t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
-\t\t\t\t<img class=\"lazyload\" src=\"assets/images//products/product-9.jpg\" data-src=\"assets/images//products/product-9.jpg\" alt=\"Product\">
+\t\t\t\t<img class=\"lazyload\" src=\"assets/WG.jpg\" data-src=\"assets/WG.jpg\" alt=\"Product\">
 
 \t\t\t</li>
 \t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
 \t\t\t\t<span class=\"tooltip color-filter\">Dusty Olive</span>
 \t\t\t\t<span class=\"swatch-value bg-dusty-olive\"></span>
-\t\t\t\t<img class=\"lazyload\" src=\"assets/images//products/product-11.jpg\" data-src=\"assets/images//products/product-11.jpg\" alt=\"Product\">
+\t\t\t\t<img class=\"lazyload\" src=\"assets/YG.JPG\" data-src=\"assets/YG.JPG\" alt=\"Product\">
 \t\t\t</li>
 \t\t</ul>
 \t</div>
@@ -167,7 +176,7 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
      */
     public function getDebugInfo(): array
     {
-        return array (  124 => 40,  118 => 38,  113 => 36,  108 => 35,  106 => 34,  99 => 32,  88 => 24,  77 => 18,  66 => 12,  59 => 8,  54 => 7,  50 => 4,  45 => 2,  42 => 1,);
+        return array (  133 => 40,  127 => 38,  122 => 36,  117 => 35,  115 => 34,  108 => 32,  97 => 24,  86 => 18,  75 => 12,  70 => 9,  62 => 6,  54 => 5,  50 => 4,  45 => 2,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -176,10 +185,10 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 <div class=\"card-product grid\" data-availability=\"In stock\" data-brand=\"automet\" data-product-id=\"{{ product_id }}\">
 \t<div class=\"card-product_wrapper\">
 \t\t<a href=\"{{ href }}\" class=\"product-img\">
-\t\t\t{# <img class=\"lazyload img-product\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\">
-\t\t\t<img class=\"lazyload img-hover\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\"> #}
-\t\t\t<img class=\"lazyload img-product\" src=\"assets/images//products/product-7.jpg\" data-src=\"assets/images//products/product-7.jpg\" alt=\"{{ name }}\">
-\t\t\t<img class=\"lazyload img-hover\" src=\"assets/images//products/product-7.jpg\" data-src=\"assets/images//products/product-7.jpg\" alt=\"{{ name }}\">
+\t\t\t<img class=\"lazyload img-product\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\">
+\t\t\t<img class=\"lazyload img-hover\" src=\"{{ thumb }}\" data-src=\"{{ thumb }}\" alt=\"{{ name }}\">
+\t\t\t{# <img class=\"lazyload img-product\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"{{ name }}\">
+\t\t\t<img class=\"lazyload img-hover\" src=\"assets/RG.JPG\" data-src=\"assets/RG.JPG\" alt=\"{{ name }}\"> #}
 \t\t</a>
 \t\t<ul class=\"product-action_list\">
 \t\t\t<li>
@@ -221,13 +230,13 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 \t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
 \t\t\t\t<span class=\"tooltip color-filter\">Beige</span>
 \t\t\t\t<span class=\"swatch-value bg-light-beige\"></span>
-\t\t\t\t<img class=\"lazyload\" src=\"assets/images//products/product-9.jpg\" data-src=\"assets/images//products/product-9.jpg\" alt=\"Product\">
+\t\t\t\t<img class=\"lazyload\" src=\"assets/WG.jpg\" data-src=\"assets/WG.jpg\" alt=\"Product\">
 
 \t\t\t</li>
 \t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
 \t\t\t\t<span class=\"tooltip color-filter\">Dusty Olive</span>
 \t\t\t\t<span class=\"swatch-value bg-dusty-olive\"></span>
-\t\t\t\t<img class=\"lazyload\" src=\"assets/images//products/product-11.jpg\" data-src=\"assets/images//products/product-11.jpg\" alt=\"Product\">
+\t\t\t\t<img class=\"lazyload\" src=\"assets/YG.JPG\" data-src=\"assets/YG.JPG\" alt=\"Product\">
 \t\t\t</li>
 \t\t</ul>
 \t</div>

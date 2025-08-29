@@ -41,28 +41,44 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
         // line 1
         yield ($context["header"] ?? null);
         yield "
+
+<style>
+   .size-btn {
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px !important;
+      border: 1px solid #000;
+   }
+   .size-btn.active {
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #000 !important;
+   }
+</style>
+
 <!-- Page Title -->
 <section class=\"s-page-title style-2\">
    <div class=\"container\">
       <div class=\"content\" style=\"padding-bottom: 19px;\">
          <ul class=\"breadcrumbs-page\">
             ";
-        // line 7
+        // line 23
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["breadcrumbs"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["breadcrumb"]) {
-            // line 8
+            // line 24
             yield "            <li class=\"breadcrumb-item\"><a href=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "href", [], "any", false, false, false, 8);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "href", [], "any", false, false, false, 24);
             yield "\">";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "text", [], "any", false, false, false, 8);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "text", [], "any", false, false, false, 24);
             yield "</a></li>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['breadcrumb'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 10
+        // line 26
         yield "         </ul>
       </div>
    </div>
@@ -80,50 +96,50 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
             <div class=\"col-md-6\">
                <div class=\"tf-product-media-wrap sticky-top\">
                   ";
-        // line 27
+        // line 43
         yield "                  ";
         $context["all_images"] = [];
-        // line 28
+        // line 44
         yield "                  ";
         if (($context["thumb"] ?? null)) {
-            // line 29
+            // line 45
             yield "                  ";
             $context["all_images"] = Twig\Extension\CoreExtension::merge(($context["all_images"] ?? null), [["thumb" => ($context["thumb"] ?? null), "popup" => ($context["popup"] ?? null)]]);
-            // line 30
+            // line 46
             yield "                  ";
         }
-        // line 31
+        // line 47
         yield "                  ";
         if (($context["images"] ?? null)) {
-            // line 32
+            // line 48
             yield "                  ";
             $context["all_images"] = Twig\Extension\CoreExtension::merge(($context["all_images"] ?? null), ($context["images"] ?? null));
-            // line 33
+            // line 49
             yield "                  ";
         }
-        // line 34
+        // line 50
         yield "                  <div class=\"product-thumbs-slider\">
                      <div dir=\"ltr\" class=\"swiper tf-product-media-thumbs other-image-zoom\" data-direction=\"vertical\" data-preview=\"4.7\">
                         <div class=\"swiper-wrapper stagger-wrap\">
                            ";
-        // line 37
+        // line 53
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["all_images"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
-            // line 38
+            // line 54
             yield "                           <div class=\"swiper-slide stagger-item\" data-size=\"M\" data-color=\"gray\">
                               <div class=\"item\">
                                  <img class=\"lazyload\"
                                     data-src=\"";
-            // line 41
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 41);
+            // line 57
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 57);
             yield "\"
                                     src=\"";
-            // line 42
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 42);
+            // line 58
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 58);
             yield "\"
                                     alt=\"";
-            // line 43
+            // line 59
             yield ($context["heading_title"] ?? null);
             yield "\">
                               </div>
@@ -133,39 +149,39 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['img'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 63
         yield "                        </div>
                      </div>
                      <div class=\"flat-wrap-media-product\">
                         <div dir=\"ltr\" class=\"swiper tf-product-media-main\" id=\"gallery-swiper-started\">
                            <div class=\"swiper-wrapper\">
                               ";
-        // line 52
+        // line 68
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["all_images"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
-            // line 53
+            // line 69
             yield "                              <div class=\"swiper-slide\" data-size=\"M\" data-color=\"gray\">
                                  <a href=\"";
-            // line 54
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "popup", [], "any", false, false, false, 54);
+            // line 70
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "popup", [], "any", false, false, false, 70);
             yield "\" target=\"_blank\" class=\"item\"
                                     data-pswp-width=\"860px\" data-pswp-height=\"1146px\">
                                  <img class=\"tf-image-zoom lazyload\"
                                     data-zoom=\"";
-            // line 57
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "popup", [], "any", false, false, false, 57);
+            // line 73
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "popup", [], "any", false, false, false, 73);
             yield "\"
                                     data-src=\"";
-            // line 58
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 58);
+            // line 74
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 74);
             yield "\"
                                     src=\"";
-            // line 59
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 59);
+            // line 75
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 75);
             yield "\"
                                     alt=\"";
-            // line 60
+            // line 76
             yield ($context["heading_title"] ?? null);
             yield "\">
                                  </a>
@@ -175,12 +191,12 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['img'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 64
+        // line 80
         yield "                           </div>
                            ";
-        // line 68
+        // line 84
         yield "                           ";
-        // line 71
+        // line 87
         yield "                        </div>
                      </div>
                   </div>
@@ -192,61 +208,61 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
                <div class=\"tf-product-info-wrap position-relative\">
                   <form id=\"form-product\">
                      <input type=\"hidden\" id=\"input-product-id\" name=\"product_id\" value=\"";
-        // line 81
+        // line 97
         yield ($context["product_id"] ?? null);
         yield "\">
                      ";
-        // line 82
+        // line 98
         if ((($context["options"] ?? null) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["options"] ?? null)) > 0))) {
-            // line 83
+            // line 99
             yield "                     ";
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                // line 84
+                // line 100
                 yield "                     ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 84) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 84)) > 0))) {
-                    // line 85
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 100) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 100)) > 0))) {
+                    // line 101
                     yield "                     ";
-                    if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 85) == "select")) {
-                        // line 86
+                    if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 101) == "select")) {
+                        // line 102
                         yield "                     <input type=\"hidden\" name=\"option[";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 86);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 102);
                         yield "]\" value=\"";
-                        yield CoreExtension::getAttribute($this->env, $this->source, (($_v0 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 86)) && is_array($_v0) || $_v0 instanceof ArrayAccess ? ($_v0[0] ?? null) : null), "product_option_value_id", [], "any", false, false, false, 86);
+                        yield CoreExtension::getAttribute($this->env, $this->source, (($_v0 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 102)) && is_array($_v0) || $_v0 instanceof ArrayAccess ? ($_v0[0] ?? null) : null), "product_option_value_id", [], "any", false, false, false, 102);
                         yield "\" id=\"input-option-";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 86);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 102);
                         yield "\">
                      ";
-                    } elseif ((CoreExtension::getAttribute($this->env, $this->source,                     // line 87
-$context["option"], "type", [], "any", false, false, false, 87) == "radio")) {
-                        // line 88
+                    } elseif ((CoreExtension::getAttribute($this->env, $this->source,                     // line 103
+$context["option"], "type", [], "any", false, false, false, 103) == "radio")) {
+                        // line 104
                         yield "                     <input type=\"hidden\" name=\"option[";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 88);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 104);
                         yield "]\" value=\"";
-                        yield CoreExtension::getAttribute($this->env, $this->source, (($_v1 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 88)) && is_array($_v1) || $_v1 instanceof ArrayAccess ? ($_v1[0] ?? null) : null), "product_option_value_id", [], "any", false, false, false, 88);
+                        yield CoreExtension::getAttribute($this->env, $this->source, (($_v1 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 104)) && is_array($_v1) || $_v1 instanceof ArrayAccess ? ($_v1[0] ?? null) : null), "product_option_value_id", [], "any", false, false, false, 104);
                         yield "\" id=\"input-option-";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 88);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 104);
                         yield "\">
                      ";
                     }
-                    // line 90
+                    // line 106
                     yield "                     ";
                 }
-                // line 91
+                // line 107
                 yield "                     ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 92
+            // line 108
             yield "                     ";
         }
-        // line 93
+        // line 109
         yield "                     <div class=\"tf-zoom-main sticky-top\"></div>
                   <div class=\"tf-product-info-list other-image-zoom\">
                      <h2 class=\"product-info-name\">";
-        // line 95
+        // line 111
         yield ($context["heading_title"] ?? null);
         yield "</h2>
                      <div class=\"product-info-meta\">
@@ -284,7 +300,7 @@ $context["option"], "type", [], "any", false, false, false, 87) == "radio")) {
                      <div class=\"tf-product-heading\">
                         <div class=\"product-info-price price-wrap\">
                            <span class=\"price-new price-on-sale h2 fw-4\">";
-        // line 130
+        // line 146
         yield ($context["price"] ?? null);
         yield "</span>
                           </div>
@@ -294,50 +310,40 @@ $context["option"], "type", [], "any", false, false, false, 87) == "radio")) {
 
 
                      ";
-        // line 137
+        // line 153
         if ((($context["options"] ?? null) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["options"] ?? null)) > 0))) {
-            // line 138
+            // line 154
             yield "                     <div class=\"tf-product-variant\">
                         ";
-            // line 139
+            // line 155
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                // line 140
+                // line 156
                 yield "                        ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 140) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 140)) > 0))) {
-                    // line 141
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 156) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 156)) > 0))) {
+                    // line 157
                     yield "                        <div class=\"variant-picker-item variant-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 141);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 157);
                     yield "\">
                            <div class=\"variant-picker-label\">
                               <div class=\"h4 fw-semibold\">
                                  ";
-                    // line 144
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 144);
+                    // line 160
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 160);
                     yield "
                                  <span class=\"variant-picker-label-value value-current-option\">";
-                    // line 145
-                    yield CoreExtension::getAttribute($this->env, $this->source, (($_v2 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 145)) && is_array($_v2) || $_v2 instanceof ArrayAccess ? ($_v2[0] ?? null) : null), "name", [], "any", false, false, false, 145);
+                    // line 161
+                    yield CoreExtension::getAttribute($this->env, $this->source, (($_v2 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 161)) && is_array($_v2) || $_v2 instanceof ArrayAccess ? ($_v2[0] ?? null) : null), "name", [], "any", false, false, false, 161);
                     yield "</span>
                               </div>
+                             
+                           </div>
+                           <div class=\"variant-picker-values mt-3\">
                               ";
-                    // line 147
-                    if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 147) == "select")) {
-                        // line 148
-                        yield "                              <a href=\"#size-guide\" data-bs-toggle=\"modal\" class=\"size-guide link h6 fw-medium\">
-                              <i class=\"icon icon-ruler\"></i>
-                              Size Guide
-                              </a>
-                              ";
-                    }
-                    // line 153
-                    yield "                           </div>
-                           <div class=\"variant-picker-values\">
-                              ";
-                    // line 155
+                    // line 166
                     $context['_parent'] = $context;
-                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 155));
+                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 166));
                     $context['loop'] = [
                       'parent' => $context['_parent'],
                       'index0' => 0,
@@ -352,35 +358,39 @@ $context["option"], "type", [], "any", false, false, false, 87) == "radio")) {
                         $context['loop']['last'] = 1 === $length;
                     }
                     foreach ($context['_seq'] as $context["_key"] => $context["option_value"]) {
-                        // line 156
+                        // line 167
                         yield "                              ";
-                        if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 156) == "select")) {
-                            // line 157
-                            yield "                              <span class=\"size-btn\" data-size=\"";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 157);
+                        if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 167) == "select")) {
+                            // line 168
+                            yield "                              <span class=\"size-btn ";
+                            if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 168)) {
+                                yield "active";
+                            }
+                            yield "\" data-size=\"";
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 168);
                             yield "\">";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 157);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 168);
                             yield "</span>
                               ";
-                        } elseif ((CoreExtension::getAttribute($this->env, $this->source,                         // line 158
-$context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
-                            // line 159
+                        } elseif ((CoreExtension::getAttribute($this->env, $this->source,                         // line 169
+$context["option"], "type", [], "any", false, false, false, 169) == "radio")) {
+                            // line 170
                             yield "                              <div class=\"hover-tooltip tooltip-bot color-btn";
-                            if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 159)) {
+                            if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 170)) {
                                 yield " active";
                             }
                             yield "\" data-color=\"";
-                            yield Twig\Extension\CoreExtension::lower($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 159));
+                            yield Twig\Extension\CoreExtension::lower($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 170));
                             yield "\">
                                  <span class=\"check-color bg-color-option\"></span>
                                  <span class=\"tooltip\">";
-                            // line 161
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 161);
+                            // line 172
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 172);
                             yield "</span>
                               </div>
                               ";
                         }
-                        // line 164
+                        // line 175
                         yield "                              ";
                         ++$context['loop']['index0'];
                         ++$context['loop']['index'];
@@ -394,30 +404,120 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_key'], $context['option_value'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 165
+                    // line 176
                     yield "                           </div>
                         </div>
                         ";
                 }
-                // line 168
+                // line 179
                 yield "                        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 169
+            // line 180
             yield "                     </div>
                      ";
         }
-        // line 171
-        yield "                     <div class=\"tf-product-total-quantity\">
+        // line 182
+        yield "
+                     <div class=\"tf-product-variant\">
+                        <div class=\"variant-picker-item variant-";
+        // line 184
+        yield CoreExtension::getAttribute($this->env, $this->source, ($context["option"] ?? null), "type", [], "any", false, false, false, 184);
+        yield "\">
+                           <div class=\"variant-picker-label\">
+                              <div class=\"h4 fw-semibold\">
+                                 ";
+        // line 187
+        yield CoreExtension::getAttribute($this->env, $this->source, ($context["option"] ?? null), "name", [], "any", false, false, false, 187);
+        yield "
+                                 <span class=\"variant-picker-label-value value-current-option\">";
+        // line 188
+        yield CoreExtension::getAttribute($this->env, $this->source, (($_v3 = CoreExtension::getAttribute($this->env, $this->source, ($context["option"] ?? null), "product_option_value", [], "any", false, false, false, 188)) && is_array($_v3) || $_v3 instanceof ArrayAccess ? ($_v3[0] ?? null) : null), "name", [], "any", false, false, false, 188);
+        yield "</span>
+                              </div>
+
+                           </div>
+                           <div class=\"variant-picker-values mt-3\">
+                              ";
+        // line 193
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, ($context["option"] ?? null), "product_option_value", [], "any", false, false, false, 193));
+        $context['loop'] = [
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        ];
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
+        foreach ($context['_seq'] as $context["_key"] => $context["option_value"]) {
+            // line 194
+            yield "                              ";
+            if ((CoreExtension::getAttribute($this->env, $this->source, ($context["option"] ?? null), "type", [], "any", false, false, false, 194) == "select")) {
+                // line 195
+                yield "                              <span class=\"size-btn ";
+                if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 195)) {
+                    yield "active";
+                }
+                yield "\" data-size=\"";
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 195);
+                yield "\">";
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 195);
+                yield "</span>
+                              ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 196
+($context["option"] ?? null), "type", [], "any", false, false, false, 196) == "radio")) {
+                // line 197
+                yield "                              <div class=\"hover-tooltip tooltip-bot color-btn";
+                if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 197)) {
+                    yield " active";
+                }
+                yield "\" data-color=\"";
+                yield Twig\Extension\CoreExtension::lower($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 197));
+                yield "\">
+                                 <span class=\"check-color bg-color-option\"></span>
+                                 <span class=\"tooltip\">";
+                // line 199
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 199);
+                yield "</span>
+                              </div>
+                              ";
+            }
+            // line 202
+            yield "                              ";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['revindex0'], $context['loop']['revindex'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_key'], $context['option_value'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 203
+        yield "                           </div>
+                        </div>
+                     </div>
+
+
+                     <div class=\"tf-product-total-quantity\">
                         <div class=\"group-btn\">
                            <div class=\"wg-quantity\">
                               <button class=\"btn-quantity btn-decrease\">
                               <i class=\"icon icon-minus\"></i>
                               </button>
                               <input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"";
-        // line 177
+        // line 214
         yield ($context["minimum"] ?? null);
         yield "\">
                               <button class=\"btn-quantity btn-increase\">
@@ -429,7 +529,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                            <i class=\"icon icon-shopping-cart-simple\"></i>
                            </button>
                            <button type=\"button\" class=\"hover-tooltip box-icon btn-add-wishlist\" data-url=\"index.php?route=account/wishlist.add&language=";
-        // line 186
+        // line 223
         yield ($context["language"] ?? null);
         yield "\" data-product-id=\"";
         yield ($context["product_id"] ?? null);
@@ -513,15 +613,21 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
       <div class=\"container\">
          <div class=\"tf-height-observer w-100 d-flex align-items-center\">
             <div class=\"tf-sticky-atc-product d-flex align-items-center\">
-               <div class=\"tf-mini-cart-item align-items-start\">
+               <div class=\"tf-mini-cart-item \">
                   <div class=\"tf-mini-cart-image\">
-                     <img class=\"lazyload\" data-src=\"assets/images/products/fashion/thumbs/thumbs-1.jpg\"
-                        src=\"assets/images/products/fashion/thumbs/thumbs-1.jpg\" alt=\"img-product\">
+                     <img class=\"lazyload\" data-src=\"";
+        // line 305
+        yield ($context["thumb"] ?? null);
+        yield "\"
+                        src=\"";
+        // line 306
+        yield ($context["thumb"] ?? null);
+        yield "\" alt=\"img-product\">
                   </div>
                   <div class=\"tf-mini-cart-info\">
                      <h6 class=\"title\">
                         <a href=\"product-detail.html\" class=\"link text-line-clamp-1\">";
-        // line 273
+        // line 310
         yield ($context["heading_title"] ?? null);
         yield "</a>
                      </h6>
@@ -532,7 +638,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                      </div>
                      <div class=\"h6 fw-semibold\">
                         ";
-        // line 281
+        // line 318
         yield ($context["price"] ?? null);
         yield "
                      </div>
@@ -542,31 +648,31 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
             <div class=\"tf-sticky-atc-infos\">
                <form class=\"\">
                   ";
-        // line 288
+        // line 325
         if ((($context["options"] ?? null) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["options"] ?? null)) > 0))) {
-            // line 289
+            // line 326
             yield "                  ";
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                // line 290
+                // line 327
                 yield "                  ";
-                if ((((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 290) == "select") && CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 290)) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 290)) > 0))) {
-                    // line 291
+                if ((((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 327) == "select") && CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 327)) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 327)) > 0))) {
+                    // line 328
                     yield "                  <div class=\"tf-sticky-atc-variant-price\">
                      <h6 class=\"title\">";
-                    // line 292
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 292);
+                    // line 329
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 329);
                     yield ":</h6>
                      <div class=\"tf-select style-1\">
                         <select class=\"font-sora\" name=\"option[";
-                    // line 294
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 294);
+                    // line 331
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 331);
                     yield "]\">
                            ";
-                    // line 295
+                    // line 332
                     $context['_parent'] = $context;
-                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 295));
+                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 332));
                     $context['loop'] = [
                       'parent' => $context['_parent'],
                       'index0' => 0,
@@ -581,15 +687,15 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                         $context['loop']['last'] = 1 === $length;
                     }
                     foreach ($context['_seq'] as $context["_key"] => $context["option_value"]) {
-                        // line 296
+                        // line 333
                         yield "                           <option value=\"";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 296);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 333);
                         yield "\"";
-                        if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 296)) {
+                        if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 333)) {
                             yield " selected=\"selected\"";
                         }
                         yield ">";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 296);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 333);
                         yield "</option>
                            ";
                         ++$context['loop']['index0'];
@@ -604,22 +710,22 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_key'], $context['option_value'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 298
+                    // line 335
                     yield "                        </select>
                      </div>
                   </div>
                   ";
                 }
-                // line 302
+                // line 339
                 yield "                  ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 303
+            // line 340
             yield "                  ";
         }
-        // line 304
+        // line 341
         yield "                  <div class=\"tf-product-info-quantity\">
                      <h6 class=\"title\">Quantity:</h6>
                      <div class=\"wg-quantity\">
@@ -627,7 +733,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                         <i class=\"icon icon-minus\"></i>
                         </button>
                         <input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"";
-        // line 310
+        // line 347
         yield ($context["minimum"] ?? null);
         yield "\">
                         <button class=\"btn-quantity plus-btn\">
@@ -637,7 +743,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                   </div>
                   <div class=\"tf-sticky-atc-btns\">
                      <a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"tf-btn animate-btn btn-add-to-cart\" data-url=\"index.php?route=checkout/cart.add&language=";
-        // line 317
+        // line 354
         yield ($context["language"] ?? null);
         yield "\" data-product-id=\"";
         yield ($context["product_id"] ?? null);
@@ -673,7 +779,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                <div class=\"tab-descriptions\">
                   <p class=\"h6 desc\">
                      ";
-        // line 348
+        // line 385
         yield ($context["description"] ?? null);
         yield "
                   </p>
@@ -864,25 +970,25 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                               <div id=\"product-info\" class=\"container\">
                                  <div class=\"row\">
                                     ";
-        // line 536
+        // line 573
         yield ($context["column_left"] ?? null);
         yield "
                                     <div id=\"content\" class=\"col\">
                                        ";
-        // line 538
+        // line 575
         yield ($context["content_top"] ?? null);
         yield "
                                        <div class=\"row mb-3\">
                                           ";
-        // line 540
+        // line 577
         if ((($context["thumb"] ?? null) || ($context["images"] ?? null))) {
-            // line 541
+            // line 578
             yield "                                          <div class=\"col-sm\">
                                              <div class=\"image magnific-popup\">
                                                 ";
-            // line 543
+            // line 580
             if (($context["thumb"] ?? null)) {
-                // line 544
+                // line 581
                 yield "                                                <a href=\"";
                 yield ($context["popup"] ?? null);
                 yield "\" title=\"";
@@ -896,23 +1002,23 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                 yield "\" class=\"img-thumbnail mb-3\"/></a>
                                                 ";
             }
-            // line 546
+            // line 583
             yield "                                                ";
             if (($context["images"] ?? null)) {
-                // line 547
+                // line 584
                 yield "                                                <div>
                                                    ";
-                // line 548
+                // line 585
                 $context['_parent'] = $context;
                 $context['_seq'] = CoreExtension::ensureTraversable(($context["images"] ?? null));
                 foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-                    // line 549
+                    // line 586
                     yield "                                                   <a href=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["image"], "popup", [], "any", false, false, false, 549);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["image"], "popup", [], "any", false, false, false, 586);
                     yield "\" title=\"";
                     yield ($context["heading_title"] ?? null);
                     yield "\"><img src=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["image"], "thumb", [], "any", false, false, false, 549);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["image"], "thumb", [], "any", false, false, false, 586);
                     yield "\" title=\"";
                     yield ($context["heading_title"] ?? null);
                     yield "\" alt=\"";
@@ -923,26 +1029,26 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['image'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 551
+                // line 588
                 yield "                                                </div>
                                                 ";
             }
-            // line 553
+            // line 590
             yield "                                             </div>
                                           </div>
                                           ";
         }
-        // line 556
+        // line 593
         yield "                                          <div class=\"col-sm\">
                                              <h1>";
-        // line 557
+        // line 594
         yield ($context["heading_title"] ?? null);
         yield "</h1>
                                              <ul class=\"list-unstyled\">
                                                 ";
-        // line 559
+        // line 596
         if (($context["manufacturer"] ?? null)) {
-            // line 560
+            // line 597
             yield "                                                <li>";
             yield ($context["text_manufacturer"] ?? null);
             yield " <a href=\"";
@@ -952,32 +1058,32 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
             yield "</a></li>
                                                 ";
         }
-        // line 562
+        // line 599
         yield "                                                <li>";
         yield ($context["text_model"] ?? null);
         yield " ";
         yield ($context["model"] ?? null);
         yield "</li>
                                                 ";
-        // line 563
+        // line 600
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["product_codes"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["product_code"]) {
-            // line 564
+            // line 601
             yield "                                                <li>";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product_code"], "code", [], "any", false, false, false, 564);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product_code"], "code", [], "any", false, false, false, 601);
             yield ": ";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product_code"], "value", [], "any", false, false, false, 564);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product_code"], "value", [], "any", false, false, false, 601);
             yield "</li>
                                                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['product_code'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 566
+        // line 603
         yield "                                                ";
         if (($context["reward"] ?? null)) {
-            // line 567
+            // line 604
             yield "                                                <li>";
             yield ($context["text_reward"] ?? null);
             yield " ";
@@ -985,7 +1091,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
             yield "</li>
                                                 ";
         }
-        // line 569
+        // line 606
         yield "                                                <li>";
         yield ($context["text_stock"] ?? null);
         yield " ";
@@ -993,34 +1099,34 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
         yield "</li>
                                              </ul>
                                              ";
-        // line 571
+        // line 608
         if (($context["review_status"] ?? null)) {
-            // line 572
+            // line 609
             yield "                                             <div class=\"rating\">
                                                 <p>
                                                    ";
-            // line 574
+            // line 611
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(range(1, 5));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-                // line 575
+                // line 612
                 yield "                                                   ";
                 if ((($context["rating"] ?? null) < $context["i"])) {
-                    // line 576
+                    // line 613
                     yield "                                                   <span class=\"fa-stack\"><i class=\"fa-regular fa-star fa-stack-1x\"></i></span>
                                                    ";
                 } else {
-                    // line 578
+                    // line 615
                     yield "                                                   <span class=\"fa-stack\"><i class=\"fa-solid fa-star fa-stack-1x\"></i><i class=\"fa-regular fa-star fa-stack-1x\"></i></span>
                                                    ";
                 }
-                // line 580
+                // line 617
                 yield "                                                   ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['i'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 581
+            // line 618
             yield "                                                   <a href=\"#\" onclick=\"\$('a[href=\\'#tab-review\\']').tab('show'); return false;\">";
             yield ($context["text_reviews"] ?? null);
             yield "</a> / <a href=\"#\" onclick=\"\$('a[href=\\'#tab-review\\']').tab('show'); return false;\">";
@@ -1030,39 +1136,39 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                                              </div>
                                              ";
         }
-        // line 585
+        // line 622
         yield "                                             ";
         if (($context["price"] ?? null)) {
-            // line 586
+            // line 623
             yield "                                             <ul class=\"list-unstyled\">
                                                 ";
-            // line 587
+            // line 624
             if ( !($context["special"] ?? null)) {
-                // line 588
+                // line 625
                 yield "                                                <li>
                                                    <h2><span class=\"price-new\">";
-                // line 589
+                // line 626
                 yield ($context["price"] ?? null);
                 yield "</span></h2>
                                                 </li>
                                                 ";
             } else {
-                // line 592
+                // line 629
                 yield "                                                <li><span class=\"price-old\">";
                 yield ($context["price"] ?? null);
                 yield "</span></li>
                                                 <li>
                                                    <h2><span class=\"price-new\">";
-                // line 594
+                // line 631
                 yield ($context["special"] ?? null);
                 yield "</span></h2>
                                                 </li>
                                                 ";
             }
-            // line 597
+            // line 634
             yield "                                                ";
             if (($context["tax"] ?? null)) {
-                // line 598
+                // line 635
                 yield "                                                <li>";
                 yield ($context["text_tax"] ?? null);
                 yield " ";
@@ -1070,10 +1176,10 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                 yield "</li>
                                                 ";
             }
-            // line 600
+            // line 637
             yield "                                                ";
             if (($context["points"] ?? null)) {
-                // line 601
+                // line 638
                 yield "                                                <li>";
                 yield ($context["text_points"] ?? null);
                 yield " ";
@@ -1081,49 +1187,49 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                 yield "</li>
                                                 ";
             }
-            // line 603
+            // line 640
             yield "                                                ";
             if (($context["discounts"] ?? null)) {
-                // line 604
+                // line 641
                 yield "                                                <li>
                                                    <hr>
                                                 </li>
                                                 ";
-                // line 607
+                // line 644
                 $context['_parent'] = $context;
                 $context['_seq'] = CoreExtension::ensureTraversable(($context["discounts"] ?? null));
                 foreach ($context['_seq'] as $context["_key"] => $context["discount"]) {
-                    // line 608
+                    // line 645
                     yield "                                                <li>";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["discount"], "quantity", [], "any", false, false, false, 608);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["discount"], "quantity", [], "any", false, false, false, 645);
                     yield ($context["text_discount"] ?? null);
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["discount"], "price", [], "any", false, false, false, 608);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["discount"], "price", [], "any", false, false, false, 645);
                     yield "</li>
                                                 ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['discount'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 610
+                // line 647
                 yield "                                                ";
             }
-            // line 611
+            // line 648
             yield "                                             </ul>
                                              ";
         }
-        // line 613
+        // line 650
         yield "                                             <form method=\"post\" data-oc-toggle=\"ajax\">
                                                 <div class=\"btn-group\">
                                                    ";
-        // line 615
+        // line 652
         if ( !($context["logged"] ?? null)) {
-            // line 616
+            // line 653
             yield "                                                   <button  class=\"btn btn-light btn-lg offline-wishlist\" title=\"";
             yield ($context["button_wishlist"] ?? null);
             yield "\">wishlist off</button>
                                                    ";
         } else {
-            // line 618
+            // line 655
             yield "                                                   <button type=\"submit\" formaction=\"";
             yield ($context["wishlist_add"] ?? null);
             yield "\" data-bs-toggle=\"tooltip\" class=\"btn btn-light btn-lg\" title=\"";
@@ -1131,7 +1237,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
             yield "\">wishlist</button>
                                                    ";
         }
-        // line 620
+        // line 657
         yield "                                                   <button type=\"submit\" formaction=\"";
         yield ($context["compare_add"] ?? null);
         yield "\" data-bs-toggle=\"tooltip\" class=\"btn btn-light btn-lg\" title=\"";
@@ -1139,7 +1245,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
         yield "\"><i class=\"fa-solid fa-arrow-right-arrow-left\"></i></button>
                                                 </div>
                                                 <input type=\"hidden\" name=\"product_id\" value=\"";
-        // line 622
+        // line 659
         yield ($context["product_id"] ?? null);
         yield "\"/>
                                              </form>
@@ -1147,149 +1253,149 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                                              <div id=\"product\">
                                                 <form id=\"form-product\">
                                                    ";
-        // line 627
+        // line 664
         if (($context["options"] ?? null)) {
-            // line 628
+            // line 665
             yield "                                                   <hr>
                                                    <h3>";
-            // line 629
+            // line 666
             yield ($context["text_option"] ?? null);
             yield "</h3>
                                                    <div>
                                                       ";
-            // line 631
+            // line 668
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                // line 632
+                // line 669
                 yield "                                                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 632) == "select")) {
-                    // line 633
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 669) == "select")) {
+                    // line 670
                     yield "                                                      <div class=\"mb-3";
-                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 633)) {
+                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 670)) {
                         yield " required";
                     }
                     yield "\">
                                                          <label for=\"input-option-";
-                    // line 634
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 634);
+                    // line 671
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 671);
                     yield "\" class=\"form-label\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 634);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 671);
                     yield "</label>
                                                          <select name=\"option[";
-                    // line 635
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 635);
+                    // line 672
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 672);
                     yield "]\" id=\"input-option-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 635);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 672);
                     yield "\" class=\"form-select\">
                                                             <option value=\"\">";
-                    // line 636
+                    // line 673
                     yield ($context["text_select"] ?? null);
                     yield "</option>
                                                             ";
-                    // line 637
+                    // line 674
                     $context['_parent'] = $context;
-                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 637));
+                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 674));
                     foreach ($context['_seq'] as $context["_key"] => $context["option_value"]) {
-                        // line 638
+                        // line 675
                         yield "                                                            <option value=\"";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 638);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 675);
                         yield "\">";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 638);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 675);
                         yield "
                                                                ";
-                        // line 639
-                        if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 639)) {
-                            // line 640
+                        // line 676
+                        if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 676)) {
+                            // line 677
                             yield "                                                               (";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price_prefix", [], "any", false, false, false, 640);
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 640);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price_prefix", [], "any", false, false, false, 677);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 677);
                             yield ")
                                                                ";
                         }
-                        // line 642
+                        // line 679
                         yield "                                                            </option>
                                                             ";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_key'], $context['option_value'], $context['_parent']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 644
+                    // line 681
                     yield "                                                         </select>
                                                          <div id=\"error-option-";
-                    // line 645
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 645);
+                    // line 682
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 682);
                     yield "\" class=\"invalid-feedback\"></div>
                                                       </div>
                                                       ";
                 }
-                // line 648
+                // line 685
                 yield "                                                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 648) == "radio")) {
-                    // line 649
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 685) == "radio")) {
+                    // line 686
                     yield "                                                      <div class=\"mb-3";
-                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 649)) {
+                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 686)) {
                         yield " required";
                     }
                     yield "\">
                                                          <label class=\"form-label\">";
-                    // line 650
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 650);
+                    // line 687
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 687);
                     yield "</label>
                                                          <div id=\"input-option-";
-                    // line 651
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 651);
+                    // line 688
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 688);
                     yield "\">
                                                             ";
-                    // line 652
+                    // line 689
                     $context['_parent'] = $context;
-                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 652));
+                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 689));
                     foreach ($context['_seq'] as $context["_key"] => $context["option_value"]) {
-                        // line 653
+                        // line 690
                         yield "                                                            <div class=\"form-check\">
                                                                <input type=\"radio\" name=\"option[";
-                        // line 654
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 654);
+                        // line 691
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 691);
                         yield "]\" value=\"";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 654);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 691);
                         yield "\" id=\"input-option-value-";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 654);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 691);
                         yield "\" class=\"form-check-input\"/>
                                                                <label for=\"input-option-value-";
-                        // line 655
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 655);
+                        // line 692
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 692);
                         yield "\" class=\"form-check-label\">
                                                                ";
-                        // line 656
-                        if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "image", [], "any", false, false, false, 656)) {
-                            // line 657
+                        // line 693
+                        if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "image", [], "any", false, false, false, 693)) {
+                            // line 694
                             yield "                                                               <img src=\"";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "image", [], "any", false, false, false, 657);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "image", [], "any", false, false, false, 694);
                             yield "\" alt=\"";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 657);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 694);
                             yield " ";
-                            if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 657)) {
-                                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price_prefix", [], "any", false, false, false, 657);
+                            if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 694)) {
+                                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price_prefix", [], "any", false, false, false, 694);
                                 yield " ";
-                                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 657);
+                                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 694);
                             }
                             yield "\" class=\"img-thumbnail\"/>";
                         }
-                        // line 658
+                        // line 695
                         yield "                                                               ";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 658);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 695);
                         yield "
                                                                ";
-                        // line 659
-                        if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 659)) {
-                            // line 660
+                        // line 696
+                        if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 696)) {
+                            // line 697
                             yield "                                                               (";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price_prefix", [], "any", false, false, false, 660);
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 660);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price_prefix", [], "any", false, false, false, 697);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 697);
                             yield ")
                                                                ";
                         }
-                        // line 661
+                        // line 698
                         yield "</label>
                                                             </div>
                                                             ";
@@ -1297,82 +1403,82 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_key'], $context['option_value'], $context['_parent']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 664
+                    // line 701
                     yield "                                                         </div>
                                                          <div id=\"error-option-";
-                    // line 665
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 665);
+                    // line 702
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 702);
                     yield "\" class=\"invalid-feedback\"></div>
                                                       </div>
                                                       ";
                 }
-                // line 668
+                // line 705
                 yield "                                                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 668) == "checkbox")) {
-                    // line 669
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 705) == "checkbox")) {
+                    // line 706
                     yield "                                                      <div class=\"mb-3";
-                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 669)) {
+                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 706)) {
                         yield " required";
                     }
                     yield "\">
                                                          <label class=\"form-label\">";
-                    // line 670
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 670);
+                    // line 707
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 707);
                     yield "</label>
                                                          <div id=\"input-option-";
-                    // line 671
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 671);
+                    // line 708
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 708);
                     yield "\">
                                                             ";
-                    // line 672
+                    // line 709
                     $context['_parent'] = $context;
-                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 672));
+                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 709));
                     foreach ($context['_seq'] as $context["_key"] => $context["option_value"]) {
-                        // line 673
+                        // line 710
                         yield "                                                            <div class=\"form-check\">
                                                                <input type=\"checkbox\" name=\"option[";
-                        // line 674
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 674);
+                        // line 711
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 711);
                         yield "][]\" value=\"";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 674);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 711);
                         yield "\" id=\"input-option-value-";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 674);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 711);
                         yield "\" class=\"form-check-input\"/> 
                                                                <label for=\"input-option-value-";
-                        // line 675
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 675);
+                        // line 712
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 712);
                         yield "\" class=\"form-check-label\">
                                                                ";
-                        // line 676
-                        if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "image", [], "any", false, false, false, 676)) {
-                            // line 677
+                        // line 713
+                        if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "image", [], "any", false, false, false, 713)) {
+                            // line 714
                             yield "                                                               <img src=\"";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "image", [], "any", false, false, false, 677);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "image", [], "any", false, false, false, 714);
                             yield "\" alt=\"";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 677);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 714);
                             yield " ";
-                            if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 677)) {
-                                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price_prefix", [], "any", false, false, false, 677);
+                            if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 714)) {
+                                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price_prefix", [], "any", false, false, false, 714);
                                 yield " ";
-                                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 677);
+                                yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 714);
                             }
                             yield "\" class=\"img-thumbnail\"/>";
                         }
-                        // line 678
+                        // line 715
                         yield "                                                               ";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 678);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 715);
                         yield "
                                                                ";
-                        // line 679
-                        if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 679)) {
-                            // line 680
+                        // line 716
+                        if (CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 716)) {
+                            // line 717
                             yield "                                                               (";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price_prefix", [], "any", false, false, false, 680);
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 680);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price_prefix", [], "any", false, false, false, 717);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "price", [], "any", false, false, false, 717);
                             yield ")
                                                                ";
                         }
-                        // line 681
+                        // line 718
                         yield "</label>
                                                             </div>
                                                             ";
@@ -1380,174 +1486,8 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_key'], $context['option_value'], $context['_parent']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 684
-                    yield "                                                         </div>
-                                                         <div id=\"error-option-";
-                    // line 685
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 685);
-                    yield "\" class=\"invalid-feedback\"></div>
-                                                      </div>
-                                                      ";
-                }
-                // line 688
-                yield "                                                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 688) == "text")) {
-                    // line 689
-                    yield "                                                      <div class=\"mb-3";
-                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 689)) {
-                        yield " required";
-                    }
-                    yield "\">
-                                                         <label for=\"input-option-";
-                    // line 690
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 690);
-                    yield "\" class=\"form-label\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 690);
-                    yield "</label> <input type=\"text\" name=\"option[";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 690);
-                    yield "]\" value=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 690);
-                    yield "\" placeholder=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 690);
-                    yield "\" id=\"input-option-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 690);
-                    yield "\" class=\"form-control\"/>
-                                                         <div id=\"error-option-";
-                    // line 691
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 691);
-                    yield "\" class=\"invalid-feedback\"></div>
-                                                      </div>
-                                                      ";
-                }
-                // line 694
-                yield "                                                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 694) == "textarea")) {
-                    // line 695
-                    yield "                                                      <div class=\"mb-3";
-                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 695)) {
-                        yield " required";
-                    }
-                    yield "\">
-                                                         <label for=\"input-option-";
-                    // line 696
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 696);
-                    yield "\" class=\"form-label\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 696);
-                    yield "</label> 
-                                                         <textarea name=\"option[";
-                    // line 697
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 697);
-                    yield "]\" rows=\"5\" placeholder=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 697);
-                    yield "\" id=\"input-option-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 697);
-                    yield "\" class=\"form-control\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 697);
-                    yield "</textarea>
-                                                         <div id=\"error-option-";
-                    // line 698
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 698);
-                    yield "\" class=\"invalid-feedback\"></div>
-                                                      </div>
-                                                      ";
-                }
-                // line 701
-                yield "                                                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 701) == "file")) {
-                    // line 702
-                    yield "                                                      <div class=\"mb-3";
-                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 702)) {
-                        yield " required";
-                    }
-                    yield "\">
-                                                         <label for=\"button-upload-";
-                    // line 703
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 703);
-                    yield "\" class=\"form-label\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 703);
-                    yield "</label>
-                                                         <div>
-                                                            <button type=\"button\" id=\"button-upload-";
-                    // line 705
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 705);
-                    yield "\" data-oc-toggle=\"upload\" data-oc-url=\"";
-                    yield ($context["upload"] ?? null);
-                    yield "\" data-oc-target=\"#input-option-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 705);
-                    yield "\" data-oc-size-max=\"";
-                    yield ($context["config_file_max_size"] ?? null);
-                    yield "\" data-oc-size-error=\"";
-                    yield ($context["error_upload_size"] ?? null);
-                    yield "\" class=\"btn btn-light btn-block\"><i class=\"fa-solid fa-upload\"></i> ";
-                    yield ($context["button_upload"] ?? null);
-                    yield "</button>
-                                                            <input type=\"hidden\" name=\"option[";
-                    // line 706
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 706);
-                    yield "]\" value=\"\" id=\"input-option-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 706);
-                    yield "\"/>
-                                                         </div>
-                                                         <div id=\"error-option-";
-                    // line 708
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 708);
-                    yield "\" class=\"invalid-feedback\"></div>
-                                                      </div>
-                                                      ";
-                }
-                // line 711
-                yield "                                                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 711) == "date")) {
-                    // line 712
-                    yield "                                                      <div class=\"mb-3";
-                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 712)) {
-                        yield " required";
-                    }
-                    yield "\">
-                                                         <label for=\"input-option-";
-                    // line 713
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 713);
-                    yield "\" class=\"form-label\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 713);
-                    yield "</label>
-                                                         <input type=\"date\" name=\"option[";
-                    // line 714
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 714);
-                    yield "]\" value=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 714);
-                    yield "\" id=\"input-option-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 714);
-                    yield "\" class=\"form-control\"/>
-                                                         <div id=\"error-option-";
-                    // line 715
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 715);
-                    yield "\" class=\"invalid-feedback\"></div>
-                                                      </div>
-                                                      ";
-                }
-                // line 718
-                yield "                                                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 718) == "time")) {
-                    // line 719
-                    yield "                                                      <div class=\"mb-3";
-                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 719)) {
-                        yield " required";
-                    }
-                    yield "\">
-                                                         <label for=\"input-option-";
-                    // line 720
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 720);
-                    yield "\" class=\"form-label\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 720);
-                    yield "</label>
-                                                         <input type=\"time\" name=\"option[";
                     // line 721
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 721);
-                    yield "]\" value=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 721);
-                    yield "\" id=\"input-option-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 721);
-                    yield "\" class=\"form-control\"/>
+                    yield "                                                         </div>
                                                          <div id=\"error-option-";
                     // line 722
                     yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 722);
@@ -1557,7 +1497,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                 }
                 // line 725
                 yield "                                                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 725) == "datetime")) {
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 725) == "text")) {
                     // line 726
                     yield "                                                      <div class=\"mb-3";
                     if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 726)) {
@@ -1569,162 +1509,328 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                     yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 727);
                     yield "\" class=\"form-label\">";
                     yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 727);
-                    yield "</label>
-                                                         <input type=\"datetime-local\" name=\"option[";
-                    // line 728
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 728);
+                    yield "</label> <input type=\"text\" name=\"option[";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 727);
                     yield "]\" value=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 728);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 727);
+                    yield "\" placeholder=\"";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 727);
                     yield "\" id=\"input-option-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 728);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 727);
                     yield "\" class=\"form-control\"/>
                                                          <div id=\"error-option-";
-                    // line 729
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 729);
+                    // line 728
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 728);
                     yield "\" class=\"invalid-feedback\"></div>
                                                       </div>
                                                       ";
                 }
-                // line 732
+                // line 731
+                yield "                                                      ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 731) == "textarea")) {
+                    // line 732
+                    yield "                                                      <div class=\"mb-3";
+                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 732)) {
+                        yield " required";
+                    }
+                    yield "\">
+                                                         <label for=\"input-option-";
+                    // line 733
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 733);
+                    yield "\" class=\"form-label\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 733);
+                    yield "</label> 
+                                                         <textarea name=\"option[";
+                    // line 734
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 734);
+                    yield "]\" rows=\"5\" placeholder=\"";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 734);
+                    yield "\" id=\"input-option-";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 734);
+                    yield "\" class=\"form-control\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 734);
+                    yield "</textarea>
+                                                         <div id=\"error-option-";
+                    // line 735
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 735);
+                    yield "\" class=\"invalid-feedback\"></div>
+                                                      </div>
+                                                      ";
+                }
+                // line 738
+                yield "                                                      ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 738) == "file")) {
+                    // line 739
+                    yield "                                                      <div class=\"mb-3";
+                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 739)) {
+                        yield " required";
+                    }
+                    yield "\">
+                                                         <label for=\"button-upload-";
+                    // line 740
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 740);
+                    yield "\" class=\"form-label\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 740);
+                    yield "</label>
+                                                         <div>
+                                                            <button type=\"button\" id=\"button-upload-";
+                    // line 742
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 742);
+                    yield "\" data-oc-toggle=\"upload\" data-oc-url=\"";
+                    yield ($context["upload"] ?? null);
+                    yield "\" data-oc-target=\"#input-option-";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 742);
+                    yield "\" data-oc-size-max=\"";
+                    yield ($context["config_file_max_size"] ?? null);
+                    yield "\" data-oc-size-error=\"";
+                    yield ($context["error_upload_size"] ?? null);
+                    yield "\" class=\"btn btn-light btn-block\"><i class=\"fa-solid fa-upload\"></i> ";
+                    yield ($context["button_upload"] ?? null);
+                    yield "</button>
+                                                            <input type=\"hidden\" name=\"option[";
+                    // line 743
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 743);
+                    yield "]\" value=\"\" id=\"input-option-";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 743);
+                    yield "\"/>
+                                                         </div>
+                                                         <div id=\"error-option-";
+                    // line 745
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 745);
+                    yield "\" class=\"invalid-feedback\"></div>
+                                                      </div>
+                                                      ";
+                }
+                // line 748
+                yield "                                                      ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 748) == "date")) {
+                    // line 749
+                    yield "                                                      <div class=\"mb-3";
+                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 749)) {
+                        yield " required";
+                    }
+                    yield "\">
+                                                         <label for=\"input-option-";
+                    // line 750
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 750);
+                    yield "\" class=\"form-label\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 750);
+                    yield "</label>
+                                                         <input type=\"date\" name=\"option[";
+                    // line 751
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 751);
+                    yield "]\" value=\"";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 751);
+                    yield "\" id=\"input-option-";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 751);
+                    yield "\" class=\"form-control\"/>
+                                                         <div id=\"error-option-";
+                    // line 752
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 752);
+                    yield "\" class=\"invalid-feedback\"></div>
+                                                      </div>
+                                                      ";
+                }
+                // line 755
+                yield "                                                      ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 755) == "time")) {
+                    // line 756
+                    yield "                                                      <div class=\"mb-3";
+                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 756)) {
+                        yield " required";
+                    }
+                    yield "\">
+                                                         <label for=\"input-option-";
+                    // line 757
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 757);
+                    yield "\" class=\"form-label\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 757);
+                    yield "</label>
+                                                         <input type=\"time\" name=\"option[";
+                    // line 758
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 758);
+                    yield "]\" value=\"";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 758);
+                    yield "\" id=\"input-option-";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 758);
+                    yield "\" class=\"form-control\"/>
+                                                         <div id=\"error-option-";
+                    // line 759
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 759);
+                    yield "\" class=\"invalid-feedback\"></div>
+                                                      </div>
+                                                      ";
+                }
+                // line 762
+                yield "                                                      ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 762) == "datetime")) {
+                    // line 763
+                    yield "                                                      <div class=\"mb-3";
+                    if (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "required", [], "any", false, false, false, 763)) {
+                        yield " required";
+                    }
+                    yield "\">
+                                                         <label for=\"input-option-";
+                    // line 764
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 764);
+                    yield "\" class=\"form-label\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 764);
+                    yield "</label>
+                                                         <input type=\"datetime-local\" name=\"option[";
+                    // line 765
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 765);
+                    yield "]\" value=\"";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 765);
+                    yield "\" id=\"input-option-";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 765);
+                    yield "\" class=\"form-control\"/>
+                                                         <div id=\"error-option-";
+                    // line 766
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 766);
+                    yield "\" class=\"invalid-feedback\"></div>
+                                                      </div>
+                                                      ";
+                }
+                // line 769
                 yield "                                                      ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 733
+            // line 770
             yield "                                                   </div>
                                                    ";
         }
-        // line 735
+        // line 772
         yield "                                                   ";
         if (($context["subscription_plans"] ?? null)) {
-            // line 736
+            // line 773
             yield "                                                   <hr/>
                                                    <h3>";
-            // line 737
+            // line 774
             yield ($context["text_subscription"] ?? null);
             yield "</h3>
                                                    <div class=\"mb-3 required\">
                                                       <select name=\"subscription_plan_id\" id=\"input-subscription\" class=\"form-select\">
                                                          <option value=\"\">";
-            // line 740
+            // line 777
             yield ($context["text_select"] ?? null);
             yield "</option>
                                                          ";
-            // line 741
+            // line 778
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["subscription_plans"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["subscription_plan"]) {
-                // line 742
+                // line 779
                 yield "                                                         <option value=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "subscription_plan_id", [], "any", false, false, false, 742);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "subscription_plan_id", [], "any", false, false, false, 779);
                 yield "\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "name", [], "any", false, false, false, 742);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "name", [], "any", false, false, false, 779);
                 yield "</option>
                                                          ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['subscription_plan'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 744
+            // line 781
             yield "                                                      </select>
                                                       ";
-            // line 745
+            // line 782
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["subscription_plans"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["subscription_plan"]) {
-                // line 746
+                // line 783
                 yield "                                                      <div id=\"subscription-description-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "subscription_plan_id", [], "any", false, false, false, 746);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "subscription_plan_id", [], "any", false, false, false, 783);
                 yield "\" class=\"form-text subscription d-none\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "description", [], "any", false, false, false, 746);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["subscription_plan"], "description", [], "any", false, false, false, 783);
                 yield "</div>
                                                       ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['subscription_plan'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 748
+            // line 785
             yield "                                                      <div id=\"error-subscription\" class=\"invalid-feedback\"></div>
                                                    </div>
                                                    ";
         }
-        // line 751
+        // line 788
         yield "                                                   <div class=\"mb-3\">
                                                       <div class=\"input-group\">
                                                          <div class=\"input-group-text\">";
-        // line 753
+        // line 790
         yield ($context["entry_qty"] ?? null);
         yield "</div>
                                                          <input type=\"text\" name=\"quantity\" value=\"";
-        // line 754
+        // line 791
         yield ($context["minimum"] ?? null);
         yield "\" size=\"2\" id=\"input-quantity\" class=\"form-control\"/>
                                                          <button type=\"submit\" id=\"button-cart\" class=\"btn btn-primary btn-lg btn-block\">";
-        // line 755
+        // line 792
         yield ($context["button_cart"] ?? null);
         yield "</button>
                                                       </div>
                                                       <input type=\"hidden\" name=\"product_id\" value=\"";
-        // line 757
+        // line 794
         yield ($context["product_id"] ?? null);
         yield "\" id=\"input-product-id\"/>
                                                       <div id=\"error-quantity\" class=\"form-text\"></div>
                                                    </div>
                                                    ";
-        // line 760
+        // line 797
         if ((($context["minimum"] ?? null) > 1)) {
-            // line 761
+            // line 798
             yield "                                                   <div class=\"alert alert-warning\"><i class=\"fa-solid fa-circle-info\"></i> ";
             yield ($context["text_minimum"] ?? null);
             yield "</div>
                                                    ";
         }
-        // line 763
+        // line 800
         yield "                                                </form>
                                              </div>
                                           </div>
                                        </div>
                                        <ul class=\"nav nav-tabs\">
                                           <li class=\"nav-item\"><a href=\"#tab-description\" data-bs-toggle=\"tab\" class=\"nav-link active\">";
-        // line 768
+        // line 805
         yield ($context["tab_description"] ?? null);
         yield "</a></li>
                                           ";
-        // line 769
+        // line 806
         if (($context["attribute_groups"] ?? null)) {
-            // line 770
+            // line 807
             yield "                                          <li class=\"nav-item\"><a href=\"#tab-specification\" data-bs-toggle=\"tab\" class=\"nav-link\">";
             yield ($context["tab_attribute"] ?? null);
             yield "</a></li>
                                           ";
         }
-        // line 772
+        // line 809
         yield "                                          ";
         if (($context["review_status"] ?? null)) {
-            // line 773
+            // line 810
             yield "                                          <li class=\"nav-item\"><a href=\"#tab-review\" data-bs-toggle=\"tab\" class=\"nav-link\">";
             yield ($context["tab_review"] ?? null);
             yield "</a></li>
                                           ";
         }
-        // line 775
+        // line 812
         yield "                                       </ul>
                                        <div class=\"tab-content\">
                                           <div id=\"tab-description\" class=\"tab-pane fade show active mb-4\">
                                              ";
-        // line 778
+        // line 815
         yield ($context["description"] ?? null);
         yield "
                                              ";
-        // line 779
+        // line 816
         if (($context["tags"] ?? null)) {
-            // line 780
+            // line 817
             yield "                                             <p>";
             yield ($context["text_tags"] ?? null);
             yield "
                                                 ";
-            // line 781
+            // line 818
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["tags"] ?? null));
             $context['loop'] = [
@@ -1741,16 +1847,16 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
-                // line 782
+                // line 819
                 yield "                                                <a href=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["tag"], "href", [], "any", false, false, false, 782);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["tag"], "href", [], "any", false, false, false, 819);
                 yield "\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["tag"], "tag", [], "any", false, false, false, 782);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["tag"], "tag", [], "any", false, false, false, 819);
                 yield "</a>";
-                if ( !CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "last", [], "any", false, false, false, 782)) {
+                if ( !CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "last", [], "any", false, false, false, 819)) {
                     yield ",";
                 }
-                // line 783
+                // line 820
                 yield "                                                ";
                 ++$context['loop']['index0'];
                 ++$context['loop']['index'];
@@ -1764,48 +1870,48 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 784
+            // line 821
             yield "                                             </p>
                                              ";
         }
-        // line 786
+        // line 823
         yield "                                          </div>
                                           ";
-        // line 787
+        // line 824
         if (($context["attribute_groups"] ?? null)) {
-            // line 788
+            // line 825
             yield "                                          <div id=\"tab-specification\" class=\"tab-pane fade\">
                                              <div class=\"table-responsive\">
                                                 <table class=\"table table-bordered\">
                                                    ";
-            // line 791
+            // line 828
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["attribute_groups"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["attribute_group"]) {
-                // line 792
+                // line 829
                 yield "                                                   <thead>
                                                       <tr>
                                                          <td colspan=\"2\"><strong>";
-                // line 794
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute_group"], "name", [], "any", false, false, false, 794);
+                // line 831
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute_group"], "name", [], "any", false, false, false, 831);
                 yield "</strong></td>
                                                       </tr>
                                                    </thead>
                                                    <tbody>
                                                       ";
-                // line 798
+                // line 835
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["attribute_group"], "attribute", [], "any", false, false, false, 798));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["attribute_group"], "attribute", [], "any", false, false, false, 835));
                 foreach ($context['_seq'] as $context["_key"] => $context["attribute"]) {
-                    // line 799
+                    // line 836
                     yield "                                                      <tr>
                                                          <td>";
-                    // line 800
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute"], "name", [], "any", false, false, false, 800);
+                    // line 837
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute"], "name", [], "any", false, false, false, 837);
                     yield "</td>
                                                          <td>";
-                    // line 801
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute"], "text", [], "any", false, false, false, 801);
+                    // line 838
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute"], "text", [], "any", false, false, false, 838);
                     yield "</td>
                                                       </tr>
                                                       ";
@@ -1813,41 +1919,41 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['attribute'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 804
+                // line 841
                 yield "                                                   </tbody>
                                                    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['attribute_group'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 806
+            // line 843
             yield "                                                </table>
                                              </div>
                                           </div>
                                           ";
         }
-        // line 810
+        // line 847
         yield "                                          ";
         if (($context["review_status"] ?? null)) {
-            // line 811
+            // line 848
             yield "                                          <div id=\"tab-review\" class=\"tab-pane fade mb-4\">";
             yield ($context["review"] ?? null);
             yield "</div>
                                           ";
         }
-        // line 813
+        // line 850
         yield "                                       </div>
                                        ";
-        // line 814
+        // line 851
         yield ($context["related"] ?? null);
         yield "
                                        ";
-        // line 815
+        // line 852
         yield ($context["content_bottom"] ?? null);
         yield "
                                     </div>
                                     ";
-        // line 817
+        // line 854
         yield ($context["column_right"] ?? null);
         yield "
                                  </div>
@@ -2167,7 +2273,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
    <div class=\"container\">
       <h1 class=\"sect-title text-center\">You May Also Like</h1>
       ";
-        // line 1134
+        // line 1171
         yield ($context["related"] ?? null);
         yield "
    </div>
@@ -2467,7 +2573,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
    
        \$.ajax({
            url: 'index.php?route=checkout/cart.add&language=";
-        // line 1431
+        // line 1468
         yield ($context["language"] ?? null);
         yield "',
            type: 'post',
@@ -2501,7 +2607,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
    
                    // ✅ Load updated cart HTML into your offcanvas cart wrapper
                    \$('.tf-mini-cart-wrap').load('index.php?route=common/cart.info&language=";
-        // line 1462
+        // line 1499
         yield ($context["language"] ?? null);
         yield "', function() {
                        // ✅ Once loaded, open the cart drawer
@@ -2543,7 +2649,7 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
    //-->
 </script>
 ";
-        // line 1501
+        // line 1538
         yield ($context["footer"] ?? null);
         yield from [];
     }
@@ -2569,12 +2675,28 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
      */
     public function getDebugInfo(): array
     {
-        return array (  2547 => 1501,  2505 => 1462,  2471 => 1431,  2171 => 1134,  1851 => 817,  1846 => 815,  1842 => 814,  1839 => 813,  1833 => 811,  1830 => 810,  1824 => 806,  1817 => 804,  1808 => 801,  1804 => 800,  1801 => 799,  1797 => 798,  1790 => 794,  1786 => 792,  1782 => 791,  1777 => 788,  1775 => 787,  1772 => 786,  1768 => 784,  1754 => 783,  1745 => 782,  1728 => 781,  1723 => 780,  1721 => 779,  1717 => 778,  1712 => 775,  1706 => 773,  1703 => 772,  1697 => 770,  1695 => 769,  1691 => 768,  1684 => 763,  1678 => 761,  1676 => 760,  1670 => 757,  1665 => 755,  1661 => 754,  1657 => 753,  1653 => 751,  1648 => 748,  1637 => 746,  1633 => 745,  1630 => 744,  1619 => 742,  1615 => 741,  1611 => 740,  1605 => 737,  1602 => 736,  1599 => 735,  1595 => 733,  1589 => 732,  1583 => 729,  1575 => 728,  1569 => 727,  1562 => 726,  1559 => 725,  1553 => 722,  1545 => 721,  1539 => 720,  1532 => 719,  1529 => 718,  1523 => 715,  1515 => 714,  1509 => 713,  1502 => 712,  1499 => 711,  1493 => 708,  1486 => 706,  1472 => 705,  1465 => 703,  1458 => 702,  1455 => 701,  1449 => 698,  1439 => 697,  1433 => 696,  1426 => 695,  1423 => 694,  1417 => 691,  1403 => 690,  1396 => 689,  1393 => 688,  1387 => 685,  1384 => 684,  1376 => 681,  1369 => 680,  1367 => 679,  1362 => 678,  1349 => 677,  1347 => 676,  1343 => 675,  1335 => 674,  1332 => 673,  1328 => 672,  1324 => 671,  1320 => 670,  1313 => 669,  1310 => 668,  1304 => 665,  1301 => 664,  1293 => 661,  1286 => 660,  1284 => 659,  1279 => 658,  1266 => 657,  1264 => 656,  1260 => 655,  1252 => 654,  1249 => 653,  1245 => 652,  1241 => 651,  1237 => 650,  1230 => 649,  1227 => 648,  1221 => 645,  1218 => 644,  1211 => 642,  1204 => 640,  1202 => 639,  1195 => 638,  1191 => 637,  1187 => 636,  1181 => 635,  1175 => 634,  1168 => 633,  1165 => 632,  1161 => 631,  1156 => 629,  1153 => 628,  1151 => 627,  1143 => 622,  1135 => 620,  1127 => 618,  1121 => 616,  1119 => 615,  1115 => 613,  1111 => 611,  1108 => 610,  1097 => 608,  1093 => 607,  1088 => 604,  1085 => 603,  1077 => 601,  1074 => 600,  1066 => 598,  1063 => 597,  1057 => 594,  1051 => 592,  1045 => 589,  1042 => 588,  1040 => 587,  1037 => 586,  1034 => 585,  1024 => 581,  1018 => 580,  1014 => 578,  1010 => 576,  1007 => 575,  1003 => 574,  999 => 572,  997 => 571,  989 => 569,  981 => 567,  978 => 566,  967 => 564,  963 => 563,  956 => 562,  946 => 560,  944 => 559,  939 => 557,  936 => 556,  931 => 553,  927 => 551,  910 => 549,  906 => 548,  903 => 547,  900 => 546,  886 => 544,  884 => 543,  880 => 541,  878 => 540,  873 => 538,  868 => 536,  677 => 348,  641 => 317,  631 => 310,  623 => 304,  620 => 303,  614 => 302,  608 => 298,  585 => 296,  568 => 295,  564 => 294,  559 => 292,  556 => 291,  553 => 290,  548 => 289,  546 => 288,  536 => 281,  525 => 273,  433 => 186,  421 => 177,  413 => 171,  409 => 169,  403 => 168,  398 => 165,  384 => 164,  378 => 161,  368 => 159,  366 => 158,  359 => 157,  356 => 156,  339 => 155,  335 => 153,  328 => 148,  326 => 147,  321 => 145,  317 => 144,  310 => 141,  307 => 140,  303 => 139,  300 => 138,  298 => 137,  288 => 130,  250 => 95,  246 => 93,  243 => 92,  237 => 91,  234 => 90,  224 => 88,  222 => 87,  213 => 86,  210 => 85,  207 => 84,  202 => 83,  200 => 82,  196 => 81,  184 => 71,  182 => 68,  179 => 64,  169 => 60,  165 => 59,  161 => 58,  157 => 57,  151 => 54,  148 => 53,  144 => 52,  137 => 47,  127 => 43,  123 => 42,  119 => 41,  114 => 38,  110 => 37,  105 => 34,  102 => 33,  99 => 32,  96 => 31,  93 => 30,  90 => 29,  87 => 28,  84 => 27,  66 => 10,  55 => 8,  51 => 7,  42 => 1,);
+        return array (  2653 => 1538,  2611 => 1499,  2577 => 1468,  2277 => 1171,  1957 => 854,  1952 => 852,  1948 => 851,  1945 => 850,  1939 => 848,  1936 => 847,  1930 => 843,  1923 => 841,  1914 => 838,  1910 => 837,  1907 => 836,  1903 => 835,  1896 => 831,  1892 => 829,  1888 => 828,  1883 => 825,  1881 => 824,  1878 => 823,  1874 => 821,  1860 => 820,  1851 => 819,  1834 => 818,  1829 => 817,  1827 => 816,  1823 => 815,  1818 => 812,  1812 => 810,  1809 => 809,  1803 => 807,  1801 => 806,  1797 => 805,  1790 => 800,  1784 => 798,  1782 => 797,  1776 => 794,  1771 => 792,  1767 => 791,  1763 => 790,  1759 => 788,  1754 => 785,  1743 => 783,  1739 => 782,  1736 => 781,  1725 => 779,  1721 => 778,  1717 => 777,  1711 => 774,  1708 => 773,  1705 => 772,  1701 => 770,  1695 => 769,  1689 => 766,  1681 => 765,  1675 => 764,  1668 => 763,  1665 => 762,  1659 => 759,  1651 => 758,  1645 => 757,  1638 => 756,  1635 => 755,  1629 => 752,  1621 => 751,  1615 => 750,  1608 => 749,  1605 => 748,  1599 => 745,  1592 => 743,  1578 => 742,  1571 => 740,  1564 => 739,  1561 => 738,  1555 => 735,  1545 => 734,  1539 => 733,  1532 => 732,  1529 => 731,  1523 => 728,  1509 => 727,  1502 => 726,  1499 => 725,  1493 => 722,  1490 => 721,  1482 => 718,  1475 => 717,  1473 => 716,  1468 => 715,  1455 => 714,  1453 => 713,  1449 => 712,  1441 => 711,  1438 => 710,  1434 => 709,  1430 => 708,  1426 => 707,  1419 => 706,  1416 => 705,  1410 => 702,  1407 => 701,  1399 => 698,  1392 => 697,  1390 => 696,  1385 => 695,  1372 => 694,  1370 => 693,  1366 => 692,  1358 => 691,  1355 => 690,  1351 => 689,  1347 => 688,  1343 => 687,  1336 => 686,  1333 => 685,  1327 => 682,  1324 => 681,  1317 => 679,  1310 => 677,  1308 => 676,  1301 => 675,  1297 => 674,  1293 => 673,  1287 => 672,  1281 => 671,  1274 => 670,  1271 => 669,  1267 => 668,  1262 => 666,  1259 => 665,  1257 => 664,  1249 => 659,  1241 => 657,  1233 => 655,  1227 => 653,  1225 => 652,  1221 => 650,  1217 => 648,  1214 => 647,  1203 => 645,  1199 => 644,  1194 => 641,  1191 => 640,  1183 => 638,  1180 => 637,  1172 => 635,  1169 => 634,  1163 => 631,  1157 => 629,  1151 => 626,  1148 => 625,  1146 => 624,  1143 => 623,  1140 => 622,  1130 => 618,  1124 => 617,  1120 => 615,  1116 => 613,  1113 => 612,  1109 => 611,  1105 => 609,  1103 => 608,  1095 => 606,  1087 => 604,  1084 => 603,  1073 => 601,  1069 => 600,  1062 => 599,  1052 => 597,  1050 => 596,  1045 => 594,  1042 => 593,  1037 => 590,  1033 => 588,  1016 => 586,  1012 => 585,  1009 => 584,  1006 => 583,  992 => 581,  990 => 580,  986 => 578,  984 => 577,  979 => 575,  974 => 573,  783 => 385,  747 => 354,  737 => 347,  729 => 341,  726 => 340,  720 => 339,  714 => 335,  691 => 333,  674 => 332,  670 => 331,  665 => 329,  662 => 328,  659 => 327,  654 => 326,  652 => 325,  642 => 318,  631 => 310,  624 => 306,  620 => 305,  533 => 223,  521 => 214,  508 => 203,  494 => 202,  488 => 199,  478 => 197,  476 => 196,  465 => 195,  462 => 194,  445 => 193,  437 => 188,  433 => 187,  427 => 184,  423 => 182,  419 => 180,  413 => 179,  408 => 176,  394 => 175,  388 => 172,  378 => 170,  376 => 169,  365 => 168,  362 => 167,  345 => 166,  337 => 161,  333 => 160,  326 => 157,  323 => 156,  319 => 155,  316 => 154,  314 => 153,  304 => 146,  266 => 111,  262 => 109,  259 => 108,  253 => 107,  250 => 106,  240 => 104,  238 => 103,  229 => 102,  226 => 101,  223 => 100,  218 => 99,  216 => 98,  212 => 97,  200 => 87,  198 => 84,  195 => 80,  185 => 76,  181 => 75,  177 => 74,  173 => 73,  167 => 70,  164 => 69,  160 => 68,  153 => 63,  143 => 59,  139 => 58,  135 => 57,  130 => 54,  126 => 53,  121 => 50,  118 => 49,  115 => 48,  112 => 47,  109 => 46,  106 => 45,  103 => 44,  100 => 43,  82 => 26,  71 => 24,  67 => 23,  42 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{{ header }}
+
+<style>
+   .size-btn {
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px !important;
+      border: 1px solid #000;
+   }
+   .size-btn.active {
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #000 !important;
+   }
+</style>
+
 <!-- Page Title -->
 <section class=\"s-page-title style-2\">
    <div class=\"container\">
@@ -2720,17 +2842,12 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                                  {{ option.name }}
                                  <span class=\"variant-picker-label-value value-current-option\">{{ option.product_option_value[0].name }}</span>
                               </div>
-                              {% if option.type == 'select' %}
-                              <a href=\"#size-guide\" data-bs-toggle=\"modal\" class=\"size-guide link h6 fw-medium\">
-                              <i class=\"icon icon-ruler\"></i>
-                              Size Guide
-                              </a>
-                              {% endif %}
+                             
                            </div>
-                           <div class=\"variant-picker-values\">
+                           <div class=\"variant-picker-values mt-3\">
                               {% for option_value in option.product_option_value %}
                               {% if option.type == 'select' %}
-                              <span class=\"size-btn\" data-size=\"{{ option_value.name }}\">{{ option_value.name }}</span>
+                              <span class=\"size-btn {% if loop.first %}active{% endif %}\" data-size=\"{{ option_value.name }}\">{{ option_value.name }}</span>
                               {% elseif option.type == 'radio' %}
                               <div class=\"hover-tooltip tooltip-bot color-btn{% if loop.first %} active{% endif %}\" data-color=\"{{ option_value.name|lower }}\">
                                  <span class=\"check-color bg-color-option\"></span>
@@ -2744,6 +2861,32 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
                         {% endfor %}
                      </div>
                      {% endif %}
+
+                     <div class=\"tf-product-variant\">
+                        <div class=\"variant-picker-item variant-{{ option.type }}\">
+                           <div class=\"variant-picker-label\">
+                              <div class=\"h4 fw-semibold\">
+                                 {{ option.name }}
+                                 <span class=\"variant-picker-label-value value-current-option\">{{ option.product_option_value[0].name }}</span>
+                              </div>
+
+                           </div>
+                           <div class=\"variant-picker-values mt-3\">
+                              {% for option_value in option.product_option_value %}
+                              {% if option.type == 'select' %}
+                              <span class=\"size-btn {% if loop.first %}active{% endif %}\" data-size=\"{{ option_value.name }}\">{{ option_value.name }}</span>
+                              {% elseif option.type == 'radio' %}
+                              <div class=\"hover-tooltip tooltip-bot color-btn{% if loop.first %} active{% endif %}\" data-color=\"{{ option_value.name|lower }}\">
+                                 <span class=\"check-color bg-color-option\"></span>
+                                 <span class=\"tooltip\">{{ option_value.name }}</span>
+                              </div>
+                              {% endif %}
+                              {% endfor %}
+                           </div>
+                        </div>
+                     </div>
+
+
                      <div class=\"tf-product-total-quantity\">
                         <div class=\"group-btn\">
                            <div class=\"wg-quantity\">
@@ -2839,10 +2982,10 @@ $context["option"], "type", [], "any", false, false, false, 158) == "radio")) {
       <div class=\"container\">
          <div class=\"tf-height-observer w-100 d-flex align-items-center\">
             <div class=\"tf-sticky-atc-product d-flex align-items-center\">
-               <div class=\"tf-mini-cart-item align-items-start\">
+               <div class=\"tf-mini-cart-item \">
                   <div class=\"tf-mini-cart-image\">
-                     <img class=\"lazyload\" data-src=\"assets/images/products/fashion/thumbs/thumbs-1.jpg\"
-                        src=\"assets/images/products/fashion/thumbs/thumbs-1.jpg\" alt=\"img-product\">
+                     <img class=\"lazyload\" data-src=\"{{ thumb }}\"
+                        src=\"{{ thumb }}\" alt=\"img-product\">
                   </div>
                   <div class=\"tf-mini-cart-info\">
                      <h6 class=\"title\">

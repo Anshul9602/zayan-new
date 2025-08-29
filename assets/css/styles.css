@@ -912,7 +912,7 @@ video {
 }
 
 .bg-light-beige {
-  background-color: #EEDFC6 !important;
+  background-image: url(../WG.jpg) !important;
 }
 
 .bg-sage-green {
@@ -936,7 +936,7 @@ video {
 }
 
 .bg-hot-pink {
-  background-color: #F56EB7 !important;
+  background-image: url(../RG.JPG) !important;
 }
 
 .bg-muted-violet {
@@ -944,7 +944,7 @@ video {
 }
 
 .bg-dusty-olive {
-  background-color: #A6AB84 !important;
+  background-image: url(../YG.JPG) !important;
 }
 
 .bg-caramel {

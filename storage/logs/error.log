@@ -238,3 +238,1310 @@ Backtrace: 5
 File: C:\xampp\htdocs\zyannew\index.php
 Line: 20
 Function: require_once
+2025-08-29 05:13:12 - PHP Warning:  mysqli::real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\xampp\htdocs\zyannew\system\library\db\mysqli.php on line 75
+2025-08-29 05:13:12 - Error: mysqli object is not fully initialized
+File: C:\xampp\htdocs\zyannew\system\library\db\mysqli.php
+Line: 78
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\db\mysqli.php
+Line: 78
+Class: mysqli
+Function: set_charset
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\library\db.php
+Line: 40
+Class: Opencart\System\Library\DB\MySQLi
+Function: __construct
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 148
+Class: Opencart\System\Library\DB
+Function: __construct
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:40:02 - Error: Error: Could not call registry key model_tool_image!
+File: C:\xampp\htdocs\zyannew\system\engine\controller.php
+Line: 43
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 433
+Class: Opencart\System\Engine\Controller
+Function: __get
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:40:27 - Error: Error: Could not call registry key model_tool_image!
+File: C:\xampp\htdocs\zyannew\system\engine\controller.php
+Line: 43
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 433
+Class: Opencart\System\Engine\Controller
+Function: __get
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:00 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:04 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:04 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:05 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:07 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:07 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:07 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:07 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:07 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:20 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:29 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:52:59 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:08 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:10 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:10 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:11 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:11 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:11 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:11 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:12 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:12 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:12 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:12 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:12 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:12 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:12 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:12 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:12 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:13 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:13 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:13 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:13 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:13 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:13 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:13 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:13 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:13 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:14 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:14 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:14 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:25 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:29 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:32 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:53:35 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:54:30 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 10:55:24 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 465
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 58
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getCartList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: list
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-08-29 11:49:53 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 454
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: info
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
