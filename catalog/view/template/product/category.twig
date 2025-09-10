@@ -4,6 +4,42 @@
   .tf-shop-control{
     margin-bottom: 0px;
   }
+  
+  .loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  #applied-filters {
+    background: #e8f4fd;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border-left: 4px solid #3498db;
+  }
+  
+  #remove-all {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  #remove-all:hover {
+    background: #c82333;
+  }
 </style>
   <!-- Page Title -->
   <section class="s-page-title">
@@ -105,154 +141,181 @@
             </div>
             <div class="canvas-body">
                
-                <div class="widget-facet">
-                    <div class="facet-title" data-bs-target="#availability" role="button" data-bs-toggle="collapse" aria-expanded="true"
-                        aria-controls="availability">
-                        <span class="h4 fw-semibold">Availability</span>
-                        <span class="icon icon-caret-down fs-20"></span>
+                <!-- Dynamic Filters from Database -->
+                {% if filters %}
+                    {% for filter_group in filters %}
+                        <div class="widget-facet">
+                            <div class="facet-title" data-bs-target="#filter-{{ filter_group.filter_group_id }}" role="button" data-bs-toggle="collapse" aria-expanded="true"
+                                aria-controls="filter-{{ filter_group.filter_group_id }}">
+                                <span class="h4 fw-semibold">{{ filter_group.name|title }}</span>
+                                <span class="icon icon-caret-down fs-20"></span>
+                            </div>
+                            <div id="filter-{{ filter_group.filter_group_id }}" class="collapse show">
+                                <ul class="collapse-body filter-group-check current-scrollbar">
+                                    {% for filter in filter_group.filter %}
+                                        <li class="list-item">
+                                            <input type="checkbox" name="filter[]" class="tf-check" id="filter-{{ filter.filter_id }}" value="{{ filter.filter_id }}" 
+                                                   {% if current_filter and filter.filter_id in (current_filter|split(',')) %}checked{% endif %}>
+                                            <label for="filter-{{ filter.filter_id }}" class="label">
+                                                <span>{{ filter.name }}</span>
+                                            </label>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <!-- Fallback: Show static filters if no database filters -->
+                    <div class="widget-facet">
+                        <div class="facet-title" data-bs-target="#availability" role="button" data-bs-toggle="collapse" aria-expanded="true"
+                            aria-controls="availability">
+                            <span class="h4 fw-semibold">Availability</span>
+                            <span class="icon icon-caret-down fs-20"></span>
+                        </div>
+                        <div id="availability" class="collapse show">
+                            <ul class="collapse-body filter-group-check current-scrollbar">
+                                <li class="list-item">
+                                    <input type="radio" name="availability" class="tf-check" id="inStock">
+                                    <label for="inStock" class="label">
+                                        <span>In Stock</span><span class="count">23</span>
+                                    </label>
+                                </li>
+                                <li class="list-item disabled">
+                                    <input type="radio" name="availability" class="tf-check" id="outStock">
+                                    <label for="outStock" class="label">
+                                        <span>Out of Stock</span><span class="count">34</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div id="availability" class="collapse show">
-                        <ul class="collapse-body filter-group-check current-scrollbar">
-                            <li class="list-item">
-                                <input type="radio" name="availability" class="tf-check" id="inStock">
-                                <label for="inStock" class="label">
-                                    <span>In Stock</span><span class="count">23</span>
-                                </label>
-                            </li>
-                            <li class="list-item disabled">
-                                <input type="radio" name="availability" class="tf-check" id="outStock">
-                                <label for="outStock" class="label">
-                                    <span>Out of Stock</span><span class="count">34</span>
-                                </label>
-                            </li>
-                        </ul>
+                  
+                    <div class="widget-facet">
+                        <div class="facet-title" data-bs-target="#brand" role="button" data-bs-toggle="collapse" aria-expanded="true"
+                            aria-controls="brand">
+                            <span class="h4 fw-semibold">Metal Type</span>
+                            <span class="icon icon-caret-down fs-20"></span>
+                        </div>
+                        <div id="brand" class="collapse show">
+                            <ul class="collapse-body filter-group-check current-scrollbar">
+                                <li class="list-item">
+                                    <input type="checkbox" name="brand" class="tf-check" id="automet">
+                                    <label for="automet" class="label">AUTOMET</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="checkbox" name="brand" class="tf-check" id="trendy-queen">
+                                    <label for="trendy-queen" class="label">Trendy Queen</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="checkbox" name="brand" class="tf-check" id="wiholl">
+                                    <label for="wiholl" class="label">WIHOLL</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="checkbox" name="brand" class="tf-check" id="real-essentials">
+                                    <label for="real-essentials" class="label">Real Essentials</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="checkbox" name="brand" class="tf-check" id="dokotoo">
+                                    <label for="dokotoo" class="label">Dokotoo</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="checkbox" name="brand" class="tf-check" id="hanes">
+                                    <label for="hanes" class="label">Hanes</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="checkbox" name="brand" class="tf-check" id="zeagoo">
+                                    <label for="zeagoo" class="label">Zeagoo</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="checkbox" name="brand" class="tf-check" id="shewin">
+                                    <label for="shewin" class="label">SHEWIN</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="checkbox" name="brand" class="tf-check" id="blooming-jelly">
+                                    <label for="blooming-jelly" class="label">Blooming Jelly</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="checkbox" name="brand" class="tf-check" id="fisoew">
+                                    <label for="fisoew" class="label">Fisoew</label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-              
-                <div class="widget-facet">
-                    <div class="facet-title" data-bs-target="#brand" role="button" data-bs-toggle="collapse" aria-expanded="true"
-                        aria-controls="brand">
-                        <span class="h4 fw-semibold">Metal Type</span>
-                        <span class="icon icon-caret-down fs-20"></span>
-                    </div>
-                    <div id="brand" class="collapse show">
-                        <ul class="collapse-body filter-group-check current-scrollbar">
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="automet">
-                                <label for="automet" class="label">AUTOMET</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="trendy-queen">
-                                <label for="trendy-queen" class="label">Trendy Queen</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="wiholl">
-                                <label for="wiholl" class="label">WIHOLL</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="real-essentials">
-                                <label for="real-essentials" class="label">Real Essentials</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="dokotoo">
-                                <label for="dokotoo" class="label">Dokotoo</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="hanes">
-                                <label for="hanes" class="label">Hanes</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="zeagoo">
-                                <label for="zeagoo" class="label">Zeagoo</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="shewin">
-                                <label for="shewin" class="label">SHEWIN</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="blooming-jelly">
-                                <label for="blooming-jelly" class="label">Blooming Jelly</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="fisoew">
-                                <label for="fisoew" class="label">Fisoew</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="widget-facet">
-                    <div class="facet-title" data-bs-target="#size" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="size">
-                        <span class="h4 fw-semibold">Size</span>
-                        <span class="icon icon-caret-down fs-20"></span>
-                    </div>
-                    <div id="size" class="collapse show">
-                        <div class="collapse-body filter-size-box flat-check-list">
-                            <div class="check-item size-item size-check"><span class="size h6">XS</span></div>
-                            <div class="check-item size-item size-check"><span class="size h6">S</span></div>
-                            <div class="check-item size-item size-check"><span class="size h6">L</span></div>
-                            <div class="check-item size-item size-check"><span class="size h6">M</span></div>
-                            <div class="check-item size-item size-check"><span class="size h6">XL</span></div>
-                            <div class="check-item size-item size-check"><span class="size h6">2XL</span></div>
-                            <div class="check-item size-item size-check over-size"><span class="size h6">Over size</span></div>
+                    <div class="widget-facet">
+                        <div class="facet-title" data-bs-target="#size" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="size">
+                            <span class="h4 fw-semibold">Size</span>
+                            <span class="icon icon-caret-down fs-20"></span>
                         </div>
-                    </div>
-                </div>
-                <div class="widget-facet">
-                    <div class="facet-title" data-bs-target="#color" role="button" data-bs-toggle="collapse" aria-expanded="true"
-                        aria-controls="size">
-                        <span class="h4 fw-semibold">Color</span>
-                        <span class="icon icon-caret-down fs-20"></span>
-                    </div>
-                    <div id="color" class="collapse show">
-                        <div class="collapse-body filter-color-box flat-check-list">
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-light-purple"></span>
-                                <span class="color-text">Purple</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-dark-charcoal"></span>
-                                <span class="color-text">Dark</span>
-                            </div>
-                            <div class="check-item color-item color-check line">
-                                <span class="color bg-dark-jade"></span>
-                                <span class="color-text">Green</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-light-beige"></span>
-                                <span class="color-text">Beige</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-sage-green"></span>
-                                <span class="color-text">Sage Green</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-tomato"></span>
-                                <span class="color-text">Light Orange</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-honey-orange"></span>
-                                <span class="color-text">Orange</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-dark-olive"></span>
-                                <span class="color-text">Dark Olive</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-hot-pink"></span>
-                                <span class="color-text">Pink</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-muted-violet"></span>
-                                <span class="color-text">Dark Violet</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-dusty-olive"></span>
-                                <span class="color-text">Dusty Olive</span>
+                        <div id="size" class="collapse show">
+                            <div class="collapse-body filter-size-box flat-check-list">
+                                <div class="check-item size-item size-check"><span class="size h6">XS</span></div>
+                                <div class="check-item size-item size-check"><span class="size h6">S</span></div>
+                                <div class="check-item size-item size-check"><span class="size h6">L</span></div>
+                                <div class="check-item size-item size-check"><span class="size h6">M</span></div>
+                                <div class="check-item size-item size-check"><span class="size h6">XL</span></div>
+                                <div class="check-item size-item size-check"><span class="size h6">2XL</span></div>
+                                <div class="check-item size-item size-check over-size"><span class="size h6">Over size</span></div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="widget-facet">
+                        <div class="facet-title" data-bs-target="#color" role="button" data-bs-toggle="collapse" aria-expanded="true"
+                            aria-controls="size">
+                            <span class="h4 fw-semibold">Color</span>
+                            <span class="icon icon-caret-down fs-20"></span>
+                        </div>
+                        <div id="color" class="collapse show">
+                            <div class="collapse-body filter-color-box flat-check-list">
+                                <div class="check-item color-item color-check">
+                                    <span class="color bg-light-purple"></span>
+                                    <span class="color-text">Purple</span>
+                                </div>
+                                <div class="check-item color-item color-check">
+                                    <span class="color bg-dark-charcoal"></span>
+                                    <span class="color-text">Dark</span>
+                                </div>
+                                <div class="check-item color-item color-check line">
+                                    <span class="color bg-dark-jade"></span>
+                                    <span class="color-text">Green</span>
+                                </div>
+                                <div class="check-item color-item color-check">
+                                    <span class="color bg-light-beige"></span>
+                                    <span class="color-text">Beige</span>
+                                </div>
+                                <div class="check-item color-item color-check">
+                                    <span class="color bg-sage-green"></span>
+                                    <span class="color-text">Sage Green</span>
+                                </div>
+                                <div class="check-item color-item color-check">
+                                    <span class="color bg-tomato"></span>
+                                    <span class="color-text">Light Orange</span>
+                                </div>
+                                <div class="check-item color-item color-check">
+                                    <span class="color bg-honey-orange"></span>
+                                    <span class="color-text">Orange</span>
+                                </div>
+                                <div class="check-item color-item color-check">
+                                    <span class="color bg-dark-olive"></span>
+                                    <span class="color-text">Dark Olive</span>
+                                </div>
+                                <div class="check-item color-item color-check">
+                                    <span class="color bg-hot-pink"></span>
+                                    <span class="color-text">Pink</span>
+                                </div>
+                                <div class="check-item color-item color-check">
+                                    <span class="color bg-muted-violet"></span>
+                                    <span class="color-text">Dark Violet</span>
+                                </div>
+                                <div class="check-item color-item color-check">
+                                    <span class="color bg-dusty-olive"></span>
+                                    <span class="color-text">Dusty Olive</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
             <div class="canvas-bottom">
                 <button id="reset-filter" class="tf-btn btn-reset">Reset Filters</button>
@@ -263,3 +326,95 @@
    
 
 {{ footer }}
+
+<script>
+$(document).ready(function() {
+    // Handle filter checkbox changes
+    $('input[name="filter[]"]').on('change', function() {
+        applyFilters();
+    });
+    
+    // Handle reset filter button
+    $('#reset-filter').on('click', function() {
+        $('input[name="filter[]"]').prop('checked', false);
+        applyFilters();
+    });
+    
+    // Handle clear all filters button
+    $('#remove-all').on('click', function() {
+        $('input[name="filter[]"]').prop('checked', false);
+        applyFilters();
+    });
+    
+    function applyFilters() {
+        var selectedFilters = [];
+        $('input[name="filter[]"]:checked').each(function() {
+            selectedFilters.push($(this).val());
+        });
+        
+        // Show loading state
+        $('#gridLayout').html('<div class="text-center p-4"><div class="loading-spinner"></div> Loading products...</div>');
+        
+        // Build URL with current parameters
+        var currentUrl = new URL(window.location);
+        var filterParam = selectedFilters.join(',');
+        
+        if (filterParam) {
+            currentUrl.searchParams.set('filter', filterParam);
+        } else {
+            currentUrl.searchParams.delete('filter');
+        }
+        
+        // Reset to page 1 when filtering
+        currentUrl.searchParams.set('page', '1');
+        
+        // Make AJAX request to get filtered products
+        $.ajax({
+            url: currentUrl.toString(),
+            type: 'GET',
+            dataType: 'html',
+            success: function(response) {
+                // Extract the product grid from the response
+                var $response = $(response);
+                var $productGrid = $response.find('#gridLayout');
+                
+                if ($productGrid.length) {
+                    $('#gridLayout').html($productGrid.html());
+                } else {
+                    $('#gridLayout').html('<p class="text-center p-4">No products found matching your filters.</p>');
+                }
+                
+                // Update URL without page reload
+                history.pushState(null, null, currentUrl.toString());
+                
+                // Update applied filters display
+                updateAppliedFilters(selectedFilters);
+            },
+            error: function() {
+                $('#gridLayout').html('<p class="text-center p-4 text-danger">Error loading products. Please try again.</p>');
+            }
+        });
+    }
+    
+    function updateAppliedFilters(selectedFilters) {
+        var $appliedFilters = $('#applied-filters');
+        var $removeAll = $('#remove-all');
+        
+        if (selectedFilters.length > 0) {
+            var filterNames = [];
+            $('input[name="filter[]"]:checked').each(function() {
+                filterNames.push($(this).next('label').find('span').text());
+            });
+            
+            $appliedFilters.html('<strong>Applied Filters:</strong> ' + filterNames.join(', '));
+            $removeAll.show();
+        } else {
+            $appliedFilters.empty();
+            $removeAll.hide();
+        }
+    }
+    
+    // Initialize applied filters display
+    updateAppliedFilters([]);
+});
+</script>

@@ -140,6 +140,16 @@ class Category extends \Opencart\System\Engine\Controller {
 
 			$data['text_compare'] = sprintf($this->language->get('text_compare'), isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0);
 
+			// Get category filters
+			$data['filters'] = $this->model_catalog_category->getFilters($category_id);
+			
+			// Pass current filter state to template
+			$data['current_filter'] = $filter;
+			
+			// Debug: Echo all filter data
+			echo "<!-- DEBUG: Category Filters for Category ID: " . $category_id . " -->\n";
+			echo "<!-- " . print_r($data['filters'], true) . " -->\n";
+
 			// Image
 			$this->load->model('tool/image');
 
@@ -229,7 +239,7 @@ class Category extends \Opencart\System\Engine\Controller {
 			];
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
-		
+	
 			foreach ($results as $result) {
 				$description = trim(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')));
 

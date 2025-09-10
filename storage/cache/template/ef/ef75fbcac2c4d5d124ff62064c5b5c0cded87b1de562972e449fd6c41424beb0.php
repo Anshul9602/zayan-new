@@ -305,6 +305,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
       </div>
    </div>
 </header>
+
   <main>
   
 ";
@@ -480,6 +481,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
       </div>
    </div>
 </header>
+
   <main>
   
 ", "catalog/view/template/common/header.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\header.twig");

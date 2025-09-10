@@ -403,12 +403,11 @@ class Cart extends \Opencart\System\Engine\Controller {
 		$this->load->language('checkout/cart');
 
 		$this->load->model('tool/image');
-		$this->load->model('checkout/cart');
 
 		$data['text_items'] = sprintf($this->language->get('text_items'), $this->cart->countProducts());
 		$data['heading_title'] = $this->language->get('heading_title');
-		$data['text_cart'] = $this->language->get('text_cart');
-		$data['text_checkout'] = $this->language->get('text_checkout');
+		$data['text_cart'] = "View Cart";
+		$data['text_checkout'] = "Checkout";
 		$data['text_no_results'] = $this->language->get('text_no_results');
 		$data['text_remove'] = $this->language->get('text_remove');
 		$data['button_remove'] = $this->language->get('button_remove');
@@ -452,18 +451,22 @@ class Cart extends \Opencart\System\Engine\Controller {
 
 		$data['totals'] = [];
 
-		// Get cart totals using the correct method
-		$totals = [];
-		$taxes = [];
-		$total = 0;
-		
-		($this->model_checkout_cart->getTotals)($totals, $taxes, $total);
+		// Display prices
+		if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
+			$totals = [];
+			$taxes = $this->cart->getTaxes();
+			$total = 0;
 
-		foreach ($totals as $total_item) {
-			$data['totals'][] = [
-				'title' => $total_item['title'],
-				'text'  => $this->currency->format($total_item['value'], $this->session->data['currency'])
-			];
+			// Load cart model to get totals
+			$this->load->model('checkout/cart');
+			($this->model_checkout_cart->getTotals)($totals, $taxes, $total);
+
+			foreach ($totals as $result) {
+				$data['totals'][] = [
+					'title' => $result['title'],
+					'text'  => $this->currency->format($result['value'], $this->session->data['currency'])
+				];
+			}
 		}
 
 		$data['remove'] = $this->url->link('checkout/cart.remove', 'language=' . $this->config->get('config_language'));

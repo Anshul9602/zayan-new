@@ -1545,3 +1545,149 @@ Backtrace: 2
 File: C:\xampp\htdocs\zyannew\index.php
 Line: 20
 Function: require_once
+2025-09-09 12:40:38 - PHP Warning:  rename(C:\xampp\htdocs\zyannew\storage\cache\template\ef\ef75E0.tmp,C:/xampp/htdocs/zyannew/storage/cache/template/ef/ef75fbcac2c4d5d124ff62064c5b5c0cded87b1de562972e449fd6c41424beb0.php): Access is denied (code: 5) in C:\xampp\htdocs\zyannew\system\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
+2025-09-09 12:40:38 - Error: Failed to write cache file "C:/xampp/htdocs/zyannew/storage/cache/template/ef/ef75fbcac2c4d5d124ff62064c5b5c0cded87b1de562972e449fd6c41424beb0.php".
+File: C:\xampp\htdocs\zyannew\system\vendor\twig\twig\src\Cache\FilesystemCache.php
+Line: 76
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\vendor\twig\twig\src\Environment.php
+Line: 411
+Class: Twig\Cache\FilesystemCache
+Function: write
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\vendor\twig\twig\src\Environment.php
+Line: 371
+Class: Twig\Environment
+Function: loadTemplate
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\vendor\twig\twig\src\Environment.php
+Line: 334
+Class: Twig\Environment
+Function: load
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 123
+Class: Twig\Environment
+Function: render
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 58
+Class: Opencart\System\Library\Template\Twig
+Function: render
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 187
+Class: Opencart\System\Library\Template
+Function: render
+
+Backtrace: 6
+File: C:\xampp\htdocs\zyannew\catalog\controller\common\header.php
+Line: 105
+Class: Opencart\System\Engine\Loader
+Function: view
+
+Backtrace: 7
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 112
+Class: Opencart\Catalog\Controller\Common\Header
+Function: index
+
+Backtrace: 8
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 42
+Class: Opencart\System\Engine\Loader
+Function: controller
+
+Backtrace: 9
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 10
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 11
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 04:58:37 - Error: 3 arguments are required, 2 given
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 409
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 409
+Function: sprintf
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: info
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 04:58:59 - Error: 3 arguments are required, 2 given
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 409
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 409
+Function: sprintf
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: info
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 04:59:24 - Error: Call to undefined method Opencart\System\Library\Cart\Cart::getTotals()
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 454
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: info
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 06:36:33 - PHP Warning:  unlink(C:/xampp/htdocs/zyannew/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1757489344): No such file or directory in C:\xampp\htdocs\zyannew\system\library\cache\file.php on line 79

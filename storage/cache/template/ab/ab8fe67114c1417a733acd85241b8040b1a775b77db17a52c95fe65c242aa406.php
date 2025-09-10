@@ -246,11 +246,15 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
                 <a href=\"";
             // line 86
             yield ($context["cart"] ?? null);
-            yield "\" class=\"tf-btn btn-white animate-btn animate-dark line\"> View Cart</a>
+            yield "\" class=\"tf-btn btn-white animate-btn animate-dark line\">";
+            yield ($context["text_cart"] ?? null);
+            yield "</a>
                 <a href=\"";
             // line 87
             yield ($context["checkout"] ?? null);
-            yield "\" class=\"tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center\">Checkout</a>
+            yield "\" class=\"tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center\">";
+            yield ($context["text_checkout"] ?? null);
+            yield "</a>
               </div>
             </div>
           </div>
@@ -289,7 +293,7 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
      */
     public function getDebugInfo(): array
     {
-        return array (  260 => 92,  252 => 87,  248 => 86,  241 => 81,  227 => 80,  221 => 78,  218 => 77,  201 => 76,  197 => 75,  192 => 72,  190 => 71,  184 => 67,  177 => 63,  173 => 62,  166 => 58,  161 => 55,  158 => 54,  145 => 49,  140 => 47,  136 => 46,  131 => 43,  120 => 41,  116 => 40,  108 => 37,  103 => 35,  99 => 33,  91 => 30,  86 => 29,  84 => 28,  80 => 26,  75 => 25,  73 => 24,  62 => 16,  52 => 9,  42 => 1,);
+        return array (  264 => 92,  254 => 87,  248 => 86,  241 => 81,  227 => 80,  221 => 78,  218 => 77,  201 => 76,  197 => 75,  192 => 72,  190 => 71,  184 => 67,  177 => 63,  173 => 62,  166 => 58,  161 => 55,  158 => 54,  145 => 49,  140 => 47,  136 => 46,  131 => 43,  120 => 41,  116 => 40,  108 => 37,  103 => 35,  99 => 33,  91 => 30,  86 => 29,  84 => 28,  80 => 26,  75 => 25,  73 => 24,  62 => 16,  52 => 9,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -379,8 +383,8 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
             </div>
             <div class=\"tf-mini-cart-bottom-wrap\">
               <div class=\"tf-mini-cart-view-checkout\">
-                <a href=\"{{ cart }}\" class=\"tf-btn btn-white animate-btn animate-dark line\"> View Cart</a>
-                <a href=\"{{ checkout }}\" class=\"tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center\">Checkout</a>
+                <a href=\"{{ cart }}\" class=\"tf-btn btn-white animate-btn animate-dark line\">{{ text_cart }}</a>
+                <a href=\"{{ checkout }}\" class=\"tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center\">{{ text_checkout }}</a>
               </div>
             </div>
           </div>
