@@ -81,7 +81,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
                                             </li>
                                             <li>
                                                 <a href=\"https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA\" target=\"_blank\" class=\"social-youtube\">
-                                                    <span class=\"icon\"><i class=\"fa fa-youtube\"></i></span>
+                                                    <span class=\"icon\"><i class=\"fab fa-youtube\"></i></span>
                                                 </a>
                                             </li>
                                            
@@ -479,7 +479,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
                                             </li>
                                             <li>
                                                 <a href=\"https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA\" target=\"_blank\" class=\"social-youtube\">
-                                                    <span class=\"icon\"><i class=\"fa fa-youtube\"></i></span>
+                                                    <span class=\"icon\"><i class=\"fab fa-youtube\"></i></span>
                                                 </a>
                                             </li>
                                            
@@ -784,6 +784,6 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
         </div>
     </div>
 </body></html>
-", "catalog/view/template/common/footer.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\footer.twig");
+", "catalog/view/template/common/footer.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\footer.twig");
     }
 }

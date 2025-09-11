@@ -87,7 +87,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
   <link rel=\"stylesheet\" href=\"assets/css/swiper-bundle.min.css\">
   <link rel=\"stylesheet\" href=\"assets/css/animate.css\">
   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/styles.css\">
-  
+  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css\">
   <script src=\"catalog/view/javascript/common.js\" type=\"text/javascript\"></script>
   
   ";
@@ -362,7 +362,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
   <link rel=\"stylesheet\" href=\"assets/css/swiper-bundle.min.css\">
   <link rel=\"stylesheet\" href=\"assets/css/animate.css\">
   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/styles.css\">
-  
+  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css\">
   <script src=\"catalog/view/javascript/common.js\" type=\"text/javascript\"></script>
   
   {% if icon %}
@@ -484,6 +484,6 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
 
   <main>
   
-", "catalog/view/template/common/header.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\header.twig");
+", "catalog/view/template/common/header.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\header.twig");
     }
 }

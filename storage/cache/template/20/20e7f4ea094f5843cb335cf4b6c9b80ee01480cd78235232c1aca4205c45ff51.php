@@ -142,24 +142,24 @@ class __TwigTemplate_978ffbeb658d1e51a2152564b3a9dd4e96255fdd9ba80dd6acc7fd16c5b
                                  <ul class=\"list-hor\">
                                     <li class=\"wg-cls hover-img\">
                                        <a href=\"#\" class=\"image img-style\">
-                                       <img src=\"assets/images/collections/cls-header-1.jpg\"
-                                          data-src=\"assets/images/collections/cls-header-1.jpg\" alt=\"Collection\" class=\"lazyload\">
+                                       <img src=\"assets/shop/1.jpg\"
+                                          data-src=\"assets/shop/1.jpg\" alt=\"Collection\" class=\"lazyload\" width=\"100%\" >
                                        </a>
                                        <div class=\"cls-content\">
-                                          <h4 class=\"tag_cls\">Bangle</h4>
+                                          <h4 class=\"tag_cls\">Earring</h4>
                                           <span class=\"br-line type-vertical\"></span>
-                                          <a href=\"index.php?route=product/category&language=en-gb&path=61_69\" class=\"tf-btn-line\"> Shop now </a>
+                                          <a href=\"index.php?route=product/category&language=en-gb&path=61_71\" class=\"tf-btn-line\"> Shop now </a>
                                        </div>
                                     </li>
                                     <li class=\"wg-cls hover-img\">
                                        <a href=\"#\" class=\"image img-style\">
-                                       <img src=\"assets/images/collections/cls-header-2.jpg\"
-                                          data-src=\"assets/images/collections/cls-header-2.jpg\" alt=\"Collection\" class=\"lazyload\">
+                                       <img src=\"assets/shop/2.jpg\"
+                                          data-src=\"assets/shop/2.jpg\" alt=\"Collection\" class=\"lazyload\"width=\"100%\">
                                        </a>
                                        <div class=\"cls-content\">
-                                          <h4 class=\"tag_cls\">Necklace</h4>
+                                          <h4 class=\"tag_cls\">Rings</h4>
                                           <span class=\"br-line type-vertical\"></span>
-                                          <a href=\"index.php?route=product/category&language=en-gb&path=61_69\" class=\"tf-btn-line\"> Shop now </a>
+                                          <a href=\"index.php?route=product/category&language=en-gb&path=61_74\" class=\"tf-btn-line\"> Shop now </a>
                                        </div>
                                     </li>
                                  </ul>
@@ -249,24 +249,24 @@ class __TwigTemplate_978ffbeb658d1e51a2152564b3a9dd4e96255fdd9ba80dd6acc7fd16c5b
                                  <ul class=\"list-hor\">
                                     <li class=\"wg-cls hover-img\">
                                        <a href=\"#\" class=\"image img-style\">
-                                       <img src=\"assets/images/collections/cls-header-1.jpg\"
-                                          data-src=\"assets/images/collections/cls-header-1.jpg\" alt=\"Collection\" class=\"lazyload\">
+                                       <img src=\"assets/shop/1.jpg\"
+                                          data-src=\"assets/shop/1.jpg\" alt=\"Collection\" class=\"lazyload\" width=\"100%\" >
                                        </a>
                                        <div class=\"cls-content\">
-                                          <h4 class=\"tag_cls\">Bangle</h4>
+                                          <h4 class=\"tag_cls\">Earring</h4>
                                           <span class=\"br-line type-vertical\"></span>
-                                          <a href=\"index.php?route=product/category&language=en-gb&path=61_69\" class=\"tf-btn-line\"> Shop now </a>
+                                          <a href=\"index.php?route=product/category&language=en-gb&path=61_71\" class=\"tf-btn-line\"> Shop now </a>
                                        </div>
                                     </li>
                                     <li class=\"wg-cls hover-img\">
                                        <a href=\"#\" class=\"image img-style\">
-                                       <img src=\"assets/images/collections/cls-header-2.jpg\"
-                                          data-src=\"assets/images/collections/cls-header-2.jpg\" alt=\"Collection\" class=\"lazyload\">
+                                       <img src=\"assets/shop/2.jpg\"
+                                          data-src=\"assets/shop/2.jpg\" alt=\"Collection\" class=\"lazyload\"width=\"100%\">
                                        </a>
                                        <div class=\"cls-content\">
-                                          <h4 class=\"tag_cls\">Necklace</h4>
+                                          <h4 class=\"tag_cls\">Rings</h4>
                                           <span class=\"br-line type-vertical\"></span>
-                                          <a href=\"index.php?route=product/category&language=en-gb&path=61_69\" class=\"tf-btn-line\"> Shop now </a>
+                                          <a href=\"index.php?route=product/category&language=en-gb&path=61_74\" class=\"tf-btn-line\"> Shop now </a>
                                        </div>
                                     </li>
                                  </ul>
@@ -279,6 +279,6 @@ class __TwigTemplate_978ffbeb658d1e51a2152564b3a9dd4e96255fdd9ba80dd6acc7fd16c5b
 
 
 
-", "catalog/view/template/common/menu.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\menu.twig");
+", "catalog/view/template/common/menu.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\menu.twig");
     }
 }

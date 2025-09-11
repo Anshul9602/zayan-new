@@ -837,31 +837,23 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t</form>
 \t\t\t\t\t\t\t<ul class=\"tf-social-icon justify-content-center w-100\">
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/\" target=\"_blank\" class=\"social-facebook\">
+\t\t\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/zaynjewels/\" target=\"_blank\" class=\"social-facebook\">
 \t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
 \t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-fb\"></i>
 \t\t\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/\" target=\"_blank\" class=\"social-instagram\">
+\t\t\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/zaynjewels/\" target=\"_blank\" class=\"social-instagram\">
 \t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
 \t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-instagram-logo\"></i>
 \t\t\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"https://x.com/\" target=\"_blank\" class=\"social-x\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
-\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-x\"></i>
-\t\t\t\t\t\t\t\t\t\t</span>
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"https://www.tiktok.com/\" target=\"_blank\" class=\"social-tiktok\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
-\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-tiktok\"></i>
-\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t<a href=\"https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA\" target=\"_blank\" class=\"social-tiktok\">
+\t\t\t\t\t\t\t\t\t\t <span class=\"icon\"><i class=\"fab fa-youtube\"></i></span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
@@ -889,7 +881,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t</script>
 
 \t";
-        // line 574
+        // line 566
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -917,7 +909,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
      */
     public function getDebugInfo(): array
     {
-        return array (  893 => 574,  586 => 269,  558 => 246,  552 => 244,  547 => 242,  542 => 241,  540 => 240,  533 => 238,  522 => 230,  511 => 224,  500 => 218,  495 => 215,  487 => 212,  479 => 211,  475 => 210,  469 => 207,  466 => 206,  462 => 205,  448 => 194,  428 => 176,  408 => 169,  397 => 163,  391 => 161,  386 => 159,  381 => 158,  379 => 157,  372 => 155,  361 => 147,  350 => 141,  339 => 135,  334 => 132,  326 => 129,  318 => 128,  314 => 127,  308 => 124,  305 => 123,  301 => 122,  289 => 118,  272 => 117,  267 => 114,  249 => 110,  241 => 109,  238 => 108,  221 => 107,  208 => 96,  194 => 88,  187 => 86,  178 => 82,  174 => 81,  170 => 79,  166 => 78,  160 => 74,  146 => 66,  139 => 64,  130 => 60,  126 => 59,  122 => 57,  118 => 56,  105 => 45,  91 => 39,  87 => 38,  81 => 34,  77 => 33,  42 => 1,);
+        return array (  885 => 566,  586 => 269,  558 => 246,  552 => 244,  547 => 242,  542 => 241,  540 => 240,  533 => 238,  522 => 230,  511 => 224,  500 => 218,  495 => 215,  487 => 212,  479 => 211,  475 => 210,  469 => 207,  466 => 206,  462 => 205,  448 => 194,  428 => 176,  408 => 169,  397 => 163,  391 => 161,  386 => 159,  381 => 158,  379 => 157,  372 => 155,  361 => 147,  350 => 141,  339 => 135,  334 => 132,  326 => 129,  318 => 128,  314 => 127,  308 => 124,  305 => 123,  301 => 122,  289 => 118,  272 => 117,  267 => 114,  249 => 110,  241 => 109,  238 => 108,  221 => 107,  208 => 96,  194 => 88,  187 => 86,  178 => 82,  174 => 81,  170 => 79,  166 => 78,  160 => 74,  146 => 66,  139 => 64,  130 => 60,  126 => 59,  122 => 57,  118 => 56,  105 => 45,  91 => 39,  87 => 38,  81 => 34,  77 => 33,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -1444,31 +1436,23 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t\t\t\t\t</form>
 \t\t\t\t\t\t\t<ul class=\"tf-social-icon justify-content-center w-100\">
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/\" target=\"_blank\" class=\"social-facebook\">
+\t\t\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/zaynjewels/\" target=\"_blank\" class=\"social-facebook\">
 \t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
 \t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-fb\"></i>
 \t\t\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/\" target=\"_blank\" class=\"social-instagram\">
+\t\t\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/zaynjewels/\" target=\"_blank\" class=\"social-instagram\">
 \t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
 \t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-instagram-logo\"></i>
 \t\t\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"https://x.com/\" target=\"_blank\" class=\"social-x\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
-\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-x\"></i>
-\t\t\t\t\t\t\t\t\t\t</span>
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"https://www.tiktok.com/\" target=\"_blank\" class=\"social-tiktok\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
-\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-tiktok\"></i>
-\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t<a href=\"https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA\" target=\"_blank\" class=\"social-tiktok\">
+\t\t\t\t\t\t\t\t\t\t <span class=\"icon\"><i class=\"fab fa-youtube\"></i></span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
