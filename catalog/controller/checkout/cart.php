@@ -168,13 +168,14 @@ class Cart extends \Opencart\System\Engine\Controller {
 		$taxes = $this->cart->getTaxes();
 		$total = 0;
 
-		// Display prices
-		if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
-			($this->model_checkout_cart->getTotals)($totals, $taxes, $total);
+		// Always calculate totals so the view has data
+		($this->model_checkout_cart->getTotals)($totals, $taxes, $total);
 
-			foreach ($totals as $result) {
-				$data['totals'][] = ['text' => $price_status ? $this->currency->format($result['value'], $this->session->data['currency']) : ''] + $result;
-			}
+		foreach ($totals as $result) {
+			$data['totals'][] = [
+				'title' => $result['title'],
+				'text'  => $this->currency->format($result['value'], $this->session->data['currency'])
+			] + $result;
 		}
 
 		$data['modules'] = [];
@@ -198,7 +199,7 @@ class Cart extends \Opencart\System\Engine\Controller {
 		} else {
 			$data['continue'] = $this->url->link('common/home', 'language=' . $this->config->get('config_language'));
 		}
-
+		
 		return $this->load->view('checkout/cart_list', $data);
 	}
 

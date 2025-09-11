@@ -3,11 +3,11 @@
 define('APPLICATION', 'Admin');
 
 // HTTP
-define('HTTP_SERVER', 'http://localhost/zyannew/webuser/');
-define('HTTP_CATALOG', 'http://localhost/zyannew/');
+define('HTTP_SERVER', 'http://localhost/newzyan/webuser/');
+define('HTTP_CATALOG', 'http://localhost/newzyan/');
 
 // DIR
-define('DIR_OPENCART', 'C:/xampp/htdocs/zyannew/');
+define('DIR_OPENCART', 'C:/xampp/htdocs/newzyan/');
 define('DIR_APPLICATION', DIR_OPENCART . 'webuser/');
 define('DIR_EXTENSION', DIR_OPENCART . 'extension/');
 define('DIR_IMAGE', DIR_OPENCART . 'image/');

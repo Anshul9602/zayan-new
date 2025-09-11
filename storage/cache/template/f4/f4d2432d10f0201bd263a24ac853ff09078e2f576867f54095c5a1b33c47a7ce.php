@@ -107,7 +107,7 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
         <!-- /Page Title -->
         
         <!-- Section Product -->
-        <div class=\" pt-5\">
+        <div class=\" pt-2\">
             <div class=\"container\">
                 <div class=\"tf-shop-control\">
                     <div class=\"tf-control-filter\">
@@ -143,7 +143,7 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
                     </div>
                 </div>
                 <div class=\"wrapper-control-shop gridLayout-wrapper\">
-                    <div class=\"meta-filter-shop\">
+                    <div class=\"meta-filter-shop\" style=\"margin-bottom:5px;\">
                         <div id=\"product-count-grid\" class=\"count-text\"></div>
                         <div id=\"product-count-list\" class=\"count-text\"></div>
                         <div id=\"applied-filters\"></div>
@@ -654,7 +654,7 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
         <!-- /Page Title -->
         
         <!-- Section Product -->
-        <div class=\" pt-5\">
+        <div class=\" pt-2\">
             <div class=\"container\">
                 <div class=\"tf-shop-control\">
                     <div class=\"tf-control-filter\">
@@ -690,7 +690,7 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
                     </div>
                 </div>
                 <div class=\"wrapper-control-shop gridLayout-wrapper\">
-                    <div class=\"meta-filter-shop\">
+                    <div class=\"meta-filter-shop\" style=\"margin-bottom:5px;\">
                         <div id=\"product-count-grid\" class=\"count-text\"></div>
                         <div id=\"product-count-list\" class=\"count-text\"></div>
                         <div id=\"applied-filters\"></div>
@@ -1013,6 +1013,6 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
     updateAppliedFilters([]);
 });
 </script>
-", "catalog/view/template/product/category.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\product\\category.twig");
+", "catalog/view/template/product/category.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\product\\category.twig");
     }
 }

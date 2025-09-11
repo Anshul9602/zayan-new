@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2025 at 02:37 PM
+-- Generation Time: Sep 11, 2025 at 09:06 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -400,11 +400,6 @@ CREATE TABLE `oc_banner_image` (
 --
 
 INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `language_id`, `title`, `link`, `image`, `sort_order`) VALUES
-(111, 9, 1, 'Crafted to Sparkle\\n Elevate every occasion with our handpicked diamond masterpieces.', '/index.php?route=product/category&amp;language=en-gb&amp;path=60_68', 'catalog/banners/Zayn Lite in Color Stone.png', 0),
-(112, 9, 1, 'Timeless Beauty \\n we make every sparkle count', '/index.php?route=product/category&amp;language=en-gb&amp;path=60_67', 'catalog/banners/tennis-connection.jpg', 1),
-(116, 10, 1, 'Diamond Rings', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_74', 'catalog/products/0919RG White Side.jpg', 0),
-(117, 10, 1, 'Necklaces', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_72', 'catalog/products/109810NL18100B01ZZZ a.jpg', 0),
-(118, 10, 1, 'Earrings', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_71', 'catalog/products/0773ER RG a.jpg', 0),
 (119, 11, 1, 'FL', 'Robinson’s Jewelers/820 E Las Olas Blvd, Fort Lauderdale, FL 33301/+1 954-258-2246/Fort Lauderdale/11:00am-07:00pm', '', 1),
 (120, 11, 1, 'AZ', 'Oliver Smith Jeweler/8787 N Scottsdale Rd Suite 116, Scottsdale, AZ 85253/+1 480-607-4444/The Shops Gainey Village/10:00am-5:30pm', '', 2),
 (121, 11, 1, 'TX', 'Eaton Custom Jewelers/5200 McDermott Rd Ste 205, Plano, TX 75024/+1 972-335-6500/McDermott Rd/10:00am-05:00pm', '', 3),
@@ -432,7 +427,14 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `language_id`, `t
 (143, 11, 1, 'FL', 'Tilden Ross Jewelers/410 St Armands Cir, Sarasota, FL 34236/+1 941-388-3338/St. Armands Circle/10:00am-05:00pm', '', 25),
 (144, 11, 1, 'GA', 'Treasures Old &amp; New Jewelers/4330 Wrightsboro Rd, Grovetown, GA 30813/+1 706-391-6877/Grovetown/10:00am-06:00pm', '', 26),
 (145, 11, 1, 'NJ', 'Rainbow Gems/269 Livingston St Suite S, Northvale, NJ 07647/+1 201-767-7571/Northvale Square/11:00am-05:00pm', '', 27),
-(146, 11, 1, 'TX', 'William Noble Rare Jewels/8201 Preston Rd # 270, Dallas, TX 75225/+1 214-526-3890/Preston Sherry Plaza/10:00am-05:00pm', '', 28);
+(146, 11, 1, 'TX', 'William Noble Rare Jewels/8201 Preston Rd # 270, Dallas, TX 75225/+1 214-526-3890/Preston Sherry Plaza/10:00am-05:00pm', '', 28),
+(147, 9, 1, 'Crafted to Sparkle\\n Elevate every occasion with our handpicked diamond masterpieces.', '/index.php?route=product/category&amp;language=en-gb&amp;path=60_68', 'catalog/banners/zayn banner 3.jpg', 0),
+(154, 10, 1, 'Rings', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_74', 'catalog/products/0919RG White Side.jpg', 2),
+(155, 10, 1, 'Necklaces', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_72', 'catalog/products/products/104910NL18100B01ZZZ a.JPG', 5),
+(156, 10, 1, 'Earrings', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_71', 'catalog/products/0773ER RG a.jpg', 1),
+(157, 10, 1, 'Bangle', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_69', 'catalog/products/026510BG18120B01ZZZ.jpg', 3),
+(158, 10, 1, 'Pendant', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_73', 'catalog/products/102510NL18210B01ZZZ a.jpg', 4),
+(159, 10, 1, 'Bracelet', 'index.php?route=product/category&amp;language=en-gb&amp;path=61_70', 'catalog/products/0003BL1818YF01.jpg', 6);
 
 -- --------------------------------------------------------
 
@@ -546,6 +548,24 @@ CREATE TABLE `oc_category_filter` (
   `category_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `oc_category_filter`
+--
+
+INSERT INTO `oc_category_filter` (`category_id`, `filter_id`) VALUES
+(69, 92),
+(69, 93),
+(69, 94),
+(69, 112),
+(69, 115),
+(69, 136),
+(69, 137),
+(69, 138),
+(69, 139),
+(69, 140),
+(69, 141),
+(69, 142);
 
 -- --------------------------------------------------------
 
@@ -1314,14 +1334,14 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Pound Sterling', 'GBP', '£', '', 2, 0.74543418, 1, '2025-08-25 12:04:18'),
-(2, 'US Dollar', 'USD', '$', '', 2, 1.00000000, 1, '2025-08-25 12:04:18'),
-(3, 'Euro', 'EUR', '', '€', 2, 0.86147484, 1, '2025-08-25 12:04:18'),
-(4, 'Hong Kong Dollar', 'HKD', 'HK$', '', 2, 7.81788422, 0, '2025-08-25 12:04:18'),
-(5, 'Indian Rupee', 'INR', '₹', '', 2, 87.53704342, 0, '2025-08-25 12:04:18'),
+(1, 'Pound Sterling', 'GBP', '£', '', 2, 0.73765327, 1, '2025-09-10 12:44:44'),
+(2, 'US Dollar', 'USD', '$', '', 2, 1.00000000, 1, '2025-09-10 12:44:44'),
+(3, 'Euro', 'EUR', '', '€', 2, 0.85149864, 1, '2025-09-10 12:44:44'),
+(4, 'Hong Kong Dollar', 'HKD', 'HK$', '', 2, 7.78763624, 0, '2025-09-10 12:44:44'),
+(5, 'Indian Rupee', 'INR', '₹', '', 2, 88.16970368, 0, '2025-09-10 12:44:44'),
 (6, 'Russian Ruble', 'RUB', '', '₽', 2, 56.40360000, 0, '2018-02-16 12:00:00'),
-(7, 'Chinese Yuan Renminbi', 'CNY', '¥', '', 2, 7.17892833, 0, '2025-08-25 12:04:18'),
-(8, 'Australian Dollar', 'AUD', '$', '', 2, 1.55651275, 0, '2025-08-25 12:04:18');
+(7, 'Chinese Yuan Renminbi', 'CNY', '¥', '', 2, 7.12150886, 0, '2025-09-10 12:44:44'),
+(8, 'Australian Dollar', 'AUD', '$', '', 2, 1.51319823, 0, '2025-09-10 12:44:44');
 
 -- --------------------------------------------------------
 
@@ -1577,7 +1597,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/zyannew/', '', '2025-08-28 12:12:39');
+('::1', 0, 'http://localhost/newzyan/index.php?route=product/category&amp;language=en-gb&amp;path=61_69', 'http://localhost/newzyan/index.php?route=common/home&amp;language=en-gb', '2025-09-11 07:05:21');
 
 -- --------------------------------------------------------
 
@@ -3762,7 +3782,74 @@ INSERT INTO `oc_filter` (`filter_id`, `filter_group_id`, `sort_order`) VALUES
 (73, 2, 15),
 (74, 2, 16),
 (75, 2, 17),
-(76, 1, 4);
+(76, 1, 4),
+(81, 6, 1),
+(82, 6, 2),
+(83, 6, 3),
+(84, 5, 1),
+(85, 5, 2),
+(86, 5, 3),
+(87, 2, 1),
+(88, 2, 2),
+(89, 2, 0),
+(90, 2, 0),
+(91, 1, 0),
+(92, 1, 0),
+(93, 1, 0),
+(94, 1, 0),
+(95, 3, 0),
+(96, 3, 0),
+(97, 3, 0),
+(98, 3, 0),
+(99, 3, 0),
+(100, 3, 0),
+(101, 3, 0),
+(102, 3, 0),
+(103, 3, 0),
+(104, 3, 0),
+(105, 3, 0),
+(106, 3, 0),
+(107, 3, 0),
+(108, 3, 0),
+(109, 3, 0),
+(110, 3, 0),
+(111, 3, 0),
+(112, 3, 0),
+(113, 3, 0),
+(114, 3, 0),
+(115, 3, 0),
+(116, 3, 0),
+(117, 7, 0),
+(118, 7, 0),
+(119, 7, 0),
+(120, 7, 0),
+(121, 7, 0),
+(122, 7, 0),
+(123, 4, 0),
+(124, 4, 0),
+(125, 4, 0),
+(126, 4, 0),
+(127, 4, 0),
+(128, 4, 0),
+(129, 4, 0),
+(130, 4, 0),
+(131, 4, 0),
+(132, 4, 0),
+(133, 2, 0),
+(134, 2, 0),
+(135, 2, 0),
+(136, 2, 0),
+(137, 2, 0),
+(138, 2, 0),
+(139, 2, 0),
+(140, 2, 0),
+(141, 2, 0),
+(142, 2, 0),
+(143, 2, 0),
+(144, 2, 0),
+(145, 2, 0),
+(146, 2, 0),
+(147, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -3775,6 +3862,79 @@ CREATE TABLE `oc_filter_description` (
   `language_id` int(11) NOT NULL,
   `name` varchar(64) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `oc_filter_description`
+--
+
+INSERT INTO `oc_filter_description` (`filter_id`, `language_id`, `name`) VALUES
+(81, 1, 'White'),
+(82, 1, 'Brown'),
+(83, 1, 'Black'),
+(84, 1, 'Princess'),
+(85, 1, 'Single Cut'),
+(86, 1, 'Full Cut'),
+(87, 1, 'Fancy Yellow'),
+(88, 1, 'Peridot'),
+(89, 1, 'Turquoise'),
+(90, 1, 'Tanzanite'),
+(91, 1, 'Stainless Steel'),
+(92, 1, 'Rose'),
+(93, 1, 'Yellow'),
+(94, 1, 'White'),
+(95, 1, 'Cross Collection'),
+(96, 1, 'Infinity Ring'),
+(97, 1, 'Tennis Connection'),
+(98, 1, 'Floral Earrings'),
+(99, 1, 'Chain Earrings'),
+(100, 1, 'Jacket Earrings'),
+(101, 1, 'Bezel Set Earrings'),
+(102, 1, 'Drop Earrings'),
+(103, 1, 'Stud Earring'),
+(104, 1, 'Halo Ring'),
+(105, 1, 'Bezel Set Ring'),
+(106, 1, 'Anniversary Ring'),
+(107, 1, 'Engagement Ring'),
+(108, 1, 'Stack Rings'),
+(109, 1, 'Halo Earring'),
+(110, 1, 'Hoops'),
+(111, 1, 'Cross Pendant'),
+(112, 1, 'Bezel Set Bangles'),
+(113, 1, 'Bezel Set Necklace'),
+(114, 1, 'Zayn Lite'),
+(115, 1, 'Cuff Bangles'),
+(116, 1, 'Infinity Pendant'),
+(117, 1, 'Pendants'),
+(118, 1, 'Bangles'),
+(119, 1, 'Necklaces'),
+(120, 1, 'Bracelets'),
+(121, 1, 'Earrings'),
+(122, 1, 'Rings'),
+(123, 1, 'Round'),
+(124, 1, 'Princess'),
+(125, 1, 'Emerald'),
+(126, 1, 'Asscher'),
+(127, 1, 'Cushion'),
+(128, 1, 'Marquise'),
+(129, 1, 'Radiant'),
+(130, 1, 'Oval Shape'),
+(131, 1, 'Pear Shape'),
+(132, 1, 'Heart'),
+(133, 1, 'Opal'),
+(134, 1, 'Citrine'),
+(135, 1, 'Aquamarine'),
+(136, 1, 'Pink Sapphire'),
+(137, 1, 'Emerald'),
+(138, 1, 'Ruby'),
+(139, 1, 'Blue Sapphire'),
+(140, 1, 'Yellow Sapphire'),
+(141, 1, 'Garnet'),
+(142, 1, 'Diamond'),
+(143, 1, 'Topaz'),
+(144, 1, 'Amethyst'),
+(145, 1, 'Tourmaline'),
+(146, 1, 'Black Diamond'),
+(147, 1, 'Tsavorite');
 
 -- --------------------------------------------------------
 
@@ -6713,6 +6873,99 @@ CREATE TABLE `oc_product_filter` (
   `product_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `oc_product_filter`
+--
+
+INSERT INTO `oc_product_filter` (`product_id`, `filter_id`) VALUES
+(103, 94),
+(103, 112),
+(103, 115),
+(103, 142),
+(110, 94),
+(110, 142),
+(164, 94),
+(164, 142),
+(167, 94),
+(169, 94),
+(169, 142),
+(171, 94),
+(171, 142),
+(172, 94),
+(172, 112),
+(172, 142),
+(174, 93),
+(174, 142),
+(215, 94),
+(215, 115),
+(215, 142),
+(220, 94),
+(220, 115),
+(220, 142),
+(231, 94),
+(231, 115),
+(231, 142),
+(246, 94),
+(246, 142),
+(269, 94),
+(269, 142),
+(270, 138),
+(270, 140),
+(270, 141),
+(284, 93),
+(284, 138),
+(580, 94),
+(580, 142),
+(645, 92),
+(645, 142),
+(678, 93),
+(678, 94),
+(678, 142),
+(730, 94),
+(730, 142),
+(731, 94),
+(731, 139),
+(732, 94),
+(732, 136),
+(781, 94),
+(781, 142),
+(910, 142),
+(926, 94),
+(926, 142),
+(927, 94),
+(1113, 94),
+(1113, 142),
+(1151, 92),
+(1151, 115),
+(1151, 142),
+(1157, 94),
+(1157, 142),
+(1204, 94),
+(1204, 142),
+(1207, 94),
+(1207, 142),
+(1208, 94),
+(1208, 142),
+(1236, 93),
+(1236, 94),
+(1236, 142),
+(1256, 93),
+(1256, 142),
+(1264, 94),
+(1264, 142),
+(1265, 92),
+(1265, 142),
+(1425, 94),
+(1425, 142),
+(1435, 94),
+(1435, 142),
+(1436, 94),
+(1436, 142),
+(1437, 94),
+(1437, 142),
+(1439, 94),
+(1439, 142);
 
 -- --------------------------------------------------------
 
@@ -16746,7 +16999,10 @@ INSERT INTO `oc_product_report` (`product_report_id`, `product_id`, `store_id`, 
 (79, 1050, 0, '::1', '', '2025-08-27 10:28:39'),
 (80, 1050, 0, '::1', '', '2025-08-27 10:29:32'),
 (81, 1050, 0, '::1', '', '2025-08-27 10:30:07'),
-(82, 1050, 0, '::1', '', '2025-08-27 10:30:17');
+(82, 1050, 0, '::1', '', '2025-08-27 10:30:17'),
+(83, 203, 0, '183.83.55.146', '', '2025-08-29 12:52:20'),
+(84, 346, 0, '183.83.54.22', '', '2025-09-10 04:48:18'),
+(85, 103, 0, '183.83.54.22', '', '2025-09-10 12:48:21');
 
 -- --------------------------------------------------------
 
@@ -19807,9 +20063,10 @@ CREATE TABLE `oc_session` (
 --
 
 INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
-('41a4bc8200f0c9b80275f97b08', '{\"currency\":\"USD\"}', '2025-08-29 11:19:33'),
-('8d4556dbcdd8202199b47a318c', '{\"currency\":\"USD\"}', '2025-08-29 12:15:42'),
-('8df29bcf5f12cf496148a16988', '{\"currency\":\"USD\"}', '2025-08-29 12:11:18');
+('1638a185da4329c9f374dc4bdc', '{\"currency\":\"USD\"}', '2025-09-12 04:56:09'),
+('66b26b95e7d63b6f5ba4698ede', '{\"currency\":\"USD\",\"user_id\":\"1\",\"user_token\":\"97d278b2adf23c1eee0a26df2ca62d0d\"}', '2025-09-12 07:05:21'),
+('afeb9062c3f2697eabb62cc9f5', '{\"currency\":\"USD\",\"upload_token\":\"a349c8b8be4714e82b6b86f2589c3910\",\"review_token\":\"e4f21d03cef04d0551154811a46a67f2\",\"user_id\":\"1\",\"user_token\":\"0804d13ef99be303903df9f3a02e76fa\"}', '2025-09-12 05:22:08'),
+('e8b397f97a63d062f4b6fc65de', '{\"currency\":\"USD\"}', '2025-09-11 07:22:28');
 
 -- --------------------------------------------------------
 
@@ -20063,8 +20320,10 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (2785, 0, 'config', 'config_error_display', '1', 0),
 (2786, 0, 'config', 'config_error_log', '1', 0),
 (2787, 0, 'config', 'config_error_filename', 'error.log', 0),
-(2789, 0, 'export_import', 'export_import_settings_use_option_id', 'on', 0),
-(2790, 0, 'export_import', 'export_import_settings_use_option_value_id', 'on', 0);
+(2791, 0, 'export_import', 'export_import_settings_use_option_id', 'on', 0),
+(2792, 0, 'export_import', 'export_import_settings_use_option_value_id', 'on', 0),
+(2793, 0, 'export_import', 'export_import_settings_use_filter_group_id', 'on', 0),
+(2794, 0, 'export_import', 'export_import_settings_use_filter_id', 'on', 0);
 
 -- --------------------------------------------------------
 
@@ -20608,7 +20867,11 @@ INSERT INTO `oc_user_login` (`user_login_id`, `user_id`, `ip`, `user_agent`, `da
 (13, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-25 05:22:18'),
 (14, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-25 09:29:10'),
 (15, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-26 09:41:54'),
-(16, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-27 10:08:41');
+(16, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-27 10:08:41'),
+(17, 1, '183.83.55.146', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-08-29 12:51:20'),
+(18, 1, '183.83.54.22', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-09-10 12:43:22'),
+(19, 1, '183.83.54.22', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-09-10 12:54:22'),
+(20, 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', '2025-09-11 05:54:48');
 
 -- --------------------------------------------------------
 
@@ -30044,13 +30307,13 @@ ALTER TABLE `oc_banner`
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
+  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 
 --
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `oc_category`
@@ -30224,7 +30487,7 @@ ALTER TABLE `oc_extension_path`
 -- AUTO_INCREMENT for table `oc_filter`
 --
 ALTER TABLE `oc_filter`
-  MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
 -- AUTO_INCREMENT for table `oc_filter_group`
@@ -30422,7 +30685,7 @@ ALTER TABLE `oc_product_option_value`
 -- AUTO_INCREMENT for table `oc_product_report`
 --
 ALTER TABLE `oc_product_report`
-  MODIFY `product_report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `product_report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT for table `oc_product_reward`
@@ -30476,7 +30739,7 @@ ALTER TABLE `oc_seo_url`
 -- AUTO_INCREMENT for table `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2791;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2795;
 
 --
 -- AUTO_INCREMENT for table `oc_startup`
@@ -30608,7 +30871,7 @@ ALTER TABLE `oc_user_group`
 -- AUTO_INCREMENT for table `oc_user_login`
 --
 ALTER TABLE `oc_user_login`
-  MODIFY `user_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `user_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `oc_user_token`

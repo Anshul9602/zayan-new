@@ -131,7 +131,7 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
         }
         // line 40
         yield "\t\t</div>
-\t\t<ul class=\"product-color_list\">
+\t\t<ul class=\"product-color_list d-none\">
 \t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
 \t\t\t\t<span class=\"tooltip color-filter\">Pink</span>
 \t\t\t\t<span class=\"swatch-value bg-hot-pink\"></span>
@@ -221,7 +221,7 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 \t\t\t\t<span class=\"price-new h6\">{{ price }}</span>
 \t\t\t{% endif %}
 \t\t</div>
-\t\t<ul class=\"product-color_list\">
+\t\t<ul class=\"product-color_list d-none\">
 \t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
 \t\t\t\t<span class=\"tooltip color-filter\">Pink</span>
 \t\t\t\t<span class=\"swatch-value bg-hot-pink\"></span>
@@ -241,6 +241,6 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 \t\t</ul>
 \t</div>
 </div>
-", "catalog/view/template/product/thumb.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\product\\thumb.twig");
+", "catalog/view/template/product/thumb.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\product\\thumb.twig");
     }
 }

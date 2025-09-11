@@ -142,8 +142,12 @@ class __TwigTemplate_2797cd30584966d9322802910576470938b60e71da8bba06c3f42dc26d8
         yield ($context["column_right"] ?? null);
         yield "
 </div>
+
+
+
+
 ";
-        // line 38
+        // line 42
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -171,7 +175,7 @@ class __TwigTemplate_2797cd30584966d9322802910576470938b60e71da8bba06c3f42dc26d8
      */
     public function getDebugInfo(): array
     {
-        return array (  147 => 38,  142 => 36,  137 => 34,  130 => 30,  125 => 29,  119 => 27,  117 => 26,  114 => 25,  110 => 23,  104 => 21,  101 => 20,  95 => 18,  92 => 17,  86 => 15,  84 => 14,  81 => 13,  79 => 12,  74 => 10,  70 => 9,  66 => 8,  63 => 7,  52 => 5,  48 => 4,  42 => 1,);
+        return array (  151 => 42,  142 => 36,  137 => 34,  130 => 30,  125 => 29,  119 => 27,  117 => 26,  114 => 25,  110 => 23,  104 => 21,  101 => 20,  95 => 18,  92 => 17,  86 => 15,  84 => 14,  81 => 13,  79 => 12,  74 => 10,  70 => 9,  66 => 8,  63 => 7,  52 => 5,  48 => 4,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -213,6 +217,10 @@ class __TwigTemplate_2797cd30584966d9322802910576470938b60e71da8bba06c3f42dc26d8
   </div>
   {{ column_right }}
 </div>
+
+
+
+
 {{ footer }}
 ", "catalog/view/template/checkout/checkout.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\checkout\\checkout.twig");
     }

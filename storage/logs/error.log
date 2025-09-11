@@ -1691,3 +1691,481 @@ File: C:\xampp\htdocs\zyannew\index.php
 Line: 20
 Function: require_once
 2025-09-10 06:36:33 - PHP Warning:  unlink(C:/xampp/htdocs/zyannew/storage/cache/cache.store.f4e59086bfd5322620dbd8df0fc3e3e6.1757489344): No such file or directory in C:\xampp\htdocs\zyannew\system\library\cache\file.php on line 79
+2025-09-10 11:53:23 - Error: Error: Could not load template checkout/cart!
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 125
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 58
+Class: Opencart\System\Library\Template\Twig
+Function: render
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 187
+Class: Opencart\System\Library\Template
+Function: render
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 44
+Class: Opencart\System\Engine\Loader
+Function: view
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 11:54:17 - Error: Error: Could not load template checkout/cart!
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 125
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 58
+Class: Opencart\System\Library\Template\Twig
+Function: render
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 187
+Class: Opencart\System\Library\Template
+Function: render
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 44
+Class: Opencart\System\Engine\Loader
+Function: view
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 11:54:19 - Error: Error: Could not load template checkout/cart!
+File: C:\xampp\htdocs\zyannew\system\library\template\twig.php
+Line: 125
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\template.php
+Line: 58
+Class: Opencart\System\Library\Template\Twig
+Function: render
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 187
+Class: Opencart\System\Library\Template
+Function: render
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 44
+Class: Opencart\System\Engine\Loader
+Function: view
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 11:57:39 - PHP Warning:  Undefined array key "file" in C:\xampp\htdocs\zyannew\catalog\controller\startup\error.php on line 78
+2025-09-10 11:57:39 - PHP Warning:  Undefined array key "line" in C:\xampp\htdocs\zyannew\catalog\controller\startup\error.php on line 79
+2025-09-10 11:57:39 - Error: Class "Controller" not found
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 2
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 79
+Function: include_once
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 26
+Class: Opencart\System\Engine\Autoloader
+Function: load
+
+Backtrace: 2
+File: 
+Line: 
+Class: Opencart\System\Engine\Autoloader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\factory.php
+Line: 44
+Function: class_exists
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 81
+Class: Opencart\System\Engine\Factory
+Function: controller
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 6
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 11:58:16 - PHP Warning:  Undefined array key "file" in C:\xampp\htdocs\zyannew\catalog\controller\startup\error.php on line 78
+2025-09-10 11:58:16 - PHP Warning:  Undefined array key "line" in C:\xampp\htdocs\zyannew\catalog\controller\startup\error.php on line 79
+2025-09-10 11:58:16 - Error: Class "Controller" not found
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 2
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 79
+Function: include_once
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\autoloader.php
+Line: 26
+Class: Opencart\System\Engine\Autoloader
+Function: load
+
+Backtrace: 2
+File: 
+Line: 
+Class: Opencart\System\Engine\Autoloader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\factory.php
+Line: 44
+Function: class_exists
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 81
+Class: Opencart\System\Engine\Factory
+Function: controller
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 6
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 12:01:24 - Error: Opencart\Catalog\Controller\Checkout\Cart::getList(): Return value must be of type string, array returned
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 202
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 112
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 33
+Class: Opencart\System\Engine\Loader
+Function: controller
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 12:02:39 - Error: Opencart\Catalog\Controller\Checkout\Cart::getList(): Return value must be of type string, array returned
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 202
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 112
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: getList
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 33
+Class: Opencart\System\Engine\Loader
+Function: controller
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 12:04:20 - Error: Opencart\Catalog\Model\Tool\Image::resize(): Argument #2 ($width) must be of type int, string given, called in C:\xampp\htdocs\zyannew\system\engine\loader.php on line 343
+File: C:\xampp\htdocs\zyannew\catalog\model\tool\image.php
+Line: 23
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 343
+Class: Opencart\Catalog\Model\Tool\Image
+Function: resize
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 100
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 12:04:56 - Error: Opencart\Catalog\Model\Tool\Image::resize(): Argument #2 ($width) must be of type int, string given, called in C:\xampp\htdocs\zyannew\system\engine\loader.php on line 343
+File: C:\xampp\htdocs\zyannew\catalog\model\tool\image.php
+Line: 23
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 343
+Class: Opencart\Catalog\Model\Tool\Image
+Function: resize
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 100
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 12:04:58 - Error: Opencart\Catalog\Model\Tool\Image::resize(): Argument #2 ($width) must be of type int, string given, called in C:\xampp\htdocs\zyannew\system\engine\loader.php on line 343
+File: C:\xampp\htdocs\zyannew\catalog\model\tool\image.php
+Line: 23
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 343
+Class: Opencart\Catalog\Model\Tool\Image
+Function: resize
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 100
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 12:05:52 - Error: imagecreatetruecolor(): Argument #1 ($width) must be greater than 0
+File: C:\xampp\htdocs\zyannew\system\library\image.php
+Line: 198
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\image.php
+Line: 198
+Function: imagecreatetruecolor
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\catalog\model\tool\image.php
+Line: 60
+Class: Opencart\System\Library\Image
+Function: resize
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 343
+Class: Opencart\Catalog\Model\Tool\Image
+Function: resize
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 103
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 6
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 7
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once
+2025-09-10 12:05:54 - Error: imagecreatetruecolor(): Argument #1 ($width) must be greater than 0
+File: C:\xampp\htdocs\zyannew\system\library\image.php
+Line: 198
+
+Backtrace: 0
+File: C:\xampp\htdocs\zyannew\system\library\image.php
+Line: 198
+Function: imagecreatetruecolor
+
+Backtrace: 1
+File: C:\xampp\htdocs\zyannew\catalog\model\tool\image.php
+Line: 60
+Class: Opencart\System\Library\Image
+Function: resize
+
+Backtrace: 2
+File: C:\xampp\htdocs\zyannew\system\engine\loader.php
+Line: 343
+Class: Opencart\Catalog\Model\Tool\Image
+Function: resize
+
+Backtrace: 3
+File: C:\xampp\htdocs\zyannew\system\engine\proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 4
+File: C:\xampp\htdocs\zyannew\catalog\controller\checkout\cart.php
+Line: 103
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 5
+File: C:\xampp\htdocs\zyannew\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Checkout\Cart
+Function: index
+
+Backtrace: 6
+File: C:\xampp\htdocs\zyannew\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 7
+File: C:\xampp\htdocs\zyannew\index.php
+Line: 20
+Function: require_once

@@ -11,87 +11,164 @@
   {% if attention %}
     <div class="alert alert-info"><i class="fa-solid fa-circle-info"></i> {{ attention }} <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
   {% endif %}
-  <h1>{{ heading_title }}{% if weight %} ({{ weight }}){% endif %}</h1>
-  <div id="output-cart" class="table-responsive">
-    <table class="table table-bordered">
+  <h1 class="text-center">{{ heading_title }}{% if weight %} ({{ weight }}){% endif %}</h1>
+  <div id="output-cart" class="table-responsive mt-5">
+    <table class="table align-middle">
       <thead>
-        <tr>
+        <tr style="border-top:0.5px solid #000;border-bottom:0.5px solid #000;">
           <th class="text-center">{{ column_image }}</th>
           <th>{{ column_name }}</th>
-          <th>{{ column_quantity }}</th>
+          <th class="text-center">{{ column_quantity }}</th>
           <th class="text-end">{{ column_price }}</th>
           <th class="text-end">{{ column_total }}</th>
+          <th class="text-center"></th>
         </tr>
       </thead>
       <tbody>
         {% for product in products %}
-          <tr>
-            <td class="text-center">{% if product.thumb %}<a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-thumbnail"/ width="200px"></a>{% endif %}</td>
-            <td class="text-start text-wrap"><a href="{{ product.href }}">{{ product.name }}</a>{% if not product.stock %} <span class="text-danger">***</span>{% endif %}
+          <tr style="border-bottom:0.5px solid gray;" data-cart-id="{{ product.cart_id }}">
+            <td class="text-center">{% if product.thumb %}<a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-thumbnail" style="max-width:80px"/></a>{% endif %}</td>
+            <td class="text-start text-wrap">
+              <a href="{{ product.href }}">{{ product.name }}</a>{% if not product.stock %} <span class="text-danger">***</span>{% endif %}
               <ul class="list-unstyled mb-0">
-                <li>
-                  <small> - {{ text_model }}: {{ product.model }}</small>
-                </li>
                 {% for option in product.option %}
-                  <li>
-                    <small> - {{ option.name }}: {{ option.value }}</small>
-                  </li>
+                  <li><small>{{ option.name }}: {{ option.value }}</small></li>
                 {% endfor %}
                 {% if product.subscription %}
-                  <li>
-                    <small> - {{ text_subscription }}: {{ product.subscription }}</small>
-                  </li>
-                {% endif %}
-                {% if product.reward %}
-                  <li>
-                    <small> - {{ text_points }}: {{ product.reward }}</small>
-                  </li>
+                  <li><small>{{ text_subscription }}: {{ product.subscription }}</small></li>
                 {% endif %}
               </ul>
             </td>
-            <td>
-              <form method="post" data-oc-target="#shopping-cart">
-                <div class="input-group">
-                  <input type="text" name="quantity" value="{{ product.quantity }}" size="1" class="form-control{% if product.minimum %} is-invalid{% endif %}"/>
-                  <input type="hidden" name="key" value="{{ product.cart_id }}"/>
-                  <button type="submit" formaction="{{ edit }}" data-bs-toggle="tooltip" title="{{ button_update }}" class="btn btn-primary"><i class="fa-solid fa-rotate"></i></button>
-                  <a href="{{ product.remove }}" data-bs-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger"><i class="fa-solid fa-circle-xmark"></i></a>
-                </div>
-              </form>
+            <td class="text-center">
+              <div class="input-group justify-content-center" style="width:120px; margin:auto;">
+                <button class="btn btn-outline-secondary btn-sm js-qty-dec" type="button">-</button>
+                <input type="text" class="form-control form-control-sm text-center js-qty-input{% if product.minimum %} is-invalid{% endif %}" value="{{ product.quantity }}" readonly />
+                <button class="btn btn-outline-secondary btn-sm js-qty-inc" type="button">+</button>
+              </div>
               {% if product.minimum %}
                 <small class="invalid-feedback d-block">{{ product.minimum }}</small>
-              {% endif %}</td>
-            <td class="text-end">{{ product.price }}</td>
-            <td class="text-end">{{ product.total }}</td>
+              {% endif %}
+            </td>
+            <td class="text-end">{{ product.price_text }}</td>
+            <td class="text-end">{{ product.total_text }}</td>
+            <td class="text-center">
+              <button class="btn btn-link text-danger p-0 js-remove" type="button" title="{{ button_remove }}">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </button>
+            </td>
           </tr>
         {% endfor %}
       </tbody>
-      <tfoot id="checkout-total">
-        {% for total in totals %}
-          <tr>
-            <td colspan="4" class="text-end"><strong>{{ total.title }}</strong></td>
-            <td class="text-end">{{ total.text }}</td>
-          </tr>
-        {% endfor %}
-      </tfoot>
+     
     </table>
   </div>
 
-  {% if modules %}
-    <h2>{{ text_next }}</h2>
-    <p>{{ text_next_choice }}</p>
-    <div id="accordion" class="accordion">
-      {% for module in modules %}
-        {{ module }}
-      {% endfor %}
-    </div>
-  {% endif %}
+  
 
   <br/>
-  <div class="row">
-    <div class="col"><a href="{{ continue }}" class="btn btn-light">{{ button_shopping }}</a></div>
-    <div class="col text-end"><a href="{{ checkout }}" class="btn btn-primary">{{ button_checkout }}</a></div>
+  
+
+  <div class="row mt-4 pb-4">
+    <div class="col-lg-7 mb-3">
+      <label class="form-label">Use Coupon Code</label>
+      <div class="input-group">
+        <input type="text" id="input-coupon" style="box-shadow: none;" class="form-control" placeholder="Enter your coupon here"/>
+        <button id="button-coupon" class="btn btn-primary" style="background-color: #241B68;border-color: #241B68;">Apply Coupon</button>
+      </div>
+      <div class="form-text">{{ text_next_choice|default('') }}</div>
+    </div>
+    <div class="col-lg-5">
+      <table class="table mb-0">
+        <tbody>
+          {% for total in totals %}
+            <tr>
+              <td class="text-end"><strong>{{ total.title }}</strong></td>
+              <td class="text-end" style="width:150px">{{ total.text }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div class="text-end mt-3">
+        <a href="{{ checkout }}" class="btn btn-primary"style="background-color: #241B68;border-color: #241B68;">{{ button_checkout }}</a>
+      </div>
+    </div>
   </div>
+
+  <script>
+  (function(){
+    function refreshCart(){
+      fetch('index.php?route=checkout/cart.list')
+        .then(function(r){return r.text()})
+        .then(function(html){
+          var wrap = document.createElement('div');
+          wrap.innerHTML = html;
+          var inner = wrap.querySelector('#output-cart');
+          if(inner){
+            document.querySelector('#output-cart').replaceWith(inner);
+          } else {
+            location.reload();
+          }
+        });
+    }
+    document.addEventListener('click', function(e){
+      var row = e.target.closest('tr[data-cart-id]');
+      if(!row) return;
+      var key = row.getAttribute('data-cart-id');
+      if(e.target.closest('.js-qty-inc') || e.target.closest('.js-qty-dec')){
+        var input = row.querySelector('.js-qty-input');
+        var qty = parseInt(input.value || '1', 10);
+        qty += e.target.closest('.js-qty-inc') ? 1 : -1;
+        if(qty < 1) qty = 1;
+        var form = new FormData();
+        form.append('key', key);
+        form.append('quantity', qty);
+        fetch('index.php?route=checkout/cart.edit', {method:'POST', body: form})
+          .then(function(){ refreshCart(); });
+      }
+      if(e.target.closest('.js-remove')){
+        fetch('index.php?route=checkout/cart.remove&key=' + encodeURIComponent(key))
+          .then(function(){ refreshCart(); });
+      }
+    });
+  })();
+  </script>
+  <script>
+  (function(){
+    var btn = document.getElementById('button-coupon');
+    if(btn){
+      btn.addEventListener('click', function(){
+        var code = (document.getElementById('input-coupon') || {}).value || '';
+        var form = new FormData();
+        form.append('coupon', code);
+        fetch('index.php?route=extension/total/coupon/coupon', { method: 'POST', body: form })
+          .then(function(r){ return r.json(); })
+          .then(function(json){
+            if(json && json.redirect){
+              location = json.redirect;
+              return;
+            }
+            if(json && json.error){
+              alert(json.error);
+            }
+            // Refresh the cart list to update totals
+            fetch('index.php?route=checkout/cart.list')
+              .then(function(r){return r.text()})
+              .then(function(html){
+                var wrap = document.createElement('div');
+                wrap.innerHTML = html;
+                var inner = wrap.querySelector('#output-cart');
+                if(inner){
+                  document.querySelector('#output-cart').replaceWith(inner);
+                } else {
+                  location.reload();
+                }
+              });
+          })
+          .catch(function(err){ alert(err); });
+      });
+    }
+  })();
+  </script>
 {% else %}
   <h1>{{ heading_title }}</h1>
   <p>{{ text_no_results }}</p>

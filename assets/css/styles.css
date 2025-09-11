@@ -13469,7 +13469,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .testimonial-V01 .tes_text {
   margin-bottom: 24px;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   display: -webkit-box;
   overflow: hidden;
@@ -13682,7 +13682,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-bottom: 20px;
 }
 .testimonial-V04 .tes_text {
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   display: -webkit-box;
   overflow: hidden;
