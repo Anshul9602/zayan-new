@@ -445,7 +445,12 @@
                         
                         // Update product description
                         const descEl = quickViewModal.querySelector('.product-infor-sub');
-                        if (descEl) descEl.innerHTML = product.description || '<p>Product description not available.</p>';
+                        if (descEl) {
+                            // Strip HTML tags and display as plain text
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = product.description || 'Product description not available.';
+                            descEl.textContent = tempDiv.textContent || tempDiv.innerText || 'Product description not available.';
+                        }
                         
                         // Update product images
                         const imgs = quickViewModal.querySelectorAll('.tf-product-media img');
@@ -460,7 +465,7 @@
                         const priceOld = quickViewModal.querySelector('.price-old');
                         const priceNew = quickViewModal.querySelector('.price-new');
                         if (priceOld && product.price) priceOld.textContent = product.price;
-                        if (priceNew && (product.special || product.price)) priceNew.textContent = product.special || product.price;
+                        if (priceNew && (product.special || product.price)) priceNew.textContent = "$" + (product.special || product.price);
                         
                         // Update quantity
                         const quantityInput = quickViewModal.querySelector('.quantity-product');

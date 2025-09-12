@@ -13,15 +13,32 @@
       color: #fff;
       border: 1px solid #000 !important;
    }
+   .color {
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px !important;
+      border: 1px solid #000;
+   }
+   .color.active {
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #000 !important;
+   }
+   @media (max-width: 768px) {
+          .tf-sticky-btn-atc .title, .tf-sticky-btn-atc .tf-sticky-atc-product {
+        display: block !important;
+    }
+   }
 </style>
 
 <!-- Page Title -->
-<section class="s-page-title style-2">
+<section class="s-page-title style-2" style="padding-top:100px;">
    <div class="container">
       <div class="content" style="padding-bottom: 19px;">
          <ul class="breadcrumbs-page">
             {% for breadcrumb in breadcrumbs %}
-            <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+            <li class="breadcrumb-item" style="display:flex;"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
             {% endfor %}
          </ul>
       </div>
@@ -94,202 +111,166 @@
             <div class="col-md-6">
                <div class="tf-product-info-wrap position-relative">
                   <form id="form-product">
-                     <input type="hidden" id="input-product-id" name="product_id" value="{{ product_id }}">
-                     {% if options and options|length > 0 %}
-                     {% for option in options %}
-                     {% if option.product_option_value and option.product_option_value|length > 0 %}
-                     {% if option.type == 'select' %}
-                     <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.product_option_value[0].product_option_value_id }}" id="input-option-{{ option.product_option_id }}">
-                     {% elseif option.type == 'radio' %}
-                     <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.product_option_value[0].product_option_value_id }}" id="input-option-{{ option.product_option_id }}">
-                     {% endif %}
-                     {% endif %}
-                     {% endfor %}
-                     {% endif %}
-                     <div class="tf-zoom-main sticky-top"></div>
-                  <div class="tf-product-info-list other-image-zoom">
-                     <h2 class="product-info-name">{{ heading_title }}</h2>
-                     <div class="product-info-meta">
-                        <div class="rating">
-                           <div class="d-flex gap-4">
-                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M14 5.4091L8.913 5.07466L6.99721 0.261719L5.08143 5.07466L0 5.4091L3.89741 8.7184L2.61849 13.7384L6.99721 10.9707L11.376 13.7384L10.097 8.7184L14 5.4091Z"
-                                    fill="#EF9122" />
-                              </svg>
-                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M14 5.4091L8.913 5.07466L6.99721 0.261719L5.08143 5.07466L0 5.4091L3.89741 8.7184L2.61849 13.7384L6.99721 10.9707L11.376 13.7384L10.097 8.7184L14 5.4091Z"
-                                    fill="#EF9122" />
-                              </svg>
-                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M14 5.4091L8.913 5.07466L6.99721 0.261719L5.08143 5.07466L0 5.4091L3.89741 8.7184L2.61849 13.7384L6.99721 10.9707L11.376 13.7384L10.097 8.7184L14 5.4091Z"
-                                    fill="#EF9122" />
-                              </svg>
-                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M14 5.4091L8.913 5.07466L6.99721 0.261719L5.08143 5.07466L0 5.4091L3.89741 8.7184L2.61849 13.7384L6.99721 10.9707L11.376 13.7384L10.097 8.7184L14 5.4091Z"
-                                    fill="#EF9122" />
-                              </svg>
-                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M14 5.4091L8.913 5.07466L6.99721 0.261719L5.08143 5.07466L0 5.4091L3.89741 8.7184L2.61849 13.7384L6.99721 10.9707L11.376 13.7384L10.097 8.7184L14 5.4091Z"
-                                    fill="#EF9122" />
-                              </svg>
-                           </div>
-                           <div class="reviews text-main">(3.671 review)</div>
-                        </div>
-                     </div>
-                     <div class="tf-product-heading">
-                        <div class="product-info-price price-wrap">
-                           <span class="price-new price-on-sale h2 fw-4">{{ price }}</span>
-                          </div>
-                     </div>
+							<input type="hidden" id="input-product-id" name="product_id" value="{{ product_id }}">
+							{% if options and options|length > 0 %}
+								{% for option in options %}
+									{% if option.product_option_value and option.product_option_value|length > 0 %}
+										{% if option.type == 'select' %}
+											<input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.product_option_value[0].product_option_value_id }}" id="input-option-{{ option.product_option_id }}">
+										{% elseif option.type == 'radio' %}
+											<input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.product_option_value[0].product_option_value_id }}" id="input-option-{{ option.product_option_id }}">
+										{% endif %}
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+							<div class="tf-zoom-main sticky-top"></div>
+							<div class="tf-product-info-list other-image-zoom">
+								<h2 class="product-info-name">{{ heading_title }}</h2>
+								<ul class="tf-product-cate-sku">
+									<li class="item-cate-sku h6">
+										<span class="label fw-6 text-black">SKU:</span>
+										<a href="#" class="value link text-main-2">{{ model }}</a>
+									</li>
 
-                     
+								</ul>
+
+								<div class="tf-product-heading mt-2">
+									<div class="product-info-price price-wrap">
+										<span class="price-new price-on-sale h2 fw-4">{{ tax }}</span>
+									</div>
+								</div>
 
 
-                     {% if options and options|length > 0 %}
-                     <div class="tf-product-variant">
-                        {% for option in options %}
-                        {% if option.product_option_value and option.product_option_value|length > 0 %}
-                        <div class="variant-picker-item variant-{{ option.type }}">
-                           <div class="variant-picker-label">
-                              <div class="h4 fw-semibold">
-                                 {{ option.name }}
-                                 <span class="variant-picker-label-value value-current-option">{{ option.product_option_value[0].name }}</span>
-                              </div>
-                             
-                           </div>
-                           <div class="variant-picker-values mt-3">
-                              {% for option_value in option.product_option_value %}
-                              {% if option.type == 'select' %}
-                              <span class="size-btn {% if loop.first %}active{% endif %}" data-size="{{ option_value.name }}">{{ option_value.name }}</span>
-                              {% elseif option.type == 'radio' %}
-                              <div class="hover-tooltip tooltip-bot color-btn{% if loop.first %} active{% endif %}" data-color="{{ option_value.name|lower }}">
-                                 <span class="check-color bg-color-option"></span>
-                                 <span class="tooltip">{{ option_value.name }}</span>
-                              </div>
-                              {% endif %}
-                              {% endfor %}
-                           </div>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                     </div>
-                     {% endif %}
+								{% if options and options|length > 0 %}
+									<div class="tf-product-variant">
+										{% for option in options %}
+											{% if option.product_option_value and option.product_option_value|length > 0 %}
+												<div class="variant-picker-item variant-{{ option.type }}">
+													<div class="variant-picker-label">
+														<div class="h4 fw-semibold">
+															{{ option.name }}
+															<span class="variant-picker-label-value value-current-option">
+																{{ option.product_option_value[0].name }}</span>
+														</div>
 
-                     <div class="tf-product-variant">
-                        <div class="variant-picker-item variant-{{ option.type }}">
-                           <div class="variant-picker-label">
-                              <div class="h4 fw-semibold">
-                                 {{ option.name }}
-                                 <span class="variant-picker-label-value value-current-option">{{ option.product_option_value[0].name }}</span>
-                              </div>
+													</div>
+													<div class="variant-picker-values mt-3">
+														{% for option_value in option.product_option_value %}
+															{% if option.type == 'select' %}
+																<span class="size-btn {% if loop.first %}active{% endif %}" data-size="{{ option_value.name }}">{{ option_value.name }}</span>
+															{% elseif option.type == 'radio' %}
+																<span class="color {% if loop.first %}active{% endif %}" data-color="{{ option_value.name }}">{{ option_value.name }}</span>
+															{% endif %}
+														{% endfor %}
+													</div>
+												</div>
+											{% endif %}
+										{% endfor %}
+									</div>
+								{% endif %}
 
-                           </div>
-                           <div class="variant-picker-values mt-3">
-                              {% for option_value in option.product_option_value %}
-                              {% if option.type == 'select' %}
-                              <span class="size-btn {% if loop.first %}active{% endif %}" data-size="{{ option_value.name }}">{{ option_value.name }}</span>
-                              {% elseif option.type == 'radio' %}
-                              <div class="hover-tooltip tooltip-bot color-btn{% if loop.first %} active{% endif %}" data-color="{{ option_value.name|lower }}">
-                                 <span class="check-color bg-color-option"></span>
-                                 <span class="tooltip">{{ option_value.name }}</span>
-                              </div>
-                              {% endif %}
-                              {% endfor %}
-                           </div>
-                        </div>
-                     </div>
+								<div class="tf-product-variant">
+									<div class="variant-picker-item variant-{{ option.type }}">
+										<div class="variant-picker-label">
+											<div class="h4 fw-semibold">
+												{{ option.name }}
+												<span class="variant-picker-label-value value-current-option">{{ option.product_option_value[0].name }}</span>
+											</div>
+
+										</div>
+										<div class="variant-picker-values mt-3">
+											{% for option_value in option.product_option_value %}
+												{% if option.type == 'select' %}
+													<span class="size-btn {% if loop.first %}active{% endif %}" data-size="{{ option_value.name }}">{{ option_value.name }}</span>
+												{% elseif option.type == 'radio' %}
+													<span class="color {% if loop.first %}active{% endif %}" data-color="{{ option_value.name }}">{{ option_value.name }}</span>
+												{% endif %}
+											{% endfor %}
+										</div>
+									</div>
+								</div>
 
 
-                     <div class="tf-product-total-quantity">
-                        <div class="group-btn">
-                           <div class="wg-quantity">
-                              <button class="btn-quantity btn-decrease">
-                              <i class="icon icon-minus"></i>
-                              </button>
-                              <input class="quantity-product" type="text" name="quantity" value="{{ minimum }}">
-                              <button class="btn-quantity btn-increase">
-                              <i class="icon icon-plus"></i>
-                              </button>
-                           </div>
-                           <button type="submit" id="button-cart" class="tf-btn animate-btn btn-add-to-cart">
-                           ADD TO CART
-                           <i class="icon icon-shopping-cart-simple"></i>
-                           </button>
-                           <button type="button" class="hover-tooltip box-icon btn-add-wishlist" data-url="index.php?route=account/wishlist.add&language={{ language }}" data-product-id="{{ product_id }}">
-                           <span class="icon icon-heart"></span>
-                           <span class="tooltip">Add to Wishlist</span>
-                           </button>
-                        </div>
-                        <a href="checkout.html" class="tf-btn btn-outline w-100">BUY IT NOW</a>
-                     </div>
+								<div class="tf-product-total-quantity">
+									<div class="group-btn">
+										<div class="wg-quantity">
+											<button class="btn-quantity btn-decrease">
+												<i class="icon icon-minus"></i>
+											</button>
+											<input class="quantity-product" type="text" name="quantity" value="{{ minimum }}">
+											<button class="btn-quantity btn-increase">
+												<i class="icon icon-plus"></i>
+											</button>
+										</div>
+										<button type="submit" id="button-cart" onclick class="tf-btn animate-btn btn-add-to-cart">
+											ADD TO CART
+											<i class="icon icon-shopping-cart-simple"></i>
+										</button>
+										<button type="button" class="hover-tooltip box-icon btn-add-wishlist" data-url="index.php?route=account/wishlist.add&language={{ language }}" data-product-id="{{ product_id }}">
+											<span class="icon icon-heart"></span>
+											<span class="tooltip">Add to Wishlist</span>
+										</button>
+									</div>
+									<a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn btn-outline w-100">BUY IT NOW</a>
+								</div>
 
 
-                     <div class="tf-product-extra-link">
-                        <a href="#compareColor" data-bs-toggle="modal" class="product-extra-icon link">
-                        <i class="icon icon-swatches"></i>Compare color
-                        </a>
-                        <a href="#askQuestion" data-bs-toggle="modal" class="product-extra-icon link">
-                        <i class="icon icon-ques"></i>Ask a question
-                        </a>
-                        <a href="#shipAndDelivery" data-bs-toggle="modal" class="product-extra-icon link">
-                        <i class="icon icon-truck"></i>Delivery & Return
-                        </a>
-                        <a href="#shareWith" data-bs-toggle="modal" class="product-extra-icon link">
-                        <i class="icon icon-share"></i>Share
-                        </a>
-                     </div>
-                     <div class="tf-product-delivery-return">
-                        <div class="product-delivery">
-                           <div class="icon icon-clock-cd"></div>
-                           <p class="h6">Estimate delivery times: <span class="fw-7 text-black">7-20 days</span> (International),
-                              <span class="fw-7 text-black">2-4 days</span> (United States).
-                           </p>
-                        </div>
-                        <div class="product-delivery return">
-                           <div class="icon icon-compare"></div>
-                           <p class="h6">Return within <span class="fw-7 text-black">30 days</span> of purchase. Duties & taxes are
-                              non-refundable.
-                           </p>
-                        </div>
-                     </div>
-                     <div class="tf-product-trust-seal">
-                        <p class="h6 text-seal">Guarantee Safe Checkout:</p>
-                        <ul class="list-card">
-                           <li class="card-item">
-                              <img src="assets/images/payment/visa.png" alt="card">
-                           </li>
-                           <li class="card-item">
-                              <img src="assets/images/payment/master-card.png" alt="card">
-                           </li>
-                           <li class="card-item">
-                              <img src="assets/images/payment/amex.png" alt="card">
-                           </li>
-                           <li class="card-item">
-                              <img src="assets/images/payment/discover.png" alt="card">
-                           </li>
-                           <li class="card-item">
-                              <img src="assets/images/payment/paypal.png" alt="card">
-                           </li>
-                        </ul>
-                     </div>
-                     <ul class="tf-product-cate-sku">
-                        <li class="item-cate-sku h6">
-                           <span class="label fw-6 text-black">SKU:</span>
-                           <a href="#" class="value link text-main-2">Themesflat_#KT_Yellow_7</a>
-                        </li>
-                        <li class="item-cate-sku h6">
-                           <span class="label fw-6 text-black">Categories:</span>
-                           <span class="value text-main-2">Daily Wear Rings, Ring diamond, Anniversary rings, Solitaire Rings, Half
-                           Eternity Rings</span>
-                        </li>
-                     </ul>
-                  </div>
-                  </form>
+								<div class="tf-product-extra-link">
+									<a href="#compareColor" data-bs-toggle="modal" class="product-extra-icon link">
+										<i class="icon icon-swatches"></i>Compare color
+									</a>
+									<a href="#askQuestion" data-bs-toggle="modal" class="product-extra-icon link">
+										<i class="icon icon-ques"></i>Ask a question
+									</a>
+									<a href="#shipAndDelivery" data-bs-toggle="modal" class="product-extra-icon link">
+										<i class="icon icon-truck"></i>Delivery & Return
+									</a>
+									<a href="#shareWith" data-bs-toggle="modal" class="product-extra-icon link">
+										<i class="icon icon-share"></i>Share
+									</a>
+								</div>
+								<div class="tf-product-delivery-return">
+									<div class="product-delivery">
+										<div class="icon icon-clock-cd"></div>
+										<p class="h6">Estimate delivery times:
+											<span class="fw-7 text-black">7-20 days</span>
+											(International),
+											<span class="fw-7 text-black">2-4 days</span>
+											(United States).
+										</p>
+									</div>
+									<div class="product-delivery return">
+										<div class="icon icon-compare"></div>
+										<p class="h6">Return within
+											<span class="fw-7 text-black">30 days</span>
+											of purchase. Duties & taxes are
+																																	                              non-refundable.
+										</p>
+									</div>
+								</div>
+								<div class="tf-product-trust-seal">
+									<p class="h6 text-seal">Guarantee Safe Checkout:</p>
+									<ul class="list-card">
+										<li class="card-item">
+											<img src="assets/images/payment/visa.png" alt="card">
+										</li>
+										<li class="card-item">
+											<img src="assets/images/payment/master-card.png" alt="card">
+										</li>
+										<li class="card-item">
+											<img src="assets/images/payment/amex.png" alt="card">
+										</li>
+										<li class="card-item">
+											<img src="assets/images/payment/discover.png" alt="card">
+										</li>
+										<li class="card-item">
+											<img src="assets/images/payment/paypal.png" alt="card">
+										</li>
+									</ul>
+								</div>
+
+							</div>
+						</form>
                </div>
             </div>
             <!-- /Product Info -->
@@ -659,146 +640,7 @@
                                                 <input type="hidden" name="product_id" value="{{ product_id }}"/>
                                              </form>
                                              <br/>
-                                             <div id="product">
-                                                <form id="form-product">
-                                                   {% if options %}
-                                                   <hr>
-                                                   <h3>{{ text_option }}</h3>
-                                                   <div>
-                                                      {% for option in options %}
-                                                      {% if option.type == 'select' %}
-                                                      <div class="mb-3{% if option.required %} required{% endif %}">
-                                                         <label for="input-option-{{ option.product_option_id }}" class="form-label">{{ option.name }}</label>
-                                                         <select name="option[{{ option.product_option_id }}]" id="input-option-{{ option.product_option_id }}" class="form-select">
-                                                            <option value="">{{ text_select }}</option>
-                                                            {% for option_value in option.product_option_value %}
-                                                            <option value="{{ option_value.product_option_value_id }}">{{ option_value.name }}
-                                                               {% if option_value.price %}
-                                                               ({{ option_value.price_prefix }}{{ option_value.price }})
-                                                               {% endif %}
-                                                            </option>
-                                                            {% endfor %}
-                                                         </select>
-                                                         <div id="error-option-{{ option.product_option_id }}" class="invalid-feedback"></div>
-                                                      </div>
-                                                      {% endif %}
-                                                      {% if option.type == 'radio' %}
-                                                      <div class="mb-3{% if option.required %} required{% endif %}">
-                                                         <label class="form-label">{{ option.name }}</label>
-                                                         <div id="input-option-{{ option.product_option_id }}">
-                                                            {% for option_value in option.product_option_value %}
-                                                            <div class="form-check">
-                                                               <input type="radio" name="option[{{ option.product_option_id }}]" value="{{ option_value.product_option_value_id }}" id="input-option-value-{{ option_value.product_option_value_id }}" class="form-check-input"/>
-                                                               <label for="input-option-value-{{ option_value.product_option_value_id }}" class="form-check-label">
-                                                               {% if option_value.image %}
-                                                               <img src="{{ option_value.image }}" alt="{{ option_value.name }} {% if option_value.price %}{{ option_value.price_prefix }} {{ option_value.price }}{% endif %}" class="img-thumbnail"/>{% endif %}
-                                                               {{ option_value.name }}
-                                                               {% if option_value.price %}
-                                                               ({{ option_value.price_prefix }}{{ option_value.price }})
-                                                               {% endif %}</label>
-                                                            </div>
-                                                            {% endfor %}
-                                                         </div>
-                                                         <div id="error-option-{{ option.product_option_id }}" class="invalid-feedback"></div>
-                                                      </div>
-                                                      {% endif %}
-                                                      {% if option.type == 'checkbox' %}
-                                                      <div class="mb-3{% if option.required %} required{% endif %}">
-                                                         <label class="form-label">{{ option.name }}</label>
-                                                         <div id="input-option-{{ option.product_option_id }}">
-                                                            {% for option_value in option.product_option_value %}
-                                                            <div class="form-check">
-                                                               <input type="checkbox" name="option[{{ option.product_option_id }}][]" value="{{ option_value.product_option_value_id }}" id="input-option-value-{{ option_value.product_option_value_id }}" class="form-check-input"/> 
-                                                               <label for="input-option-value-{{ option_value.product_option_value_id }}" class="form-check-label">
-                                                               {% if option_value.image %}
-                                                               <img src="{{ option_value.image }}" alt="{{ option_value.name }} {% if option_value.price %}{{ option_value.price_prefix }} {{ option_value.price }}{% endif %}" class="img-thumbnail"/>{% endif %}
-                                                               {{ option_value.name }}
-                                                               {% if option_value.price %}
-                                                               ({{ option_value.price_prefix }}{{ option_value.price }})
-                                                               {% endif %}</label>
-                                                            </div>
-                                                            {% endfor %}
-                                                         </div>
-                                                         <div id="error-option-{{ option.product_option_id }}" class="invalid-feedback"></div>
-                                                      </div>
-                                                      {% endif %}
-                                                      {% if option.type == 'text' %}
-                                                      <div class="mb-3{% if option.required %} required{% endif %}">
-                                                         <label for="input-option-{{ option.product_option_id }}" class="form-label">{{ option.name }}</label> <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" placeholder="{{ option.name }}" id="input-option-{{ option.product_option_id }}" class="form-control"/>
-                                                         <div id="error-option-{{ option.product_option_id }}" class="invalid-feedback"></div>
-                                                      </div>
-                                                      {% endif %}
-                                                      {% if option.type == 'textarea' %}
-                                                      <div class="mb-3{% if option.required %} required{% endif %}">
-                                                         <label for="input-option-{{ option.product_option_id }}" class="form-label">{{ option.name }}</label> 
-                                                         <textarea name="option[{{ option.product_option_id }}]" rows="5" placeholder="{{ option.name }}" id="input-option-{{ option.product_option_id }}" class="form-control">{{ option.value }}</textarea>
-                                                         <div id="error-option-{{ option.product_option_id }}" class="invalid-feedback"></div>
-                                                      </div>
-                                                      {% endif %}
-                                                      {% if option.type == 'file' %}
-                                                      <div class="mb-3{% if option.required %} required{% endif %}">
-                                                         <label for="button-upload-{{ option.product_option_id }}" class="form-label">{{ option.name }}</label>
-                                                         <div>
-                                                            <button type="button" id="button-upload-{{ option.product_option_id }}" data-oc-toggle="upload" data-oc-url="{{ upload }}" data-oc-target="#input-option-{{ option.product_option_id }}" data-oc-size-max="{{ config_file_max_size }}" data-oc-size-error="{{ error_upload_size }}" class="btn btn-light btn-block"><i class="fa-solid fa-upload"></i> {{ button_upload }}</button>
-                                                            <input type="hidden" name="option[{{ option.product_option_id }}]" value="" id="input-option-{{ option.product_option_id }}"/>
-                                                         </div>
-                                                         <div id="error-option-{{ option.product_option_id }}" class="invalid-feedback"></div>
-                                                      </div>
-                                                      {% endif %}
-                                                      {% if option.type == 'date' %}
-                                                      <div class="mb-3{% if option.required %} required{% endif %}">
-                                                         <label for="input-option-{{ option.product_option_id }}" class="form-label">{{ option.name }}</label>
-                                                         <input type="date" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" id="input-option-{{ option.product_option_id }}" class="form-control"/>
-                                                         <div id="error-option-{{ option.product_option_id }}" class="invalid-feedback"></div>
-                                                      </div>
-                                                      {% endif %}
-                                                      {% if option.type == 'time' %}
-                                                      <div class="mb-3{% if option.required %} required{% endif %}">
-                                                         <label for="input-option-{{ option.product_option_id }}" class="form-label">{{ option.name }}</label>
-                                                         <input type="time" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" id="input-option-{{ option.product_option_id }}" class="form-control"/>
-                                                         <div id="error-option-{{ option.product_option_id }}" class="invalid-feedback"></div>
-                                                      </div>
-                                                      {% endif %}
-                                                      {% if option.type == 'datetime' %}
-                                                      <div class="mb-3{% if option.required %} required{% endif %}">
-                                                         <label for="input-option-{{ option.product_option_id }}" class="form-label">{{ option.name }}</label>
-                                                         <input type="datetime-local" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" id="input-option-{{ option.product_option_id }}" class="form-control"/>
-                                                         <div id="error-option-{{ option.product_option_id }}" class="invalid-feedback"></div>
-                                                      </div>
-                                                      {% endif %}
-                                                      {% endfor %}
-                                                   </div>
-                                                   {% endif %}
-                                                   {% if subscription_plans %}
-                                                   <hr/>
-                                                   <h3>{{ text_subscription }}</h3>
-                                                   <div class="mb-3 required">
-                                                      <select name="subscription_plan_id" id="input-subscription" class="form-select">
-                                                         <option value="">{{ text_select }}</option>
-                                                         {% for subscription_plan in subscription_plans %}
-                                                         <option value="{{ subscription_plan.subscription_plan_id }}">{{ subscription_plan.name }}</option>
-                                                         {% endfor %}
-                                                      </select>
-                                                      {% for subscription_plan in subscription_plans %}
-                                                      <div id="subscription-description-{{ subscription_plan.subscription_plan_id }}" class="form-text subscription d-none">{{ subscription_plan.description }}</div>
-                                                      {% endfor %}
-                                                      <div id="error-subscription" class="invalid-feedback"></div>
-                                                   </div>
-                                                   {% endif %}
-                                                   <div class="mb-3">
-                                                      <div class="input-group">
-                                                         <div class="input-group-text">{{ entry_qty }}</div>
-                                                         <input type="text" name="quantity" value="{{ minimum }}" size="2" id="input-quantity" class="form-control"/>
-                                                         <button type="submit" id="button-cart" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
-                                                      </div>
-                                                      <input type="hidden" name="product_id" value="{{ product_id }}" id="input-product-id"/>
-                                                      <div id="error-quantity" class="form-text"></div>
-                                                   </div>
-                                                   {% if minimum > 1 %}
-                                                   <div class="alert alert-warning"><i class="fa-solid fa-circle-info"></i> {{ text_minimum }}</div>
-                                                   {% endif %}
-                                                </form>
-                                             </div>
+                                             
                                           </div>
                                        </div>
                                        <ul class="nav nav-tabs">
@@ -1428,111 +1270,54 @@
       </div>
    </div>
 </section>
+
+
 <!-- /Related -->
-<script type="text/javascript"><!--
-   // Handle option selection
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function() {
+console.log('ready');
    $(document).on('click', '.size-btn', function() {
        var size = $(this).data('size');
-       
-       // Update the label
        $(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(size);
-       
-       // Update active state
        $(this).siblings().removeClass('active');
        $(this).addClass('active');
    });
-   
-   $(document).on('click', '.color-btn', function() {
+
+   $(document).on('click', '.color', function() {
        var color = $(this).data('color');
-       
-       // Update the label
        $(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(color);
-       
-       // Update active state
        $(this).siblings().removeClass('active');
        $(this).addClass('active');
    });
-   
-   $('#input-subscription').on('change', function(e) {
-       var element = this;
-   
+
+   $('#input-subscription').on('change', function() {
        $('.subscription').addClass('d-none');
-   
-       $('#subscription-description-' + $(element).val()).removeClass('d-none');
+       $('#subscription-description-' + $(this).val()).removeClass('d-none');
    });
-   
+
    $('#form-product').on('submit', function(e) {
        e.preventDefault();
-   
        $.ajax({
-           url: 'index.php?route=checkout/cart.add&language={{ language }}',
+           url: 'index.php?route=checkout/cart.add&language=en-gb', // change language
            type: 'post',
            data: $('#form-product').serialize(),
            dataType: 'json',
-           contentType: 'application/x-www-form-urlencoded',
-           cache: false,
-           processData: false,
            beforeSend: function() {
-               $('#button-cart').button('loading');
+               $('#button-cart').prop("disabled", true).text("Loading...");
            },
            complete: function() {
-               $('#button-cart').button('reset');
+               $('#button-cart').prop("disabled", false).text("Add to Cart");
            },
            success: function(json) {
                console.log(json);
-   
-               $('#form-product').find('.is-invalid').removeClass('is-invalid');
-               $('#form-product').find('.invalid-feedback').removeClass('d-block');
-   
-               if (json['error']) {
-                   for (key in json['error']) {
-                       $('#input-' + key.replaceAll('_', '-')).addClass('is-invalid').find('.form-control, .form-select, .form-check-input, .form-check-label').addClass('is-invalid');
-                       $('#error-' + key.replaceAll('_', '-')).html(json['error'][key]).addClass('d-block');
-                   }
-               }
-   
-               if (json['success']) {
-                   // ✅ Show success alert
-                   $('#alert').prepend('<div class="alert alert-success alert-dismissible"><i class="fa-solid fa-circle-check"></i> ' + json['success'] + ' <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>');
-   
-                   // ✅ Load updated cart HTML into your offcanvas cart wrapper
-                   $('.tf-mini-cart-wrap').load('index.php?route=common/cart.info&language={{ language }}', function() {
-                       // ✅ Once loaded, open the cart drawer
-                       var cartDrawer = new bootstrap.Offcanvas(document.getElementById('shoppingCart'));
-                       cartDrawer.show();
-                   });
-                   $(".count").text(json['count']);
-               }
            },
            error: function(xhr, ajaxOptions, thrownError) {
-               console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+               console.log(thrownError + "\n" + xhr.statusText + "\n" + xhr.responseText);
            }
        });
    });
-   
-   
-   $(document).on('click', '.offline-wishlist', function (e) {
-       e.preventDefault();
-   
-       // Get the product ID
-       const productId = $('#input-product-id').val();
-   
-       // Get existing wishlist from localStorage or initialize it
-       let wishlist = JSON.parse(localStorage.getItem('offline_wishlist')) || [];
-   
-       // Add only if not already in wishlist
-       if (!wishlist.includes(productId)) {
-           wishlist.push(productId);
-           localStorage.setItem('offline_wishlist', JSON.stringify(wishlist));
-           $('.wishlist-count').text(JSON.parse(localStorage.getItem('offline_wishlist'))?.length || 0);
-   
-       } else {
-           alert('Product already in your offline wishlist.');
-       }
-   });
-   
-   
-   
-   //-->
+
+});
 </script>
 {{ footer }}

@@ -62,6 +62,20 @@ class Home extends \Opencart\System\Engine\Controller {
 				}
 			}
 		
+			$data['banners3'] = [];
+	
+			$results = $this->model_design_banner->getBanner(12);
+	
+			foreach ($results as $result) {
+				if (is_file(DIR_IMAGE . html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'))) {
+					$data['banners3'][] = [
+						'title' => $result['title'],
+						'link'  => $result['link'],
+						'image' => $this->model_tool_image->resize(html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'), '912', '704')
+					];
+				}
+			}
+		
 			
 		// Product
 		$this->load->model('catalog/category');

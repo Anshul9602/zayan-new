@@ -60,7 +60,7 @@ class Wishlist extends \Opencart\System\Engine\Controller {
 		$product_options = $this->model_catalog_product->getOptions($product_id);
 		$product_info['all_options'] = [];
 		$product_info['color_options'] = [];
-		
+		$product_info['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 		foreach ($product_options as $option) {
 			$option_data = [
 				'product_option_id' => $option['product_option_id'],

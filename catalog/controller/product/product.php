@@ -23,7 +23,8 @@ class Product extends \Opencart\System\Engine\Controller {
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
-
+	
+			
 		if ($product_info) {
 			$this->document->setTitle($product_info['meta_title']);
 			$this->document->setDescription($product_info['meta_description']);
@@ -467,7 +468,9 @@ class Product extends \Opencart\System\Engine\Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-
+		
+		
+	
 			$this->response->setOutput($this->load->view('product/product', $data));
 		} else {
 			return new \Opencart\System\Engine\Action('error/not_found');

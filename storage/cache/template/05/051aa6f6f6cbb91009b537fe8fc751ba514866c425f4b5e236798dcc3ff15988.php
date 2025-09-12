@@ -42,7 +42,14 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
         yield "</main>
 
 <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css\">
-
+<style>
+@media (max-width: 768px) {
+    .wja-logo {
+        max-width: 100px !important;
+        margin-top: 0px !important;
+    }
+}
+</style>
  <!-- Footer -->
  <footer  class=\"tf-footer style-4\">
             <div class=\"container d-flex\">
@@ -177,7 +184,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
 
 </main>
 ";
-        // line 138
+        // line 145
         yield ($context["cookie"] ?? null);
         yield "
 
@@ -197,20 +204,20 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
 
 
 ";
-        // line 155
+        // line 162
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["scripts"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["script"]) {
-            // line 156
+            // line 163
             yield "  <script src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["script"], "href", [], "any", false, false, false, 156);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["script"], "href", [], "any", false, false, false, 163);
             yield "\" type=\"text/javascript\"></script>
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['script'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 158
+        // line 165
         yield "
  <!-- Search -->
  <div class=\"modal modalCentered fade modal-search\" id=\"search\">
@@ -221,7 +228,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
                     <form action=\"index.php?route=product/search\" method=\"post\" class=\"form-search style-2\">
                         <fieldset>
                             <input type=\"text\" id=\"search-input\" placeholder=\"Search item\" class=\"style-stroke\"  value=\"";
-        // line 167
+        // line 174
         yield ($context["search"] ?? null);
         yield "\" aria-required=\"true\"
                                 required=\"\">
@@ -360,25 +367,25 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
                     <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
                 </div>
                 <div class=\"modal-body\">
-                    <div class=\"row\">
+                    <div class=\"row m-0\">
                         <div class=\"col-md-6\">
                             <div class=\"tf-product-media\">
                                 <img src=\"assets/images/placeholder-250x250.png\" alt=\"Product Image\" class=\"img-fluid\">
                             </div>
                         </div>
-                        <div class=\"col-md-6\">
+                        <div class=\"col-md-6 p-4 mt-3\">
                             <div class=\"product-infor-sub\">
                                 <p>Product description will be loaded here...</p>
                             </div>
-                            <div class=\"price-wrap mb-3\">
-                                <span class=\"price-old h6 fw-normal\">\$0.00</span>
+                            <div class=\"price-wrap mb-3 mt-3\">
+                               
                                 <span class=\"price-new h5 fw-bold text-main\">\$0.00</span>
                             </div>
                             <div class=\"tf-product-variant mb-3\">
                                 <!-- Product options will be loaded here -->
                             </div>
                             <div class=\"tf-product-total-quantity mb-3\">
-                                <div class=\"wg-quantity\">
+                                <div class=\"wg-quantity\" style=\"max-width: 60%;\">
                                     <button class=\"btn-quantity minus-btn\">
                                         <i class=\"icon icon-minus\"></i>
                                     </button>
@@ -388,14 +395,12 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
                                     </button>
                                 </div>
                             </div>
-                            <div class=\"h6 d-none d-sm-block mb-3\">
-                                Stock information will be shown here
-                            </div>
+                           
                             <div class=\"tf-product-info-list\">
                                 <button type=\"button\" class=\"tf-btn animate-btn btn-add-to-cart\" data-url=\"index.php?route=checkout/cart.add&language=";
-        // line 336
+        // line 341
         yield ($context["language"] ?? null);
-        yield "\" data-product-id=\"\">
+        yield "\" data-product-id=\"\" style=\"max-width: 100%;width: 90%;\">
                                     ADD TO CART
                                     <i class=\"icon icon-shopping-cart-simple\"></i>
                                 </button>
@@ -406,6 +411,206 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
             </div>
         </div>
     </div>
+<div class=\"offcanvas offcanvas-start canvas-mb \" id=\"mobileMenu\" aria-modal=\"true\" role=\"dialog\">
+        <span class=\"icon-close-popup\" data-bs-dismiss=\"offcanvas\">
+            <i class=\"icon-close\"></i>
+        </span>
+        <div class=\"canvas-header\">
+          ";
+        // line 357
+        if (($context["logo"] ?? null)) {
+            // line 358
+            yield "\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            yield ($context["home"] ?? null);
+            yield "\">
+\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
+            // line 359
+            yield ($context["logo"] ?? null);
+            yield "\" title=\"";
+            yield ($context["name"] ?? null);
+            yield "\" alt=\"";
+            yield ($context["name"] ?? null);
+            yield "\" class=\"img-fluid\" width=\"80\"/>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t";
+        } else {
+            // line 362
+            yield "\t\t\t\t\t\t\t\t\t\t<h1>
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 363
+            yield ($context["home"] ?? null);
+            yield "\">Zayn</a>
+\t\t\t\t\t\t\t\t\t\t</h1>
+\t\t\t\t\t\t\t\t\t";
+        }
+        // line 366
+        yield "           ";
+        if ( !($context["logged"] ?? null)) {
+            // line 367
+            yield "\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"index.php?route=account/login\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-user\"></i>
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t";
+        } else {
+            // line 371
+            yield "\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"index.php?route=account/account\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-user\"></i>
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t";
+        }
+        // line 375
+        yield "            <span class=\"br-line\"></span>
+        </div>
+        <div class=\"canvas-body\">
+            <div class=\"mb-content-top\">
+                <ul class=\"nav-ul-mb\" id=\"wrapper-menu-navigation\"><li class=\"nav-mb-item\">
+                  <a href=\"#dropdown-menu-0\" class=\"collapsed mb-menu-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-0\">
+                      <span>HOME</span>
+                      <span class=\"icon icon-caret-down\"></span>
+                  </a>
+                  <div id=\"dropdown-menu-0\" class=\"collapse\">
+                      <ul class=\"sub-nav-menu\"><li><a href=\"index.html\" class=\"sub-nav-link \">Home Fashion 1</a></li><li><a href=\"home-fashion-2.html\" class=\"sub-nav-link \">Home Fashion 2</a></li><li><a href=\"home-fashion-3.html\" class=\"sub-nav-link \">Home Fashion 3</a></li><li><a href=\"home-fashion-4.html\" class=\"sub-nav-link \">Home Fashion 4</a></li><li><a href=\"home-cosmetic.html\" class=\"sub-nav-link \">Home Cosmetic</a></li><li><a href=\"home-skin-care.html\" class=\"sub-nav-link \">Home Skincare</a></li><li><a href=\"home-decor.html\" class=\"sub-nav-link \">Home Decor</a></li><li><a href=\"home-jewelry.html\" class=\"sub-nav-link \">Home Jewelry</a></li><li><a href=\"home-electronic-market.html\" class=\"sub-nav-link \">Home
+                                Electric Market</a></li><li><a href=\"home-pet-store.html\" class=\"sub-nav-link \">Home Pet Store</a></li><li><a href=\"home-sneaker.html\" class=\"sub-nav-link \">Home Sneaker</a></li><li><a href=\"home-book.html\" class=\"sub-nav-link \">Home Book</a></li><li><a href=\"home-organic.html\" class=\"sub-nav-link \">Home Organic</a></li><li><a href=\"home-medical.html\" class=\"sub-nav-link \">Home Medical</a></li><li><a href=\"home-gym.html\" class=\"sub-nav-link \">Home Gym</a></li><li><a href=\"home-art.html\" class=\"sub-nav-link \">Home Art</a></li><li><a href=\"home-accessories.html\" class=\"sub-nav-link \">Home Accessories</a></li><li><a href=\"home-car-auto.html\" class=\"sub-nav-link \">Home Car Auto</a></li><li><a href=\"home-travel.html\" class=\"sub-nav-link \">Home Travel</a></li><li><a href=\"home-watch.html\" class=\"sub-nav-link \">Home Watch</a></li></ul>
+                  </div>
+              </li><li class=\"nav-mb-item\">
+                    <a href=\"#dropdown-menu-1\" class=\"collapsed mb-menu-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-1\">
+                        <span>SHOP</span>
+                        <span class=\"icon icon-caret-down\"></span>
+                    </a>
+                    <div id=\"dropdown-menu-1\" class=\"collapse\"><ul class=\"sub-nav-menu\"><li>
+                        <a href=\"#dropdown-menu-1-group-0\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-1-group-0\">
+                            <span>Shop Layout</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-1-group-0\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"shop-default.html\" class=\"sub-nav-link \">Default Grid</a></li><li><a href=\"shop-default-list.html\" class=\"sub-nav-link \">Default List</a></li><li><a href=\"shop-2-columns.html\" class=\"sub-nav-link \">Shop 2 Columns</a></li><li><a href=\"shop-3-columns.html\" class=\"sub-nav-link \">Shop 3 Columns</a></li><li><a href=\"shop-4-columns.html\" class=\"sub-nav-link \">Shop 4 Columns</a></li><li><a href=\"shop-5-columns.html\" class=\"sub-nav-link \">Shop 5 Columns</a></li><li><a href=\"shop-6-columns.html\" class=\"sub-nav-link \">Shop 6 Columns</a></li></ul>
+                        </div>
+                    </li><li>
+                        <a href=\"#dropdown-menu-1-group-1\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-1-group-1\">
+                            <span>Shop Features</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-1-group-1\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"shop-full-width-list.html\" class=\"sub-nav-link \">Full Width List</a></li><li><a href=\"shop-full-width-grid.html\" class=\"sub-nav-link \">Full Width Grid</a></li><li><a href=\"shop-left-sidebar.html\" class=\"sub-nav-link \">Left Sidebar</a></li><li><a href=\"shop-right-sidebar.html\" class=\"sub-nav-link \">Right Sidebar</a></li><li><a href=\"shop-filter-dropdown.html\" class=\"sub-nav-link \">Filter Dropdown</a></li><li><a href=\"shop-filter-drawer.html\" class=\"sub-nav-link \">Filter Drawer</a></li></ul>
+                        </div>
+                    </li><li>
+                        <a href=\"#dropdown-menu-1-group-2\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-1-group-2\">
+                            <span>Shop Hover</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-1-group-2\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"shop-hover-01.html\" class=\"sub-nav-link \">Hover Style 01</a></li><li><a href=\"shop-hover-02.html\" class=\"sub-nav-link \">Hover Style 02</a></li><li><a href=\"shop-hover-03.html\" class=\"sub-nav-link \">Hover Style 03</a></li><li><a href=\"shop-hover-04.html\" class=\"sub-nav-link \">Hover Style 04</a></li><li><a href=\"shop-hover-05.html\" class=\"sub-nav-link \">Hover Style 05</a></li><li><a href=\"shop-hover-06.html\" class=\"sub-nav-link \">Hover Style 06</a></li><li><a href=\"shop-hover-07.html\" class=\"sub-nav-link \">Hover Style 07</a></li><li><a href=\"shop-hover-08.html\" class=\"sub-nav-link \">Hover Style 08</a></li></ul>
+                        </div>
+                    </li></ul></div>
+                </li><li class=\"nav-mb-item\">
+                    <a href=\"#dropdown-menu-2\" class=\"collapsed mb-menu-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-2\">
+                        <span>PRODUCT</span>
+                        <span class=\"icon icon-caret-down\"></span>
+                    </a>
+                    <div id=\"dropdown-menu-2\" class=\"collapse\"><ul class=\"sub-nav-menu\"><li>
+                        <a href=\"#dropdown-menu-2-group-0\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-2-group-0\">
+                            <span>Product Layout</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-2-group-0\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"product-detail.html\" class=\"sub-nav-link \">Product Detail</a></li><li><a href=\"product-left-thumbnail.html\" class=\"sub-nav-link \">Product Left Thumbnail</a></li><li><a href=\"product-right-thumbnail.html\" class=\"sub-nav-link \">Product Right
+                                                                    Thumbnail</a></li><li><a href=\"product-bottom-thumbnail.html\" class=\"sub-nav-link \">Product Bottom
+                                                                    Thumbnail</a></li><li><a href=\"product-grid.html\" class=\"sub-nav-link \">Product Grid</a></li><li><a href=\"product-grid-2.html\" class=\"sub-nav-link \">Product Grid 2</a></li><li><a href=\"product-stacked.html\" class=\"sub-nav-link \">Product Stacked</a></li></ul>
+                        </div>
+                    </li><li>
+                        <a href=\"#dropdown-menu-2-group-1\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-2-group-1\">
+                            <span>Product Details</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-2-group-1\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"product-information.html\" class=\"sub-nav-link \">Product Information</a></li><li><a href=\"product-group.html\" class=\"sub-nav-link \">Product Group</a></li><li><a href=\"product-options-customizer.html\" class=\"sub-nav-link \">Product Option
+                                                                    Customize</a></li><li><a href=\"product-available.html\" class=\"sub-nav-link \">Product Avaialable</a></li><li><a href=\"product-video.html\" class=\"sub-nav-link \">Product Video</a></li><li><a href=\"product-buyX-getY.html\" class=\"sub-nav-link \">Product Buy X Get Y</a></li><li><a href=\"product-buy-the-look.html\" class=\"sub-nav-link \">Product Buy The Look</a></li><li><a href=\"product-out-of-stock.html\" class=\"sub-nav-link \">Product Out Of Stock</a></li></ul>
+                        </div>
+                    </li><li>
+                        <a href=\"#dropdown-menu-2-group-2\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-2-group-2\">
+                            <span>Product Feature</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-2-group-2\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"product-frequently-bought-together.html\" class=\"sub-nav-link \">Buy
+                                                                    Together</a></li><li><a href=\"product-often-purchased-together.html\" class=\"sub-nav-link \">Often Purchased
+                                                                    Together</a></li><li><a href=\"product-countdown-timer.html\" class=\"sub-nav-link \">Countdown Timer</a></li><li><a href=\"product-volume-discount.html\" class=\"sub-nav-link \">Volume Discount</a></li><li><a href=\"product-volume-discount-thumbnail.html\" class=\"sub-nav-link \">Volume Discount
+                                                                    Thumbnail</a></li><li><a href=\"product-swatch-dropdown.html\" class=\"sub-nav-link \">Swatch Dropdown</a></li><li><a href=\"product-swatch-dropdown-color.html\" class=\"sub-nav-link \">Swatch Dropdown
+                                                                    Color</a></li><li><a href=\"product-swatch-image.html\" class=\"sub-nav-link \">Swatch Image</a></li><li><a href=\"product-swatch-image-square.html\" class=\"sub-nav-link \">Swatch Image
+                                                                    Retangle</a></li></ul>
+                        </div>
+                    </li><li>
+                        <a href=\"#dropdown-menu-2-group-3\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-2-group-3\">
+                            <span>Product Description</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-2-group-3\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"product-description-accordion.html\" class=\"sub-nav-link \">Product Description
+                                                                    Accordion</a></li><li><a href=\"product-description-list.html\" class=\"sub-nav-link \">Product Description
+                                                                    List</a></li><li><a href=\"product-description-vertical.html\" class=\"sub-nav-link \">Product Description
+                                                                    Vertical</a></li></ul>
+                        </div>
+                    </li></ul></div>
+                </li><li class=\"nav-mb-item\">
+                    <a href=\"#dropdown-menu-3\" class=\"collapsed mb-menu-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-3\">
+                        <span>PAGE</span>
+                        <span class=\"icon icon-caret-down\"></span>
+                    </a>
+                    <div id=\"dropdown-menu-3\" class=\"collapse\"><ul class=\"sub-nav-menu\"><li><a href=\"about-us.html\" class=\"sub-nav-link\">About us</a></li><li><a href=\"store-list.html\" class=\"sub-nav-link\">Store List</a></li><li><a href=\"404.html\" class=\"sub-nav-link\">404</a></li><li><a href=\"faq.html\" class=\"sub-nav-link\">FAQs</a></li><li><a href=\"track-order.html\" class=\"sub-nav-link\">Order Tracking</a></li><li><a href=\"invoice.html\" class=\"sub-nav-link\">Invoice</a></li><li><a href=\"account-page.html\" class=\"sub-nav-link\">My account</a></li></ul></div>
+                </li><li class=\"nav-mb-item\">
+                    <a href=\"#dropdown-menu-4\" class=\"collapsed mb-menu-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-4\">
+                        <span>BLOG</span>
+                        <span class=\"icon icon-caret-down\"></span>
+                    </a>
+                    <div id=\"dropdown-menu-4\" class=\"collapse\"><ul class=\"sub-nav-menu\"><li><a href=\"blog-grid.html\" class=\"sub-nav-link\">Blog Grid</a></li><li><a href=\"blog-list-1.html\" class=\"sub-nav-link\">Blog List 1</a></li><li><a href=\"blog-list-2.html\" class=\"sub-nav-link\">Blog List 2</a></li><li><a href=\"blog-detail.html\" class=\"sub-nav-link\">Blog Single</a></li></ul></div>
+                </li></ul>
+            </div>
+            <div class=\"group-btn\">
+                <a href=\"index.php?route=common/wishlist\" class=\"tf-btn type-small style-2\">
+                    Wishlist
+                    <i class=\"icon icon-heart\"></i>
+                </a>
+                <div data-bs-dismiss=\"offcanvas\">
+                  ";
+        // line 487
+        yield ($context["search"] ?? null);
+        yield "
+                </div>
+            </div>
+            <div class=\"flow-us-wrap\">
+                <h5 class=\"title\">Follow us on</h5>
+              <ul class=\"tf-social-icon\">
+                    <li>
+                        <a href=\"https://www.facebook.com/zaynjewels/\" target=\"_blank\" class=\"social-facebook\">
+                            <span class=\"icon\"><i class=\"icon-fb\"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=\"https://www.instagram.com/zaynjewels/\" target=\"_blank\" class=\"social-instagram\">
+                            <span class=\"icon\"><i class=\"icon-instagram-logo\"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                                                <a href=\"https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA\" target=\"_blank\" class=\"social-youtube\">
+                                                    <span class=\"icon\"><i class=\"fab fa-youtube\"></i></span>
+                                                </a>
+                                            </li>
+                </ul>
+            </div>
+            
+        </div>
+       
+    </div>
+
+<script>
+    \$(document).ready(function() {
+        \$('#quickView .btn-close').on('click', function (event) {
+           \$('.modal-backdrop').removeClass('show');
+           \$('.modal-backdrop').remove();
+        });
+    });
+</script>
+
 </body></html>
 ";
         yield from [];
@@ -432,7 +637,7 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
      */
     public function getDebugInfo(): array
     {
-        return array (  397 => 336,  225 => 167,  214 => 158,  205 => 156,  201 => 155,  181 => 138,  42 => 1,);
+        return array (  576 => 487,  462 => 375,  456 => 371,  450 => 367,  447 => 366,  441 => 363,  438 => 362,  428 => 359,  423 => 358,  421 => 357,  402 => 341,  232 => 174,  221 => 165,  212 => 163,  208 => 162,  188 => 145,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -440,7 +645,14 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
         return new Source("</main>
 
 <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css\">
-
+<style>
+@media (max-width: 768px) {
+    .wja-logo {
+        max-width: 100px !important;
+        margin-top: 0px !important;
+    }
+}
+</style>
  <!-- Footer -->
  <footer  class=\"tf-footer style-4\">
             <div class=\"container d-flex\">
@@ -740,25 +952,25 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
                     <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
                 </div>
                 <div class=\"modal-body\">
-                    <div class=\"row\">
+                    <div class=\"row m-0\">
                         <div class=\"col-md-6\">
                             <div class=\"tf-product-media\">
                                 <img src=\"assets/images/placeholder-250x250.png\" alt=\"Product Image\" class=\"img-fluid\">
                             </div>
                         </div>
-                        <div class=\"col-md-6\">
+                        <div class=\"col-md-6 p-4 mt-3\">
                             <div class=\"product-infor-sub\">
                                 <p>Product description will be loaded here...</p>
                             </div>
-                            <div class=\"price-wrap mb-3\">
-                                <span class=\"price-old h6 fw-normal\">\$0.00</span>
+                            <div class=\"price-wrap mb-3 mt-3\">
+                               
                                 <span class=\"price-new h5 fw-bold text-main\">\$0.00</span>
                             </div>
                             <div class=\"tf-product-variant mb-3\">
                                 <!-- Product options will be loaded here -->
                             </div>
                             <div class=\"tf-product-total-quantity mb-3\">
-                                <div class=\"wg-quantity\">
+                                <div class=\"wg-quantity\" style=\"max-width: 60%;\">
                                     <button class=\"btn-quantity minus-btn\">
                                         <i class=\"icon icon-minus\"></i>
                                     </button>
@@ -768,11 +980,9 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
                                     </button>
                                 </div>
                             </div>
-                            <div class=\"h6 d-none d-sm-block mb-3\">
-                                Stock information will be shown here
-                            </div>
+                           
                             <div class=\"tf-product-info-list\">
-                                <button type=\"button\" class=\"tf-btn animate-btn btn-add-to-cart\" data-url=\"index.php?route=checkout/cart.add&language={{ language }}\" data-product-id=\"\">
+                                <button type=\"button\" class=\"tf-btn animate-btn btn-add-to-cart\" data-url=\"index.php?route=checkout/cart.add&language={{ language }}\" data-product-id=\"\" style=\"max-width: 100%;width: 90%;\">
                                     ADD TO CART
                                     <i class=\"icon icon-shopping-cart-simple\"></i>
                                 </button>
@@ -783,6 +993,178 @@ class __TwigTemplate_3de5693c048e9b657f5ee24e579b9ceb4b980a949ee718309b881246d2b
             </div>
         </div>
     </div>
+<div class=\"offcanvas offcanvas-start canvas-mb \" id=\"mobileMenu\" aria-modal=\"true\" role=\"dialog\">
+        <span class=\"icon-close-popup\" data-bs-dismiss=\"offcanvas\">
+            <i class=\"icon-close\"></i>
+        </span>
+        <div class=\"canvas-header\">
+          {% if logo %}
+\t\t\t\t\t\t\t\t\t\t<a href=\"{{ home }}\">
+\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{ logo }}\" title=\"{{ name }}\" alt=\"{{ name }}\" class=\"img-fluid\" width=\"80\"/>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t\t\t<h1>
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ home }}\">Zayn</a>
+\t\t\t\t\t\t\t\t\t\t</h1>
+\t\t\t\t\t\t\t\t\t{% endif %}
+           {% if not logged %}
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"index.php?route=account/login\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-user\"></i>
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"index.php?route=account/account\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-user\"></i>
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t{% endif %}
+            <span class=\"br-line\"></span>
+        </div>
+        <div class=\"canvas-body\">
+            <div class=\"mb-content-top\">
+                <ul class=\"nav-ul-mb\" id=\"wrapper-menu-navigation\"><li class=\"nav-mb-item\">
+                  <a href=\"#dropdown-menu-0\" class=\"collapsed mb-menu-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-0\">
+                      <span>HOME</span>
+                      <span class=\"icon icon-caret-down\"></span>
+                  </a>
+                  <div id=\"dropdown-menu-0\" class=\"collapse\">
+                      <ul class=\"sub-nav-menu\"><li><a href=\"index.html\" class=\"sub-nav-link \">Home Fashion 1</a></li><li><a href=\"home-fashion-2.html\" class=\"sub-nav-link \">Home Fashion 2</a></li><li><a href=\"home-fashion-3.html\" class=\"sub-nav-link \">Home Fashion 3</a></li><li><a href=\"home-fashion-4.html\" class=\"sub-nav-link \">Home Fashion 4</a></li><li><a href=\"home-cosmetic.html\" class=\"sub-nav-link \">Home Cosmetic</a></li><li><a href=\"home-skin-care.html\" class=\"sub-nav-link \">Home Skincare</a></li><li><a href=\"home-decor.html\" class=\"sub-nav-link \">Home Decor</a></li><li><a href=\"home-jewelry.html\" class=\"sub-nav-link \">Home Jewelry</a></li><li><a href=\"home-electronic-market.html\" class=\"sub-nav-link \">Home
+                                Electric Market</a></li><li><a href=\"home-pet-store.html\" class=\"sub-nav-link \">Home Pet Store</a></li><li><a href=\"home-sneaker.html\" class=\"sub-nav-link \">Home Sneaker</a></li><li><a href=\"home-book.html\" class=\"sub-nav-link \">Home Book</a></li><li><a href=\"home-organic.html\" class=\"sub-nav-link \">Home Organic</a></li><li><a href=\"home-medical.html\" class=\"sub-nav-link \">Home Medical</a></li><li><a href=\"home-gym.html\" class=\"sub-nav-link \">Home Gym</a></li><li><a href=\"home-art.html\" class=\"sub-nav-link \">Home Art</a></li><li><a href=\"home-accessories.html\" class=\"sub-nav-link \">Home Accessories</a></li><li><a href=\"home-car-auto.html\" class=\"sub-nav-link \">Home Car Auto</a></li><li><a href=\"home-travel.html\" class=\"sub-nav-link \">Home Travel</a></li><li><a href=\"home-watch.html\" class=\"sub-nav-link \">Home Watch</a></li></ul>
+                  </div>
+              </li><li class=\"nav-mb-item\">
+                    <a href=\"#dropdown-menu-1\" class=\"collapsed mb-menu-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-1\">
+                        <span>SHOP</span>
+                        <span class=\"icon icon-caret-down\"></span>
+                    </a>
+                    <div id=\"dropdown-menu-1\" class=\"collapse\"><ul class=\"sub-nav-menu\"><li>
+                        <a href=\"#dropdown-menu-1-group-0\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-1-group-0\">
+                            <span>Shop Layout</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-1-group-0\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"shop-default.html\" class=\"sub-nav-link \">Default Grid</a></li><li><a href=\"shop-default-list.html\" class=\"sub-nav-link \">Default List</a></li><li><a href=\"shop-2-columns.html\" class=\"sub-nav-link \">Shop 2 Columns</a></li><li><a href=\"shop-3-columns.html\" class=\"sub-nav-link \">Shop 3 Columns</a></li><li><a href=\"shop-4-columns.html\" class=\"sub-nav-link \">Shop 4 Columns</a></li><li><a href=\"shop-5-columns.html\" class=\"sub-nav-link \">Shop 5 Columns</a></li><li><a href=\"shop-6-columns.html\" class=\"sub-nav-link \">Shop 6 Columns</a></li></ul>
+                        </div>
+                    </li><li>
+                        <a href=\"#dropdown-menu-1-group-1\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-1-group-1\">
+                            <span>Shop Features</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-1-group-1\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"shop-full-width-list.html\" class=\"sub-nav-link \">Full Width List</a></li><li><a href=\"shop-full-width-grid.html\" class=\"sub-nav-link \">Full Width Grid</a></li><li><a href=\"shop-left-sidebar.html\" class=\"sub-nav-link \">Left Sidebar</a></li><li><a href=\"shop-right-sidebar.html\" class=\"sub-nav-link \">Right Sidebar</a></li><li><a href=\"shop-filter-dropdown.html\" class=\"sub-nav-link \">Filter Dropdown</a></li><li><a href=\"shop-filter-drawer.html\" class=\"sub-nav-link \">Filter Drawer</a></li></ul>
+                        </div>
+                    </li><li>
+                        <a href=\"#dropdown-menu-1-group-2\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-1-group-2\">
+                            <span>Shop Hover</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-1-group-2\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"shop-hover-01.html\" class=\"sub-nav-link \">Hover Style 01</a></li><li><a href=\"shop-hover-02.html\" class=\"sub-nav-link \">Hover Style 02</a></li><li><a href=\"shop-hover-03.html\" class=\"sub-nav-link \">Hover Style 03</a></li><li><a href=\"shop-hover-04.html\" class=\"sub-nav-link \">Hover Style 04</a></li><li><a href=\"shop-hover-05.html\" class=\"sub-nav-link \">Hover Style 05</a></li><li><a href=\"shop-hover-06.html\" class=\"sub-nav-link \">Hover Style 06</a></li><li><a href=\"shop-hover-07.html\" class=\"sub-nav-link \">Hover Style 07</a></li><li><a href=\"shop-hover-08.html\" class=\"sub-nav-link \">Hover Style 08</a></li></ul>
+                        </div>
+                    </li></ul></div>
+                </li><li class=\"nav-mb-item\">
+                    <a href=\"#dropdown-menu-2\" class=\"collapsed mb-menu-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-2\">
+                        <span>PRODUCT</span>
+                        <span class=\"icon icon-caret-down\"></span>
+                    </a>
+                    <div id=\"dropdown-menu-2\" class=\"collapse\"><ul class=\"sub-nav-menu\"><li>
+                        <a href=\"#dropdown-menu-2-group-0\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-2-group-0\">
+                            <span>Product Layout</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-2-group-0\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"product-detail.html\" class=\"sub-nav-link \">Product Detail</a></li><li><a href=\"product-left-thumbnail.html\" class=\"sub-nav-link \">Product Left Thumbnail</a></li><li><a href=\"product-right-thumbnail.html\" class=\"sub-nav-link \">Product Right
+                                                                    Thumbnail</a></li><li><a href=\"product-bottom-thumbnail.html\" class=\"sub-nav-link \">Product Bottom
+                                                                    Thumbnail</a></li><li><a href=\"product-grid.html\" class=\"sub-nav-link \">Product Grid</a></li><li><a href=\"product-grid-2.html\" class=\"sub-nav-link \">Product Grid 2</a></li><li><a href=\"product-stacked.html\" class=\"sub-nav-link \">Product Stacked</a></li></ul>
+                        </div>
+                    </li><li>
+                        <a href=\"#dropdown-menu-2-group-1\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-2-group-1\">
+                            <span>Product Details</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-2-group-1\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"product-information.html\" class=\"sub-nav-link \">Product Information</a></li><li><a href=\"product-group.html\" class=\"sub-nav-link \">Product Group</a></li><li><a href=\"product-options-customizer.html\" class=\"sub-nav-link \">Product Option
+                                                                    Customize</a></li><li><a href=\"product-available.html\" class=\"sub-nav-link \">Product Avaialable</a></li><li><a href=\"product-video.html\" class=\"sub-nav-link \">Product Video</a></li><li><a href=\"product-buyX-getY.html\" class=\"sub-nav-link \">Product Buy X Get Y</a></li><li><a href=\"product-buy-the-look.html\" class=\"sub-nav-link \">Product Buy The Look</a></li><li><a href=\"product-out-of-stock.html\" class=\"sub-nav-link \">Product Out Of Stock</a></li></ul>
+                        </div>
+                    </li><li>
+                        <a href=\"#dropdown-menu-2-group-2\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-2-group-2\">
+                            <span>Product Feature</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-2-group-2\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"product-frequently-bought-together.html\" class=\"sub-nav-link \">Buy
+                                                                    Together</a></li><li><a href=\"product-often-purchased-together.html\" class=\"sub-nav-link \">Often Purchased
+                                                                    Together</a></li><li><a href=\"product-countdown-timer.html\" class=\"sub-nav-link \">Countdown Timer</a></li><li><a href=\"product-volume-discount.html\" class=\"sub-nav-link \">Volume Discount</a></li><li><a href=\"product-volume-discount-thumbnail.html\" class=\"sub-nav-link \">Volume Discount
+                                                                    Thumbnail</a></li><li><a href=\"product-swatch-dropdown.html\" class=\"sub-nav-link \">Swatch Dropdown</a></li><li><a href=\"product-swatch-dropdown-color.html\" class=\"sub-nav-link \">Swatch Dropdown
+                                                                    Color</a></li><li><a href=\"product-swatch-image.html\" class=\"sub-nav-link \">Swatch Image</a></li><li><a href=\"product-swatch-image-square.html\" class=\"sub-nav-link \">Swatch Image
+                                                                    Retangle</a></li></ul>
+                        </div>
+                    </li><li>
+                        <a href=\"#dropdown-menu-2-group-3\" class=\"collapsed sub-nav-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-2-group-3\">
+                            <span>Product Description</span>
+                            <span class=\"icon icon-caret-down\"></span>
+                        </a>
+                        <div id=\"dropdown-menu-2-group-3\" class=\"collapse\">
+                            <ul class=\"sub-nav-menu sub-menu-level-2\"><li><a href=\"product-description-accordion.html\" class=\"sub-nav-link \">Product Description
+                                                                    Accordion</a></li><li><a href=\"product-description-list.html\" class=\"sub-nav-link \">Product Description
+                                                                    List</a></li><li><a href=\"product-description-vertical.html\" class=\"sub-nav-link \">Product Description
+                                                                    Vertical</a></li></ul>
+                        </div>
+                    </li></ul></div>
+                </li><li class=\"nav-mb-item\">
+                    <a href=\"#dropdown-menu-3\" class=\"collapsed mb-menu-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-3\">
+                        <span>PAGE</span>
+                        <span class=\"icon icon-caret-down\"></span>
+                    </a>
+                    <div id=\"dropdown-menu-3\" class=\"collapse\"><ul class=\"sub-nav-menu\"><li><a href=\"about-us.html\" class=\"sub-nav-link\">About us</a></li><li><a href=\"store-list.html\" class=\"sub-nav-link\">Store List</a></li><li><a href=\"404.html\" class=\"sub-nav-link\">404</a></li><li><a href=\"faq.html\" class=\"sub-nav-link\">FAQs</a></li><li><a href=\"track-order.html\" class=\"sub-nav-link\">Order Tracking</a></li><li><a href=\"invoice.html\" class=\"sub-nav-link\">Invoice</a></li><li><a href=\"account-page.html\" class=\"sub-nav-link\">My account</a></li></ul></div>
+                </li><li class=\"nav-mb-item\">
+                    <a href=\"#dropdown-menu-4\" class=\"collapsed mb-menu-link\" data-bs-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"dropdown-menu-4\">
+                        <span>BLOG</span>
+                        <span class=\"icon icon-caret-down\"></span>
+                    </a>
+                    <div id=\"dropdown-menu-4\" class=\"collapse\"><ul class=\"sub-nav-menu\"><li><a href=\"blog-grid.html\" class=\"sub-nav-link\">Blog Grid</a></li><li><a href=\"blog-list-1.html\" class=\"sub-nav-link\">Blog List 1</a></li><li><a href=\"blog-list-2.html\" class=\"sub-nav-link\">Blog List 2</a></li><li><a href=\"blog-detail.html\" class=\"sub-nav-link\">Blog Single</a></li></ul></div>
+                </li></ul>
+            </div>
+            <div class=\"group-btn\">
+                <a href=\"index.php?route=common/wishlist\" class=\"tf-btn type-small style-2\">
+                    Wishlist
+                    <i class=\"icon icon-heart\"></i>
+                </a>
+                <div data-bs-dismiss=\"offcanvas\">
+                  {{ search }}
+                </div>
+            </div>
+            <div class=\"flow-us-wrap\">
+                <h5 class=\"title\">Follow us on</h5>
+              <ul class=\"tf-social-icon\">
+                    <li>
+                        <a href=\"https://www.facebook.com/zaynjewels/\" target=\"_blank\" class=\"social-facebook\">
+                            <span class=\"icon\"><i class=\"icon-fb\"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=\"https://www.instagram.com/zaynjewels/\" target=\"_blank\" class=\"social-instagram\">
+                            <span class=\"icon\"><i class=\"icon-instagram-logo\"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                                                <a href=\"https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA\" target=\"_blank\" class=\"social-youtube\">
+                                                    <span class=\"icon\"><i class=\"fab fa-youtube\"></i></span>
+                                                </a>
+                                            </li>
+                </ul>
+            </div>
+            
+        </div>
+       
+    </div>
+
+<script>
+    \$(document).ready(function() {
+        \$('#quickView .btn-close').on('click', function (event) {
+           \$('.modal-backdrop').removeClass('show');
+           \$('.modal-backdrop').remove();
+        });
+    });
+</script>
+
 </body></html>
 ", "catalog/view/template/common/footer.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\footer.twig");
     }

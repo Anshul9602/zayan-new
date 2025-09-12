@@ -84,7 +84,7 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
   }
 </style>
   <!-- Page Title -->
-  <section class=\"s-page-title\">
+  <section class=\"s-page-title\" style=\"padding-top:100px;\">
             <div class=\"container\">
                 <div class=\"content\">
                     <h1 class=\"title-page\">";
@@ -637,7 +637,7 @@ class __TwigTemplate_ffc737c1ebb70342a8a4ba1307ac77c31b4fc4b2e2bbfddc721b698ecaf
   }
 </style>
   <!-- Page Title -->
-  <section class=\"s-page-title\">
+  <section class=\"s-page-title\" style=\"padding-top:100px;\">
             <div class=\"container\">
                 <div class=\"content\">
                     <h1 class=\"title-page\">{{ heading_title }}</h1>

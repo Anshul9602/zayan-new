@@ -111,9 +111,14 @@
                              const productName = quickViewModal.querySelector('.tf-product-title');
                              if (productName) productName.textContent = product.name;
                              
-                             // Update product description
-                             const productDesc = quickViewModal.querySelector('.product-infor-sub');
-                             if (productDesc) productDesc.innerHTML = product.description || 'Product description not available.';
+                            // Update product description
+                            const productDesc = quickViewModal.querySelector('.product-infor-sub');
+                            if (productDesc) {
+                                // Strip HTML tags and display as plain text
+                                const tempDiv = document.createElement('div');
+                                tempDiv.innerHTML = product.description || 'Product description not available.';
+                                productDesc.textContent = tempDiv.textContent || tempDiv.innerText || 'Product description not available.';
+                            }
                              
                              // Update product images
                              const productImages = quickViewModal.querySelectorAll('.tf-product-media img');

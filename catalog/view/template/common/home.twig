@@ -23,13 +23,24 @@
 	.modal-newletter .modal-content {
 		padding: 0;
 	}
+	.mob{
+		display: none;
+	}
+	@media (max-width: 768px) {	
+	.desk{
+		display: none;
+	}
+	.mob{
+		display: block;
+	}
+	}
 </style>
 
 <!-- Banner -->
 
 <div class="tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav">
 	<div dir="ltr" class="swiper tf-swiper home sw-slide-show slider_effect_fade" data-auto="true" data-loop="true" data-effect="fade" data-delay="3000">
-		<div class="swiper-wrapper">
+		<div class="swiper-wrapper desk">
 			{% for banner in banners %}
 				<!-- item 1 -->
 				<div class="swiper-slide">
@@ -42,6 +53,20 @@
 					</div>
 				</div>
 			{% endfor %}
+		</div>
+		<div class="swiper-wrapper mob">
+			
+				<!-- item 1 -->
+				<div class="swiper-slide">
+					<div class="slider-wrap">
+						<div class="sld_image">
+							<a href="#" class="">
+								<img src="assets/banner_mob.jpg" data-src="assets/banner_mob.jpg" alt="Image" class="lazyload" style="width: 100%; "></a>
+						</div>
+
+					</div>
+				</div>
+			
 		</div>
 		<div class="sw-dot-default tf-sw-pagination"></div>
 	</div>

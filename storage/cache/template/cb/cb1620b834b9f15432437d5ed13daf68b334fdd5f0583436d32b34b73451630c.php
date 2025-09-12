@@ -65,32 +65,43 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t.modal-newletter .modal-content {
 \t\tpadding: 0;
 \t}
+\t.mob{
+\t\tdisplay: none;
+\t}
+\t@media (max-width: 768px) {\t
+\t.desk{
+\t\tdisplay: none;
+\t}
+\t.mob{
+\t\tdisplay: block;
+\t}
+\t}
 </style>
 
 <!-- Banner -->
 
 <div class=\"tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav\">
 \t<div dir=\"ltr\" class=\"swiper tf-swiper home sw-slide-show slider_effect_fade\" data-auto=\"true\" data-loop=\"true\" data-effect=\"fade\" data-delay=\"3000\">
-\t\t<div class=\"swiper-wrapper\">
+\t\t<div class=\"swiper-wrapper desk\">
 \t\t\t";
-        // line 33
+        // line 44
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["banners"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-            // line 34
+            // line 45
             yield "\t\t\t\t<!-- item 1 -->
 \t\t\t\t<div class=\"swiper-slide\">
 \t\t\t\t\t<div class=\"slider-wrap\">
 \t\t\t\t\t\t<div class=\"sld_image\">
 \t\t\t\t\t\t\t<a href=\"";
-            // line 38
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 38);
+            // line 49
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 49);
             yield "\" class=\"\">
 \t\t\t\t\t\t\t\t<img src=\"";
-            // line 39
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 39);
+            // line 50
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 50);
             yield "\" data-src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 39);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 50);
             yield "\" alt=\"Image\" class=\"lazyload\" style=\"width: 100%; \"></a>
 \t\t\t\t\t\t</div>
 
@@ -101,8 +112,22 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['banner'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 56
         yield "\t\t</div>
+\t\t<div class=\"swiper-wrapper mob\">
+\t\t\t
+\t\t\t\t<!-- item 1 -->
+\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t<div class=\"slider-wrap\">
+\t\t\t\t\t\t<div class=\"sld_image\">
+\t\t\t\t\t\t\t<a href=\"#\" class=\"\">
+\t\t\t\t\t\t\t\t<img src=\"assets/banner_mob.jpg\" data-src=\"assets/banner_mob.jpg\" alt=\"Image\" class=\"lazyload\" style=\"width: 100%; \"></a>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t
+\t\t</div>
 \t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t</div>
 
@@ -114,36 +139,36 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\tclass=\"swiper-wrapper\">
 \t\t\t<!-- item 1 -->
 \t\t\t";
-        // line 56
+        // line 81
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["banners2"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-            // line 57
+            // line 82
             yield "\t\t\t\t<div class=\"swiper-slide\">
 \t\t\t\t\t<div class=\"wg-cls-2 d-flex hover-img\">
 \t\t\t\t\t\t<a href=\"";
-            // line 59
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 59);
+            // line 84
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 84);
             yield "\" class=\"image img-style\">
 \t\t\t\t\t\t\t<img class=\"lazyload\" src=\"";
-            // line 60
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 60);
+            // line 85
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 85);
             yield "\" data-src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 60);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 85);
             yield "\" alt=\"Slider\">
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<div class=\"cls-content_wrap b-16\">
 \t\t\t\t\t\t\t<div class=\"cls-content\">
 \t\t\t\t\t\t\t\t<a href=\"";
-            // line 64
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 64);
+            // line 89
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 89);
             yield "\" class=\"tag_cls h3 link\">";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "title", [], "any", false, false, false, 64);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "title", [], "any", false, false, false, 89);
             yield "</a>
 \t\t\t\t\t\t\t\t<span class=\"br-line type-vertical\"></span>
 \t\t\t\t\t\t\t\t<a href=\"";
-            // line 66
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 66);
+            // line 91
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 91);
             yield "\" class=\"tf-btn-line text-nowrap\">
 \t\t\t\t\t\t\t\t\tShop now
 \t\t\t\t\t\t\t\t</a>
@@ -156,42 +181,42 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['banner'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 74
+        // line 99
         yield "\t\t</div>
 \t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t</div>
 \t<div class=\"d-none\">
 \t\t";
-        // line 78
+        // line 103
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["banners2"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-            // line 79
+            // line 104
             yield "\t\t\t<div class=\"col-md-4\">
 \t\t\t\t<div class=\"wg-cls-2 d-flex hover-img\">
 \t\t\t\t\t<a href=\"";
-            // line 81
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 81);
+            // line 106
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 106);
             yield "\" class=\"image img-style\">
 \t\t\t\t\t\t<img class=\"lazyload\" src=\"";
-            // line 82
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 82);
+            // line 107
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 107);
             yield "\" data-src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 82);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 107);
             yield "\" alt=\"Slider\">
 \t\t\t\t\t</a>
 \t\t\t\t\t<div class=\"cls-content_wrap b-16\">
 \t\t\t\t\t\t<div class=\"cls-content\">
 \t\t\t\t\t\t\t<a href=\"";
-            // line 86
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 86);
+            // line 111
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 111);
             yield "\" class=\"tag_cls h3 link\">";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "title", [], "any", false, false, false, 86);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "title", [], "any", false, false, false, 111);
             yield "</a>
 \t\t\t\t\t\t\t<span class=\"br-line type-vertical\"></span>
 \t\t\t\t\t\t\t<a href=\"";
-            // line 88
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 88);
+            // line 113
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 113);
             yield "\" class=\"tf-btn-line text-nowrap\">
 \t\t\t\t\t\t\t\tShop now
 \t\t\t\t\t\t\t</a>
@@ -204,7 +229,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['banner'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 96
+        // line 121
         yield "\t</div>
 
 \t<!-- Product -->
@@ -217,7 +242,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t<div class=\"h1 title text-center mb-24\">Featured Products</div>
 \t\t\t\t<ul class=\"tab-product_list\" role=\"tablist\">
 \t\t\t\t\t";
-        // line 107
+        // line 132
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["featured_tabs"] ?? null));
         $context['loop'] = [
@@ -234,19 +259,19 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["tab"]) {
-            // line 108
+            // line 133
             yield "\t\t\t\t\t\t<li class=\"nav-tab-item\" role=\"presentation\">
 \t\t\t\t\t\t\t<a href=\"#tab-";
-            // line 109
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "path_id", [], "any", false, false, false, 109);
+            // line 134
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "path_id", [], "any", false, false, false, 134);
             yield "\" data-bs-toggle=\"tab\" class=\"tf-btn-line tf-btn-tab ";
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 109) == 1)) {
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 134) == 1)) {
                 yield "active";
             }
             yield "\">
 \t\t\t\t\t\t\t\t";
-            // line 110
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "name", [], "any", false, false, false, 110);
+            // line 135
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "name", [], "any", false, false, false, 135);
             yield "
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
@@ -263,12 +288,12 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['tab'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 114
+        // line 139
         yield "\t\t\t\t</ul>
 \t\t\t</div>
 \t\t\t<div class=\"tab-content\">
 \t\t\t\t";
-        // line 117
+        // line 142
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["featured_tabs"] ?? null));
         $context['loop'] = [
@@ -285,60 +310,60 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["tab"]) {
-            // line 118
+            // line 143
             yield "\t\t\t\t\t<div class=\"tab-pane ";
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 118) == 1)) {
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 143) == 1)) {
                 yield "active show";
             }
             yield "\" id=\"tab-";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "path_id", [], "any", false, false, false, 118);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "path_id", [], "any", false, false, false, 143);
             yield "\" role=\"tabpanel\">
 
 \t\t\t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over wow fadeInUp\" data-preview=\"4\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"4\" data-grid=\"2\">
 \t\t\t\t\t\t\t<div class=\"swiper-wrapper\">
 \t\t\t\t\t\t\t\t";
-            // line 122
+            // line 147
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "products", [], "any", false, false, false, 122));
+            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["tab"], "products", [], "any", false, false, false, 147));
             foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-                // line 123
+                // line 148
                 yield "\t\t\t\t\t\t\t\t\t<div class=\"swiper-slide\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"card-product grid\" data-availability=\"In stock\" data-brand=\"automet\" data-product-id=\"";
-                // line 124
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 124);
+                // line 149
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 149);
                 yield "\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
 \t\t\t\t\t\t\t\t\t\t\t\t<a
 \t\t\t\t\t\t\t\t\t\t\t\t\thref=\"";
-                // line 127
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 127);
+                // line 152
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 152);
                 yield "\" class=\"product-img\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"";
-                // line 128
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 128);
+                // line 153
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 153);
                 yield "\" data-src=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 128);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 153);
                 yield "\" alt=\"";
                 yield ($context["name"] ?? null);
                 yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"";
-                // line 129
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 129);
+                // line 154
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 154);
                 yield "\" data-src=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 129);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 154);
                 yield "\" alt=\"";
                 yield ($context["name"] ?? null);
                 yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
-                // line 132
+                // line 157
                 yield "\t\t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon btn-add-to-cart\" data-url=\"";
-                // line 135
+                // line 160
                 yield ($context["cart_add"] ?? null);
                 yield "\" data-product-id=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 135);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 160);
                 yield "\" data-quantity=\"1\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-shopping-cart-simple\"></span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to cart</span>
@@ -346,10 +371,10 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0);\" class=\"hover-tooltip tooltip-left box-icon btn-add-wishlist\" data-url=\"";
-                // line 141
+                // line 166
                 yield ($context["wishlist_add"] ?? null);
                 yield "\" data-product-id=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 141);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 166);
                 yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-heart\"></span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Add to Wishlist</span>
@@ -357,8 +382,8 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon btn-quick-view\" data-product-id=\"";
-                // line 147
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 147);
+                // line 172
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 172);
                 yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip\">Quick view</span>
@@ -368,32 +393,32 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
 \t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-                // line 155
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 155);
+                // line 180
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 180);
                 yield "\" class=\"name-product h4 link\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 155);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 180);
                 yield "</a>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
-                // line 157
-                if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 157)) {
-                    // line 158
+                // line 182
+                if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 182)) {
+                    // line 183
                     yield "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 158);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 183);
                     yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
-                    // line 159
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 159);
+                    // line 184
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 184);
                     yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
                 } else {
-                    // line 161
+                    // line 186
                     yield "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 161);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 186);
                     yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
                 }
-                // line 163
+                // line 188
                 yield "\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t</div>
@@ -404,7 +429,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['product'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 169
+            // line 194
             yield "\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t\t\t\t\t\t</div>
@@ -424,7 +449,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['tab'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 176
+        // line 201
         yield "\t\t\t</div>
 
 \t\t</div>
@@ -444,7 +469,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t<div class=\"box-image_content\">
 \t\t\t\t\t\t\t<a href=\"#\" class=\"title text-display fw-semibold text-white link\">Tennis Connection</a>
 \t\t\t\t\t\t\t<span class=\"sub-title h5 text-white d-none\">";
-        // line 194
+        // line 219
         yield ($context["shop_total"] ?? null);
         yield "
 \t\t\t\t\t\t\t\tproducts</span>
@@ -458,45 +483,45 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over wow fadeInUp\" data-preview=\"3\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"3\">
 \t\t\t\t\t\t<div class=\"swiper-wrapper\">
 \t\t\t\t\t\t\t";
-        // line 205
+        // line 230
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["shop_look_products"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 206
+            // line 231
             yield "\t\t\t\t\t\t\t\t<div class=\"swiper-slide\">
 \t\t\t\t\t\t\t\t\t<div class=\"card-product grid\" data-availability=\"In stock\" data-brand=\"automet\" data-product-id=\"";
-            // line 207
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 207);
+            // line 232
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 232);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
 \t\t\t\t\t\t\t\t\t\t\t<a
 \t\t\t\t\t\t\t\t\t\t\t\thref=\"";
-            // line 210
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 210);
+            // line 235
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 235);
             yield "\" class=\"product-img\">
 \t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"";
-            // line 211
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 211);
+            // line 236
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 236);
             yield "\" data-src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 211);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 236);
             yield "\" alt=\"";
             yield ($context["name"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"";
-            // line 212
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 212);
+            // line 237
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 237);
             yield "\" data-src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 212);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 237);
             yield "\" alt=\"";
             yield ($context["name"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 215
+            // line 240
             yield "\t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
 \t\t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon btn-add-to-cart\" data-url=\"";
-            // line 218
+            // line 243
             yield ($context["cart_add"] ?? null);
             yield "\" data-product-id=\"";
             yield ($context["product_id"] ?? null);
@@ -507,7 +532,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0);\" class=\"hover-tooltip tooltip-left box-icon btn-add-wishlist\" data-url=\"";
-            // line 224
+            // line 249
             yield ($context["wishlist_add"] ?? null);
             yield "\" data-product-id=\"";
             yield ($context["product_id"] ?? null);
@@ -518,7 +543,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon btn-quick-view\" data-product-id=\"";
-            // line 230
+            // line 255
             yield ($context["product_id"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
@@ -529,32 +554,32 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 238
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 238);
+            // line 263
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 263);
             yield "\" class=\"name-product h4 link\">";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 238);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 263);
             yield "</a>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 240
-            if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 240)) {
-                // line 241
+            // line 265
+            if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 265)) {
+                // line 266
                 yield "\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 241);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 266);
                 yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
-                // line 242
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 242);
+                // line 267
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 267);
                 yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t";
             } else {
-                // line 244
+                // line 269
                 yield "\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 244);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 269);
                 yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t";
             }
-            // line 246
+            // line 271
             yield "\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list d-none\">
 \t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
@@ -582,7 +607,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['product'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 269
+        // line 294
         yield "\t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t\t\t\t\t</div>
@@ -881,7 +906,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t</script>
 
 \t";
-        // line 566
+        // line 591
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -909,7 +934,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
      */
     public function getDebugInfo(): array
     {
-        return array (  885 => 566,  586 => 269,  558 => 246,  552 => 244,  547 => 242,  542 => 241,  540 => 240,  533 => 238,  522 => 230,  511 => 224,  500 => 218,  495 => 215,  487 => 212,  479 => 211,  475 => 210,  469 => 207,  466 => 206,  462 => 205,  448 => 194,  428 => 176,  408 => 169,  397 => 163,  391 => 161,  386 => 159,  381 => 158,  379 => 157,  372 => 155,  361 => 147,  350 => 141,  339 => 135,  334 => 132,  326 => 129,  318 => 128,  314 => 127,  308 => 124,  305 => 123,  301 => 122,  289 => 118,  272 => 117,  267 => 114,  249 => 110,  241 => 109,  238 => 108,  221 => 107,  208 => 96,  194 => 88,  187 => 86,  178 => 82,  174 => 81,  170 => 79,  166 => 78,  160 => 74,  146 => 66,  139 => 64,  130 => 60,  126 => 59,  122 => 57,  118 => 56,  105 => 45,  91 => 39,  87 => 38,  81 => 34,  77 => 33,  42 => 1,);
+        return array (  910 => 591,  611 => 294,  583 => 271,  577 => 269,  572 => 267,  567 => 266,  565 => 265,  558 => 263,  547 => 255,  536 => 249,  525 => 243,  520 => 240,  512 => 237,  504 => 236,  500 => 235,  494 => 232,  491 => 231,  487 => 230,  473 => 219,  453 => 201,  433 => 194,  422 => 188,  416 => 186,  411 => 184,  406 => 183,  404 => 182,  397 => 180,  386 => 172,  375 => 166,  364 => 160,  359 => 157,  351 => 154,  343 => 153,  339 => 152,  333 => 149,  330 => 148,  326 => 147,  314 => 143,  297 => 142,  292 => 139,  274 => 135,  266 => 134,  263 => 133,  246 => 132,  233 => 121,  219 => 113,  212 => 111,  203 => 107,  199 => 106,  195 => 104,  191 => 103,  185 => 99,  171 => 91,  164 => 89,  155 => 85,  151 => 84,  147 => 82,  143 => 81,  116 => 56,  102 => 50,  98 => 49,  92 => 45,  88 => 44,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -939,13 +964,24 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t.modal-newletter .modal-content {
 \t\tpadding: 0;
 \t}
+\t.mob{
+\t\tdisplay: none;
+\t}
+\t@media (max-width: 768px) {\t
+\t.desk{
+\t\tdisplay: none;
+\t}
+\t.mob{
+\t\tdisplay: block;
+\t}
+\t}
 </style>
 
 <!-- Banner -->
 
 <div class=\"tf-slideshow home type-abs tf-btn-swiper-main hover-sw-nav\">
 \t<div dir=\"ltr\" class=\"swiper tf-swiper home sw-slide-show slider_effect_fade\" data-auto=\"true\" data-loop=\"true\" data-effect=\"fade\" data-delay=\"3000\">
-\t\t<div class=\"swiper-wrapper\">
+\t\t<div class=\"swiper-wrapper desk\">
 \t\t\t{% for banner in banners %}
 \t\t\t\t<!-- item 1 -->
 \t\t\t\t<div class=\"swiper-slide\">
@@ -958,6 +994,20 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t{% endfor %}
+\t\t</div>
+\t\t<div class=\"swiper-wrapper mob\">
+\t\t\t
+\t\t\t\t<!-- item 1 -->
+\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t<div class=\"slider-wrap\">
+\t\t\t\t\t\t<div class=\"sld_image\">
+\t\t\t\t\t\t\t<a href=\"#\" class=\"\">
+\t\t\t\t\t\t\t\t<img src=\"assets/banner_mob.jpg\" data-src=\"assets/banner_mob.jpg\" alt=\"Image\" class=\"lazyload\" style=\"width: 100%; \"></a>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t
 \t\t</div>
 \t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t</div>
