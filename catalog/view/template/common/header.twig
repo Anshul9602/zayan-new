@@ -56,6 +56,22 @@
 				font-weight: 400 !important;
 			}
          @media (max-width: 768px) {
+			.canvas-wrapper {
+    padding: 0;
+    isolation: isolate;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    max-height: none;
+    display: grid
+;
+    grid-auto-rows: auto minmax(0, 1fr) auto;
+    align-content: start;
+}
+			    .tf-header {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
             #logo a img {
     width: 70px !important;
 }

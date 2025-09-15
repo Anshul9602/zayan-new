@@ -179,6 +179,22 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
 \t\t\t\tfont-weight: 400 !important;
 \t\t\t}
          @media (max-width: 768px) {
+\t\t\t.canvas-wrapper {
+    padding: 0;
+    isolation: isolate;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    max-height: none;
+    display: grid
+;
+    grid-auto-rows: auto minmax(0, 1fr) auto;
+    align-content: start;
+}
+\t\t\t    .tf-header {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
             #logo a img {
     width: 70px !important;
 }
@@ -252,7 +268,7 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t\t<li class=\"menu-item\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"item-link\">SHOP</a>
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 131
+        // line 147
         yield ($context["menu"] ?? null);
         yield "
 \t\t\t\t\t\t\t\t\t\t</li>
@@ -279,14 +295,14 @@ width:100% !important;
 \t\t\t\t\t\t\t<div class=\"col-xl-5 col-md-5 col-6 d-flex justify-content-center justify-content-xl-start\">
 \t\t\t\t\t\t\t\t<div id=\"logo\" class=\"text-center\">
 \t\t\t\t\t\t\t\t\t";
-        // line 155
+        // line 171
         if (($context["logo"] ?? null)) {
-            // line 156
+            // line 172
             yield "\t\t\t\t\t\t\t\t\t\t<a href=\"";
             yield ($context["home"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-            // line 157
+            // line 173
             yield ($context["logo"] ?? null);
             yield "\" title=\"";
             yield ($context["name"] ?? null);
@@ -296,16 +312,16 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t";
         } else {
-            // line 160
+            // line 176
             yield "\t\t\t\t\t\t\t\t\t\t<h1>
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 161
+            // line 177
             yield ($context["home"] ?? null);
             yield "\">Zayn</a>
 \t\t\t\t\t\t\t\t\t\t</h1>
 \t\t\t\t\t\t\t\t\t";
         }
-        // line 164
+        // line 180
         yield "\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t
@@ -313,51 +329,51 @@ width:100% !important;
 \t\t\t\t\t\t\t\t<ul class=\"nav-icon-list\">
 \t\t\t\t\t\t\t\t\t<li class=\"d-none d-lg-flex\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 170
+        // line 186
         if ( !($context["logged"] ?? null)) {
-            // line 171
+            // line 187
             yield "\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"index.php?route=account/login\">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-user\"></i>
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t";
         } else {
-            // line 175
+            // line 191
             yield "\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"index.php?route=account/account\">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-user\"></i>
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t";
         }
-        // line 179
+        // line 195
         yield "\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t<li class=\"d-none d-md-flex\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 181
+        // line 197
         yield ($context["search"] ?? null);
         yield "
 \t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t<li class=\"d-none d-sm-flex\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 184
+        // line 200
         if ( !($context["logged"] ?? null)) {
-            // line 185
+            // line 201
             yield "\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"index.php?route=common/wishlist\">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-heart\"></i>
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"wishlist-count\">0</span>
 \t\t\t\t\t\t\t\t\t\t";
         } else {
-            // line 190
+            // line 206
             yield "\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"index.php?route=account/wishlist\">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-heart\"></i>
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"wishlist-count\">0</span>
 \t\t\t\t\t\t\t\t\t\t";
         }
-        // line 195
+        // line 211
         yield "\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t<li class=\"shop-cart\" data-bs-target=\"#shoppingCart\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 197
+        // line 213
         yield ($context["cart"] ?? null);
         yield "
 \t\t\t\t\t\t\t\t\t</li>
@@ -396,7 +412,7 @@ width:100% !important;
      */
     public function getDebugInfo(): array
     {
-        return array (  361 => 197,  357 => 195,  350 => 190,  343 => 185,  341 => 184,  335 => 181,  331 => 179,  325 => 175,  319 => 171,  317 => 170,  309 => 164,  303 => 161,  300 => 160,  290 => 157,  285 => 156,  283 => 155,  256 => 131,  168 => 45,  159 => 43,  154 => 42,  143 => 40,  138 => 39,  129 => 37,  124 => 36,  111 => 34,  107 => 33,  103 => 31,  97 => 29,  95 => 28,  80 => 15,  74 => 13,  71 => 12,  65 => 10,  63 => 9,  59 => 8,  55 => 7,  45 => 2,  42 => 1,);
+        return array (  377 => 213,  373 => 211,  366 => 206,  359 => 201,  357 => 200,  351 => 197,  347 => 195,  341 => 191,  335 => 187,  333 => 186,  325 => 180,  319 => 177,  316 => 176,  306 => 173,  301 => 172,  299 => 171,  272 => 147,  168 => 45,  159 => 43,  154 => 42,  143 => 40,  138 => 39,  129 => 37,  124 => 36,  111 => 34,  107 => 33,  103 => 31,  97 => 29,  95 => 28,  80 => 15,  74 => 13,  71 => 12,  65 => 10,  63 => 9,  59 => 8,  55 => 7,  45 => 2,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -459,6 +475,22 @@ width:100% !important;
 \t\t\t\tfont-weight: 400 !important;
 \t\t\t}
          @media (max-width: 768px) {
+\t\t\t.canvas-wrapper {
+    padding: 0;
+    isolation: isolate;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    max-height: none;
+    display: grid
+;
+    grid-auto-rows: auto minmax(0, 1fr) auto;
+    align-content: start;
+}
+\t\t\t    .tf-header {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
             #logo a img {
     width: 70px !important;
 }

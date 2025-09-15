@@ -106,7 +106,7 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
                         <a href=\"";
                 // line 37
                 yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 37);
-                yield "\" class=\"link text-line-clamp-1\">";
+                yield "\" class=\"link text-line-clamp-2\">";
                 yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 37);
                 yield "</a>
                       </h6>
@@ -334,7 +334,7 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
                     <div class=\"tf-mini-cart-info\">
                       <div class=\"text-small text-main-2 sub\">{{ product.model }}</div>
                       <h6 class=\"title\">
-                        <a href=\"{{ product.href }}\" class=\"link text-line-clamp-1\">{{ product.name }}</a>
+                        <a href=\"{{ product.href }}\" class=\"link text-line-clamp-2\">{{ product.name }}</a>
                       </h6>
                       <div class=\"size\">
                         {% for option in product.option %}
@@ -396,6 +396,6 @@ class __TwigTemplate_b1bca4412eeac1eb082518cd33a57765bda81a646af3f073871bb29be8a
   </div>
 </div>
 <!-- /Shopping Cart -->
-", "catalog/view/template/common/cart.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\cart.twig");
+", "catalog/view/template/common/cart.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\cart.twig");
     }
 }

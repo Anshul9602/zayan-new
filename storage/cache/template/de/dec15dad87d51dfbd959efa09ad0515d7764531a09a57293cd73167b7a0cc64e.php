@@ -53,7 +53,7 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 </style>
 
 <!-- Page Title -->
-<section class=\"page-title-image \" style=\"margin-top: 100px;\">
+<section class=\"page-title-image \"  style=\"padding-top:100px;\">
 \t<div class=\"page_image overflow-hidden\">
 \t\t<img class=\"lazyload ani-zoom\" src=\"assets/aboutbg.jpg\" data-src=\"assets/aboutbg.jpg\" alt=\"Banner\">
 \t</div>
@@ -118,8 +118,8 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t<div class=\"item_1 image\">
 \t\t\t\t<img class=\"lazyload\" src=\"assets/ab1.jpg\" data-src=\"assets/ab1.jpg\" alt=\"Modal 1\">
 \t\t\t</div>
-\t\t\t<div class=\"d-md-none d-xl-block\">
-\t\t\t\t<img class=\"lazyload d-md-none\" src=\"assets/ab2.jpg\" data-src=\"assets/ab2.jpg\" alt=\"Modal 2\">
+\t\t\t<div class=\" d-xl-block\">
+\t\t\t\t<img class=\"lazyload \" src=\"assets/ab2.jpg\" data-src=\"assets/ab2.jpg\" alt=\"Modal 2\">
 \t\t\t</div>
 \t\t\t<div class=\"item_3 image\">
 \t\t\t\t<img class=\"lazyload\" src=\"assets/ab3.jpg\" data-src=\"assets/ab3.jpg\" alt=\"Modal 3\">
@@ -289,189 +289,167 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t</div>
 </section>
 <!-- /Brand Story -->
-<!-- Customer Review -->
-<section class=\"flat-spacing pt-0\">
-\t<div class=\"container\">
-\t\t<div class=\"row\">
-\t\t\t<div class=\"col-lg-8 offset-lg-2\">
-\t\t\t\t<div class=\"flat-spacing pt-0\">
-\t\t\t\t\t<span class=\"br-line d-flex\"></span>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"sect-title text-center\">
-\t\t\t\t\t<h1 class=\"s-title mb-8\">Customer Reviews</h1>
-\t\t\t\t\t<p class=\"s-subtitle h6\">Up to 50% off Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"slider-thumb-wrap\">
-\t\t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper slider-content-thumb\">
-\t\t\t\t\t\t<div
-\t\t\t\t\t\t\tclass=\"swiper-wrapper\">
-\t\t\t\t\t\t\t<!-- item 1 -->
-\t\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t\t<div class=\"testimonial-V05\">
-\t\t\t\t\t\t\t\t\t<div class=\"tes_icon\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-block-quote\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"tes_author\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"author-name h4\">Brooklyn Simmons</p>
-\t\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
-\t\t\t\t\t\t\t\t\t\t“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada nulla a diam tempus mattis
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                ut at
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                odio. Nam pharetra et sapien posuere placerat. Sed vitae rhoncus nibh. Phasellus suscipit vitae lorem
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                vel
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                pretium “
-\t\t\t\t\t\t\t\t\t</p>
+<!-- Testimonial -->
+\t<section class=\"flat-spacing pb-0 pt-5\">
+\t\t<div class=\"container\">
+\t\t\t<div class=\"h1 sect-title text-black fw-medium text-center wow fadeInUp\">Customer Reviews</div>
+\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper\" data-preview=\"3\" data-tablet=\"2\" data-mobile-sm=\"1\" data-mobile=\"1\" data-space-lg=\"48\" data-space-md=\"24\" data-space=\"12\" data-pagination=\"1\" data-pagination-sm=\"1\" data-pagination-md=\"2\" data-pagination-lg=\"3\" data-auto=\"true\" data-delay=\"2500\">
+\t\t\t\t<div
+\t\t\t\t\tclass=\"swiper-wrapper\">
+\t\t\t\t\t<!-- item 1 -->
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Stunning Quality</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“The craftsmanship is exceptional! My diamond necklace looks even more beautiful in person. Truly worth every penny.“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Priya S.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<!-- item 2 -->
-\t\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t\t<div class=\"testimonial-V05\">
-\t\t\t\t\t\t\t\t\t<div class=\"tes_icon\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-block-quote\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"tes_author\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"author-name h4\">Mas Shin</p>
-\t\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
-\t\t\t\t\t\t\t\t\t\t“Our experience with ACIS has been excellent. Their support team is always quick to respond and very
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                professional. They handle all questions and issues with great care and efficiency, making them a
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                reliable partner we truly appreciate.“
-\t\t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<!-- item 3 -->
-\t\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t\t<div class=\"testimonial-V05\">
-\t\t\t\t\t\t\t\t\t<div class=\"tes_icon\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-block-quote\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"tes_author\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"author-name h4\">Sil Vox</p>
-\t\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
-\t\t\t\t\t\t\t\t\t\t“ACIS consistently provides fast, professional support whenever we need it. Their team is
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                knowledgeable
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                and always ready to help with any issue, big or small. We really appreciate their reliable
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                partnership.“
-\t\t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
+
+
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div
-\t\t\t\t\t\tclass=\"slider-btn-thumbs\">
-\t\t\t\t\t\t<!-- Btn 1 -->
-\t\t\t\t\t\t<div class=\"btn-thumbs active\">
-\t\t\t\t\t\t\t<img src=\"assets/images/avatar/avatar-1.jpg\" alt=\"Avatar\">
+\t\t\t\t\t<!-- item 2 -->
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\" data-wow-delay=\"0.1s\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Perfect Gift</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“I gifted my wife a diamond ring from here, and she was overjoyed. Amazing service and elegant design!“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Rajesh M.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- Btn 2 -->
-\t\t\t\t\t\t<div class=\"btn-thumbs\">
-\t\t\t\t\t\t\t<img src=\"assets/images/avatar/avatar-2.jpg\" alt=\"Avatar\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- Btn 3 -->
-\t\t\t\t\t\t<div class=\"btn-thumbs\">
-\t\t\t\t\t\t\t<img src=\"assets/images/avatar/avatar-3.jpg\" alt=\"Avatar\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- item 3 -->
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Fast & Reliable</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“Super fast delivery and the packaging was luxurious. My diamond earrings arrived in perfect condition. Highly recommend!“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Ananya K.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Elegant Design</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“I love how unique and classy their diamond pendants are. Perfect balance of sparkle and subtlety!“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Sameer P.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
+
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+
+\t\t\t\t\t<!-- item 2 -->
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\" data-wow-delay=\"0.1s\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Outstanding Customer Support</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“The team was so helpful when I had questions about my order. They made the process seamless.“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Meera T.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- item 3 -->
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Great Value</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“Excellent value for such high-quality diamonds. I’m thrilled with my purchase and will buy again soon.“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Arjun V.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
 \t\t\t\t</div>
+\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t\t\t</div>
 \t\t</div>
-\t</div>
-</section>
+\t</section>
+\t<!-- /Testimonial -->
 
 <!-- /Customer Review -->
-<!-- Gallery -->
-<section class=\"themesFlat\">
-\t<div class=\"container\">
-\t\t<div class=\"sect-title text-center\">
-\t\t\t<h1 class=\"s-title mb-8\">Shop Instagram</h1>
-\t\t\t<p class=\"s-subtitle h6\">Up to 50% off Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-\t\t</div>
-\t</div>
-\t<div dir=\"ltr\" class=\"swiper tf-swiper\" data-preview=\"4\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space=\"0\">
-\t\t<div
-\t\t\tclass=\"swiper-wrapper\">
-\t\t\t<!-- item 1 -->
-\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t<div class=\"gallery-item hover-img hover-overlay\">
-\t\t\t\t\t<div class=\"image img-style\">
-\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/gallery/about-1.jpg\" data-src=\"assets/images/gallery/about-1.jpg\" alt=\"\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<a href=\"product-detail.html\" class=\"box-icon hover-tooltip\">
-\t\t\t\t\t\t<span class=\"icon icon-instagram-logo\"></span>
-\t\t\t\t\t\t<span class=\"tooltip\">View product</span>
-\t\t\t\t\t</a>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<!-- item 2 -->
-\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t<div class=\"gallery-item hover-img hover-overlay\">
-\t\t\t\t\t<div class=\"image img-style\">
-\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/gallery/about-2.jpg\" data-src=\"assets/images/gallery/about-2.jpg\" alt=\"\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<a href=\"product-detail.html\" class=\"box-icon hover-tooltip\">
-\t\t\t\t\t\t<span class=\"icon icon-instagram-logo\"></span>
-\t\t\t\t\t\t<span class=\"tooltip\">View product</span>
-\t\t\t\t\t</a>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<!-- item 3 -->
-\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t<div class=\"gallery-item hover-img hover-overlay\">
-\t\t\t\t\t<div class=\"image img-style\">
-\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/gallery/about-3.jpg\" data-src=\"assets/images/gallery/about-3.jpg\" alt=\"\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<a href=\"product-detail.html\" class=\"box-icon hover-tooltip\">
-\t\t\t\t\t\t<span class=\"icon icon-instagram-logo\"></span>
-\t\t\t\t\t\t<span class=\"tooltip\">View product</span>
-\t\t\t\t\t</a>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<!-- item 4 -->
-\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t<div class=\"gallery-item hover-img hover-overlay\">
-\t\t\t\t\t<div class=\"image img-style\">
-\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/gallery/about-4.jpg\" data-src=\"assets/images/gallery/about-4.jpg\" alt=\"\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<a href=\"product-detail.html\" class=\"box-icon hover-tooltip\">
-\t\t\t\t\t\t<span class=\"icon icon-instagram-logo\"></span>
-\t\t\t\t\t\t<span class=\"tooltip\">View product</span>
-\t\t\t\t\t</a>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-\t</div>
-</section>
-<!-- /Gallery -->
 
+<br><br>
 
 ";
-        // line 431
+        // line 409
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -499,7 +477,7 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
      */
     public function getDebugInfo(): array
     {
-        return array (  475 => 431,  42 => 1,);
+        return array (  453 => 409,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -517,7 +495,7 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 </style>
 
 <!-- Page Title -->
-<section class=\"page-title-image \" style=\"margin-top: 100px;\">
+<section class=\"page-title-image \"  style=\"padding-top:100px;\">
 \t<div class=\"page_image overflow-hidden\">
 \t\t<img class=\"lazyload ani-zoom\" src=\"assets/aboutbg.jpg\" data-src=\"assets/aboutbg.jpg\" alt=\"Banner\">
 \t</div>
@@ -582,8 +560,8 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t\t\t<div class=\"item_1 image\">
 \t\t\t\t<img class=\"lazyload\" src=\"assets/ab1.jpg\" data-src=\"assets/ab1.jpg\" alt=\"Modal 1\">
 \t\t\t</div>
-\t\t\t<div class=\"d-md-none d-xl-block\">
-\t\t\t\t<img class=\"lazyload d-md-none\" src=\"assets/ab2.jpg\" data-src=\"assets/ab2.jpg\" alt=\"Modal 2\">
+\t\t\t<div class=\" d-xl-block\">
+\t\t\t\t<img class=\"lazyload \" src=\"assets/ab2.jpg\" data-src=\"assets/ab2.jpg\" alt=\"Modal 2\">
 \t\t\t</div>
 \t\t\t<div class=\"item_3 image\">
 \t\t\t\t<img class=\"lazyload\" src=\"assets/ab3.jpg\" data-src=\"assets/ab3.jpg\" alt=\"Modal 3\">
@@ -753,188 +731,166 @@ class __TwigTemplate_ec259dee440414dce37aab5d3a7257c5be6345dc9031c591640285fa1a2
 \t</div>
 </section>
 <!-- /Brand Story -->
-<!-- Customer Review -->
-<section class=\"flat-spacing pt-0\">
-\t<div class=\"container\">
-\t\t<div class=\"row\">
-\t\t\t<div class=\"col-lg-8 offset-lg-2\">
-\t\t\t\t<div class=\"flat-spacing pt-0\">
-\t\t\t\t\t<span class=\"br-line d-flex\"></span>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"sect-title text-center\">
-\t\t\t\t\t<h1 class=\"s-title mb-8\">Customer Reviews</h1>
-\t\t\t\t\t<p class=\"s-subtitle h6\">Up to 50% off Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"slider-thumb-wrap\">
-\t\t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper slider-content-thumb\">
-\t\t\t\t\t\t<div
-\t\t\t\t\t\t\tclass=\"swiper-wrapper\">
-\t\t\t\t\t\t\t<!-- item 1 -->
-\t\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t\t<div class=\"testimonial-V05\">
-\t\t\t\t\t\t\t\t\t<div class=\"tes_icon\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-block-quote\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"tes_author\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"author-name h4\">Brooklyn Simmons</p>
-\t\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
-\t\t\t\t\t\t\t\t\t\t“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada nulla a diam tempus mattis
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                ut at
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                odio. Nam pharetra et sapien posuere placerat. Sed vitae rhoncus nibh. Phasellus suscipit vitae lorem
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                vel
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                pretium “
-\t\t\t\t\t\t\t\t\t</p>
+<!-- Testimonial -->
+\t<section class=\"flat-spacing pb-0 pt-5\">
+\t\t<div class=\"container\">
+\t\t\t<div class=\"h1 sect-title text-black fw-medium text-center wow fadeInUp\">Customer Reviews</div>
+\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper\" data-preview=\"3\" data-tablet=\"2\" data-mobile-sm=\"1\" data-mobile=\"1\" data-space-lg=\"48\" data-space-md=\"24\" data-space=\"12\" data-pagination=\"1\" data-pagination-sm=\"1\" data-pagination-md=\"2\" data-pagination-lg=\"3\" data-auto=\"true\" data-delay=\"2500\">
+\t\t\t\t<div
+\t\t\t\t\tclass=\"swiper-wrapper\">
+\t\t\t\t\t<!-- item 1 -->
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Stunning Quality</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“The craftsmanship is exceptional! My diamond necklace looks even more beautiful in person. Truly worth every penny.“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Priya S.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<!-- item 2 -->
-\t\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t\t<div class=\"testimonial-V05\">
-\t\t\t\t\t\t\t\t\t<div class=\"tes_icon\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-block-quote\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"tes_author\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"author-name h4\">Mas Shin</p>
-\t\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
-\t\t\t\t\t\t\t\t\t\t“Our experience with ACIS has been excellent. Their support team is always quick to respond and very
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                professional. They handle all questions and issues with great care and efficiency, making them a
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                reliable partner we truly appreciate.“
-\t\t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<!-- item 3 -->
-\t\t\t\t\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t\t\t\t\t<div class=\"testimonial-V05\">
-\t\t\t\t\t\t\t\t\t<div class=\"tes_icon\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-block-quote\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"tes_author\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"author-name h4\">Sil Vox</p>
-\t\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
-\t\t\t\t\t\t\t\t\t\t“ACIS consistently provides fast, professional support whenever we need it. Their team is
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                knowledgeable
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                and always ready to help with any issue, big or small. We really appreciate their reliable
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                partnership.“
-\t\t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
+
+
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div
-\t\t\t\t\t\tclass=\"slider-btn-thumbs\">
-\t\t\t\t\t\t<!-- Btn 1 -->
-\t\t\t\t\t\t<div class=\"btn-thumbs active\">
-\t\t\t\t\t\t\t<img src=\"assets/images/avatar/avatar-1.jpg\" alt=\"Avatar\">
+\t\t\t\t\t<!-- item 2 -->
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\" data-wow-delay=\"0.1s\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Perfect Gift</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“I gifted my wife a diamond ring from here, and she was overjoyed. Amazing service and elegant design!“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Rajesh M.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- Btn 2 -->
-\t\t\t\t\t\t<div class=\"btn-thumbs\">
-\t\t\t\t\t\t\t<img src=\"assets/images/avatar/avatar-2.jpg\" alt=\"Avatar\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!-- Btn 3 -->
-\t\t\t\t\t\t<div class=\"btn-thumbs\">
-\t\t\t\t\t\t\t<img src=\"assets/images/avatar/avatar-3.jpg\" alt=\"Avatar\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- item 3 -->
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Fast & Reliable</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“Super fast delivery and the packaging was luxurious. My diamond earrings arrived in perfect condition. Highly recommend!“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Ananya K.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Elegant Design</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“I love how unique and classy their diamond pendants are. Perfect balance of sparkle and subtlety!“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Sameer P.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
+
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+
+\t\t\t\t\t<!-- item 2 -->
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\" data-wow-delay=\"0.1s\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Outstanding Customer Support</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“The team was so helpful when I had questions about my order. They made the process seamless.“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Meera T.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- item 3 -->
+\t\t\t\t\t<div class=\"swiper-slide\">
+\t\t\t\t\t\t<div class=\"testimonial-V01 wow fadeInLeft\" data-wow-delay=\"0.2s\">
+\t\t\t\t\t\t\t<div class=\"\">
+\t\t\t\t\t\t\t\t<h4 class=\"tes_title\">Great Value</h4>
+\t\t\t\t\t\t\t\t<p class=\"tes_text h4\">
+\t\t\t\t\t\t\t\t\t“Excellent value for such high-quality diamonds. I’m thrilled with my purchase and will buy again soon.“
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t<div class=\"tes_author\">
+\t\t\t\t\t\t\t\t\t<p class=\"author-name h5\">Arjun V.</p>
+\t\t\t\t\t\t\t\t\t<i class=\"author-verified icon-check-circle\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"rate_wrap\">
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t\t<i class=\"icon-star text-star\"></i>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
 \t\t\t\t</div>
+\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t\t\t</div>
 \t\t</div>
-\t</div>
-</section>
+\t</section>
+\t<!-- /Testimonial -->
 
 <!-- /Customer Review -->
-<!-- Gallery -->
-<section class=\"themesFlat\">
-\t<div class=\"container\">
-\t\t<div class=\"sect-title text-center\">
-\t\t\t<h1 class=\"s-title mb-8\">Shop Instagram</h1>
-\t\t\t<p class=\"s-subtitle h6\">Up to 50% off Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-\t\t</div>
-\t</div>
-\t<div dir=\"ltr\" class=\"swiper tf-swiper\" data-preview=\"4\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space=\"0\">
-\t\t<div
-\t\t\tclass=\"swiper-wrapper\">
-\t\t\t<!-- item 1 -->
-\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t<div class=\"gallery-item hover-img hover-overlay\">
-\t\t\t\t\t<div class=\"image img-style\">
-\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/gallery/about-1.jpg\" data-src=\"assets/images/gallery/about-1.jpg\" alt=\"\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<a href=\"product-detail.html\" class=\"box-icon hover-tooltip\">
-\t\t\t\t\t\t<span class=\"icon icon-instagram-logo\"></span>
-\t\t\t\t\t\t<span class=\"tooltip\">View product</span>
-\t\t\t\t\t</a>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<!-- item 2 -->
-\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t<div class=\"gallery-item hover-img hover-overlay\">
-\t\t\t\t\t<div class=\"image img-style\">
-\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/gallery/about-2.jpg\" data-src=\"assets/images/gallery/about-2.jpg\" alt=\"\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<a href=\"product-detail.html\" class=\"box-icon hover-tooltip\">
-\t\t\t\t\t\t<span class=\"icon icon-instagram-logo\"></span>
-\t\t\t\t\t\t<span class=\"tooltip\">View product</span>
-\t\t\t\t\t</a>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<!-- item 3 -->
-\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t<div class=\"gallery-item hover-img hover-overlay\">
-\t\t\t\t\t<div class=\"image img-style\">
-\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/gallery/about-3.jpg\" data-src=\"assets/images/gallery/about-3.jpg\" alt=\"\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<a href=\"product-detail.html\" class=\"box-icon hover-tooltip\">
-\t\t\t\t\t\t<span class=\"icon icon-instagram-logo\"></span>
-\t\t\t\t\t\t<span class=\"tooltip\">View product</span>
-\t\t\t\t\t</a>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<!-- item 4 -->
-\t\t\t<div class=\"swiper-slide\">
-\t\t\t\t<div class=\"gallery-item hover-img hover-overlay\">
-\t\t\t\t\t<div class=\"image img-style\">
-\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/images/gallery/about-4.jpg\" data-src=\"assets/images/gallery/about-4.jpg\" alt=\"\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<a href=\"product-detail.html\" class=\"box-icon hover-tooltip\">
-\t\t\t\t\t\t<span class=\"icon icon-instagram-logo\"></span>
-\t\t\t\t\t\t<span class=\"tooltip\">View product</span>
-\t\t\t\t\t</a>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-\t</div>
-</section>
-<!-- /Gallery -->
 
+<br><br>
 
 {{ footer }}
-", "catalog/view/template/common/about.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\about.twig");
+", "catalog/view/template/common/about.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\about.twig");
     }
 }
