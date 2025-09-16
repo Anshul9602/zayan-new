@@ -1,18 +1,67 @@
 {{ header }}
-<div id="account-wishlist" class="container" style="padding-top: 100px;">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
-  <div class="row">{{ column_left }}
-    <div id="content" class="col">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      <div id="wishlist">{{ list }}</div>
-      <div class="text-end"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
-</div>
+
+<!-- Page Title -->
+<section class="s-page-title" style="padding-top:100px;">
+    <div class="container">
+        <div class="content" style="padding-bottom: 19px;">
+            <ul class="breadcrumbs-page">
+                {% for breadcrumb in breadcrumbs %}
+                    <li class="breadcrumb-item" style="display:flex;">
+                        <a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <h1 class="title-page">{{ heading_title }}</h1>
+        </div>
+    </div>
+</section>
+<!-- /Page Title -->
+
+<!-- Wishlist -->
+<section class="flat-spacing-3">
+    <div class="container">
+        <div class="row">
+            {{ column_left }}
+            <div id="content" class="col">
+                {{ content_top }}
+                
+                <!-- Wishlist Introduction -->
+                <div class="wishlist-intro">
+                    <div class="intro-card">
+                        <div class="intro-content">
+                            <div class="intro-text">
+                                <h3>Your Wishlist</h3>
+                                <p>Save your favorite items for later. Add products to your wishlist to keep track of items you love and want to purchase in the future.</p>
+                            </div>
+                            <div class="intro-icon">
+                                <i class="icon icon-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wishlist Content -->
+                <div class="wishlist-content">
+                    <div id="wishlist">{{ list }}</div>
+                </div>
+                
+                <!-- Page Actions -->
+                <div class="wishlist-actions">
+                    <div class="action-buttons">
+                        <a href="{{ continue }}" class="tf-btn btn-fill animate-btn">
+                            <i class="icon icon-shopping-bag"></i>
+                            {{ button_continue }}
+                        </a>
+                    </div>
+                </div>
+                
+                {{ content_bottom }}
+            </div>
+            {{ column_right }}
+        </div>
+    </div>
+</section>
+<!-- /Wishlist -->
 <script type="text/javascript"><!--
 $('#wishlist').on('click', '.btn-danger', function(e) {
     e.preventDefault();
@@ -47,4 +96,149 @@ $('#wishlist').on('click', '.btn-danger', function(e) {
     });
 });
 //--></script>
+
+<style>
+/* Wishlist Page Styling */
+.wishlist-intro {
+    margin-bottom: 30px;
+}
+
+.intro-card {
+    background: linear-gradient(135deg, #241B68 0%, #000 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(36,27,104,0.2);
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color:#fff;
+}
+
+.intro-text p {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.intro-icon {
+    flex-shrink: 0;
+}
+
+.intro-icon i {
+    font-size: 48px;
+    opacity: 0.8;
+}
+
+/* Wishlist Content */
+.wishlist-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    min-height: 300px;
+}
+
+/* Wishlist Actions */
+.wishlist-actions {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.action-buttons .tf-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 180px;
+    justify-content: center;
+}
+
+/* Loading State */
+.wishlist-content:empty::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 120px auto;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #241B68;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .intro-text h3 {
+        font-size: 22px;
+    }
+    
+    .intro-icon i {
+        font-size: 40px;
+    }
+    
+    .wishlist-content {
+        padding: 20px;
+        margin: 0 -15px 30px -15px;
+        border-radius: 0;
+    }
+    
+    .intro-card {
+        padding: 20px;
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+    
+    .wishlist-actions {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro-text h3 {
+        font-size: 20px;
+    }
+    
+    .intro-text p {
+        font-size: 14px;
+    }
+    
+    .wishlist-actions {
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+}
+</style>
+
 {{ footer }}

@@ -1,44 +1,403 @@
 {{ header }}
-<div id="account-transaction" class="container">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
-  <div class="row">{{ column_left }}
-    <div id="content" class="col">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      <p>{{ text_total }} <b>{{ total }}</b>.</p>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <th>{{ column_date_added }}</th>
-            <th>{{ column_description }}</th>
-            <th class="text-end">{{ column_amount }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% if transactions %}
-            {% for transaction in transactions %}
-              <tr>
-                <td>{{ transaction.date_added }}</td>
-                <td>{{ transaction.description }}</td>
-                <td class="text-end">{{ transaction.amount }}</td>
-              </tr>
-            {% endfor %}
-          {% else %}
-            <tr>
-              <td class="text-center" colspan="3">{{ text_no_results }}</td>
-            </tr>
-          {% endif %}
-        </tbody>
-      </table>
-      <div class="row mb-3">
-        <div class="col-sm-6 text-start">{{ pagination }}</div>
-        <div class="col-sm-6 text-end">{{ results }}</div>
-      </div>
-      <div class="text-end"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
-</div>
+
+<!-- Page Title -->
+<section class="s-page-title" style="padding-top:100px;">
+    <div class="container">
+        <div class="content" style="padding-bottom: 19px;">
+            <ul class="breadcrumbs-page">
+                {% for breadcrumb in breadcrumbs %}
+                    <li class="breadcrumb-item" style="display:flex;">
+                        <a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <h1 class="title-page">{{ heading_title }}</h1>
+        </div>
+    </div>
+</section>
+<!-- /Page Title -->
+
+<!-- Transactions -->
+<section class="flat-spacing-3">
+    <div class="container">
+        <div class="row">
+            {{ column_left }}
+            <div id="content" class="col">
+                {{ content_top }}
+                
+                <!-- Account Balance -->
+                <div class="balance-section">
+                    <div class="balance-card">
+                        <div class="balance-header">
+                            <div class="balance-info">
+                                <h3>Account Balance</h3>
+                                <p>{{ text_total }}</p>
+                            </div>
+                            <div class="balance-amount">
+                                <span class="amount">{{ total }}</span>
+                            </div>
+                        </div>
+                        <div class="balance-icon">
+                            <i class="icon icon-dollar-sign"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transactions List -->
+                <div class="transactions-section">
+                    {% if transactions %}
+                        <div class="transactions-header">
+                            <h3>Transaction History</h3>
+                        </div>
+                        <div class="transactions-list">
+                            {% for transaction in transactions %}
+                                <div class="transaction-item">
+                                    <div class="transaction-info">
+                                        <div class="transaction-date">
+                                            <i class="icon icon-calendar"></i>
+                                            <span>{{ transaction.date_added }}</span>
+                                        </div>
+                                        <div class="transaction-description">
+                                            <h5>{{ transaction.description }}</h5>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <span class="amount {% if transaction.amount starts with '+' %}positive{% elseif transaction.amount starts with '-' %}negative{% endif %}">
+                                            {{ transaction.amount }}
+                                        </span>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <div class="transactions-pagination">
+                            <div class="pagination-info">
+                                {{ results }}
+                            </div>
+                            <div class="pagination-controls">
+                                {{ pagination }}
+                            </div>
+                        </div>
+                    {% else %}
+                        <!-- Empty State -->
+                        <div class="empty-transactions-state">
+                            <div class="empty-icon">
+                                <i class="icon icon-activity"></i>
+                            </div>
+                            <h3>No Transactions Found</h3>
+                            <p>{{ text_no_results }}</p>
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <!-- Page Actions -->
+                <div class="transactions-actions">
+                    <div class="action-buttons">
+                        <a href="{{ continue }}" class="tf-btn btn-fill animate-btn">
+                            <i class="icon icon-arrow-left"></i>
+                            {{ button_continue }}
+                        </a>
+                    </div>
+                </div>
+                
+                {{ content_bottom }}
+            </div>
+            {{ column_right }}
+        </div>
+    </div>
+</section>
+<!-- /Transactions -->
+
+<style>
+/* Transactions Page Styling */
+.balance-section {
+    margin-bottom: 30px;
+}
+
+.balance-card {
+    background: linear-gradient(135deg, #241B68 0%, #000 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(36,27,104,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.balance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.balance-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.9;
+    color:#fff;
+}
+
+.balance-info p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.balance-amount {
+    text-align: right;
+}
+
+.balance-amount .amount {
+    font-size: 32px;
+    font-weight: 700;
+    display: block;
+}
+
+.balance-icon {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.balance-icon i {
+    font-size: 120px;
+}
+
+/* Transactions Section */
+.transactions-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.transactions-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.transactions-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.transactions-list {
+    margin-bottom: 20px;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: #fafafa;
+    transition: all 0.2s ease;
+}
+
+.transaction-item:hover {
+    background: #f5f5f5;
+    border-color: #241B68;
+    transform: translateX(5px);
+}
+
+.transaction-item:last-child {
+    margin-bottom: 0;
+}
+
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.transaction-date i {
+    font-size: 14px;
+}
+
+.transaction-description h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.transaction-amount {
+    text-align: right;
+    min-width: 100px;
+}
+
+.transaction-amount .amount {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #f8f9fa;
+    color: #333;
+}
+
+.transaction-amount .amount.positive {
+    background: #d4edda;
+    color: #155724;
+}
+
+.transaction-amount .amount.negative {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Empty State */
+.empty-transactions-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.empty-icon {
+    margin-bottom: 20px;
+}
+
+.empty-icon i {
+    font-size: 48px;
+    color: #ccc;
+}
+
+.empty-transactions-state h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.empty-transactions-state p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Pagination */
+.transactions-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #e9ecef;
+    margin-top: 20px;
+}
+
+.pagination-info {
+    color: #666;
+    font-size: 14px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Transactions Actions */
+.transactions-actions {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.action-buttons .tf-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 160px;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .balance-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .balance-amount .amount {
+        font-size: 28px;
+    }
+    
+    .transaction-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .transaction-amount {
+        align-self: flex-end;
+    }
+    
+    .transactions-pagination {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .transactions-section {
+        padding: 20px;
+        margin: 0 -15px 30px -15px;
+        border-radius: 0;
+    }
+    
+    .balance-card {
+        padding: 20px;
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .balance-info h3 {
+        font-size: 16px;
+    }
+    
+    .balance-amount .amount {
+        font-size: 24px;
+    }
+    
+    .transaction-description h5 {
+        font-size: 14px;
+    }
+    
+    .transaction-amount .amount {
+        font-size: 16px;
+    }
+    
+    .transactions-actions {
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+}
+</style>
+
 {{ footer }}

@@ -41,98 +41,127 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
         // line 1
         yield ($context["header"] ?? null);
         yield "
-<div id=\"account-register\" class=\"container\" style=\"padding-top: 100px;\">
-  <ul class=\"breadcrumb\">
-    ";
-        // line 4
+
+<!-- Page Title -->
+<section class=\"s-page-title\" style=\"padding-top:100px;\">
+    <div class=\"container\">
+        <div class=\"content\" style=\"padding-bottom: 19px;\">
+            <ul class=\"breadcrumbs-page\">
+                ";
+        // line 8
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["breadcrumbs"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["breadcrumb"]) {
-            // line 5
-            yield "      <li class=\"breadcrumb-item\"><a href=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "href", [], "any", false, false, false, 5);
+            // line 9
+            yield "                    <li class=\"breadcrumb-item\" style=\"display:flex;\">
+                        <a href=\"";
+            // line 10
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "href", [], "any", false, false, false, 10);
             yield "\">";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "text", [], "any", false, false, false, 5);
-            yield "</a></li>
-    ";
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "text", [], "any", false, false, false, 10);
+            yield "</a>
+                    </li>
+                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['breadcrumb'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 7
-        yield "  </ul>
-  <div class=\"row\">
-    ";
-        // line 9
-        yield ($context["column_left"] ?? null);
-        yield "
-    <div id=\"content\" class=\"col\">";
-        // line 10
-        yield ($context["content_top"] ?? null);
-        yield "
-      <h1>";
-        // line 11
+        // line 13
+        yield "            </ul>
+            <h1 class=\"title-page\">";
+        // line 14
         yield ($context["heading_title"] ?? null);
         yield "</h1>
-      <p>";
-        // line 12
+        </div>
+    </div>
+</section>
+<!-- /Page Title -->
+
+<!-- Register Section -->
+<section class=\"flat-spacing-3\">
+    <div class=\"container\">
+        <div class=\"row\">
+            ";
+        // line 24
+        yield ($context["column_left"] ?? null);
+        yield "
+            <div id=\"content\" class=\"col\">
+                ";
+        // line 26
+        yield ($context["content_top"] ?? null);
+        yield "
+                
+                <!-- Registration Introduction -->
+                <div class=\"register-intro\">
+                    <div class=\"intro-card\">
+                        <div class=\"intro-header\">
+                            <i class=\"icon icon-user-plus\"></i>
+                            <h3>Create Your Account</h3>
+                        </div>
+                        <p class=\"intro-text\">";
+        // line 35
         yield ($context["text_account_already"] ?? null);
         yield "</p>
-      <form id=\"form-register\" action=\"";
-        // line 13
+                    </div>
+                </div>
+                
+                <!-- Registration Form -->
+                <div class=\"register-form-container\">
+                    <form id=\"form-register\" action=\"";
+        // line 41
         yield ($context["register"] ?? null);
         yield "\" method=\"post\" data-oc-toggle=\"ajax\">
         <fieldset id=\"account\">
           <legend>";
-        // line 15
+        // line 43
         yield ($context["text_your_details"] ?? null);
         yield "</legend>
           ";
-        // line 16
+        // line 44
         if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["customer_groups"] ?? null)) > 1)) {
-            // line 17
+            // line 45
             yield "            <div class=\"row mb-3 required\">
               <label class=\"col-sm-2 col-form-label\">";
-            // line 18
+            // line 46
             yield ($context["entry_customer_group"] ?? null);
             yield "</label>
               <div class=\"col-sm-10\">
                 <select name=\"customer_group_id\" id=\"input-customer-group\" class=\"form-select\">
                   ";
-            // line 21
+            // line 49
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["customer_groups"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["customer_group"]) {
-                // line 22
+                // line 50
                 yield "                    <option value=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 22);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 50);
                 yield "\"";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 22) == ($context["customer_group_id"] ?? null))) {
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 50) == ($context["customer_group_id"] ?? null))) {
                     yield " selected";
                 }
                 yield ">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "name", [], "any", false, false, false, 22);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["customer_group"], "name", [], "any", false, false, false, 50);
                 yield "</option>
                   ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['customer_group'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 24
+            // line 52
             yield "                </select>
               </div>
             </div>
           ";
         }
-        // line 28
+        // line 56
         yield "          <div class=\"row mb-3 required\">
             <label for=\"input-firstname\" class=\"col-sm-2 col-form-label\">";
-        // line 29
+        // line 57
         yield ($context["entry_firstname"] ?? null);
         yield "</label>
             <div class=\"col-sm-10\">
               <input type=\"text\" name=\"firstname\" value=\"\" placeholder=\"";
-        // line 31
+        // line 59
         yield ($context["entry_firstname"] ?? null);
         yield "\" id=\"input-firstname\" class=\"form-control\"/>
               <div id=\"error-firstname\" class=\"invalid-feedback\"></div>
@@ -140,12 +169,12 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
           </div>
           <div class=\"row mb-3 required\">
             <label for=\"input-lastname\" class=\"col-sm-2 col-form-label\">";
-        // line 36
+        // line 64
         yield ($context["entry_lastname"] ?? null);
         yield "</label>
             <div class=\"col-sm-10\">
               <input type=\"text\" name=\"lastname\" value=\"\" placeholder=\"";
-        // line 38
+        // line 66
         yield ($context["entry_lastname"] ?? null);
         yield "\" id=\"input-lastname\" class=\"form-control\"/>
               <div id=\"error-lastname\" class=\"invalid-feedback\"></div>
@@ -153,12 +182,12 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
           </div>
           <div class=\"row mb-3 required\">
             <label for=\"input-email\" class=\"col-sm-2 col-form-label\">";
-        // line 43
+        // line 71
         yield ($context["entry_email"] ?? null);
         yield "</label>
             <div class=\"col-sm-10\">
               <input type=\"email\" name=\"email\" value=\"\" placeholder=\"";
-        // line 45
+        // line 73
         yield ($context["entry_email"] ?? null);
         yield "\" id=\"input-email\" class=\"form-control\"/>
               <div id=\"error-email\" class=\"invalid-feedback\"></div>
@@ -166,21 +195,21 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
           </div>
 
           ";
-        // line 50
+        // line 78
         if (($context["config_telephone_display"] ?? null)) {
-            // line 51
+            // line 79
             yield "            <div class=\"row mb-3";
             if (($context["config_telephone_required"] ?? null)) {
                 yield " required";
             }
             yield "\">
               <label for=\"input-telephone\" class=\"col-sm-2 col-form-label\">";
-            // line 52
+            // line 80
             yield ($context["entry_telephone"] ?? null);
             yield "</label>
               <div class=\"col-sm-10\">
                 <input type=\"tel\" name=\"telephone\" value=\"\" placeholder=\"";
-            // line 54
+            // line 82
             yield ($context["entry_telephone"] ?? null);
             yield "\" id=\"input-telephone\" class=\"form-control\"/>
                 <div id=\"error-telephone\" class=\"invalid-feedback\"></div>
@@ -188,101 +217,101 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
             </div>
           ";
         }
-        // line 59
+        // line 87
         yield "
           ";
-        // line 60
+        // line 88
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["custom_fields"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["custom_field"]) {
-            // line 61
+            // line 89
             yield "
             ";
-            // line 62
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 62) == "select")) {
-                // line 63
+            // line 90
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 90) == "select")) {
+                // line 91
                 yield "              <div class=\"row mb-3 custom-field custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 63);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 91);
                 yield "\">
                 <label for=\"input-custom-field-";
-                // line 64
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 64);
+                // line 92
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 92);
                 yield "\" class=\"col-sm-2 col-form-label\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 64);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 92);
                 yield "</label>
                 <div class=\"col-sm-10\">
                   <select name=\"custom_field[";
-                // line 66
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 66);
+                // line 94
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 94);
                 yield "]\" id=\"input-custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 66);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 94);
                 yield "\" class=\"form-select\">
                     <option value=\"\">";
-                // line 67
+                // line 95
                 yield ($context["text_select"] ?? null);
                 yield "</option>
                     ";
-                // line 68
+                // line 96
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_value", [], "any", false, false, false, 68));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_value", [], "any", false, false, false, 96));
                 foreach ($context['_seq'] as $context["_key"] => $context["custom_field_value"]) {
-                    // line 69
+                    // line 97
                     yield "                      <option value=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 69);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 97);
                     yield "\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 69);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 97);
                     yield "</option>
                     ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['custom_field_value'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 71
+                // line 99
                 yield "                  </select>
                   <div id=\"error-custom-field-";
-                // line 72
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 72);
+                // line 100
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 100);
                 yield "\" class=\"invalid-feedback\"></div>
                 </div>
               </div>
             ";
             }
-            // line 76
+            // line 104
             yield "
             ";
-            // line 77
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 77) == "radio")) {
-                // line 78
+            // line 105
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 105) == "radio")) {
+                // line 106
                 yield "              <div class=\"row mb-3 custom-field custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 78);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 106);
                 yield "\">
                 <label class=\"col-sm-2 col-form-label\">";
-                // line 79
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 79);
+                // line 107
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 107);
                 yield "</label>
                 <div class=\"col-sm-10\">
                   <div id=\"input-custom-field-";
-                // line 81
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 81);
+                // line 109
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 109);
                 yield "\">
                     ";
-                // line 82
+                // line 110
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_value", [], "any", false, false, false, 82));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_value", [], "any", false, false, false, 110));
                 foreach ($context['_seq'] as $context["_key"] => $context["custom_field_value"]) {
-                    // line 83
+                    // line 111
                     yield "                      <div class=\"form-check\">
                         <input type=\"radio\" name=\"custom_field[";
-                    // line 84
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 84);
+                    // line 112
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 112);
                     yield "]\" value=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 84);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 112);
                     yield "\" id=\"input-custom-value-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 84);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 112);
                     yield "\" class=\"form-check-input\"/> <label for=\"input-custom-value-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 84);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 112);
                     yield "\" class=\"form-check-label\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 84);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 112);
                     yield "</label>
                       </div>
                     ";
@@ -290,52 +319,52 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['custom_field_value'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 87
+                // line 115
                 yield "                  </div>
                   <div id=\"error-custom-field-";
-                // line 88
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 88);
+                // line 116
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 116);
                 yield "\" class=\"invalid-feedback\"></div>
                 </div>
               </div>
             ";
             }
-            // line 92
+            // line 120
             yield "
             ";
-            // line 93
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 93) == "checkbox")) {
-                // line 94
+            // line 121
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 121) == "checkbox")) {
+                // line 122
                 yield "              <div class=\"row mb-3 custom-field custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 94);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 122);
                 yield "\">
                 <label class=\"col-sm-2 col-form-label\">";
-                // line 95
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 95);
+                // line 123
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 123);
                 yield "</label>
                 <div class=\"col-sm-10\">
                   <div id=\"input-custom-field-";
-                // line 97
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 97);
+                // line 125
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 125);
                 yield "\">
                     ";
-                // line 98
+                // line 126
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_value", [], "any", false, false, false, 98));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_value", [], "any", false, false, false, 126));
                 foreach ($context['_seq'] as $context["_key"] => $context["custom_field_value"]) {
-                    // line 99
+                    // line 127
                     yield "                      <div class=\"form-check\">
                         <input type=\"checkbox\" name=\"custom_field[";
-                    // line 100
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 100);
+                    // line 128
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 128);
                     yield "][]\" value=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 100);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 128);
                     yield "\" id=\"input-custom-value-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 100);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 128);
                     yield "\" class=\"form-check-input\"/> <label for=\"input-custom-value-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 100);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 128);
                     yield "\" class=\"form-check-label\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 100);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 128);
                     yield "</label>
                       </div>
                     ";
@@ -343,251 +372,251 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['custom_field_value'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 103
+                // line 131
                 yield "                  </div>
                   <div id=\"error-custom-field-";
-                // line 104
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 104);
+                // line 132
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 132);
                 yield "\" class=\"invalid-feedback\"></div>
                 </div>
               </div>
             ";
             }
-            // line 108
+            // line 136
             yield "
             ";
-            // line 109
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 109) == "text")) {
-                // line 110
+            // line 137
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 137) == "text")) {
+                // line 138
                 yield "              <div class=\"row mb-3 custom-field custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 110);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 138);
                 yield "\">
                 <label for=\"input-custom-field-";
-                // line 111
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 111);
+                // line 139
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 139);
                 yield "\" class=\"col-sm-2 col-form-label\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 111);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 139);
                 yield "</label>
                 <div class=\"col-sm-10\">
                   <input type=\"text\" name=\"custom_field[";
-                // line 113
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 113);
+                // line 141
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 141);
                 yield "]\" value=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 113);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 141);
                 yield "\" placeholder=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 113);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 141);
                 yield "\" id=\"input-custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 113);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 141);
                 yield "\" class=\"form-control\"/>
                   <div id=\"error-custom-field-";
-                // line 114
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 114);
+                // line 142
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 142);
                 yield "\" class=\"invalid-feedback\"></div>
                 </div>
               </div>
             ";
             }
-            // line 118
+            // line 146
             yield "
             ";
-            // line 119
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 119) == "textarea")) {
-                // line 120
+            // line 147
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 147) == "textarea")) {
+                // line 148
                 yield "              <div class=\"row mb-3 custom-field custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 120);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 148);
                 yield "\">
                 <label for=\"input-custom-field-";
-                // line 121
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 121);
+                // line 149
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 149);
                 yield "\" class=\"col-sm-2 col-form-label\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 121);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 149);
                 yield "</label>
                 <div class=\"col-sm-10\">
                   <textarea name=\"custom_field[";
-                // line 123
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 123);
+                // line 151
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 151);
                 yield "]\" rows=\"5\" placeholder=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 123);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 151);
                 yield "\" id=\"input-custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 123);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 151);
                 yield "\" class=\"form-control\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 123);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 151);
                 yield "</textarea>
                   <div id=\"error-custom-field-";
-                // line 124
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 124);
+                // line 152
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 152);
                 yield "\" class=\"invalid-feedback\"></div>
                 </div>
               </div>
             ";
             }
-            // line 128
+            // line 156
             yield "
             ";
-            // line 129
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 129) == "file")) {
-                // line 130
+            // line 157
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 157) == "file")) {
+                // line 158
                 yield "              <div class=\"row mb-3 custom-field custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 130);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 158);
                 yield "\">
                 <label class=\"col-sm-2 col-form-label\">";
-                // line 131
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 131);
+                // line 159
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 159);
                 yield "</label>
                 <div class=\"col-sm-10\">
                   <div>
                     <button type=\"button\" data-oc-toggle=\"upload\" data-oc-url=\"";
-                // line 134
+                // line 162
                 yield ($context["upload"] ?? null);
                 yield "\" data-oc-size-max=\"";
                 yield ($context["config_file_max_size"] ?? null);
                 yield "\" data-oc-size-error=\"";
                 yield ($context["error_upload_size"] ?? null);
                 yield "\" data-oc-target=\"#input-custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 134);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 162);
                 yield "\" class=\"btn btn-light\"><i class=\"fa-solid fa-upload\"></i> ";
                 yield ($context["button_upload"] ?? null);
                 yield "</button>
                     <input type=\"hidden\" name=\"custom_field[";
-                // line 135
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 135);
+                // line 163
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 163);
                 yield "]\" value=\"\" id=\"input-custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 135);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 163);
                 yield "\"/>
                   </div>
                   <div id=\"error-custom-field-";
-                // line 137
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 137);
+                // line 165
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 165);
                 yield "\" class=\"invalid-feedback\"></div>
                 </div>
               </div>
             ";
             }
-            // line 141
+            // line 169
             yield "
             ";
-            // line 142
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 142) == "date")) {
-                // line 143
+            // line 170
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 170) == "date")) {
+                // line 171
                 yield "              <div class=\"row mb-3 custom-field custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 143);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 171);
                 yield "\">
                 <label for=\"input-custom-field-";
-                // line 144
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 144);
+                // line 172
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 172);
                 yield "\" class=\"col-sm-2 col-form-label\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 144);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 172);
                 yield "</label>
                 <div class=\"col-sm-10\">
                   <input type=\"date\" name=\"custom_field[";
-                // line 146
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 146);
+                // line 174
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 174);
                 yield "]\" value=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 146);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 174);
                 yield "\" placeholder=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 146);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 174);
                 yield "\" id=\"input-custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 146);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 174);
                 yield "\" class=\"form-control\"/>
                   <div id=\"error-custom-field-";
-                // line 147
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 147);
+                // line 175
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 175);
                 yield "\" class=\"invalid-feedback\"></div>
                 </div>
               </div>
             ";
             }
-            // line 151
+            // line 179
             yield "
             ";
-            // line 152
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 152) == "time")) {
-                // line 153
+            // line 180
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 180) == "time")) {
+                // line 181
                 yield "              <div class=\"row mb-3 custom-field custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 153);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 181);
                 yield "\">
                 <label for=\"input-custom-field-";
-                // line 154
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 154);
+                // line 182
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 182);
                 yield "\" class=\"col-sm-2 col-form-label\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 154);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 182);
                 yield "</label>
                 <div class=\"col-sm-10\">
                   <input type=\"time\" name=\"custom_field[";
-                // line 156
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 156);
+                // line 184
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 184);
                 yield "]\" value=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 156);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 184);
                 yield "\" placeholder=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 156);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 184);
                 yield "\" id=\"input-custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 156);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 184);
                 yield "\" class=\"form-control\"/>
                   <div id=\"error-custom-field-";
-                // line 157
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 157);
+                // line 185
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 185);
                 yield "\" class=\"invalid-feedback\"></div>
                 </div>
               </div>
             ";
             }
-            // line 161
+            // line 189
             yield "
             ";
-            // line 162
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 162) == "datetime")) {
-                // line 163
+            // line 190
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 190) == "datetime")) {
+                // line 191
                 yield "              <div class=\"row mb-3 custom-field custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 163);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 191);
                 yield "\">
                 <label for=\"input-custom-field-";
-                // line 164
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 164);
+                // line 192
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 192);
                 yield "\" class=\"col-sm-2 col-form-label\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 164);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 192);
                 yield "</label>
                 <div class=\"col-sm-10\">
                   <input type=\"datetime-local\" name=\"custom_field[";
-                // line 166
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 166);
+                // line 194
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 194);
                 yield "]\" value=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 166);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 194);
                 yield "\" placeholder=\"";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 166);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 194);
                 yield "\" id=\"input-custom-field-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 166);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 194);
                 yield "\" class=\"form-control\"/>
                   <div id=\"error-custom-field-";
-                // line 167
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 167);
+                // line 195
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 195);
                 yield "\" class=\"invalid-feedback\"></div>
                 </div>
               </div>
             ";
             }
-            // line 171
+            // line 199
             yield "
           ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['custom_field'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 173
+        // line 201
         yield "        </fieldset>
 
         <fieldset>
           <legend>";
-        // line 176
+        // line 204
         yield ($context["text_your_password"] ?? null);
         yield "</legend>
           <div class=\"row mb-3 required\">
             <label for=\"input-password\" class=\"col-sm-2 col-form-label\">";
-        // line 178
+        // line 206
         yield ($context["entry_password"] ?? null);
         yield "</label>
             <div class=\"col-sm-10\">
               <input type=\"password\" name=\"password\" value=\"\" placeholder=\"";
-        // line 180
+        // line 208
         yield ($context["entry_password"] ?? null);
         yield "\" id=\"input-password\" class=\"form-control\"/>
               <div id=\"error-password\" class=\"invalid-feedback\"></div>
@@ -597,12 +626,12 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
 
         <fieldset>
           <legend>";
-        // line 187
+        // line 215
         yield ($context["text_newsletter"] ?? null);
         yield "</legend>
           <div class=\"row mb-3\">
             <label class=\"col-sm-2 col-form-label\">";
-        // line 189
+        // line 217
         yield ($context["entry_newsletter"] ?? null);
         yield "</label>
             <div class=\"col-sm-10\">
@@ -614,35 +643,35 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
           </div>
         </fieldset>
         ";
-        // line 198
+        // line 226
         yield ($context["captcha"] ?? null);
         yield "
         <div class=\"text-end\">
           ";
-        // line 200
+        // line 228
         if (($context["text_agree"] ?? null)) {
-            // line 201
+            // line 229
             yield "            <div class=\"form-check form-switch form-switch-lg form-check-reverse form-check-inline\">
               <label class=\"form-check-label\">";
-            // line 202
+            // line 230
             yield ($context["text_agree"] ?? null);
             yield "</label> <input type=\"checkbox\" name=\"agree\" value=\"1\" class=\"form-check-input\"/>
             </div>
           ";
         }
-        // line 205
+        // line 233
         yield "          <button type=\"submit\" class=\"btn btn-primary\">";
         yield ($context["button_continue"] ?? null);
         yield "</button>
         </div>
       </form>
       ";
-        // line 208
+        // line 236
         yield ($context["content_bottom"] ?? null);
         yield "
     </div>
     ";
-        // line 210
+        // line 238
         yield ($context["column_right"] ?? null);
         yield "
   </div>
@@ -651,7 +680,7 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
 \$('#input-customer-group').on('change', function() {
     \$.ajax({
         url: 'index.php?route=account/custom_field&customer_group_id=' + this.value + '&language=";
-        // line 216
+        // line 244
         yield ($context["language"] ?? null);
         yield "',
         dataType: 'json',
@@ -678,7 +707,7 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
 \$('#input-customer-group').trigger('change');
 //--></script>
 ";
-        // line 240
+        // line 268
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -706,24 +735,52 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
      */
     public function getDebugInfo(): array
     {
-        return array (  682 => 240,  655 => 216,  646 => 210,  641 => 208,  634 => 205,  628 => 202,  625 => 201,  623 => 200,  618 => 198,  606 => 189,  601 => 187,  591 => 180,  586 => 178,  581 => 176,  576 => 173,  569 => 171,  562 => 167,  552 => 166,  545 => 164,  540 => 163,  538 => 162,  535 => 161,  528 => 157,  518 => 156,  511 => 154,  506 => 153,  504 => 152,  501 => 151,  494 => 147,  484 => 146,  477 => 144,  472 => 143,  470 => 142,  467 => 141,  460 => 137,  453 => 135,  441 => 134,  435 => 131,  430 => 130,  428 => 129,  425 => 128,  418 => 124,  408 => 123,  401 => 121,  396 => 120,  394 => 119,  391 => 118,  384 => 114,  374 => 113,  367 => 111,  362 => 110,  360 => 109,  357 => 108,  350 => 104,  347 => 103,  330 => 100,  327 => 99,  323 => 98,  319 => 97,  314 => 95,  309 => 94,  307 => 93,  304 => 92,  297 => 88,  294 => 87,  277 => 84,  274 => 83,  270 => 82,  266 => 81,  261 => 79,  256 => 78,  254 => 77,  251 => 76,  244 => 72,  241 => 71,  230 => 69,  226 => 68,  222 => 67,  216 => 66,  209 => 64,  204 => 63,  202 => 62,  199 => 61,  195 => 60,  192 => 59,  184 => 54,  179 => 52,  172 => 51,  170 => 50,  162 => 45,  157 => 43,  149 => 38,  144 => 36,  136 => 31,  131 => 29,  128 => 28,  122 => 24,  107 => 22,  103 => 21,  97 => 18,  94 => 17,  92 => 16,  88 => 15,  83 => 13,  79 => 12,  75 => 11,  71 => 10,  67 => 9,  63 => 7,  52 => 5,  48 => 4,  42 => 1,);
+        return array (  711 => 268,  684 => 244,  675 => 238,  670 => 236,  663 => 233,  657 => 230,  654 => 229,  652 => 228,  647 => 226,  635 => 217,  630 => 215,  620 => 208,  615 => 206,  610 => 204,  605 => 201,  598 => 199,  591 => 195,  581 => 194,  574 => 192,  569 => 191,  567 => 190,  564 => 189,  557 => 185,  547 => 184,  540 => 182,  535 => 181,  533 => 180,  530 => 179,  523 => 175,  513 => 174,  506 => 172,  501 => 171,  499 => 170,  496 => 169,  489 => 165,  482 => 163,  470 => 162,  464 => 159,  459 => 158,  457 => 157,  454 => 156,  447 => 152,  437 => 151,  430 => 149,  425 => 148,  423 => 147,  420 => 146,  413 => 142,  403 => 141,  396 => 139,  391 => 138,  389 => 137,  386 => 136,  379 => 132,  376 => 131,  359 => 128,  356 => 127,  352 => 126,  348 => 125,  343 => 123,  338 => 122,  336 => 121,  333 => 120,  326 => 116,  323 => 115,  306 => 112,  303 => 111,  299 => 110,  295 => 109,  290 => 107,  285 => 106,  283 => 105,  280 => 104,  273 => 100,  270 => 99,  259 => 97,  255 => 96,  251 => 95,  245 => 94,  238 => 92,  233 => 91,  231 => 90,  228 => 89,  224 => 88,  221 => 87,  213 => 82,  208 => 80,  201 => 79,  199 => 78,  191 => 73,  186 => 71,  178 => 66,  173 => 64,  165 => 59,  160 => 57,  157 => 56,  151 => 52,  136 => 50,  132 => 49,  126 => 46,  123 => 45,  121 => 44,  117 => 43,  112 => 41,  103 => 35,  91 => 26,  86 => 24,  73 => 14,  70 => 13,  59 => 10,  56 => 9,  52 => 8,  42 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{{ header }}
-<div id=\"account-register\" class=\"container\" style=\"padding-top: 100px;\">
-  <ul class=\"breadcrumb\">
-    {% for breadcrumb in breadcrumbs %}
-      <li class=\"breadcrumb-item\"><a href=\"{{ breadcrumb.href }}\">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
-  <div class=\"row\">
-    {{ column_left }}
-    <div id=\"content\" class=\"col\">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      <p>{{ text_account_already }}</p>
-      <form id=\"form-register\" action=\"{{ register }}\" method=\"post\" data-oc-toggle=\"ajax\">
+
+<!-- Page Title -->
+<section class=\"s-page-title\" style=\"padding-top:100px;\">
+    <div class=\"container\">
+        <div class=\"content\" style=\"padding-bottom: 19px;\">
+            <ul class=\"breadcrumbs-page\">
+                {% for breadcrumb in breadcrumbs %}
+                    <li class=\"breadcrumb-item\" style=\"display:flex;\">
+                        <a href=\"{{ breadcrumb.href }}\">{{ breadcrumb.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <h1 class=\"title-page\">{{ heading_title }}</h1>
+        </div>
+    </div>
+</section>
+<!-- /Page Title -->
+
+<!-- Register Section -->
+<section class=\"flat-spacing-3\">
+    <div class=\"container\">
+        <div class=\"row\">
+            {{ column_left }}
+            <div id=\"content\" class=\"col\">
+                {{ content_top }}
+                
+                <!-- Registration Introduction -->
+                <div class=\"register-intro\">
+                    <div class=\"intro-card\">
+                        <div class=\"intro-header\">
+                            <i class=\"icon icon-user-plus\"></i>
+                            <h3>Create Your Account</h3>
+                        </div>
+                        <p class=\"intro-text\">{{ text_account_already }}</p>
+                    </div>
+                </div>
+                
+                <!-- Registration Form -->
+                <div class=\"register-form-container\">
+                    <form id=\"form-register\" action=\"{{ register }}\" method=\"post\" data-oc-toggle=\"ajax\">
         <fieldset id=\"account\">
           <legend>{{ text_your_details }}</legend>
           {% if customer_groups|length > 1 %}

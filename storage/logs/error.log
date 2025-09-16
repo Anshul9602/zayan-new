@@ -698,3 +698,249 @@ File: C:\xampp\htdocs\newzyan\index.php
 Line: 20
 Function: require_once
 2025-09-16 09:29:54 - PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\newzyan\catalog\controller\product\review.php on line 39
+2025-09-16 11:25:07 - Error: The "replace" filter expects a sequence or a mapping, got "string".
+File: C:\xampp\htdocs\newzyan\catalog\view\template\account\order_list.twig
+Line: 43
+
+Backtrace: 0
+File: C:\xampp\htdocs\newzyan\storage\cache\template\73\733173d57716c69c72a7a9dad2dcd5e62b93528b1c2c20a3c04c4130b4b96630.php
+Line: 125
+Class: Twig\Extension\CoreExtension
+Function: replace
+
+Backtrace: 1
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Template.php
+Line: 388
+Class: __TwigTemplate_86db28d5a3a053c438b1a43490e7f4525b833c2bf17329164550c151ff79e9e5
+Function: doDisplay
+
+Backtrace: 2
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Template.php
+Line: 344
+Class: Twig\Template
+Function: yield
+
+Backtrace: 3
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Template.php
+Line: 359
+Class: Twig\Template
+Function: display
+
+Backtrace: 4
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\TemplateWrapper.php
+Line: 51
+Class: Twig\Template
+Function: render
+
+Backtrace: 5
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Environment.php
+Line: 334
+Class: Twig\TemplateWrapper
+Function: render
+
+Backtrace: 6
+File: C:\xampp\htdocs\newzyan\system\library\template\twig.php
+Line: 123
+Class: Twig\Environment
+Function: render
+
+Backtrace: 7
+File: C:\xampp\htdocs\newzyan\system\library\template.php
+Line: 58
+Class: Opencart\System\Library\Template\Twig
+Function: render
+
+Backtrace: 8
+File: C:\xampp\htdocs\newzyan\system\engine\loader.php
+Line: 187
+Class: Opencart\System\Library\Template
+Function: render
+
+Backtrace: 9
+File: C:\xampp\htdocs\newzyan\catalog\controller\account\order.php
+Line: 104
+Class: Opencart\System\Engine\Loader
+Function: view
+
+Backtrace: 10
+File: C:\xampp\htdocs\newzyan\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Account\Order
+Function: index
+
+Backtrace: 11
+File: C:\xampp\htdocs\newzyan\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 12
+File: C:\xampp\htdocs\newzyan\index.php
+Line: 20
+Function: require_once
+2025-09-16 11:25:20 - Error: The "replace" filter expects a sequence or a mapping, got "string".
+File: C:\xampp\htdocs\newzyan\catalog\view\template\account\order_list.twig
+Line: 43
+
+Backtrace: 0
+File: C:\xampp\htdocs\newzyan\storage\cache\template\73\733173d57716c69c72a7a9dad2dcd5e62b93528b1c2c20a3c04c4130b4b96630.php
+Line: 125
+Class: Twig\Extension\CoreExtension
+Function: replace
+
+Backtrace: 1
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Template.php
+Line: 388
+Class: __TwigTemplate_86db28d5a3a053c438b1a43490e7f4525b833c2bf17329164550c151ff79e9e5
+Function: doDisplay
+
+Backtrace: 2
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Template.php
+Line: 344
+Class: Twig\Template
+Function: yield
+
+Backtrace: 3
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Template.php
+Line: 359
+Class: Twig\Template
+Function: display
+
+Backtrace: 4
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\TemplateWrapper.php
+Line: 51
+Class: Twig\Template
+Function: render
+
+Backtrace: 5
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Environment.php
+Line: 334
+Class: Twig\TemplateWrapper
+Function: render
+
+Backtrace: 6
+File: C:\xampp\htdocs\newzyan\system\library\template\twig.php
+Line: 123
+Class: Twig\Environment
+Function: render
+
+Backtrace: 7
+File: C:\xampp\htdocs\newzyan\system\library\template.php
+Line: 58
+Class: Opencart\System\Library\Template\Twig
+Function: render
+
+Backtrace: 8
+File: C:\xampp\htdocs\newzyan\system\engine\loader.php
+Line: 187
+Class: Opencart\System\Library\Template
+Function: render
+
+Backtrace: 9
+File: C:\xampp\htdocs\newzyan\catalog\controller\account\order.php
+Line: 104
+Class: Opencart\System\Engine\Loader
+Function: view
+
+Backtrace: 10
+File: C:\xampp\htdocs\newzyan\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Account\Order
+Function: index
+
+Backtrace: 11
+File: C:\xampp\htdocs\newzyan\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 12
+File: C:\xampp\htdocs\newzyan\index.php
+Line: 20
+Function: require_once
+2025-09-16 11:26:02 - Error: The "replace" filter expects a sequence or a mapping, got "string".
+File: C:\xampp\htdocs\newzyan\catalog\view\template\account\order_history.twig
+Line: 19
+
+Backtrace: 0
+File: C:\xampp\htdocs\newzyan\storage\cache\template\37\377a8bdc6a415ba2126ed3621a7eb491e9d37b0d28a8b4cd0ea1f681174fdbb5.php
+Line: 73
+Class: Twig\Extension\CoreExtension
+Function: replace
+
+Backtrace: 1
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Template.php
+Line: 388
+Class: __TwigTemplate_1790c09dc9fa7297c741dd3b7c716ababf664804440aa666913d81a788eec7a9
+Function: doDisplay
+
+Backtrace: 2
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Template.php
+Line: 344
+Class: Twig\Template
+Function: yield
+
+Backtrace: 3
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Template.php
+Line: 359
+Class: Twig\Template
+Function: display
+
+Backtrace: 4
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\TemplateWrapper.php
+Line: 51
+Class: Twig\Template
+Function: render
+
+Backtrace: 5
+File: C:\xampp\htdocs\newzyan\system\vendor\twig\twig\src\Environment.php
+Line: 334
+Class: Twig\TemplateWrapper
+Function: render
+
+Backtrace: 6
+File: C:\xampp\htdocs\newzyan\system\library\template\twig.php
+Line: 123
+Class: Twig\Environment
+Function: render
+
+Backtrace: 7
+File: C:\xampp\htdocs\newzyan\system\library\template.php
+Line: 58
+Class: Opencart\System\Library\Template\Twig
+Function: render
+
+Backtrace: 8
+File: C:\xampp\htdocs\newzyan\system\engine\loader.php
+Line: 187
+Class: Opencart\System\Library\Template
+Function: render
+
+Backtrace: 9
+File: C:\xampp\htdocs\newzyan\catalog\controller\account\order.php
+Line: 469
+Class: Opencart\System\Engine\Loader
+Function: view
+
+Backtrace: 10
+File: C:\xampp\htdocs\newzyan\catalog\controller\account\order.php
+Line: 378
+Class: Opencart\Catalog\Controller\Account\Order
+Function: getHistory
+
+Backtrace: 11
+File: C:\xampp\htdocs\newzyan\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Account\Order
+Function: info
+
+Backtrace: 12
+File: C:\xampp\htdocs\newzyan\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 13
+File: C:\xampp\htdocs\newzyan\index.php
+Line: 20
+Function: require_once

@@ -167,9 +167,10 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
         // line 45
         yield "\t\t<style>
 
-#modal-shipping  .modal-content,#modal-payment  .modal-content {
-\tpadding:20px;
-}
+\t\t\t#modal-shipping .modal-content,
+\t\t\t#modal-payment .modal-content {
+\t\t\t\tpadding: 20px;
+\t\t\t}
 
 \t\t\theader {
 \t\t\t\tborder-bottom: thin solid #f1f1f1;
@@ -183,59 +184,57 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
 \t\t\t.fw-medium {
 \t\t\t\tfont-weight: 400 !important;
 \t\t\t}
-         @media (max-width: 768px) {
-\t\t\t.canvas-wrapper {
-    padding: 0;
-    isolation: isolate;
-    height: 100%;
-    width: 90%;
-    margin: auto;
-    max-height: none;
-    display: grid
-;
-    grid-auto-rows: auto minmax(0, 1fr) auto;
-    align-content: start;
-}
-\t\t\t    .tf-header {
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-            #logo a img {
-    width: 70px !important;
-}
-#newLetter .image img {
-width:100% !important;
-}
-.modal-newletter .modal-dialog {
-    max-width: 80% !important;
-}
-.tf-swiper.home .swiper-slide
- {
-    height: auto !important;
-}
-    .tf-slideshow .slider-wrap {
-        height: auto;
-    }
-    .tf-grid-layout.tf-col-4 {
-    grid-template-columns: repeat(2, 1fr);
-}
-.product-action_list .box-icon {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: var(--white);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-}
-    .product-action_list .icon {
-        font-size: 14px !important;
-    }
-        .footer-heading-mobile {
-       font-size:18px;
-    }
-    .mb-menu-link {
-      font-weight:400;
-    }
-         }
+\t\t\t@media(max-width: 768px) {
+\t\t\t\t.canvas-wrapper {
+\t\t\t\t\tpadding: 0;
+\t\t\t\t\tisolation: isolate;
+\t\t\t\t\theight: 100%;
+\t\t\t\t\twidth: 90%;
+\t\t\t\t\tmargin: auto;
+\t\t\t\t\tmax-height: none;
+\t\t\t\t\tdisplay: grid;
+\t\t\t\t\tgrid-auto-rows: auto minmax(0, 1fr) auto;
+\t\t\t\t\talign-content: start;
+\t\t\t\t}
+\t\t\t\t.tf-header {
+\t\t\t\t\tpadding-top: 0;
+\t\t\t\t\tpadding-bottom: 0;
+\t\t\t\t}
+\t\t\t\t#logo a img {
+\t\t\t\t\twidth: 70px !important;
+\t\t\t\t}
+\t\t\t\t#newLetter .image img {
+\t\t\t\t\twidth: 100% !important;
+\t\t\t\t}
+\t\t\t\t.modal-newletter .modal-dialog {
+\t\t\t\t\tmax-width: 80% !important;
+\t\t\t\t}
+\t\t\t\t.tf-swiper.home .swiper-slide {
+\t\t\t\t\theight: auto !important;
+\t\t\t\t}
+\t\t\t\t.tf-slideshow .slider-wrap {
+\t\t\t\t\theight: auto;
+\t\t\t\t}
+\t\t\t\t.tf-grid-layout.tf-col-4 {
+\t\t\t\t\tgrid-template-columns: repeat(2, 1fr);
+\t\t\t\t}
+\t\t\t\t.product-action_list .box-icon {
+\t\t\t\t\twidth: 25px;
+\t\t\t\t\theight: 25px;
+\t\t\t\t\tborder-radius: 50%;
+\t\t\t\t\tbackground-color: var(--white);
+\t\t\t\t\tbox-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+\t\t\t\t}
+\t\t\t\t.product-action_list .icon {
+\t\t\t\t\tfont-size: 14px !important;
+\t\t\t\t}
+\t\t\t\t.footer-heading-mobile {
+\t\t\t\t\tfont-size: 18px;
+\t\t\t\t}
+\t\t\t\t.mb-menu-link {
+\t\t\t\t\tfont-weight: 400;
+\t\t\t\t}
+\t\t\t}
 \t\t</style>
 \t</head>
 
@@ -267,13 +266,13 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t<span></span>
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</div>
-                     <div class=\"col-xl-4 d-none d-xl-block\">
+\t\t\t\t\t\t\t<div class=\"col-xl-3 d-none d-xl-block\">
 \t\t\t\t\t\t\t\t<nav class=\"box-navigation\">
 \t\t\t\t\t\t\t\t\t<ul class=\"box-nav-menu\">
 \t\t\t\t\t\t\t\t\t\t<li class=\"menu-item\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"item-link\">SHOP</a>
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 152
+        // line 151
         yield ($context["menu"] ?? null);
         yield "
 \t\t\t\t\t\t\t\t\t\t</li>
@@ -297,17 +296,17 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t</nav>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"col-xl-5 col-md-5 col-6 d-flex justify-content-center justify-content-xl-start\">
+\t\t\t\t\t\t\t<div class=\"col-xl-6 col-md-5 col-6 d-flex justify-content-center justify-content-xl-center\">
 \t\t\t\t\t\t\t\t<div id=\"logo\" class=\"text-center\">
 \t\t\t\t\t\t\t\t\t";
-        // line 176
+        // line 175
         if (($context["logo"] ?? null)) {
-            // line 177
+            // line 176
             yield "\t\t\t\t\t\t\t\t\t\t<a href=\"";
             yield ($context["home"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-            // line 178
+            // line 177
             yield ($context["logo"] ?? null);
             yield "\" title=\"";
             yield ($context["name"] ?? null);
@@ -317,26 +316,26 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t";
         } else {
-            // line 181
+            // line 180
             yield "\t\t\t\t\t\t\t\t\t\t<h1>
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 182
+            // line 181
             yield ($context["home"] ?? null);
             yield "\">Zayn</a>
 \t\t\t\t\t\t\t\t\t\t</h1>
 \t\t\t\t\t\t\t\t\t";
         }
-        // line 185
+        // line 184
         yield "\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t
+
 \t\t\t\t\t\t\t<div class=\"col-xl-3 col-md-4 col-3\">
 \t\t\t\t\t\t\t\t<ul class=\"nav-icon-list\">
 \t\t\t\t\t\t\t\t\t<li class=\"d-none d-lg-flex\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 191
+        // line 190
         if ( !($context["logged"] ?? null)) {
-            // line 192
+            // line 191
             yield "\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"";
             yield ($context["login"] ?? null);
             yield "\">
@@ -344,7 +343,7 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t";
         } else {
-            // line 196
+            // line 195
             yield "\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"";
             yield ($context["account"] ?? null);
             yield "\">
@@ -352,19 +351,19 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t";
         }
-        // line 200
+        // line 199
         yield "\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t<li class=\"d-none d-md-flex\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 202
+        // line 201
         yield ($context["search"] ?? null);
         yield "
 \t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t<li class=\"d-none d-sm-flex\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 205
+        // line 204
         if ( !($context["logged"] ?? null)) {
-            // line 206
+            // line 205
             yield "\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"";
             yield ($context["wishlist"] ?? null);
             yield "\">
@@ -373,7 +372,7 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"wishlist-count\">0</span>
 \t\t\t\t\t\t\t\t\t\t";
         } else {
-            // line 211
+            // line 210
             yield "\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-icon-item link\" href=\"";
             yield ($context["wishlist"] ?? null);
             yield "\">
@@ -382,11 +381,11 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"wishlist-count\">0</span>
 \t\t\t\t\t\t\t\t\t\t";
         }
-        // line 216
+        // line 215
         yield "\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t<li class=\"shop-cart\" data-bs-target=\"#shoppingCart\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 218
+        // line 217
         yield ($context["cart"] ?? null);
         yield "
 \t\t\t\t\t\t\t\t\t</li>
@@ -396,8 +395,6 @@ width:100% !important;
 \t\t\t\t\t</div>
 \t\t\t\t</header>
 
-
-\t\t\t\t
 
 \t\t\t\t<main>
 ";
@@ -425,7 +422,7 @@ width:100% !important;
      */
     public function getDebugInfo(): array
     {
-        return array (  390 => 218,  386 => 216,  377 => 211,  368 => 206,  366 => 205,  360 => 202,  356 => 200,  348 => 196,  340 => 192,  338 => 191,  330 => 185,  324 => 182,  321 => 181,  311 => 178,  306 => 177,  304 => 176,  277 => 152,  168 => 45,  159 => 43,  154 => 42,  143 => 40,  138 => 39,  129 => 37,  124 => 36,  111 => 34,  107 => 33,  103 => 31,  97 => 29,  95 => 28,  80 => 15,  74 => 13,  71 => 12,  65 => 10,  63 => 9,  59 => 8,  55 => 7,  45 => 2,  42 => 1,);
+        return array (  389 => 217,  385 => 215,  376 => 210,  367 => 205,  365 => 204,  359 => 201,  355 => 199,  347 => 195,  339 => 191,  337 => 190,  329 => 184,  323 => 181,  320 => 180,  310 => 177,  305 => 176,  303 => 175,  276 => 151,  168 => 45,  159 => 43,  154 => 42,  143 => 40,  138 => 39,  129 => 37,  124 => 36,  111 => 34,  107 => 33,  103 => 31,  97 => 29,  95 => 28,  80 => 15,  74 => 13,  71 => 12,  65 => 10,  63 => 9,  59 => 8,  55 => 7,  45 => 2,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -476,9 +473,10 @@ width:100% !important;
 \t\t{% endfor %}
 \t\t<style>
 
-#modal-shipping  .modal-content,#modal-payment  .modal-content {
-\tpadding:20px;
-}
+\t\t\t#modal-shipping .modal-content,
+\t\t\t#modal-payment .modal-content {
+\t\t\t\tpadding: 20px;
+\t\t\t}
 
 \t\t\theader {
 \t\t\t\tborder-bottom: thin solid #f1f1f1;
@@ -492,59 +490,57 @@ width:100% !important;
 \t\t\t.fw-medium {
 \t\t\t\tfont-weight: 400 !important;
 \t\t\t}
-         @media (max-width: 768px) {
-\t\t\t.canvas-wrapper {
-    padding: 0;
-    isolation: isolate;
-    height: 100%;
-    width: 90%;
-    margin: auto;
-    max-height: none;
-    display: grid
-;
-    grid-auto-rows: auto minmax(0, 1fr) auto;
-    align-content: start;
-}
-\t\t\t    .tf-header {
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-            #logo a img {
-    width: 70px !important;
-}
-#newLetter .image img {
-width:100% !important;
-}
-.modal-newletter .modal-dialog {
-    max-width: 80% !important;
-}
-.tf-swiper.home .swiper-slide
- {
-    height: auto !important;
-}
-    .tf-slideshow .slider-wrap {
-        height: auto;
-    }
-    .tf-grid-layout.tf-col-4 {
-    grid-template-columns: repeat(2, 1fr);
-}
-.product-action_list .box-icon {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: var(--white);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-}
-    .product-action_list .icon {
-        font-size: 14px !important;
-    }
-        .footer-heading-mobile {
-       font-size:18px;
-    }
-    .mb-menu-link {
-      font-weight:400;
-    }
-         }
+\t\t\t@media(max-width: 768px) {
+\t\t\t\t.canvas-wrapper {
+\t\t\t\t\tpadding: 0;
+\t\t\t\t\tisolation: isolate;
+\t\t\t\t\theight: 100%;
+\t\t\t\t\twidth: 90%;
+\t\t\t\t\tmargin: auto;
+\t\t\t\t\tmax-height: none;
+\t\t\t\t\tdisplay: grid;
+\t\t\t\t\tgrid-auto-rows: auto minmax(0, 1fr) auto;
+\t\t\t\t\talign-content: start;
+\t\t\t\t}
+\t\t\t\t.tf-header {
+\t\t\t\t\tpadding-top: 0;
+\t\t\t\t\tpadding-bottom: 0;
+\t\t\t\t}
+\t\t\t\t#logo a img {
+\t\t\t\t\twidth: 70px !important;
+\t\t\t\t}
+\t\t\t\t#newLetter .image img {
+\t\t\t\t\twidth: 100% !important;
+\t\t\t\t}
+\t\t\t\t.modal-newletter .modal-dialog {
+\t\t\t\t\tmax-width: 80% !important;
+\t\t\t\t}
+\t\t\t\t.tf-swiper.home .swiper-slide {
+\t\t\t\t\theight: auto !important;
+\t\t\t\t}
+\t\t\t\t.tf-slideshow .slider-wrap {
+\t\t\t\t\theight: auto;
+\t\t\t\t}
+\t\t\t\t.tf-grid-layout.tf-col-4 {
+\t\t\t\t\tgrid-template-columns: repeat(2, 1fr);
+\t\t\t\t}
+\t\t\t\t.product-action_list .box-icon {
+\t\t\t\t\twidth: 25px;
+\t\t\t\t\theight: 25px;
+\t\t\t\t\tborder-radius: 50%;
+\t\t\t\t\tbackground-color: var(--white);
+\t\t\t\t\tbox-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+\t\t\t\t}
+\t\t\t\t.product-action_list .icon {
+\t\t\t\t\tfont-size: 14px !important;
+\t\t\t\t}
+\t\t\t\t.footer-heading-mobile {
+\t\t\t\t\tfont-size: 18px;
+\t\t\t\t}
+\t\t\t\t.mb-menu-link {
+\t\t\t\t\tfont-weight: 400;
+\t\t\t\t}
+\t\t\t}
 \t\t</style>
 \t</head>
 
@@ -576,7 +572,7 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t<span></span>
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</div>
-                     <div class=\"col-xl-4 d-none d-xl-block\">
+\t\t\t\t\t\t\t<div class=\"col-xl-3 d-none d-xl-block\">
 \t\t\t\t\t\t\t\t<nav class=\"box-navigation\">
 \t\t\t\t\t\t\t\t\t<ul class=\"box-nav-menu\">
 \t\t\t\t\t\t\t\t\t\t<li class=\"menu-item\">
@@ -603,7 +599,7 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t</nav>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"col-xl-5 col-md-5 col-6 d-flex justify-content-center justify-content-xl-start\">
+\t\t\t\t\t\t\t<div class=\"col-xl-6 col-md-5 col-6 d-flex justify-content-center justify-content-xl-center\">
 \t\t\t\t\t\t\t\t<div id=\"logo\" class=\"text-center\">
 \t\t\t\t\t\t\t\t\t{% if logo %}
 \t\t\t\t\t\t\t\t\t\t<a href=\"{{ home }}\">
@@ -616,7 +612,7 @@ width:100% !important;
 \t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t
+
 \t\t\t\t\t\t\t<div class=\"col-xl-3 col-md-4 col-3\">
 \t\t\t\t\t\t\t\t<ul class=\"nav-icon-list\">
 \t\t\t\t\t\t\t\t\t<li class=\"d-none d-lg-flex\">
@@ -655,8 +651,6 @@ width:100% !important;
 \t\t\t\t\t</div>
 \t\t\t\t</header>
 
-
-\t\t\t\t
 
 \t\t\t\t<main>
 ", "catalog/view/template/common/header.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\header.twig");

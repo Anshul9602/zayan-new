@@ -14,8 +14,8 @@ use Twig\Source;
 use Twig\Template;
 use Twig\TemplateWrapper;
 
-/* catalog/view/template/account/wishlist.twig */
-class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319fc98c extends Template
+/* catalog/view/template/account/payment_method.twig */
+class __TwigTemplate_b3d4c36431eb1bbc4cc492c88f6dbe9e1ea6af6aec3055b655346ee6943ff014 extends Template
 {
     private Source $source;
     /**
@@ -77,7 +77,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
 </section>
 <!-- /Page Title -->
 
-<!-- Wishlist -->
+<!-- Payment Methods -->
 <section class=\"flat-spacing-3\">
     <div class=\"container\">
         <div class=\"row\">
@@ -91,40 +91,40 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
         yield ($context["content_top"] ?? null);
         yield "
                 
-                <!-- Wishlist Introduction -->
-                <div class=\"wishlist-intro\">
+                <!-- Payment Methods Introduction -->
+                <div class=\"payment-methods-intro\">
                     <div class=\"intro-card\">
                         <div class=\"intro-content\">
                             <div class=\"intro-text\">
-                                <h3>Your Wishlist</h3>
-                                <p>Save your favorite items for later. Add products to your wishlist to keep track of items you love and want to purchase in the future.</p>
+                                <h3>Payment Methods</h3>
+                                <p>Manage your saved payment methods for secure and convenient checkout. Add, edit, or remove payment options as needed.</p>
                             </div>
                             <div class=\"intro-icon\">
-                                <i class=\"icon icon-heart\"></i>
+                                <i class=\"icon icon-credit-card\"></i>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Wishlist Content -->
-                <div class=\"wishlist-content\">
-                    <div id=\"wishlist\">";
+                <!-- Payment Methods List -->
+                <div class=\"payment-methods-content\">
+                    <div id=\"payment-method\">";
         // line 45
         yield ($context["list"] ?? null);
         yield "</div>
                 </div>
                 
                 <!-- Page Actions -->
-                <div class=\"wishlist-actions\">
+                <div class=\"payment-methods-actions\">
                     <div class=\"action-buttons\">
                         <a href=\"";
         // line 51
-        yield ($context["continue"] ?? null);
-        yield "\" class=\"tf-btn btn-fill animate-btn\">
-                            <i class=\"icon icon-shopping-bag\"></i>
+        yield ($context["back"] ?? null);
+        yield "\" class=\"tf-btn btn-outline animate-btn\">
+                            <i class=\"icon icon-arrow-left\"></i>
                             ";
         // line 53
-        yield ($context["button_continue"] ?? null);
+        yield ($context["button_back"] ?? null);
         yield "
                         </a>
                     </div>
@@ -142,57 +142,20 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
         </div>
     </div>
 </section>
-<!-- /Wishlist -->
-<script type=\"text/javascript\"><!--
-\$('#wishlist').on('click', '.btn-danger', function(e) {
-    e.preventDefault();
-
-    var element = this;
-
-    \$.ajax({
-        url: \$(element).attr('href'),
-        dataType: 'json',
-        beforeSend: function() {
-            \$(element).button('loading');
-        },
-        complete: function() {
-            \$(element).button('reset');
-        },
-        success: function(json) {
-            console.log(json);
-
-            if (json['error']) {
-                \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
-            }
-
-            if (json['success']) {
-                \$('#alert').prepend('<div class=\"alert alert-success alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['success'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
-
-                \$('#wishlist').load('index.php?route=account/wishlist.list&language=";
-        // line 90
-        yield ($context["language"] ?? null);
-        yield "');
-            }
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
-        }
-    });
-});
-//--></script>
+<!-- /Payment Methods -->
 
 <style>
-/* Wishlist Page Styling */
-.wishlist-intro {
+/* Payment Methods Page Styling */
+.payment-methods-intro {
     margin-bottom: 30px;
 }
 
 .intro-card {
-    background: linear-gradient(135deg, #241B68 0%, #000 100%);
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
     color: #fff;
     border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 4px 20px rgba(36,27,104,0.2);
+    box-shadow: 0 4px 20px rgba(40, 167, 69, 0.2);
 }
 
 .intro-content {
@@ -210,7 +173,6 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
     margin: 0 0 10px 0;
     font-size: 24px;
     font-weight: 600;
-    color:#fff;
 }
 
 .intro-text p {
@@ -229,18 +191,18 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
     opacity: 0.8;
 }
 
-/* Wishlist Content */
-.wishlist-content {
+/* Payment Methods Content */
+.payment-methods-content {
     background: #fff;
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin-bottom: 30px;
-    min-height: 300px;
+    min-height: 200px;
 }
 
-/* Wishlist Actions */
-.wishlist-actions {
+/* Payment Methods Actions */
+.payment-methods-actions {
     background: #f8f9fa;
     border-radius: 8px;
     padding: 20px;
@@ -254,19 +216,19 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
     display: flex;
     align-items: center;
     gap: 8px;
-    min-width: 180px;
+    min-width: 140px;
     justify-content: center;
 }
 
 /* Loading State */
-.wishlist-content:empty::before {
+.payment-methods-content:empty::before {
     content: '';
     display: block;
     width: 40px;
     height: 40px;
-    margin: 120px auto;
+    margin: 80px auto;
     border: 3px solid #f3f3f3;
-    border-top: 3px solid #241B68;
+    border-top: 3px solid #28a745;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -292,7 +254,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
         font-size: 40px;
     }
     
-    .wishlist-content {
+    .payment-methods-content {
         padding: 20px;
         margin: 0 -15px 30px -15px;
         border-radius: 0;
@@ -304,7 +266,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
         border-radius: 0;
     }
     
-    .wishlist-actions {
+    .payment-methods-actions {
         padding: 15px;
     }
 }
@@ -318,7 +280,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
         font-size: 14px;
     }
     
-    .wishlist-actions {
+    .payment-methods-actions {
         margin: 0 -15px;
         border-radius: 0;
     }
@@ -326,7 +288,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
 </style>
 
 ";
-        // line 244
+        // line 209
         yield ($context["footer"] ?? null);
         yield from [];
     }
@@ -336,7 +298,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
      */
     public function getTemplateName(): string
     {
-        return "catalog/view/template/account/wishlist.twig";
+        return "catalog/view/template/account/payment_method.twig";
     }
 
     /**
@@ -352,7 +314,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
      */
     public function getDebugInfo(): array
     {
-        return array (  330 => 244,  173 => 90,  140 => 60,  135 => 58,  127 => 53,  122 => 51,  113 => 45,  91 => 26,  86 => 24,  73 => 14,  70 => 13,  59 => 10,  56 => 9,  52 => 8,  42 => 1,);
+        return array (  292 => 209,  140 => 60,  135 => 58,  127 => 53,  122 => 51,  113 => 45,  91 => 26,  86 => 24,  73 => 14,  70 => 13,  59 => 10,  56 => 9,  52 => 8,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -376,7 +338,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
 </section>
 <!-- /Page Title -->
 
-<!-- Wishlist -->
+<!-- Payment Methods -->
 <section class=\"flat-spacing-3\">
     <div class=\"container\">
         <div class=\"row\">
@@ -384,32 +346,32 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
             <div id=\"content\" class=\"col\">
                 {{ content_top }}
                 
-                <!-- Wishlist Introduction -->
-                <div class=\"wishlist-intro\">
+                <!-- Payment Methods Introduction -->
+                <div class=\"payment-methods-intro\">
                     <div class=\"intro-card\">
                         <div class=\"intro-content\">
                             <div class=\"intro-text\">
-                                <h3>Your Wishlist</h3>
-                                <p>Save your favorite items for later. Add products to your wishlist to keep track of items you love and want to purchase in the future.</p>
+                                <h3>Payment Methods</h3>
+                                <p>Manage your saved payment methods for secure and convenient checkout. Add, edit, or remove payment options as needed.</p>
                             </div>
                             <div class=\"intro-icon\">
-                                <i class=\"icon icon-heart\"></i>
+                                <i class=\"icon icon-credit-card\"></i>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Wishlist Content -->
-                <div class=\"wishlist-content\">
-                    <div id=\"wishlist\">{{ list }}</div>
+                <!-- Payment Methods List -->
+                <div class=\"payment-methods-content\">
+                    <div id=\"payment-method\">{{ list }}</div>
                 </div>
                 
                 <!-- Page Actions -->
-                <div class=\"wishlist-actions\">
+                <div class=\"payment-methods-actions\">
                     <div class=\"action-buttons\">
-                        <a href=\"{{ continue }}\" class=\"tf-btn btn-fill animate-btn\">
-                            <i class=\"icon icon-shopping-bag\"></i>
-                            {{ button_continue }}
+                        <a href=\"{{ back }}\" class=\"tf-btn btn-outline animate-btn\">
+                            <i class=\"icon icon-arrow-left\"></i>
+                            {{ button_back }}
                         </a>
                     </div>
                 </div>
@@ -420,54 +382,20 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
         </div>
     </div>
 </section>
-<!-- /Wishlist -->
-<script type=\"text/javascript\"><!--
-\$('#wishlist').on('click', '.btn-danger', function(e) {
-    e.preventDefault();
-
-    var element = this;
-
-    \$.ajax({
-        url: \$(element).attr('href'),
-        dataType: 'json',
-        beforeSend: function() {
-            \$(element).button('loading');
-        },
-        complete: function() {
-            \$(element).button('reset');
-        },
-        success: function(json) {
-            console.log(json);
-
-            if (json['error']) {
-                \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
-            }
-
-            if (json['success']) {
-                \$('#alert').prepend('<div class=\"alert alert-success alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['success'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
-
-                \$('#wishlist').load('index.php?route=account/wishlist.list&language={{ language }}');
-            }
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
-        }
-    });
-});
-//--></script>
+<!-- /Payment Methods -->
 
 <style>
-/* Wishlist Page Styling */
-.wishlist-intro {
+/* Payment Methods Page Styling */
+.payment-methods-intro {
     margin-bottom: 30px;
 }
 
 .intro-card {
-    background: linear-gradient(135deg, #241B68 0%, #000 100%);
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
     color: #fff;
     border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 4px 20px rgba(36,27,104,0.2);
+    box-shadow: 0 4px 20px rgba(40, 167, 69, 0.2);
 }
 
 .intro-content {
@@ -485,7 +413,6 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
     margin: 0 0 10px 0;
     font-size: 24px;
     font-weight: 600;
-    color:#fff;
 }
 
 .intro-text p {
@@ -504,18 +431,18 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
     opacity: 0.8;
 }
 
-/* Wishlist Content */
-.wishlist-content {
+/* Payment Methods Content */
+.payment-methods-content {
     background: #fff;
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin-bottom: 30px;
-    min-height: 300px;
+    min-height: 200px;
 }
 
-/* Wishlist Actions */
-.wishlist-actions {
+/* Payment Methods Actions */
+.payment-methods-actions {
     background: #f8f9fa;
     border-radius: 8px;
     padding: 20px;
@@ -529,19 +456,19 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
     display: flex;
     align-items: center;
     gap: 8px;
-    min-width: 180px;
+    min-width: 140px;
     justify-content: center;
 }
 
 /* Loading State */
-.wishlist-content:empty::before {
+.payment-methods-content:empty::before {
     content: '';
     display: block;
     width: 40px;
     height: 40px;
-    margin: 120px auto;
+    margin: 80px auto;
     border: 3px solid #f3f3f3;
-    border-top: 3px solid #241B68;
+    border-top: 3px solid #28a745;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -567,7 +494,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
         font-size: 40px;
     }
     
-    .wishlist-content {
+    .payment-methods-content {
         padding: 20px;
         margin: 0 -15px 30px -15px;
         border-radius: 0;
@@ -579,7 +506,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
         border-radius: 0;
     }
     
-    .wishlist-actions {
+    .payment-methods-actions {
         padding: 15px;
     }
 }
@@ -593,13 +520,13 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
         font-size: 14px;
     }
     
-    .wishlist-actions {
+    .payment-methods-actions {
         margin: 0 -15px;
         border-radius: 0;
     }
 }
 </style>
 
-{{ footer }}", "catalog/view/template/account/wishlist.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\account\\wishlist.twig");
+{{ footer }}", "catalog/view/template/account/payment_method.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\account\\payment_method.twig");
     }
 }

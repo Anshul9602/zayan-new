@@ -44,9 +44,10 @@
 		{% endfor %}
 		<style>
 
-#modal-shipping  .modal-content,#modal-payment  .modal-content {
-	padding:20px;
-}
+			#modal-shipping .modal-content,
+			#modal-payment .modal-content {
+				padding: 20px;
+			}
 
 			header {
 				border-bottom: thin solid #f1f1f1;
@@ -60,59 +61,57 @@
 			.fw-medium {
 				font-weight: 400 !important;
 			}
-         @media (max-width: 768px) {
-			.canvas-wrapper {
-    padding: 0;
-    isolation: isolate;
-    height: 100%;
-    width: 90%;
-    margin: auto;
-    max-height: none;
-    display: grid
-;
-    grid-auto-rows: auto minmax(0, 1fr) auto;
-    align-content: start;
-}
-			    .tf-header {
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-            #logo a img {
-    width: 70px !important;
-}
-#newLetter .image img {
-width:100% !important;
-}
-.modal-newletter .modal-dialog {
-    max-width: 80% !important;
-}
-.tf-swiper.home .swiper-slide
- {
-    height: auto !important;
-}
-    .tf-slideshow .slider-wrap {
-        height: auto;
-    }
-    .tf-grid-layout.tf-col-4 {
-    grid-template-columns: repeat(2, 1fr);
-}
-.product-action_list .box-icon {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: var(--white);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-}
-    .product-action_list .icon {
-        font-size: 14px !important;
-    }
-        .footer-heading-mobile {
-       font-size:18px;
-    }
-    .mb-menu-link {
-      font-weight:400;
-    }
-         }
+			@media(max-width: 768px) {
+				.canvas-wrapper {
+					padding: 0;
+					isolation: isolate;
+					height: 100%;
+					width: 90%;
+					margin: auto;
+					max-height: none;
+					display: grid;
+					grid-auto-rows: auto minmax(0, 1fr) auto;
+					align-content: start;
+				}
+				.tf-header {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+				#logo a img {
+					width: 70px !important;
+				}
+				#newLetter .image img {
+					width: 100% !important;
+				}
+				.modal-newletter .modal-dialog {
+					max-width: 80% !important;
+				}
+				.tf-swiper.home .swiper-slide {
+					height: auto !important;
+				}
+				.tf-slideshow .slider-wrap {
+					height: auto;
+				}
+				.tf-grid-layout.tf-col-4 {
+					grid-template-columns: repeat(2, 1fr);
+				}
+				.product-action_list .box-icon {
+					width: 25px;
+					height: 25px;
+					border-radius: 50%;
+					background-color: var(--white);
+					box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+				}
+				.product-action_list .icon {
+					font-size: 14px !important;
+				}
+				.footer-heading-mobile {
+					font-size: 18px;
+				}
+				.mb-menu-link {
+					font-weight: 400;
+				}
+			}
 		</style>
 	</head>
 
@@ -144,7 +143,7 @@ width:100% !important;
 									<span></span>
 								</a>
 							</div>
-                     <div class="col-xl-4 d-none d-xl-block">
+							<div class="col-xl-3 d-none d-xl-block">
 								<nav class="box-navigation">
 									<ul class="box-nav-menu">
 										<li class="menu-item">
@@ -171,7 +170,7 @@ width:100% !important;
 									</ul>
 								</nav>
 							</div>
-							<div class="col-xl-5 col-md-5 col-6 d-flex justify-content-center justify-content-xl-start">
+							<div class="col-xl-6 col-md-5 col-6 d-flex justify-content-center justify-content-xl-center">
 								<div id="logo" class="text-center">
 									{% if logo %}
 										<a href="{{ home }}">
@@ -184,7 +183,7 @@ width:100% !important;
 									{% endif %}
 								</div>
 							</div>
-							
+
 							<div class="col-xl-3 col-md-4 col-3">
 								<ul class="nav-icon-list">
 									<li class="d-none d-lg-flex">
@@ -223,7 +222,5 @@ width:100% !important;
 					</div>
 				</header>
 
-
-				
 
 				<main>

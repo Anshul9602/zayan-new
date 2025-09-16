@@ -1,41 +1,528 @@
 {{ header }}
-<div id="account-reset" class="container" style="padding-top: 100px;">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
-  <div class="row">{{ column_left }}
-    <div id="content" class="col">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      <form id="form-reset" action="{{ save }}" method="post" data-oc-toggle="ajax">
-        <fieldset>
-          <legend>{{ text_password }}</legend>
-          <div class="row mb-3">
-            <label for="input-password" class="col-sm-2 col-form-label">{{ entry_password }}</label>
-            <div class="col-sm-10">
-              <input type="password" name="password" value="" id="input-password" class="form-control"/>
-              <div id="error-password" class="invalid-feedback"></div>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="input-confirm" class="col-sm-2 col-form-label">{{ entry_confirm }}</label>
-            <div class="col-sm-10">
-              <input type="password" name="confirm" value="" id="input-confirm" class="form-control"/>
-              <div id="error-confirm" class="invalid-feedback"></div>
-            </div>
-          </div>
-        </fieldset>
-        <div class="row">
-          <div class="col">
-            <a href="{{ back }}" class="btn btn-light">{{ button_back }}</a>
-          </div>
-          <div class="col text-end">
-            <button type="submit" class="btn btn-primary">{{ button_continue }}</button>
-          </div>
+
+<!-- Page Title -->
+<section class="s-page-title" style="padding-top:100px;">
+    <div class="container">
+        <div class="content" style="padding-bottom: 19px;">
+            <ul class="breadcrumbs-page">
+                {% for breadcrumb in breadcrumbs %}
+                    <li class="breadcrumb-item" style="display:flex;">
+                        <a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <h1 class="title-page">{{ heading_title }}</h1>
         </div>
-      </form>
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
-</div>
+    </div>
+</section>
+<!-- /Page Title -->
+
+<!-- Password Reset -->
+<section class="flat-spacing-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            {{ column_left }}
+            <div id="content" class="col-lg-6">
+                {{ content_top }}
+                
+                <!-- Reset Introduction -->
+                <div class="reset-intro">
+                    <div class="intro-card">
+                        <div class="intro-header">
+                            <i class="icon icon-shield-check"></i>
+                            <h3>Reset Your Password</h3>
+                        </div>
+                        <p class="intro-text">Please enter your new password below. Make sure to choose a strong password for your security.</p>
+                    </div>
+                </div>
+                
+                <!-- Reset Form -->
+                <div class="reset-form-container">
+                    <form id="form-reset" action="{{ save }}" method="post" data-oc-toggle="ajax">
+                        <!-- Password Section -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <i class="icon icon-lock"></i>
+                                <h4>{{ text_password }}</h4>
+                            </div>
+                            <div class="section-content">
+                                <div class="mb-3">
+                                    <label for="input-password" class="form-label required">{{ entry_password }}</label>
+                                    <div class="input-group">
+                                        <span class="input-icon">
+                                            <i class="icon icon-lock"></i>
+                                        </span>
+                                        <input type="password" name="password" value="" id="input-password" class="form-control" placeholder="Enter your new password"/>
+                                        <button type="button" class="password-toggle" onclick="togglePassword('input-password', this)">
+                                            <i class="icon icon-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div id="error-password" class="invalid-feedback"></div>
+                                    <div class="password-strength">
+                                        <div class="strength-meter">
+                                            <div class="strength-bar" id="strength-bar"></div>
+                                        </div>
+                                        <span class="strength-text" id="strength-text">Password Strength</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="input-confirm" class="form-label required">{{ entry_confirm }}</label>
+                                    <div class="input-group">
+                                        <span class="input-icon">
+                                            <i class="icon icon-lock"></i>
+                                        </span>
+                                        <input type="password" name="confirm" value="" id="input-confirm" class="form-control" placeholder="Confirm your new password"/>
+                                        <button type="button" class="password-toggle" onclick="togglePassword('input-confirm', this)">
+                                            <i class="icon icon-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div id="error-confirm" class="invalid-feedback"></div>
+                                </div>
+                                
+                                <!-- Password Requirements -->
+                                <div class="password-requirements">
+                                    <h5>Password Requirements:</h5>
+                                    <ul class="requirements-list">
+                                        <li class="requirement" id="length-req">
+                                            <i class="icon icon-x"></i>
+                                            <span>At least 8 characters</span>
+                                        </li>
+                                        <li class="requirement" id="uppercase-req">
+                                            <i class="icon icon-x"></i>
+                                            <span>One uppercase letter</span>
+                                        </li>
+                                        <li class="requirement" id="lowercase-req">
+                                            <i class="icon icon-x"></i>
+                                            <span>One lowercase letter</span>
+                                        </li>
+                                        <li class="requirement" id="number-req">
+                                            <i class="icon icon-x"></i>
+                                            <span>One number</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                            <div class="action-buttons">
+                                <a href="{{ back }}" class="tf-btn btn-outline animate-btn">
+                                    <i class="icon icon-arrow-left"></i>
+                                    {{ button_back }}
+                                </a>
+                                <button type="submit" class="tf-btn btn-fill animate-btn" id="submit-btn" disabled>
+                                    <i class="icon icon-shield-check"></i>
+                                    {{ button_continue }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                {{ content_bottom }}
+            </div>
+            {{ column_right }}
+        </div>
+    </div>
+</section>
+<!-- /Password Reset -->
+
+<style>
+/* Password Reset Page Styling */
+.reset-intro {
+    margin-bottom: 30px;
+}
+
+.intro-card {
+    background: linear-gradient(135deg, #241B68 0%, #000 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(36,27,104,0.2);
+    text-align: center;
+}
+
+.intro-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.intro-header i {
+    font-size: 48px;
+    opacity: 0.9;
+}
+
+.intro-header h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.intro-text {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.reset-form-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e9ecef;
+}
+
+.form-section {
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.section-header {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-header i {
+    font-size: 18px;
+    color: #666;
+}
+
+.section-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.section-content {
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-label.required::after {
+    content: ' *';
+    color: #dc3545;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    z-index: 2;
+}
+
+.input-group .form-control {
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #000;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px 15px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-color: #241B68;
+    box-shadow: 0 0 0 0.2rem rgba(36,27,104,0.1);
+}
+
+/* Password Strength */
+.password-strength {
+    margin-top: 10px;
+}
+
+.strength-meter {
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.strength-text {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Password Requirements */
+.password-requirements {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.password-requirements h5 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.requirements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.requirement:last-child {
+    margin-bottom: 0;
+}
+
+.requirement i {
+    font-size: 14px;
+    width: 16px;
+}
+
+.requirement.valid i {
+    color: #28a745;
+}
+
+.requirement.invalid i {
+    color: #dc3545;
+}
+
+/* Form Actions */
+.form-actions {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.action-buttons .tf-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.tf-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reset-form-container {
+        padding: 20px;
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+    
+    .intro-card {
+        padding: 20px;
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+    
+    .section-content {
+        padding: 15px;
+    }
+    
+    .action-buttons {
+        flex-direction: column-reverse;
+    }
+    
+    .action-buttons .tf-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro-header h3 {
+        font-size: 20px;
+    }
+    
+    .intro-header i {
+        font-size: 40px;
+    }
+    
+    .form-actions {
+        padding: 20px;
+    }
+}
+</style>
+
+<script>
+// Password strength checker
+function checkPasswordStrength(password) {
+    let strength = 0;
+    let requirements = {
+        length: password.length >= 8,
+        uppercase: /[A-Z]/.test(password),
+        lowercase: /[a-z]/.test(password),
+        number: /[0-9]/.test(password)
+    };
+    
+    // Update requirement indicators
+    Object.keys(requirements).forEach(req => {
+        const element = document.getElementById(req + '-req');
+        const icon = element.querySelector('i');
+        if (requirements[req]) {
+            element.classList.add('valid');
+            element.classList.remove('invalid');
+            icon.className = 'icon icon-check';
+            strength++;
+        } else {
+            element.classList.add('invalid');
+            element.classList.remove('valid');
+            icon.className = 'icon icon-x';
+        }
+    });
+    
+    // Update strength bar
+    const strengthBar = document.getElementById('strength-bar');
+    const strengthText = document.getElementById('strength-text');
+    const submitBtn = document.getElementById('submit-btn');
+    
+    let color, text, width;
+    if (strength === 0) {
+        color = '#e9ecef';
+        text = 'Password Strength';
+        width = '0%';
+    } else if (strength === 1) {
+        color = '#dc3545';
+        text = 'Weak';
+        width = '25%';
+    } else if (strength === 2) {
+        color = '#fd7e14';
+        text = 'Fair';
+        width = '50%';
+    } else if (strength === 3) {
+        color = '#ffc107';
+        text = 'Good';
+        width = '75%';
+    } else {
+        color = '#28a745';
+        text = 'Strong';
+        width = '100%';
+    }
+    
+    strengthBar.style.backgroundColor = color;
+    strengthBar.style.width = width;
+    strengthText.textContent = text;
+    strengthText.style.color = color;
+    
+    // Enable/disable submit button
+    submitBtn.disabled = strength < 4;
+}
+
+// Password toggle visibility
+function togglePassword(inputId, button) {
+    const input = document.getElementById(inputId);
+    const icon = button.querySelector('i');
+    
+    if (input.type === 'password') {
+        input.type = 'text';
+        icon.className = 'icon icon-eye-off';
+    } else {
+        input.type = 'password';
+        icon.className = 'icon icon-eye';
+    }
+}
+
+// Initialize password checking
+document.addEventListener('DOMContentLoaded', function() {
+    const passwordInput = document.getElementById('input-password');
+    const confirmInput = document.getElementById('input-confirm');
+    
+    passwordInput.addEventListener('input', function() {
+        checkPasswordStrength(this.value);
+        validatePasswordMatch();
+    });
+    
+    confirmInput.addEventListener('input', validatePasswordMatch);
+    
+    function validatePasswordMatch() {
+        const password = passwordInput.value;
+        const confirm = confirmInput.value;
+        const confirmError = document.getElementById('error-confirm');
+        
+        if (confirm && password !== confirm) {
+            confirmError.textContent = 'Passwords do not match';
+            confirmError.style.display = 'block';
+            confirmInput.classList.add('is-invalid');
+        } else {
+            confirmError.textContent = '';
+            confirmError.style.display = 'none';
+            confirmInput.classList.remove('is-invalid');
+        }
+    }
+});
+</script>
+
 {{ footer }}

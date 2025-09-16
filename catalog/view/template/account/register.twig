@@ -1,16 +1,44 @@
 {{ header }}
-<div id="account-register" class="container" style="padding-top: 100px;">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
-  <div class="row">
-    {{ column_left }}
-    <div id="content" class="col">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      <p>{{ text_account_already }}</p>
-      <form id="form-register" action="{{ register }}" method="post" data-oc-toggle="ajax">
+
+<!-- Page Title -->
+<section class="s-page-title" style="padding-top:100px;">
+    <div class="container">
+        <div class="content" style="padding-bottom: 19px;">
+            <ul class="breadcrumbs-page">
+                {% for breadcrumb in breadcrumbs %}
+                    <li class="breadcrumb-item" style="display:flex;">
+                        <a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <h1 class="title-page">{{ heading_title }}</h1>
+        </div>
+    </div>
+</section>
+<!-- /Page Title -->
+
+<!-- Register Section -->
+<section class="flat-spacing-3">
+    <div class="container">
+        <div class="row">
+            {{ column_left }}
+            <div id="content" class="col">
+                {{ content_top }}
+                
+                <!-- Registration Introduction -->
+                <div class="register-intro">
+                    <div class="intro-card">
+                        <div class="intro-header">
+                            <i class="icon icon-user-plus"></i>
+                            <h3>Create Your Account</h3>
+                        </div>
+                        <p class="intro-text">{{ text_account_already }}</p>
+                    </div>
+                </div>
+                
+                <!-- Registration Form -->
+                <div class="register-form-container">
+                    <form id="form-register" action="{{ register }}" method="post" data-oc-toggle="ajax">
         <fieldset id="account">
           <legend>{{ text_your_details }}</legend>
           {% if customer_groups|length > 1 %}

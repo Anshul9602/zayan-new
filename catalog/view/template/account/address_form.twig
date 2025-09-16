@@ -1,227 +1,323 @@
 {{ header }}
-<div id="account-address" class="container" style="padding-top: 100px;">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
-  <div class="row">{{ column_left }}
-    <div id="content" class="col">{{ content_top }}
-      <h1>{{ text_address }}</h1>
-      <form id="form-address" action="{{ save }}" method="post" data-oc-toggle="ajax">
-        <fieldset>
-          <div class="row mb-3 required">
-            <label for="input-firstname" class="col-sm-2 col-form-label">{{ entry_firstname }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="firstname" value="{{ firstname }}" placeholder="{{ entry_firstname }}" id="input-firstname" class="form-control"/>
-              <div id="error-firstname" class="invalid-feedback"></div>
-            </div>
-          </div>
-          <div class="row mb-3 required">
-            <label for="input-lastname" class="col-sm-2 col-form-label">{{ entry_lastname }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="lastname" value="{{ lastname }}" placeholder="{{ entry_lastname }}" id="input-lastname" class="form-control"/>
-              <div id="error-lastname" class="invalid-feedback"></div>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="input-company" class="col-sm-2 col-form-label">{{ entry_company }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="company" value="{{ company }}" placeholder="{{ entry_company }}" id="input-company" class="form-control"/>
-            </div>
-          </div>
-          <div class="row mb-3 required">
-            <label for="input-address-1" class="col-sm-2 col-form-label">{{ entry_address_1 }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="address_1" value="{{ address_1 }}" placeholder="{{ entry_address_1 }}" id="input-address-1" class="form-control"/>
-              <div id="error-address-1" class="invalid-feedback"></div>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="input-address-2" class="col-sm-2 col-form-label">{{ entry_address_2 }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="address_2" value="{{ address_2 }}" placeholder="{{ entry_address_2 }}" id="input-address-2" class="form-control"/>
-            </div>
-          </div>
-          <div class="row mb-3 required">
-            <label for="input-city" class="col-sm-2 col-form-label">{{ entry_city }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="city" value="{{ city }}" placeholder="{{ entry_city }}" id="input-city" class="form-control"/>
-              <div id="error-city" class="invalid-feedback"></div>
-            </div>
-          </div>
-          <div class="row mb-3 required">
-            <label for="input-postcode" class="col-sm-2 col-form-label">{{ entry_postcode }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="postcode" value="{{ postcode }}" placeholder="{{ entry_postcode }}" id="input-postcode" class="form-control"/>
-              <div id="error-postcode" class="invalid-feedback"></div>
-            </div>
-          </div>
-          <div class="row mb-3 required">
-            <label for="input-country" class="col-sm-2 col-form-label">{{ entry_country }}</label>
-            <div class="col-sm-10">
-              <select name="country_id" id="input-country" class="form-select">
-                <option value="0">{{ text_select }}</option>
-                {% for country in countries %}
-                  <option value="{{ country.country_id }}"{% if country.country_id == country_id %} selected{% endif %}>{{ country.name }}</option>
+
+<!-- Page Title -->
+<section class="s-page-title" style="padding-top:100px;">
+    <div class="container">
+        <div class="content" style="padding-bottom: 19px;">
+            <ul class="breadcrumbs-page">
+                {% for breadcrumb in breadcrumbs %}
+                    <li class="breadcrumb-item" style="display:flex;">
+                        <a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+                    </li>
                 {% endfor %}
-              </select>
-              <div id="error-country" class="invalid-feedback"></div>
-            </div>
-          </div>
-          <div class="row mb-3 required">
-            <label for="input-zone" class="col-sm-2 col-form-label">{{ entry_zone }}</label>
-            <div class="col-sm-10">
-              <select name="zone_id" id="input-zone" class="form-select">
-                <option value="">{{ text_select }}</option>
-                {% for zone in zones %}
-                  <option value="{{ zone.zone_id }}"{% if zone.zone_id == zone_id %} selected{% endif %}>{{ zone.name }}</option>
-                {% endfor %}
-              </select>
-              <div id="error-zone" class="invalid-feedback"></div>
-            </div>
-          </div>
-
-          {% for custom_field in custom_fields %}
-
-            {% if custom_field.type == 'select' %}
-              <div class="row mb-3{% if custom_field.required %} required{% endif %}">
-                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="col-sm-2 col-form-label">{{ custom_field.name }}</label>
-                <div class="col-sm-10">
-                  <select name="custom_field[{{ custom_field.custom_field_id }}]" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-select">
-                    <option value="">{{ text_select }}</option>
-                    {% for custom_field_value in custom_field.custom_field_value %}
-                      <option value="{{ custom_field_value.custom_field_value_id }}"{% if address_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == address_custom_field[custom_field.custom_field_id] %} selected{% endif %}>{{ custom_field_value.name }}</option>
-                    {% endfor %}
-                  </select>
-                  <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
-                </div>
-              </div>
-            {% endif %}
-
-            {% if custom_field.type == 'radio' %}
-              <div class="row mb-3{% if custom_field.required %} required{% endif %}">
-                <label class="col-sm-2 col-form-label">{{ custom_field.name }}</label>
-                <div class="col-sm-10">
-                  <div id="input-custom-field-{{ custom_field.custom_field_id }}">
-                    {% for custom_field_value in custom_field.custom_field_value %}
-                      <div class="form-check">
-                        <input type="radio" name="custom_field[{{ custom_field.custom_field_id }}]" value="{{ custom_field_value.custom_field_value_id }}" id="input-custom-value-{{ custom_field_value.custom_field_value_id }}" class="form-check-input"{% if address_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == address_custom_field[custom_field.custom_field_id] %} checked{% endif %}/> <label for="input-custom-value-{{ custom_field_value.custom_field_value_id }}" class="form-check-label">{{ custom_field_value.name }}</label>
-                      </div>
-                    {% endfor %}
-                  </div>
-                  <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
-                </div>
-              </div>
-            {% endif %}
-
-            {% if custom_field.type == 'checkbox' %}
-              <div class="row mb-3{% if custom_field.required %} required{% endif %}">
-                <label class="col-sm-2 col-form-label">{{ custom_field.name }}</label>
-                <div class="col-sm-10">
-                  <div id="input-custom-field-{{ custom_field.custom_field_id }}">
-                    {% for custom_field_value in custom_field.custom_field_value %}
-                      <div class="form-check">
-                        <input type="checkbox" name="custom_field[{{ custom_field.custom_field_id }}][]" value="{{ custom_field_value.custom_field_value_id }}" id="input-custom-value-{{ custom_field_value.custom_field_value_id }}" class="form-check-input"{% if address_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id in address_custom_field[custom_field.custom_field_id] %} checked{% endif %}/> <label for="input-custom-value-{{ custom_field_value.custom_field_value_id }}" class="form-check-label">{{ custom_field_value.name }}</label>
-                      </div>
-                    {% endfor %}
-                  </div>
-                  <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
-                </div>
-              </div>
-            {% endif %}
-
-            {% if custom_field.type == 'text' %}
-              <div class="row mb-3{% if custom_field.required %} required{% endif %}">
-                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="col-sm-2 col-form-label">{{ custom_field.name }}</label>
-                <div class="col-sm-10">
-                  <input type="text" name="custom_field[{{ custom_field.custom_field_id }}]" value="{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% else %}{{ custom_field.value }}{% endif %}" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control"/>
-                  <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
-                </div>
-              </div>
-            {% endif %}
-
-            {% if custom_field.type == 'textarea' %}
-              <div class="row mb-3{% if custom_field.required %} required{% endif %}">
-                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="col-sm-2 col-form-label">{{ custom_field.name }}</label>
-                <div class="col-sm-10">
-                  <textarea name="custom_field[{{ custom_field.custom_field_id }}]" rows="5" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control">{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% else %}{{ custom_field.value }}{% endif %}</textarea>
-                  <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
-                </div>
-              </div>
-            {% endif %}
-
-            {% if custom_field.type == 'file' %}
-              <div class="row mb-3{% if custom_field.required %} required{% endif %}">
-                <label class="col-sm-2 col-form-label">{{ custom_field.name }}</label>
-                <div class="col-sm-10">
-                  <div>
-                    <button type="button" data-oc-toggle="upload" data-oc-url="{{ upload }}" data-oc-size-max="{{ config_file_max_size }}" data-oc-size-error="{{ error_upload_size }}" data-oc-target="#input-custom-field-{{ custom_field.custom_field_id }}" class="btn btn-light"><i class="fa-solid fa-upload"></i> {{ button_upload }}</button>
-                    <input type="hidden" name="custom_field[{{ custom_field.custom_field_id }}]" value="{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% endif %}" id="input-custom-field-{{ custom_field.custom_field_id }}"/>
-                  </div>
-                  <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
-                </div>
-              </div>
-            {% endif %}
-
-            {% if custom_field.type == 'date' %}
-              <div class="row mb-3{% if custom_field.required %} required{% endif %}">
-                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="col-sm-2 col-form-label">{{ custom_field.name }}</label>
-                <div class="col-sm-10">
-                  <input type="date" name="custom_field[{{ custom_field.custom_field_id }}]" value="{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% else %}{{ custom_field.value }}{% endif %}" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control"/>
-                  <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
-                </div>
-              </div>
-            {% endif %}
-
-            {% if custom_field.type == 'time' %}
-              <div class="row mb-3{% if custom_field.required %} required{% endif %}">
-                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="col-sm-2 col-form-label">{{ custom_field.name }}</label>
-                <div class="col-sm-10">
-                  <input type="time" name="custom_field[{{ custom_field.custom_field_id }}]" value="{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% else %}{{ custom_field.value }}{% endif %}" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control"/>
-                  <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
-                </div>
-              </div>
-            {% endif %}
-
-            {% if custom_field.type == 'datetime' %}
-              <div class="row mb-3{% if custom_field.required %} required{% endif %}">
-                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="col-sm-2 col-form-label">{{ custom_field.name }}</label>
-                <div class="col-sm-10">
-                  <input type="datetime-local" name="custom_field[{{ custom_field.custom_field_id }}]" value="{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% else %}{{ custom_field.value }}{% endif %}" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control"/>
-                  <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
-                </div>
-              </div>
-            {% endif %}
-
-          {% endfor %}
-
-          <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">{{ entry_default }}</label>
-            <div class="col-sm-10">
-              <div class="form-check-inline">
-                <input type="radio" name="default" value="1" id="input-default-yes" class="form-check-input"{% if default %} checked{% endif %}/>
-                <label for="input-default-yes" class="form-check-label">{{ text_yes }}</label>
-              </div>
-              <div class="form-check-inline">
-                <input type="radio" name="default" value="0" id="input-default-no" class="form-check-input"{% if not default %} checked{% endif %}/>
-                <label for="input-default-no" class="form-check-label">{{ text_no }}</label>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-        <div class="row">
-          <div class="col">
-            <a href="{{ back }}" class="btn btn-light">{{ button_back }}</a>
-          </div>
-          <div class="col text-end">
-            <button type="submit" class="btn btn-primary">{{ button_continue }}</button>
-          </div>
+            </ul>
+            <h1 class="title-page">{{ text_address }}</h1>
         </div>
-      </form>
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
-</div>
+    </div>
+</section>
+<!-- /Page Title -->
+
+<!-- Address Form -->
+<section class="flat-spacing-3">
+    <div class="container">
+        <div class="row">
+            {{ column_left }}
+            <div id="content" class="col">
+                {{ content_top }}
+                
+                <!-- Form Introduction -->
+                <div class="address-intro">
+                    <div class="intro-card">
+                        <div class="intro-header">
+                            <i class="icon icon-map-pin"></i>
+                            <h3>Address Information</h3>
+                        </div>
+                        <p class="intro-text">Please provide your complete address information for shipping and billing purposes.</p>
+                    </div>
+                </div>
+                
+                <!-- Address Form -->
+                <div class="address-form-container">
+                    <form id="form-address" action="{{ save }}" method="post" data-oc-toggle="ajax">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <i class="icon icon-user"></i>
+                                <h4>Personal Information</h4>
+                            </div>
+                            <div class="section-content">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="input-firstname" class="form-label required">{{ entry_firstname }}</label>
+                                        <div class="input-group">
+                                            <span class="input-icon">
+                                                <i class="icon icon-user"></i>
+                                            </span>
+                                            <input type="text" name="firstname" value="{{ firstname }}" placeholder="{{ entry_firstname }}" id="input-firstname" class="form-control"/>
+                                        </div>
+                                        <div id="error-firstname" class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="input-lastname" class="form-label required">{{ entry_lastname }}</label>
+                                        <div class="input-group">
+                                            <span class="input-icon">
+                                                <i class="icon icon-user"></i>
+                                            </span>
+                                            <input type="text" name="lastname" value="{{ lastname }}" placeholder="{{ entry_lastname }}" id="input-lastname" class="form-control"/>
+                                        </div>
+                                        <div id="error-lastname" class="invalid-feedback"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="input-company" class="form-label">{{ entry_company }}</label>
+                                        <div class="input-group">
+                                            <span class="input-icon">
+                                                <i class="icon icon-briefcase"></i>
+                                            </span>
+                                            <input type="text" name="company" value="{{ company }}" placeholder="{{ entry_company }}" id="input-company" class="form-control"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address Details -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <i class="icon icon-home"></i>
+                                <h4>Address Details</h4>
+                            </div>
+                            <div class="section-content">
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="input-address-1" class="form-label required">{{ entry_address_1 }}</label>
+                                        <div class="input-group">
+                                            <span class="input-icon">
+                                                <i class="icon icon-map-pin"></i>
+                                            </span>
+                                            <input type="text" name="address_1" value="{{ address_1 }}" placeholder="{{ entry_address_1 }}" id="input-address-1" class="form-control"/>
+                                        </div>
+                                        <div id="error-address-1" class="invalid-feedback"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="input-address-2" class="form-label">{{ entry_address_2 }}</label>
+                                        <div class="input-group">
+                                            <span class="input-icon">
+                                                <i class="icon icon-map-pin"></i>
+                                            </span>
+                                            <input type="text" name="address_2" value="{{ address_2 }}" placeholder="{{ entry_address_2 }}" id="input-address-2" class="form-control"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="input-city" class="form-label required">{{ entry_city }}</label>
+                                        <div class="input-group">
+                                            <span class="input-icon">
+                                                <i class="icon icon-building"></i>
+                                            </span>
+                                            <input type="text" name="city" value="{{ city }}" placeholder="{{ entry_city }}" id="input-city" class="form-control"/>
+                                        </div>
+                                        <div id="error-city" class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="input-postcode" class="form-label required">{{ entry_postcode }}</label>
+                                        <div class="input-group">
+                                            <span class="input-icon">
+                                                <i class="icon icon-hash"></i>
+                                            </span>
+                                            <input type="text" name="postcode" value="{{ postcode }}" placeholder="{{ entry_postcode }}" id="input-postcode" class="form-control"/>
+                                        </div>
+                                        <div id="error-postcode" class="invalid-feedback"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location Information -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <i class="icon icon-globe"></i>
+                                <h4>Location Information</h4>
+                            </div>
+                            <div class="section-content">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="input-country" class="form-label required">{{ entry_country }}</label>
+                                        <div class="select-wrapper">
+                                            <select name="country_id" id="input-country" class="form-control">
+                                                <option value="0">{{ text_select }}</option>
+                                                {% for country in countries %}
+                                                    <option value="{{ country.country_id }}"{% if country.country_id == country_id %} selected{% endif %}>{{ country.name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                            <i class="select-arrow icon icon-chevron-down"></i>
+                                        </div>
+                                        <div id="error-country" class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="input-zone" class="form-label required">{{ entry_zone }}</label>
+                                        <div class="select-wrapper">
+                                            <select name="zone_id" id="input-zone" class="form-control">
+                                                <option value="">{{ text_select }}</option>
+                                                {% for zone in zones %}
+                                                    <option value="{{ zone.zone_id }}"{% if zone.zone_id == zone_id %} selected{% endif %}>{{ zone.name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                            <i class="select-arrow icon icon-chevron-down"></i>
+                                        </div>
+                                        <div id="error-zone" class="invalid-feedback"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Custom Fields -->
+                        {% if custom_fields %}
+                            <div class="form-section">
+                                <div class="section-header">
+                                    <i class="icon icon-settings"></i>
+                                    <h4>Additional Information</h4>
+                                </div>
+                                <div class="section-content">
+                                    {% for custom_field in custom_fields %}
+                                        <div class="custom-field-wrapper mb-3{% if custom_field.required %} required{% endif %}">
+                                            {% if custom_field.type == 'select' %}
+                                                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="form-label{% if custom_field.required %} required{% endif %}">{{ custom_field.name }}</label>
+                                                <div class="select-wrapper">
+                                                    <select name="custom_field[{{ custom_field.custom_field_id }}]" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control">
+                                                        <option value="">{{ text_select }}</option>
+                                                        {% for custom_field_value in custom_field.custom_field_value %}
+                                                            <option value="{{ custom_field_value.custom_field_value_id }}"{% if address_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == address_custom_field[custom_field.custom_field_id] %} selected{% endif %}>{{ custom_field_value.name }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                    <i class="select-arrow icon icon-chevron-down"></i>
+                                                </div>
+                                                <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
+                                            {% endif %}
+
+                                            {% if custom_field.type == 'radio' %}
+                                                <label class="form-label{% if custom_field.required %} required{% endif %}">{{ custom_field.name }}</label>
+                                                <div class="custom-options">
+                                                    {% for custom_field_value in custom_field.custom_field_value %}
+                                                        <div class="option-card">
+                                                            <input type="radio" name="custom_field[{{ custom_field.custom_field_id }}]" value="{{ custom_field_value.custom_field_value_id }}" id="input-custom-value-{{ custom_field_value.custom_field_value_id }}" class="form-check-input"{% if address_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id == address_custom_field[custom_field.custom_field_id] %} checked{% endif %}/>
+                                                            <label for="input-custom-value-{{ custom_field_value.custom_field_value_id }}" class="option-label">{{ custom_field_value.name }}</label>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                                <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
+                                            {% endif %}
+
+                                            {% if custom_field.type == 'checkbox' %}
+                                                <label class="form-label{% if custom_field.required %} required{% endif %}">{{ custom_field.name }}</label>
+                                                <div class="custom-options">
+                                                    {% for custom_field_value in custom_field.custom_field_value %}
+                                                        <div class="option-card">
+                                                            <input type="checkbox" name="custom_field[{{ custom_field.custom_field_id }}][]" value="{{ custom_field_value.custom_field_value_id }}" id="input-custom-value-{{ custom_field_value.custom_field_value_id }}" class="form-check-input"{% if address_custom_field[custom_field.custom_field_id] and custom_field_value.custom_field_value_id in address_custom_field[custom_field.custom_field_id] %} checked{% endif %}/>
+                                                            <label for="input-custom-value-{{ custom_field_value.custom_field_value_id }}" class="option-label">{{ custom_field_value.name }}</label>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                                <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
+                                            {% endif %}
+
+                                            {% if custom_field.type == 'text' %}
+                                                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="form-label{% if custom_field.required %} required{% endif %}">{{ custom_field.name }}</label>
+                                                <input type="text" name="custom_field[{{ custom_field.custom_field_id }}]" value="{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% else %}{{ custom_field.value }}{% endif %}" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control"/>
+                                                <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
+                                            {% endif %}
+
+                                            {% if custom_field.type == 'textarea' %}
+                                                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="form-label{% if custom_field.required %} required{% endif %}">{{ custom_field.name }}</label>
+                                                <textarea name="custom_field[{{ custom_field.custom_field_id }}]" rows="4" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control">{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% else %}{{ custom_field.value }}{% endif %}</textarea>
+                                                <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
+                                            {% endif %}
+
+                                            {% if custom_field.type == 'file' %}
+                                                <label class="form-label{% if custom_field.required %} required{% endif %}">{{ custom_field.name }}</label>
+                                                <div class="file-upload-wrapper">
+                                                    <button type="button" data-oc-toggle="upload" data-oc-url="{{ upload }}" data-oc-size-max="{{ config_file_max_size }}" data-oc-size-error="{{ error_upload_size }}" data-oc-target="#input-custom-field-{{ custom_field.custom_field_id }}" class="tf-btn btn-outline animate-btn">
+                                                        <i class="icon icon-upload"></i> {{ button_upload }}
+                                                    </button>
+                                                    <input type="hidden" name="custom_field[{{ custom_field.custom_field_id }}]" value="{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% endif %}" id="input-custom-field-{{ custom_field.custom_field_id }}"/>
+                                                </div>
+                                                <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
+                                            {% endif %}
+
+                                            {% if custom_field.type == 'date' %}
+                                                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="form-label{% if custom_field.required %} required{% endif %}">{{ custom_field.name }}</label>
+                                                <input type="date" name="custom_field[{{ custom_field.custom_field_id }}]" value="{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% else %}{{ custom_field.value }}{% endif %}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control"/>
+                                                <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
+                                            {% endif %}
+
+                                            {% if custom_field.type == 'time' %}
+                                                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="form-label{% if custom_field.required %} required{% endif %}">{{ custom_field.name }}</label>
+                                                <input type="time" name="custom_field[{{ custom_field.custom_field_id }}]" value="{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% else %}{{ custom_field.value }}{% endif %}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control"/>
+                                                <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
+                                            {% endif %}
+
+                                            {% if custom_field.type == 'datetime' %}
+                                                <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="form-label{% if custom_field.required %} required{% endif %}">{{ custom_field.name }}</label>
+                                                <input type="datetime-local" name="custom_field[{{ custom_field.custom_field_id }}]" value="{% if address_custom_field[custom_field.custom_field_id] %}{{ address_custom_field[custom_field.custom_field_id] }}{% else %}{{ custom_field.value }}{% endif %}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control"/>
+                                                <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        <!-- Address Settings -->
+                        <div class="form-section">
+                            <div class="section-header">
+                                <i class="icon icon-star"></i>
+                                <h4>Address Settings</h4>
+                            </div>
+                            <div class="section-content">
+                                <div class="default-address-setting">
+                                    <label class="form-label">{{ entry_default }}</label>
+                                    <div class="default-options">
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="default" value="1" id="input-default-yes" class="form-check-input"{% if default %} checked{% endif %}/>
+                                            <label for="input-default-yes" class="form-check-label">{{ text_yes }}</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="default" value="0" id="input-default-no" class="form-check-input"{% if not default %} checked{% endif %}/>
+                                            <label for="input-default-no" class="form-check-label">{{ text_no }}</label>
+                                        </div>
+                                    </div>
+                                    <small class="form-text text-muted">Set this as your default address for faster checkout</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                            <div class="action-buttons">
+                                <a href="{{ back }}" class="tf-btn btn-outline animate-btn">
+                                    <i class="icon icon-arrow-left"></i>
+                                    {{ button_back }}
+                                </a>
+                                <button type="submit" class="tf-btn btn-fill animate-btn">
+                                    <i class="icon icon-save"></i>
+                                    {{ button_continue }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                {{ content_bottom }}
+            </div>
+            {{ column_right }}
+        </div>
+    </div>
+</section>
+<!-- /Address Form -->
 <script type="text/javascript"><!--
 $('#input-country').on('change', function() {
     var element = this;
@@ -268,4 +364,318 @@ $('#input-country').on('change', function() {
     });
 });
 //--></script>
+
+<style>
+/* Address Form Page Styling */
+.address-intro {
+    margin-bottom: 30px;
+}
+
+.intro-card {
+    background: linear-gradient(135deg, #241B68 0%, #000 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(36,27,104,0.2);
+    text-align: center;
+}
+
+.intro-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.intro-header i {
+    font-size: 48px;
+    opacity: 0.9;
+}
+
+.intro-header h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.intro-text {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.address-form-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.form-section {
+    margin-bottom: 30px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.section-header {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-header i {
+    font-size: 18px;
+    color: #666;
+}
+
+.section-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.section-content {
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-label.required::after {
+    content: ' *';
+    color: #dc3545;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    z-index: 2;
+}
+
+.input-group .form-control {
+    padding-left: 45px;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px 15px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #241B68;
+    box-shadow: 0 0 0 0.2rem rgba(36,27,104,0.1);
+}
+
+/* Custom Select Styling */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    padding-right: 40px;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    pointer-events: none;
+    font-size: 14px;
+}
+
+.select-wrapper:hover .select-arrow {
+    color: #241B68;
+}
+
+/* Custom Fields */
+.custom-field-wrapper {
+    margin-bottom: 20px;
+}
+
+.custom-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.option-card {
+    position: relative;
+}
+
+.option-card input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.option-label {
+    display: block;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.option-label:hover {
+    background: #e9ecef;
+    border-color: #241B68;
+}
+
+.option-card input:checked + .option-label {
+    background: #241B68;
+    color: #fff;
+    border-color: #241B68;
+}
+
+/* File Upload */
+.file-upload-wrapper {
+    margin-top: 8px;
+}
+
+.file-upload-wrapper .tf-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* Default Address Setting */
+.default-address-setting {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.default-options {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.form-check-inline .form-check-input {
+    margin-right: 8px;
+}
+
+.form-check-label {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.form-text {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+/* Form Actions */
+.form-actions {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.action-buttons .tf-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 140px;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .address-form-container {
+        padding: 20px;
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+    
+    .intro-card {
+        padding: 20px;
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+    
+    .section-content {
+        padding: 15px;
+    }
+    
+    .custom-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column-reverse;
+    }
+    
+    .action-buttons .tf-btn {
+        width: 100%;
+    }
+    
+    .default-options {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro-header h3 {
+        font-size: 20px;
+    }
+    
+    .intro-header i {
+        font-size: 40px;
+    }
+    
+    .form-actions {
+        padding: 20px;
+    }
+    
+    .default-address-setting {
+        padding: 15px;
+    }
+}
+</style>
+
 {{ footer }}

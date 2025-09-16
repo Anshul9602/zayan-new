@@ -490,7 +490,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-plus\"></i>
 \t\t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" id=\"button-cart\" onclick class=\"tf-btn animate-btn btn-add-to-cart\">
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" id=\"button-cart\" class=\"tf-btn animate-btn \">
 \t\t\t\t\t\t\t\t\t\t\t\tADD TO CART
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-shopping-cart-simple\"></i>
 \t\t\t\t\t\t\t\t\t\t\t</button>
@@ -833,7 +833,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                     yield "
 \t\t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t\t\t\t\t\t\t\t";
+\t\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['attribute'], $context['_parent']);
@@ -906,9 +906,9 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                      <div class=\"content\">
                         <h4 class=\"title fw-normal\">Quick Turn Around</h4>
                         <p class=\"text\">30 day money back guarantee</p>
+\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
                <!-- item 2 -->
                <div class=\"swiper-slide\">
                   <div class=\"box-icon_V01\">
@@ -918,9 +918,9 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                      <div class=\"content\">
                         <h4 class=\"title fw-normal\">Ethically sourced</h4>
                         <p class=\"text\">Manufacturer's defect</p>
+\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t</div>
                <!-- item 3 -->
                <div class=\"swiper-slide\">
                   <div class=\"box-icon_V01\">
@@ -930,9 +930,9 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                      <div class=\"content\">
                         <h4 class=\"title fw-normal\">Free shipping</h4>
                         <p class=\"text\">Free Shipping for orders over \$150</p>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
                <!-- item 4 -->
                <div class=\"swiper-slide\">
                   <div class=\"box-icon_V01\">
@@ -942,14 +942,14 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                      <div class=\"content\">
                         <h4 class=\"title fw-normal\">In-house Design</h4>
                         <p class=\"text\">24 hours a day, 7 days a week</p>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-            <div class=\"sw-dot-default tf-sw-pagination\"></div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
 \t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+            <div class=\"sw-dot-default tf-sw-pagination\"></div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
 </section>
 <!-- /Box Icon -->
 <!-- Also Like -->
@@ -960,7 +960,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
         // line 524
         yield ($context["related"] ?? null);
         yield "
-   </div>
+\t\t\t\t\t\t\t</div>
 </section>
 <!-- /Also Like -->
 <!-- Related -->
@@ -1002,13 +1002,13 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                            </a>
 \t\t\t\t\t\t</li>
 \t\t\t\t</ul>
-                  </div>
+\t\t\t\t\t\t</div>
                   <div class=\"card-product_info\">
                      <a href=\"product-detail.html\" class=\"name-product h4 link\">Seamless breathable thong</a>
                      <div class=\"price-wrap\">
                         <span class=\"price-old h6 fw-normal\">\$99,99</span>
                         <span class=\"price-new h6\">\$69,99</span>
-\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
                      <ul class=\"product-color_list\">
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
                            <span class=\"tooltip color-filter\">Sage Green</span>
@@ -1023,9 +1023,9 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                               data-src=\"assets/images/products/underwear/product-3.jpg\" alt=\"Product\">
 \t\t\t\t\t\t\t</li>
                      </ul>
-                  </div>
-               </div>
-            </div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
             <!-- Product 2 -->
             <div class=\"swiper-slide\">
                <div class=\"card-product\">
@@ -1058,13 +1058,13 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t</ul>
 
-\t\t\t</div>
+\t\t\t\t\t\t\t</div>
                   <div class=\"card-product_info\">
                      <a href=\"product-detail.html\" class=\"name-product h4 link\">Cotton high waisted panties</a>
                      <div class=\"price-wrap\">
                         <span class=\"price-old h6 fw-normal\"> \$89,99</span>
                         <span class=\"price-new h6\">\$59,99</span>
-\t\t</div>
+\t\t\t\t\t\t</div>
                      <ul class=\"product-color_list\">
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
                            <span class=\"tooltip color-filter\">Beige</span>
@@ -1085,9 +1085,9 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                               data-src=\"assets/images/products/underwear/product-7.jpg\" alt=\"Product\">
 \t\t\t\t</li>
 \t\t</ul>
-\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
             <!-- Product 3 -->
             <div class=\"swiper-slide\">
                <div class=\"card-product\">
@@ -1103,59 +1103,59 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                            <li class=\"size-item h6\">XS</li>
                            <li class=\"size-item h6\">S</li>
                            <li class=\"size-item h6\">M</li>
-                        </ul>
-                     </div>
+\t\t\t\t</ul>
+\t\t\t\t\t</div>
                      <ul class=\"product-action_list\">
                         <li>
                            <a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon\">
                            <span class=\"icon icon-shopping-cart-simple\"></span>
                            <span class=\"tooltip\">Add to cart</span>
                            </a>
-                        </li>
+\t\t\t\t\t\t\t</li>
                         <li class=\"wishlist\">
                            <a href=\"javascript:void(0);\" class=\"hover-tooltip tooltip-left box-icon\">
                            <span class=\"icon icon-heart\"></span>
                            <span class=\"tooltip\">Add to Wishlist</span>
                            </a>
-                        </li>
+\t\t\t\t\t\t\t</li>
                         
                         <li>
                            <a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon\">
                            <span class=\"icon icon-view\"></span>
                            <span class=\"tooltip\">Quick view</span>
                            </a>
-                        </li>
-                     </ul>
-\t\t</div>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
                   <div class=\"card-product_info\">
                      <a href=\"product-detail.html\" class=\"name-product h4 link\">Sexy lace panties</a>
                      <div class=\"price-wrap\">
                         <span class=\"price-old h6 fw-normal\">\$79,99</span>
                         <span class=\"price-new h6\">\$49,99</span>
-\t</div>
+\t\t\t</div>
                      <ul class=\"product-color_list\">
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
                            <span class=\"tooltip color-filter\">Dusty Olive</span>
                            <span class=\"swatch-value bg-dusty-olive\"></span>
                            <img class=\"lazyload\" src=\"assets/images/products/underwear/product-8.jpg\"
                               data-src=\"assets/images/products/underwear/product-8.jpg\" alt=\"Product\">
-                        </li>
+\t\t\t</li>
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
                            <span class=\"tooltip color-filter\">Light Orange</span>
                            <span class=\"swatch-value bg-tomato\"></span>
                            <img class=\"lazyload\" src=\"assets/images/products/underwear/product-10.jpg\"
                               data-src=\"assets/images/products/underwear/product-10.jpg\" alt=\"Product\">
-                        </li>
+\t\t\t\t</li>
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
                            <span class=\"tooltip color-filter\">Green</span>
                            <span class=\"swatch-value bg-dark-jade\"></span>
                            <img class=\"lazyload\" src=\"assets/images/products/underwear/product-11.jpg\"
                               data-src=\"assets/images/products/underwear/product-11.jpg\" alt=\"Product\">
-                        </li>
-                     </ul>
-\t\t</div>
-\t</div>
-</div>
+\t\t\t\t</li>
+\t\t</ul>
+\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
             <!-- Product 4 -->
             <div class=\"swiper-slide\">
                <div class=\"card-product\">
@@ -1190,13 +1190,13 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                            </a>
                         </li>
                      </ul>
-                  </div>
+\t\t</div>
                   <div class=\"card-product_info\">
                      <a href=\"product-detail.html\" class=\"name-product h4 link\">Seamless underwear</a>
                      <div class=\"price-wrap\">
                         <span class=\"price-old h6 fw-normal\">\$109,99</span>
                         <span class=\"price-new h6\">\$74,99</span>
-                     </div>
+\t</div>
                      <ul class=\"product-color_list\">
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
                            <span class=\"tooltip color-filter\">Green</span>
@@ -1233,26 +1233,26 @@ console.log('ready');
     }, 500);
     
     \$(document).on('click', '.size-btn', function() {
-        var size = \$(this).data('size');
+var size = \$(this).data('size');
         console.log('Size button clicked:', size);
         
-        \$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(size);
-        \$(this).siblings().removeClass('active');
-        \$(this).addClass('active');
+\$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(size);
+\$(this).siblings().removeClass('active');
+\$(this).addClass('active');
         
         // Update sticky cart section
         \$('#size-value').text(size);
         console.log('Updated size value to:', size);
         updateStickyCartOptions();
-    });
+});
 
     \$(document).on('click', '.color', function() {
-        var color = \$(this).data('color');
+var color = \$(this).data('color');
         console.log('Color button clicked:', color);
         
-        \$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(color);
-        \$(this).siblings().removeClass('active');
-        \$(this).addClass('active');
+\$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(color);
+\$(this).siblings().removeClass('active');
+\$(this).addClass('active');
         
         // Update sticky cart section
         \$('#color-value').text(color);
@@ -1417,7 +1417,20 @@ dataType: 'json',
 \$('#button-cart').prop(\"disabled\", false).text(\"Add to Cart\");
 },
            success: function(json) {
-console.log(json);
+ \$(\".tf-add-cart-success\").addClass(\"active\");
+                        
+                        // Update cart count in header
+                        if (json.count !== undefined) {
+                            \$(\".count\").text(json.count);
+                        }
+                        
+                        // Update cart content without reload
+                        \$.get('index.php?route=checkout/cart.info', function(cartHtml) {
+                            \$('.tf-mini-cart-wrap').html(cartHtml);
+                        });
+                        
+                        // Show success message
+                        alert('Product added to cart successfully!');
 },
            error: function(xhr, ajaxOptions, thrownError) {
 console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText);
@@ -1428,7 +1441,7 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
 });
 </script>
 ";
-        // line 989
+        // line 1002
         yield ($context["footer"] ?? null);
         yield from [];
     }
@@ -1454,7 +1467,7 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
      */
     public function getDebugInfo(): array
     {
-        return array (  1432 => 989,  1294 => 854,  961 => 524,  884 => 449,  878 => 446,  875 => 445,  869 => 443,  867 => 442,  862 => 439,  856 => 437,  852 => 435,  842 => 430,  832 => 426,  826 => 423,  822 => 421,  818 => 420,  811 => 416,  808 => 415,  804 => 414,  801 => 413,  799 => 412,  789 => 405,  753 => 374,  743 => 367,  735 => 361,  732 => 360,  726 => 359,  720 => 355,  697 => 353,  680 => 352,  676 => 351,  671 => 349,  668 => 348,  665 => 347,  660 => 346,  658 => 345,  648 => 338,  628 => 334,  611 => 333,  605 => 330,  598 => 326,  594 => 325,  526 => 259,  512 => 247,  499 => 239,  487 => 230,  479 => 224,  477 => 223,  472 => 220,  468 => 218,  462 => 217,  457 => 214,  443 => 213,  430 => 210,  428 => 209,  424 => 208,  414 => 207,  411 => 206,  408 => 205,  391 => 204,  383 => 199,  378 => 197,  371 => 194,  368 => 193,  364 => 192,  361 => 191,  359 => 190,  355 => 188,  348 => 184,  344 => 182,  342 => 181,  335 => 177,  328 => 173,  324 => 171,  321 => 170,  315 => 169,  312 => 168,  302 => 166,  300 => 165,  291 => 164,  288 => 163,  285 => 162,  280 => 161,  278 => 160,  274 => 159,  262 => 149,  260 => 146,  257 => 142,  247 => 138,  243 => 137,  239 => 136,  235 => 135,  229 => 132,  226 => 131,  222 => 130,  215 => 125,  205 => 121,  201 => 120,  197 => 119,  192 => 116,  188 => 115,  183 => 112,  180 => 111,  177 => 110,  174 => 109,  171 => 108,  168 => 107,  165 => 106,  162 => 105,  144 => 88,  133 => 86,  129 => 85,  42 => 1,);
+        return array (  1445 => 1002,  1294 => 854,  961 => 524,  884 => 449,  878 => 446,  875 => 445,  869 => 443,  867 => 442,  862 => 439,  856 => 437,  852 => 435,  842 => 430,  832 => 426,  826 => 423,  822 => 421,  818 => 420,  811 => 416,  808 => 415,  804 => 414,  801 => 413,  799 => 412,  789 => 405,  753 => 374,  743 => 367,  735 => 361,  732 => 360,  726 => 359,  720 => 355,  697 => 353,  680 => 352,  676 => 351,  671 => 349,  668 => 348,  665 => 347,  660 => 346,  658 => 345,  648 => 338,  628 => 334,  611 => 333,  605 => 330,  598 => 326,  594 => 325,  526 => 259,  512 => 247,  499 => 239,  487 => 230,  479 => 224,  477 => 223,  472 => 220,  468 => 218,  462 => 217,  457 => 214,  443 => 213,  430 => 210,  428 => 209,  424 => 208,  414 => 207,  411 => 206,  408 => 205,  391 => 204,  383 => 199,  378 => 197,  371 => 194,  368 => 193,  364 => 192,  361 => 191,  359 => 190,  355 => 188,  348 => 184,  344 => 182,  342 => 181,  335 => 177,  328 => 173,  324 => 171,  321 => 170,  315 => 169,  312 => 168,  302 => 166,  300 => 165,  291 => 164,  288 => 163,  285 => 162,  280 => 161,  278 => 160,  274 => 159,  262 => 149,  260 => 146,  257 => 142,  247 => 138,  243 => 137,  239 => 136,  235 => 135,  229 => 132,  226 => 131,  222 => 130,  215 => 125,  205 => 121,  201 => 120,  197 => 119,  192 => 116,  188 => 115,  183 => 112,  180 => 111,  177 => 110,  174 => 109,  171 => 108,  168 => 107,  165 => 106,  162 => 105,  144 => 88,  133 => 86,  129 => 85,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -1693,7 +1706,7 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
 \t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-plus\"></i>
 \t\t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" id=\"button-cart\" onclick class=\"tf-btn animate-btn btn-add-to-cart\">
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" id=\"button-cart\" class=\"tf-btn animate-btn \">
 \t\t\t\t\t\t\t\t\t\t\t\tADD TO CART
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-shopping-cart-simple\"></i>
 \t\t\t\t\t\t\t\t\t\t\t</button>
@@ -1887,7 +1900,7 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{{ attribute.text }}
 \t\t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t</tbody>
 \t\t\t\t\t</table>
 \t\t\t</div>
@@ -1932,9 +1945,9 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
                      <div class=\"content\">
                         <h4 class=\"title fw-normal\">Quick Turn Around</h4>
                         <p class=\"text\">30 day money back guarantee</p>
+\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
                <!-- item 2 -->
                <div class=\"swiper-slide\">
                   <div class=\"box-icon_V01\">
@@ -1944,9 +1957,9 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
                      <div class=\"content\">
                         <h4 class=\"title fw-normal\">Ethically sourced</h4>
                         <p class=\"text\">Manufacturer's defect</p>
+\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t</div>
                <!-- item 3 -->
                <div class=\"swiper-slide\">
                   <div class=\"box-icon_V01\">
@@ -1956,9 +1969,9 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
                      <div class=\"content\">
                         <h4 class=\"title fw-normal\">Free shipping</h4>
                         <p class=\"text\">Free Shipping for orders over \$150</p>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
                <!-- item 4 -->
                <div class=\"swiper-slide\">
                   <div class=\"box-icon_V01\">
@@ -1968,14 +1981,14 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
                      <div class=\"content\">
                         <h4 class=\"title fw-normal\">In-house Design</h4>
                         <p class=\"text\">24 hours a day, 7 days a week</p>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-            <div class=\"sw-dot-default tf-sw-pagination\"></div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
 \t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+            <div class=\"sw-dot-default tf-sw-pagination\"></div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
 </section>
 <!-- /Box Icon -->
 <!-- Also Like -->
@@ -1983,7 +1996,7 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
    <div class=\"container\">
       <h1 class=\"sect-title text-center\">You May Also Like</h1>
       {{ related }}
-   </div>
+\t\t\t\t\t\t\t</div>
 </section>
 <!-- /Also Like -->
 <!-- Related -->
@@ -2025,13 +2038,13 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
                            </a>
 \t\t\t\t\t\t</li>
 \t\t\t\t</ul>
-                  </div>
+\t\t\t\t\t\t</div>
                   <div class=\"card-product_info\">
                      <a href=\"product-detail.html\" class=\"name-product h4 link\">Seamless breathable thong</a>
                      <div class=\"price-wrap\">
                         <span class=\"price-old h6 fw-normal\">\$99,99</span>
                         <span class=\"price-new h6\">\$69,99</span>
-\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
                      <ul class=\"product-color_list\">
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
                            <span class=\"tooltip color-filter\">Sage Green</span>
@@ -2046,9 +2059,9 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
                               data-src=\"assets/images/products/underwear/product-3.jpg\" alt=\"Product\">
 \t\t\t\t\t\t\t</li>
                      </ul>
-                  </div>
-               </div>
-            </div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
             <!-- Product 2 -->
             <div class=\"swiper-slide\">
                <div class=\"card-product\">
@@ -2081,13 +2094,13 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t</ul>
 
-\t\t\t</div>
+\t\t\t\t\t\t\t</div>
                   <div class=\"card-product_info\">
                      <a href=\"product-detail.html\" class=\"name-product h4 link\">Cotton high waisted panties</a>
                      <div class=\"price-wrap\">
                         <span class=\"price-old h6 fw-normal\"> \$89,99</span>
                         <span class=\"price-new h6\">\$59,99</span>
-\t\t</div>
+\t\t\t\t\t\t</div>
                      <ul class=\"product-color_list\">
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
                            <span class=\"tooltip color-filter\">Beige</span>
@@ -2108,9 +2121,9 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
                               data-src=\"assets/images/products/underwear/product-7.jpg\" alt=\"Product\">
 \t\t\t\t</li>
 \t\t</ul>
-\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
             <!-- Product 3 -->
             <div class=\"swiper-slide\">
                <div class=\"card-product\">
@@ -2126,59 +2139,59 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
                            <li class=\"size-item h6\">XS</li>
                            <li class=\"size-item h6\">S</li>
                            <li class=\"size-item h6\">M</li>
-                        </ul>
-                     </div>
+\t\t\t\t</ul>
+\t\t\t\t\t</div>
                      <ul class=\"product-action_list\">
                         <li>
                            <a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon\">
                            <span class=\"icon icon-shopping-cart-simple\"></span>
                            <span class=\"tooltip\">Add to cart</span>
                            </a>
-                        </li>
+\t\t\t\t\t\t\t</li>
                         <li class=\"wishlist\">
                            <a href=\"javascript:void(0);\" class=\"hover-tooltip tooltip-left box-icon\">
                            <span class=\"icon icon-heart\"></span>
                            <span class=\"tooltip\">Add to Wishlist</span>
                            </a>
-                        </li>
+\t\t\t\t\t\t\t</li>
                         
                         <li>
                            <a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon\">
                            <span class=\"icon icon-view\"></span>
                            <span class=\"tooltip\">Quick view</span>
                            </a>
-                        </li>
-                     </ul>
-\t\t</div>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
                   <div class=\"card-product_info\">
                      <a href=\"product-detail.html\" class=\"name-product h4 link\">Sexy lace panties</a>
                      <div class=\"price-wrap\">
                         <span class=\"price-old h6 fw-normal\">\$79,99</span>
                         <span class=\"price-new h6\">\$49,99</span>
-\t</div>
+\t\t\t</div>
                      <ul class=\"product-color_list\">
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
                            <span class=\"tooltip color-filter\">Dusty Olive</span>
                            <span class=\"swatch-value bg-dusty-olive\"></span>
                            <img class=\"lazyload\" src=\"assets/images/products/underwear/product-8.jpg\"
                               data-src=\"assets/images/products/underwear/product-8.jpg\" alt=\"Product\">
-                        </li>
+\t\t\t</li>
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
                            <span class=\"tooltip color-filter\">Light Orange</span>
                            <span class=\"swatch-value bg-tomato\"></span>
                            <img class=\"lazyload\" src=\"assets/images/products/underwear/product-10.jpg\"
                               data-src=\"assets/images/products/underwear/product-10.jpg\" alt=\"Product\">
-                        </li>
+\t\t\t\t</li>
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot\">
                            <span class=\"tooltip color-filter\">Green</span>
                            <span class=\"swatch-value bg-dark-jade\"></span>
                            <img class=\"lazyload\" src=\"assets/images/products/underwear/product-11.jpg\"
                               data-src=\"assets/images/products/underwear/product-11.jpg\" alt=\"Product\">
-                        </li>
-                     </ul>
-\t\t</div>
-\t</div>
-</div>
+\t\t\t\t</li>
+\t\t</ul>
+\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
             <!-- Product 4 -->
             <div class=\"swiper-slide\">
                <div class=\"card-product\">
@@ -2213,13 +2226,13 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
                            </a>
                         </li>
                      </ul>
-                  </div>
+\t\t</div>
                   <div class=\"card-product_info\">
                      <a href=\"product-detail.html\" class=\"name-product h4 link\">Seamless underwear</a>
                      <div class=\"price-wrap\">
                         <span class=\"price-old h6 fw-normal\">\$109,99</span>
                         <span class=\"price-new h6\">\$74,99</span>
-                     </div>
+\t</div>
                      <ul class=\"product-color_list\">
                         <li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
                            <span class=\"tooltip color-filter\">Green</span>
@@ -2256,26 +2269,26 @@ console.log('ready');
     }, 500);
     
     \$(document).on('click', '.size-btn', function() {
-        var size = \$(this).data('size');
+var size = \$(this).data('size');
         console.log('Size button clicked:', size);
         
-        \$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(size);
-        \$(this).siblings().removeClass('active');
-        \$(this).addClass('active');
+\$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(size);
+\$(this).siblings().removeClass('active');
+\$(this).addClass('active');
         
         // Update sticky cart section
         \$('#size-value').text(size);
         console.log('Updated size value to:', size);
         updateStickyCartOptions();
-    });
+});
 
     \$(document).on('click', '.color', function() {
-        var color = \$(this).data('color');
+var color = \$(this).data('color');
         console.log('Color button clicked:', color);
         
-        \$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(color);
-        \$(this).siblings().removeClass('active');
-        \$(this).addClass('active');
+\$(this).closest('.variant-picker-item').find('.variant-picker-label-value').text(color);
+\$(this).siblings().removeClass('active');
+\$(this).addClass('active');
         
         // Update sticky cart section
         \$('#color-value').text(color);
@@ -2437,7 +2450,20 @@ dataType: 'json',
 \$('#button-cart').prop(\"disabled\", false).text(\"Add to Cart\");
 },
            success: function(json) {
-console.log(json);
+ \$(\".tf-add-cart-success\").addClass(\"active\");
+                        
+                        // Update cart count in header
+                        if (json.count !== undefined) {
+                            \$(\".count\").text(json.count);
+                        }
+                        
+                        // Update cart content without reload
+                        \$.get('index.php?route=checkout/cart.info', function(cartHtml) {
+                            \$('.tf-mini-cart-wrap').html(cartHtml);
+                        });
+                        
+                        // Show success message
+                        alert('Product added to cart successfully!');
 },
            error: function(xhr, ajaxOptions, thrownError) {
 console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText);

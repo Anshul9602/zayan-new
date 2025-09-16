@@ -5,12 +5,12 @@
     <div class="container">
         <div class="content" style="padding-bottom: 19px;">
             <ul class="breadcrumbs-page">
-                {% for breadcrumb in breadcrumbs %}
+    {% for breadcrumb in breadcrumbs %}
                     <li class="breadcrumb-item" style="display:flex;">
                         <a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
                     </li>
-                {% endfor %}
-            </ul>
+    {% endfor %}
+  </ul>
             <h1 class="title-page">Order Details</h1>
         </div>
     </div>
@@ -21,7 +21,7 @@
 <section class="flat-spacing-3">
     <div class="container">
         <div id="account-order">
-            {{ content_top }}
+      {{ content_top }}
             
             <!-- Order Header Info -->
             <div class="order-header mb-4">
@@ -33,9 +33,9 @@
                                 <h4>{{ text_invoice_no }}</h4>
                             </div>
                             <div class="info-value">
-                                {% if invoice_no %}{{ invoice_no }}{% else %}{{ text_tbc }}{% endif %}
-                            </div>
-                        </div>
+            {% if invoice_no %}{{ invoice_no }}{% else %}{{ text_tbc }}{% endif %}
+          </div>
+        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="info-card">
@@ -47,14 +47,14 @@
                                 #{{ order_id }}
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+        </div>
+      </div>
             <!-- Address Information -->
-            {% if payment_address or shipping_address %}
+      {% if payment_address or shipping_address %}
                 <div class="address-section mb-4">
                     <div class="row g-3">
-                        {% if payment_address %}
+          {% if payment_address %}
                             <div class="col-lg-6">
                                 <div class="address-card">
                                     <div class="address-header">
@@ -62,12 +62,12 @@
                                         <h4>{{ text_payment_address }}</h4>
                                     </div>
                                     <div class="address-content">
-                                        {{ payment_address }}
+                {{ payment_address }}
                                     </div>
-                                </div>
-                            </div>
-                        {% endif %}
-                        {% if shipping_address %}
+              </div>
+            </div>
+          {% endif %}
+          {% if shipping_address %}
                             <div class="col-lg-6">
                                 <div class="address-card">
                                     <div class="address-header">
@@ -75,18 +75,18 @@
                                         <h4>{{ text_shipping_address }}</h4>
                                     </div>
                                     <div class="address-content">
-                                        {{ shipping_address }}
+                {{ shipping_address }}
                                     </div>
-                                </div>
-                            </div>
-                        {% endif %}
+              </div>
+            </div>
+          {% endif %}
                     </div>
-                </div>
-            {% endif %}
+        </div>
+      {% endif %}
             <!-- Shipping & Payment Methods -->
             <div class="methods-section mb-4">
                 <div class="row g-3">
-                    {% if shipping_method %}
+        {% if shipping_method %}
                         <div class="col-lg-6">
                             <div class="method-card">
                                 <div class="method-header">
@@ -94,11 +94,11 @@
                                     <h4>{{ text_shipping_method }}</h4>
                                 </div>
                                 <div class="method-content">
-                                    {{ shipping_method }}
+              {{ shipping_method }}
                                 </div>
-                            </div>
-                        </div>
-                    {% endif %}
+            </div>
+          </div>
+        {% endif %}
                     <div class="col-lg-6">
                         <div class="method-card">
                             <div class="method-header">
@@ -106,10 +106,10 @@
                                 <h4>{{ text_payment_method }}</h4>
                             </div>
                             <div class="method-content">
-                                {{ payment_method }}
-                            </div>
-                        </div>
-                    </div>
+            {{ payment_method }}
+          </div>
+        </div>
+      </div>
                 </div>
             </div>
             <!-- Order Products -->
@@ -118,26 +118,26 @@
                     <h3>Order Items</h3>
                 </div>
                 <div class="products-list">
-                    {% set product_row = 0 %}
-                    {% for product in products %}
+            {% set product_row = 0 %}
+            {% for product in products %}
                         <div class="product-item" id="product-row-{{ product_row }}">
                             <div class="product-info">
                                 <div class="product-details">
                                     <h5 class="product-name">
                                         <a href="{{ product.view }}" class="link">{{ product.name }}</a>
                                     </h5>
-                                    <div id="error-{{ product_row }}-product" class="invalid-feedback mt-0"></div>
+                  <div id="error-{{ product_row }}-product" class="invalid-feedback mt-0"></div>
                                     <div class="product-meta">
                                         <span class="meta-item">
                                             <strong>{{ text_model }}:</strong> {{ product.model }}
                                         </span>
-                                        {% for option in product.option %}
+                    {% for option in product.option %}
                                             <span class="meta-item">
                                                 <strong>{{ option.name }}:</strong> {{ option.value }}
                                             </span>
-                                            <div id="error-{{ product_row }}-option-{{ option.product_option_id }}" class="invalid-feedback mt-0"></div>
-                                        {% endfor %}
-                                        {% if product.subscription %}
+                        <div id="error-{{ product_row }}-option-{{ option.product_option_id }}" class="invalid-feedback mt-0"></div>
+                    {% endfor %}
+                    {% if product.subscription %}
                                             <span class="meta-item">
                                                 <strong>{{ text_subscription }}:</strong> 
                                                 {% if product.subscription %}
@@ -146,30 +146,30 @@
                                                     {{ product.subscription_plan }}
                                                 {% endif %}
                                             </span>
-                                            <div id="error-{{ product_row }}-subscription" class="invalid-feedback mt-0"></div>
-                                        {% endif %}
-                                        {% if product.reward %}
+                        <div id="error-{{ product_row }}-subscription" class="invalid-feedback mt-0"></div>
+                    {% endif %}
+                    {% if product.reward %}
                                             <span class="meta-item">
                                                 <strong>{{ text_points }}:</strong> {{ product.reward }}
                                             </span>
-                                        {% endif %}
+                    {% endif %}
                                     </div>
                                     <form id="form-product-{{ product_row }}" class="d-none">
                                         <input type="hidden" name="product_id" value="{{ product.product_id }}"/>
                                         <input type="hidden" name="quantity" value="{{ product.quantity }}"/>
-                                        {% for option in product.option %}
-                                            {% if option.type == 'select' or option.type == 'radio' %}
-                                                <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.product_option_value_id }}"/>
-                                            {% endif %}
-                                            {% if option.type == 'checkbox' %}
-                                                <input type="hidden" name="option[{{ option.product_option_id }}][]" value="{{ option.product_option_value_id }}"/>
-                                            {% endif %}
-                                            {% if option.type == 'text' or option.type == 'textarea' or option.type == 'file' or option.type == 'date' or option.type == 'datetime' or option.type == 'time' %}
-                                                <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.value }}"/>
-                                            {% endif %}
-                                        {% endfor %}
-                                        <input type="hidden" name="subscription_plan_id" value="{{ product.subscription_plan_id }}"/>
-                                    </form>
+                    {% for option in product.option %}
+                      {% if option.type == 'select' or option.type == 'radio' %}
+                        <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.product_option_value_id }}"/>
+                      {% endif %}
+                      {% if option.type == 'checkbox' %}
+                        <input type="hidden" name="option[{{ option.product_option_id }}][]" value="{{ option.product_option_value_id }}"/>
+                      {% endif %}
+                      {% if option.type == 'text' or option.type == 'textarea' or option.type == 'file' or option.type == 'date' or option.type == 'datetime' or option.type == 'time' %}
+                        <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.value }}"/>
+                      {% endif %}
+                    {% endfor %}
+                    <input type="hidden" name="subscription_plan_id" value="{{ product.subscription_plan_id }}"/>
+                  </form>
                                 </div>
                                 <div class="product-pricing">
                                     <div class="quantity-info">
@@ -192,23 +192,23 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        {% set product_row = product_row + 1 %}
-                    {% endfor %}
+                  </div>
+              {% set product_row = product_row + 1 %}
+            {% endfor %}
                 </div>
                 
                 <!-- Order Totals -->
                 <div class="order-totals">
-                    {% for total in totals %}
+            {% for total in totals %}
                         <div class="total-row {% if total.title == 'Total' %}total-final{% endif %}">
                             <span class="total-label">{{ total.title }}</span>
                             <span class="total-value">{{ total.text }}</span>
                         </div>
-                    {% endfor %}
+            {% endfor %}
                 </div>
-            </div>
+      </div>
             <!-- Order Comment -->
-            {% if comment %}
+      {% if comment %}
                 <div class="comment-section mb-4">
                     <div class="comment-card">
                         <div class="comment-header">
@@ -216,11 +216,11 @@
                             <h4>{{ text_comment }}</h4>
                         </div>
                         <div class="comment-content">
-                            {{ comment }}
+          {{ comment }}
                         </div>
                     </div>
-                </div>
-            {% endif %}
+        </div>
+      {% endif %}
             
             <!-- Order History -->
             <div class="history-section mb-4">
@@ -228,7 +228,7 @@
                     <h3>{{ text_history }}</h3>
                 </div>
                 <div class="history-content">
-                    <div id="history">{{ history }}</div>
+      <div id="history">{{ history }}</div>
                 </div>
             </div>
             
@@ -240,7 +240,7 @@
                 </a>
             </div>
             
-            {{ content_bottom }}
+      {{ content_bottom }}
         </div>
     </div>
 </section>
@@ -500,7 +500,7 @@ $('#history').on('click', '.pagination a', function(e) {
 }
 
 .total-final {
-    background: #000;
+    background: #241B68;
     color: #fff;
     margin: 10px -20px -20px -20px;
     padding: 15px 20px;
