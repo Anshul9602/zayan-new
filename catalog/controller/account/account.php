@@ -20,6 +20,11 @@ class Account extends \Opencart\System\Engine\Controller {
 			$this->response->redirect($this->url->link('account/login', 'language=' . $this->config->get('config_language'), true));
 		}
 
+		// Ensure customer token exists when customer is logged in
+		if (!isset($this->session->data['customer_token'])) {
+			$this->session->data['customer_token'] = oc_token(26);
+		}
+
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$data['breadcrumbs'] = [];

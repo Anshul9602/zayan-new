@@ -1,163 +1,250 @@
 {{ header }}
-<div id="account-order" class="container">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
-  <div class="row">
-    {{ column_left }}
-    <div id="content" class="col">
-      {{ content_top }}
-      <div class="row">
-        <div class="col mb-3">
-          <div class="form-control" style="min-height: 64px;">
-            <strong class="lead">{{ text_invoice_no }}</strong>
-            <br/>
-            {% if invoice_no %}{{ invoice_no }}{% else %}{{ text_tbc }}{% endif %}
-          </div>
-        </div>
-        <div class="col mb-3">
-          <div class="form-control" style="min-height: 64px;">
-            <strong class="lead">{{ text_order_id }}</strong>
-            <br/>
-            {{ order_id }}
-          </div>
-        </div>
-      </div>
-      {% if payment_address or shipping_address %}
-        <div class="row">
-          {% if payment_address %}
-            <div class="col mb-3">
-              <div class="form-control" style="min-height: 128px;">
-                <strong class="lead">{{ text_payment_address }}</strong>
-                <br/>
-                {{ payment_address }}
-              </div>
-            </div>
-          {% endif %}
-          {% if shipping_address %}
-            <div class="col mb-3">
-              <div class="form-control" style="min-height: 128px;">
-                <strong class="lead">{{ text_shipping_address }}</strong>
-                <br/>
-                {{ shipping_address }}
-              </div>
-            </div>
-          {% endif %}
-        </div>
-      {% endif %}
-      <div class="row">
-        {% if shipping_method %}
-          <div class="col mb-3">
-            <div class="form-control" style="min-height: 64px;">
-              <strong class="lead">{{ text_shipping_method }}</strong>
-              <br/>
-              {{ shipping_method }}
-            </div>
-          </div>
-        {% endif %}
-        <div class="col mb-3">
-          <div class="form-control" style="min-height: 64px;">
-            <strong class="lead">{{ text_payment_method }}</strong>
-            <br/>
-            {{ payment_method }}
-          </div>
-        </div>
-      </div>
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <th>{{ column_product }}</th>
-              <th class="text-end">{{ column_quantity }}</th>
-              <th class="text-end">{{ column_price }}</th>
-              <th class="text-end">{{ column_total }}</th>
-              <th class="text-end">{{ column_action }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% set product_row = 0 %}
-            {% for product in products %}
-              <tr id="product-row-{{ product_row }}">
-                <td><a href="{{ product.view }}">{{ product.name }}</a>
-                  <div id="error-{{ product_row }}-product" class="invalid-feedback mt-0"></div>
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <small> - {{ text_model }}: {{ product.model }}</small>
+
+<!-- Page Title -->
+<section class="s-page-title" style="padding-top:100px;">
+    <div class="container">
+        <div class="content" style="padding-bottom: 19px;">
+            <ul class="breadcrumbs-page">
+                {% for breadcrumb in breadcrumbs %}
+                    <li class="breadcrumb-item" style="display:flex;">
+                        <a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
                     </li>
-                    {% for option in product.option %}
-                      <li>
-                        <small> - {{ option.name }}: {{ option.value }}</small>
-                        <div id="error-{{ product_row }}-option-{{ option.product_option_id }}" class="invalid-feedback mt-0"></div>
-                      </li>
-                    {% endfor %}
-                    {% if product.subscription %}
-                      <li>
-                        <small> - {{ text_subscription }}: {% if product.subscription %}<a href="{{ product.subscription }}" target="_blank">{{ product.subscription_plan }}</a>{% else %}{{ product.subscription_plan }}{% endif %}</small>
-                        <div id="error-{{ product_row }}-subscription" class="invalid-feedback mt-0"></div>
-                      </li>
-                    {% endif %}
-                    {% if product.reward %}
-                      <li>
-                        <small> - {{ text_points }}: {{ product.reward }}</small>
-                      </li>
-                    {% endif %}
-                  </ul>
-                  <form id="form-product-{{ product_row }}">
-                    <input type="hidden" name="product_id" value="{{ product.product_id }}"/> <input type="hidden" name="quantity" value="{{ product.quantity }}"/>
-                    {% for option in product.option %}
-                      {% if option.type == 'select' or option.type == 'radio' %}
-                        <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.product_option_value_id }}"/>
-                      {% endif %}
-                      {% if option.type == 'checkbox' %}
-                        <input type="hidden" name="option[{{ option.product_option_id }}][]" value="{{ option.product_option_value_id }}"/>
-                      {% endif %}
-                      {% if option.type == 'text' or option.type == 'textarea' or option.type == 'file' or option.type == 'date' or option.type == 'datetime' or option.type == 'time' %}
-                        <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.value }}"/>
-                      {% endif %}
-                    {% endfor %}
-                    <input type="hidden" name="subscription_plan_id" value="{{ product.subscription_plan_id }}"/>
-                  </form>
-                </td>
-                <td class="text-end">{{ product.quantity }}</td>
-                <td class="text-end">{{ product.price }}</td>
-                <td class="text-end">{{ product.total }}</td>
-                <td class="text-end text-nowrap" style="width: 1px;">
-                  <div class="d-grid">
-                    <button type="submit" form="form-product-{{ product_row }}" class="btn btn-primary mb-1">{{ button_reorder }}</button>
-                    <a href="{{ product.return }}" class="btn btn-danger">{{ button_return }}</a>
-                  </div>
-                </td>
-              </tr>
-              {% set product_row = product_row + 1 %}
-            {% endfor %}
-            {% for total in totals %}
-              <tr>
-                <td colspan="2"></td>
-                <td class="text-end"><strong>{{ total.title }}</strong></td>
-                <td class="text-end">{{ total.text }}</td>
-                <td></td>
-              </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-      {% if comment %}
-        <div class="form-control mb-3" style="min-height: 64px;">
-          <strong class="lead">{{ text_comment }}</strong>
-          <br/>
-          {{ comment }}
+                {% endfor %}
+            </ul>
+            <h1 class="title-page">Order Details</h1>
         </div>
-      {% endif %}
-      <h2>{{ text_history }}</h2>
-      <div id="history">{{ history }}</div>
-      <div class="text-end mt-3"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>
-      {{ content_bottom }}
     </div>
-    {{ column_right }}
-  </div>
-</div>
+</section>
+<!-- /Page Title -->
+
+<!-- Order Details -->
+<section class="flat-spacing-3">
+    <div class="container">
+        <div id="account-order">
+            {{ content_top }}
+            
+            <!-- Order Header Info -->
+            <div class="order-header mb-4">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-header">
+                                <i class="icon icon-receipt"></i>
+                                <h4>{{ text_invoice_no }}</h4>
+                            </div>
+                            <div class="info-value">
+                                {% if invoice_no %}{{ invoice_no }}{% else %}{{ text_tbc }}{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-header">
+                                <i class="icon icon-package"></i>
+                                <h4>{{ text_order_id }}</h4>
+                            </div>
+                            <div class="info-value">
+                                #{{ order_id }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Address Information -->
+            {% if payment_address or shipping_address %}
+                <div class="address-section mb-4">
+                    <div class="row g-3">
+                        {% if payment_address %}
+                            <div class="col-lg-6">
+                                <div class="address-card">
+                                    <div class="address-header">
+                                        <i class="icon icon-credit-card"></i>
+                                        <h4>{{ text_payment_address }}</h4>
+                                    </div>
+                                    <div class="address-content">
+                                        {{ payment_address }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if shipping_address %}
+                            <div class="col-lg-6">
+                                <div class="address-card">
+                                    <div class="address-header">
+                                        <i class="icon icon-truck"></i>
+                                        <h4>{{ text_shipping_address }}</h4>
+                                    </div>
+                                    <div class="address-content">
+                                        {{ shipping_address }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+            <!-- Shipping & Payment Methods -->
+            <div class="methods-section mb-4">
+                <div class="row g-3">
+                    {% if shipping_method %}
+                        <div class="col-lg-6">
+                            <div class="method-card">
+                                <div class="method-header">
+                                    <i class="icon icon-truck"></i>
+                                    <h4>{{ text_shipping_method }}</h4>
+                                </div>
+                                <div class="method-content">
+                                    {{ shipping_method }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="col-lg-6">
+                        <div class="method-card">
+                            <div class="method-header">
+                                <i class="icon icon-credit-card"></i>
+                                <h4>{{ text_payment_method }}</h4>
+                            </div>
+                            <div class="method-content">
+                                {{ payment_method }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Order Products -->
+            <div class="products-section mb-4">
+                <div class="section-header">
+                    <h3>Order Items</h3>
+                </div>
+                <div class="products-list">
+                    {% set product_row = 0 %}
+                    {% for product in products %}
+                        <div class="product-item" id="product-row-{{ product_row }}">
+                            <div class="product-info">
+                                <div class="product-details">
+                                    <h5 class="product-name">
+                                        <a href="{{ product.view }}" class="link">{{ product.name }}</a>
+                                    </h5>
+                                    <div id="error-{{ product_row }}-product" class="invalid-feedback mt-0"></div>
+                                    <div class="product-meta">
+                                        <span class="meta-item">
+                                            <strong>{{ text_model }}:</strong> {{ product.model }}
+                                        </span>
+                                        {% for option in product.option %}
+                                            <span class="meta-item">
+                                                <strong>{{ option.name }}:</strong> {{ option.value }}
+                                            </span>
+                                            <div id="error-{{ product_row }}-option-{{ option.product_option_id }}" class="invalid-feedback mt-0"></div>
+                                        {% endfor %}
+                                        {% if product.subscription %}
+                                            <span class="meta-item">
+                                                <strong>{{ text_subscription }}:</strong> 
+                                                {% if product.subscription %}
+                                                    <a href="{{ product.subscription }}" target="_blank" class="link">{{ product.subscription_plan }}</a>
+                                                {% else %}
+                                                    {{ product.subscription_plan }}
+                                                {% endif %}
+                                            </span>
+                                            <div id="error-{{ product_row }}-subscription" class="invalid-feedback mt-0"></div>
+                                        {% endif %}
+                                        {% if product.reward %}
+                                            <span class="meta-item">
+                                                <strong>{{ text_points }}:</strong> {{ product.reward }}
+                                            </span>
+                                        {% endif %}
+                                    </div>
+                                    <form id="form-product-{{ product_row }}" class="d-none">
+                                        <input type="hidden" name="product_id" value="{{ product.product_id }}"/>
+                                        <input type="hidden" name="quantity" value="{{ product.quantity }}"/>
+                                        {% for option in product.option %}
+                                            {% if option.type == 'select' or option.type == 'radio' %}
+                                                <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.product_option_value_id }}"/>
+                                            {% endif %}
+                                            {% if option.type == 'checkbox' %}
+                                                <input type="hidden" name="option[{{ option.product_option_id }}][]" value="{{ option.product_option_value_id }}"/>
+                                            {% endif %}
+                                            {% if option.type == 'text' or option.type == 'textarea' or option.type == 'file' or option.type == 'date' or option.type == 'datetime' or option.type == 'time' %}
+                                                <input type="hidden" name="option[{{ option.product_option_id }}]" value="{{ option.value }}"/>
+                                            {% endif %}
+                                        {% endfor %}
+                                        <input type="hidden" name="subscription_plan_id" value="{{ product.subscription_plan_id }}"/>
+                                    </form>
+                                </div>
+                                <div class="product-pricing">
+                                    <div class="quantity-info">
+                                        <span class="quantity-label">Qty:</span>
+                                        <span class="quantity-value">{{ product.quantity }}</span>
+                                    </div>
+                                    <div class="price-info">
+                                        <div class="unit-price">{{ product.price }} each</div>
+                                        <div class="total-price">{{ product.total }}</div>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="submit" form="form-product-{{ product_row }}" class="tf-btn btn-outline animate-btn">
+                                        <i class="icon icon-refresh"></i>
+                                        {{ button_reorder }}
+                                    </button>
+                                    <a href="{{ product.return }}" class="tf-btn btn-outline animate-btn">
+                                        <i class="icon icon-return"></i>
+                                        {{ button_return }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% set product_row = product_row + 1 %}
+                    {% endfor %}
+                </div>
+                
+                <!-- Order Totals -->
+                <div class="order-totals">
+                    {% for total in totals %}
+                        <div class="total-row {% if total.title == 'Total' %}total-final{% endif %}">
+                            <span class="total-label">{{ total.title }}</span>
+                            <span class="total-value">{{ total.text }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Order Comment -->
+            {% if comment %}
+                <div class="comment-section mb-4">
+                    <div class="comment-card">
+                        <div class="comment-header">
+                            <i class="icon icon-message"></i>
+                            <h4>{{ text_comment }}</h4>
+                        </div>
+                        <div class="comment-content">
+                            {{ comment }}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            
+            <!-- Order History -->
+            <div class="history-section mb-4">
+                <div class="section-header">
+                    <h3>{{ text_history }}</h3>
+                </div>
+                <div class="history-content">
+                    <div id="history">{{ history }}</div>
+                </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="order-actions text-center">
+                <a href="{{ continue }}" class="tf-btn btn-fill animate-btn">
+                    <i class="icon icon-arrow-left"></i>
+                    {{ button_continue }}
+                </a>
+            </div>
+            
+            {{ content_bottom }}
+        </div>
+    </div>
+</section>
+<!-- /Order Details -->
 <script type="text/javascript"><!--
 var product_row = 0;
 
@@ -224,4 +311,271 @@ $('#history').on('click', '.pagination a', function(e) {
     $('#history').load(this.href);
 });
 //--></script>
+
+<style>
+/* Order Info Page Styling */
+.order-header {
+    margin-bottom: 30px;
+}
+
+.info-card, .address-card, .method-card, .comment-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover, .address-card:hover, .method-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.info-header, .address-header, .method-header, .comment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.info-header i, .address-header i, .method-header i, .comment-header i {
+    font-size: 20px;
+    color: #666;
+}
+
+.info-header h4, .address-header h4, .method-header h4, .comment-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.info-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+.address-content, .method-content, .comment-content {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Products Section */
+.products-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.section-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.section-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.product-item {
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #fafafa;
+    transition: background-color 0.2s ease;
+}
+
+.product-item:hover {
+    background: #f5f5f5;
+}
+
+.product-info {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 20px;
+    align-items: center;
+}
+
+.product-name {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-name .link {
+    color: #000;
+    text-decoration: none;
+}
+
+.product-name .link:hover {
+    color: #666;
+}
+
+.product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.meta-item {
+    font-size: 14px;
+    color: #666;
+}
+
+.product-pricing {
+    text-align: center;
+    min-width: 120px;
+}
+
+.quantity-info {
+    margin-bottom: 8px;
+}
+
+.quantity-label {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.quantity-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-left: 5px;
+}
+
+.unit-price {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.total-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 120px;
+}
+
+.product-actions .tf-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Order Totals */
+.order-totals {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.total-row:last-child {
+    border-bottom: none;
+}
+
+.total-final {
+    background: #000;
+    color: #fff;
+    margin: 10px -20px -20px -20px;
+    padding: 15px 20px;
+    border-radius: 0 0 8px 8px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.total-label {
+    font-weight: 500;
+}
+
+.total-value {
+    font-weight: 600;
+}
+
+/* History Section */
+.history-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.history-content {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Order Actions */
+.order-actions {
+    margin: 30px 0;
+}
+
+.order-actions .tf-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    min-width: 200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .product-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .product-meta {
+        justify-content: center;
+    }
+    
+    .info-value {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .info-card, .address-card, .method-card {
+        margin-bottom: 15px;
+    }
+    
+    .products-section, .history-section {
+        padding: 15px;
+    }
+    
+    .product-item {
+        padding: 15px;
+    }
+}
+</style>
+
 {{ footer }}

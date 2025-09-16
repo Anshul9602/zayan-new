@@ -15,6 +15,10 @@ class Forgotten extends \Opencart\System\Engine\Controller {
 		$this->load->language('account/forgotten');
 
 		if ($this->customer->isLogged()) {
+			// Ensure customer token exists
+			if (!isset($this->session->data['customer_token'])) {
+				$this->session->data['customer_token'] = oc_token(26);
+			}
 			$this->response->redirect($this->url->link('account/account', 'language=' . $this->config->get('config_language') . '&customer_token=' . $this->session->data['customer_token'], true));
 		}
 

@@ -38,7 +38,7 @@ class Thumb extends \Opencart\System\Engine\Controller {
 		$data['compare_add'] = $this->url->link('product/compare.add', 'language=' . $this->config->get('config_language'));
 
 		$data['review_status'] = (int)$this->config->get('config_review_status');
-
+		$data['logged'] = $this->customer->isLogged();
 		return $this->load->view('product/thumb', $data);
 	}
 }

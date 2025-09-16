@@ -44,8 +44,8 @@ class __TwigTemplate_a2d1f7cbca32d06d6b59a2958a4116792f37ba0f12de9b549c4e11ef034
         // line 2
         yield ($context["heading_title"] ?? null);
         yield "</legend>
-  <div class=\"input-group\">
-    <span class=\"input-group-text\"><i class=\"fa fa-credit-card\"></i></span><input type=\"text\" name=\"payment_method\" value=\"";
+  <div class=\"input-group pt-2\">
+    <span class=\"input-group-text\"><i class=\"fa fa-credit-card\"></i></span><input type=\"text\" style=\"margin-bottom:0px;\" name=\"payment_method\" value=\"";
         // line 4
         yield ($context["payment_method"] ?? null);
         yield "\" placeholder=\"";
@@ -367,8 +367,8 @@ var timer = '';
     {
         return new Source("<fieldset>
   <legend>{{ heading_title }}</legend>
-  <div class=\"input-group\">
-    <span class=\"input-group-text\"><i class=\"fa fa-credit-card\"></i></span><input type=\"text\" name=\"payment_method\" value=\"{{ payment_method }}\" placeholder=\"{{ entry_payment_method }}\" id=\"input-payment-method\" class=\"form-control\" readonly/>
+  <div class=\"input-group pt-2\">
+    <span class=\"input-group-text\"><i class=\"fa fa-credit-card\"></i></span><input type=\"text\" style=\"margin-bottom:0px;\" name=\"payment_method\" value=\"{{ payment_method }}\" placeholder=\"{{ entry_payment_method }}\" id=\"input-payment-method\" class=\"form-control\" readonly/>
     <button type=\"button\" id=\"button-payment-methods\" class=\"btn btn-primary\">{{ button_choose }}</button>
   </div>
   <input type=\"hidden\" name=\"code\" value=\"{{ code }}\" id=\"input-payment-code\"/>
@@ -602,6 +602,6 @@ var timer = '';
     });
 });
 //--></script>
-", "catalog/view/template/checkout/payment_method.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\checkout\\payment_method.twig");
+", "catalog/view/template/checkout/payment_method.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\checkout\\payment_method.twig");
     }
 }

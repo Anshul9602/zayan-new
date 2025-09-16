@@ -439,7 +439,7 @@ class Category extends \Opencart\System\Engine\Controller {
 			$data['sort'] = $sort;
 			$data['order'] = $order;
 			$data['limit'] = $limit;
-
+			$data['logged'] = $this->customer->isLogged();
 			$data['continue'] = $this->url->link('common/home', 'language=' . $this->config->get('config_language'));
 
 			$data['column_left'] = $this->load->controller('common/column_left');

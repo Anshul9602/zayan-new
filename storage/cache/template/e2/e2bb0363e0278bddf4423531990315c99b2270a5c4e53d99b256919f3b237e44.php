@@ -41,7 +41,7 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
         // line 1
         yield ($context["header"] ?? null);
         yield "
-<div id=\"account-register\" class=\"container\">
+<div id=\"account-register\" class=\"container\" style=\"padding-top: 100px;\">
   <ul class=\"breadcrumb\">
     ";
         // line 4
@@ -712,7 +712,7 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
     public function getSourceContext(): Source
     {
         return new Source("{{ header }}
-<div id=\"account-register\" class=\"container\">
+<div id=\"account-register\" class=\"container\" style=\"padding-top: 100px;\">
   <ul class=\"breadcrumb\">
     {% for breadcrumb in breadcrumbs %}
       <li class=\"breadcrumb-item\"><a href=\"{{ breadcrumb.href }}\">{{ breadcrumb.text }}</a></li>
@@ -951,6 +951,6 @@ class __TwigTemplate_4cee48ed7b43e1e9575fa04d5d3e5e5c9fc209468e534238285137d0405
 \$('#input-customer-group').trigger('change');
 //--></script>
 {{ footer }}
-", "catalog/view/template/account/register.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\account\\register.twig");
+", "catalog/view/template/account/register.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\account\\register.twig");
     }
 }

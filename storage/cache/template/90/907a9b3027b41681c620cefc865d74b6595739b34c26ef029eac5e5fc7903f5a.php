@@ -41,7 +41,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
         // line 1
         yield ($context["header"] ?? null);
         yield "
-<div id=\"account-wishlist\" class=\"container\">
+<div id=\"account-wishlist\" class=\"container\" style=\"padding-top: 100px;\">
   <ul class=\"breadcrumb\">
     ";
         // line 4
@@ -162,7 +162,7 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
     public function getSourceContext(): Source
     {
         return new Source("{{ header }}
-<div id=\"account-wishlist\" class=\"container\">
+<div id=\"account-wishlist\" class=\"container\" style=\"padding-top: 100px;\">
   <ul class=\"breadcrumb\">
     {% for breadcrumb in breadcrumbs %}
       <li class=\"breadcrumb-item\"><a href=\"{{ breadcrumb.href }}\">{{ breadcrumb.text }}</a></li>
@@ -210,6 +210,6 @@ class __TwigTemplate_06d38d71cff0c81b1c63fb82c6386a70d79ee6439b6ca99b06145334319
     });
 });
 //--></script>
-{{ footer }}", "catalog/view/template/account/wishlist.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\account\\wishlist.twig");
+{{ footer }}", "catalog/view/template/account/wishlist.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\account\\wishlist.twig");
     }
 }

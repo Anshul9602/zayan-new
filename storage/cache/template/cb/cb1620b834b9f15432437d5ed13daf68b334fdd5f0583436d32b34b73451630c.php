@@ -430,24 +430,30 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
                 // line 211
-                if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 211)) {
+                if (($context["logged"] ?? null)) {
                     // line 212
-                    yield "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 212);
-                    yield "</span>
+                    yield "\t\t\t\t\t\t\t\t\t\t\t\t\t";
+                    if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 212)) {
+                        // line 213
+                        yield "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">";
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 213);
+                        yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
-                    // line 213
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 213);
-                    yield "</span>
+                        // line 214
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 214);
+                        yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
-                } else {
-                    // line 215
-                    yield "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 215);
-                    yield "</span>
+                    } else {
+                        // line 216
+                        yield "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 216);
+                        yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
+                    }
+                    // line 218
+                    yield "\t\t\t\t\t\t\t\t\t\t\t\t\t";
                 }
-                // line 217
+                // line 219
                 yield "\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t</div>
@@ -458,7 +464,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['product'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 223
+            // line 225
             yield "\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t\t\t\t\t\t</div>
@@ -478,7 +484,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['tab'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 230
+        // line 232
         yield "\t\t\t</div>
 
 \t\t</div>
@@ -498,7 +504,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t<div class=\"box-image_content\">
 \t\t\t\t\t\t\t<a href=\"#\" class=\"title text-display fw-semibold text-white link\">Tennis Connection</a>
 \t\t\t\t\t\t\t<span class=\"sub-title h5 text-white d-none\">";
-        // line 248
+        // line 250
         yield ($context["shop_total"] ?? null);
         yield "
 \t\t\t\t\t\t\t\tproducts</span>
@@ -512,45 +518,45 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t<div dir=\"ltr\" class=\"swiper tf-swiper wrap-sw-over wow fadeInUp\" data-preview=\"3\" data-tablet=\"3\" data-mobile-sm=\"2\" data-mobile=\"2\" data-space-lg=\"48\" data-space-md=\"30\" data-space=\"12\" data-pagination=\"2\" data-pagination-sm=\"2\" data-pagination-md=\"3\" data-pagination-lg=\"3\">
 \t\t\t\t\t\t<div class=\"swiper-wrapper\">
 \t\t\t\t\t\t\t";
-        // line 259
+        // line 261
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["shop_look_products"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 260
+            // line 262
             yield "\t\t\t\t\t\t\t\t<div class=\"swiper-slide\">
 \t\t\t\t\t\t\t\t\t<div class=\"card-product grid\" data-availability=\"In stock\" data-brand=\"automet\" data-product-id=\"";
-            // line 261
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 261);
+            // line 263
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 263);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"card-product_wrapper\">
 \t\t\t\t\t\t\t\t\t\t\t<a
 \t\t\t\t\t\t\t\t\t\t\t\thref=\"";
-            // line 264
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 264);
+            // line 266
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 266);
             yield "\" class=\"product-img\">
 \t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-product\" src=\"";
-            // line 265
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 265);
+            // line 267
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 267);
             yield "\" data-src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 265);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 267);
             yield "\" alt=\"";
             yield ($context["name"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"lazyload img-hover\" src=\"";
-            // line 266
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 266);
+            // line 268
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 268);
             yield "\" data-src=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 266);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "thumb", [], "any", false, false, false, 268);
             yield "\" alt=\"";
             yield ($context["name"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 269
+            // line 271
             yield "\t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-action_list\">
 \t\t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"hover-tooltip tooltip-left box-icon btn-add-to-cart\" data-url=\"";
-            // line 272
+            // line 274
             yield ($context["cart_add"] ?? null);
             yield "\" data-product-id=\"";
             yield ($context["product_id"] ?? null);
@@ -561,7 +567,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t<li class=\"wishlist\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0);\" class=\"hover-tooltip tooltip-left box-icon btn-add-wishlist\" data-url=\"";
-            // line 278
+            // line 280
             yield ($context["wishlist_add"] ?? null);
             yield "\" data-product-id=\"";
             yield ($context["product_id"] ?? null);
@@ -572,7 +578,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#quickView\" data-bs-toggle=\"modal\" class=\"hover-tooltip tooltip-left box-icon btn-quick-view\" data-product-id=\"";
-            // line 284
+            // line 286
             yield ($context["product_id"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon icon-view\"></span>
@@ -583,33 +589,39 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 292
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 292);
+            // line 294
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "href", [], "any", false, false, false, 294);
             yield "\" class=\"name-product h4 link\">";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 292);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 294);
             yield "</a>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 294
-            if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 294)) {
-                // line 295
-                yield "\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 295);
-                yield "</span>
+            // line 296
+            if (($context["logged"] ?? null)) {
+                // line 297
+                yield "\t\t\t\t\t\t\t\t\t\t\t\t";
+                if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 297)) {
+                    // line 298
+                    yield "\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 298);
+                    yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
-                // line 296
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 296);
-                yield "</span>
+                    // line 299
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "special", [], "any", false, false, false, 299);
+                    yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t";
-            } else {
-                // line 298
-                yield "\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 298);
-                yield "</span>
+                } else {
+                    // line 301
+                    yield "\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 301);
+                    yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t";
+                }
+                // line 303
+                yield "\t\t\t\t\t\t\t\t\t\t\t\t";
             }
-            // line 300
-            yield "\t\t\t\t\t\t\t\t\t\t\t</div>
+            // line 304
+            yield "\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list d-none\">
 \t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Pink</span>
@@ -636,7 +648,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['product'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 323
+        // line 327
         yield "\t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"sw-dot-default tf-sw-pagination\"></div>
 \t\t\t\t\t</div>
@@ -938,7 +950,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t</script>
 
 \t";
-        // line 623
+        // line 627
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -966,7 +978,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
      */
     public function getDebugInfo(): array
     {
-        return array (  942 => 623,  640 => 323,  612 => 300,  606 => 298,  601 => 296,  596 => 295,  594 => 294,  587 => 292,  576 => 284,  565 => 278,  554 => 272,  549 => 269,  541 => 266,  533 => 265,  529 => 264,  523 => 261,  520 => 260,  516 => 259,  502 => 248,  482 => 230,  462 => 223,  451 => 217,  445 => 215,  440 => 213,  435 => 212,  433 => 211,  426 => 209,  415 => 201,  404 => 195,  393 => 189,  388 => 186,  380 => 183,  372 => 182,  368 => 181,  362 => 178,  359 => 177,  355 => 176,  343 => 172,  326 => 171,  321 => 168,  303 => 164,  295 => 163,  292 => 162,  275 => 161,  262 => 150,  248 => 142,  241 => 140,  232 => 136,  228 => 135,  224 => 133,  220 => 132,  214 => 128,  200 => 120,  193 => 118,  184 => 114,  180 => 113,  176 => 111,  172 => 110,  145 => 85,  131 => 79,  127 => 78,  121 => 74,  117 => 73,  42 => 1,);
+        return array (  954 => 627,  652 => 327,  624 => 304,  621 => 303,  615 => 301,  610 => 299,  605 => 298,  602 => 297,  600 => 296,  593 => 294,  582 => 286,  571 => 280,  560 => 274,  555 => 271,  547 => 268,  539 => 267,  535 => 266,  529 => 263,  526 => 262,  522 => 261,  508 => 250,  488 => 232,  468 => 225,  457 => 219,  454 => 218,  448 => 216,  443 => 214,  438 => 213,  435 => 212,  433 => 211,  426 => 209,  415 => 201,  404 => 195,  393 => 189,  388 => 186,  380 => 183,  372 => 182,  368 => 181,  362 => 178,  359 => 177,  355 => 176,  343 => 172,  326 => 171,  321 => 168,  303 => 164,  295 => 163,  292 => 162,  275 => 161,  262 => 150,  248 => 142,  241 => 140,  232 => 136,  228 => 135,  224 => 133,  220 => 132,  214 => 128,  200 => 120,  193 => 118,  184 => 114,  180 => 113,  176 => 111,  172 => 110,  145 => 85,  131 => 79,  127 => 78,  121 => 74,  117 => 73,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -1181,11 +1193,13 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
 \t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ product.href }}\" class=\"name-product h4 link\">{{ product.name }}</a>
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t{% if logged %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t{% if product.special %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">{{ product.price }}</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">{{ product.special }}</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">{{ product.price }}</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t
@@ -1264,13 +1278,15 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t\t\t\t\t\t\t\t<div class=\"card-product_info\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ product.href }}\" class=\"name-product h4 link\">{{ product.name }}</a>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"price-wrap\">
+\t\t\t\t\t\t\t\t\t\t\t\t{% if logged %}
 \t\t\t\t\t\t\t\t\t\t\t\t{% if product.special %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-old h6 fw-normal\">{{ product.price }}</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">{{ product.special }}</span>
 \t\t\t\t\t\t\t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new h6\">{{ product.price }}</span>
 \t\t\t\t\t\t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<ul class=\"product-color_list d-none\">
 \t\t\t\t\t\t\t\t\t\t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"tooltip color-filter\">Pink</span>

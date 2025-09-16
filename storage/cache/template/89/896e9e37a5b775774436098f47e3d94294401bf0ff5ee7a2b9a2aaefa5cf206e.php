@@ -153,9 +153,14 @@ class __TwigTemplate_f7642d75d429282cb1612fdafb0b77f138b26710b82c2aa733462232445
                              const productName = quickViewModal.querySelector('.tf-product-title');
                              if (productName) productName.textContent = product.name;
                              
-                             // Update product description
-                             const productDesc = quickViewModal.querySelector('.product-infor-sub');
-                             if (productDesc) productDesc.innerHTML = product.description || 'Product description not available.';
+                            // Update product description
+                            const productDesc = quickViewModal.querySelector('.product-infor-sub');
+                            if (productDesc) {
+                                // Strip HTML tags and display as plain text
+                                const tempDiv = document.createElement('div');
+                                tempDiv.innerHTML = product.description || 'Product description not available.';
+                                productDesc.textContent = tempDiv.textContent || tempDiv.innerText || 'Product description not available.';
+                            }
                              
                              // Update product images
                              const productImages = quickViewModal.querySelectorAll('.tf-product-media img');
@@ -248,7 +253,7 @@ class __TwigTemplate_f7642d75d429282cb1612fdafb0b77f138b26710b82c2aa733462232445
          }
     </script>
 ";
-        // line 208
+        // line 213
         yield ($context["footer"] ?? null);
         yield "
 
@@ -278,7 +283,7 @@ class __TwigTemplate_f7642d75d429282cb1612fdafb0b77f138b26710b82c2aa733462232445
      */
     public function getDebugInfo(): array
     {
-        return array (  252 => 208,  42 => 1,);
+        return array (  257 => 213,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -396,9 +401,14 @@ class __TwigTemplate_f7642d75d429282cb1612fdafb0b77f138b26710b82c2aa733462232445
                              const productName = quickViewModal.querySelector('.tf-product-title');
                              if (productName) productName.textContent = product.name;
                              
-                             // Update product description
-                             const productDesc = quickViewModal.querySelector('.product-infor-sub');
-                             if (productDesc) productDesc.innerHTML = product.description || 'Product description not available.';
+                            // Update product description
+                            const productDesc = quickViewModal.querySelector('.product-infor-sub');
+                            if (productDesc) {
+                                // Strip HTML tags and display as plain text
+                                const tempDiv = document.createElement('div');
+                                tempDiv.innerHTML = product.description || 'Product description not available.';
+                                productDesc.textContent = tempDiv.textContent || tempDiv.innerText || 'Product description not available.';
+                            }
                              
                              // Update product images
                              const productImages = quickViewModal.querySelectorAll('.tf-product-media img');
@@ -493,6 +503,6 @@ class __TwigTemplate_f7642d75d429282cb1612fdafb0b77f138b26710b82c2aa733462232445
 {{ footer }}
 
 
-", "catalog/view/template/common/wishlist.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\wishlist.twig");
+", "catalog/view/template/common/wishlist.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\wishlist.twig");
     }
 }

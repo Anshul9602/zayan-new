@@ -1,5 +1,5 @@
 {{ header }}
-<div id="account-account" class="container">
+<div id="account-account" class="container" style="padding-top: 100px;">
   <ul class="breadcrumb">
     {% for breadcrumb in breadcrumbs %}
       <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
@@ -8,43 +8,88 @@
   {% if success %}
     <div class="alert alert-success alert-dismissible"><i class="fa-solid fa-circle-check"></i> {{ success }}</div>
   {% endif %}
-  <div class="row">{{ column_left }}
-    <div id="content" class="col">{{ content_top }}
-      <h1>{{ text_my_account }}</h1>
-      <ul class="list-unstyled">
-        <li><a href="{{ edit }}">{{ text_edit }}</a></li>
-        <li><a href="{{ password }}">{{ text_password }}</a></li>
-        <li><a href="{{ payment_method }}">{{ text_payment_method }}</a></li>
-        <li><a href="{{ address }}">{{ text_address }}</a></li>
-        <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
-      </ul>
-      <h2>{{ text_my_orders }}</h2>
-      <ul class="list-unstyled">
-        <li><a href="{{ order }}">{{ text_order }}</a></li>
-        <li><a href="{{ subscription }}">{{ text_subscription }}</a></li>
-        <li><a href="{{ download }}">{{ text_download }}</a></li>
-        {% if reward %}
-          <li><a href="{{ reward }}">{{ text_reward }}</a></li>
-        {% endif %}
-        <li><a href="{{ return }}">{{ text_return }}</a></li>
-        <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
-      </ul>
-      {% if affiliate %}
-        <h2>{{ text_my_affiliate }}</h2>
-        <ul class="list-unstyled">
-          {% if not tracking %}
-            <li><a href="{{ affiliate }}">{{ text_affiliate_add }}</a></li>
-          {% else %}
-            <li><a href="{{ affiliate }}">{{ text_affiliate_edit }}</a></li>
-            <li><a href="{{ tracking }}">{{ text_tracking }}</a></li>
-          {% endif %}
-        </ul>
-      {% endif %}
-      <h2>{{ text_my_newsletter }}</h2>
-      <ul class="list-unstyled">
-          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
-      </ul>
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
+  <div style=" width:100%; min-height: 600px;" class="container">
+
+
+
+  <div style="margin:60px 0px" class="row text-center">
+
+    <h1 style="text-align: center; margin: auto;" class="big">My Account</h1>
+
+
+  </div>
+
+
+
+  <div class="row">
+    <div id="content" class="col-sm-12">
+
+      <?php echo $content_top; ?>
+
+
+
+      <div class="row ac_menu">
+
+
+
+
+        <div class="col-sm-3">
+          <a class="col-sm-12" href="{{ address }}" style="display:block;">
+            <img width="120" src="image/icons/Icon1.png" /><br />
+            <p class="atag">Account
+              Details</p>
+            <p class="ac_description">Review your personal information.</p> <br />
+          </a>
+        </div>
+
+
+        <div class="col-sm-3">
+          <a class="col-sm-12" href="{{ wishlist }}" style="display:block;">
+            <img width="120" src="image/icons/Icon3.png" /><br />
+            <p class="atag">Wishlist</p>
+            <p class="ac_description">Don't lose sight of the articles you like most, access your wishlist here.
+            </p>
+          </a>
+        </div>
+
+
+        <div class="col-sm-3">
+          <a class="col-sm-12" href="{{ order }}" style="display:block;">
+            <img width="120" src="image/icons/Icon2.png" /><br />
+            <p class="atag">Order History</p>
+            <p class="ac_description">Check the history and current status of your orders.</p>
+
+          </a>
+
+        </div>
+
+        
+        <div class="col-sm-3">
+          <a class="col-sm-12" href="{{ draft }}" style="display:block;">
+            <img width="120" src="image/icons/Icon5.png" /><br />
+            <p class="atag">Saved Drafts</p>
+            <p class="ac_description">Check your saved drafts.</p>
+
+          </a>
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+</div>
 </div>
 {{ footer }}

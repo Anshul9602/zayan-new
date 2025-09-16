@@ -428,6 +428,7 @@ class Search extends \Opencart\System\Engine\Controller {
 		$data['description'] = $filter_description;
 		$data['category_id'] = $filter_category_id;
 		$data['sub_category'] = $filter_sub_category;
+		$data['language'] = $this->config->get('config_language');
 
 		$data['sort'] = $sort;
 		$data['order'] = $order;
@@ -443,5 +444,44 @@ class Search extends \Opencart\System\Engine\Controller {
 		$data['header'] = $this->load->controller('common/header');
 
 		$this->response->setOutput($this->load->view('product/search', $data));
+	}
+
+	/**
+	 * Suggest
+	 * 
+	 * AJAX endpoint for search suggestions
+	 *
+	 * @return void
+	 */
+	public function suggest(): void {
+		$json = [];
+
+		if (isset($this->request->get['search'])) {
+			$search = $this->request->get['search'];
+			
+			if (strlen($search) >= 2) {
+				$this->load->model('catalog/product');
+				
+				$filter_data = [
+					'filter_search' => $search,
+					'filter_description' => true,
+					'start' => 0,
+					'limit' => 5
+				];
+
+				$results = $this->model_catalog_product->getProducts($filter_data);
+				
+				foreach ($results as $result) {
+					$json[] = [
+						'name' => $result['name'],
+						'model' => $result['model'],
+						'href' => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $result['product_id'])
+					];
+				}
+			}
+		}
+
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
 	}
 }

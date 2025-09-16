@@ -459,7 +459,7 @@ class Product extends \Opencart\System\Engine\Controller {
 			if ($this->config->get('config_product_report_status')) {
 				$this->model_catalog_product->addReport($this->request->get['product_id'], oc_get_ip());
 			}
-
+			$data['logged'] = $this->customer->isLogged();
 			$data['language'] = $this->config->get('config_language');
 
 			$data['column_left'] = $this->load->controller('common/column_left');

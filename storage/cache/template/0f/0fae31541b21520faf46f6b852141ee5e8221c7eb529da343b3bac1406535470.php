@@ -112,25 +112,32 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 \t\t<div class=\"price-wrap\">
 \t\t\t";
         // line 34
-        if (($context["special"] ?? null)) {
+        if (($context["logged"] ?? null)) {
             // line 35
-            yield "\t\t\t\t<span class=\"price-old h6 fw-normal\">";
-            yield ($context["price"] ?? null);
-            yield "</span>
+            yield "\t\t\t";
+            if (($context["special"] ?? null)) {
+                // line 36
+                yield "\t\t\t\t<span class=\"price-old h6 fw-normal\">";
+                yield ($context["price"] ?? null);
+                yield "</span>
 \t\t\t\t<span class=\"price-new h6\">";
-            // line 36
-            yield ($context["special"] ?? null);
-            yield "</span>
+                // line 37
+                yield ($context["special"] ?? null);
+                yield "</span>
 \t\t\t";
-        } else {
-            // line 38
-            yield "\t\t\t\t<span class=\"price-new h6\">";
-            yield ($context["price"] ?? null);
-            yield "</span>
+            } else {
+                // line 39
+                yield "\t\t\t\t<span class=\"price-new h6\">";
+                yield ($context["price"] ?? null);
+                yield "</span>
 \t\t\t";
+            }
+            // line 41
+            yield "\t\t\t";
         }
-        // line 40
-        yield "\t\t</div>
+        // line 42
+        yield "\t\t\t
+\t\t</div>
 \t\t<ul class=\"product-color_list d-none\">
 \t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">
 \t\t\t\t<span class=\"tooltip color-filter\">Pink</span>
@@ -176,7 +183,7 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
      */
     public function getDebugInfo(): array
     {
-        return array (  133 => 40,  127 => 38,  122 => 36,  117 => 35,  115 => 34,  108 => 32,  97 => 24,  86 => 18,  75 => 12,  70 => 9,  62 => 6,  54 => 5,  50 => 4,  45 => 2,  42 => 1,);
+        return array (  139 => 42,  136 => 41,  130 => 39,  125 => 37,  120 => 36,  117 => 35,  115 => 34,  108 => 32,  97 => 24,  86 => 18,  75 => 12,  70 => 9,  62 => 6,  54 => 5,  50 => 4,  45 => 2,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -214,12 +221,15 @@ class __TwigTemplate_f964d5d6760e2091e2eaad35e283e5cb6b367148341682d798b9ada5a51
 \t<div class=\"card-product_info\">
 \t\t<a href=\"{{ href }}\" class=\"name-product h4 link\">{{ name }}</a>
 \t\t<div class=\"price-wrap\">
+\t\t\t{% if logged %}
 \t\t\t{% if special %}
 \t\t\t\t<span class=\"price-old h6 fw-normal\">{{ price }}</span>
 \t\t\t\t<span class=\"price-new h6\">{{ special }}</span>
 \t\t\t{% else %}
 \t\t\t\t<span class=\"price-new h6\">{{ price }}</span>
 \t\t\t{% endif %}
+\t\t\t{% endif %}
+\t\t\t
 \t\t</div>
 \t\t<ul class=\"product-color_list d-none\">
 \t\t\t<li class=\"product-color-item color-swatch hover-tooltip tooltip-bot active\">

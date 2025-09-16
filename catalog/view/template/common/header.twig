@@ -43,6 +43,11 @@
 			{{ analytic }}
 		{% endfor %}
 		<style>
+
+#modal-shipping  .modal-content,#modal-payment  .modal-content {
+	padding:20px;
+}
+
 			header {
 				border-bottom: thin solid #f1f1f1;
 			}
@@ -184,11 +189,11 @@ width:100% !important;
 								<ul class="nav-icon-list">
 									<li class="d-none d-lg-flex">
 										{% if not logged %}
-											<a class="nav-icon-item link" href="index.php?route=account/login">
+											<a class="nav-icon-item link" href="{{ login }}">
 												<i class="icon icon-user"></i>
 											</a>
 										{% else %}
-											<a class="nav-icon-item link" href="index.php?route=account/account">
+											<a class="nav-icon-item link" href="{{ account }}">
 												<i class="icon icon-user"></i>
 											</a>
 										{% endif %}
@@ -198,12 +203,12 @@ width:100% !important;
 									</li>
 									<li class="d-none d-sm-flex">
 										{% if not logged %}
-											<a class="nav-icon-item link" href="index.php?route=common/wishlist">
+											<a class="nav-icon-item link" href="{{ wishlist }}">
 												<i class="icon icon-heart"></i>
 											</a>
 											<span class="wishlist-count">0</span>
 										{% else %}
-											<a class="nav-icon-item link" href="index.php?route=account/wishlist">
+											<a class="nav-icon-item link" href="{{ wishlist }}">
 												<i class="icon icon-heart"></i>
 											</a>
 											<span class="wishlist-count">0</span>

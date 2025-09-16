@@ -208,11 +208,13 @@
 											<div class="card-product_info">
 												<a href="{{ product.href }}" class="name-product h4 link">{{ product.name }}</a>
 												<div class="price-wrap">
+													{% if logged %}
 													{% if product.special %}
 														<span class="price-old h6 fw-normal">{{ product.price }}</span>
 														<span class="price-new h6">{{ product.special }}</span>
 													{% else %}
 														<span class="price-new h6">{{ product.price }}</span>
+													{% endif %}
 													{% endif %}
 												</div>
 												
@@ -291,13 +293,15 @@
 										<div class="card-product_info">
 											<a href="{{ product.href }}" class="name-product h4 link">{{ product.name }}</a>
 											<div class="price-wrap">
+												{% if logged %}
 												{% if product.special %}
 													<span class="price-old h6 fw-normal">{{ product.price }}</span>
 													<span class="price-new h6">{{ product.special }}</span>
 												{% else %}
 													<span class="price-new h6">{{ product.price }}</span>
 												{% endif %}
-											</div>
+												{% endif %}
+												</div>
 											<ul class="product-color_list d-none">
 												<li class="product-color-item color-swatch hover-tooltip tooltip-bot active">
 													<span class="tooltip color-filter">Pink</span>

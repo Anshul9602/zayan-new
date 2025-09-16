@@ -41,7 +41,7 @@ class __TwigTemplate_af1b74d16fd12b4a13e877980ca1ad22138a2c86458e4bbca21f78dec08
         // line 1
         yield ($context["header"] ?? null);
         yield "
-<div id=\"account-login\" class=\"container\">
+<div id=\"account-login\" class=\"container\" style=\"padding-top: 100px;\">
   <ul class=\"breadcrumb\">
     ";
         // line 4
@@ -225,7 +225,7 @@ class __TwigTemplate_af1b74d16fd12b4a13e877980ca1ad22138a2c86458e4bbca21f78dec08
     public function getSourceContext(): Source
     {
         return new Source("{{ header }}
-<div id=\"account-login\" class=\"container\">
+<div id=\"account-login\" class=\"container\" style=\"padding-top: 100px;\">
   <ul class=\"breadcrumb\">
     {% for breadcrumb in breadcrumbs %}
       <li class=\"breadcrumb-item\"><a href=\"{{ breadcrumb.href }}\">{{ breadcrumb.text }}</a></li>
@@ -282,6 +282,6 @@ class __TwigTemplate_af1b74d16fd12b4a13e877980ca1ad22138a2c86458e4bbca21f78dec08
   </div>
 </div>
 {{ footer }}
-", "catalog/view/template/account/login.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\account\\login.twig");
+", "catalog/view/template/account/login.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\account\\login.twig");
     }
 }

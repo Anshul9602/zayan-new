@@ -146,6 +146,15 @@ class Login extends \Opencart\System\Engine\Controller {
 				$json['error']['warning'] = $this->language->get('error_login');
 
 				$this->model_account_customer->addLoginAttempt($post_info['email']);
+				
+				// Debug logging
+				error_log("Login failed for email: " . $post_info['email']);
+			} else {
+				// Refresh customer info after successful login
+				$customer_info = $this->model_account_customer->getCustomerByEmail($post_info['email']);
+				
+				// Debug logging
+				error_log("Login successful for email: " . $post_info['email']);
 			}
 		}
 
@@ -153,16 +162,18 @@ class Login extends \Opencart\System\Engine\Controller {
 			// Remove form token from session
 			unset($this->session->data['login_token']);
 
-			// Add customer details into session
-			$this->session->data['customer'] = [
-				'customer_id'       => $customer_info['customer_id'],
-				'customer_group_id' => $customer_info['customer_group_id'],
-				'firstname'         => $customer_info['firstname'],
-				'lastname'          => $customer_info['lastname'],
-				'email'             => $customer_info['email'],
-				'telephone'         => $customer_info['telephone'],
-				'custom_field'      => $customer_info['custom_field']
-			];
+			// Add customer details into session - ensure customer_info is valid
+			if ($customer_info) {
+				$this->session->data['customer'] = [
+					'customer_id'       => $customer_info['customer_id'],
+					'customer_group_id' => $customer_info['customer_group_id'],
+					'firstname'         => $customer_info['firstname'],
+					'lastname'          => $customer_info['lastname'],
+					'email'             => $customer_info['email'],
+					'telephone'         => $customer_info['telephone'],
+					'custom_field'      => !empty($customer_info['custom_field']) ? json_decode($customer_info['custom_field'], true) : []
+				];
+			}
 
 			// Unset any previous data stored in the session.
 			unset($this->session->data['order_id']);
@@ -258,7 +269,7 @@ class Login extends \Opencart\System\Engine\Controller {
 				'lastname'          => $customer_info['lastname'],
 				'email'             => $customer_info['email'],
 				'telephone'         => $customer_info['telephone'],
-				'custom_field'      => $customer_info['custom_field']
+				'custom_field'      => !empty($customer_info['custom_field']) ? json_decode($customer_info['custom_field'], true) : []
 			];
 
 			// Default Addresses
@@ -295,6 +306,21 @@ class Login extends \Opencart\System\Engine\Controller {
 	 * @return bool
 	 */
 	public function validate(): bool {
-		return !(!$this->customer->isLogged() || (!isset($this->request->get['customer_token']) || !isset($this->session->data['customer_token']) || ($this->request->get['customer_token'] != $this->session->data['customer_token'])));
+		if (!$this->customer->isLogged()) {
+			return false;
+		}
+		
+		// Ensure customer token exists in session
+		if (!isset($this->session->data['customer_token'])) {
+			$this->session->data['customer_token'] = oc_token(26);
+		}
+		
+		// If no token in request, allow access (for initial login or direct access)
+		if (!isset($this->request->get['customer_token'])) {
+			return true;
+		}
+		
+		// If token is provided, validate token match
+		return ($this->request->get['customer_token'] == $this->session->data['customer_token']);
 	}
 }

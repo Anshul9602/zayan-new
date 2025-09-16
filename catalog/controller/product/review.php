@@ -18,11 +18,40 @@ class Review extends \Opencart\System\Engine\Controller {
 
 		if (isset($this->request->get['product_id'])) {
 			$data['product_id'] = (int)$this->request->get['product_id'];
+		} elseif (isset($this->request->post['product_id'])) {
+			$data['product_id'] = (int)$this->request->post['product_id'];
 		} else {
 			$data['product_id'] = 0;
 		}
 
 		$data['text_login'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', 'language=' . $this->config->get('config_language')), $this->url->link('account/register', 'language=' . $this->config->get('config_language')));
+
+		// Get reviews and rating statistics
+		$this->load->model('catalog/review');
+		$this->load->model('catalog/product');
+
+		// Get all reviews for rating statistics
+		$all_reviews = $this->model_catalog_review->getReviewsByProductId($data['product_id'], 0, 1000);
+		$data['reviews'] = [];
+		$rating_stats = [1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0];
+		$total_rating = 0;
+
+		foreach ($all_reviews as $result) {
+			$data['reviews'][] = [
+				'author'     => $result['author'],
+				'text'       => nl2br($result['text']),
+				'rating'     => (int)$result['rating'],
+				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
+				'verified'   => $this->customer->isLogged() // You can enhance this with actual purchase verification
+			];
+			
+			$rating_stats[(int)$result['rating']]++;
+			$total_rating += (int)$result['rating'];
+		}
+
+		$data['total'] = count($all_reviews);
+		$data['rating'] = $data['total'] > 0 ? round($total_rating / $data['total'], 1) : 0;
+		$data['rating_stats'] = $rating_stats;
 
 		$data['list'] = $this->getList();
 
@@ -40,6 +69,9 @@ class Review extends \Opencart\System\Engine\Controller {
 
 		// Create a login token to prevent brute force attacks
 		$data['review_token'] = $this->session->data['review_token'] = oc_token(32);
+		
+		// Add review URLs
+		$data['review_add'] = $this->url->link('product/review.write', 'language=' . $this->config->get('config_language') . '&product_id=' . $data['product_id'] . '&review_token=' . $data['review_token']);
 
 		// Captcha
 		$this->load->model('setting/extension');
@@ -129,21 +161,33 @@ class Review extends \Opencart\System\Engine\Controller {
 
 		if (isset($this->request->get['product_id'])) {
 			$product_id = (int)$this->request->get['product_id'];
+		} elseif (isset($this->request->post['product_id'])) {
+			$product_id = (int)$this->request->post['product_id'];
 		} else {
 			$product_id = 0;
 		}
 
-		if (!isset($this->request->get['review_token']) || !isset($this->session->data['review_token']) || $this->request->get['review_token'] != $this->session->data['review_token']) {
+		$review_token = '';
+		if (isset($this->request->get['review_token'])) {
+			$review_token = $this->request->get['review_token'];
+		} elseif (isset($this->request->post['review_token'])) {
+			$review_token = $this->request->post['review_token'];
+		}
+
+		if (!$review_token || !isset($this->session->data['review_token']) || $review_token != $this->session->data['review_token']) {
 			$json['error']['warning'] = $this->language->get('error_token');
 		}
 
 		$required = [
-			'author',
-			'text',
-			'rating'
+			'name'   => '',
+			'text'   => '',
+			'rating' => ''
 		];
 
 		$post_info = $this->request->post + $required;
+		
+		// Map form fields to expected format
+		$post_info['author'] = $post_info['name'];
 
 		if (!$this->config->get('config_review_status')) {
 			$json['error']['warning'] = $this->language->get('error_status');
@@ -159,7 +203,7 @@ class Review extends \Opencart\System\Engine\Controller {
 		}
 
 		if (!oc_validate_length($post_info['author'], 3, 25)) {
-			$json['error']['author'] = $this->language->get('error_author');
+			$json['error']['name'] = $this->language->get('error_author');
 		}
 
 		if (!oc_validate_length($post_info['text'], 25, 1000)) {
@@ -199,7 +243,14 @@ class Review extends \Opencart\System\Engine\Controller {
 		if (!$json) {
 			$this->load->model('catalog/review');
 
-			$this->model_catalog_review->addReview($product_id, $this->request->post);
+			// Prepare review data
+			$review_data = [
+				'author' => $post_info['author'],
+				'text'   => $post_info['text'],
+				'rating' => (int)$post_info['rating']
+			];
+
+			$this->model_catalog_review->addReview($product_id, $review_data);
 
 			$json['success'] = $this->language->get('text_success');
 		}

@@ -223,6 +223,7 @@ class Home extends \Opencart\System\Engine\Controller {
 		// print_r($products);
 		// echo '</pre>';
 		// exit;
+		$data['logged'] = $this->customer->isLogged();
 		$data['cart_add'] = $this->url->link('checkout/cart.add', 'language=' . $this->config->get('config_language'));
 		$data['wishlist_add'] = $this->url->link('account/wishlist.add', 'language=' . $this->config->get('config_language'));
 		$data['column_left'] = $this->load->controller('common/column_left');

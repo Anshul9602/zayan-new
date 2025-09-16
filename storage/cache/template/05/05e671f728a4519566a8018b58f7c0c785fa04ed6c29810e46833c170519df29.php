@@ -41,7 +41,7 @@ class __TwigTemplate_861e29b178fa050c0df5b2d05ca6e0ce9e1ae73f196750c103d87755509
         // line 1
         yield ($context["header"] ?? null);
         yield "
-<div id=\"checkout-cart\" class=\"container\">
+<div id=\"checkout-cart\" class=\"container\" style=\"margin-top: 100px;min-height:30vh\">
   <ul class=\"breadcrumb\">
     ";
         // line 4
@@ -231,7 +231,7 @@ class __TwigTemplate_861e29b178fa050c0df5b2d05ca6e0ce9e1ae73f196750c103d87755509
     public function getSourceContext(): Source
     {
         return new Source("{{ header }}
-<div id=\"checkout-cart\" class=\"container\">
+<div id=\"checkout-cart\" class=\"container\" style=\"margin-top: 100px;min-height:30vh\">
   <ul class=\"breadcrumb\">
     {% for breadcrumb in breadcrumbs %}
       <li class=\"breadcrumb-item\"><a href=\"{{ breadcrumb.href }}\">{{ breadcrumb.text }}</a></li>
@@ -343,6 +343,6 @@ class __TwigTemplate_861e29b178fa050c0df5b2d05ca6e0ce9e1ae73f196750c103d87755509
 });
 //--></script>
 {{ footer }}
-", "catalog/view/template/checkout/cart.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\checkout\\cart.twig");
+", "catalog/view/template/checkout/cart.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\checkout\\cart.twig");
     }
 }

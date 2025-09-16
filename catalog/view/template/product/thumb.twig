@@ -31,12 +31,15 @@
 	<div class="card-product_info">
 		<a href="{{ href }}" class="name-product h4 link">{{ name }}</a>
 		<div class="price-wrap">
+			{% if logged %}
 			{% if special %}
 				<span class="price-old h6 fw-normal">{{ price }}</span>
 				<span class="price-new h6">{{ special }}</span>
 			{% else %}
 				<span class="price-new h6">{{ price }}</span>
 			{% endif %}
+			{% endif %}
+			
 		</div>
 		<ul class="product-color_list d-none">
 			<li class="product-color-item color-swatch hover-tooltip tooltip-bot active">
