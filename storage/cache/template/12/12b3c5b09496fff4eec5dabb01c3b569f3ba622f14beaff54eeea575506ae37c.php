@@ -62,7 +62,7 @@ class __TwigTemplate_6fa31926dc912a90b5adcf92a8f62bf63899b3cec818ef7539207e8223a
 <!-- Page Title -->
 
 <!-- /Page Title -->
-<section class=\"section-padding\">
+<section class=\"section-padding\" style=\"padding-top:130px;\">
 \t<div class=\"container\">
 \t\t<h2 style=\"text-align:center; color:#423c9e;\">History of Cross Jewelry</h2>
 \t\t<div class=\"banner-statistics-area ptb-30\">
@@ -137,7 +137,7 @@ class __TwigTemplate_6fa31926dc912a90b5adcf92a8f62bf63899b3cec818ef7539207e8223a
     <br><br>
 \t<p class=\"text-center\">
     Whatever your choice maybe, we have a cross for you!<br>
-    Check out our <a href=\"/index.php?route=product/category&amp;path=106\" style=\"color: #423c9e;font-weight:600;\">Cross
+    Check out our <a href=\"index.php?route=product/category&language=en-gb&path=60_62\" style=\"color: #423c9e;font-weight:600;\">Cross
       Collection</a> Here!
 
 
@@ -216,7 +216,7 @@ class __TwigTemplate_6fa31926dc912a90b5adcf92a8f62bf63899b3cec818ef7539207e8223a
 <!-- Page Title -->
 
 <!-- /Page Title -->
-<section class=\"section-padding\">
+<section class=\"section-padding\" style=\"padding-top:130px;\">
 \t<div class=\"container\">
 \t\t<h2 style=\"text-align:center; color:#423c9e;\">History of Cross Jewelry</h2>
 \t\t<div class=\"banner-statistics-area ptb-30\">
@@ -291,7 +291,7 @@ class __TwigTemplate_6fa31926dc912a90b5adcf92a8f62bf63899b3cec818ef7539207e8223a
     <br><br>
 \t<p class=\"text-center\">
     Whatever your choice maybe, we have a cross for you!<br>
-    Check out our <a href=\"/index.php?route=product/category&amp;path=106\" style=\"color: #423c9e;font-weight:600;\">Cross
+    Check out our <a href=\"index.php?route=product/category&language=en-gb&path=60_62\" style=\"color: #423c9e;font-weight:600;\">Cross
       Collection</a> Here!
 
 
@@ -315,6 +315,6 @@ class __TwigTemplate_6fa31926dc912a90b5adcf92a8f62bf63899b3cec818ef7539207e8223a
 </section>
 
 {{ footer }}
-", "catalog/view/template/common/g21.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\g21.twig");
+", "catalog/view/template/common/g21.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\g21.twig");
     }
 }

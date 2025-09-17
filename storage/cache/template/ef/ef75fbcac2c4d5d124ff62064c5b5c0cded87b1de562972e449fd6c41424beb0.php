@@ -173,7 +173,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
 \t\t\t}
 
 \t\t\theader {
-\t\t\t\tborder-bottom: thin solid #f1f1f1;
+\t\t\t\tborder-bottom: none;
 \t\t\t}
 \t\t\t.tf-btn-line {
 \t\t\t\tfont-weight: 500;
@@ -479,7 +479,7 @@ class __TwigTemplate_d381196dad78507556d1b51181fd7c65139c9e76323e319c5e304cc72fc
 \t\t\t}
 
 \t\t\theader {
-\t\t\t\tborder-bottom: thin solid #f1f1f1;
+\t\t\t\tborder-bottom: none;
 \t\t\t}
 \t\t\t.tf-btn-line {
 \t\t\t\tfont-weight: 500;

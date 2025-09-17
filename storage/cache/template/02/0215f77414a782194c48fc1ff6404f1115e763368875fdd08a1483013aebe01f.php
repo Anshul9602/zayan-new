@@ -813,13 +813,13 @@ class __TwigTemplate_acfe1077ac4523e37df40bb51716c6bdff6a203356accf1b276057b9105
 
 .option-label:hover {
     background: #e9ecef;
-    border-color: #000;
+    border-color: #241B68;
 }
 
 .option-card input:checked + .option-label {
-    background: #000;
+    background: #241B68;
     color: #fff;
-    border-color: #000;
+    border-color: #241B68;
 }
 
 /* File Upload */
@@ -1312,13 +1312,13 @@ class __TwigTemplate_acfe1077ac4523e37df40bb51716c6bdff6a203356accf1b276057b9105
 
 .option-label:hover {
     background: #e9ecef;
-    border-color: #000;
+    border-color: #241B68;
 }
 
 .option-card input:checked + .option-label {
-    background: #000;
+    background: #241B68;
     color: #fff;
-    border-color: #000;
+    border-color: #241B68;
 }
 
 /* File Upload */

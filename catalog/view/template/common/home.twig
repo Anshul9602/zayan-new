@@ -548,7 +548,16 @@
 		</div>
 	</div>
 	<!-- /Blog -->
+<style>
+@media (max-width:1600px){
+	.popup-img{
+		width: 100% !important;
+		object-fit: auto;
+	}
+}
 
+
+</style>
 
 	<!-- New Letter -->
 	<div class="modal modalCentered fade modal-newletter auto-popup" id="newLetter">
@@ -561,7 +570,7 @@
 					<div class="col-md-6" style="display: flex; align-items: center; justify-content: center;">
 						<div class="modal-heading">
 							<div class="image desk">
-								<img class="lazyload" src="assets/news.jpg" data-src="assets/news.jpg" alt="Image" style="width: 80%;  object-fit: cover;">
+								<img class="lazyload popup-img" src="assets/news.jpg" data-src="assets/news.jpg" alt="Image" style="width: 100%;object-fit: cover;  ">
 							</div>
 							<div class="image mob">
 								<img class="lazyload" src="assets/pop-mob.jpg" data-src="assets/pop-mob.jpg" alt="Image" style="width: 80%;  object-fit: cover;">
@@ -569,8 +578,8 @@
 
 						</div>
 					</div>
-					<div class="col-md-6">
-						<div class="modal-body">
+					<div class="col-md-6" style="align-items: center;  display: flex;">
+						<div class="modal-body" style="margin:auto;">
 							<p class="h6 sub-title">Subscribe to our newletter!</p>
 							<h3 class="fw-normal title">Receive 10% off your next order, along with exclusive offers and more!</h3>
 							<form class="form-newletter">

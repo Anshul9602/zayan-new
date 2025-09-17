@@ -61,7 +61,7 @@ class __TwigTemplate_b3a7abaaf7c51e71c1d321bd414324e02b5da81b7397b73b5c53aecaad6
   }
 </style>
 
-<section class=\"about-us section-padding pb-0\">
+<section class=\"about-us section-padding pb-0\" style=\"padding-top:100px;\">
   <div class=\"container\">
 
     <div class=\"row\">
@@ -380,7 +380,7 @@ class __TwigTemplate_b3a7abaaf7c51e71c1d321bd414324e02b5da81b7397b73b5c53aecaad6
   }
 </style>
 
-<section class=\"about-us section-padding pb-0\">
+<section class=\"about-us section-padding pb-0\" style=\"padding-top:100px;\">
   <div class=\"container\">
 
     <div class=\"row\">
@@ -645,6 +645,6 @@ class __TwigTemplate_b3a7abaaf7c51e71c1d321bd414324e02b5da81b7397b73b5c53aecaad6
 <br /><br />
 
 {{ footer }}
-", "catalog/view/template/common/g3.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\g3.twig");
+", "catalog/view/template/common/g3.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\g3.twig");
     }
 }

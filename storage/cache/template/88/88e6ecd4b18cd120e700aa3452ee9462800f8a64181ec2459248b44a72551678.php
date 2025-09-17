@@ -43,10 +43,10 @@ class __TwigTemplate_c9a93d49c09da449a8a1caa7b45d8db9f3898d3b9cd36075e5e397ad19d
         yield "
 
   <!-- Page Title -->
-  <section class=\"s-page-title\">
+  <section class=\"\" style=\"padding-top:130px;\">
             <div class=\"container\">
                 <div class=\"content\">
-                    <h1 class=\"title-page\">Contact Us</h1>
+                    <h2 class=\"title-page text-center\">Contact Us</h2>
                 </div>
             </div>
         </section>
@@ -69,28 +69,30 @@ class __TwigTemplate_c9a93d49c09da449a8a1caa7b45d8db9f3898d3b9cd36075e5e397ad19d
                                     <a href=\"tel:+19499006910\" class=\"link text-main\">+1 (949) 900-6910</a>
                                 </li>
                             </ul><br /><br />
-                            <ul class=\"tf-social-icon\">
-                                <li>
-                                    <a href=\"https://www.facebook.com/\" target=\"_blank\" class=\"social-facebook\">
-                                        <span class=\"icon\"><i class=\"icon-fb\"></i></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=\"https://www.instagram.com/\" target=\"_blank\" class=\"social-instagram\">
-                                        <span class=\"icon\"><i class=\"icon-instagram-logo\"></i></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=\"https://x.com/\" target=\"_blank\" class=\"social-x\">
-                                        <span class=\"icon\"><i class=\"icon-x\"></i></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=\"https://www.tiktok.com/\" target=\"_blank\" class=\"social-tiktok\">
-                                        <span class=\"icon\"><i class=\"icon-tiktok\"></i></span>
-                                    </a>
-                                </li>
-                            </ul>
+                          <ul class=\"tf-social-icon\">
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/zaynjewels/\" target=\"_blank\" class=\"social-facebook\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-fb\"></i>
+\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/zaynjewels/\" target=\"_blank\" class=\"social-instagram\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-instagram-logo\"></i>
+\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA\" target=\"_blank\" class=\"social-youtube\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fab fa-youtube\"></i>
+\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t</li>
+
+\t\t\t\t\t\t\t\t</ul>
                         </div>
                     </div>
                     <div class=\"col-xl-5 col-lg-6\">
@@ -115,7 +117,7 @@ class __TwigTemplate_c9a93d49c09da449a8a1caa7b45d8db9f3898d3b9cd36075e5e397ad19d
                                         </fieldset>
                                     </div>
                                  <br />
-                                    <textarea id=\"desc\" placeholder=\"Message\" style=\"height: 229px;\" required></textarea>
+                                    <textarea id=\"desc\" placeholder=\"Message\" style=\"height: 150px;\" required></textarea>
                                 </div>
                                 <div class=\"form_message text-center\"></div>
                             <br />
@@ -133,7 +135,7 @@ class __TwigTemplate_c9a93d49c09da449a8a1caa7b45d8db9f3898d3b9cd36075e5e397ad19d
 
 
 ";
-        // line 93
+        // line 95
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -161,7 +163,7 @@ class __TwigTemplate_c9a93d49c09da449a8a1caa7b45d8db9f3898d3b9cd36075e5e397ad19d
      */
     public function getDebugInfo(): array
     {
-        return array (  137 => 93,  42 => 1,);
+        return array (  139 => 95,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -169,10 +171,10 @@ class __TwigTemplate_c9a93d49c09da449a8a1caa7b45d8db9f3898d3b9cd36075e5e397ad19d
         return new Source("{{ header }}
 
   <!-- Page Title -->
-  <section class=\"s-page-title\">
+  <section class=\"\" style=\"padding-top:130px;\">
             <div class=\"container\">
                 <div class=\"content\">
-                    <h1 class=\"title-page\">Contact Us</h1>
+                    <h2 class=\"title-page text-center\">Contact Us</h2>
                 </div>
             </div>
         </section>
@@ -195,28 +197,30 @@ class __TwigTemplate_c9a93d49c09da449a8a1caa7b45d8db9f3898d3b9cd36075e5e397ad19d
                                     <a href=\"tel:+19499006910\" class=\"link text-main\">+1 (949) 900-6910</a>
                                 </li>
                             </ul><br /><br />
-                            <ul class=\"tf-social-icon\">
-                                <li>
-                                    <a href=\"https://www.facebook.com/\" target=\"_blank\" class=\"social-facebook\">
-                                        <span class=\"icon\"><i class=\"icon-fb\"></i></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=\"https://www.instagram.com/\" target=\"_blank\" class=\"social-instagram\">
-                                        <span class=\"icon\"><i class=\"icon-instagram-logo\"></i></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=\"https://x.com/\" target=\"_blank\" class=\"social-x\">
-                                        <span class=\"icon\"><i class=\"icon-x\"></i></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=\"https://www.tiktok.com/\" target=\"_blank\" class=\"social-tiktok\">
-                                        <span class=\"icon\"><i class=\"icon-tiktok\"></i></span>
-                                    </a>
-                                </li>
-                            </ul>
+                          <ul class=\"tf-social-icon\">
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/zaynjewels/\" target=\"_blank\" class=\"social-facebook\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-fb\"></i>
+\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/zaynjewels/\" target=\"_blank\" class=\"social-instagram\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon-instagram-logo\"></i>
+\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA\" target=\"_blank\" class=\"social-youtube\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fab fa-youtube\"></i>
+\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t</li>
+
+\t\t\t\t\t\t\t\t</ul>
                         </div>
                     </div>
                     <div class=\"col-xl-5 col-lg-6\">
@@ -241,7 +245,7 @@ class __TwigTemplate_c9a93d49c09da449a8a1caa7b45d8db9f3898d3b9cd36075e5e397ad19d
                                         </fieldset>
                                     </div>
                                  <br />
-                                    <textarea id=\"desc\" placeholder=\"Message\" style=\"height: 229px;\" required></textarea>
+                                    <textarea id=\"desc\" placeholder=\"Message\" style=\"height: 150px;\" required></textarea>
                                 </div>
                                 <div class=\"form_message text-center\"></div>
                             <br />
@@ -259,6 +263,6 @@ class __TwigTemplate_c9a93d49c09da449a8a1caa7b45d8db9f3898d3b9cd36075e5e397ad19d
 
 
 {{ footer }}
-", "catalog/view/template/information/contact.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\information\\contact.twig");
+", "catalog/view/template/information/contact.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\information\\contact.twig");
     }
 }

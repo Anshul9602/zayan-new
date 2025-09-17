@@ -47,21 +47,19 @@ class __TwigTemplate_51834d7838e5ba95560405b4e1b03879ba533fc53dbc5ff8a9b8a1fdca5
    font-size: 18px;
   }
   h2 {
-    font-size: 24px;
+    
     font-weight: 600;
     margin-bottom: 10px;
   }
   
 </style>
 <!-- Page Title -->
-<section class=\"s-page-title\">
+<section class=\"\" style=\"padding-top:130px;\">
             <div class=\"container\">
-                <div class=\"content\">
-                    <h1 class=\"title-page\">";
-        // line 18
+                <h2 class=\" text-center\">";
+        // line 17
         yield ($context["heading_title"] ?? null);
-        yield "</h1>
-                </div>
+        yield "</h2>
             </div>
         </section>
         <section class=\"\">
@@ -71,7 +69,7 @@ class __TwigTemplate_51834d7838e5ba95560405b4e1b03879ba533fc53dbc5ff8a9b8a1fdca5
                 <div class=\"col-10 offset-1\">
                   <div class=\"left-col mb-lg-0\">
                     ";
-        // line 28
+        // line 26
         yield ($context["description"] ?? null);
         yield "
                   </div>
@@ -84,7 +82,7 @@ class __TwigTemplate_51834d7838e5ba95560405b4e1b03879ba533fc53dbc5ff8a9b8a1fdca5
        <br />
        
 ";
-        // line 38
+        // line 36
         yield ($context["footer"] ?? null);
         yield from [];
     }
@@ -110,7 +108,7 @@ class __TwigTemplate_51834d7838e5ba95560405b4e1b03879ba533fc53dbc5ff8a9b8a1fdca5
      */
     public function getDebugInfo(): array
     {
-        return array (  88 => 38,  75 => 28,  62 => 18,  42 => 1,);
+        return array (  86 => 36,  73 => 26,  61 => 17,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -122,18 +120,16 @@ class __TwigTemplate_51834d7838e5ba95560405b4e1b03879ba533fc53dbc5ff8a9b8a1fdca5
    font-size: 18px;
   }
   h2 {
-    font-size: 24px;
+    
     font-weight: 600;
     margin-bottom: 10px;
   }
   
 </style>
 <!-- Page Title -->
-<section class=\"s-page-title\">
+<section class=\"\" style=\"padding-top:130px;\">
             <div class=\"container\">
-                <div class=\"content\">
-                    <h1 class=\"title-page\">{{ heading_title }}</h1>
-                </div>
+                <h2 class=\" text-center\">{{ heading_title }}</h2>
             </div>
         </section>
         <section class=\"\">
@@ -152,6 +148,6 @@ class __TwigTemplate_51834d7838e5ba95560405b4e1b03879ba533fc53dbc5ff8a9b8a1fdca5
 
        <br />
        
-{{ footer }}", "catalog/view/template/information/information.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\information\\information.twig");
+{{ footer }}", "catalog/view/template/information/information.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\information\\information.twig");
     }
 }

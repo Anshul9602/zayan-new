@@ -61,7 +61,7 @@ class __TwigTemplate_cb6f63df5405b2f8817e2742eab4c2434f8dd4f4f9be92690ca46e71f3d
 <!-- Page Title -->
 
 <!-- /Page Title -->
-<section class=\"\">
+<section class=\"\" style=\"padding-top:100px;\">
 \t<div class=\"container\">
 \t\t\t\t<div class=\"row\">
 
@@ -246,7 +246,7 @@ class __TwigTemplate_cb6f63df5405b2f8817e2742eab4c2434f8dd4f4f9be92690ca46e71f3d
 <!-- Page Title -->
 
 <!-- /Page Title -->
-<section class=\"\">
+<section class=\"\" style=\"padding-top:100px;\">
 \t<div class=\"container\">
 \t\t\t\t<div class=\"row\">
 
@@ -377,6 +377,6 @@ class __TwigTemplate_cb6f63df5405b2f8817e2742eab4c2434f8dd4f4f9be92690ca46e71f3d
 </section>
 
 {{ footer }}
-", "catalog/view/template/common/catalogue.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\catalogue.twig");
+", "catalog/view/template/common/catalogue.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\catalogue.twig");
     }
 }

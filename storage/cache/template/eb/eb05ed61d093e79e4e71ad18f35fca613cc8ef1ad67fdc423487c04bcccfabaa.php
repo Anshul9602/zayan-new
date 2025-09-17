@@ -69,7 +69,7 @@ class __TwigTemplate_36576cf4cd29ae927272394b5729f0d57bdf4fb6638e3b0896808f79e5d
 }
 </style>
 
-<section style=\"min-height:50vh\" class=\"about-us section-padding pb-0\">
+<section style=\"min-height:50vh;padding-top:130px;\" class=\"about-us section-padding pb-0\">
 
 \t<div class=\"container\">
 
@@ -276,7 +276,7 @@ return(textA < textB) ? -1 : (textA > textB) ? 1 : 0;
 }
 </style>
 
-<section style=\"min-height:50vh\" class=\"about-us section-padding pb-0\">
+<section style=\"min-height:50vh;padding-top:130px;\" class=\"about-us section-padding pb-0\">
 
 \t<div class=\"container\">
 
@@ -376,6 +376,6 @@ return(textA < textB) ? -1 : (textA > textB) ? 1 : 0;
 
  
 
-", "catalog/view/template/common/locations.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\locations.twig");
+", "catalog/view/template/common/locations.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\locations.twig");
     }
 }

@@ -53,7 +53,7 @@ class __TwigTemplate_9c344b322d7e59c69fd8bd661fab821f7770f9120b447da5a70fa9d64a8
 </style>
 
 <!-- Page Title -->
-<section class=\"page-title-image \" style=\"margin-top: 100px;\">
+<section class=\"page-title-image \" style=\"padding-top: 100px;\">
 \t<div class=\"page_image overflow-hidden\">
 \t\t<img class=\"lazyload ani-zoom\" src=\"assets/aboutbg.jpg\" data-src=\"assets/aboutbg.jpg\" alt=\"Banner\">
 \t</div>
@@ -149,7 +149,7 @@ class __TwigTemplate_9c344b322d7e59c69fd8bd661fab821f7770f9120b447da5a70fa9d64a8
 \t\t\t\t\t<div class=\"col-sm-6 mt-3\">
 \t\t\t\t\t\t<figure class=\"banner-statistics mt-20\">
 \t\t\t\t\t\t\t<a href=\"index.php?route=common/g3\">
-\t\t\t\t\t\t\t\t<img src=\"assets/imgb2.JPG\" alt=\"product banner\">
+\t\t\t\t\t\t\t\t<img src=\"assets/imgb2.jpg\" alt=\"product banner\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t<div class=\"banner-content text-center\">
 \t\t\t\t\t\t\t\t<h2 class=\"banner-text2\">Metal
@@ -176,7 +176,7 @@ class __TwigTemplate_9c344b322d7e59c69fd8bd661fab821f7770f9120b447da5a70fa9d64a8
 \t\t\t\t\t<div class=\"col-sm-6 mt-3\">
 \t\t\t\t\t\t<figure class=\"banner-statistics mt-20\">
 \t\t\t\t\t\t\t<a href=\"index.php?route=common/g4\">
-\t\t\t\t\t\t\t\t<img src=\"assets/imgb3.JPG\" alt=\"product banner\">
+\t\t\t\t\t\t\t\t<img src=\"assets/imgb3.jpg\" alt=\"product banner\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t<div class=\"banner-content text-center\">
 \t\t\t\t\t\t\t\t<h2 class=\"banner-text2\">Gemstone<br>Education</h2>
@@ -262,7 +262,7 @@ class __TwigTemplate_9c344b322d7e59c69fd8bd661fab821f7770f9120b447da5a70fa9d64a8
 </style>
 
 <!-- Page Title -->
-<section class=\"page-title-image \" style=\"margin-top: 100px;\">
+<section class=\"page-title-image \" style=\"padding-top: 100px;\">
 \t<div class=\"page_image overflow-hidden\">
 \t\t<img class=\"lazyload ani-zoom\" src=\"assets/aboutbg.jpg\" data-src=\"assets/aboutbg.jpg\" alt=\"Banner\">
 \t</div>
@@ -358,7 +358,7 @@ class __TwigTemplate_9c344b322d7e59c69fd8bd661fab821f7770f9120b447da5a70fa9d64a8
 \t\t\t\t\t<div class=\"col-sm-6 mt-3\">
 \t\t\t\t\t\t<figure class=\"banner-statistics mt-20\">
 \t\t\t\t\t\t\t<a href=\"index.php?route=common/g3\">
-\t\t\t\t\t\t\t\t<img src=\"assets/imgb2.JPG\" alt=\"product banner\">
+\t\t\t\t\t\t\t\t<img src=\"assets/imgb2.jpg\" alt=\"product banner\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t<div class=\"banner-content text-center\">
 \t\t\t\t\t\t\t\t<h2 class=\"banner-text2\">Metal
@@ -385,7 +385,7 @@ class __TwigTemplate_9c344b322d7e59c69fd8bd661fab821f7770f9120b447da5a70fa9d64a8
 \t\t\t\t\t<div class=\"col-sm-6 mt-3\">
 \t\t\t\t\t\t<figure class=\"banner-statistics mt-20\">
 \t\t\t\t\t\t\t<a href=\"index.php?route=common/g4\">
-\t\t\t\t\t\t\t\t<img src=\"assets/imgb3.JPG\" alt=\"product banner\">
+\t\t\t\t\t\t\t\t<img src=\"assets/imgb3.jpg\" alt=\"product banner\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t<div class=\"banner-content text-center\">
 \t\t\t\t\t\t\t\t<h2 class=\"banner-text2\">Gemstone<br>Education</h2>
@@ -425,6 +425,6 @@ class __TwigTemplate_9c344b322d7e59c69fd8bd661fab821f7770f9120b447da5a70fa9d64a8
 
 
 {{ footer }}
-", "catalog/view/template/common/education.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\education.twig");
+", "catalog/view/template/common/education.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\education.twig");
     }
 }

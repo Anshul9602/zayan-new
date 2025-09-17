@@ -41,7 +41,7 @@ class __TwigTemplate_f36c05c0f4a67c02f11c0848e114d7cd11d8eb364396dab08daa18ab402
         // line 1
         yield ($context["header"] ?? null);
         yield "
-<div id=\"common-success\" class=\"container\">
+<div id=\"common-success\" class=\"container\" style=\"margin-top: 100px; min-height: 50vh;\">
   <ul class=\"breadcrumb\">
     ";
         // line 4
@@ -127,7 +127,7 @@ class __TwigTemplate_f36c05c0f4a67c02f11c0848e114d7cd11d8eb364396dab08daa18ab402
     public function getSourceContext(): Source
     {
         return new Source("{{ header }}
-<div id=\"common-success\" class=\"container\">
+<div id=\"common-success\" class=\"container\" style=\"margin-top: 100px; min-height: 50vh;\">
   <ul class=\"breadcrumb\">
     {% for breadcrumb in breadcrumbs %}
       <li class=\"breadcrumb-item\"><a href=\"{{ breadcrumb.href }}\">{{ breadcrumb.text }}</a></li>
@@ -142,6 +142,6 @@ class __TwigTemplate_f36c05c0f4a67c02f11c0848e114d7cd11d8eb364396dab08daa18ab402
     {{ column_right }}</div>
 </div>
 {{ footer }}
-", "catalog/view/template/common/success.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\success.twig");
+", "catalog/view/template/common/success.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\success.twig");
     }
 }

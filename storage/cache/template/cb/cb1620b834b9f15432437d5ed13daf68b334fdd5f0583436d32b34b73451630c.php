@@ -873,7 +873,16 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t</div>
 \t</div>
 \t<!-- /Blog -->
+<style>
+@media (max-width:1600px){
+\t.popup-img{
+\t\twidth: 100% !important;
+\t\tobject-fit: auto;
+\t}
+}
 
+
+</style>
 
 \t<!-- New Letter -->
 \t<div class=\"modal modalCentered fade modal-newletter auto-popup\" id=\"newLetter\">
@@ -886,7 +895,7 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 \t\t\t\t\t<div class=\"col-md-6\" style=\"display: flex; align-items: center; justify-content: center;\">
 \t\t\t\t\t\t<div class=\"modal-heading\">
 \t\t\t\t\t\t\t<div class=\"image desk\">
-\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/news.jpg\" data-src=\"assets/news.jpg\" alt=\"Image\" style=\"width: 80%;  object-fit: cover;\">
+\t\t\t\t\t\t\t\t<img class=\"lazyload popup-img\" src=\"assets/news.jpg\" data-src=\"assets/news.jpg\" alt=\"Image\" style=\"width: 100%;object-fit: cover;  \">
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"image mob\">
 \t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/pop-mob.jpg\" data-src=\"assets/pop-mob.jpg\" alt=\"Image\" style=\"width: 80%;  object-fit: cover;\">
@@ -894,8 +903,8 @@ class __TwigTemplate_1ea4976a5474dd0d7c7b57f676de644be7e772ef963d0f5a5695a5ab001
 
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-md-6\">
-\t\t\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t<div class=\"col-md-6\" style=\"align-items: center;  display: flex;\">
+\t\t\t\t\t\t<div class=\"modal-body\" style=\"margin:auto;\">
 \t\t\t\t\t\t\t<p class=\"h6 sub-title\">Subscribe to our newletter!</p>
 \t\t\t\t\t\t\t<h3 class=\"fw-normal title\">Receive 10% off your next order, along with exclusive offers and more!</h3>
 \t\t\t\t\t\t\t<form class=\"form-newletter\">
@@ -950,7 +959,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t</script>
 
 \t";
-        // line 627
+        // line 636
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -978,7 +987,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
      */
     public function getDebugInfo(): array
     {
-        return array (  954 => 627,  652 => 327,  624 => 304,  621 => 303,  615 => 301,  610 => 299,  605 => 298,  602 => 297,  600 => 296,  593 => 294,  582 => 286,  571 => 280,  560 => 274,  555 => 271,  547 => 268,  539 => 267,  535 => 266,  529 => 263,  526 => 262,  522 => 261,  508 => 250,  488 => 232,  468 => 225,  457 => 219,  454 => 218,  448 => 216,  443 => 214,  438 => 213,  435 => 212,  433 => 211,  426 => 209,  415 => 201,  404 => 195,  393 => 189,  388 => 186,  380 => 183,  372 => 182,  368 => 181,  362 => 178,  359 => 177,  355 => 176,  343 => 172,  326 => 171,  321 => 168,  303 => 164,  295 => 163,  292 => 162,  275 => 161,  262 => 150,  248 => 142,  241 => 140,  232 => 136,  228 => 135,  224 => 133,  220 => 132,  214 => 128,  200 => 120,  193 => 118,  184 => 114,  180 => 113,  176 => 111,  172 => 110,  145 => 85,  131 => 79,  127 => 78,  121 => 74,  117 => 73,  42 => 1,);
+        return array (  963 => 636,  652 => 327,  624 => 304,  621 => 303,  615 => 301,  610 => 299,  605 => 298,  602 => 297,  600 => 296,  593 => 294,  582 => 286,  571 => 280,  560 => 274,  555 => 271,  547 => 268,  539 => 267,  535 => 266,  529 => 263,  526 => 262,  522 => 261,  508 => 250,  488 => 232,  468 => 225,  457 => 219,  454 => 218,  448 => 216,  443 => 214,  438 => 213,  435 => 212,  433 => 211,  426 => 209,  415 => 201,  404 => 195,  393 => 189,  388 => 186,  380 => 183,  372 => 182,  368 => 181,  362 => 178,  359 => 177,  355 => 176,  343 => 172,  326 => 171,  321 => 168,  303 => 164,  295 => 163,  292 => 162,  275 => 161,  262 => 150,  248 => 142,  241 => 140,  232 => 136,  228 => 135,  224 => 133,  220 => 132,  214 => 128,  200 => 120,  193 => 118,  184 => 114,  180 => 113,  176 => 111,  172 => 110,  145 => 85,  131 => 79,  127 => 78,  121 => 74,  117 => 73,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -1533,7 +1542,16 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t</div>
 \t</div>
 \t<!-- /Blog -->
+<style>
+@media (max-width:1600px){
+\t.popup-img{
+\t\twidth: 100% !important;
+\t\tobject-fit: auto;
+\t}
+}
 
+
+</style>
 
 \t<!-- New Letter -->
 \t<div class=\"modal modalCentered fade modal-newletter auto-popup\" id=\"newLetter\">
@@ -1546,7 +1564,7 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 \t\t\t\t\t<div class=\"col-md-6\" style=\"display: flex; align-items: center; justify-content: center;\">
 \t\t\t\t\t\t<div class=\"modal-heading\">
 \t\t\t\t\t\t\t<div class=\"image desk\">
-\t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/news.jpg\" data-src=\"assets/news.jpg\" alt=\"Image\" style=\"width: 80%;  object-fit: cover;\">
+\t\t\t\t\t\t\t\t<img class=\"lazyload popup-img\" src=\"assets/news.jpg\" data-src=\"assets/news.jpg\" alt=\"Image\" style=\"width: 100%;object-fit: cover;  \">
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"image mob\">
 \t\t\t\t\t\t\t\t<img class=\"lazyload\" src=\"assets/pop-mob.jpg\" data-src=\"assets/pop-mob.jpg\" alt=\"Image\" style=\"width: 80%;  object-fit: cover;\">
@@ -1554,8 +1572,8 @@ if (\$(this).scrollTop() > 50) { // adjust 50 to when you want the color change
 
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-md-6\">
-\t\t\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t<div class=\"col-md-6\" style=\"align-items: center;  display: flex;\">
+\t\t\t\t\t\t<div class=\"modal-body\" style=\"margin:auto;\">
 \t\t\t\t\t\t\t<p class=\"h6 sub-title\">Subscribe to our newletter!</p>
 \t\t\t\t\t\t\t<h3 class=\"fw-normal title\">Receive 10% off your next order, along with exclusive offers and more!</h3>
 \t\t\t\t\t\t\t<form class=\"form-newletter\">

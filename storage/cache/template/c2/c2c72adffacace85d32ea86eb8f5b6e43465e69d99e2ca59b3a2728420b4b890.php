@@ -74,7 +74,7 @@ class __TwigTemplate_e5d2408ffb67f2026294592bc0eed464db8cccfe73d4e7d2f7e21e516f9
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js\"></script>
 
- <img src=\"assets/195.jpg\" class=\"img-fluid\">
+ <img src=\"assets/195.jpg\" class=\"img-fluid\" style=\"padding-top:100px;\">
 <br /><br /><br />
 <div class=\"container\">
     <div class=\"row\" style=\"display:flex; align-items:center \">
@@ -103,7 +103,7 @@ A one time fee of \$35 is charged which includes 3 corrections. Any additional c
 <div class=\"container\">
   <div class=\"row\">
             <div class=\"col-sm-6 p5\">
-                <a href=\"cad-cam-services\">
+                <a href=\"\">
                     <h3 class=\"text-center\">Sketch or Image</h3>
                     <p class=\"text-center text-black\">Upload your sketch or image and receive a quote and
                     <br class=\"d-none d-lg-block\" />render within 3-4 business days.</p>
@@ -112,7 +112,7 @@ A one time fee of \$35 is charged which includes 3 corrections. Any additional c
                 </a>
             </div>
             <div class=\"col-sm-6 p5\">
-                <a href=\"cad-cam-services\" >
+                <a href=\"\" >
                     <h3 class=\"text-center\">CAD Design</h3>
                     <p class=\"text-center text-black\">Upload your digital CAD file and receive a quote <br class=\"d-none d-lg-block\" />and render within 3-4 business day.</p>
                     <img src=\"assets/7.jpg\" alt=\"\" class=\"img-responsive m1\">
@@ -212,7 +212,7 @@ A one time fee of \$35 is charged which includes 3 corrections. Any additional c
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js\"></script>
 
- <img src=\"assets/195.jpg\" class=\"img-fluid\">
+ <img src=\"assets/195.jpg\" class=\"img-fluid\" style=\"padding-top:100px;\">
 <br /><br /><br />
 <div class=\"container\">
     <div class=\"row\" style=\"display:flex; align-items:center \">
@@ -241,7 +241,7 @@ A one time fee of \$35 is charged which includes 3 corrections. Any additional c
 <div class=\"container\">
   <div class=\"row\">
             <div class=\"col-sm-6 p5\">
-                <a href=\"cad-cam-services\">
+                <a href=\"\">
                     <h3 class=\"text-center\">Sketch or Image</h3>
                     <p class=\"text-center text-black\">Upload your sketch or image and receive a quote and
                     <br class=\"d-none d-lg-block\" />render within 3-4 business days.</p>
@@ -250,7 +250,7 @@ A one time fee of \$35 is charged which includes 3 corrections. Any additional c
                 </a>
             </div>
             <div class=\"col-sm-6 p5\">
-                <a href=\"cad-cam-services\" >
+                <a href=\"\" >
                     <h3 class=\"text-center\">CAD Design</h3>
                     <p class=\"text-center text-black\">Upload your digital CAD file and receive a quote <br class=\"d-none d-lg-block\" />and render within 3-4 business day.</p>
                     <img src=\"assets/7.jpg\" alt=\"\" class=\"img-responsive m1\">
@@ -283,6 +283,6 @@ A one time fee of \$35 is charged which includes 3 corrections. Any additional c
   adaptiveHeight: true
 });
 </script>
-", "catalog/view/template/common/cad.twig", "C:\\xampp\\htdocs\\zyannew\\catalog\\view\\template\\common\\cad.twig");
+", "catalog/view/template/common/cad.twig", "C:\\xampp\\htdocs\\newzyan\\catalog\\view\\template\\common\\cad.twig");
     }
 }
