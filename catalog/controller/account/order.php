@@ -287,6 +287,9 @@ class Order extends \Opencart\System\Engine\Controller {
 			// Upload
 			$this->load->model('tool/upload');
 
+			// Image
+			$this->load->model('tool/image');
+
 			// Products
 			$data['products'] = [];
 
@@ -351,7 +354,17 @@ class Order extends \Opencart\System\Engine\Controller {
 					$subscription = '';
 				}
 
+				// Get product image from the product table since order_product doesn't contain image
+				$product_info = $this->model_catalog_product->getProduct($product['product_id']);
+				$product_image = '';
+				if ($product_info && !empty($product_info['image'])) {
+					$product_image = $this->model_tool_image->resize($product_info['image'], 50, 50);
+				} else {
+					$product_image = $this->model_tool_image->resize('placeholder.png', 50, 50);
+				}
+
 				$data['products'][] = [
+					'image'                => $product_image,
 					'option'               => $option_data,
 					'subscription_plan_id' => $subscription_plan_id,
 					'subscription_plan'    => $subscription_plan,

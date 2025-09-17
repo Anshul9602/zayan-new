@@ -944,3 +944,42 @@ Backtrace: 13
 File: C:\xampp\htdocs\newzyan\index.php
 Line: 20
 Function: require_once
+2025-09-17 06:08:12 - PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\newzyan\catalog\controller\account\order.php on line 358
+2025-09-17 06:08:12 - Error: Opencart\Catalog\Model\Tool\Image::resize(): Argument #1 ($filename) must be of type string, null given, called in C:\xampp\htdocs\newzyan\system\engine\loader.php on line 343
+File: C:\xampp\htdocs\newzyan\catalog\model\tool\image.php
+Line: 23
+
+Backtrace: 0
+File: C:\xampp\htdocs\newzyan\system\engine\loader.php
+Line: 343
+Class: Opencart\Catalog\Model\Tool\Image
+Function: resize
+
+Backtrace: 1
+File: C:\xampp\htdocs\newzyan\system\engine\proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 2
+File: C:\xampp\htdocs\newzyan\catalog\controller\account\order.php
+Line: 358
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 3
+File: C:\xampp\htdocs\newzyan\system\engine\action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Account\Order
+Function: info
+
+Backtrace: 4
+File: C:\xampp\htdocs\newzyan\system\framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: C:\xampp\htdocs\newzyan\index.php
+Line: 20
+Function: require_once

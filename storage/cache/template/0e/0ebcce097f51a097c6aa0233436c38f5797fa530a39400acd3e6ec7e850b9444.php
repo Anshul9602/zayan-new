@@ -77,6 +77,9 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
           .tf-sticky-btn-atc .title, .tf-sticky-btn-atc .tf-sticky-atc-product {
 \t\t\tdisplay: block !important;
 \t\t}
+          .tf-sticky-btn-atc {
+        bottom: 0px !important;
+    }
 \t}
 
 \t/* Dynamic color indicators */
@@ -125,22 +128,22 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
 \t\t<div class=\"content\" style=\"padding-bottom: 19px;\">
 \t\t\t<ul class=\"breadcrumbs-page\">
 \t\t\t\t";
-        // line 85
+        // line 88
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["breadcrumbs"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["breadcrumb"]) {
-            // line 86
+            // line 89
             yield "            <li class=\"breadcrumb-item\" style=\"display:flex;\"><a href=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "href", [], "any", false, false, false, 86);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "href", [], "any", false, false, false, 89);
             yield "\">";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "text", [], "any", false, false, false, 86);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "text", [], "any", false, false, false, 89);
             yield "</a></li>
 \t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['breadcrumb'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 88
+        // line 91
         yield "\t\t\t</ul>
 \t\t</div>
 \t</div>
@@ -158,50 +161,50 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
 \t\t\t\t<div class=\"col-md-6\">
                <div class=\"tf-product-media-wrap sticky-top\">
 \t\t\t\t\t\t";
-        // line 105
+        // line 108
         yield "\t\t\t\t\t\t";
         $context["all_images"] = [];
-        // line 106
-        yield "\t\t\t\t\t\t";
-        if (($context["thumb"] ?? null)) {
-            // line 107
-            yield "\t\t\t\t\t\t\t";
-            $context["all_images"] = Twig\Extension\CoreExtension::merge(($context["all_images"] ?? null), [["thumb" => ($context["thumb"] ?? null), "popup" => ($context["popup"] ?? null)]]);
-            // line 108
-            yield "\t\t\t\t\t\t";
-        }
         // line 109
         yield "\t\t\t\t\t\t";
-        if (($context["images"] ?? null)) {
+        if (($context["thumb"] ?? null)) {
             // line 110
             yield "\t\t\t\t\t\t\t";
-            $context["all_images"] = Twig\Extension\CoreExtension::merge(($context["all_images"] ?? null), ($context["images"] ?? null));
+            $context["all_images"] = Twig\Extension\CoreExtension::merge(($context["all_images"] ?? null), [["thumb" => ($context["thumb"] ?? null), "popup" => ($context["popup"] ?? null)]]);
             // line 111
             yield "\t\t\t\t\t\t";
         }
         // line 112
+        yield "\t\t\t\t\t\t";
+        if (($context["images"] ?? null)) {
+            // line 113
+            yield "\t\t\t\t\t\t\t";
+            $context["all_images"] = Twig\Extension\CoreExtension::merge(($context["all_images"] ?? null), ($context["images"] ?? null));
+            // line 114
+            yield "\t\t\t\t\t\t";
+        }
+        // line 115
         yield "\t\t\t\t\t\t<div class=\"product-thumbs-slider\">
 \t\t\t\t\t\t\t<div dir=\"ltr\" class=\"swiper tf-product-media-thumbs other-image-zoom\" data-direction=\"vertical\" data-preview=\"4.7\">
 \t\t\t\t\t\t\t\t<div class=\"swiper-wrapper stagger-wrap\">
 \t\t\t\t\t\t\t\t\t";
-        // line 115
+        // line 118
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["all_images"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
-            // line 116
+            // line 119
             yield "\t\t\t\t\t\t\t\t\t\t<div class=\"swiper-slide stagger-item\" data-size=\"M\" data-color=\"gray\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"item\">
                                  <img class=\"lazyload\"
                                     data-src=\"";
-            // line 119
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 119);
+            // line 122
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 122);
             yield "\"
                                     src=\"";
-            // line 120
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 120);
+            // line 123
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 123);
             yield "\"
                                     alt=\"";
-            // line 121
+            // line 124
             yield ($context["heading_title"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t</div>
@@ -211,39 +214,39 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['img'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 125
+        // line 128
         yield "\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"flat-wrap-media-product\">
 \t\t\t\t\t\t\t\t<div dir=\"ltr\" class=\"swiper tf-product-media-main\" id=\"gallery-swiper-started\">
 \t\t\t\t\t\t\t\t\t<div class=\"swiper-wrapper\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 130
+        // line 133
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["all_images"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
-            // line 131
+            // line 134
             yield "\t\t\t\t\t\t\t\t\t\t\t<div class=\"swiper-slide\" data-size=\"M\" data-color=\"gray\">
                                  <a href=\"";
-            // line 132
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "popup", [], "any", false, false, false, 132);
+            // line 135
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "popup", [], "any", false, false, false, 135);
             yield "\" target=\"_blank\" class=\"item\"
                                     data-pswp-width=\"860px\" data-pswp-height=\"1146px\">
                                  <img class=\"tf-image-zoom lazyload\"
                                     data-zoom=\"";
-            // line 135
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "popup", [], "any", false, false, false, 135);
+            // line 138
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "popup", [], "any", false, false, false, 138);
             yield "\"
                                     data-src=\"";
-            // line 136
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 136);
+            // line 139
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 139);
             yield "\"
                                     src=\"";
-            // line 137
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 137);
+            // line 140
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["img"], "thumb", [], "any", false, false, false, 140);
             yield "\"
                                     alt=\"";
-            // line 138
+            // line 141
             yield ($context["heading_title"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t</a>
@@ -253,12 +256,12 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['img'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 142
+        // line 145
         yield "\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t";
-        // line 146
-        yield "\t\t\t\t\t\t\t\t\t";
         // line 149
+        yield "\t\t\t\t\t\t\t\t\t";
+        // line 152
         yield "\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -270,126 +273,126 @@ class __TwigTemplate_47acf42033e56d5c7665f5ddd66f6da0c13c59f5fdb9dbe28b206d74049
 \t\t\t\t\t<div class=\"tf-product-info-wrap position-relative\">
 \t\t\t\t\t\t<form id=\"form-product\">
 \t\t\t\t\t\t\t<input type=\"hidden\" id=\"input-product-id\" name=\"product_id\" value=\"";
-        // line 159
+        // line 162
         yield ($context["product_id"] ?? null);
         yield "\">
 \t\t\t\t\t\t\t";
-        // line 160
+        // line 163
         if ((($context["options"] ?? null) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["options"] ?? null)) > 0))) {
-            // line 161
+            // line 164
             yield "\t\t\t\t\t\t\t\t";
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                // line 162
+                // line 165
                 yield "\t\t\t\t\t\t\t\t\t";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 162) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 162)) > 0))) {
-                    // line 163
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 165) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 165)) > 0))) {
+                    // line 166
                     yield "\t\t\t\t\t\t\t\t\t\t";
-                    if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 163) == "select")) {
-                        // line 164
+                    if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 166) == "select")) {
+                        // line 167
                         yield "\t\t\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"option[";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 164);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 167);
                         yield "]\" value=\"";
-                        yield CoreExtension::getAttribute($this->env, $this->source, (($_v0 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 164)) && is_array($_v0) || $_v0 instanceof ArrayAccess ? ($_v0[0] ?? null) : null), "product_option_value_id", [], "any", false, false, false, 164);
+                        yield CoreExtension::getAttribute($this->env, $this->source, (($_v0 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 167)) && is_array($_v0) || $_v0 instanceof ArrayAccess ? ($_v0[0] ?? null) : null), "product_option_value_id", [], "any", false, false, false, 167);
                         yield "\" id=\"input-option-";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 164);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 167);
                         yield "\">
 \t\t\t\t\t\t\t\t\t\t";
-                    } elseif ((CoreExtension::getAttribute($this->env, $this->source,                     // line 165
-$context["option"], "type", [], "any", false, false, false, 165) == "radio")) {
-                        // line 166
+                    } elseif ((CoreExtension::getAttribute($this->env, $this->source,                     // line 168
+$context["option"], "type", [], "any", false, false, false, 168) == "radio")) {
+                        // line 169
                         yield "\t\t\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"option[";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 166);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 169);
                         yield "]\" value=\"";
-                        yield CoreExtension::getAttribute($this->env, $this->source, (($_v1 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 166)) && is_array($_v1) || $_v1 instanceof ArrayAccess ? ($_v1[0] ?? null) : null), "product_option_value_id", [], "any", false, false, false, 166);
+                        yield CoreExtension::getAttribute($this->env, $this->source, (($_v1 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 169)) && is_array($_v1) || $_v1 instanceof ArrayAccess ? ($_v1[0] ?? null) : null), "product_option_value_id", [], "any", false, false, false, 169);
                         yield "\" id=\"input-option-";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 166);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 169);
                         yield "\">
 \t\t\t\t\t\t\t\t\t\t";
                     }
-                    // line 168
+                    // line 171
                     yield "\t\t\t\t\t\t\t\t\t";
                 }
-                // line 169
+                // line 172
                 yield "\t\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 170
+            // line 173
             yield "\t\t\t\t\t\t\t";
         }
-        // line 171
+        // line 174
         yield "\t\t\t\t\t\t\t<div class=\"tf-zoom-main sticky-top\"></div>
 \t\t\t\t\t\t\t<div class=\"tf-product-info-list other-image-zoom\">
 \t\t\t\t\t\t\t\t<h2 class=\"product-info-name\">";
-        // line 173
+        // line 176
         yield ($context["heading_title"] ?? null);
         yield "</h2>
 \t\t\t\t\t\t\t\t<ul class=\"tf-product-cate-sku\">
 \t\t\t\t\t\t\t\t\t<li class=\"item-cate-sku h6\">
 \t\t\t\t\t\t\t\t\t\t<span class=\"label fw-6 text-black\">SKU:</span>
 \t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"value link text-main-2\">";
-        // line 177
+        // line 180
         yield ($context["model"] ?? null);
         yield "</a>
 \t\t\t\t\t\t\t\t\t</li>
 
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t";
-        // line 181
+        // line 184
         if (($context["logged"] ?? null)) {
-            // line 182
+            // line 185
             yield "\t\t\t\t\t\t\t\t<div class=\"tf-product-heading mt-2 mb-0\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"product-info-price price-wrap\">
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"price-new price-on-sale h2 fw-4\">";
-            // line 184
+            // line 187
             yield ($context["tax"] ?? null);
             yield "</span>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t";
         }
-        // line 188
+        // line 191
         yield "
 
 \t\t\t\t\t\t\t\t";
-        // line 190
+        // line 193
         if ((($context["options"] ?? null) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["options"] ?? null)) > 0))) {
-            // line 191
+            // line 194
             yield "\t\t\t\t\t\t\t\t\t<div class=\"tf-product-variant mt-3\">
 \t\t\t\t\t\t\t\t\t\t";
-            // line 192
+            // line 195
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                // line 193
+                // line 196
                 yield "\t\t\t\t\t\t\t\t\t\t\t";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 193) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 193)) > 0))) {
-                    // line 194
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 196) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 196)) > 0))) {
+                    // line 197
                     yield "\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"variant-picker-item variant-";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 194);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 197);
                     yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"variant-picker-label\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"h4 fw-semibold\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-                    // line 197
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 197);
+                    // line 200
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 200);
                     yield "
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"variant-picker-label-value value-current-option\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-                    // line 199
-                    yield CoreExtension::getAttribute($this->env, $this->source, (($_v2 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 199)) && is_array($_v2) || $_v2 instanceof ArrayAccess ? ($_v2[0] ?? null) : null), "name", [], "any", false, false, false, 199);
+                    // line 202
+                    yield CoreExtension::getAttribute($this->env, $this->source, (($_v2 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 202)) && is_array($_v2) || $_v2 instanceof ArrayAccess ? ($_v2[0] ?? null) : null), "name", [], "any", false, false, false, 202);
                     yield "</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"variant-picker-values mt-3\" style=\"display:flex;gap:20px;\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-                    // line 204
+                    // line 207
                     $context['_parent'] = $context;
-                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 204));
+                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 207));
                     $context['loop'] = [
                       'parent' => $context['_parent'],
                       'index0' => 0,
@@ -404,42 +407,42 @@ $context["option"], "type", [], "any", false, false, false, 165) == "radio")) {
                         $context['loop']['last'] = 1 === $length;
                     }
                     foreach ($context['_seq'] as $context["_key"] => $context["option_value"]) {
-                        // line 205
+                        // line 208
                         yield "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-                        if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 205) == "select")) {
-                            // line 206
+                        if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 208) == "select")) {
+                            // line 209
                             yield "                                             <div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"size-btn ";
-                            // line 207
-                            if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 207)) {
+                            // line 210
+                            if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 210)) {
                                 yield "active ";
                             }
                             yield "\" style=\"background:url( ";
                             yield (($_v3 = $context["option_value"]) && is_array($_v3) || $_v3 instanceof ArrayAccess ? ($_v3["image"] ?? null) : null);
                             yield ") no-repeat center center; background-size: cover;\" data-size=\"";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 207);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 210);
                             yield "\"></span>
                                                 <p>";
-                            // line 208
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 208);
+                            // line 211
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 211);
                             yield "</p></div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-                        } elseif ((CoreExtension::getAttribute($this->env, $this->source,                         // line 209
-$context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
-                            // line 210
+                        } elseif ((CoreExtension::getAttribute($this->env, $this->source,                         // line 212
+$context["option"], "type", [], "any", false, false, false, 212) == "radio")) {
+                            // line 213
                             yield "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"color ";
-                            if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 210)) {
+                            if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 213)) {
                                 yield "active";
                             }
                             yield "\" data-color=\"";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 210);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 213);
                             yield "\">";
-                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 210);
+                            yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 213);
                             yield "</span>
 
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
                         }
-                        // line 213
+                        // line 216
                         yield "\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
                         ++$context['loop']['index0'];
                         ++$context['loop']['index'];
@@ -453,29 +456,29 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_key'], $context['option_value'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 214
+                    // line 217
                     yield "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t";
                 }
-                // line 217
+                // line 220
                 yield "\t\t\t\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 218
+            // line 221
             yield "\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t";
         }
-        // line 220
+        // line 223
         yield "
 \t\t\t\t\t\t\t\t
 
 \t\t\t\t\t\t\t\t";
-        // line 223
+        // line 226
         if (($context["logged"] ?? null)) {
-            // line 224
+            // line 227
             yield "\t\t\t\t\t\t\t\t\t<div class=\"tf-product-total-quantity\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"group-btn\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"wg-quantity\">
@@ -483,7 +486,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-minus\"></i>
 \t\t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t\t\t<input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"";
-            // line 230
+            // line 233
             yield ($context["minimum"] ?? null);
             yield "\">
 \t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-quantity btn-increase\">
@@ -495,7 +498,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-shopping-cart-simple\"></i>
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"hover-tooltip box-icon btn-add-wishlist\" data-url=\"index.php?route=account/wishlist.add&language=";
-            // line 239
+            // line 242
             yield ($context["language"] ?? null);
             yield "\" data-product-id=\"";
             yield ($context["product_id"] ?? null);
@@ -508,7 +511,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t";
         } else {
-            // line 247
+            // line 250
             yield "\t\t\t\t\t\t\t\t\t<div class=\"tf-product-total-quantity\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"group-btn\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"index.php?route=account/login\" class=\"tf-btn animate-btn \" style=\"width:100%;\">
@@ -522,7 +525,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t";
         }
-        // line 259
+        // line 262
         yield "\t\t\t\t\t\t\t\t<div class=\"tf-product-extra-link d-none\">
 \t\t\t\t\t\t\t\t\t<a href=\"#compareColor\" data-bs-toggle=\"modal\" class=\"product-extra-icon link\">
 \t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-swatches\"></i>Compare color
@@ -590,30 +593,30 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t<div class=\"tf-mini-cart-item \">
 \t\t\t\t\t\t<div class=\"tf-mini-cart-image\">
                      <img class=\"lazyload\" data-src=\"";
-        // line 325
+        // line 328
         yield ($context["thumb"] ?? null);
         yield "\"
                         src=\"";
-        // line 326
+        // line 329
         yield ($context["thumb"] ?? null);
         yield "\" alt=\"img-product\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"tf-mini-cart-info\">
 \t\t\t\t\t\t\t<h6 class=\"title\">
 \t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\" class=\"link text-line-clamp-1\">";
-        // line 330
+        // line 333
         yield ($context["heading_title"] ?? null);
         yield "</a>
 \t\t\t\t\t\t\t</h6>
 \t\t\t\t\t\t\t<div class=\"size\">
 \t\t\t\t\t\t\t\t<div class=\"text-small text-main-2 sub\" id=\"selected-size\">Size: <span id=\"size-value\">";
-        // line 333
+        // line 336
         if (($context["options"] ?? null)) {
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                if (((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 333) == "select") && CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 333))) {
-                    yield CoreExtension::getAttribute($this->env, $this->source, (($_v4 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 333)) && is_array($_v4) || $_v4 instanceof ArrayAccess ? ($_v4[0] ?? null) : null), "name", [], "any", false, false, false, 333);
+                if (((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 336) == "select") && CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 336))) {
+                    yield CoreExtension::getAttribute($this->env, $this->source, (($_v4 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 336)) && is_array($_v4) || $_v4 instanceof ArrayAccess ? ($_v4[0] ?? null) : null), "name", [], "any", false, false, false, 336);
                 }
             }
             $_parent = $context['_parent'];
@@ -624,13 +627,13 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
         }
         yield "</span></div>
 \t\t\t\t\t\t\t\t<div class=\"text-small text-main-2 sub\" id=\"selected-color\">Color: <span id=\"color-value\">";
-        // line 334
+        // line 337
         if (($context["options"] ?? null)) {
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                if (((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 334) == "radio") && CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 334))) {
-                    yield CoreExtension::getAttribute($this->env, $this->source, (($_v5 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 334)) && is_array($_v5) || $_v5 instanceof ArrayAccess ? ($_v5[0] ?? null) : null), "name", [], "any", false, false, false, 334);
+                if (((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 337) == "radio") && CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 337))) {
+                    yield CoreExtension::getAttribute($this->env, $this->source, (($_v5 = CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 337)) && is_array($_v5) || $_v5 instanceof ArrayAccess ? ($_v5[0] ?? null) : null), "name", [], "any", false, false, false, 337);
                 }
             }
             $_parent = $context['_parent'];
@@ -644,7 +647,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"h6 fw-semibold\" id=\"sticky-price\">
 \t\t\t\t\t\t\t\t";
-        // line 338
+        // line 341
         yield ($context["price"] ?? null);
         yield "
 \t\t\t\t\t\t\t</div>
@@ -654,31 +657,31 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t<div class=\"tf-sticky-atc-infos\">
 \t\t\t\t\t<form class=\"\">
 \t\t\t\t\t\t";
-        // line 345
+        // line 348
         if ((($context["options"] ?? null) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["options"] ?? null)) > 0))) {
-            // line 346
+            // line 349
             yield "\t\t\t\t\t\t\t";
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["options"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                // line 347
+                // line 350
                 yield "\t\t\t\t\t\t\t\t";
-                if ((((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 347) == "select") && CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 347)) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 347)) > 0))) {
-                    // line 348
+                if ((((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 350) == "select") && CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 350)) && (Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 350)) > 0))) {
+                    // line 351
                     yield "\t\t\t\t\t\t\t\t\t<div class=\"tf-sticky-atc-variant-price\">
 \t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">";
-                    // line 349
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 349);
+                    // line 352
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 352);
                     yield ":</h6>
 \t\t\t\t\t\t\t\t\t\t<div class=\"tf-select style-1\">
 \t\t\t\t\t\t\t\t\t\t\t<select class=\"font-sora\" name=\"option[";
-                    // line 351
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 351);
+                    // line 354
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 354);
                     yield "]\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
-                    // line 352
+                    // line 355
                     $context['_parent'] = $context;
-                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 352));
+                    $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value", [], "any", false, false, false, 355));
                     $context['loop'] = [
                       'parent' => $context['_parent'],
                       'index0' => 0,
@@ -693,15 +696,15 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                         $context['loop']['last'] = 1 === $length;
                     }
                     foreach ($context['_seq'] as $context["_key"] => $context["option_value"]) {
-                        // line 353
+                        // line 356
                         yield "                           <option value=\"";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 353);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "product_option_value_id", [], "any", false, false, false, 356);
                         yield "\"";
-                        if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 353)) {
+                        if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 356)) {
                             yield " selected=\"selected\"";
                         }
                         yield ">";
-                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 353);
+                        yield CoreExtension::getAttribute($this->env, $this->source, $context["option_value"], "name", [], "any", false, false, false, 356);
                         yield "</option>
 \t\t\t\t\t\t\t\t\t\t\t\t";
                         ++$context['loop']['index0'];
@@ -716,22 +719,22 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_key'], $context['option_value'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 355
+                    // line 358
                     yield "\t\t\t\t\t\t\t\t\t\t\t</select>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t";
                 }
-                // line 359
+                // line 362
                 yield "\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 360
+            // line 363
             yield "\t\t\t\t\t\t";
         }
-        // line 361
+        // line 364
         yield "\t\t\t\t\t\t<div class=\"tf-product-info-quantity\">
 \t\t\t\t\t\t\t<h6 class=\"title\">Quantity:</h6>
 \t\t\t\t\t\t\t<div class=\"wg-quantity\">
@@ -739,7 +742,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t\t\t\t\t<i class=\"icon icon-minus\"></i>
 \t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t<input class=\"quantity-product\" type=\"text\" name=\"quantity\" value=\"";
-        // line 367
+        // line 370
         yield ($context["minimum"] ?? null);
         yield "\">
 \t\t\t\t\t\t\t\t<button class=\"btn-quantity plus-btn\">
@@ -749,7 +752,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"tf-sticky-atc-btns\">
 \t\t\t\t\t\t\t<a href=\"#shoppingCart\" data-bs-toggle=\"offcanvas\" class=\"tf-btn animate-btn btn-add-to-cart\" data-url=\"index.php?route=checkout/cart.add&language=";
-        // line 374
+        // line 377
         yield ($context["language"] ?? null);
         yield "\" data-product-id=\"";
         yield ($context["product_id"] ?? null);
@@ -785,7 +788,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t\t<div class=\"tab-descriptions\">
 \t\t\t\t\t\t<p class=\"h6 desc\">
 \t\t\t\t\t\t\t";
-        // line 405
+        // line 408
         yield ($context["description"] ?? null);
         yield "
 \t\t\t\t\t\t</p>
@@ -795,41 +798,41 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
 \t\t\t\t<div class=\"tab-pane wd-product-descriptions\" id=\"policy\" role=\"tabpanel\">
 \t\t\t\t\t<div class=\"tab-policy\">
 \t\t\t\t\t\t";
-        // line 412
+        // line 415
         if (($context["attribute_groups"] ?? null)) {
-            // line 413
+            // line 416
             yield "\t\t\t\t\t\t\t<div class=\"product-attributes\">
 \t\t\t\t\t\t\t\t";
-            // line 414
+            // line 417
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["attribute_groups"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["attribute_group"]) {
-                // line 415
+                // line 418
                 yield "\t\t\t\t\t\t\t\t\t<div class=\"attribute-group mb-4\">
 \t\t\t\t\t\t\t\t\t\t<h4 class=\"attribute-group-title\">";
-                // line 416
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute_group"], "name", [], "any", false, false, false, 416);
+                // line 419
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute_group"], "name", [], "any", false, false, false, 419);
                 yield "</h4>
 \t\t\t\t\t\t\t\t\t\t<div class=\"table-responsive\">
 \t\t\t\t\t\t\t\t\t\t\t<table class=\"table table-striped table-bordered\">
 \t\t\t\t\t\t\t\t<tbody>
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
-                // line 420
+                // line 423
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["attribute_group"], "attribute", [], "any", false, false, false, 420));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["attribute_group"], "attribute", [], "any", false, false, false, 423));
                 foreach ($context['_seq'] as $context["_key"] => $context["attribute"]) {
-                    // line 421
+                    // line 424
                     yield "\t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"attribute-name\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>";
-                    // line 423
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute"], "name", [], "any", false, false, false, 423);
+                    // line 426
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute"], "name", [], "any", false, false, false, 426);
                     yield "</strong>
 \t\t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"attribute-value\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-                    // line 426
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute"], "text", [], "any", false, false, false, 426);
+                    // line 429
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["attribute"], "text", [], "any", false, false, false, 429);
                     yield "
 \t\t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t</tr>
@@ -838,7 +841,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['attribute'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 430
+                // line 433
                 yield "\t\t\t\t\t\t\t</tbody>
 \t\t\t\t\t</table>
 \t\t\t</div>
@@ -848,39 +851,39 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['attribute_group'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 435
+            // line 438
             yield "\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
         } else {
-            // line 437
+            // line 440
             yield "\t\t\t\t\t\t\t<p class=\"text-muted\">";
             yield ((array_key_exists("text_no_attributes", $context)) ? (Twig\Extension\CoreExtension::default(($context["text_no_attributes"] ?? null), "No attributes available for this product.")) : ("No attributes available for this product."));
             yield "</p>
 \t\t\t\t\t\t";
         }
-        // line 439
+        // line 442
         yield "\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
              <div class=\"tab-pane wd-product-descriptions\" id=\"reviews\" role=\"tabpanel\">
                 ";
-        // line 442
+        // line 445
         if (($context["review_status"] ?? null)) {
-            // line 443
+            // line 446
             yield "                   ";
             yield ($context["review"] ?? null);
             yield "
                 ";
         } else {
-            // line 445
+            // line 448
             yield "                   <div class=\"text-center py-5\">
                       <p class=\"text-muted\">";
-            // line 446
+            // line 449
             yield ((array_key_exists("text_no_reviews", $context)) ? (Twig\Extension\CoreExtension::default(($context["text_no_reviews"] ?? null), "Reviews are disabled for this product.")) : ("Reviews are disabled for this product."));
             yield "</p>
 \t\t\t\t\t\t\t\t</div>
                 ";
         }
-        // line 449
+        // line 452
         yield "\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -957,7 +960,7 @@ $context["option"], "type", [], "any", false, false, false, 209) == "radio")) {
    <div class=\"container\">
       <h1 class=\"sect-title text-center\">You May Also Like</h1>
       ";
-        // line 524
+        // line 527
         yield ($context["related"] ?? null);
         yield "
 \t\t\t\t\t\t\t</div>
@@ -1290,7 +1293,7 @@ var color = \$(this).data('color');
     function updateStickyPrice() {
         // Get base price
         var basePrice = '";
-        // line 854
+        // line 857
         yield ($context["price"] ?? null);
         yield "';
         var currentPrice = basePrice;
@@ -1441,7 +1444,7 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
 });
 </script>
 ";
-        // line 1002
+        // line 1005
         yield ($context["footer"] ?? null);
         yield from [];
     }
@@ -1467,7 +1470,7 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
      */
     public function getDebugInfo(): array
     {
-        return array (  1445 => 1002,  1294 => 854,  961 => 524,  884 => 449,  878 => 446,  875 => 445,  869 => 443,  867 => 442,  862 => 439,  856 => 437,  852 => 435,  842 => 430,  832 => 426,  826 => 423,  822 => 421,  818 => 420,  811 => 416,  808 => 415,  804 => 414,  801 => 413,  799 => 412,  789 => 405,  753 => 374,  743 => 367,  735 => 361,  732 => 360,  726 => 359,  720 => 355,  697 => 353,  680 => 352,  676 => 351,  671 => 349,  668 => 348,  665 => 347,  660 => 346,  658 => 345,  648 => 338,  628 => 334,  611 => 333,  605 => 330,  598 => 326,  594 => 325,  526 => 259,  512 => 247,  499 => 239,  487 => 230,  479 => 224,  477 => 223,  472 => 220,  468 => 218,  462 => 217,  457 => 214,  443 => 213,  430 => 210,  428 => 209,  424 => 208,  414 => 207,  411 => 206,  408 => 205,  391 => 204,  383 => 199,  378 => 197,  371 => 194,  368 => 193,  364 => 192,  361 => 191,  359 => 190,  355 => 188,  348 => 184,  344 => 182,  342 => 181,  335 => 177,  328 => 173,  324 => 171,  321 => 170,  315 => 169,  312 => 168,  302 => 166,  300 => 165,  291 => 164,  288 => 163,  285 => 162,  280 => 161,  278 => 160,  274 => 159,  262 => 149,  260 => 146,  257 => 142,  247 => 138,  243 => 137,  239 => 136,  235 => 135,  229 => 132,  226 => 131,  222 => 130,  215 => 125,  205 => 121,  201 => 120,  197 => 119,  192 => 116,  188 => 115,  183 => 112,  180 => 111,  177 => 110,  174 => 109,  171 => 108,  168 => 107,  165 => 106,  162 => 105,  144 => 88,  133 => 86,  129 => 85,  42 => 1,);
+        return array (  1448 => 1005,  1297 => 857,  964 => 527,  887 => 452,  881 => 449,  878 => 448,  872 => 446,  870 => 445,  865 => 442,  859 => 440,  855 => 438,  845 => 433,  835 => 429,  829 => 426,  825 => 424,  821 => 423,  814 => 419,  811 => 418,  807 => 417,  804 => 416,  802 => 415,  792 => 408,  756 => 377,  746 => 370,  738 => 364,  735 => 363,  729 => 362,  723 => 358,  700 => 356,  683 => 355,  679 => 354,  674 => 352,  671 => 351,  668 => 350,  663 => 349,  661 => 348,  651 => 341,  631 => 337,  614 => 336,  608 => 333,  601 => 329,  597 => 328,  529 => 262,  515 => 250,  502 => 242,  490 => 233,  482 => 227,  480 => 226,  475 => 223,  471 => 221,  465 => 220,  460 => 217,  446 => 216,  433 => 213,  431 => 212,  427 => 211,  417 => 210,  414 => 209,  411 => 208,  394 => 207,  386 => 202,  381 => 200,  374 => 197,  371 => 196,  367 => 195,  364 => 194,  362 => 193,  358 => 191,  351 => 187,  347 => 185,  345 => 184,  338 => 180,  331 => 176,  327 => 174,  324 => 173,  318 => 172,  315 => 171,  305 => 169,  303 => 168,  294 => 167,  291 => 166,  288 => 165,  283 => 164,  281 => 163,  277 => 162,  265 => 152,  263 => 149,  260 => 145,  250 => 141,  246 => 140,  242 => 139,  238 => 138,  232 => 135,  229 => 134,  225 => 133,  218 => 128,  208 => 124,  204 => 123,  200 => 122,  195 => 119,  191 => 118,  186 => 115,  183 => 114,  180 => 113,  177 => 112,  174 => 111,  171 => 110,  168 => 109,  165 => 108,  147 => 91,  136 => 89,  132 => 88,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -1509,6 +1512,9 @@ console.log(thrownError + \"\\n\" + xhr.statusText + \"\\n\" + xhr.responseText)
           .tf-sticky-btn-atc .title, .tf-sticky-btn-atc .tf-sticky-atc-product {
 \t\t\tdisplay: block !important;
 \t\t}
+          .tf-sticky-btn-atc {
+        bottom: 0px !important;
+    }
 \t}
 
 \t/* Dynamic color indicators */

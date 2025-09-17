@@ -47,7 +47,7 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
     <div class=\"container\">
         <div class=\"content\" style=\"padding-bottom: 19px;\">
             <ul class=\"breadcrumbs-page\">
-                ";
+    ";
         // line 8
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["breadcrumbs"] ?? null));
@@ -61,13 +61,13 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
             yield CoreExtension::getAttribute($this->env, $this->source, $context["breadcrumb"], "text", [], "any", false, false, false, 10);
             yield "</a>
                     </li>
-                ";
+    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['breadcrumb'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 13
-        yield "            </ul>
+        yield "  </ul>
             <h1 class=\"title-page\">Order Details</h1>
         </div>
     </div>
@@ -78,7 +78,7 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
 <section class=\"flat-spacing-3\">
     <div class=\"container\">
         <div id=\"account-order\">
-            ";
+      ";
         // line 24
         yield ($context["content_top"] ?? null);
         yield "
@@ -96,7 +96,7 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
         yield "</h4>
                             </div>
                             <div class=\"info-value\">
-                                ";
+            ";
         // line 36
         if (($context["invoice_no"] ?? null)) {
             yield ($context["invoice_no"] ?? null);
@@ -104,8 +104,8 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
             yield ($context["text_tbc"] ?? null);
         }
         // line 37
-        yield "                            </div>
-                        </div>
+        yield "          </div>
+        </div>
                     </div>
                     <div class=\"col-md-6\">
                         <div class=\"info-card\">
@@ -123,17 +123,17 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
         yield "
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+        </div>
+      </div>
             <!-- Address Information -->
-            ";
+      ";
         // line 54
         if ((($context["payment_address"] ?? null) || ($context["shipping_address"] ?? null))) {
             // line 55
             yield "                <div class=\"address-section mb-4\">
                     <div class=\"row g-3\">
-                        ";
+          ";
             // line 57
             if (($context["payment_address"] ?? null)) {
                 // line 58
@@ -147,17 +147,17 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
                 yield "</h4>
                                     </div>
                                     <div class=\"address-content\">
-                                        ";
+                ";
                 // line 65
                 yield ($context["payment_address"] ?? null);
                 yield "
                                     </div>
-                                </div>
-                            </div>
-                        ";
+              </div>
+            </div>
+          ";
             }
             // line 70
-            yield "                        ";
+            yield "          ";
             if (($context["shipping_address"] ?? null)) {
                 // line 71
                 yield "                            <div class=\"col-lg-6\">
@@ -170,25 +170,25 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
                 yield "</h4>
                                     </div>
                                     <div class=\"address-content\">
-                                        ";
+                ";
                 // line 78
                 yield ($context["shipping_address"] ?? null);
                 yield "
                                     </div>
-                                </div>
-                            </div>
-                        ";
+              </div>
+            </div>
+          ";
             }
             // line 83
             yield "                    </div>
-                </div>
-            ";
+        </div>
+      ";
         }
         // line 86
         yield "            <!-- Shipping & Payment Methods -->
             <div class=\"methods-section mb-4\">
                 <div class=\"row g-3\">
-                    ";
+        ";
         // line 89
         if (($context["shipping_method"] ?? null)) {
             // line 90
@@ -202,14 +202,14 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
             yield "</h4>
                                 </div>
                                 <div class=\"method-content\">
-                                    ";
+              ";
             // line 97
             yield ($context["shipping_method"] ?? null);
             yield "
                                 </div>
-                            </div>
-                        </div>
-                    ";
+            </div>
+          </div>
+        ";
         }
         // line 102
         yield "                    <div class=\"col-lg-6\">
@@ -222,13 +222,13 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
         yield "</h4>
                             </div>
                             <div class=\"method-content\">
-                                ";
+            ";
         // line 109
         yield ($context["payment_method"] ?? null);
         yield "
-                            </div>
-                        </div>
-                    </div>
+          </div>
+        </div>
+      </div>
                 </div>
             </div>
             <!-- Order Products -->
@@ -237,11 +237,11 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
                     <h3>Order Items</h3>
                 </div>
                 <div class=\"products-list\">
-                    ";
+            ";
         // line 121
         $context["product_row"] = 0;
         // line 122
-        yield "                    ";
+        yield "            ";
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["products"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
@@ -251,286 +251,293 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
             yield "\">
                             <div class=\"product-info\">
                                 <div class=\"product-details\">
+                                    <img src=\"";
+            // line 126
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 126);
+            yield "\" alt=\"";
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 126);
+            yield "\" class=\"product-image\">
                                     <h5 class=\"product-name\">
+
                                         <a href=\"";
-            // line 127
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "view", [], "any", false, false, false, 127);
+            // line 129
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "view", [], "any", false, false, false, 129);
             yield "\" class=\"link\">";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 127);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 129);
             yield "</a>
                                     </h5>
-                                    <div id=\"error-";
-            // line 129
+                  <div id=\"error-";
+            // line 131
             yield ($context["product_row"] ?? null);
             yield "-product\" class=\"invalid-feedback mt-0\"></div>
                                     <div class=\"product-meta\">
                                         <span class=\"meta-item\">
                                             <strong>";
-            // line 132
+            // line 134
             yield ($context["text_model"] ?? null);
             yield ":</strong> ";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "model", [], "any", false, false, false, 132);
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "model", [], "any", false, false, false, 134);
             yield "
                                         </span>
-                                        ";
-            // line 134
+                    ";
+            // line 136
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["product"], "option", [], "any", false, false, false, 134));
+            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["product"], "option", [], "any", false, false, false, 136));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                // line 135
+                // line 137
                 yield "                                            <span class=\"meta-item\">
                                                 <strong>";
-                // line 136
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 136);
+                // line 138
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 138);
                 yield ":</strong> ";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 136);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 138);
                 yield "
                                             </span>
-                                            <div id=\"error-";
-                // line 138
+                        <div id=\"error-";
+                // line 140
                 yield ($context["product_row"] ?? null);
                 yield "-option-";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 138);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 140);
                 yield "\" class=\"invalid-feedback mt-0\"></div>
-                                        ";
+                    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 140
-            yield "                                        ";
-            if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription", [], "any", false, false, false, 140)) {
-                // line 141
+            // line 142
+            yield "                    ";
+            if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription", [], "any", false, false, false, 142)) {
+                // line 143
                 yield "                                            <span class=\"meta-item\">
                                                 <strong>";
-                // line 142
+                // line 144
                 yield ($context["text_subscription"] ?? null);
                 yield ":</strong> 
                                                 ";
-                // line 143
-                if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription", [], "any", false, false, false, 143)) {
-                    // line 144
+                // line 145
+                if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription", [], "any", false, false, false, 145)) {
+                    // line 146
                     yield "                                                    <a href=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription", [], "any", false, false, false, 144);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription", [], "any", false, false, false, 146);
                     yield "\" target=\"_blank\" class=\"link\">";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription_plan", [], "any", false, false, false, 144);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription_plan", [], "any", false, false, false, 146);
                     yield "</a>
                                                 ";
                 } else {
-                    // line 146
+                    // line 148
                     yield "                                                    ";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription_plan", [], "any", false, false, false, 146);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription_plan", [], "any", false, false, false, 148);
                     yield "
                                                 ";
                 }
-                // line 148
+                // line 150
                 yield "                                            </span>
-                                            <div id=\"error-";
-                // line 149
+                        <div id=\"error-";
+                // line 151
                 yield ($context["product_row"] ?? null);
                 yield "-subscription\" class=\"invalid-feedback mt-0\"></div>
-                                        ";
+                    ";
             }
-            // line 151
-            yield "                                        ";
-            if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "reward", [], "any", false, false, false, 151)) {
-                // line 152
+            // line 153
+            yield "                    ";
+            if (CoreExtension::getAttribute($this->env, $this->source, $context["product"], "reward", [], "any", false, false, false, 153)) {
+                // line 154
                 yield "                                            <span class=\"meta-item\">
                                                 <strong>";
-                // line 153
+                // line 155
                 yield ($context["text_points"] ?? null);
                 yield ":</strong> ";
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "reward", [], "any", false, false, false, 153);
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "reward", [], "any", false, false, false, 155);
                 yield "
                                             </span>
-                                        ";
+                    ";
             }
-            // line 156
+            // line 158
             yield "                                    </div>
                                     <form id=\"form-product-";
-            // line 157
+            // line 159
             yield ($context["product_row"] ?? null);
             yield "\" class=\"d-none\">
                                         <input type=\"hidden\" name=\"product_id\" value=\"";
-            // line 158
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 158);
+            // line 160
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "product_id", [], "any", false, false, false, 160);
             yield "\"/>
                                         <input type=\"hidden\" name=\"quantity\" value=\"";
-            // line 159
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "quantity", [], "any", false, false, false, 159);
+            // line 161
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "quantity", [], "any", false, false, false, 161);
             yield "\"/>
-                                        ";
-            // line 160
+                    ";
+            // line 162
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["product"], "option", [], "any", false, false, false, 160));
+            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["product"], "option", [], "any", false, false, false, 162));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                // line 161
-                yield "                                            ";
-                if (((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 161) == "select") || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 161) == "radio"))) {
-                    // line 162
-                    yield "                                                <input type=\"hidden\" name=\"option[";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 162);
+                // line 163
+                yield "                      ";
+                if (((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 163) == "select") || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 163) == "radio"))) {
+                    // line 164
+                    yield "                        <input type=\"hidden\" name=\"option[";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 164);
                     yield "]\" value=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value_id", [], "any", false, false, false, 162);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value_id", [], "any", false, false, false, 164);
                     yield "\"/>
-                                            ";
+                      ";
                 }
-                // line 164
-                yield "                                            ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 164) == "checkbox")) {
-                    // line 165
-                    yield "                                                <input type=\"hidden\" name=\"option[";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 165);
+                // line 166
+                yield "                      ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 166) == "checkbox")) {
+                    // line 167
+                    yield "                        <input type=\"hidden\" name=\"option[";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 167);
                     yield "][]\" value=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value_id", [], "any", false, false, false, 165);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_value_id", [], "any", false, false, false, 167);
                     yield "\"/>
-                                            ";
+                      ";
                 }
-                // line 167
-                yield "                                            ";
-                if (((((((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 167) == "text") || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 167) == "textarea")) || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 167) == "file")) || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 167) == "date")) || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 167) == "datetime")) || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 167) == "time"))) {
-                    // line 168
-                    yield "                                                <input type=\"hidden\" name=\"option[";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 168);
+                // line 169
+                yield "                      ";
+                if (((((((CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 169) == "text") || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 169) == "textarea")) || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 169) == "file")) || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 169) == "date")) || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 169) == "datetime")) || (CoreExtension::getAttribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 169) == "time"))) {
+                    // line 170
+                    yield "                        <input type=\"hidden\" name=\"option[";
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "product_option_id", [], "any", false, false, false, 170);
                     yield "]\" value=\"";
-                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 168);
+                    yield CoreExtension::getAttribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 170);
                     yield "\"/>
-                                            ";
+                      ";
                 }
-                // line 170
-                yield "                                        ";
+                // line 172
+                yield "                    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['option'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 171
-            yield "                                        <input type=\"hidden\" name=\"subscription_plan_id\" value=\"";
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription_plan_id", [], "any", false, false, false, 171);
+            // line 173
+            yield "                    <input type=\"hidden\" name=\"subscription_plan_id\" value=\"";
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "subscription_plan_id", [], "any", false, false, false, 173);
             yield "\"/>
-                                    </form>
+                  </form>
                                 </div>
                                 <div class=\"product-pricing\">
                                     <div class=\"quantity-info\">
                                         <span class=\"quantity-label\">Qty:</span>
                                         <span class=\"quantity-value\">";
-            // line 177
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "quantity", [], "any", false, false, false, 177);
+            // line 179
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "quantity", [], "any", false, false, false, 179);
             yield "</span>
                                     </div>
                                     <div class=\"price-info\">
                                         <div class=\"unit-price\">";
-            // line 180
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 180);
+            // line 182
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 182);
             yield " each</div>
                                         <div class=\"total-price\">";
-            // line 181
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "total", [], "any", false, false, false, 181);
+            // line 183
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "total", [], "any", false, false, false, 183);
             yield "</div>
                                     </div>
                                 </div>
                                 <div class=\"product-actions\">
                                     <button type=\"submit\" form=\"form-product-";
-            // line 185
+            // line 187
             yield ($context["product_row"] ?? null);
             yield "\" class=\"tf-btn btn-outline animate-btn\">
                                         <i class=\"icon icon-refresh\"></i>
                                         ";
-            // line 187
+            // line 189
             yield ($context["button_reorder"] ?? null);
             yield "
                                     </button>
                                     <a href=\"";
-            // line 189
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "return", [], "any", false, false, false, 189);
+            // line 191
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["product"], "return", [], "any", false, false, false, 191);
             yield "\" class=\"tf-btn btn-outline animate-btn\">
                                         <i class=\"icon icon-return\"></i>
                                         ";
-            // line 191
+            // line 193
             yield ($context["button_return"] ?? null);
             yield "
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        ";
-            // line 196
+                  </div>
+              ";
+            // line 198
             $context["product_row"] = (($context["product_row"] ?? null) + 1);
-            // line 197
-            yield "                    ";
+            // line 199
+            yield "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['product'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 198
+        // line 200
         yield "                </div>
                 
                 <!-- Order Totals -->
                 <div class=\"order-totals\">
-                    ";
-        // line 202
+            ";
+        // line 204
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["totals"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["total"]) {
-            // line 203
+            // line 205
             yield "                        <div class=\"total-row ";
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["total"], "title", [], "any", false, false, false, 203) == "Total")) {
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["total"], "title", [], "any", false, false, false, 205) == "Total")) {
                 yield "total-final";
             }
             yield "\">
                             <span class=\"total-label\">";
-            // line 204
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["total"], "title", [], "any", false, false, false, 204);
+            // line 206
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["total"], "title", [], "any", false, false, false, 206);
             yield "</span>
                             <span class=\"total-value\">";
-            // line 205
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["total"], "text", [], "any", false, false, false, 205);
+            // line 207
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["total"], "text", [], "any", false, false, false, 207);
             yield "</span>
                         </div>
-                    ";
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['total'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 208
+        // line 210
         yield "                </div>
-            </div>
+      </div>
             <!-- Order Comment -->
-            ";
-        // line 211
+      ";
+        // line 213
         if (($context["comment"] ?? null)) {
-            // line 212
+            // line 214
             yield "                <div class=\"comment-section mb-4\">
                     <div class=\"comment-card\">
                         <div class=\"comment-header\">
                             <i class=\"icon icon-message\"></i>
                             <h4>";
-            // line 216
+            // line 218
             yield ($context["text_comment"] ?? null);
             yield "</h4>
                         </div>
                         <div class=\"comment-content\">
-                            ";
-            // line 219
+          ";
+            // line 221
             yield ($context["comment"] ?? null);
             yield "
                         </div>
                     </div>
-                </div>
-            ";
+        </div>
+      ";
         }
-        // line 224
+        // line 226
         yield "            
             <!-- Order History -->
             <div class=\"history-section mb-4\">
                 <div class=\"section-header\">
                     <h3>";
-        // line 228
+        // line 230
         yield ($context["text_history"] ?? null);
         yield "</h3>
                 </div>
                 <div class=\"history-content\">
-                    <div id=\"history\">";
-        // line 231
+      <div id=\"history\">";
+        // line 233
         yield ($context["history"] ?? null);
         yield "</div>
                 </div>
@@ -539,19 +546,19 @@ class __TwigTemplate_e76f5efd6eb99e737d3df75e8d45c5617898a1d086407136761f410f7e6
             <!-- Action Buttons -->
             <div class=\"order-actions text-center\">
                 <a href=\"";
-        // line 237
+        // line 239
         yield ($context["continue"] ?? null);
         yield "\" class=\"tf-btn btn-fill animate-btn\">
                     <i class=\"icon icon-arrow-left\"></i>
                     ";
-        // line 239
+        // line 241
         yield ($context["button_continue"] ?? null);
         yield "
                 </a>
             </div>
             
-            ";
-        // line 243
+      ";
+        // line 245
         yield ($context["content_bottom"] ?? null);
         yield "
         </div>
@@ -574,7 +581,7 @@ var product_row = 0;
 
     \$.ajax({
         url: 'index.php?route=checkout/cart.add&language=";
-        // line 263
+        // line 265
         yield ($context["language"] ?? null);
         yield "',
         type: 'post',
@@ -595,7 +602,7 @@ var product_row = 0;
 
             if (json['error']) {
                 \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ";
-        // line 281
+        // line 283
         yield ($context["error_reorder"] ?? null);
         yield " <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
 
@@ -616,7 +623,7 @@ var product_row = 0;
                 \$('#alert').prepend('<div class=\"alert alert-success alert-dismissible\"><i class=\"fa-solid fa-circle-check\"></i> ' + json['success'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
 
                 \$('#cart').load('index.php?route=common/cart.info&language=";
-        // line 299
+        // line 301
         yield ($context["language"] ?? null);
         yield "');
             }
@@ -822,7 +829,7 @@ var product_row = 0;
 }
 
 .total-final {
-    background: #000;
+    background: #241B68;
     color: #fff;
     margin: 10px -20px -20px -20px;
     padding: 15px 20px;
@@ -901,7 +908,7 @@ var product_row = 0;
 </style>
 
 ";
-        // line 581
+        // line 583
         yield ($context["footer"] ?? null);
         yield "
 ";
@@ -929,7 +936,7 @@ var product_row = 0;
      */
     public function getDebugInfo(): array
     {
-        return array (  905 => 581,  620 => 299,  599 => 281,  578 => 263,  555 => 243,  548 => 239,  543 => 237,  534 => 231,  528 => 228,  522 => 224,  514 => 219,  508 => 216,  502 => 212,  500 => 211,  495 => 208,  486 => 205,  482 => 204,  475 => 203,  471 => 202,  465 => 198,  459 => 197,  457 => 196,  449 => 191,  444 => 189,  439 => 187,  434 => 185,  427 => 181,  423 => 180,  417 => 177,  407 => 171,  401 => 170,  393 => 168,  390 => 167,  382 => 165,  379 => 164,  371 => 162,  368 => 161,  364 => 160,  360 => 159,  356 => 158,  352 => 157,  349 => 156,  341 => 153,  338 => 152,  335 => 151,  330 => 149,  327 => 148,  321 => 146,  313 => 144,  311 => 143,  307 => 142,  304 => 141,  301 => 140,  291 => 138,  284 => 136,  281 => 135,  277 => 134,  270 => 132,  264 => 129,  257 => 127,  249 => 123,  244 => 122,  242 => 121,  227 => 109,  221 => 106,  215 => 102,  207 => 97,  201 => 94,  195 => 90,  193 => 89,  188 => 86,  183 => 83,  175 => 78,  169 => 75,  163 => 71,  160 => 70,  152 => 65,  146 => 62,  140 => 58,  138 => 57,  134 => 55,  132 => 54,  122 => 47,  116 => 44,  107 => 37,  101 => 36,  95 => 33,  83 => 24,  70 => 13,  59 => 10,  56 => 9,  52 => 8,  42 => 1,);
+        return array (  912 => 583,  627 => 301,  606 => 283,  585 => 265,  562 => 245,  555 => 241,  550 => 239,  541 => 233,  535 => 230,  529 => 226,  521 => 221,  515 => 218,  509 => 214,  507 => 213,  502 => 210,  493 => 207,  489 => 206,  482 => 205,  478 => 204,  472 => 200,  466 => 199,  464 => 198,  456 => 193,  451 => 191,  446 => 189,  441 => 187,  434 => 183,  430 => 182,  424 => 179,  414 => 173,  408 => 172,  400 => 170,  397 => 169,  389 => 167,  386 => 166,  378 => 164,  375 => 163,  371 => 162,  367 => 161,  363 => 160,  359 => 159,  356 => 158,  348 => 155,  345 => 154,  342 => 153,  337 => 151,  334 => 150,  328 => 148,  320 => 146,  318 => 145,  314 => 144,  311 => 143,  308 => 142,  298 => 140,  291 => 138,  288 => 137,  284 => 136,  277 => 134,  271 => 131,  264 => 129,  256 => 126,  249 => 123,  244 => 122,  242 => 121,  227 => 109,  221 => 106,  215 => 102,  207 => 97,  201 => 94,  195 => 90,  193 => 89,  188 => 86,  183 => 83,  175 => 78,  169 => 75,  163 => 71,  160 => 70,  152 => 65,  146 => 62,  140 => 58,  138 => 57,  134 => 55,  132 => 54,  122 => 47,  116 => 44,  107 => 37,  101 => 36,  95 => 33,  83 => 24,  70 => 13,  59 => 10,  56 => 9,  52 => 8,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -941,12 +948,12 @@ var product_row = 0;
     <div class=\"container\">
         <div class=\"content\" style=\"padding-bottom: 19px;\">
             <ul class=\"breadcrumbs-page\">
-                {% for breadcrumb in breadcrumbs %}
+    {% for breadcrumb in breadcrumbs %}
                     <li class=\"breadcrumb-item\" style=\"display:flex;\">
                         <a href=\"{{ breadcrumb.href }}\">{{ breadcrumb.text }}</a>
                     </li>
-                {% endfor %}
-            </ul>
+    {% endfor %}
+  </ul>
             <h1 class=\"title-page\">Order Details</h1>
         </div>
     </div>
@@ -957,7 +964,7 @@ var product_row = 0;
 <section class=\"flat-spacing-3\">
     <div class=\"container\">
         <div id=\"account-order\">
-            {{ content_top }}
+      {{ content_top }}
             
             <!-- Order Header Info -->
             <div class=\"order-header mb-4\">
@@ -969,9 +976,9 @@ var product_row = 0;
                                 <h4>{{ text_invoice_no }}</h4>
                             </div>
                             <div class=\"info-value\">
-                                {% if invoice_no %}{{ invoice_no }}{% else %}{{ text_tbc }}{% endif %}
-                            </div>
-                        </div>
+            {% if invoice_no %}{{ invoice_no }}{% else %}{{ text_tbc }}{% endif %}
+          </div>
+        </div>
                     </div>
                     <div class=\"col-md-6\">
                         <div class=\"info-card\">
@@ -983,14 +990,14 @@ var product_row = 0;
                                 #{{ order_id }}
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+        </div>
+      </div>
             <!-- Address Information -->
-            {% if payment_address or shipping_address %}
+      {% if payment_address or shipping_address %}
                 <div class=\"address-section mb-4\">
                     <div class=\"row g-3\">
-                        {% if payment_address %}
+          {% if payment_address %}
                             <div class=\"col-lg-6\">
                                 <div class=\"address-card\">
                                     <div class=\"address-header\">
@@ -998,12 +1005,12 @@ var product_row = 0;
                                         <h4>{{ text_payment_address }}</h4>
                                     </div>
                                     <div class=\"address-content\">
-                                        {{ payment_address }}
+                {{ payment_address }}
                                     </div>
-                                </div>
-                            </div>
-                        {% endif %}
-                        {% if shipping_address %}
+              </div>
+            </div>
+          {% endif %}
+          {% if shipping_address %}
                             <div class=\"col-lg-6\">
                                 <div class=\"address-card\">
                                     <div class=\"address-header\">
@@ -1011,18 +1018,18 @@ var product_row = 0;
                                         <h4>{{ text_shipping_address }}</h4>
                                     </div>
                                     <div class=\"address-content\">
-                                        {{ shipping_address }}
+                {{ shipping_address }}
                                     </div>
-                                </div>
-                            </div>
-                        {% endif %}
+              </div>
+            </div>
+          {% endif %}
                     </div>
-                </div>
-            {% endif %}
+        </div>
+      {% endif %}
             <!-- Shipping & Payment Methods -->
             <div class=\"methods-section mb-4\">
                 <div class=\"row g-3\">
-                    {% if shipping_method %}
+        {% if shipping_method %}
                         <div class=\"col-lg-6\">
                             <div class=\"method-card\">
                                 <div class=\"method-header\">
@@ -1030,11 +1037,11 @@ var product_row = 0;
                                     <h4>{{ text_shipping_method }}</h4>
                                 </div>
                                 <div class=\"method-content\">
-                                    {{ shipping_method }}
+              {{ shipping_method }}
                                 </div>
-                            </div>
-                        </div>
-                    {% endif %}
+            </div>
+          </div>
+        {% endif %}
                     <div class=\"col-lg-6\">
                         <div class=\"method-card\">
                             <div class=\"method-header\">
@@ -1042,10 +1049,10 @@ var product_row = 0;
                                 <h4>{{ text_payment_method }}</h4>
                             </div>
                             <div class=\"method-content\">
-                                {{ payment_method }}
-                            </div>
-                        </div>
-                    </div>
+            {{ payment_method }}
+          </div>
+        </div>
+      </div>
                 </div>
             </div>
             <!-- Order Products -->
@@ -1054,26 +1061,28 @@ var product_row = 0;
                     <h3>Order Items</h3>
                 </div>
                 <div class=\"products-list\">
-                    {% set product_row = 0 %}
-                    {% for product in products %}
+            {% set product_row = 0 %}
+            {% for product in products %}
                         <div class=\"product-item\" id=\"product-row-{{ product_row }}\">
                             <div class=\"product-info\">
                                 <div class=\"product-details\">
+                                    <img src=\"{{ product.image }}\" alt=\"{{ product.name }}\" class=\"product-image\">
                                     <h5 class=\"product-name\">
+
                                         <a href=\"{{ product.view }}\" class=\"link\">{{ product.name }}</a>
                                     </h5>
-                                    <div id=\"error-{{ product_row }}-product\" class=\"invalid-feedback mt-0\"></div>
+                  <div id=\"error-{{ product_row }}-product\" class=\"invalid-feedback mt-0\"></div>
                                     <div class=\"product-meta\">
                                         <span class=\"meta-item\">
                                             <strong>{{ text_model }}:</strong> {{ product.model }}
                                         </span>
-                                        {% for option in product.option %}
+                    {% for option in product.option %}
                                             <span class=\"meta-item\">
                                                 <strong>{{ option.name }}:</strong> {{ option.value }}
                                             </span>
-                                            <div id=\"error-{{ product_row }}-option-{{ option.product_option_id }}\" class=\"invalid-feedback mt-0\"></div>
-                                        {% endfor %}
-                                        {% if product.subscription %}
+                        <div id=\"error-{{ product_row }}-option-{{ option.product_option_id }}\" class=\"invalid-feedback mt-0\"></div>
+                    {% endfor %}
+                    {% if product.subscription %}
                                             <span class=\"meta-item\">
                                                 <strong>{{ text_subscription }}:</strong> 
                                                 {% if product.subscription %}
@@ -1082,30 +1091,30 @@ var product_row = 0;
                                                     {{ product.subscription_plan }}
                                                 {% endif %}
                                             </span>
-                                            <div id=\"error-{{ product_row }}-subscription\" class=\"invalid-feedback mt-0\"></div>
-                                        {% endif %}
-                                        {% if product.reward %}
+                        <div id=\"error-{{ product_row }}-subscription\" class=\"invalid-feedback mt-0\"></div>
+                    {% endif %}
+                    {% if product.reward %}
                                             <span class=\"meta-item\">
                                                 <strong>{{ text_points }}:</strong> {{ product.reward }}
                                             </span>
-                                        {% endif %}
+                    {% endif %}
                                     </div>
                                     <form id=\"form-product-{{ product_row }}\" class=\"d-none\">
                                         <input type=\"hidden\" name=\"product_id\" value=\"{{ product.product_id }}\"/>
                                         <input type=\"hidden\" name=\"quantity\" value=\"{{ product.quantity }}\"/>
-                                        {% for option in product.option %}
-                                            {% if option.type == 'select' or option.type == 'radio' %}
-                                                <input type=\"hidden\" name=\"option[{{ option.product_option_id }}]\" value=\"{{ option.product_option_value_id }}\"/>
-                                            {% endif %}
-                                            {% if option.type == 'checkbox' %}
-                                                <input type=\"hidden\" name=\"option[{{ option.product_option_id }}][]\" value=\"{{ option.product_option_value_id }}\"/>
-                                            {% endif %}
-                                            {% if option.type == 'text' or option.type == 'textarea' or option.type == 'file' or option.type == 'date' or option.type == 'datetime' or option.type == 'time' %}
-                                                <input type=\"hidden\" name=\"option[{{ option.product_option_id }}]\" value=\"{{ option.value }}\"/>
-                                            {% endif %}
-                                        {% endfor %}
-                                        <input type=\"hidden\" name=\"subscription_plan_id\" value=\"{{ product.subscription_plan_id }}\"/>
-                                    </form>
+                    {% for option in product.option %}
+                      {% if option.type == 'select' or option.type == 'radio' %}
+                        <input type=\"hidden\" name=\"option[{{ option.product_option_id }}]\" value=\"{{ option.product_option_value_id }}\"/>
+                      {% endif %}
+                      {% if option.type == 'checkbox' %}
+                        <input type=\"hidden\" name=\"option[{{ option.product_option_id }}][]\" value=\"{{ option.product_option_value_id }}\"/>
+                      {% endif %}
+                      {% if option.type == 'text' or option.type == 'textarea' or option.type == 'file' or option.type == 'date' or option.type == 'datetime' or option.type == 'time' %}
+                        <input type=\"hidden\" name=\"option[{{ option.product_option_id }}]\" value=\"{{ option.value }}\"/>
+                      {% endif %}
+                    {% endfor %}
+                    <input type=\"hidden\" name=\"subscription_plan_id\" value=\"{{ product.subscription_plan_id }}\"/>
+                  </form>
                                 </div>
                                 <div class=\"product-pricing\">
                                     <div class=\"quantity-info\">
@@ -1128,23 +1137,23 @@ var product_row = 0;
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        {% set product_row = product_row + 1 %}
-                    {% endfor %}
+                  </div>
+              {% set product_row = product_row + 1 %}
+            {% endfor %}
                 </div>
                 
                 <!-- Order Totals -->
                 <div class=\"order-totals\">
-                    {% for total in totals %}
+            {% for total in totals %}
                         <div class=\"total-row {% if total.title == 'Total' %}total-final{% endif %}\">
                             <span class=\"total-label\">{{ total.title }}</span>
                             <span class=\"total-value\">{{ total.text }}</span>
                         </div>
-                    {% endfor %}
+            {% endfor %}
                 </div>
-            </div>
+      </div>
             <!-- Order Comment -->
-            {% if comment %}
+      {% if comment %}
                 <div class=\"comment-section mb-4\">
                     <div class=\"comment-card\">
                         <div class=\"comment-header\">
@@ -1152,11 +1161,11 @@ var product_row = 0;
                             <h4>{{ text_comment }}</h4>
                         </div>
                         <div class=\"comment-content\">
-                            {{ comment }}
+          {{ comment }}
                         </div>
                     </div>
-                </div>
-            {% endif %}
+        </div>
+      {% endif %}
             
             <!-- Order History -->
             <div class=\"history-section mb-4\">
@@ -1164,7 +1173,7 @@ var product_row = 0;
                     <h3>{{ text_history }}</h3>
                 </div>
                 <div class=\"history-content\">
-                    <div id=\"history\">{{ history }}</div>
+      <div id=\"history\">{{ history }}</div>
                 </div>
             </div>
             
@@ -1176,7 +1185,7 @@ var product_row = 0;
                 </a>
             </div>
             
-            {{ content_bottom }}
+      {{ content_bottom }}
         </div>
     </div>
 </section>
@@ -1436,7 +1445,7 @@ var product_row = 0;
 }
 
 .total-final {
-    background: #000;
+    background: #241B68;
     color: #fff;
     margin: 10px -20px -20px -20px;
     padding: 15px 20px;

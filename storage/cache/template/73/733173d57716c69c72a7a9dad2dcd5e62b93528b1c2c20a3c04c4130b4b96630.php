@@ -286,7 +286,7 @@ class __TwigTemplate_86db28d5a3a053c438b1a43490e7f4525b833c2bf17329164550c151ff7
     left: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, #000 0%, #666 100%);
+    background: linear-gradient(180deg, #241B68 0%, #000 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -752,7 +752,7 @@ class __TwigTemplate_86db28d5a3a053c438b1a43490e7f4525b833c2bf17329164550c151ff7
     left: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, #000 0%, #666 100%);
+    background: linear-gradient(180deg, #241B68 0%, #000 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }

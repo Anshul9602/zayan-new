@@ -173,7 +173,7 @@ class __TwigTemplate_1790c09dc9fa7297c741dd3b7c716ababf664804440aa666913d81a788e
 .timeline-dot {
     width: 12px;
     height: 12px;
-    background: #000;
+    background: #241B68;
     border-radius: 50%;
     border: 3px solid #fff;
     box-shadow: 0 0 0 2px #e9ecef;
@@ -289,7 +289,7 @@ class __TwigTemplate_1790c09dc9fa7297c741dd3b7c716ababf664804440aa666913d81a788e
     background: #fff;
     border-radius: 6px;
     padding: 15px;
-    border-left: 3px solid #000;
+    border-left: 3px solid #241B68;
 }
 
 .history-comment i {
@@ -530,7 +530,7 @@ class __TwigTemplate_1790c09dc9fa7297c741dd3b7c716ababf664804440aa666913d81a788e
 .timeline-dot {
     width: 12px;
     height: 12px;
-    background: #000;
+    background: #241B68;
     border-radius: 50%;
     border: 3px solid #fff;
     box-shadow: 0 0 0 2px #e9ecef;
@@ -646,7 +646,7 @@ class __TwigTemplate_1790c09dc9fa7297c741dd3b7c716ababf664804440aa666913d81a788e
     background: #fff;
     border-radius: 6px;
     padding: 15px;
-    border-left: 3px solid #000;
+    border-left: 3px solid #241B68;
 }
 
 .history-comment i {
