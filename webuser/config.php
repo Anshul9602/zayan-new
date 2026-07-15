@@ -1,40 +1,34 @@
 <?php
-// APPLICATION
-define('APPLICATION', 'Admin');
+// // HTTP
+ define('HTTP_SERVER', 'https://zaynjewels.com/webuser/');
+ define('HTTP_CATALOG', 'https://zaynjewels.com/');
 
-// HTTP
-define('HTTP_SERVER', 'http://localhost/newzyan/webuser/');
-define('HTTP_CATALOG', 'http://localhost/newzyan/');
+// // HTTPS
+ define('HTTPS_SERVER', 'https://zaynjewels.com/webuser/');
+ define('HTTPS_CATALOG', 'https://zaynjewels.com/');
 
-// DIR
-define('DIR_OPENCART', 'C:/xampp/htdocs/newzyan/');
-define('DIR_APPLICATION', DIR_OPENCART . 'webuser/');
-define('DIR_EXTENSION', DIR_OPENCART . 'extension/');
-define('DIR_IMAGE', DIR_OPENCART . 'image/');
-define('DIR_SYSTEM', DIR_OPENCART . 'system/');
-define('DIR_CATALOG', DIR_OPENCART . 'catalog/');
-define('DIR_STORAGE', DIR_OPENCART . 'storage/');
-define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
-define('DIR_TEMPLATE', DIR_APPLICATION . 'view/template/');
-define('DIR_CONFIG', DIR_SYSTEM . 'config/');
-define('DIR_CACHE', DIR_STORAGE . 'cache/');
-define('DIR_DOWNLOAD', DIR_STORAGE . 'download/');
-define('DIR_LOGS', DIR_STORAGE . 'logs/');
-define('DIR_SESSION', DIR_STORAGE . 'session/');
-define('DIR_UPLOAD', DIR_STORAGE . 'upload/');
+// // DIR
+ define('DIR_APPLICATION', '/home/webuser/web/zaynjewels.com/public_html/webuser/');
+ define('DIR_SYSTEM', '/home/webuser/web/zaynjewels.com/public_html/system/');
+ define('DIR_IMAGE', '/home/webuser/web/zaynjewels.com/public_html/image/');
+ define('DIR_LANGUAGE', '/home/webuser/web/zaynjewels.com/public_html/webuser/language/');
+ define('DIR_TEMPLATE', '/home/webuser/web/zaynjewels.com/public_html/webuser/view/template/');
+ define('DIR_CONFIG', '/home/webuser/web/zaynjewels.com/public_html/system/config/');
+define('DIR_CACHE', '/home/webuser/web/zaynjewels.com/public_html/system/storage/cache/');
+ define('DIR_DOWNLOAD', '/home/webuser/web/zaynjewels.com/public_html/system/storage/download/');
+ define('DIR_LOGS', '/home/webuser/web/zaynjewels.com/public_html/system/storage/logs/');
+define('DIR_MODIFICATION', '/home/webuser/web/zaynjewels.com/public_html/system/storage/modification/');
+ define('DIR_UPLOAD', '/home/webuser/web/zaynjewels.com/public_html/system/storage/upload/');
+ define('DIR_CATALOG', '/home/webuser/web/zaynjewels.com/public_html/catalog/');
 
-// DB
-define('DB_DRIVER', 'mysqli');
-define('DB_HOSTNAME', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_DATABASE', 'newzayan');
-define('DB_PORT', '3306');
-define('DB_PREFIX', 'oc_');
+// // DB
+ define('DB_DRIVER', 'mysqli');
+ define('DB_HOSTNAME', 'localhost');
+ define('DB_USERNAME', 'webuser_zayn');
+ define('DB_PASSWORD', 'hwMYc|_1=Q2|cAe(');
+ define('DB_DATABASE', 'webuser_zayan');
+ define('DB_PORT', '3306');
+ define('DB_PREFIX', 'oc_');
 
-define('DB_SSL_KEY', '');
-define('DB_SSL_CERT', '');
-define('DB_SSL_CA', '');
 
-// OpenCart API
-define('OPENCART_SERVER', 'https://www.opencart.com/');
+

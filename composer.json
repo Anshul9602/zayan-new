@@ -1,26 +1,5 @@
 {
-    "name": "opencart/opencart",
-    "description": "A free shopping cart system. OpenCart is an open source PHP-based online e-commerce solution.",
-    "type": "project",
-    "keywords": ["opencart", "ecommerce", "shopping-cart"],
-    "homepage": "https://www.opencart.com/",
-    "license": "GPL-3.0",
     "require": {
-        "php": ">=7.4",
-        "twig/twig": "^3.0",
-        "scssphp/scssphp": "^1.11",
-        "guzzlehttp/guzzle": "^7.0",
-        "aws/aws-sdk-php": "^3.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Opencart\\": "system/"
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "sort-packages": true
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+        "dompdf/dompdf": "^3.0"
+    }
 }

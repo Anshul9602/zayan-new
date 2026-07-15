@@ -1,231 +1,220 @@
 <?php
-namespace Opencart\Catalog\Controller\Common;
-/**
- * Class Home
- *
- * Can be called from $this->load->controller('common/home');
- *
- * @package Opencart\Catalog\Controller\Common
- */
-class Home extends \Opencart\System\Engine\Controller {
-	/**
-	 * Index
-	 *
-	 * @return void
-	 */
-	public function index(): void {
-		$description = $this->config->get('config_description');
-		$language_id = $this->config->get('config_language_id');
+class ControllerCommonHome extends Controller
+{
+	public function index()
+	{
+		$this->document->setTitle($this->config->get('config_meta_title'));
+		$this->document->setDescription($this->config->get('config_meta_description'));
+		$this->document->setKeywords($this->config->get('config_meta_keyword'));
 
-		if (isset($description[$language_id])) {
-			$this->document->setTitle($description[$language_id]['meta_title']);
-			$this->document->setDescription($description[$language_id]['meta_description']);
-			$this->document->setKeywords($description[$language_id]['meta_keyword']);
+		if (isset($this->request->get['route'])) {
+			$this->document->addLink($this->config->get('config_url'), 'canonical');
+		}
+
+		//banner-top
+		$this->load->model('design/banner');
+		$this->load->model('tool/image');
+
+		$data['banners'] = array();
+
+		$results = $this->model_design_banner->getBanner(14);
+
+		foreach ($results as $result) {
+			if (is_file(DIR_IMAGE . $result['image'])) {
+				$data['banners'][] = array(
+					'title' => $result['title'],
+					'link'  => $result['link'],
+					'image' => $this->model_tool_image->resize($result['image'], '2700', '1150')
+				);
+			}
 		}
 
 
-			// Banner
-			$this->load->model('design/banner');
-
-			// Image
-			$this->load->model('tool/image');
-	
-			$data['banners'] = [];
-	
-			$results = $this->model_design_banner->getBanner(9);
+		//banner-mobile
 
 
-			foreach ($results as $result) {
-				$test = is_file(DIR_IMAGE . html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'));
-				
-				if (is_file(DIR_IMAGE . html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'))) {
-					$data['banners'][] = [
-						'title' => explode('\n', $result['title'])[0],
-						'description' => explode('\n', $result['title'])[1],
-						'link'  => $result['link'],
-						'image' => $this->model_tool_image->resize(html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'), '2880', '1380')
-					];
-				}
+		$data['banners2'] = array();
+
+		$results = $this->model_design_banner->getBanner(15);
+
+		foreach ($results as $result) {
+			if (is_file(DIR_IMAGE . $result['image'])) {
+				$data['banners2'][] = array(
+					'title' => $result['title'],
+					'link'  => $result['link'],
+					'image' => $this->model_tool_image->resize($result['image'], '900', '1200')
+				);
 			}
+		}
 
-			$data['banners2'] = [];
-	
-			$results = $this->model_design_banner->getBanner(10);
-	
-			foreach ($results as $result) {
-				if (is_file(DIR_IMAGE . html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'))) {
-					$data['banners2'][] = [
-						'title' => $result['title'],
-						'link'  => $result['link'],
-						'image' => $this->model_tool_image->resize(html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'), '912', '704')
-					];
-				}
+
+		//banner-Intro
+		$this->load->model('design/banner');
+		$this->load->model('tool/image');
+
+		$data['bannersintro'] = array();
+
+		$results = $this->model_design_banner->getBanner(10);
+
+		foreach ($results as $result) {
+			if (is_file(DIR_IMAGE . $result['image'])) {
+				$data['bannersintro'][] = array(
+					'title' => $result['title'],
+					'link'  => $result['link'],
+					'image' => $this->model_tool_image->resize($result['image'], '1410', '470')
+				);
 			}
-		
-			$data['banners3'] = [];
-	
-			$results = $this->model_design_banner->getBanner(12);
-	
-			foreach ($results as $result) {
-				if (is_file(DIR_IMAGE . html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'))) {
-					$data['banners3'][] = [
-						'title' => $result['title'],
-						'link'  => $result['link'],
-						'image' => $this->model_tool_image->resize(html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'), '912', '704')
-					];
-				}
-			}
-		
-			
-		// Product
+		}
+
+		//diamond fashion categories
 		$this->load->model('catalog/category');
 		$this->load->model('catalog/product');
-
-		// Build featured tabs with specific category products
-		$data['featured_tabs'] = [];
-
-		$tabs = [
-			[
-				'name' => 'New Arrivals',
-				'path_id' => '61_74', // for DOM id use
-				'category_id' => 74
-			],
-			
-			[
-				'name' => 'Trending',
-				'path_id' => '60_68',
-				'category_id' => 68
-			]
-		];
-
-		foreach ($tabs as $tab) {
-			$filter_data = [
-				'filter_category_id' => $tab['category_id'],
-				'filter_sub_category' => true,
-				'sort' => 'p.sort_order',
-				'order' => 'ASC',
-				'start' => 0,
-				'limit' => 12
-			];
-
-			$results = $this->model_catalog_product->getProducts($filter_data);
-
-			$products = [];
-
-			// Image
-            $this->load->model('tool/image');
-
-			foreach ($results as $result) {
-				if ($result['image']) {
-					$image = $this->model_tool_image->resize(html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'), (int)$this->config->get('config_image_thumb_width'), (int)$this->config->get('config_image_thumb_height'));
-				} else {
-					$image = $this->model_tool_image->resize('placeholder.png', (int)$this->config->get('config_image_thumb_width'), (int)$this->config->get('config_image_thumb_height'));
-				}
-
-				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
-					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
-				} else {
-					$price = false;
-				}
-
-				if ((float)$result['special']) {
-					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
-				} else {
-					$special = false;
-				}
-
-				if ($this->config->get('config_tax')) {
-					$tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price'], $this->session->data['currency']);
-				} else {
-					$tax = false;
-				}
-
-				$product_data = [
-					'product_id'  => $result['product_id'],
-					'thumb'       => $image,
-					'name'        => $result['name'],
-					'description' => oc_substr(trim(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'))), 0, $this->config->get('config_product_description_length')) . '..',
-					'price'       => $price,
-					'special'     => $special,
-					'tax'         => $tax,
-					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
-					'rating'      => isset($result['rating']) ? (int)$result['rating'] : 0,
-					'href'        => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $result['product_id'])
-				];
-
-				$products[] =$product_data;
-			}
-
-			$data['featured_tabs'][] = [
-				'name' => $tab['name'],
-				'path_id' => $tab['path_id'],
-				'category_id' => $tab['category_id'],
-				'products' => $products
-			];
+		$data['categories1'] = array();
+		$children = $this->model_catalog_category->getCategories('67');
+		foreach ($children as $category) {
+			$catres = $this->model_catalog_category->getCategory($category['category_id']);
+			$data['categories1'][] = array(
+				'name'     => $catres['name'],
+				'children' => $children,
+				'description' => html_entity_decode($catres['description']),
+				'image' => $catres['image'],
+				'column'   => $catres['column'] ? $catres['column'] : 1,
+				'href'     => $this->url->link('product/category', 'path=' . $catres['category_id']),
+				'id' => $catres['category_id']
+			);
 		}
 
-		// Shop This Look: first 3 products from collection 60_67 (category_id 67)
-		$data['shop_look_products'] = [];
-		$shop_filter = [
-			'filter_category_id' => 67,
-			'filter_sub_category' => true,
-			'sort' => 'p.sort_order',
-			'order' => 'ASC',
-			'start' => 0,
-			'limit' => 3
-		];
+		//most wanted design
 
-		$shop_results = $this->model_catalog_product->getProducts($shop_filter);
-		$data['shop_total'] = $this->model_catalog_product->getTotalProducts($shop_filter);
+		$data['categories2'] = array();
+		$children = $this->model_catalog_category->getCategories('73');
+		foreach ($children as $category) {
+			$catres = $this->model_catalog_category->getCategory($category['category_id']);
+			$data['categories2'][] = array(
+				'name'     => $catres['name'],
+				'children' => $children,
+				'description' => html_entity_decode($catres['description']),
+				'image' => $catres['image'],
+				'column'   => $catres['column'] ? $catres['column'] : 1,
+				'href'     => $this->url->link('product/category', 'path=' . $catres['category_id']),
+				'id' => $catres['category_id']
+			);
+		}
 
-		foreach ($shop_results as $result) {
+// mob category
+
+		$data['mobcat'] = array();
+		$cat = $this->model_catalog_category->getCategories('79');
+		foreach ($cat as $category) {
+			$catres = $this->model_catalog_category->getCategory($category['category_id']);
+			$data['mobcat'][] = array(
+				'name'     => $catres['name'],
+				'image' => $this->model_tool_image->resize($catres['image'], '400', '400'),
+				'column'   => $catres['column'] ? $catres['column'] : 1,
+				'href'     => $this->url->link('product/category', 'path=' . $catres['category_id']),
+				'id' => $catres['category_id']
+			);
+		}
+
+		// most wated designs banner version
+		$filter_data1 = array(
+			'filter_category_id' => '98',
+			'start' => '0',
+			'limit' => '8'
+		);
+		$data['mostcat'] = array();
+		$new_results1 = $this->model_catalog_product->getProducts($filter_data1);
+
+		foreach ($new_results1 as $result) {
+			// echo "<pre>";
+
+			// print_r($wish);
+			// echo "</pre>";
+
 			if ($result['image']) {
-				$image = $this->model_tool_image->resize(html_entity_decode($result['image'], ENT_QUOTES, 'UTF-8'), (int)$this->config->get('config_image_thumb_width'), (int)$this->config->get('config_image_thumb_height'));
+				$image = $this->model_tool_image->resize($result['image'], '400', '400');
 			} else {
-				$image = $this->model_tool_image->resize('placeholder.png', (int)$this->config->get('config_image_thumb_width'), (int)$this->config->get('config_image_thumb_height'));
+				$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
 			}
 
-			if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
-				$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
-			} else {
-				$price = false;
-			}
+		
 
-			if ((float)$result['special']) {
-				$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
-			} else {
-				$special = false;
-			}
-
-			if ($this->config->get('config_tax')) {
-				$tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price'], $this->session->data['currency']);
-			} else {
-				$tax = false;
-			}
-			
-			$product_data = [
+			$data['mostcat'][] = array(
 				'product_id'  => $result['product_id'],
-				'thumb'       => $image,
+				'image'       => $image,
 				'name'        => $result['name'],
-				'description' => oc_substr(trim(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'))), 0, $this->config->get('config_product_description_length')) . '..',
-				'price'       => $price,
-				'special'     => $special,
-				'tax'         => $tax,
-				'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
-				'rating'      => isset($result['rating']) ? (int)$result['rating'] : 0,
-				'href'        => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $result['product_id'])
-			];
+				
+				'href'        => $this->url->link('product/product', '&product_id=' . $result['product_id'])
+			);
+		}
+		//new arrival design
 
-			$data['shop_look_products'][] = $product_data;
+		$filter_data = array(
+			'filter_category_id' => '97',
+			'start' => '0',
+			'limit' => '8'
+		);
+		$data['newcat'] = array();
+		$new_results2 = $this->model_catalog_product->getProducts($filter_data);
+
+		foreach ($new_results2 as $result) {
+			// echo "<pre>";
+
+			// print_r($wish);
+			// echo "</pre>";
+
+			if ($result['image']) {
+				$image = $this->model_tool_image->resize($result['image'], '400', '400');
+			} else {
+				$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+			}
+
+		
+
+			$data['newcat'][] = array(
+				'product_id'  => $result['product_id'],
+				'image'       => $image,
+				'name'        => $result['name'],
+				
+				'href'        => $this->url->link('product/product', '&product_id=' . $result['product_id'])
+			);
 		}
 
-		// echo '<pre>';
-		// print_r($products);
-		// echo '</pre>';
-		// exit;
-		$data['logged'] = $this->customer->isLogged();
-		$data['cart_add'] = $this->url->link('checkout/cart.add', 'language=' . $this->config->get('config_language'));
-		$data['wishlist_add'] = $this->url->link('account/wishlist.add', 'language=' . $this->config->get('config_language'));
+		
+// end new arrival
+		//shaded of gold
+		$data['bannersshades'] = array();
+
+		$results = $this->model_design_banner->getBanner(11);
+
+		foreach ($results as $result) {
+			if (is_file(DIR_IMAGE . $result['image'])) {
+				$data['bannersshades'][] = array(
+					'title' => $result['title'],
+					'link'  => $result['link'],
+					'image' => $this->model_tool_image->resize($result['image'], '1920', '670')
+				);
+			}
+		}
+
+		//banner-gaurantee
+		$this->load->model('design/banner');
+		$this->load->model('tool/image');
+
+		$data['bannersGuarantee'] = array();
+
+		$results = $this->model_design_banner->getBanner(12);
+
+		foreach ($results as $result) {
+			if (is_file(DIR_IMAGE . $result['image'])) {
+				$data['bannersGuarantee'][] = array(
+					'title' => $result['title'],
+					'link'  => $result['link'],
+					'image' => $this->model_tool_image->resize($result['image'], '1410', '470')
+				);
+			}
+		}
+
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');

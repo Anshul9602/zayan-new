@@ -1,0 +1,25 @@
+# OpenCart 2.3 SEO URL .htaccess
+
+Options +FollowSymlinks
+
+# Prevent directory listing
+Options -Indexes
+
+# SEO URL Rewrite
+RewriteEngine On
+
+# If your store is in root domain, keep this:
+RewriteBase /
+
+# If your store is inside subfolder, example /shop/, use:
+# RewriteBase /shop/
+
+# Redirect non-existing files/folders to OpenCart router
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
+
+# Protect sensitive files
+<FilesMatch "(?i)((\.tpl|\.ini|\.log|\.txt|\.sql|\.zip|\.tar|\.gz))">
+  Require all denied
+</FilesMatch>

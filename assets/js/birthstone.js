@@ -1,7 +1,7 @@
  
  function change1(){
     // document.getElementById('gridimg').src='./opal.png'
-   one = document.getElementById('changeimg').src='assets/images/Garnet.png';
+   one = document.getElementById('changeimg').src='assets/img/blog/stones/Garnet.png';
 //    document.body.scrollToBottom = 0;
 //  document.documentElement.scrollToBottom = 0;
 var access = document.getElementById("data_blog");
@@ -21,7 +21,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 }
 function change2(){
    // document.getElementById('gridimg').src='./opal.png'
-   one = document.getElementById('changeimg').src='assets/images/Amethyst.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Amethyst.png';
  var access = document.getElementById("data_blog");
 access.scrollIntoView({behavior: 'smooth'}, true);
  document.getElementById('heading2').innerHTML="FEBRUARY";
@@ -35,7 +35,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 } 
 function change3(){
    // document.getElementById('gridimg').src='./opal.png'
-  one = document.getElementById('changeimg').src='assets/images/Aquamarine.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Aquamarine.png';
 //   document.body.scrollTop = 0;
 //  document.documentElement.scrollTop = 0;
 var access = document.getElementById("data_blog");
@@ -51,7 +51,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 }
 function change4(){
    // document.getElementById('gridimg').src='./opal.png'
-  one = document.getElementById('changeimg').src='assets/images/Diamond-Crystal.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Diamond-Crystal.png';
 //   document.body.scrollTop = 0;
 //  document.documentElement.scrollTop = 0;
 var access = document.getElementById("data_blog");
@@ -67,7 +67,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 }
 function change5(){
    // document.getElementById('gridimg').src='./opal.png'
-  one = document.getElementById('changeimg').src='assets/images/Emarald.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Emarald.png';
  var access = document.getElementById("data_blog");
 access.scrollIntoView({behavior: 'smooth'}, true);
  document.getElementById('heading2').innerHTML="MAY";
@@ -81,7 +81,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 }
 function change6(){
    // document.getElementById('gridimg').src='./opal.png'
-  one = document.getElementById('changeimg').src='assets/images/Pearl.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Pearl.png';
  var access = document.getElementById("data_blog");
 access.scrollIntoView({behavior: 'smooth'}, true);
  document.getElementById('heading2').innerHTML="JUNE";
@@ -97,7 +97,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 }
 function change7(){
    // document.getElementById('gridimg').src='./opal.png'
-  one = document.getElementById('changeimg').src='assets/images/Ruby.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Ruby.png';
  var access = document.getElementById("data_blog");
 access.scrollIntoView({behavior: 'smooth'}, true);
  document.getElementById('heading2').innerHTML="JULY";
@@ -111,7 +111,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 }
 function change8(){
    // document.getElementById('gridimg').src='./opal.png'
-  one = document.getElementById('changeimg').src='assets/images/Peridot.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Peridot.png';
  var access = document.getElementById("data_blog");
 access.scrollIntoView({behavior: 'smooth'}, true);
  document.getElementById('heading2').innerHTML="AUGUST";
@@ -125,7 +125,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 }
 function change9(){
    // document.getElementById('gridimg').src='./opal.png'
-  one = document.getElementById('changeimg').src='assets/images/Sapphire.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Sapphire.png';
  var access = document.getElementById("data_blog");
 access.scrollIntoView({behavior: 'smooth'}, true);
  document.getElementById('heading2').innerHTML="SEPTEMBER";
@@ -139,7 +139,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 }
 function change10(){
    // document.getElementById('gridimg').src='./opal.png'
-  one = document.getElementById('changeimg').src='assets/images/Tourmaline.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Tourmaline.png';
  var access = document.getElementById("data_blog");
 access.scrollIntoView({behavior: 'smooth'}, true);
  document.getElementById('heading2').innerHTML="OCTOBER ";
@@ -153,7 +153,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 }
 function change11(){
    // document.getElementById('gridimg').src='./opal.png'
-  one = document.getElementById('changeimg').src='assets/images/Citrine.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Citrine.png';
  var access = document.getElementById("data_blog");
 access.scrollIntoView({behavior: 'smooth'}, true);
  document.getElementById('heading2').innerHTML=" NOVEMBER";
@@ -167,7 +167,7 @@ access.scrollIntoView({behavior: 'smooth'}, true);
 }
 function change12(){
    // document.getElementById('gridimg').src='./opal.png'
-   one = document.getElementById('changeimg').src='assets/images/Blue-Topaz.png';
+  one = document.getElementById('changeimg').src='assets/img/blog/stones/Blue-Topaz.png';
  var access = document.getElementById("data_blog");
 access.scrollIntoView({behavior: 'smooth'}, true);
  document.getElementById('heading2').innerHTML=" DECEMBER";
