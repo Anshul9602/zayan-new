@@ -11,9 +11,9 @@ class ControllerStartupRouter extends Controller {
 		// Sanitize the call
 		$route = preg_replace('/[^a-zA-Z0-9_\/]/', '', (string)$route);
 
-		// Checkout disabled: block all checkout routes except cart
-		if (strpos($route, 'checkout/') === 0 && strpos($route, 'checkout/cart') !== 0) {
-			$this->response->redirect($this->url->link('checkout/cart'));
+		// Checkout/cart disabled site-wide
+		if (strpos($route, 'checkout/') === 0) {
+			$this->response->redirect($this->url->link('common/home'));
 			return;
 		}
 		

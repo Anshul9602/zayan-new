@@ -94,6 +94,11 @@
 </style>
 
 <main>
+   <?php if (!empty($category_id) && (int)$category_id === 110) { ?>
+   <div class="watch-category-banner" style="width:100%;">
+      <img src="image/watchbanner.png" alt="The Exclusive Jewelry Watch by ASIS" class="img-responsive" style="width:100%; display:block;">
+   </div>
+   <?php } ?>
    <!-- breadcrumb area start -->
    <div style="background:#f8f8f8;" class="breadcrumb-area">
       <div class="container">

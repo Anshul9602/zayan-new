@@ -180,6 +180,50 @@ class ControllerCommonHome extends Controller
 			);
 		}
 
+		$filter_whats_new = array(
+			'filter_category_id' => '97',
+			'sort' => 'p.date_added',
+			'order' => 'DESC',
+			'start' => 0,
+			'limit' => 12
+		);
+
+		$data['whats_new'] = array();
+		$whats_new_results = $this->model_catalog_product->getProducts($filter_whats_new);
+
+		foreach ($whats_new_results as $result) {
+			$image = '';
+
+			if (!empty($result['image']) && is_file(DIR_IMAGE . $result['image'])) {
+				$image = $this->model_tool_image->resize($result['image'], 400, 400);
+
+				// resize() can return empty or a local filesystem path for some files
+				if (!$image || strpos($image, DIR_IMAGE) === 0 || strpos($image, '/home/') === 0) {
+					if (!empty($this->request->server['HTTPS'])) {
+						$image = $this->config->get('config_ssl') . 'image/' . str_replace(' ', '%20', $result['image']);
+					} else {
+						$image = $this->config->get('config_url') . 'image/' . str_replace(' ', '%20', $result['image']);
+					}
+				}
+			}
+
+			if (!$image) {
+				$image = $this->model_tool_image->resize('placeholder.png', 400, 400);
+			}
+
+			$manufacturer = !empty($result['manufacturer']) ? $result['manufacturer'] : 'Zayn Jewels';
+
+			$data['whats_new'][] = array(
+				'product_id' => $result['product_id'],
+				'image' => $image,
+				'name' => $result['name'],
+				'manufacturer' => $manufacturer,
+				'href' => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+			);
+		}
+
+		$data['whats_new_href'] = $this->url->link('product/category', 'path=97');
+
 		
 // end new arrival
 		//shaded of gold

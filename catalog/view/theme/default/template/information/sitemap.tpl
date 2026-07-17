@@ -51,7 +51,6 @@
                 <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
               </ul>
             </li>
-            <li><a href="<?php echo $cart; ?>"><?php echo $text_cart; ?></a></li>
             <li><a href="<?php echo $search; ?>"><?php echo $text_search; ?></a></li>
             <li><?php echo $text_information; ?>
               <ul>

@@ -338,7 +338,6 @@ padding-top:0px;
    <li class="fa fa-check-circle-o"></li>
    <h3>Item added to cart</h3>
    <br>
-   <a href="index.php?route=checkout/cart"><button class="btn btn-primary btn-sm">View Cart</button></a>
    <button id="continue_shopping" class="btn btn-primary btn-sm">Continue Shopping</button>
 </div>
 <script>

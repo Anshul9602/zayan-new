@@ -21,6 +21,122 @@ assets/css/home.css
         color: #222222;
         text-transform: capitalize;
     }
+
+    .whats-new-section {
+        padding: 70px 0;
+        background: #fff;
+    }
+
+    .whats-new-copy {
+        max-width: 320px;
+    }
+
+    .whats-new-copy h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 42px;
+        line-height: 1.1;
+        color: #111;
+        margin-bottom: 18px;
+    }
+
+    .whats-new-copy p {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 28px;
+    }
+
+    .whats-new-btn {
+        display: inline-block;
+        padding: 12px 22px;
+        border: 1px solid #111;
+        color: #111;
+        text-decoration: none;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        transition: all 0.2s ease;
+    }
+
+    .whats-new-btn:hover {
+        background: #111;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .whats-new-card {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .whats-new-card:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .whats-new-card-image {
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 18px 12px 0;
+        min-height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whats-new-card-image img {
+        width: 100%;
+        max-height: 220px;
+        object-fit: contain;
+    }
+
+    .whats-new-brand {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #111;
+        margin: 16px 0 6px;
+        font-weight: 600;
+    }
+
+    .whats-new-title {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.5;
+        margin: 0;
+        min-height: 40px;
+    }
+
+    #whats-new-slider .splide__arrow {
+        background: transparent;
+        opacity: 1;
+        width: 2.2em;
+        height: 2.2em;
+    }
+
+    #whats-new-slider .splide__arrow svg {
+        fill: #bbb;
+    }
+
+    #whats-new-slider .splide__pagination {
+        display: none;
+    }
+
+    @media (max-width: 991px) {
+        .whats-new-section {
+            padding: 50px 0;
+        }
+
+        .whats-new-copy {
+            max-width: none;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .whats-new-copy h2 {
+            font-size: 34px;
+        }
+    }
 </style>
 
 
@@ -46,6 +162,41 @@ assets/css/home.css
     </div>
 </section>
 <!-- hero slider area end -->
+
+<section class="whats-new-section">
+    <div class="container-fluid" style="padding: 0 6%;">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-12">
+                <div class="whats-new-copy">
+                    <h2>What's New</h2>
+                    <p>Stay ahead of the curve with our newest arrivals</p>
+                    <a href="<?php echo $whats_new_href; ?>" class="whats-new-btn">Shop What's New &rarr;</a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <?php if (!empty($whats_new)) { ?>
+                <div id="whats-new-slider" class="splide splide-whats-new" aria-label="What's New">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <?php foreach ($whats_new as $product) { ?>
+                            <li class="splide__slide">
+                                <a href="<?php echo $product['href']; ?>" class="whats-new-card">
+                                    <div class="whats-new-card-image">
+                                        <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>">
+                                    </div>
+                                    <div class="whats-new-brand"><?php echo $product['manufacturer']; ?></div>
+                                    <p class="whats-new-title"><?php echo $product['name']; ?></p>
+                                </a>
+                            </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!--Most wanted designs-->
 <section id="most-wanted-designs" class="section-padding pb-0 pt-0" style="margin-top:60px;">
@@ -232,41 +383,8 @@ assets/css/home.css
 
     <div class=" desk_dis"style="padding: 0 5%;">
         <div class="row  height_main" style="    justify-content: space-between;">
-            <div class="col-md-6 row pr-0" >
-                <div class="col-md-12 pr-0" >
-                    <div class="d-flex text-center justify-content-center"
-                        style="align-items:center;">
-                        <img src="image/new/back_b.jpg" style="width: 100%;">
-                        <a href="https://www.zaynjewels.com/index.php?route=common/cad" class="up" style="position: absolute;">
-                            <div class="new-text">
-                                
-                                <h1 class="css-1qc9ua4">CAD/CAM SERVICES</h1>
-                                <div class="css-14iw9cl">Transform your unique designs into reality
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-6 pdmob  pr-0" style="padding-top: 15px;"><a
-                        href="index.php?route=product/category&path=79_85">
-                        <img src="image/new/e1.jpg"style="width:100%;" >
-                        <h6 class="css-kl8k2i mt-1" >PENDANTS
-                        </h6>
-                    </a>
-
-                </div>
-                <div class="col-md-6 pdmob pr-0"style="padding-top: 15px;" ><a
-                        href="index.php?route=product/category&path=79_82">
-                        <img src="image/new/p1.jpg" alt=""style="width:100%;">
-                        <h6 class="css-kl8k2i mt-1" style="">EARRINGS</h6>
-                    </a>
-
-
-                </div>
-
-            </div>
-            <div class="col-md-6 pdmob ">
+            
+            <div class="col-md-12 pdmob ">
                 <a href="https://www.zaynjewels.com/index.php?route=common/diamondsdemo"><img src="image/new/col-61.JPG"
                         style="width:100%;" alt="">
 
@@ -278,20 +396,6 @@ assets/css/home.css
     <div class="container mob_dis">
         <div class="row m-0" style="justify-content: space-around;">
             <div class="col-md-6 row p-0" style="height: 100%;">
-                <div class=" col-12 pdmob">
-                    <div class="d-flex text-center justify-content-center"
-                    style="align-items:center;">
-                    <img src="image/new/back_b.jpg" style="width: 100%;">
-                    <a href="https://www.zaynjewels.com/index.php?route=common/cad" class="up" style="position: absolute;">
-                        <div class="new-text">
-                            
-                            <h1 class="css-1qc9ua4" style="font-size: 20px;">CAD/CAM SERVICES</h1>
-                            <div class="css-14iw9cl">Transform your unique designs into reality
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                </div>
                 <div class="col-12 pdmob">
                     <a href="https://www.zaynjewels.com/index.php?route=common/diamondsdemo"><img
                             src="image/new/col-61.JPG" style="height: auto;" alt=""></a>
@@ -349,6 +453,31 @@ assets/css/home.css
 </script>
 
 <script>
+    if (document.querySelector('.splide-whats-new')) {
+        new Splide('.splide-whats-new', {
+            type: 'loop',
+            perPage: 4,
+            perMove: 1,
+            gap: '1.5rem',
+            arrows: true,
+            pagination: false,
+            breakpoints: {
+                640: {
+                    perPage: 1
+                },
+                767: {
+                    perPage: 2
+                },
+                1024: {
+                    perPage: 3
+                },
+                1200: {
+                    perPage: 4
+                }
+            }
+        }).mount();
+    }
+
     var splide = new Splide('.splidenew', {
         type: 'loop',
         perPage: 5,

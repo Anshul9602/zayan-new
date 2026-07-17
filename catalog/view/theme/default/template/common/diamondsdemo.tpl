@@ -289,19 +289,11 @@ if (!$isUserLogged) {
 
                     </div>
 
-                    <div class="col-12 col-sm-12 col-md-6 mb-5">
-                        <div class="row">
-                            <div class="col-4">
-                                <h5 class="mb-3">PRICE (Per Carat)</h5>
-                                <h2 style="color:#423c9e"><span id="diamond-price"></span> </h2>
-                            </div>
-                        </div>
-
-                    </div>
+                    <span id="diamond-price" style="display:none"></span>
 
                     <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-4 mb-5">
                         <input type="hidden" id="diamonds-by-pieces">
-                        <h5 class="mb-3">Buy By</h5>
+                        <h5 class="mb-3">Quantity</h5>
                         <div class="d-flex">
                             <style>
                                 .buy-options li {
@@ -322,8 +314,8 @@ if (!$isUserLogged) {
                             </style>
 
                             <ul class="buy-options">
-                                <li data-buy-option="buy-option-carat" class="selected">Buy By Carat</li>
-                                <li data-buy-option="buy-option-pieces">Buy By Pieces</li>
+                                <li data-buy-option="buy-option-carat" class="selected">By Carat</li>
+                                <li data-buy-option="buy-option-pieces">By Pieces</li>
                             </ul>
                             
 <script>
@@ -452,7 +444,6 @@ if (!$isUserLogged) {
                             <td class="text-left text-uppercase"><b>Diamond</b></td>
                             <td class="text-left text-uppercase"><b>Size</b></td>
                             <td class="text-left text-uppercase"><b>Quantity</b></td>
-                            <td class="text-left text-uppercase"><b>Price Per Carat</b></td>
                             <td class="text-left text-uppercase"><b>Total Price</b></td>
                             <td></td>
                         </tr>
@@ -503,7 +494,6 @@ if (!$isUserLogged) {
                                             echo ($x);
                                             echo (" Pieces");
                                         }?></td>
-                                    <td>$<?php echo (substr($product['price'], 1) * 10000);?>/Carat</td>
                                     <td>
                                         <h5>$<span class="item-total"><?php echo number_format(ceil(str_replace(",", "", substr($product['total'], 1)))); ?>.00</span> </h5>
                                     </td>
@@ -521,9 +511,9 @@ if (!$isUserLogged) {
                         <span id="sub-total-show"><?php echo number_format(ceil(str_replace(",", "", $total)));?>.00</span>
                     </h4>
                     </div>
-                    <a href="index.php?route=checkout/cart" style="background:#423c9e; border: 1px solid #62659c; border-radius:10px; padding:10px 20px; outline:none; color:#fff;text-align:center">
-                        VIEW CART
-                    </a>
+                    <button type="button" id="button-request-price" style="background:#423c9e; border: 1px solid #62659c; border-radius:10px; padding:10px 20px; outline:none; color:#fff;text-align:center">
+                        REQUEST PRICE
+                    </button>
 
                 </div>
             </div>
@@ -687,7 +677,9 @@ if (!$isUserLogged) {
             console.log("tototot", total);
             $('#sub-total').text(Math.ceil(total));
             $('#sub-total-show').text(Math.ceil(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-            $("#cart_count").html(parseInt($("#cart_count").html()) - 1);
+            if ($("#cart_count").length) {
+                $("#cart_count").html(parseInt($("#cart_count").html()) - 1);
+            }
             if ($("#cart-table tr").length == 0) {
                 $("#checkout-table").fadeOut();
             }
@@ -786,7 +778,6 @@ if (!$isUserLogged) {
                                     }
             
                                     </td>
-                                    <td>$${parseFloat(product.price.toString().substring(1))*10000}</td>
                                     <td><h5>$<span class="item-total">${Math.ceil(parseFloat(product.total.substring(1).replace(",",""))).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>.00</h5></td>
                                 
                                     <td class="delete-list-item" style="cursor:pointer;">REMOVE</td>
@@ -818,7 +809,9 @@ if (!$isUserLogged) {
                             console.log("tototot", total);
                             $('#sub-total').text(Math.ceil(total));
                             $('#sub-total-show').text(Math.ceil(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-                            $("#cart_count").html(parseInt($("#cart_count").html()) - 1);
+                            if ($("#cart_count").length) {
+                                $("#cart_count").html(parseInt($("#cart_count").html()) - 1);
+                            }
 
                             if ($("#cart-table tr").length == 0) {
                                 $("#checkout-table").fadeOut();
@@ -843,9 +836,13 @@ if (!$isUserLogged) {
 
                     alert('added to cart!');
 
-                    $('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' +
-                        json['total'] + '</span>');
-                    $("#cart_count").html((json['total'][0]));
+                    if ($('#cart > button').length) {
+                        $('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' +
+                            json['total'] + '</span>');
+                    }
+                    if ($("#cart_count").length) {
+                        $("#cart_count").html((json['total'][0]));
+                    }
 
 
                 }
@@ -859,9 +856,64 @@ if (!$isUserLogged) {
 
     });
 
-   
+    $(document).on('click', '#button-request-price', function(e) {
+        e.preventDefault();
 
-   
+        if ($('#cart-table tr').length == 0) {
+            alert('Your buying list is empty.');
+            return;
+        }
+
+        var isLogged = <?php echo !empty($isUserLogged) ? 'true' : 'false'; ?>;
+        var email = '';
+        var name = '';
+
+        if (!isLogged) {
+            email = prompt('Please enter your email address so we can send you the price details:');
+            if (email === null) {
+                return;
+            }
+            email = email.trim();
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            name = prompt('Please enter your name:');
+            if (name === null) {
+                return;
+            }
+        }
+
+        var btn = $(this);
+
+        $.ajax({
+            url: 'index.php?route=common/diamondsdemo/requestPrice',
+            type: 'post',
+            data: {
+                email: email,
+                name: name
+            },
+            dataType: 'json',
+            beforeSend: function() {
+                btn.prop('disabled', true).text('SENDING...');
+            },
+            complete: function() {
+                btn.prop('disabled', false).text('REQUEST PRICE');
+            },
+            success: function(json) {
+                if (json['error']) {
+                    alert(json['error']);
+                } else if (json['success']) {
+                    alert(json['success']);
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert('Something went wrong. Please try again.');
+                console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    });
+
 </script>
 
 <script>

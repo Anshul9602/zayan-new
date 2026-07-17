@@ -72,17 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-6 dmob-none">
-                    <div class="widget-item">
-                        <h6 class="widget-title">Services</h6>
-                        <div class="widget-body">
-                            <address class="contact-block">
-                                
-                            </address>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 dmob-none">
+                <div class="col-lg-6 col-md-12 col-6 dmob-none">
                     <div class="widget-item">
                         <h6 class="widget-title">Contact Us</h6>
                         <div class="widget-body">
@@ -116,22 +106,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="dmob-dis col-lg-3 col-md-6 col-6">
+                <div class="dmob-dis col-lg-3 col-md-6 col-12">
 
                     <div class="row">
-                        <div class="col-12">
-                            <div class="widget-item">
-                                <h6 class="widget-title">Services</h6>
-                                <div class="widget-body">
-                                    <address class="contact-block">
-                                        <ul>
-                                            <li><a href="index.php?route=common/cad">CAD/CAM Services</a></li>
-                                        </ul>
-                                    </address>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-12 mt-3">
+                        <div class="col-12 mt-3">
                             <div class="widget-item">
                                 <h6 class="widget-title">Contact Us</h6>
                                 <div class="widget-body">
@@ -172,12 +150,7 @@
                     </div> <br />
                 </div>
 
-                <div class="col-lg-6 col-md-4 col-6 text-start dmob-dis">
-                    <div class="widget-item">
-                        <img src="image/new/WJA_logo.png" class="mob_size" style="width: 140px;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-6 " style="display: flex;    align-items: center;">
+                <div class="col-12" style="display:flex; align-items:center; justify-content:center;">
                     <div class="widget-item">
                         <div class="widget-body social-link" style="margin-top: 0px;">
                             <a target="_blank" href="https://www.facebook.com/zaynjewels/">
@@ -193,17 +166,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-4 col-12 text-center dmob-none">
-                    <div class="widget-item">
-                        <img src="image/new/WJA_logo.png" class="mob_size" style="width: 140px;" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-12" style="display: flex;align-items: center;justify-content: center;">
-                    <div class="widget-item">
-                        <img src="assets/img/payment.png" alt="payment method">
-                    </div>
-                </div>
-
             </div>
         </div>
         <div class="col-md-12 col-12 mt-3" style="background-color: #423c9e;">

@@ -223,22 +223,6 @@
                                 <nav class="desktop-menu">
                                     <ul class="justify-content-center header-style-4">
                                        
-                                        <li>
-                                            <a href="index.php?route=common/jewelry">Jewelry</a>
-                                            <ul class="dropdown">
-                                                <li><a href="index.php?route=product/categorynew&path=79_80" style="padding: 20px 20px 10px 20px;">Rings</a></li>
-                                                <li><a href="index.php?route=product/categorynew&path=79_82">Earrings</a>
-                                                </li>
-                                                <li><a href="index.php?route=product/categorynew&path=79_83">Bangles</a>
-                                                </li>
-                                                <li><a href="index.php?route=product/categorynew&path=79_85">Pendants</a>
-                                                </li>
-                                                <li><a href="index.php?route=product/categorynew&path=79_84">Bracelets</a>
-                                                </li>
-                                                <li><a href="index.php?route=product/categorynew&path=79_86">Necklaces</a>
-                                                </li>
-                                            </ul>
-                                        </li>
                                         <li><a href="index.php?route=product/category&path=110">Watches</a> </li>
                                         
                                         <li>
@@ -260,16 +244,7 @@
                                                
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="index.php?route=common/diamondsdemo">Natural Diamonds</a>
-                                            <ul class="dropdown">
-                                                <li> <a href="index.php?route=common/diamondsdemo">Melee Diamonds</a>
-                                                </li>
-                                                <li> <a href="index.php?route=common/giadiamonds">GIA Certified
-                                                        Diamonds</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="index.php?route=common/diamondsdemo">Natural Loose Diamonds</a></li>
                                         <li>
                                             <a onclick="return false;" href="#">Catalog</a>
                                             <ul class="dropdown">
@@ -330,14 +305,6 @@
                                                 </div>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="index.php?route=checkout/cart" class="minicart-btn cart_icon">
-                                                <i class="pe-7s-shopbag"></i>
-                                                <div id="cart_count" class="notification">
-                                                    <?php echo $text_items; ?>
-                                                </div>
-                                            </a>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -360,17 +327,7 @@
                         <div style="display: inline;" class="mobile-main-header">
                             <div style="display: inline;" class="mobile-menu-toggler">
                                 <div class="row">
-                                    <div class="col-3">
-                                        <div style="margin-top: 20px;" class="mini-cart-wrap">
-                                            <a href="index.php?route=checkout/cart">
-                                                <i class="pe-7s-shopbag"></i>
-                                                <div class="notification">
-                                                    <?php echo $text_items; ?>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 text-center">
+                                    <div class="col-9 text-center">
 
                                         <a href="index.php?route=common/home">
                                             <img style="width: 80px;" src="<?php echo $logo; ?>" alt="Brand Logo">
@@ -431,9 +388,6 @@
                             <ul style="padding-left:30px" class="mobile-menu">
                                
                                 <li>
-                                    <a href="index.php?route=common/jewelry">Jewelry</a>
-                                </li>
-                                <li>
                                     <a href="index.php?route=product/category&path=110">Watches</a>
                                 </li>
                                 <li class="menu-item-has-children">
@@ -454,14 +408,8 @@
                                                 </li>
                                                 </ul>
                                 </li>
-                                <li class="menu-item-has-children">
-                                    <a href="index.php?route=common/diamondsdemo">Natural Diamonds</a>
-                                    <ul class="dropdown">
-                                        <li> <a href="index.php?route=common/diamondsdemo">Melee Diamonds</a>
-                                        </li>
-                                        <li> <a href="index.php?route=common/giadiamonds">GIA Certified Diamonds</a>
-                                        </li>
-                                    </ul>
+                                <li>
+                                    <a href="index.php?route=common/diamondsdemo">Natural Loose Diamonds</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Catalog</a>

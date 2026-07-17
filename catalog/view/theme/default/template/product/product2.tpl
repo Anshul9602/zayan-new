@@ -46,7 +46,6 @@
    <li style="color:#423c9e" class="fa fa-check-circle-o"></li>
    <h3>Item added to cart</h3>
    <br>
-   <a href="index.php?route=checkout/cart"><button class="btn btn-hero">View Cart</button></a>
    <button id="continue_shopping" class="btn btn-hero">Continue Shopping</button>
 </div>
 <div style=" margin-top:30px" class="container">

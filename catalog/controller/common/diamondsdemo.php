@@ -308,4 +308,126 @@ class ControllerCommonDiamondsdemo extends Controller
 
 		$this->response->setOutput($this->load->view('common/diamondsdemo', $data));
 	}
+
+	public function requestPrice()
+	{
+		$json = array();
+
+		// Determine customer name / email
+		if ($this->customer->isLogged()) {
+			$email = $this->customer->getEmail();
+			$name  = trim($this->customer->getFirstName() . ' ' . $this->customer->getLastName());
+		} else {
+			$email = isset($this->request->post['email']) ? trim($this->request->post['email']) : '';
+			$name  = isset($this->request->post['name']) ? trim($this->request->post['name']) : '';
+		}
+
+		if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			$json['error'] = 'Please provide a valid email address.';
+			$this->response->addHeader('Content-Type: application/json');
+			$this->response->setOutput(json_encode($json));
+			return;
+		}
+
+		if (!$name) {
+			$name = 'Customer';
+		}
+
+		$products = $this->cart->getProducts();
+
+		if (!$products) {
+			$json['error'] = 'Your buying list is empty.';
+			$this->response->addHeader('Content-Type: application/json');
+			$this->response->setOutput(json_encode($json));
+			return;
+		}
+
+		// Build product details table
+		$rows = '';
+		$i = 0;
+
+		foreach ($products as $product) {
+			$i++;
+
+			$pieces = '';
+			$option_values = array();
+
+			foreach ($product['option'] as $option) {
+				if ($option['name'] == 'diamond by pieces') {
+					$pieces = $option['value'];
+				} elseif ($option['value'] != 'default') {
+					$option_values[] = $option['value'];
+				}
+			}
+
+			if ($pieces !== '' && $pieces !== '0') {
+				$quantity = $pieces . ' Pieces';
+			} else {
+				$quantity = rtrim(rtrim(number_format($product['quantity'] / 10000, 3, '.', ''), '0'), '.') . ' Carats';
+			}
+
+			$rows .= '<tr>';
+			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . $i . '</td>';
+			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . $product['name'] . '</td>';
+			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . implode(', ', $option_values) . '</td>';
+			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . $quantity . '</td>';
+			$rows .= '</tr>';
+		}
+
+		$html  = '<html><body>';
+		$html .= '<p>Dear ' . htmlspecialchars($name) . ',</p>';
+		$html .= '<p>Thank you for your price request. We have received the following details and our team will get back to you with pricing shortly.</p>';
+		$html .= '<table style="border-collapse:collapse; width:100%; max-width:600px;">';
+		$html .= '<tr><th style="padding:8px; border:1px solid #ddd; text-align:left;">S.No</th><th style="padding:8px; border:1px solid #ddd; text-align:left;">Diamond</th><th style="padding:8px; border:1px solid #ddd; text-align:left;">Size</th><th style="padding:8px; border:1px solid #ddd; text-align:left;">Quantity</th></tr>';
+		$html .= $rows;
+		$html .= '</table>';
+		$html .= '<p>Customer: ' . htmlspecialchars($name) . ' (' . htmlspecialchars($email) . ')</p>';
+		$html .= '<p>Regards,<br/>' . $this->config->get('config_name') . '</p>';
+		$html .= '</body></html>';
+
+		$subject = 'Price Request - ' . $this->config->get('config_name');
+
+		try {
+			// Send to customer
+			$mail = new Mail();
+			$mail->protocol = $this->config->get('config_mail_protocol');
+			$mail->parameter = $this->config->get('config_mail_parameter');
+			$mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
+			$mail->smtp_username = $this->config->get('config_mail_smtp_username');
+			$mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
+			$mail->smtp_port = $this->config->get('config_mail_smtp_port');
+			$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
+
+			$mail->setTo($email);
+			$mail->setFrom($this->config->get('config_email'));
+			$mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
+			$mail->setSubject($subject);
+			$mail->setHtml($html);
+			$mail->send();
+
+			// Send copy to store
+			$mail = new Mail();
+			$mail->protocol = $this->config->get('config_mail_protocol');
+			$mail->parameter = $this->config->get('config_mail_parameter');
+			$mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
+			$mail->smtp_username = $this->config->get('config_mail_smtp_username');
+			$mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
+			$mail->smtp_port = $this->config->get('config_mail_smtp_port');
+			$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
+
+			$mail->setTo($this->config->get('config_email'));
+			$mail->setFrom($this->config->get('config_email'));
+			$mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
+			$mail->setSubject('[Copy] ' . $subject . ' from ' . $name);
+			$mail->setHtml($html);
+			$mail->send();
+
+			$json['success'] = 'Your price request has been sent. We will contact you shortly at ' . $email . '.';
+		} catch (Exception $e) {
+			$json['error'] = 'Could not send the email. Please try again later.';
+		}
+
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
+	}
 }
