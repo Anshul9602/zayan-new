@@ -179,10 +179,9 @@
                <?php
                   } ?>
                <?php if ($price) { ?>
-               <h3 id="p_pr" style="  color:#a38129; font-size:22px;">
+               <h3 id="p_pr" style="color:#a38129; font-size:22px;">
                   <?php echo preg_replace('~\.0+$~', '', $price); ?>
                </h3>
-              
                <div style="margin-top:20px;" class="row">
                   <div style="text-align: left; padding-left: 0px; width:120px">
                      <p style="color:#000; font-size:16px">Quantity &nbsp;&nbsp;&nbsp;&nbsp;</p>
@@ -343,16 +342,9 @@
                <div id="wishlist-msg">
                </div>
               <div style="padding:0px;" id="content" class="row">
-                  <div style=" min-width:160px;" id="addb" class="col-sm-7">
-                     <a id="button-cart" style="width: 100%;" class="btn btn-hero">ADD TO CART</a>
-                     <!--<button type="button" data-toggle="tooltip"
-                        title="<?php echo $button_wishlist; ?>"
-                        onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>-->
-                  </div>
-                  <div class="col-sm-5">
-                     <a class="btn btn-hero" onclick="wishlist.add(' <?php echo $product_id; ?> ');">
-                        <li class="fa fa-heart"></li>
-                     </a>
+                  <div style=" min-width:160px;" class="col-sm-12">
+                     <a class="btn btn-find-store" style="width: 100%;"
+                        href="https://zaynjewels.com/index.php?route=common/locations">Find A Store</a>
                   </div>
                </div>
                <?php

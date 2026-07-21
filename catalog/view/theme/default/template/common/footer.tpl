@@ -3,6 +3,59 @@
         color: #423c9e;
     }
 
+    .footer-main-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .footer-col {
+        margin-bottom: 25px;
+    }
+
+    .footer-logo-col {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .footer-logo-col img {
+        width: 120px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .footer-social .social-link {
+        margin-top: 0;
+    }
+
+    .footer-social .social-link a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 8px 8px 0;
+        border-radius: 50%;
+        background: #fff;
+        color: #423c9e;
+        text-decoration: none;
+    }
+
+    .footer-newsletter {
+        margin-top: 12px;
+        max-width: 280px;
+    }
+
+    .footer-newsletter .form-control {
+        height: 40px;
+        width: 100%;
+    }
+
+    .footer-newsletter .btn-hero {
+        width: 100%;
+        margin-top: 5px;
+    }
+
     .dmob-dis {
         display: none;
     }
@@ -20,13 +73,23 @@
             font-size: 8px !important;
         }
 
-        .mob_size {
-            width: 100px !important;
-        }
-
         .mob-center {
             text-align: center !important;
             padding: 0 !important;
+            justify-content: center;
+        }
+
+        .footer-logo-col {
+            justify-content: center;
+            width: 100%;
+        }
+
+        .footer-newsletter {
+            max-width: 100%;
+        }
+
+        .footer-social {
+            text-align: left;
         }
 
         .section-padding {
@@ -40,39 +103,32 @@
     <div class="footer-top section-padding pb-0">
         <div class="container">
 
-            <div class="row">
+            <div class="row footer-main-row">
 
-                <div class="col-lg-3 col-md-6 col-12 mob-center" style="padding:0 0 0 35px;">
+                <div class="col-lg-3 col-md-6 col-12 footer-col footer-logo-col mob-center">
                     <div class="widget-item">
                         <div class="widget-body">
-
-                            <img src="<?php echo $logo; ?>
-                           " style="width:120px" alt="">
-
-
+                            <img src="<?php echo $logo; ?>" alt="Zayn Jewels">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-6">
+
+                <div class="col-lg-3 col-md-6 col-6 footer-col">
                     <div class="widget-item">
                         <h6 class="widget-title">Useful Links</h6>
                         <div class="widget-body">
-                            <ul class="info-list " style="display: block;">
-                                <li> <a href="index.php?route=common/aboutus">About us</a></li>
-                                <li> <a
-                                        href="index.php?route=extension/d_blog_module/category&category_id=1">Education</a>
-                                </li>
-
+                            <ul class="info-list" style="display: block;">
+                                <li><a href="index.php?route=common/aboutus">About us</a></li>
+                                <li><a href="index.php?route=extension/d_blog_module/category&category_id=1">Education</a></li>
                                 <li><a href="index.php?route=information/contact">Contact Us</a></li>
-                                <li><a href="index.php?route=information/information&information_id=3">privacy
-                                        policy</a></li>
-                                <li><a href="index.php?route=common/locations"> Retail Locations</a></li>
-
+                                <li><a href="index.php?route=information/information&information_id=3">Privacy policy</a></li>
+                                <li><a href="index.php?route=common/locations">Retail Locations</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-6 dmob-none">
+
+                <div class="col-lg-3 col-md-6 col-6 footer-col">
                     <div class="widget-item">
                         <h6 class="widget-title">Contact Us</h6>
                         <div class="widget-body">
@@ -80,100 +136,65 @@
                                 <ul>
                                     <li>
                                         <i class="pe-7s-mail"></i>
-                                        <a href="mailto:info@zaynjewels.com">info@zaynjewels.com
-                                        </a>
+                                        <a href="mailto:info@zaynjewels.com">info@zaynjewels.com</a>
                                     </li>
                                     <li>
                                         <i class="pe-7s-call"></i>
-                                        <a href="tel:+1(949)900-6910">+1 (949)
-                                            900-6910</a>
+                                        <a href="tel:+1(949)900-6910">+1 (949) 900-6910</a>
                                     </li>
                                 </ul>
-                                <div class="clear">
-
+                                <div class="footer-newsletter dmob-none">
                                     <form class="newsletter-inner" id="mc-form" novalidate="true">
                                         <input type="email" value="" id="mc-email" autocomplete="off"
-                                            style="height:40px; width:100%" name="EMAIL"
-                                            class="required email mail_boxj form-control"
+                                            name="EMAIL" class="required email mail_boxj form-control"
                                             placeholder="Enter your email address">
-
-                                        <button style="width:100%; margin-top:5px" id="mc-submit" class="btn btn-hero">
-                                            JOIN US
-                                        </button>
+                                        <button id="mc-submit" class="btn btn-hero">JOIN US</button>
                                     </form>
                                 </div>
                             </address>
                         </div>
                     </div>
                 </div>
-                <div class="dmob-dis col-lg-3 col-md-6 col-12">
 
-                    <div class="row">
-                        <div class="col-12 mt-3">
-                            <div class="widget-item">
-                                <h6 class="widget-title">Contact Us</h6>
-                                <div class="widget-body">
-                                    <address class="contact-block">
-                                        <ul>
-                                            <li>
-                                                <i class="pe-7s-mail"></i>
-                                                <a href="mailto:info@zaynjewels.com">info@zaynjewels.com
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <i class="pe-7s-call"></i>
-                                                <a href="tel:+1(949)900-6910">+1 (949)
-                                                    900-6910</a>
-                                            </li>
-                                        </ul>
-                                    </address>
-
-                                </div>
+                <div class="col-lg-3 col-md-6 col-12 footer-col">
+                    <div class="widget-item">
+                        <h6 class="widget-title">Social Media</h6>
+                        <div class="widget-body footer-social">
+                            <div class="social-link">
+                                <a target="_blank" href="https://www.facebook.com/zaynjewels/" title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a target="_blank" href="https://www.instagram.com/zaynjewels/" title="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a target="_blank" href="https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA" title="YouTube">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
                             </div>
                         </div>
-
                     </div>
                 </div>
-                <div class="col-12 dmob-dis">
-                    <h6 class="widget-title">Susbscribe</h6>
-                    <div class="clear">
 
-                        <form class="newsletter-inner" id="mc-form" novalidate="true">
-                            <input type="email" value="" id="mc-email" autocomplete="off"
-                                style="height:40px; width:100%" name="EMAIL"
-                                class="required email mail_boxj form-control" placeholder="Enter your email address">
-
-                            <button style="width:100%; margin-top:5px" id="mc-submit" class="btn btn-hero">
-                                JOIN US
-                            </button>
+                <div class="col-12 dmob-dis footer-col">
+                    <h6 class="widget-title">Subscribe</h6>
+                    <div class="footer-newsletter">
+                        <form class="newsletter-inner" novalidate="true">
+                            <input type="email" value="" autocomplete="off"
+                                name="EMAIL" class="required email mail_boxj form-control"
+                                placeholder="Enter your email address">
+                            <button class="btn btn-hero mc-submit-mob">JOIN US</button>
                         </form>
-                    </div> <br />
-                </div>
-
-                <div class="col-12" style="display:flex; align-items:center; justify-content:center;">
-                    <div class="widget-item">
-                        <div class="widget-body social-link" style="margin-top: 0px;">
-                            <a target="_blank" href="https://www.facebook.com/zaynjewels/">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-
-                            <a target="_blank" href="https://www.instagram.com/zaynjewels/">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                            <a target="_blank" href="https://www.youtube.com/channel/UC0KmddVZ3BX4Ly5jjBRW7SA">
-                                <i class="fa fa-youtube"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
         <div class="col-md-12 col-12 mt-3" style="background-color: #423c9e;">
             <div>
                 <p class="text-center container mob-size"
-                    style=" font-size:14px; color:#f1f1f1; padding:5px;font-weight: 400;">
+                    style="font-size:14px; color:#f1f1f1; padding:5px;font-weight: 400;">
                     Copyright © 2025 Zayn Jewels . All Rights Reserved. Developed By
-                    <a href="https://theodin.in/" style="color:#fff;    text-decoration: underline;">
+                    <a href="https://theodin.in/" style="color:#fff; text-decoration: underline;">
                         @The Odin</a> .
                 </p>
             </div>

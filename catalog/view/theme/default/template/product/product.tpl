@@ -446,27 +446,20 @@ console.log(temp);
                </div>
                <hr style="    margin-top: 0px;">
                <?php if ($price) { ?>
-               <h3  style="color:#a38129; font-size:22px;">
-                  <span style="font-size:16px; color:#000; margin-right:6px;">MSRP:</span>
+               <h3 style="color:#a38129; font-size:22px;">
                   <?php if ($special) { ?>
-                      <!-- Regular Price -->
                       <span style="text-decoration: line-through; color: #999;">
                           <?php echo rtrim(rtrim($price, '0'), '.') ; ?>
                       </span>
-              
-                      <!-- Special Price -->
                       <span style="color:#a38129; font-weight: bold;">
                         <?php echo rtrim(rtrim($special, '0'), '.'); ?>
                       </span>
-              
-                      <!-- Discount Percentage -->
                       <?php if ($discount_percentage) { ?>
                           <span style="color: red; font-size: 15px; margin-left: 10px;">
                               (<?php echo $discount_percentage; ?>% Off)
                           </span>
                       <?php } ?>
                   <?php } else { ?>
-                      <!-- Regular Price Only -->
                       <span id="p_pr">
                           <?php echo rtrim(rtrim($price, '0'), '.') ; ?>
                       </span>
@@ -631,13 +624,9 @@ console.log(temp);
 
                </div>
                <div style="padding:0px;" id="content" class="row">
-                  <div style=" min-width:160px;" id="addb" class="col-sm-7">
-                     <a id="button-cart" style="width: 100%;" class="btn btn-hero">ADD TO CART</a>
-                  </div>
-                  <div class="col-sm-5">
-                     <a class="btn btn-find-store" style=""
+                  <div style=" min-width:160px;" class="col-sm-12">
+                     <a class="btn btn-find-store" style="width: 100%;"
                         href="https://zaynjewels.com/index.php?route=common/locations">Find A Store</a>
-
                   </div>
                </div>
 
@@ -903,7 +892,7 @@ console.log(temp);
                <br />
                <h3 style="color:#a38129; font-size:22px;">
                   <?php if ($price) {
-                        echo 'MSRP: ' . preg_replace('~\.0+$~', '', $price);
+                        echo preg_replace('~\.0+$~', '', $price);
                      } else {
                         echo '<div style="padding:0px;" class="row pb-5">
                      <div style=" min-width:160px;" id="addb" class="col-sm-6 offset-sm-3">
