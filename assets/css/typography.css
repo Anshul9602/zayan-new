@@ -1,0 +1,232 @@
+/* Site-wide Questrial typography (Shy Creation inspired) */
+:root {
+  --font-primary: "Questrial", sans-serif;
+  --fs-body: 15px;
+  --fs-nav: 13px;
+  --fs-nav-dropdown: 13px;
+  --fs-product: 14px;
+  --fs-product-sm: 13px;
+  --fs-heading-xl: 42px;
+  --fs-heading-lg: 32px;
+  --fs-heading-md: 24px;
+  --fs-heading-sm: 18px;
+  --ls-nav: 0.12em;
+  --ls-product: 0.04em;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-primary) !important;
+}
+
+body {
+  font-size: var(--fs-body);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.65;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+p, a, span, li, label, td, th,
+.btn, .form-control, .widget-title {
+  font-family: var(--font-primary) !important;
+}
+
+h1, .h1 {
+  font-size: var(--fs-heading-xl);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+h2, .h2 {
+  font-size: var(--fs-heading-lg);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+h3, .h3 {
+  font-size: var(--fs-heading-md);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+h4, .h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h5, .h5,
+h6, .h6 {
+  font-size: var(--fs-heading-sm);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+/* Main navigation */
+.main-menu ul li a,
+.main-menu ul.header-style-4 > li a,
+.desktop-menu a,
+.mobile-menu a,
+.mobile-navigation a,
+.off-canvas-inner a {
+  font-family: var(--font-primary) !important;
+  font-size: var(--fs-nav) !important;
+  font-weight: 400 !important;
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+}
+
+.main-menu ul li ul.dropdown li a,
+.main-menu ul li ul.megamenu li a,
+.mobile-menu .dropdown a {
+  font-size: var(--fs-nav-dropdown) !important;
+  letter-spacing: 0.08em;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+}
+
+.sticky.is-sticky .main-menu li a {
+  font-size: var(--fs-nav) !important;
+}
+
+/* Product names / cards */
+.product-name,
+.whats-new-title,
+.product-caption h6,
+.product-caption .product-name,
+.shop-product-wrap .product-name,
+.product-thumb h4,
+.product-thumb h6,
+.caption h4,
+#data-container .product-name,
+.p_box .product-name,
+a .product-name {
+  font-family: var(--font-primary) !important;
+  font-size: var(--fs-product) !important;
+  font-weight: 400 !important;
+  letter-spacing: var(--ls-product);
+  text-transform: uppercase;
+  line-height: 1.45;
+}
+
+/* Product page title */
+#product h3,
+.product-details h3,
+.product-details h1 {
+  font-family: var(--font-primary) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.03em;
+}
+
+/* Buttons & CTAs */
+.btn,
+.btn-hero,
+.btn-primary,
+.btn-find-store,
+.whats-new-btn {
+  font-family: var(--font-primary) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Footer */
+footer,
+footer a,
+footer h6,
+.widget-title,
+.info-list li a,
+.contact-block a {
+  font-family: var(--font-primary) !important;
+  font-weight: 400 !important;
+}
+
+footer h6,
+.widget-title {
+  font-size: 14px !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+footer .info-list li a,
+.contact-block a,
+.contact-block li {
+  font-size: 13px !important;
+  letter-spacing: 0.04em;
+}
+
+/* Breadcrumb / filters / misc UI */
+.breadcrumb,
+.breadcrumb a,
+.sidebar-wrapper,
+.filter,
+#input-sort,
+.sort {
+  font-family: var(--font-primary) !important;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+/* Home section labels */
+.mob_font1,
+.text-collection,
+.css-kl8k2i,
+.tablinks,
+.att-p {
+  font-family: var(--font-primary) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* What's New section */
+.whats-new-section,
+.whats-new-copy h2,
+.whats-new-copy p,
+.whats-new-eyebrow,
+.whats-new-brand,
+.whats-new-view {
+  font-family: var(--font-primary) !important;
+}
+
+.whats-new-copy h2 {
+  font-size: 42px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-style: normal !important;
+}
+
+.whats-new-copy h2 span {
+  font-style: normal !important;
+  display: inline;
+}
+
+.whats-new-eyebrow,
+.whats-new-brand {
+  font-size: 11px !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.whats-new-title {
+  font-size: 13px !important;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --fs-nav: 14px;
+    --fs-heading-xl: 32px;
+    --fs-heading-lg: 26px;
+  }
+
+  .whats-new-copy h2 {
+    font-size: 34px !important;
+  }
+}

@@ -11,8 +11,15 @@ class ControllerStartupRouter extends Controller {
 		// Sanitize the call
 		$route = preg_replace('/[^a-zA-Z0-9_\/]/', '', (string)$route);
 
-		// Checkout/cart disabled site-wide
-		if (strpos($route, 'checkout/') === 0) {
+		// Block checkout pages, but allow cart AJAX used by Diamonds buying list
+		$checkout_allowed = array(
+			'checkout/cart/add',
+			'checkout/cart/remove',
+			'checkout/cart/edit',
+			'checkout/cart/info'
+		);
+
+		if (strpos($route, 'checkout/') === 0 && !in_array($route, $checkout_allowed)) {
 			$this->response->redirect($this->url->link('common/home'));
 			return;
 		}

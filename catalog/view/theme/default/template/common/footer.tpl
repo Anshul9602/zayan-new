@@ -193,7 +193,7 @@
             <div>
                 <p class="text-center container mob-size"
                     style="font-size:14px; color:#f1f1f1; padding:5px;font-weight: 400;">
-                    Copyright © 2025 Zayn Jewels . All Rights Reserved. Developed By
+                    Copyright © 2026 Zayn Jewels . All Rights Reserved. Developed By
                     <a href="https://theodin.in/" style="color:#fff; text-decoration: underline;">
                         @The Odin</a> .
                 </p>

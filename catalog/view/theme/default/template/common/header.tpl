@@ -30,7 +30,7 @@
 
 
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
@@ -55,7 +55,8 @@
     <!-- jquery UI css -->
     <link rel="stylesheet" href="assets/css/plugins/jqueryui.min.css">
     <!-- main style css -->
-    <link href="assets/css/style.css?v1.15266" rel="stylesheet">
+    <link href="assets/css/style.css?v1.15267" rel="stylesheet">
+    <link href="assets/css/typography.css?v1.0" rel="stylesheet">
     <script type="text/javascript" src="catalog/view/javascript/js.cookie.min.js"></script>
     <link href="https://fonts.cdnfonts.com/css/trajan" rel="stylesheet">
     <!-- jquery UI JS -->

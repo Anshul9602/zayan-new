@@ -29,9 +29,9 @@ Table of content
 body {
   color: #555555;
   line-height: 1.7;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
-  font-family: "Lato", sans-serif;
+  font-family: "Questrial", sans-serif;
 }
 @font-face {
   font-family: 'Trajan-Regular', sans-serif;
@@ -63,9 +63,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", sans-serif;
+  font-family: "Questrial", sans-serif;
   color: #222222;
-  font-weight: 700;
+  font-weight: 400;
   margin: 0;
   line-height: 1.2;
 }
@@ -1700,6 +1700,10 @@ header {
   margin: 15px 45px;
   padding: 0px;
   text-transform: uppercase;
+  font-family: "Questrial", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  font-weight: 400;
 }
 
 .main-menu ul.header-style-4>li:first-child>a {

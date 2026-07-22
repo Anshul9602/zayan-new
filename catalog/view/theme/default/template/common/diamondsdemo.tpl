@@ -444,17 +444,14 @@ if (!$isUserLogged) {
                             <td class="text-left text-uppercase"><b>Diamond</b></td>
                             <td class="text-left text-uppercase"><b>Size</b></td>
                             <td class="text-left text-uppercase"><b>Quantity</b></td>
-                            <td class="text-left text-uppercase"><b>Total Price</b></td>
                             <td></td>
                         </tr>
                     </thead>
                     <tbody id="cart-table">
                         <?php
-                            $i     = 0;
-                            $total = 0;
+                            $i = 0;
                             foreach ($cart_products as $product) {
                                 if (array_key_exists($product['model'], $products)) {
-                                    $total += str_replace(",", "", substr($product['total'], 1));
                                     $x = "";
                              ?>
 
@@ -463,22 +460,22 @@ if (!$isUserLogged) {
                                     <td><b><?php echo $product['name'];?></b>
                                  
                                    </td>
-                                    <td><?php if ($product['option']) { ?>
-                                           <?php
-                                    foreach ($product['option'] as $option) {
-                                        if ($option['name'] == "diamond by pieces") {
-                                            $x = $option['value'];
-                                            continue;
+                                    <td><?php
+                                        $size_label = '';
+                                        if (!empty($product['option'])) {
+                                            foreach ($product['option'] as $option) {
+                                                if (strtolower($option['name']) == 'diamond by pieces') {
+                                                    $x = $option['value'];
+                                                    continue;
+                                                }
+                                                if (strtolower($option['value']) == 'default' || $option['value'] === '') {
+                                                    continue;
+                                                }
+                                                $size_label = $option['value'];
+                                            }
                                         }
-                                        if (strtolower($option['value']) == "default") {
-                                            continue;
-                                        }
-                                      ?>
-                                                
-
-                                            <?php }?>
-                                       <?php }?>
-                                   </td>
+                                        echo htmlspecialchars($size_label);
+                                    ?></td>
                                     <td><?php if ($x == "") {
                                         $qty = substr($product['quantity'] / 10000, 0, strpos($product['quantity'] / 10000, ".") + 4);
                                         echo $qty;
@@ -494,9 +491,6 @@ if (!$isUserLogged) {
                                             echo ($x);
                                             echo (" Pieces");
                                         }?></td>
-                                    <td>
-                                        <h5>$<span class="item-total"><?php echo number_format(ceil(str_replace(",", "", substr($product['total'], 1)))); ?>.00</span> </h5>
-                                    </td>
                                     <td class="delete-list-item" style="cursor:pointer;">REMOVE</td>
                                 </tr>
                         <?php } ?>
@@ -505,12 +499,6 @@ if (!$isUserLogged) {
                     </tbody>
                 </table>
                 <div class="text-center" style="margin-bottom:25px;">
-                    <div style="margin-bottom:10px;" class="text-right">
-                        <h4>Sub Total:- $<span style="display:none;" id="sub-total">
-                        <?php echo ceil(str_replace(",", "", $total));?>.00</span>
-                        <span id="sub-total-show"><?php echo number_format(ceil(str_replace(",", "", $total)));?>.00</span>
-                    </h4>
-                    </div>
                     <button type="button" id="button-request-price" style="background:#423c9e; border: 1px solid #62659c; border-radius:10px; padding:10px 20px; outline:none; color:#fff;text-align:center">
                         REQUEST PRICE
                     </button>
@@ -665,20 +653,9 @@ if (!$isUserLogged) {
         let cart_id = $(this).parent().attr('data-cart-id');
         cart.remove(cart_id);
         $(this).parent().fadeOut("fast", function() {
-            let total = 0
-            $('#cart-table').find(".item-total").each(function() {
-                total += parseInt($(this).text().replace(",", ""));
-            })
-
-            total -= parseInt(item.parent().find('.item-total').text());
             item.parent().remove();
-
-
-            console.log("tototot", total);
-            $('#sub-total').text(Math.ceil(total));
-            $('#sub-total-show').text(Math.ceil(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
             if ($("#cart_count").length) {
-                $("#cart_count").html(parseInt($("#cart_count").html()) - 1);
+                $("#cart_count").html(Math.max(0, parseInt($("#cart_count").html()) - 1));
             }
             if ($("#cart-table tr").length == 0) {
                 $("#checkout-table").fadeOut();
@@ -697,13 +674,31 @@ if (!$isUserLogged) {
         if ($('#product_id').val() == '') {
             alert('Please complete form');
             return;
-        } else if ($('#input-pieces').val() == '') {
+        }
+        if (!$('select').val()) {
+            alert('Please select diamond size');
+            return;
+        }
+
+        var buyOption = $('.buy-options li.selected').attr('data-buy-option');
+        var qtyVal = $('.selected-buy-option-input').val();
+
+        if (qtyVal === '' || qtyVal === null || Number(qtyVal) <= 0) {
             alert('Please input carat or pieces');
             return;
-        } else if ($('#input-pieces').val() < 1) {
+        }
+
+        if (buyOption == 'buy-option-pieces' && Number(qtyVal) < 1) {
             alert('Minimum quantity is 1 piece');
             return;
         }
+
+        var caratQty = Number($('input[name="quantity"]').val());
+        if (!caratQty || caratQty <= 0) {
+            alert('Please input carat or pieces');
+            return;
+        }
+
         $.ajax({
             url: 'index.php?route=checkout/cart/add',
             type: 'post',
@@ -711,9 +706,9 @@ if (!$isUserLogged) {
                 product_id: $('#product_id').val(),
                 option: {
                     [$('select').attr('name')]: $('select').val(),
-                    [$('#diamonds-by-pieces').attr("name")]: $('.selected-buy-option-input').attr('id') == 'input-pieces' ? $('.selected-buy-option-input').val() : ""
+                    [$('#diamonds-by-pieces').attr("name")]: buyOption == 'buy-option-pieces' ? $('#input-pieces').val() : ""
                 },
-                quantity: Number($('input[name="quantity"]').val()) * 10000
+                quantity: Number(caratQty) * 10000
             },
             dataType: 'json',
             beforeSend: function() {
@@ -725,9 +720,19 @@ if (!$isUserLogged) {
             success: function(json) {
 
 
+                if (json['redirect']) {
+                    window.location = json['redirect'];
+                    return;
+                }
+
                 if (json['error']) {
                     console.log(json);
-                    alert('Something wrong in form!')
+                    if (json['error']['warning']) {
+                        alert(json['error']['warning']);
+                    } else {
+                        alert('Something wrong in form!');
+                    }
+                    return;
                 }
 
                 if (json['success']) {
@@ -745,15 +750,23 @@ if (!$isUserLogged) {
                             return ""
                         }
                     }
-                    let total = 0;
                     json.cart_products.forEach((product, index) => {
                         let pros = <?php echo (json_encode($products));?>;
 
 
                         let pro = pros[product.model];
                         if (pro) {
-                            total += parseFloat(product.total.replace(',', '').substring(1));
                             let pcs = "";
+                            let sizeVal = "";
+
+                            (product.option || []).forEach(function(option) {
+                                var optName = (option.name || '').toLowerCase();
+                                if (optName === "diamond by pieces") {
+                                    pcs = option.value;
+                                } else if (option.value && String(option.value).toLowerCase() !== "default") {
+                                    sizeVal = option.value;
+                                }
+                            });
 
                             $('#cart-table').append(`
                                 <tr 
@@ -761,35 +774,20 @@ if (!$isUserLogged) {
                                     data-product-id="${product.product_id}">
                                     <td>${index+1} </td>
                                     <td><b>${product.name}</b></td>
-                                    <td>
-                                        ${
-
-                                            product.option.map((option)=>{
-                                            if(option.name === "diamond by pieces"){
-                                                pcs = option.value;
-                                            }else if(option.value !== "default"){
-                                                return option.value;
-                                            }
-                                        }).join("")}
-                                    </td>
+                                    <td>${sizeVal}</td>
                                     <td>
                                     ${
                                         pcs===""?`${(product.quantity/10000).toString().substring(0,(product.quantity/10000).toString().indexOf(".")===-1?(product.quantity/10000).toString().length:(product.quantity/10000).toString().indexOf(".")+4)}${(product.quantity/10000).toString().indexOf(".")===-1?printZeros(3):printZeros(4 - (product.quantity/10000).toString().length+ (product.quantity/10000).toString().indexOf("."))} Carats`:`${pcs} Pieces`
                                     }
             
                                     </td>
-                                    <td><h5>$<span class="item-total">${Math.ceil(parseFloat(product.total.substring(1).replace(",",""))).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>.00</h5></td>
-                                
                                     <td class="delete-list-item" style="cursor:pointer;">REMOVE</td>
                                 </tr>
                             `);
                         }
 
                     })
-                    console.log("tototot", total);
-                    $('#sub-total').text(Math.ceil(total));
-                    $('#sub-total-show').text(Math.ceil(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-                    if ($("#cart-table tr").length == 1) {
+                    if ($("#cart-table tr").length >= 1) {
                         $("#checkout-table").fadeIn();
                     }
                     $('.delete-list-item').off().on("click", function() {
@@ -797,20 +795,9 @@ if (!$isUserLogged) {
                         let cart_id = $(this).parent().attr('data-cart-id');
                         cart.remove(cart_id);
                         $(this).parent().fadeOut("fast", function() {
-                            let total = 0
-                            $('#cart-table').find(".item-total").each(function() {
-                                total += parseInt($(this).text().replace(",", ""));
-                            })
-
-                            total -= parseInt(item.parent().find('.item-total').text());
                             item.parent().remove();
-
-
-                            console.log("tototot", total);
-                            $('#sub-total').text(Math.ceil(total));
-                            $('#sub-total-show').text(Math.ceil(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                             if ($("#cart_count").length) {
-                                $("#cart_count").html(parseInt($("#cart_count").html()) - 1);
+                                $("#cart_count").html(Math.max(0, parseInt($("#cart_count").html()) - 1));
                             }
 
                             if ($("#cart-table tr").length == 0) {
@@ -834,7 +821,7 @@ if (!$isUserLogged) {
                     $('#diamond-price').text('')
 
 
-                    alert('added to cart!');
+                    alert('Added to buying list!');
 
                     if ($('#cart > button').length) {
                         $('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' +
@@ -850,6 +837,7 @@ if (!$isUserLogged) {
 
             error: function(xhr, ajaxOptions, thrownError) {
                 console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                alert('Could not add to buying list. Please try again.');
             }
         });
 

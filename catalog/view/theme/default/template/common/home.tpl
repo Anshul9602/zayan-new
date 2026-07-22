@@ -9,7 +9,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 <link href="
 assets/css/home.css
 " rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
     #New .splide__pagination {
         display: none !important;
@@ -60,26 +59,27 @@ assets/css/home.css
     .whats-new-eyebrow {
         display: inline-block;
         margin-bottom: 14px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Questrial", sans-serif;
         font-size: 11px;
-        font-weight: 600;
+        font-weight: 400;
         letter-spacing: 0.28em;
         text-transform: uppercase;
         color: var(--wn-brand);
     }
 
     .whats-new-copy h2 {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 56px;
-        font-weight: 600;
-        line-height: 1.05;
+        font-family: "Questrial", sans-serif;
+        font-size: 42px;
+        font-weight: 400;
+        line-height: 1.15;
         color: var(--wn-ink);
         margin: 0 0 16px;
+        letter-spacing: 0.04em;
     }
 
     .whats-new-copy h2 span {
-        display: block;
-        font-style: italic;
+        display: inline;
+        font-style: normal;
         color: var(--wn-brand);
     }
 
@@ -91,9 +91,9 @@ assets/css/home.css
     }
 
     .whats-new-copy p {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Questrial", sans-serif;
         color: var(--wn-muted);
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.7;
         margin-bottom: 30px;
     }
@@ -107,9 +107,9 @@ assets/css/home.css
         background: var(--wn-brand);
         color: #fff;
         text-decoration: none;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Questrial", sans-serif;
         font-size: 12px;
-        font-weight: 600;
+        font-weight: 400;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
@@ -203,9 +203,9 @@ assets/css/home.css
     }
 
     .whats-new-view {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Questrial", sans-serif;
         font-size: 11px;
-        font-weight: 600;
+        font-weight: 400;
         letter-spacing: 0.16em;
         text-transform: uppercase;
         color: #fff;
@@ -219,23 +219,25 @@ assets/css/home.css
     }
 
     .whats-new-brand {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Questrial", sans-serif;
         font-size: 10px;
         letter-spacing: 0.18em;
         text-transform: uppercase;
         color: var(--wn-brand);
         margin: 0 0 8px;
-        font-weight: 600;
+        font-weight: 400;
     }
 
     .whats-new-title {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 18px;
-        font-weight: 600;
+        font-family: "Questrial", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
         color: var(--wn-ink);
-        line-height: 1.35;
+        line-height: 1.45;
         margin: 0;
-        min-height: 48px;
+        min-height: 40px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
         transition: color 0.25s ease;
     }
 
@@ -491,117 +493,164 @@ assets/css/home.css
 
 
 
-<section class="section-padding pb-0 " style="padding-top: 60px;">
-    <div style="padding: 0 5%;">
-        <div class="row desk_dis">
-
-            <div class="col-md-6 mb-md-0 mb-3" style="align-items: center;display: flex;justify-content: center;">
-                <div class="serv-name3 text-center">
-
-                    <h1 class="text-collection mb-3">Tennis Connection</h1>
-                    <a href="index.php?route=product/category&path=99">
-                        <button class="btn btn-primary">VIEW COLLECTION</button>
-                    </a>
-
-
-                </div>
-                <a href="index.php?route=product/category&path=99" style="width: 100%;overflow:hidden;    background: black;">
-
-                    <img src="image/new/col2.jpg" alt="" style="width:100%;opacity: 0.6; transition: transform 8s;"
-                        class="zoom1 serv-img" title="" />
+<section class="shop-looks-section">
+    <div class="shop-looks-inner">
+        <div class="row shop-looks-row">
+            <div class="col-md-4 col-12 shop-looks-col">
+                <a href="index.php?route=product/category&path=99" class="shop-looks-card">
+                    <div class="shop-looks-image">
+                        <img src="image/new/col2.jpg" alt="Tennis Connection">
+                    </div>
+                    <div class="shop-looks-overlay">
+                        <h3 class="shop-looks-title">Tennis Connection</h3>
+                        <span class="shop-looks-btn">See All</span>
+                    </div>
                 </a>
             </div>
-            <div class="col-md-6   " style="align-items: center;display: flex;justify-content: center;">
-                <div class="serv-name3 text-center">
-
-
-                    <h1 class="text-collection mb-3">Zayn Lite</h1>
-                    <a href="index.php?route=product/category&path=95">
-                        <button class="btn btn-primary">VIEW COLLECTION</button>
-                    </a>
-
-                </div>
-                <a href="index.php?route=product/category&path=95" style="width: 100%;overflow:hidden;    background: black;">
-
-                    <img src="image/new/col1.jpg" alt="" style="width:100%;opacity:0.6; transition: transform 8s;"
-                        class="zoom1 serv-img" title="" />
+            <div class="col-md-4 col-12 shop-looks-col">
+                <a href="index.php?route=product/category&path=95" class="shop-looks-card">
+                    <div class="shop-looks-image">
+                        <img src="image/new/col1.jpg" alt="Zayn Lite">
+                    </div>
+                    <div class="shop-looks-overlay">
+                        <h3 class="shop-looks-title">Zayn Lite</h3>
+                        <span class="shop-looks-btn">See All</span>
+                    </div>
                 </a>
             </div>
-
-        </div>
-        <div class="row mob_dis">
-            <div class="splide splidecol" aria-label="Splide Basic HTML Example">
-                <div class="splide__track">
-                    <ul class="splide__list">
-
-                        <li class="splide__slide">
-                            <div class="col-12 " style="align-items: center;display: flex;justify-content: center;">
-                                <div class="serv-name3 text-center">
-
-                                    <h1 class="text-collection">Tennis Connection</h1>
-                                </div>
-                                <a href="index.php?route=product/category&path=99" style="width: 100%;overflow:hidden;    background: black;">
-
-                                    <img src="image/new/col2.jpg" alt=""
-                                        style="width:100%;opacity: 0.6; transition: transform 8s;"
-                                        class="zoom1 serv-img" title="" />
-                                </a>
-                            </div>
-
-                        </li>
-                        <li class="splide__slide">
-                            <div class="col-12   " style="align-items: center;display: flex;justify-content: center;">
-                                <div class="serv-name3 text-center">
-
-
-                                    <h1 class="text-collection">Zayn Lite</h1>
-
-                                </div>
-                                <a href="index.php?route=product/category&path=95" style="width: 100%;overflow:hidden;    background: black;">
-
-                                    <img src="image/new/col1.jpg" alt=""
-                                        style="width:100%;opacity:0.6; transition: transform 8s;" class="zoom1 serv-img"
-                                        title="" />
-                                </a>
-                            </div>
-
-                        </li>
-
-                    </ul>
-                </div>
+            <div class="col-md-4 col-12 shop-looks-col">
+                <a href="index.php?route=common/diamondsdemo" class="shop-looks-card">
+                    <div class="shop-looks-image">
+                        <img src="image/new/col-61.JPG" alt="Diamonds">
+                    </div>
+                    <div class="shop-looks-overlay">
+                        <h3 class="shop-looks-title">Diamonds</h3>
+                        <span class="shop-looks-btn">See All</span>
+                    </div>
+                </a>
             </div>
-
-
-
         </div>
     </div>
-
 </section>
 
-<section class="pb-4" style="margin-top: 60px;">
+<style>
+    .shop-looks-section {
+        padding: 60px 0 20px;
+        background: #fff;
+    }
 
-    <div class=" desk_dis"style="padding: 0 5%;">
-        <div class="row  height_main" style="    justify-content: space-between;">
-            
-            <div class="col-md-12 pdmob ">
-                <a href="https://www.zaynjewels.com/index.php?route=common/diamondsdemo"><img src="image/new/col-61.JPG"
-                        style="width:100%;" alt="">
+    .shop-looks-inner {
+        padding: 0 1%;
+    }
 
-                    <h6 class="css-kl8k2i mt-1" >DIAMONDS</h6>
-                </a>
-            </div>
-        </div>
-    </div>
+    .shop-looks-row {
+        margin: 0 -8px;
+    }
+
+    .shop-looks-col {
+        padding: 0 8px 16px;
+    }
+
+    .shop-looks-card {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        text-decoration: none;
+        color: #fff;
+        background: #111;
+    }
+
+    .shop-looks-card:hover,
+    .shop-looks-card:focus {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .shop-looks-image {
+        position: relative;
+        aspect-ratio: 1 / 1.15;
+        overflow: hidden;
+    }
+
+    .shop-looks-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        opacity: 0.85;
+        transition: transform 0.7s ease, opacity 0.35s ease;
+    }
+
+    .shop-looks-card:hover .shop-looks-image img {
+        transform: scale(1.06);
+        opacity: 0.7;
+    }
+
+    .shop-looks-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0 20px 36px;
+        text-align: center;
+        z-index: 2;
+        background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 100%);
+    }
+
+    .shop-looks-title {
+        font-family: "Questrial", sans-serif !important;
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #fff !important;
+        margin: 0 0 14px !important;
+        line-height: 1.3;
+    }
+
+    .shop-looks-btn {
+        display: inline-block;
+        background: #423c9e;
+        color: #fff;
+        font-family: "Questrial", sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        padding: 10px 22px;
+        border: 1px solid #423c9e;
+        transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .shop-looks-card:hover .shop-looks-btn {
+        background: #fff;
+        color: #423c9e;
+        border-color: #fff;
+    }
+
+    @media (max-width: 767px) {
+        .shop-looks-section {
+            padding: 40px 0 10px;
+        }
+
+        .shop-looks-inner {
+            padding: 0 4%;
+        }
+
+        .shop-looks-image {
+            aspect-ratio: 1 / 1;
+        }
+
+        .shop-looks-title {
+            font-size: 16px !important;
+        }
+    }
+</style>
+
+<section class="pb-4" style="margin-top: 30px;">
     <div class="container mob_dis">
         <div class="row m-0" style="justify-content: space-around;">
             <div class="col-md-6 row p-0" style="height: 100%;">
-                <div class="col-12 pdmob">
-                    <a href="https://www.zaynjewels.com/index.php?route=common/diamondsdemo"><img
-                            src="image/new/col-61.JPG" style="height: auto;" alt=""></a>
-
-
-                </div>
-
                 <div class="col-6 pdmob "><a href="index.php?route=product/category&path=79_85">
                         <img src="image/new/e1.jpg" style="width: 100%;">
                         <h6 class="css-kl8k2i mt-1 mob_font1 text-center">PENDANTS
@@ -726,29 +775,26 @@ assets/css/home.css
     });
     splide.mount();
 
-    var splide = new Splide('.splidecol', {
-        type: 'loop',
-        perPage: 1,
-        perMove: 1,
-        breakpoints: {
-            640: {
-                perPage: 1,
-
+    if (document.querySelector('.splidecol')) {
+        var splideCol = new Splide('.splidecol', {
+            type: 'loop',
+            perPage: 1,
+            perMove: 1,
+            breakpoints: {
+                640: {
+                    perPage: 1
+                },
+                767: {
+                    perPage: 1
+                },
+                1024: {
+                    perPage: 1
+                }
             },
-            767: {
-                perPage: 1,
-
-            },
-            1024: {
-                perPage: 1,
-
-            },
-        },
-
-        gap: '1em',
-    });
-
-    splide.mount();
+            gap: '1em'
+        });
+        splideCol.mount();
+    }
 
 
 </script>

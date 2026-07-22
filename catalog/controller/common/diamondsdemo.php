@@ -202,6 +202,7 @@ class ControllerCommonDiamondsdemo extends Controller
 		}
 
 		//cart products
+		$data['cart_products'] = array();
 
 		$products = $this->cart->getProducts();
 
@@ -342,6 +343,16 @@ class ControllerCommonDiamondsdemo extends Controller
 			return;
 		}
 
+		$store_email = $this->config->get('config_email');
+		if (!$store_email || !filter_var($store_email, FILTER_VALIDATE_EMAIL)) {
+			$store_email = 'info@zaynjewels.com';
+		}
+
+		$store_name = html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8');
+		if (!$store_name) {
+			$store_name = 'Zayn Jewels';
+		}
+
 		// Build product details table
 		$rows = '';
 		$i = 0;
@@ -350,13 +361,14 @@ class ControllerCommonDiamondsdemo extends Controller
 			$i++;
 
 			$pieces = '';
-			$option_values = array();
+			$size_values = array();
 
 			foreach ($product['option'] as $option) {
-				if ($option['name'] == 'diamond by pieces') {
+				$opt_name = strtolower(trim($option['name']));
+				if ($opt_name == 'diamond by pieces') {
 					$pieces = $option['value'];
-				} elseif ($option['value'] != 'default') {
-					$option_values[] = $option['value'];
+				} elseif (strtolower($option['value']) != 'default' && $option['value'] !== '') {
+					$size_values[] = $option['value'];
 				}
 			}
 
@@ -368,27 +380,45 @@ class ControllerCommonDiamondsdemo extends Controller
 
 			$rows .= '<tr>';
 			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . $i . '</td>';
-			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . $product['name'] . '</td>';
-			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . implode(', ', $option_values) . '</td>';
-			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . $quantity . '</td>';
+			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . htmlspecialchars($product['name']) . '</td>';
+			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . htmlspecialchars(implode(', ', $size_values)) . '</td>';
+			$rows .= '<td style="padding:8px; border:1px solid #ddd;">' . htmlspecialchars($quantity) . '</td>';
 			$rows .= '</tr>';
 		}
 
-		$html  = '<html><body>';
-		$html .= '<p>Dear ' . htmlspecialchars($name) . ',</p>';
-		$html .= '<p>Thank you for your price request. We have received the following details and our team will get back to you with pricing shortly.</p>';
-		$html .= '<table style="border-collapse:collapse; width:100%; max-width:600px;">';
-		$html .= '<tr><th style="padding:8px; border:1px solid #ddd; text-align:left;">S.No</th><th style="padding:8px; border:1px solid #ddd; text-align:left;">Diamond</th><th style="padding:8px; border:1px solid #ddd; text-align:left;">Size</th><th style="padding:8px; border:1px solid #ddd; text-align:left;">Quantity</th></tr>';
-		$html .= $rows;
-		$html .= '</table>';
-		$html .= '<p>Customer: ' . htmlspecialchars($name) . ' (' . htmlspecialchars($email) . ')</p>';
-		$html .= '<p>Regards,<br/>' . $this->config->get('config_name') . '</p>';
-		$html .= '</body></html>';
+		$table  = '<table style="border-collapse:collapse; width:100%; max-width:600px;">';
+		$table .= '<tr><th style="padding:8px; border:1px solid #ddd; text-align:left;">S.No</th><th style="padding:8px; border:1px solid #ddd; text-align:left;">Diamond</th><th style="padding:8px; border:1px solid #ddd; text-align:left;">Size</th><th style="padding:8px; border:1px solid #ddd; text-align:left;">Quantity</th></tr>';
+		$table .= $rows;
+		$table .= '</table>';
 
-		$subject = 'Price Request - ' . $this->config->get('config_name');
+		// Customer email body
+		$customer_html  = '<html><body>';
+		$customer_html .= '<p>Dear ' . htmlspecialchars($name) . ',</p>';
+		$customer_html .= '<p>Thank you for your price request with ' . htmlspecialchars($store_name) . '. We have received the following details and our team will get back to you shortly with pricing.</p>';
+		$customer_html .= $table;
+		$customer_html .= '<p>If you have any questions, reply to this email or contact us at ' . htmlspecialchars($store_email) . '.</p>';
+		$customer_html .= '<p>Regards,<br/>' . htmlspecialchars($store_name) . '</p>';
+		$customer_html .= '</body></html>';
+
+		// Store email body
+		$store_html  = '<html><body>';
+		$store_html .= '<p><strong>New Price Request</strong></p>';
+		$store_html .= '<p>Customer Name: ' . htmlspecialchars($name) . '<br/>';
+		$store_html .= 'Customer Email: ' . htmlspecialchars($email) . '</p>';
+		$store_html .= '<p>Requested diamond details:</p>';
+		$store_html .= $table;
+		$store_html .= '<p>Please reply to the customer at ' . htmlspecialchars($email) . '.</p>';
+		$store_html .= '</body></html>';
+
+		$customer_subject = 'Your Price Request - ' . $store_name;
+		$store_subject = 'New Price Request from ' . $name . ' - ' . $store_name;
+
+		$customer_sent = false;
+		$store_sent = false;
+		$error_message = '';
 
 		try {
-			// Send to customer
+			// 1) Email to customer
 			$mail = new Mail();
 			$mail->protocol = $this->config->get('config_mail_protocol');
 			$mail->parameter = $this->config->get('config_mail_parameter');
@@ -399,13 +429,20 @@ class ControllerCommonDiamondsdemo extends Controller
 			$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
 
 			$mail->setTo($email);
-			$mail->setFrom($this->config->get('config_email'));
-			$mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
-			$mail->setSubject($subject);
-			$mail->setHtml($html);
+			$mail->setFrom($store_email);
+			$mail->setSender($store_name);
+			$mail->setReplyTo($store_email);
+			$mail->setSubject($customer_subject);
+			$mail->setHtml($customer_html);
+			$mail->setText(strip_tags(str_replace(array('<br>', '<br/>', '<br />'), "\n", $customer_html)));
 			$mail->send();
+			$customer_sent = true;
+		} catch (Exception $e) {
+			$error_message = 'Could not send email to customer.';
+		}
 
-			// Send copy to store
+		try {
+			// 2) Email copy to store
 			$mail = new Mail();
 			$mail->protocol = $this->config->get('config_mail_protocol');
 			$mail->parameter = $this->config->get('config_mail_parameter');
@@ -415,16 +452,27 @@ class ControllerCommonDiamondsdemo extends Controller
 			$mail->smtp_port = $this->config->get('config_mail_smtp_port');
 			$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
 
-			$mail->setTo($this->config->get('config_email'));
-			$mail->setFrom($this->config->get('config_email'));
-			$mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
-			$mail->setSubject('[Copy] ' . $subject . ' from ' . $name);
-			$mail->setHtml($html);
+			$mail->setTo($store_email);
+			$mail->setFrom($store_email);
+			$mail->setSender($store_name);
+			$mail->setReplyTo($email);
+			$mail->setSubject($store_subject);
+			$mail->setHtml($store_html);
+			$mail->setText(strip_tags(str_replace(array('<br>', '<br/>', '<br />'), "\n", $store_html)));
 			$mail->send();
-
-			$json['success'] = 'Your price request has been sent. We will contact you shortly at ' . $email . '.';
+			$store_sent = true;
 		} catch (Exception $e) {
-			$json['error'] = 'Could not send the email. Please try again later.';
+			$error_message = $error_message ? $error_message . ' Could not send email to store.' : 'Could not send email to store.';
+		}
+
+		if ($customer_sent && $store_sent) {
+			$json['success'] = 'Your price request has been sent to ' . $email . ' and a copy was sent to our store email (' . $store_email . '). We will contact you shortly.';
+		} elseif ($customer_sent) {
+			$json['success'] = 'Your price request was sent to ' . $email . '. Our team will contact you shortly.';
+		} elseif ($store_sent) {
+			$json['success'] = 'Your price request was received by our store. We will contact you shortly at ' . $email . '.';
+		} else {
+			$json['error'] = $error_message ? $error_message : 'Could not send the emails. Please try again later.';
 		}
 
 		$this->response->addHeader('Content-Type: application/json');
